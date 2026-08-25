@@ -267,11 +267,18 @@ export default function HistoriaPage() {
               boxShadow: "0 25px 50px rgba(0,0,0,0.6), 0 0 30px rgba(212, 175, 55, 0.15)",
               textAlign: "center"
             }}>
-              <div style={{ overflow: "hidden", borderRadius: "18px", marginBottom: "1.4rem", boxShadow: "0 10px 25px rgba(0,0,0,0.4)" }}>
+              <div style={{
+                overflow: "hidden",
+                borderRadius: "18px",
+                marginBottom: "1.4rem",
+                background: "radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.22) 0%, rgba(10, 13, 20, 0.95) 80%)",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.4)",
+                padding: "0.5rem"
+              }}>
                 <img 
-                  src="/romina2.png" 
+                  src="/romina_historia.png" 
                   alt="Romina Lorena Montiel" 
-                  style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }} 
+                  style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", maxHeight: "480px" }} 
                 />
               </div>
 
