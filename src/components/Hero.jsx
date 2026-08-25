@@ -71,14 +71,11 @@ export default function Hero() {
               </div>
           </div>
 
-          {/* Columna Derecha: Retrato de Romina & Sello Dorado Integrado */}
+          {/* Columna Derecha: Retrato de Romina */}
           <div className="hero-visual-col">
               <div className="portrait-wrap">
                   <div className="portrait-glow"></div>
                   <img src="/romina.png" alt="Romina Lorena Montiel - Creadora de Método Modo Líder" className="portrait-img" />
-                  
-                  {/* Sello de Marca Flotante Oficial */}
-                  <img src="/logo modolider.png" alt="Método Modo Líder - Sello Oficial" className="gold-badge-seal" />
               </div>
           </div>
 
