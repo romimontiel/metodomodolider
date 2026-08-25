@@ -60,7 +60,7 @@ export default function HistoriaPage() {
       year: "2026",
       flag: "👑",
       title: "Integración Total: Método MODO LÍDER",
-      desc: "Nació el Método MODO LÍDER como la convergencia definitiva entre las Neurociencias, la reprogramación mental y la Inteligencia Estratégica de Negocios para erradicar la postergación y liderar con impacto."
+      desc: "Nació el Método MODO LÍDER: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida."
     },
     {
       year: "HOY",
@@ -231,7 +231,7 @@ export default function HistoriaPage() {
               </p>
 
               <p style={{ marginBottom: "1.5rem" }}>
-                En <strong>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad, dominar tu tiempo y ejecutar con impacto.
+                En <strong>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida.
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#F9D976", fontWeight: "750", fontSize: "1.2rem", lineHeight: "1.6" }}>
