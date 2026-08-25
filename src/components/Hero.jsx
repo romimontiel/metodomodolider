@@ -39,7 +39,7 @@ export default function Hero() {
               <div className="hero-pillars-pills">
                   <span className="pillar-pill-item">NEUROCIENCIAS</span>
                   <div className="pillar-dot"></div>
-                  <span className="pillar-pill-item">MENTALIDAD</span>
+                  <span className="pillar-pill-item">TRANSFORMACIÓN</span>
                   <div className="pillar-dot"></div>
                   <span className="pillar-pill-item">INTELIGENCIA DE NEGOCIOS</span>
               </div>
