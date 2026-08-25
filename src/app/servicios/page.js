@@ -292,19 +292,19 @@ export default function ServiciosPage() {
           }}>
             
             <div style={{
-              width: "90px",
-              height: "90px",
+              width: "105px",
+              height: "105px",
               borderRadius: "50%",
               overflow: "hidden",
-              border: "3px solid #D4AF37",
+              border: "3.5px solid #D4AF37",
               marginBottom: "1.2rem",
               background: "radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(10, 13, 20, 0.9) 100%)",
-              boxShadow: "0 8px 20px rgba(0,0,0,0.4)"
+              boxShadow: "0 8px 25px rgba(0,0,0,0.45)"
             }}>
               <img 
                 src="/romina_historia.png" 
                 alt="Romina Lorena Montiel" 
-                style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 16%" }} 
               />
             </div>
 
