@@ -132,65 +132,39 @@ export default function ServiciosPage() {
                 Mentoría 1 a 1
               </h2>
 
-              <p style={{ color: "#CBD5E1", fontSize: "1.05rem", lineHeight: "1.7", marginBottom: "1.8rem" }}>
+              <p style={{ color: "#CBD5E1", fontSize: "1.05rem", lineHeight: "1.7", marginBottom: "2.5rem" }}>
                 Acompañamiento individual, confidencial e intensivo directamente con <strong>Romina Lorena Montiel</strong>. Diseñado a la medida exacta de tus desafíos para transformar tu mentalidad e instalar la Inteligencia de Negocios necesaria para que tus objetivos se traduzcan en ventas e impacto real.
               </p>
 
-              {/* Puntos Clave */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", marginBottom: "2.5rem", flex: 1 }}>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.8rem" }}>
-                  <span style={{ color: "#ECC369", fontSize: "1.2rem", lineHeight: 1 }}>✔</span>
-                  <span style={{ color: "#E2E8F0", fontSize: "0.98rem", lineHeight: 1.5 }}>
-                    <strong>Diagnóstico Neurocognitivo:</strong> Detección profunda de bloqueos, autosabotaje inconsciente y patrones de postergación.
-                  </span>
-                </div>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.8rem" }}>
-                  <span style={{ color: "#ECC369", fontSize: "1.2rem", lineHeight: 1 }}>✔</span>
-                  <span style={{ color: "#E2E8F0", fontSize: "0.98rem", lineHeight: 1.5 }}>
-                    <strong>Estrategia de Negocios a Medida:</strong> Detección de tácticas comerciales, procesos eficientes y claridad para la toma ágil de decisiones.
-                  </span>
-                </div>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.8rem" }}>
-                  <span style={{ color: "#ECC369", fontSize: "1.2rem", lineHeight: 1 }}>✔</span>
-                  <span style={{ color: "#E2E8F0", fontSize: "0.98rem", lineHeight: 1.5 }}>
-                    <strong>Conexión con Clientes y Ventas:</strong> Alineación integral de tu propuesta de valor para generar atracción e ingresos constantes.
-                  </span>
-                </div>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.8rem" }}>
-                  <span style={{ color: "#ECC369", fontSize: "1.2rem", lineHeight: 1 }}>✔</span>
-                  <span style={{ color: "#E2E8F0", fontSize: "0.98rem", lineHeight: 1.5 }}>
-                    <strong>Seguimiento Personalizado:</strong> Espacio 1 a 1 de foco, contención y feedback directo paso a paso.
-                  </span>
-                </div>
-              </div>
-
               {/* Botón WhatsApp */}
-              <a 
-                href={mentoriaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "0.75rem",
-                  padding: "1.15rem 1.8rem",
-                  background: "linear-gradient(135deg, #25D366 0%, #128C7E 100%)",
-                  color: "#FFFFFF",
-                  textDecoration: "none",
-                  fontWeight: "800",
-                  fontSize: "1.08rem",
-                  borderRadius: "14px",
-                  boxShadow: "0 10px 25px rgba(37, 211, 102, 0.35)",
-                  transition: "transform 0.2s, box-shadow 0.2s"
-                }}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
-                  <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.178L2 22l4.981-1.394C8.423 21.493 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.637 0-3.167-.492-4.448-1.336l-.319-.208-2.966.83.844-2.883-.228-.337A8.156 8.156 0 0 1 3.8 12c0-4.522 3.678-8.2 8.2-8.2 4.521 0 8.2 3.678 8.2 8.2 0 4.522-3.679 8.2-8.2 8.2z"/>
-                </svg>
-                <span>Solicitar Mentoría 1 a 1</span>
-              </a>
+              <div style={{ marginTop: "auto" }}>
+                <a 
+                  href={mentoriaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.75rem",
+                    padding: "1.15rem 1.8rem",
+                    background: "linear-gradient(135deg, #25D366 0%, #128C7E 100%)",
+                    color: "#FFFFFF",
+                    textDecoration: "none",
+                    fontWeight: "800",
+                    fontSize: "1.08rem",
+                    borderRadius: "14px",
+                    boxShadow: "0 10px 25px rgba(37, 211, 102, 0.35)",
+                    transition: "transform 0.2s, box-shadow 0.2s"
+                  }}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.178L2 22l4.981-1.394C8.423 21.493 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.637 0-3.167-.492-4.448-1.336l-.319-.208-2.966.83.844-2.883-.228-.337A8.156 8.156 0 0 1 3.8 12c0-4.522 3.678-8.2 8.2-8.2 4.521 0 8.2 3.678 8.2 8.2 0 4.522-3.679 8.2-8.2 8.2z"/>
+                  </svg>
+                  <span>Solicitar Mentoría 1 a 1</span>
+                </a>
+              </div>
 
             </div>
 
@@ -237,40 +211,12 @@ export default function ServiciosPage() {
                 Curso Método MODO LÍDER
               </h2>
 
-              <p style={{ color: "#CBD5E1", fontSize: "1.05rem", lineHeight: "1.7", marginBottom: "1.8rem" }}>
+              <p style={{ color: "#CBD5E1", fontSize: "1.05rem", lineHeight: "1.7", marginBottom: "2.5rem" }}>
                 El entrenamiento sistemático y estructurado para erradicar la postergación de raíz, dominar tu foco atencional y aplicar la fórmula de 3 pilares (<strong>Neurociencias • Transformación • Inteligencia de Negocios</strong>) en tu vida diaria y proyectos.
               </p>
 
-              {/* Puntos Clave */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", marginBottom: "2.5rem", flex: 1 }}>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.8rem" }}>
-                  <span style={{ color: "#ECC369", fontSize: "1.2rem", lineHeight: 1 }}>✔</span>
-                  <span style={{ color: "#E2E8F0", fontSize: "0.98rem", lineHeight: 1.5 }}>
-                    <strong>Módulos Paso a Paso:</strong> Estructura metodológica clara, directa y aplicable desde el primer día.
-                  </span>
-                </div>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.8rem" }}>
-                  <span style={{ color: "#ECC369", fontSize: "1.2rem", lineHeight: 1 }}>✔</span>
-                  <span style={{ color: "#E2E8F0", fontSize: "0.98rem", lineHeight: 1.5 }}>
-                    <strong>Erradicación de la Procrastinación:</strong> Herramientas neurocientíficas para activar la inercia de ejecución.
-                  </span>
-                </div>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.8rem" }}>
-                  <span style={{ color: "#ECC369", fontSize: "1.2rem", lineHeight: 1 }}>✔</span>
-                  <span style={{ color: "#E2E8F0", fontSize: "0.98rem", lineHeight: 1.5 }}>
-                    <strong>Acceso al Campus Virtual:</strong> Clases, guías de trabajo y material de estudio disponible las 24 hs.
-                  </span>
-                </div>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "0.8rem" }}>
-                  <span style={{ color: "#ECC369", fontSize: "1.2rem", lineHeight: 1 }}>✔</span>
-                  <span style={{ color: "#E2E8F0", fontSize: "0.98rem", lineHeight: 1.5 }}>
-                    <strong>Comunidad y Soporte:</strong> Acompañamiento e inscripción directa asistida por WhatsApp.
-                  </span>
-                </div>
-              </div>
-
               {/* Botones de Acción para el Curso */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", marginTop: "auto" }}>
                 <a 
                   href={cursoLink}
                   target="_blank"
