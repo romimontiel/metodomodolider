@@ -33,19 +33,35 @@ export default function Navbar() {
         </span>
       </Link>
       
-      <div className="nav-actions" style={{ display: "flex", alignItems: "center", gap: "0.8rem", flexWrap: "wrap" }}>
+      <div className="nav-actions" style={{ display: "flex", alignItems: "center", gap: "0.65rem", flexWrap: "wrap" }}>
+        <Link href="/servicios" style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.4rem",
+          background: "rgba(212, 175, 55, 0.12)",
+          border: "1.5px solid rgba(212, 175, 55, 0.4)",
+          color: "#ECC369",
+          textDecoration: "none",
+          padding: "0.6rem 1.1rem",
+          borderRadius: "8px",
+          fontWeight: 700,
+          fontSize: "0.88rem",
+          transition: "all 0.2s"
+        }}>
+          ✨ Servicios & Mentoría
+        </Link>
         <Link href="/curso" style={{
           display: "inline-flex",
           alignItems: "center",
-          gap: "0.5rem",
-          background: "rgba(212, 175, 55, 0.15)",
-          border: "1.5px solid rgba(212, 175, 55, 0.5)",
+          gap: "0.4rem",
+          background: "rgba(255, 255, 255, 0.06)",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
           color: "#F7E7CE",
           textDecoration: "none",
-          padding: "0.65rem 1.2rem",
+          padding: "0.6rem 1.1rem",
           borderRadius: "8px",
           fontWeight: 700,
-          fontSize: "0.9rem",
+          fontSize: "0.88rem",
           transition: "all 0.2s"
         }}>
           🎓 Info del Curso
@@ -53,18 +69,18 @@ export default function Navbar() {
         <Link href="/campus" style={{
           display: "inline-flex",
           alignItems: "center",
-          gap: "0.5rem",
+          gap: "0.4rem",
           background: "linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%)",
           color: "#0E121B",
           textDecoration: "none",
-          padding: "0.65rem 1.3rem",
+          padding: "0.6rem 1.2rem",
           borderRadius: "8px",
           fontWeight: 800,
-          fontSize: "0.9rem",
+          fontSize: "0.88rem",
           boxShadow: "0 4px 15px rgba(212, 175, 55, 0.35)",
           transition: "all 0.2s"
         }}>
-          👑 Campus de Alumnas
+          👑 Campus
         </Link>
       </div>
     </nav>
