@@ -39,22 +39,28 @@ export default function HistoriaPage() {
       desc: "Recorrí colegios secundarios brindando talleres vivenciales sobre Gestión de Emociones y Construcción de Proyecto de Vida para jóvenes y educadores."
     },
     {
-      year: "2020",
+      year: "2020 - 2022",
       flag: "💻",
       title: "Pandemia: Mindfulness y Regulación Emocional Online",
-      desc: "En pleno confinamiento, dicté talleres online sobre Emociones y Mindfulness, brindando contención, foco y calma mental a cientos de personas en momentos de incertidumbre."
+      desc: "En pleno confinamiento y post-pandemia, dicté talleres online sobre Emociones y Mindfulness, brindando contención, foco y calma mental a cientos de personas en momentos de incertidumbre."
     },
     {
-      year: "2021",
+      year: "2023 - 2025",
       flag: "🤝",
-      title: "Mentoría 1 a 1 y Nacimiento de un Método Propio",
-      desc: "Comencé a acompañar de manera privada en sesiones individuales. Construí un método propio para educar y guiar a personas adultas, niños y adolescentes en procesos complicados, con éxito total en cada caso. Personas que hoy me siguen acompañando y apoyando."
+      title: "Mentoría 1 a 1 y Consolidación de un Método Propio",
+      desc: "Acompañamiento privado e intensivo en sesiones individuales a personas adultas, niños y adolescentes en procesos complejos con éxito en todos los casos, sentando las bases clínicas y prácticas de mi metodología."
     },
     {
-      year: "2021 - 2023",
+      year: "Marzo 2025",
+      flag: "📖",
+      title: "Publicación de mi Libro \"Primero Ámate\"",
+      desc: "En marzo de 2025 presenté mi libro 'Primero Ámate', editado por Tinta Libre. Tuve el honor de presentarlo en la Feria del Libro en los escenarios de Goya y Corrientes, inspirando a cientos de personas en el autoliderazgo y amor propio."
+    },
+    {
+      year: "2026",
       flag: "👑",
       title: "Integración Total: Método MODO LÍDER",
-      desc: "Nació el Método MODO LÍDER como una respuesta integral para unir las habilidades blandas (mente, neurociencias y emociones) con la estrategia táctica de negocios. Con orgullo de ser quien soy: Licenciada en Administración y Neuropsicoeducadora."
+      desc: "Nació el Método MODO LÍDER como la convergencia definitiva entre las Neurociencias, la reprogramación mental y la Inteligencia Estratégica de Negocios para erradicar la postergación y liderar con impacto."
     },
     {
       year: "HOY",
@@ -213,11 +219,19 @@ export default function HistoriaPage() {
               </p>
 
               <p style={{ marginBottom: "1.5rem" }}>
-                En <strong>2017</strong> me gradué con diploma oficial como <strong>NEUROPSICOEDUCADORA</strong> y realicé un posgrado en <strong>NEUROCIENCIAS DE LAS EMOCIONES</strong>. Comencé brindando talleres en colegios sobre emociones y proyecto de vida, y luego talleres online de Mindfulness en pandemia.
+                En <strong>2017</strong> me gradué con diploma oficial como <strong>NEUROPSICOEDUCADORA</strong> y realicé un posgrado en <strong>NEUROCIENCIAS DE LAS EMOCIONES</strong>. Comencé brindando talleres en colegios secundarios sobre emociones y proyecto de vida, y luego entre <strong>2020 y 2022</strong> talleres online de Mindfulness y contención emocional.
               </p>
 
               <p style={{ marginBottom: "1.5rem" }}>
-                Desde <strong>2021</strong> creé mi <strong>método propio</strong> acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos complejos, con éxito en todos los casos. Al ver la potencia transformadora de este sistema, <strong>sumé a emprendedores, profesionales y empresarios</strong> que necesitaban integrar las habilidades blandas con la estrategia de negocios.
+                Entre <strong>2023 y 2025</strong> consolidé mi <strong>método propio</strong> acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos complejos, con éxito en todos los casos.
+              </p>
+
+              <p style={{ marginBottom: "1.5rem" }}>
+                En <strong>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong>&quot;Primero Ámate&quot;</strong>, editado por <strong>Tinta Libre</strong>, y tuve el gran honor de presentarlo en la <strong>Feria del Libro en los escenarios de Goya y Corrientes</strong>, transmitiendo el valor del autoliderazgo y la autovaloración como cimiento de cualquier proyecto.
+              </p>
+
+              <p style={{ marginBottom: "1.5rem" }}>
+                En <strong>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad, dominar tu tiempo y ejecutar con impacto.
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#F9D976", fontWeight: "750", fontSize: "1.2rem", lineHeight: "1.6" }}>
