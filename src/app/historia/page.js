@@ -2,8 +2,8 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "Mi Historia | Romina Lorena Montiel - Neuropsicoeducadora y Mentora de Negocios",
-  description: "Conoce el recorrido real de Romina Lorena Montiel: de Controller Financiera en España y Consultora de PyMEs en Córdoba, a Neuropsicoeducadora y creadora del Método MODO LÍDER.",
+  title: "Mi Historia | Romina Lorena Montiel - Lic. en Administración, Neuropsicoeducadora y Mentora de Mentes y de Negocios",
+  description: "Conoce el recorrido de Romina Lorena Montiel: Licenciada en Administración, Neuropsicoeducadora y Mentora de Mentes y de Negocios, creadora del Método MODO LÍDER.",
 };
 
 export default function HistoriaPage() {
@@ -54,7 +54,7 @@ export default function HistoriaPage() {
       year: "Actualidad",
       flag: "👑",
       title: "Integración Total: Método MODO LÍDER",
-      desc: "Sumé a emprendedores, profesionales y empresarios que necesitaron unir las habilidades blandas (mente y emociones) con la estrategia pura de negocios. Con orgullo de ser quien soy hoy: Neuropsicoeducadora y Mentora de Mentes y de Negocios."
+      desc: "Sumé a emprendedores, profesionales y empresarios que necesitaron unir las habilidades blandas (mente y emociones) con la estrategia pura de negocios. Con orgullo de ser quien soy: Licenciada en Administración y Neuropsicoeducadora. Hoy me identifico como Mentora de Mentes y de Negocios."
     }
   ];
 
@@ -214,8 +214,8 @@ export default function HistoriaPage() {
                 Desde <strong>2021</strong> creé mi <strong>método propio</strong> acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos complejos, con éxito en todos los casos. Al ver la potencia transformadora de este sistema, <strong>sumé a emprendedores, profesionales y empresarios</strong> que necesitaban integrar las habilidades blandas con la estrategia de negocios.
               </p>
 
-              <p style={{ marginBottom: "1.5rem", color: "#F9D976", fontWeight: "750", fontSize: "1.2rem" }}>
-                Hoy me presento con orgullo de ser quien soy: Neuropsicoeducadora y Mentora de Mentes y de Negocios.
+              <p style={{ marginBottom: "1.5rem", color: "#F9D976", fontWeight: "750", fontSize: "1.2rem", lineHeight: "1.6" }}>
+                Hoy me presento con orgullo de ser quien soy: <span style={{ color: "#FFFFFF" }}>Licenciada en Administración y Neuropsicoeducadora</span>. Hoy me identifico como <span style={{ color: "#ECC369" }}>Mentora de Mentes y de Negocios</span>.
               </p>
 
             </div>
@@ -249,8 +249,12 @@ export default function HistoriaPage() {
                 Romina Lorena Montiel
               </h3>
 
-              <p style={{ color: "#ECC369", fontSize: "0.95rem", fontWeight: "700", marginBottom: "0.6rem" }}>
-                Neuropsicoeducadora &amp; Mentora de Negocios
+              <p style={{ color: "#ECC369", fontSize: "0.92rem", fontWeight: "700", marginBottom: "0.3rem" }}>
+                Lic. en Administración • Neuropsicoeducadora
+              </p>
+
+              <p style={{ color: "#F7E7CE", fontSize: "0.95rem", fontWeight: "800", marginBottom: "0.6rem" }}>
+                Mentora de Mentes y de Negocios
               </p>
 
               <p style={{ color: "#A0AEC0", fontSize: "0.85rem", marginBottom: "1.3rem" }}>

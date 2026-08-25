@@ -24,7 +24,8 @@ export default function Historia() {
                   <img src="/romina2.png" alt="Romina Lorena Montiel" />
                   <div className="historia-card-caption">
                       <h4>Romina Lorena Montiel</h4>
-                      <p>Mentora de Líderes &amp; Estratega de Negocios</p>
+                      <p style={{ fontSize: "0.95rem", color: "#ECC369", fontWeight: "700", margin: "0.2rem 0" }}>Lic. en Administración • Neuropsicoeducadora</p>
+                      <p style={{ fontSize: "0.9rem", color: "#F7E7CE", fontWeight: "800", marginBottom: "0.5rem" }}>Mentora de Mentes y de Negocios</p>
                       <Link href="/historia" style={{
                         display: "inline-flex",
                         alignItems: "center",

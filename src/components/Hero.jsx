@@ -65,7 +65,7 @@ export default function Hero() {
                   <div className="author-monogram">RM</div>
                   <div className="author-details">
                       <div className="author-name">ROMINA LORENA MONTIEL</div>
-                      <div className="author-role">Creadora de Método Modo Líder</div>
+                      <div className="author-role">Lic. en Administración • Neuropsicoeducadora | Mentora de Mentes y de Negocios</div>
                       <div className="author-quote">&quot;Creá. Liderá. Impactá. Desde quién sos.&quot;</div>
                   </div>
               </div>
