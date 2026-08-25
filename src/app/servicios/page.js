@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Servicios y Mentoría | Método MODO LÍDER - Romina Lorena Montiel",
@@ -390,6 +391,7 @@ export default function ServiciosPage() {
                 fontWeight: "800",
                 fontSize: "1.02rem",
                 borderRadius: "50px",
+                marginBottom: "2rem",
                 transition: "all 0.2s"
               }}
             >
@@ -397,10 +399,114 @@ export default function ServiciosPage() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
 
+            {/* Bloque de Redes Sociales */}
+            <div style={{
+              width: "100%",
+              maxWidth: "680px",
+              paddingTop: "1.8rem",
+              borderTop: "1px solid rgba(212, 175, 55, 0.25)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "1rem"
+            }}>
+              <span style={{
+                fontSize: "0.85rem",
+                fontWeight: "800",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+                color: "#ECC369"
+              }}>
+                SEGUIME EN MIS REDES SOCIALES
+              </span>
+
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap",
+                gap: "0.8rem",
+                width: "100%"
+              }}>
+                {/* Instagram Personal */}
+                <a 
+                  href="https://www.instagram.com/rominalorenamontiel/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.6rem",
+                    padding: "0.75rem 1.3rem",
+                    background: "rgba(225, 48, 108, 0.12)",
+                    border: "1px solid rgba(225, 48, 108, 0.45)",
+                    borderRadius: "12px",
+                    color: "#FF8BA7",
+                    textDecoration: "none",
+                    fontSize: "0.92rem",
+                    fontWeight: "750",
+                    transition: "all 0.2s"
+                  }}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <span>@rominalorenamontiel</span>
+                </a>
+
+                {/* Instagram Modo Lider */}
+                <a 
+                  href="https://www.instagram.com/modolider.co/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.6rem",
+                    padding: "0.75rem 1.3rem",
+                    background: "rgba(212, 175, 55, 0.12)",
+                    border: "1px solid rgba(212, 175, 55, 0.45)",
+                    borderRadius: "12px",
+                    color: "#ECC369",
+                    textDecoration: "none",
+                    fontSize: "0.92rem",
+                    fontWeight: "750",
+                    transition: "all 0.2s"
+                  }}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <span>@modolider.co</span>
+                </a>
+
+                {/* YouTube */}
+                <a 
+                  href="https://www.youtube.com/@RominaLorenaMontiel" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.6rem",
+                    padding: "0.75rem 1.3rem",
+                    background: "rgba(255, 0, 0, 0.12)",
+                    border: "1px solid rgba(255, 0, 0, 0.45)",
+                    borderRadius: "12px",
+                    color: "#FF6B6B",
+                    textDecoration: "none",
+                    fontSize: "0.92rem",
+                    fontWeight: "750",
+                    transition: "all 0.2s"
+                  }}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                  <span>YouTube Oficial</span>
+                </a>
+              </div>
+            </div>
+
           </div>
         </section>
 
       </main>
+
+      <Footer />
     </>
   );
 }

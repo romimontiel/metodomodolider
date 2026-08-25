@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Mi Historia | Romina Lorena Montiel - Lic. en Administración, Neuropsicoeducadora y Mentora de Mentes y de Negocios",
@@ -457,6 +458,8 @@ export default function HistoriaPage() {
         </section>
 
       </main>
+
+      <Footer />
     </>
   );
 }

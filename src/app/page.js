@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Historia from "@/components/Historia";
 import Metodo from "@/components/Metodo";
 import CtaFinal from "@/components/CtaFinal";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Historia />
       <Metodo />
       <CtaFinal />
+      <Footer />
     </>
   );
 }
