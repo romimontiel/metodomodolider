@@ -211,20 +211,38 @@ export default function ServiciosPage() {
                 Curso Emprender de Cero a Impacto y Ventas
               </h2>
 
-              <div style={{ color: "#CBD5E1", fontSize: "1.02rem", lineHeight: "1.7", marginBottom: "2rem", display: "flex", flexDirection: "column", gap: "0.9rem" }}>
+              <div style={{ color: "#CBD5E1", fontSize: "1.05rem", lineHeight: "1.7", marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <p>
                   Vamos a aprender a construir un negocio <strong>DESDE CERO</strong>, que te represente y que nazca de tu propósito.
                 </p>
                 <p>
                   Pero no vamos a romantizar el emprender: un negocio no solo debe nutrir el alma, también debe <strong>generar ingresos</strong> que sostengan tu vida y tu estilo de vida.
                 </p>
-                <p>
-                  Vamos a trabajar comunicación y conexión con tus clientes, dinero, ventas, mentalidad, patrones limitantes y autoliderazgo, integrando estrategias y acción consciente para crear una marca con valor, impacto real y capacidad de generar ingresos.
-                </p>
               </div>
 
               {/* Botones de Acción para el Curso */}
               <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", marginTop: "auto" }}>
+                <Link 
+                  href="/curso"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.6rem",
+                    padding: "1.1rem 1.8rem",
+                    background: "linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%)",
+                    color: "#0E121B",
+                    textDecoration: "none",
+                    fontWeight: "900",
+                    fontSize: "1.05rem",
+                    borderRadius: "14px",
+                    boxShadow: "0 10px 25px rgba(212, 175, 55, 0.35)",
+                    transition: "transform 0.2s, box-shadow 0.2s"
+                  }}
+                >
+                  <span>Ver Contenido Detallado del Curso →</span>
+                </Link>
+
                 <a 
                   href={cursoLink}
                   target="_blank"
@@ -234,14 +252,14 @@ export default function ServiciosPage() {
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "0.75rem",
-                    padding: "1.1rem 1.8rem",
-                    background: "linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%)",
-                    color: "#0E121B",
+                    padding: "0.95rem 1.6rem",
+                    background: "linear-gradient(135deg, #25D366 0%, #128C7E 100%)",
+                    color: "#FFFFFF",
                     textDecoration: "none",
-                    fontWeight: "900",
-                    fontSize: "1.05rem",
+                    fontWeight: "800",
+                    fontSize: "1rem",
                     borderRadius: "14px",
-                    boxShadow: "0 10px 25px rgba(212, 175, 55, 0.35)",
+                    boxShadow: "0 8px 20px rgba(37, 211, 102, 0.25)",
                     transition: "transform 0.2s"
                   }}
                 >
@@ -251,27 +269,6 @@ export default function ServiciosPage() {
                   </svg>
                   <span>Inscribirme por WhatsApp</span>
                 </a>
-
-                <Link 
-                  href="/curso"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "0.5rem",
-                    padding: "0.95rem 1.6rem",
-                    background: "rgba(255, 255, 255, 0.05)",
-                    border: "1.5px solid rgba(212, 175, 55, 0.4)",
-                    color: "#F7E7CE",
-                    textDecoration: "none",
-                    fontWeight: "700",
-                    fontSize: "0.98rem",
-                    borderRadius: "14px",
-                    transition: "all 0.2s"
-                  }}
-                >
-                  <span>Ver Contenido Detallado del Curso →</span>
-                </Link>
               </div>
 
             </div>
