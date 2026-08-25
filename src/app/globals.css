@@ -634,6 +634,9 @@
             font-size: 2.6rem;
             color: #FFFFFF;
             margin-bottom: 1.2rem;
+            line-height: 1.25;
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .cta-final-box p {
@@ -709,5 +712,67 @@
             .metodo-title {
                 font-size: 2.2rem;
             }
+            .cta-final-box {
+                padding: 2.2rem 1.1rem;
+                border-radius: 18px;
+            }
+            .cta-final-box h2 {
+                font-size: 1.75rem;
+                line-height: 1.25;
+            }
+            .cta-final-box p {
+                font-size: 1rem;
+            }
         }
+
+        /* --- HISTORIA PAGE RESPONSIVE STYLES --- */
+        .historia-page-grid {
+            display: grid;
+            grid-template-columns: 1.18fr 0.82fr;
+            gap: 3.5rem;
+            align-items: start;
+            margin-bottom: 5rem;
+        }
+
+        .historia-cta-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(22, 26, 37, 0.98) 100%);
+            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 35px rgba(212, 175, 55, 0.15);
+        }
+
+        .historia-cta-title {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            color: #FFFFFF;
+            margin-bottom: 1.2rem;
+            line-height: 1.25;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        @media (max-width: 900px) {
+            .historia-page-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .historia-cta-box {
+                padding: 2.2rem 1.1rem;
+                border-radius: 18px;
+            }
+            .historia-cta-title {
+                font-size: 1.7rem;
+                line-height: 1.25;
+            }
+            .historia-cta-desc {
+                font-size: 1rem !important;
+                margin-bottom: 1.8rem !important;
+            }
+        }
+
     

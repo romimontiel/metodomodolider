@@ -117,7 +117,7 @@ export default function HistoriaPage() {
 
             <h1 style={{
               fontFamily: "var(--font-display)",
-              fontSize: "3.6rem",
+              fontSize: "clamp(2.4rem, 6vw, 3.6rem)",
               fontWeight: "800",
               color: "#FFFFFF",
               marginBottom: "1.2rem",
@@ -127,7 +127,7 @@ export default function HistoriaPage() {
             </h1>
 
             <p style={{
-              fontSize: "1.28rem",
+              fontSize: "clamp(1.05rem, 2.5vw, 1.28rem)",
               color: "#E2E8F0",
               lineHeight: 1.65,
               maxWidth: "760px",
@@ -139,15 +139,9 @@ export default function HistoriaPage() {
         </section>
 
         {/* Sección Biográfica Principal */}
-        <section style={{ maxWidth: "1160px", margin: "4.5rem auto 0 auto", padding: "0 2rem" }}>
+        <section style={{ maxWidth: "1160px", margin: "4.5rem auto 0 auto", padding: "0 1.25rem" }}>
           
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "1.18fr 0.82fr",
-            gap: "3.5rem",
-            alignItems: "start",
-            marginBottom: "5rem"
-          }}>
+          <div className="historia-page-grid">
             
             {/* Narrativa Escrita */}
             <div style={{ fontSize: "1.15rem", lineHeight: "1.85", color: "#E2E8F0" }}>
@@ -389,14 +383,7 @@ export default function HistoriaPage() {
           </div>
 
           {/* Bloque Destacado de Cierre & CTA */}
-          <div style={{
-            background: "linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(22, 26, 37, 0.98) 100%)",
-            border: "1.5px solid rgba(212, 175, 55, 0.45)",
-            borderRadius: "24px",
-            padding: "4rem 3rem",
-            textAlign: "center",
-            boxShadow: "0 25px 50px rgba(0,0,0,0.5), 0 0 35px rgba(212, 175, 55, 0.15)"
-          }}>
+          <div className="historia-cta-box">
             <span style={{
               fontSize: "0.85rem",
               fontWeight: "800",
@@ -409,20 +396,15 @@ export default function HistoriaPage() {
               ACTIVÁ TU MODO LÍDER
             </span>
 
-            <h2 style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "2.5rem",
-              color: "#FFFFFF",
-              marginBottom: "1.2rem"
-            }}>
+            <h2 className="historia-cta-title">
               Trabajemos juntos en la transformación de tu negocio
             </h2>
 
-            <p style={{
+            <p className="historia-cta-desc" style={{
               fontSize: "1.18rem",
               color: "#E2E8F0",
               maxWidth: "800px",
-              margin: "0 auto 2.8rem auto",
+              margin: "0 auto 2.5rem auto",
               lineHeight: "1.7"
             }}>
               Integrá la ciencia de tu cerebro, la reprogramación de patrones limitantes y las tácticas de negocios que te permitirán liderar con claridad y atraer resultados reales.
