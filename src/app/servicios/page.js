@@ -383,20 +383,24 @@ export default function ServiciosPage() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.6rem",
-                padding: "0.95rem 2rem",
-                background: "rgba(37, 211, 102, 0.15)",
-                border: "1.5px solid #25D366",
-                color: "#25D366",
+                padding: "0.95rem 2.2rem",
+                background: "linear-gradient(135deg, #25D366 0%, #128C7E 100%)",
+                border: "none",
+                color: "#FFFFFF",
                 textDecoration: "none",
                 fontWeight: "800",
-                fontSize: "1.02rem",
+                fontSize: "1.05rem",
                 borderRadius: "50px",
+                boxShadow: "0 10px 25px rgba(37, 211, 102, 0.35)",
                 marginBottom: "2rem",
                 transition: "all 0.2s"
               }}
             >
-              <span>Hablar con Romina al +54 379 432-2272</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.178L2 22l4.981-1.394C8.423 21.493 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.637 0-3.167-.492-4.448-1.336l-.319-.208-2.966.83.844-2.883-.228-.337A8.156 8.156 0 0 1 3.8 12c0-4.522 3.678-8.2 8.2-8.2 4.521 0 8.2 3.678 8.2 8.2 0 4.522-3.679 8.2-8.2 8.2z"/>
+              </svg>
+              <span>Contactar a Romina por WhatsApp</span>
             </a>
 
             {/* Bloque de Redes Sociales */}
