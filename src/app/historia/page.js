@@ -51,10 +51,16 @@ export default function HistoriaPage() {
       desc: "Comencé a acompañar de manera privada en sesiones individuales. Construí un método propio para educar y guiar a personas adultas, niños y adolescentes en procesos complicados, con éxito total en cada caso. Personas que hoy me siguen acompañando y apoyando."
     },
     {
-      year: "Actualidad",
+      year: "2021 - 2023",
       flag: "👑",
       title: "Integración Total: Método MODO LÍDER",
-      desc: "Sumé a emprendedores, profesionales y empresarios que necesitaron unir las habilidades blandas (mente y emociones) con la estrategia pura de negocios. Con orgullo de ser quien soy: Licenciada en Administración y Neuropsicoeducadora. Hoy me identifico como Mentora de Mentes y de Negocios."
+      desc: "Nació el Método MODO LÍDER como una respuesta integral para unir las habilidades blandas (mente, neurociencias y emociones) con la estrategia táctica de negocios. Con orgullo de ser quien soy: Licenciada en Administración y Neuropsicoeducadora."
+    },
+    {
+      year: "HOY",
+      flag: "🚀",
+      title: "Lo Que Hago Hoy: De la Mentalidad a las Ventas",
+      desc: "Hoy trabajo junto a empresarios y emprendedores creando sus modelos de negocio desde cero o transformando su mentalidad e instalando la Inteligencia de Negocios adecuada para que todo su impacto y propuesta de valor se traduzca en clientes y ventas reales."
     }
   ];
 
@@ -217,6 +223,22 @@ export default function HistoriaPage() {
               <p style={{ marginBottom: "1.5rem", color: "#F9D976", fontWeight: "750", fontSize: "1.2rem", lineHeight: "1.6" }}>
                 Hoy me presento con orgullo de ser quien soy: <span style={{ color: "#FFFFFF" }}>Licenciada en Administración y Neuropsicoeducadora</span>. Hoy me identifico como <span style={{ color: "#ECC369" }}>Mentora de Mentes y de Negocios</span>.
               </p>
+
+              <div style={{
+                marginTop: "2rem",
+                padding: "1.6rem 1.8rem",
+                background: "linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(26, 32, 48, 0.9) 100%)",
+                borderRadius: "14px",
+                border: "1.5px solid rgba(212, 175, 55, 0.4)",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.3)"
+              }}>
+                <span style={{ fontSize: "0.85rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", color: "#ECC369", display: "block", marginBottom: "0.6rem" }}>
+                  🎯 MI TRABAJO Y MISIÓN HOY
+                </span>
+                <p style={{ margin: 0, fontSize: "1.08rem", lineHeight: "1.75", color: "#F3F4F6" }}>
+                  Hoy trabajo junto a <strong>empresarios y emprendedores</strong> creando sus negocios desde cero o transformando su mentalidad e instalando la <strong>Inteligencia de Negocios adecuada</strong> para que todo el impacto y valor que generan hacia el exterior se traduzca de forma contundente en <strong>clientes, ventas reales y crecimiento sostenible</strong>.
+                </p>
+              </div>
 
             </div>
 
