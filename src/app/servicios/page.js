@@ -211,15 +211,12 @@ export default function ServiciosPage() {
                 Curso Emprender de Cero a Impacto y Ventas
               </h2>
 
-              <div style={{ color: "#CBD5E1", fontSize: "1.02rem", lineHeight: "1.7", marginBottom: "2rem", display: "flex", flexDirection: "column", gap: "0.9rem" }}>
+              <div style={{ color: "#CBD5E1", fontSize: "1.05rem", lineHeight: "1.7", marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <p>
                   Vas a aprender a construir un negocio <strong>DESDE CERO</strong>, que te represente y que nazca de tu propósito.
                 </p>
                 <p>
                   Pero no vamos a romantizar el emprender: un negocio no solo debe nutrir el alma, también debe <strong>generar ingresos</strong> que sostengan tu vida y tu estilo de vida.
-                </p>
-                <p>
-                  Vamos a trabajar comunicación y conexión con tus clientes, dinero, ventas, mentalidad, patrones limitantes y autoliderazgo, integrando estrategias y acción consciente para crear una marca con valor, impacto real y capacidad de generar ingresos.
                 </p>
               </div>
 
