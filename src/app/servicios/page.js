@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Servicios y Mentoría | Método MODO LÍDER - Romina Lorena Montiel",
-  description: "Descubre los servicios de Mentoría 1 a 1 y el Curso Método MODO LÍDER con Romina Lorena Montiel. Ciencia del comportamiento y estrategia de negocios para tu transformación.",
+  description: "Descubre los servicios de Mentoría 1 a 1 y el Curso Emprender de Cero a Impacto y Ventas con Romina Lorena Montiel.",
 };
 
 export default function ServiciosPage() {
   const whatsappBase = "https://wa.me/543794322272";
   const mentoriaLink = `${whatsappBase}?text=${encodeURIComponent("Hola Romina, me interesa solicitar información y disponibilidad para la Mentoría 1 a 1.")}`;
-  const cursoLink = `${whatsappBase}?text=${encodeURIComponent("Hola Romina, quiero inscribirme en el Curso Método Modo Líder.")}`;
+  const cursoLink = `${whatsappBase}?text=${encodeURIComponent("Hola Romina, quiero inscribirme en el Curso Emprender de Cero a Impacto y Ventas.")}`;
   const contactoGeneral = `${whatsappBase}?text=${encodeURIComponent("Hola Romina, quiero hacerte una consulta sobre tus servicios.")}`;
 
   return (
@@ -208,7 +208,7 @@ export default function ServiciosPage() {
                 marginBottom: "1rem",
                 lineHeight: "1.2"
               }}>
-                Curso Método MODO LÍDER
+                Curso Emprender de Cero a Impacto y Ventas
               </h2>
 
               <div style={{ color: "#CBD5E1", fontSize: "1.02rem", lineHeight: "1.7", marginBottom: "2rem", display: "flex", flexDirection: "column", gap: "0.9rem" }}>

@@ -70,7 +70,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/curso" style={{ color: "#CBD5E1", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }}>
-                  🎓 Curso Modo Líder
+                  🎓 Curso Emprender de Cero a Impacto y Ventas
                 </Link>
               </li>
               <li>
