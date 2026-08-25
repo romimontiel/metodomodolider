@@ -283,26 +283,27 @@ export default function ServiciosPage() {
         {/* Tarjeta de Contacto Personalizado con Romina */}
         <section style={{ maxWidth: "850px", margin: "4.5rem auto 0 auto", padding: "0 1.25rem" }}>
           <div style={{
-            background: "linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(22, 26, 37, 0.95) 100%)",
-            border: "1.5px solid rgba(212, 175, 55, 0.4)",
+            background: "#FFFFFF",
+            border: "1.5px solid rgba(212, 175, 55, 0.45)",
+            borderTop: "6px solid #D4AF37",
             borderRadius: "24px",
-            padding: "clamp(2rem, 4vw, 3rem) clamp(1.2rem, 3vw, 2.5rem)",
+            padding: "clamp(2.2rem, 4vw, 3.2rem) clamp(1.2rem, 3vw, 2.5rem)",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             textAlign: "center",
-            boxShadow: "0 20px 45px rgba(0,0,0,0.4)"
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 25px rgba(212, 175, 55, 0.15)"
           }}>
             
             <div style={{
-              width: "105px",
-              height: "105px",
+              width: "110px",
+              height: "110px",
               borderRadius: "50%",
               overflow: "hidden",
               border: "3.5px solid #D4AF37",
               marginBottom: "1.2rem",
-              background: "radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(10, 13, 20, 0.9) 100%)",
-              boxShadow: "0 8px 25px rgba(0,0,0,0.45)"
+              background: "#F8FAFC",
+              boxShadow: "0 8px 25px rgba(0,0,0,0.15)"
             }}>
               <img 
                 src="/romina_historia.png" 
@@ -313,15 +314,15 @@ export default function ServiciosPage() {
 
             <h3 style={{
               fontFamily: "var(--font-heading)",
-              fontSize: "1.55rem",
+              fontSize: "1.65rem",
               fontWeight: "800",
-              color: "#FFFFFF",
-              marginBottom: "0.3rem"
+              color: "#0F172A",
+              marginBottom: "0.35rem"
             }}>
               Romina Lorena Montiel
             </h3>
 
-            <p style={{ color: "#ECC369", fontWeight: "700", fontSize: "0.98rem", marginBottom: "1.8rem" }}>
+            <p style={{ color: "#B47C13", fontWeight: "750", fontSize: "1rem", marginBottom: "1.8rem" }}>
               Licenciada en Administración • Neuropsicoeducadora | Mentora de Mentes y de Negocios
             </p>
 
@@ -330,7 +331,7 @@ export default function ServiciosPage() {
               width: "100%",
               maxWidth: "680px",
               paddingTop: "1.8rem",
-              borderTop: "1px solid rgba(212, 175, 55, 0.25)",
+              borderTop: "1px solid #E2E8F0",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -341,7 +342,7 @@ export default function ServiciosPage() {
                 fontWeight: "800",
                 letterSpacing: "2px",
                 textTransform: "uppercase",
-                color: "#ECC369"
+                color: "#64748B"
               }}>
                 SEGUIME EN MIS REDES SOCIALES
               </span>
@@ -350,7 +351,7 @@ export default function ServiciosPage() {
                 display: "flex",
                 justifyContent: "center",
                 flexWrap: "wrap",
-                gap: "0.8rem",
+                gap: "0.9rem",
                 width: "100%"
               }}>
                 {/* Instagram Personal */}
@@ -362,15 +363,16 @@ export default function ServiciosPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "0.6rem",
-                    padding: "0.75rem 1.3rem",
-                    background: "rgba(225, 48, 108, 0.12)",
-                    border: "1px solid rgba(225, 48, 108, 0.45)",
+                    padding: "0.8rem 1.4rem",
+                    background: "rgba(225, 48, 108, 0.08)",
+                    border: "1.5px solid rgba(225, 48, 108, 0.35)",
                     borderRadius: "12px",
-                    color: "#FF8BA7",
+                    color: "#D62976",
                     textDecoration: "none",
-                    fontSize: "0.92rem",
+                    fontSize: "0.95rem",
                     fontWeight: "750",
-                    transition: "all 0.2s"
+                    transition: "all 0.2s",
+                    boxShadow: "0 2px 8px rgba(225, 48, 108, 0.08)"
                   }}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -386,15 +388,16 @@ export default function ServiciosPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "0.6rem",
-                    padding: "0.75rem 1.3rem",
+                    padding: "0.8rem 1.4rem",
                     background: "rgba(212, 175, 55, 0.12)",
-                    border: "1px solid rgba(212, 175, 55, 0.45)",
+                    border: "1.5px solid rgba(212, 175, 55, 0.5)",
                     borderRadius: "12px",
-                    color: "#ECC369",
+                    color: "#8F640A",
                     textDecoration: "none",
-                    fontSize: "0.92rem",
+                    fontSize: "0.95rem",
                     fontWeight: "750",
-                    transition: "all 0.2s"
+                    transition: "all 0.2s",
+                    boxShadow: "0 2px 8px rgba(212, 175, 55, 0.08)"
                   }}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -410,15 +413,16 @@ export default function ServiciosPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "0.6rem",
-                    padding: "0.75rem 1.3rem",
-                    background: "rgba(255, 0, 0, 0.12)",
-                    border: "1px solid rgba(255, 0, 0, 0.45)",
+                    padding: "0.8rem 1.4rem",
+                    background: "rgba(255, 0, 0, 0.08)",
+                    border: "1.5px solid rgba(255, 0, 0, 0.35)",
                     borderRadius: "12px",
-                    color: "#FF6B6B",
+                    color: "#CC0000",
                     textDecoration: "none",
-                    fontSize: "0.92rem",
+                    fontSize: "0.95rem",
                     fontWeight: "750",
-                    transition: "all 0.2s"
+                    transition: "all 0.2s",
+                    boxShadow: "0 2px 8px rgba(255, 0, 0, 0.08)"
                   }}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
