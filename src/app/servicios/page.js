@@ -195,8 +195,8 @@ export default function ServiciosPage() {
                 }}>
                   PROGRAMA DE FORMACIÓN ACTIVO
                 </span>
-                <span style={{ color: "#94A3B8", fontSize: "0.9rem", fontWeight: "700" }}>
-                  Campus Virtual
+                <span style={{ color: "#ECC369", fontSize: "0.9rem", fontWeight: "700" }}>
+                  Curso
                 </span>
               </div>
 
