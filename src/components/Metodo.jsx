@@ -42,7 +42,7 @@ export default function Metodo() {
                       </svg>
                   </div>
                   <h3>Inteligencia de Negocios</h3>
-                  <p>Estrategia pura y aplicable. Te acompaño en la toma de decisiones con agilidad, la estructuración de procesos eficientes y una visión táctica para dirigir tu empresa hacia el crecimiento exponencial.</p>
+                  <p>Estrategia clave y aplicable. Te acompaño en la detección de las estrategias adecuadas para tu negocio, la toma ágil de decisiones, la estructuración de procesos eficientes y una visión táctica para dirigir tu empresa hacia la conexión y el impacto que atraen ventas reales.</p>
               </div>
           </div>
 
