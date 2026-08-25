@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITULO 1 EMPRENDER CONSCIENTEMENTE | Workbook de Apoyo</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-page: #F8F9FB;
+            --bg-card: #FFFFFF;
+            --color-primary: #0E121B;
+            --color-navy: #161A25;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #B4871E;
+            --color-gold-light: #FFF9E6;
+            --color-coral: #E94560;
+            --color-coral-light: #FFF0F2;
+            --color-text-main: #1B1F2A;
+            --color-text-muted: #5C6779;
+            --color-border: #E2E6EE;
+            --color-border-gold: rgba(212, 175, 55, 0.35);
+            --radius-md: 10px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--color-text-main);
+            line-height: 1.65;
+            padding: 2.5rem 1rem;
+        }
+
+        .workbook-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            padding: 3.5rem 4rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--color-border);
+        }
+
+        .action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--color-navy);
+            color: #FFFFFF;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2.5rem;
+        }
+
+        .action-bar-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            letter-spacing: 0.5px;
+        }
+
+        .btn-gold {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--color-gold);
+            color: var(--color-primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.55rem 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+        .btn-gold:hover {
+            background: #e6bf43;
+            transform: translateY(-1px);
+        }
+
+        .wb-header {
+            text-align: center;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--color-gold);
+            margin-bottom: 2.5rem;
+        }
+
+        .wb-tag {
+            display: inline-block;
+            background: var(--color-gold-light);
+            color: var(--color-gold-dark);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            border: 1px solid var(--color-border-gold);
+        }
+
+        .wb-main-title {
+            font-size: 2.1rem;
+            font-weight: 900;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .section-block {
+            margin-bottom: 2.8rem;
+        }
+
+        .block-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .quote-box {
+            background: var(--color-gold-light);
+            border-left: 4px solid var(--color-gold);
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.2rem 0;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .quote-box.coral-border {
+            border-left-color: var(--color-coral);
+            background: var(--color-coral-light);
+        }
+
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .matrix-table th {
+            padding: 0.9rem 1.1rem;
+            font-weight: 800;
+            text-align: left;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+        }
+
+        .matrix-table td {
+            padding: 0.85rem 1.1rem;
+            border-bottom: 1px solid var(--color-border);
+            vertical-align: middle;
+        }
+
+        .matrix-table tr:nth-child(even) td {
+            background: #FAFBFC;
+        }
+
+        .question-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 1.4rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .question-text {
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--color-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .question-clarification {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .fill-textarea {
+            width: 100%;
+            min-height: 100px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: #FAFBFC;
+            color: var(--color-text-main);
+            outline: none;
+            resize: vertical;
+        }
+        .fill-textarea:focus {
+            background: #FFFFFF;
+            border-color: var(--color-gold-dark);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+
+        .formula-container {
+            background: var(--color-navy);
+            color: #FFFFFF;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--color-border-gold);
+        }
+
+        .formula-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--color-gold);
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+        }
+
+        .formula-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+        }
+
+        .formula-list li {
+            background: var(--color-surface-dark);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 0.7rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .formula-list li strong {
+            color: var(--color-gold);
+        }
+
+        .banner-mp {
+            background: var(--color-gold-light);
+            border: 2px solid var(--color-gold);
+            border-radius: 10px;
+            padding: 1.3rem;
+            text-align: center;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--color-gold-dark);
+            margin: 1.5rem 0;
+        }
+
+        /* ==================== RESPONSIVE ADAPTATIONS (MOBILE & TABLET) ==================== */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .workbook-container {
+                padding: 1.8rem 1.2rem;
+                border-radius: 12px;
+            }
+            .action-bar {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+            .btn-action, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                box-sizing: border-box;
+                padding: 0.8rem 1rem;
+            }
+            .workbook-title {
+                font-size: 1.6rem;
+            }
+            .formula-list {
+                grid-template-columns: 1fr;
+            }
+            .matrix-table {
+                display: block;
+                overflow-x: auto;
+                white-space: normal;
+                width: 100%;
+            }
+            .table-wrap {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .workbook-title {
+                font-size: 1.35rem;
+            }
+            .section-title {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: #FFFFFF;
+                padding: 0;
+            }
+            .action-bar {
+                display: none !important;
+            }
+            .workbook-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .formula-container {
+                background: #F4F6F9 !important;
+                color: #000 !important;
+                border: 1px solid #999 !important;
+            }
+            .formula-title {
+                color: #000 !important;
+            }
+            .formula-list li {
+                background: #FFF !important;
+                color: #000 !important;
+                border: 1px solid #CCC !important;
+            }
+            .formula-list li strong {
+                color: #000 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="workbook-container">
+        
+        <div class="action-bar">
+            <div class="action-bar-title">MÉTODO MODO LÍDER • WORKBOOK</div>
+            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;">
+                <a href="../campus_alumnas.html" class="btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.65rem 1.1rem; border-radius: 8px; font-size: 0.88rem; font-weight: 700; background: var(--color-navy); color: #FFF; border: 1px solid var(--color-border-gold);">
+                    👑 Ir al Campus
+                </a>
+                <a href="../curso_info_acceso.html" class="btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.65rem 1.1rem; border-radius: 8px; font-size: 0.88rem; font-weight: 700; background: #FFFFFF; color: var(--color-navy); border: 1px solid var(--color-border);">
+                    ℹ️ Info Curso
+                </a>
+                <a href="../landing_metodo_lider.html" class="btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.65rem 1.1rem; border-radius: 8px; font-size: 0.88rem; font-weight: 700; background: #FFFFFF; color: var(--color-navy); border: 1px solid var(--color-border);">
+                    🏠 Home
+                </a>
+                <button class="btn-gold" onclick="window.print()" style="padding: 0.65rem 1.2rem; border-radius: 8px; font-weight: 800; font-size: 0.88rem; cursor: pointer;">
+                    🖨️ Imprimir / PDF
+                </button>
+            </div>
+        </div>
+
+        <header class="wb-header">
+            <span class="wb-tag">CURSO: CREAR UN NEGOCIO DE CERO A IMPACTO Y VENTAS</span>
+            <h1 class="wb-main-title">CAPITULO 1 EMPRENDER CONSCIENTEMENTE</h1>
+        </header>
+
+        <!-- Bloque 1 -->
+        <div class="section-block">
+            <h2 class="block-title">¿Qué diferencia a un emprendedor consciente de otro que no lo es?</h2>
+            <p style="font-weight: 600; color: var(--color-gold-dark); margin-bottom: 0.8rem;">La diferencia clave podría ser:</p>
+
+            <div class="quote-box coral-border">
+                <strong>Un emprendedor no consciente pregunta:</strong> “¿Cómo logro que mi negocio funcione?”
+            </div>
+
+            <div class="quote-box">
+                <strong>Un emprendedor consciente pregunta:</strong> “¿Qué negocio quiero construir y en quién me quiero convertir mientras lo construyo?” y luego se pregunta otras cosas, como con qué estilo de clientes me gustaría trabajar . ¿Cómo logro comunicarme con ellos? ¿Cómo conecto con sus intereses para crear conexión real? Para luego pensar, ¿qué cosas les gustan y les disgustan a mis clientes objetivos? ¿Qué odian, qué temen, que necesitan y de cuáles de sus necesidades voy a ocuparme de resolver?
+            </div>
+        </div>
+
+        <!-- Bloque 2 -->
+        <div class="section-block">
+            <h2 class="block-title">🌱 La diferencia no está en el negocio, sino en la manera de pensar y de emprender tu negocio</h2>
+            
+            <p style="margin-bottom: 0.8rem;">
+                Un emprendedor consciente <strong>también quiere ganar dinero, crecer, vender y tener éxito</strong>. No renuncia a la ambición.
+            </p>
+            <p style="margin-bottom: 0.8rem;">
+                La diferencia es que <strong>no separa el éxito económico del impacto que genera, de sus valores y de la persona que está siendo.</strong>
+            </p>
+            <p style="margin-bottom: 1.2rem;">
+                Por otro lado un emprendedor consciente sabe que para poder lograr lo que desea necesariamente necesita trascender sus miedos, desactivar sus limitaciones mentales y/o reconocer y resolver las heridas que bloquean su camino y limitaciones hacia su éxito.
+            </p>
+
+            <div class="banner-mp" style="background: var(--color-gold-light); font-size: 1.1rem;">
+                “Ser un emprendedor consciente no significa emprender sin ambición. Significa tener ambición sin perderte a vos misma en el camino.”
+            </div>
+        </div>
+
+        <!-- Tabla Comparativa -->
+        <div class="section-block">
+            <div class="table-wrap">
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th style="background: var(--color-coral-light); color: var(--color-coral); width: 50%;">Emprendedor tradicional / no consciente</th>
+                            <th style="background: var(--color-gold-light); color: var(--color-gold-dark); width: 50%;">Emprendedor consciente</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Busca resultados rápidos</td>
+                            <td>Construye relaciones y conexión hacia resultados sostenibles</td>
+                        </tr>
+                        <tr>
+                            <td>Decide principalmente por dinero</td>
+                            <td>Decide considerando propósito + impacto hacia el dinero</td>
+                        </tr>
+                        <tr>
+                            <td>Vende lo que puede</td>
+                            <td>Busca resolver problemas reales de los clientes que decidió atender</td>
+                        </tr>
+                        <tr>
+                            <td>Compite permanentemente</td>
+                            <td>Puede colaborar y crear redes desde el respeto, los límites y los acuerdos</td>
+                        </tr>
+                        <tr>
+                            <td>Trabaja hasta agotarse</td>
+                            <td>Aprende a gestionar su bienestar, su energía y recursos</td>
+                        </tr>
+                        <tr>
+                            <td>Busca demostrar que puede</td>
+                            <td>Busca construir algo que tenga sentido y que genere dinero</td>
+                        </tr>
+                        <tr>
+                            <td>Se identifica con el resultado</td>
+                            <td>Aprende del resultado y sigue mejorando o escalando</td>
+                        </tr>
+                        <tr>
+                            <td>Tiene miedo de equivocarse</td>
+                            <td>Usa el error como información y crecimiento</td>
+                        </tr>
+                        <tr>
+                            <td>Entiende que puede crecer a cualquier costo porque así es como se gana dinero</td>
+                            <td>Define qué costo no está dispuesto a pagar con sabiduría y en coherencia con sus valores</td>
+                        </tr>
+                        <tr>
+                            <td>Pregunta “¿cuánto gano?”</td>
+                            <td>Pregunta “¿Qué genero y qué construyo y cuánto gano?”</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Preguntas Incómodas -->
+        <div class="section-block">
+            <h2 class="block-title">🔥 Y después haría una pregunta incómoda</h2>
+            <p style="font-weight: 700; color: var(--color-gold-dark); margin-bottom: 1rem;">Les preguntaría:</p>
+
+            <div class="question-card" style="border-left: 5px solid var(--color-gold);">
+                <div class="question-text">¿Qué estás dispuesta a hacer para que tu emprendimiento tenga éxito?</div>
+                <div class="question-clarification">Aquí es donde se crea la mentalidad que necesitás para llegar lejos</div>
+                <textarea class="fill-textarea" placeholder="Escribí tu respuesta aquí..."></textarea>
+            </div>
+
+            <div class="question-card" style="border-left: 5px solid var(--color-coral);">
+                <div class="question-text">“¿Y qué NO estás dispuesta a hacer?”</div>
+                <div class="question-clarification">Aquí es donde aparecen tus valores, tus límites, tus criterios de decisión básicos</div>
+                <textarea class="fill-textarea" placeholder="Escribí tu respuesta aquí..."></textarea>
+            </div>
+
+            <div class="question-card" style="border-left: 5px solid var(--color-navy);">
+                <div class="question-text">¿Cuánto necesitás cobrar por tus productos y/o servicios para que tu propia economía + tu negocio funcione?</div>
+                <textarea class="fill-textarea" placeholder="Escribí tu respuesta aquí..."></textarea>
+            </div>
+        </div>
+
+        <!-- Fórmula -->
+        <div class="section-block">
+            <div class="formula-container">
+                <div class="formula-title">
+                    EMPRENDER CONSCIENTEMENTE = PROPÓSITO + IDENTIDAD + MENTALIDAD + ACCIÓN CON ESTRATEGIA = IMPACTO + DINERO QUE FLUYE HACIA TU NEGOCIO
+                </div>
+                <ul class="formula-list">
+                    <li><strong>• Propósito:</strong> ¿para qué?</li>
+                    <li><strong>• Identidad:</strong> ¿quién soy y qué quiero construir?</li>
+                    <li><strong>• Mentalidad:</strong> ¿qué necesito transformar?</li>
+                    <li><strong>• Acción:</strong> ¿qué hago?</li>
+                    <li><strong>• Estrategia:</strong> ¿cómo lo hago inteligentemente?</li>
+                    <li><strong>• Impacto:</strong> ¿qué genero?</li>
+                    <li style="grid-column: span 2;"><strong>• Dinero:</strong> ¿cómo genero dinero para que mi sustento personal sea sostenible?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Conciencia Empresarial & Marca Personal -->
+        <div class="section-block">
+            <p style="margin-bottom: 0.8rem;">
+                Un emprendedor consciente sabe quién es, tiene una dirección (propósito) y cada día toma decisiones y acciona en función de sus valores y transformando su mentalidad hacia  lo que necesita hacer para llegar un día a la vez hacia crear y sostener un negocio de impacto que le permita vivir con el estilo de vida que desea.
+            </p>
+            <p style="margin-bottom: 1.2rem;">
+                La conciencia empresarial es aprender a tomar mejores decisiones con los elementos que se tienen disponibles pero sin perder de vista los valores los limites la conexion con el cliente y lo que deseo para mi y mi negocio.
+            </p>
+
+            <div class="banner-mp">
+                Estas decisiones puestas en acción a diario crean una MARCA PERSONAL QUE SE ENTIENDE Y FUNCIONA PARA GENERAR DINERO
+            </div>
+        </div>
+
+        <!-- Cierre -->
+        <div class="quote-box" style="padding: 1.8rem; text-align: center; border-left: none; border: 2px solid var(--color-gold); font-size: 1.05rem; font-weight: 600; line-height: 1.6; margin-bottom: 2rem;">
+            “Vamos a aprender a construir un negocio sin desconectarnos de nosotras mismas, pero tampoco vamos a romantizarlo porque emprender es crear un negocio que genere renta que te sustente a vos y tu estilo de vida . Vamos a hablar de propósito, dinero, ventas, de mentalidad y autoliderazgo, pero también de estrategias claves y acción consciente para generar negocios con valor de marca e impacto real que atrae dinero.”
+        </div>
+
+        <!-- Barra Inferior de Navegación -->
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+            <a href="../campus_alumnas.html" class="btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 700; background: var(--color-navy); color: #FFF; border: 1.5px solid var(--color-border-gold); box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                👑 Volver al Campus de Alumnas
+            </a>
+            <a href="../curso_info_acceso.html" class="btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 700; background: #FFFFFF; color: var(--color-navy); border: 1.5px solid var(--color-border);">
+                ℹ️ Ver Info del Curso
+            </a>
+            <a href="../landing_metodo_lider.html" class="btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 700; background: #FFFFFF; color: var(--color-navy); border: 1.5px solid var(--color-border);">
+                🏠 Regresar a la Home
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

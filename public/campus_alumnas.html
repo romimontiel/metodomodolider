@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus de Alumnas | Curso: Emprender de Cero a Impacto y Ventas</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0A0D14;
+            --bg-sidebar: #0E121B;
+            --bg-surface: #141824;
+            --bg-card: #1B2130;
+            --gold-primary: #D4AF37;
+            --gold-light: #F7E7CE;
+            --gold-gradient: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%);
+            --coral-accent: #E94560;
+            --text-main: #F3F4F6;
+            --text-muted: #8E9BAE;
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --radius-md: 10px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Top Header Bar */
+        .campus-header {
+            background: #090B10;
+            border-bottom: 1px solid var(--border-glass);
+            padding: 0.8rem 1.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 50;
+            flex-shrink: 0;
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .campus-logo {
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .course-tag {
+            background: rgba(212, 175, 55, 0.12);
+            color: var(--gold-primary);
+            border: 1px solid var(--border-gold);
+            padding: 0.25rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .btn-nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #CCD2DC;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.45rem 0.9rem;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            transition: all 0.2s;
+        }
+        .btn-nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+
+        .btn-home-accent {
+            border-color: var(--border-gold);
+            color: var(--gold-light);
+        }
+        .btn-home-accent:hover {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-primary);
+        }
+
+        /* Main Workspace: Sidebar + Content Area */
+        .campus-layout {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Sidebar: Modulos y Lecciones */
+        .campus-sidebar {
+            width: 340px;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border-glass);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            padding: 1.2rem 1.4rem;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .sidebar-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+        }
+
+        .progress-indicator {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            width: 25%;
+            height: 100%;
+            background: var(--gold-gradient);
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        /* Module Accordion Items */
+        .module-group {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .module-group-title {
+            padding: 1rem 1.4rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.02);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lesson-list {
+            list-style: none;
+        }
+
+        .lesson-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.85rem 1.4rem;
+            background: transparent;
+            border: none;
+            color: #B0B9C6;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .lesson-btn:hover {
+            background: rgba(255, 255, 255, 0.04);
+            color: #FFFFFF;
+        }
+
+        .lesson-btn.active {
+            background: rgba(212, 175, 55, 0.1);
+            color: #FFFFFF;
+            font-weight: 700;
+            border-left-color: var(--gold-primary);
+        }
+
+        .lesson-status {
+            font-size: 0.9rem;
+            color: var(--gold-primary);
+        }
+
+        /* Main Player & Content Zone */
+        .campus-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem 2.5rem;
+            background: radial-gradient(circle at 80% 10%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                        var(--bg-dark);
+        }
+
+        .content-container {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        /* Lesson Header */
+        .lesson-top-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .lesson-title-main {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .lesson-sub-meta {
+            font-size: 0.85rem;
+            color: var(--gold-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Format Tabs Switcher (Video / Podcast / Materiales) */
+        .format-tabs {
+            display: flex;
+            gap: 0.6rem;
+            background: var(--bg-surface);
+            padding: 0.35rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-glass);
+            margin-bottom: 1.5rem;
+        }
+
+        .tab-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1rem;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: #FFFFFF;
+        }
+
+        .tab-btn.active {
+            background: var(--bg-card);
+            color: var(--gold-primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-gold);
+        }
+
+        /* Tab Panes */
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+
+        /* Video Player Screen */
+        .video-wrapper {
+            position: relative;
+            background: #000000;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            aspect-ratio: 16/9;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.8rem;
+        }
+
+        .video-placeholder {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .play-large-btn {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            border: none;
+            color: #0E121B;
+            font-size: 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            transition: transform 0.2s;
+            margin-bottom: 1rem;
+        }
+        .play-large-btn:hover {
+            transform: scale(1.08);
+        }
+
+        /* Podcast Player Card */
+        .podcast-card {
+            background: linear-gradient(135deg, #161C2A 0%, #0E121B 100%);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .podcast-header-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .podcast-cover {
+            width: 100px;
+            height: 100px;
+            background: var(--gold-gradient);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #0E121B;
+            flex-shrink: 0;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .podcast-info-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 0.3rem;
+        }
+
+        .podcast-info-sub {
+            font-size: 0.88rem;
+            color: var(--gold-primary);
+            font-weight: 600;
+        }
+
+        /* Audio Controls Bar */
+        .audio-controls {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .audio-timeline-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .audio-time-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            min-width: 40px;
+        }
+
+        .audio-slider {
+            flex: 1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            outline: none;
+            accent-color: var(--gold-primary);
+            cursor: pointer;
+        }
+
+        .audio-buttons-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-audio-play {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            border: none;
+            color: #0E121B;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            transition: transform 0.2s;
+        }
+        .btn-audio-play:hover {
+            transform: scale(1.05);
+        }
+
+        .speed-selector {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-glass);
+            color: #FFFFFF;
+            padding: 0.35rem 0.7rem;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* Materiales / Descargables Card Grid */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .mat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 1.4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.2s;
+        }
+        .mat-card:hover {
+            border-color: var(--border-gold);
+        }
+
+        .mat-card-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .mat-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .mat-name {
+            font-size: 1rem;
+            font-weight: 750;
+            color: #FFFFFF;
+            margin-bottom: 0.25rem;
+        }
+
+        .mat-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .btn-mat-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-glass);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        .btn-mat-action:hover {
+            background: var(--gold-gradient);
+            color: #0E121B;
+            border-color: transparent;
+        }
+
+        /* Resumen & Notas del Alumno */
+        .notes-section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .notes-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .notes-textarea {
+            width: 100%;
+            min-height: 120px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-glass);
+            border-radius: 8px;
+            padding: 1rem;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            resize: vertical;
+            margin-bottom: 0.8rem;
+        }
+        .notes-textarea:focus {
+            border-color: var(--gold-primary);
+        }
+
+        /* ==================== RESPONSIVE ADAPTATIONS (MOBILE & TABLET) ==================== */
+        @media (max-width: 900px) {
+            .campus-header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 1.2rem;
+                text-align: center;
+            }
+            .brand-section {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.6rem;
+            }
+            .header-actions a {
+                flex: 1 1 140px;
+                text-align: center;
+                justify-content: center;
+                font-size: 0.85rem;
+                padding: 0.6rem 0.8rem;
+            }
+            .campus-layout {
+                flex-direction: column;
+                height: auto;
+            }
+            .campus-sidebar {
+                width: 100%;
+                height: auto;
+                max-height: 280px;
+                border-right: none;
+                border-bottom: 1px solid var(--border-glass);
+            }
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+            .campus-content {
+                padding: 1.5rem 1rem;
+                overflow-y: visible;
+            }
+            .player-tabs-bar {
+                overflow-x: auto;
+                padding-bottom: 0.5rem;
+                justify-content: flex-start;
+                gap: 0.5rem;
+            }
+            .tab-btn {
+                padding: 0.7rem 1rem;
+                font-size: 0.82rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+            .lesson-title-main {
+                font-size: 1.4rem;
+            }
+            .audio-player-card {
+                padding: 1.5rem 1.2rem;
+            }
+            .audio-controls {
+                padding: 1rem;
+            }
+            .audio-buttons-row {
+                flex-wrap: wrap;
+                gap: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .lesson-title-main {
+                font-size: 1.25rem;
+            }
+            .campus-logo {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Superior -->
+    <header class="campus-header">
+        <div class="brand-section" style="display: flex; align-items: center; gap: 0.9rem;">
+            <img src="logo modolider.png" alt="Logo Método Modo Líder" style="height: 42px; width: 42px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 10px rgba(233, 182, 66, 0.3);">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <a href="landing_metodo_lider.html" class="campus-logo">MÉTODO MODO LÍDER</a>
+                <span class="course-tag">AULA VIRTUAL</span>
+            </div>
+        </div>
+        <div class="header-actions">
+            <!-- Botón Información del Curso -->
+            <a href="curso_info_acceso.html" class="btn-nav-link">
+                ℹ️ Info del Curso
+            </a>
+            <!-- Botón Regresar a la Home -->
+            <a href="landing_metodo_lider.html" class="btn-nav-link btn-home-accent">
+                🏠 Regresar a la Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Estructura Principal -->
+    <div class="campus-layout">
+        
+        <!-- Barra Lateral: Módulos -->
+        <aside class="campus-sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">Contenido del Curso</div>
+                <div class="progress-indicator">
+                    <div class="progress-label">
+                        <span>Progreso General</span>
+                        <span id="progPercent">25%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progFill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grupo Capítulo 1 -->
+            <div class="module-group">
+                <div class="module-group-title">
+                    <span>CAPÍTULO 1 • Emprender Conscientemente</span>
+                    <span style="color: var(--gold-primary); font-size: 0.75rem;">1 / 1</span>
+                </div>
+                <ul class="lesson-list">
+                    <li>
+                        <button class="lesson-btn active" onclick="switchLesson(1)">
+                            <span class="lesson-status">🟢</span>
+                            <span>Clase 1: Emprender Conscientemente</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Grupo Capítulo 2 -->
+            <div class="module-group">
+                <div class="module-group-title" style="color: #777;">
+                    <span>CAPÍTULO 2 • Identidad & Audiencia</span>
+                    <span>🔒</span>
+                </div>
+                <ul class="lesson-list">
+                    <li>
+                        <button class="lesson-btn" style="opacity: 0.5; cursor: not-allowed;">
+                            <span>🔒</span>
+                            <span>Clase 2: Conexión y Audiencia Ideal</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Grupo Capítulo 3 -->
+            <div class="module-group">
+                <div class="module-group-title" style="color: #777;">
+                    <span>CAPÍTULO 3 • Oferta Irresistible</span>
+                    <span>🔒</span>
+                </div>
+            </div>
+
+            <!-- Grupo Capítulo 4 -->
+            <div class="module-group">
+                <div class="module-group-title" style="color: #777;">
+                    <span>CAPÍTULO 4 • Sistema de Ventas</span>
+                    <span>🔒</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Zona Principal de Contenido -->
+        <main class="campus-content">
+            <div class="content-container">
+                
+                <!-- Encabezado de la Lección -->
+                <div class="lesson-top-meta">
+                    <div>
+                        <div class="lesson-sub-meta">CAPÍTULO 1 • CLASE PRINCIPAL</div>
+                        <h1 class="lesson-title-main">Emprender Conscientemente</h1>
+                    </div>
+                    <div>
+                        <label style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 700; color: var(--gold-light); cursor: pointer; background: rgba(255,255,255,0.05); padding: 0.5rem 0.9rem; border-radius: 8px; border: 1px solid var(--border-glass);">
+                            <input type="checkbox" id="checkComplete" style="accent-color: var(--gold-primary); width: 16px; height: 16px;">
+                            Marcar como Completada
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Selector de Formatos (Video / Podcast / Materiales) -->
+                <div class="format-tabs">
+                    <button class="tab-btn active" onclick="setTab('video')">
+                        🎬 Clase Grabada (Video)
+                    </button>
+                    <button class="tab-btn" onclick="setTab('podcast')">
+                        🎙️ Podcast / Audio Mentalidad
+                    </button>
+                    <button class="tab-btn" onclick="setTab('materiales')">
+                        📁 PDFs, Diapositivas & Workbooks
+                    </button>
+                </div>
+
+                <!-- TAB 1: VIDEO PLAYER -->
+                <div class="tab-pane active" id="tab-video">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <button class="play-large-btn" onclick="alert('Aquí se reproduce tu video de clase grabada (incrustable desde YouTube, Vimeo, Loom o archivo MP4 local).')">▶</button>
+                            <h3 style="font-size: 1.2rem; font-weight: 750; margin-bottom: 0.3rem;">Video de la Clase 1: Emprender Conscientemente</h3>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">Duración: ~45 min • Método Modo Líder con Romina Lorena Montiel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: PODCAST / AUDIO PLAYER -->
+                <div class="tab-pane" id="tab-podcast">
+                    <div class="podcast-card">
+                        <div class="podcast-header-box">
+                            <div class="podcast-cover">🎙️</div>
+                            <div>
+                                <div class="podcast-info-sub">EPISODIO EXCLUSIVO • CAPÍTULO 1</div>
+                                <h3 class="podcast-info-title">Podcast: Mentalidad del Emprendedor Consciente</h3>
+                                <p style="color: #A0AEC0; font-size: 0.85rem;">Escuchá esta lección en formato podcast para reprogramar tus creencias y trascender miedos mientras viajás o hacés ejercicio.</p>
+                            </div>
+                        </div>
+
+                        <!-- Audio Controls -->
+                        <div class="audio-controls">
+                            <div class="audio-timeline-box">
+                                <span class="audio-time-label" id="audioCurrent">00:00</span>
+                                <input type="range" class="audio-slider" id="audioSlider" min="0" max="100" value="15">
+                                <span class="audio-time-label">18:30</span>
+                            </div>
+                            <div class="audio-buttons-row">
+                                <button class="btn-audio-play" onclick="toggleAudioPlay(this)">▶</button>
+                                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Velocidad:</span>
+                                    <button class="speed-selector" onclick="changeSpeed(this)">1.0x</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: MATERIALES & RECURSOS -->
+                <div class="tab-pane" id="tab-materiales">
+                    <div class="materials-grid">
+                        
+                        <!-- Workbook Interactivo / PDF -->
+                        <div class="mat-card">
+                            <div class="mat-card-top">
+                                <div class="mat-icon">📝</div>
+                                <div>
+                                    <div class="mat-name">Workbook Digital & Imprimible</div>
+                                    <div class="mat-desc">Cuaderno de trabajo interactivo con las 3 preguntas incómodas y matriz de autodiagnóstico.</div>
+                                </div>
+                            </div>
+                            <a href="clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente.html" target="_blank" class="btn-mat-action">
+                                ↗ Abrir / Imprimir PDF
+                            </a>
+                        </div>
+
+                        <!-- Presentación Diapositivas Interactiva -->
+                        <div class="mat-card">
+                            <div class="mat-card-top">
+                                <div class="mat-icon">🖥️</div>
+                                <div>
+                                    <div class="mat-name">Presentación Interactiva de Diapositivas</div>
+                                    <div class="mat-desc">Visor de diapositivas en pantalla completa con navegación por teclado.</div>
+                                </div>
+                            </div>
+                            <a href="clase1_emprender_conscientemente/Presentacion_Clase_1_Interactiva.html" target="_blank" class="btn-mat-action">
+                                ↗ Ver Diapositivas en Pantalla
+                            </a>
+                        </div>
+
+                        <!-- Archivo PowerPoint .pptx -->
+                        <div class="mat-card">
+                            <div class="mat-card-top">
+                                <div class="mat-icon">📊</div>
+                                <div>
+                                    <div class="mat-name">Presentación en PowerPoint (.pptx)</div>
+                                    <div class="mat-desc">Archivo editable para abrir directamente en Microsoft PowerPoint.</div>
+                                </div>
+                            </div>
+                            <a href="clase1_emprender_conscientemente/Clase_1_Emprender_Conscientemente_MODOLIDER.pptx" download class="btn-mat-action">
+                                📥 Descargar PowerPoint (.pptx)
+                            </a>
+                        </div>
+
+                        <!-- Workbook en Word .docx -->
+                        <div class="mat-card">
+                            <div class="mat-card-top">
+                                <div class="mat-icon">📄</div>
+                                <div>
+                                    <div class="mat-name">Workbook en Word (.docx)</div>
+                                    <div class="mat-desc">Documento editable con formato oficial de Método Modo Líder.</div>
+                                </div>
+                            </div>
+                            <a href="clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente.docx" download class="btn-mat-action">
+                                📥 Descargar Word (.docx)
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Notas y Apuntes del Alumno -->
+                <div class="notes-section">
+                    <div class="notes-title">
+                        ✍️ Mis Apuntes & Reflexiones de la Clase 1
+                    </div>
+                    <textarea class="notes-textarea" id="studentNotes" placeholder="Escribí aquí tus ideas clave, revelaciones y compromisos de esta lección (se guardan automáticamente en tu navegador)..."></textarea>
+                    <button class="btn-nav-link btn-home-accent" onclick="saveNotes()">
+                        💾 Guardar Mis Apuntes
+                    </button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Pestañas (Tabs)
+        function setTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+            
+            const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabName));
+            if (btn) btn.classList.add('active');
+
+            const pane = document.getElementById('tab-' + tabName);
+            if (pane) pane.classList.add('active');
+        }
+
+        // Simulación de audio
+        let isPlaying = false;
+        function toggleAudioPlay(btn) {
+            isPlaying = !isPlaying;
+            btn.innerText = isPlaying ? "⏸" : "▶";
+        }
+
+        const speeds = ["1.0x", "1.25x", "1.5x", "2.0x"];
+        let speedIdx = 0;
+        function changeSpeed(btn) {
+            speedIdx = (speedIdx + 1) % speeds.length;
+            btn.innerText = speeds[speedIdx];
+        }
+
+        // Guardar apuntes en LocalStorage
+        function saveNotes() {
+            const val = document.getElementById('studentNotes').value;
+            localStorage.setItem('campus_notes_clase1', val);
+            alert('¡Tus apuntes se han guardado con éxito!');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('campus_notes_clase1');
+            if (saved) document.getElementById('studentNotes').value = saved;
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const tabParam = urlParams.get('tab');
+            if (tabParam) setTab(tabParam);
+        });
+    </script>
+</body>
+</html>

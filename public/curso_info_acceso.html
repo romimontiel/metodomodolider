@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso: Emprender de Cero a Impacto y Ventas | Método MODO LÍDER</title>
+    <!-- Google Fonts: Montserrat & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #090A0F;
+            --bg-surface: #0E121B;
+            --bg-card: rgba(22, 26, 37, 0.75);
+            --bg-card-solid: #161A25;
+            --bg-light: #F8F9FB;
+            --gold-primary: #D4AF37;
+            --gold-light: #F7E7CE;
+            --gold-gradient: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%);
+            --coral-accent: #E94560;
+            --text-main: #F3F4F6;
+            --text-muted: #A0AEC0;
+            --text-dark: #1F2937;
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(9, 10, 15, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .brand-logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-glass);
+            transition: all 0.25s ease;
+        }
+        .btn-home:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .btn-campus {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #0E121B;
+            background: var(--gold-gradient);
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+            transition: all 0.25s ease;
+        }
+        .btn-campus:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Hero Section */
+        .course-hero {
+            position: relative;
+            padding: 5rem 2rem 4rem 2rem;
+            background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+                        radial-gradient(circle at 90% 40%, rgba(233, 69, 96, 0.08) 0%, transparent 50%),
+                        linear-gradient(180deg, #090A0F 0%, #0E121B 100%);
+            border-bottom: 1px solid var(--border-gold);
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .course-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid var(--border-gold);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+        }
+
+        .course-title span {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .course-subtitle {
+            font-size: 1.2rem;
+            color: #CCD2DC;
+            max-width: 820px;
+            margin: 0 auto 2.5rem auto;
+            line-height: 1.6;
+        }
+
+        .hero-cta-box {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn-hero-primary {
+            padding: 1rem 2.2rem;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0E121B;
+            background: var(--gold-gradient);
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .btn-hero-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Pillars Overview (4 Pilares del Programa) */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+            max-width: 1180px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .pillar-card {
+            background: linear-gradient(180deg, rgba(30, 36, 50, 0.85) 0%, rgba(22, 26, 37, 0.75) 100%);
+            border: 1px solid var(--border-glass);
+            border-top: 3px solid var(--gold-primary);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+        }
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-gold);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+        }
+
+        .pillar-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .pillar-title {
+            font-size: 1.15rem;
+            font-weight: 750;
+            color: #FFFFFF;
+            margin-bottom: 0.6rem;
+        }
+
+        .pillar-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* Course Curriculum / Structure */
+        .section-main {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .sec-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .sec-tag {
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .sec-heading {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        /* Module Accordion / Cards */
+        .module-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .module-card {
+            background: var(--bg-card-solid);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+        .module-card.featured {
+            border-color: var(--border-gold);
+            background: linear-gradient(180deg, #1A1F2D 0%, #141823 100%);
+        }
+
+        .module-head {
+            padding: 1.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mod-number {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .mod-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .mod-badge {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            border: 1px solid var(--border-gold);
+        }
+
+        .module-body {
+            padding: 1.8rem 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .lesson-items {
+            list-style: none;
+        }
+
+        .lesson-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 0.85rem;
+            font-size: 0.95rem;
+            color: #CCD2DC;
+        }
+
+        .lesson-icon {
+            color: var(--gold-primary);
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .module-resources {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border-glass);
+            border-radius: 10px;
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .res-title {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+        }
+
+        .res-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.88rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.04);
+            transition: background 0.2s;
+        }
+        .res-link:hover {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-primary);
+        }
+
+        /* Access Box / Call to Action */
+        .access-banner {
+            background: radial-gradient(circle at center, #1B2130 0%, #0E121B 100%);
+            border: 2px solid var(--border-gold);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .access-banner-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .access-banner-desc {
+            font-size: 1.1rem;
+            color: #CCD2DC;
+            max-width: 650px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* Footer */
+        .footer-course {
+            border-top: 1px solid var(--border-glass);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-nav {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-link {
+            color: var(--gold-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ==================== RESPONSIVE ADAPTATIONS (MOBILE & TABLET) ==================== */
+        @media (max-width: 1050px) {
+            .pillars-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .top-nav {
+                flex-direction: column;
+                gap: 1.2rem;
+                padding: 1rem 1.2rem;
+                text-align: center;
+            }
+            .nav-actions {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.6rem;
+            }
+            .nav-actions a {
+                flex: 1 1 140px;
+                text-align: center;
+                justify-content: center;
+                font-size: 0.88rem;
+                padding: 0.75rem 1rem;
+            }
+            .course-hero {
+                padding: 3.5rem 1.2rem 3rem;
+            }
+            .course-badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 1rem;
+            }
+            .course-title {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            .course-subtitle {
+                font-size: 1.02rem;
+                line-height: 1.65;
+            }
+            .hero-cta-box {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.8rem;
+            }
+            .hero-cta-box a {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                padding: 1rem 1.5rem !important;
+                box-sizing: border-box;
+            }
+            .pillars-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .pillar-card {
+                padding: 1.6rem 1.4rem;
+            }
+            .section-main {
+                padding: 3rem 1.2rem 5rem;
+            }
+            .content-card-box {
+                padding: 2rem 1.3rem !important;
+                margin-bottom: 2.5rem !important;
+            }
+            .sec-heading-mobile {
+                font-size: 1.5rem !important;
+                line-height: 1.3 !important;
+            }
+            .block-30-30 {
+                grid-template-columns: 1fr !important;
+                gap: 1.6rem !important;
+                padding: 1.6rem 1.2rem !important;
+            }
+            .equation-formula {
+                font-size: 0.95rem !important;
+                line-height: 1.4 !important;
+                word-break: break-word;
+            }
+            .equation-result {
+                font-size: 1.2rem !important;
+                line-height: 1.3 !important;
+                word-break: break-word;
+            }
+            .access-banner {
+                padding: 2.8rem 1.4rem;
+            }
+            .access-banner-title {
+                font-size: 1.6rem;
+            }
+            .access-banner-desc {
+                font-size: 0.98rem;
+            }
+            .access-banner .btn-hero-primary, 
+            .access-banner .btn-home {
+                width: 100%;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+            .footer-nav {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course-title {
+                font-size: 1.7rem;
+            }
+            .sec-heading-mobile {
+                font-size: 1.35rem !important;
+            }
+            .brand-logo-text {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación Superior -->
+    <nav class="top-nav">
+        <a href="landing_metodo_lider.html" class="nav-brand" style="display: flex; align-items: center; gap: 0.9rem; text-decoration: none;">
+            <img src="logo modolider.png" alt="Logo Método Modo Líder" style="height: 42px; width: 42px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 10px rgba(233, 182, 66, 0.3);">
+            <span class="brand-logo-text">MÉTODO MODO LÍDER</span>
+        </a>
+        <div class="nav-actions">
+            <!-- Botón Regresar a la Home -->
+            <a href="landing_metodo_lider.html" class="btn-home">
+                🏠 Regresar a la Home
+            </a>
+            <!-- Botón Acceder al Campus -->
+            <a href="campus_alumnas.html" class="btn-campus">
+                👑 Acceder al Campus
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero del Curso -->
+    <header class="course-hero">
+        <div class="hero-container">
+            <div class="course-badge">
+                ✨ PROGRAMA FORMATIVO & COACHING GRUPAL
+            </div>
+            <h1 class="course-title">
+                Curso: Emprender de<br>
+                <span>Cero a Impacto y Ventas</span>
+            </h1>
+            <p class="course-subtitle" style="max-width: 920px; font-size: 1.15rem; line-height: 1.75;">
+                Vamos a aprender a construir un negocio que te represente y que nazca de tu propósito , pero tampoco vamos a romantizarlo porque emprender es crear un negocio que no solo nutre el alma, sino que también genera una renta que te sustente a vos y tu estilo de vida . Vamos a hablar de comunicación y conexión con tus clientes , dinero, ventas, de integrar la mentalidad correcta, de desbloquear patrones limitantes y de autoliderazgo, pero también de estrategias claves y acción consciente realizados de forma constante para crear un negocios con valor de marca e impacto real que atrae dinero.
+            </p>
+
+            <div class="hero-cta-box">
+                <a href="campus_alumnas.html" class="btn-hero-primary">
+                    🚀 Entrar al Campus de Alumnas
+                </a>
+                <a href="landing_metodo_lider.html" class="btn-home" style="padding: 1rem 1.8rem; font-size: 1rem;">
+                    ← Regresar a la Home
+                </a>
+            </div>
+
+            <!-- 4 Pilares y Formatos del Programa -->
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">👥</div>
+                    <h3 class="pillar-title">Clases Online</h3>
+                    <p class="pillar-desc">
+                        1 vez por semana por Zoom: 30 min de Formación Estratégica + 30 min de Coaching Grupal.
+                    </p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">🎬</div>
+                    <h3 class="pillar-title">Clases Grabadas en Video</h3>
+                    <p class="pillar-desc">
+                        Acceso 24/7 a cada sesión dividida en 2 bloques: <strong>30 min de Formación Estratégica</strong> + <strong>30 min de Entrenamiento & Coaching Grupal</strong> con casos reales.
+                    </p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">🎙️</div>
+                    <h3 class="pillar-title">Podcasts & Audios</h3>
+                    <p class="pillar-desc">
+                        Cápsulas de audio para reprogramar tu mentalidad, superar bloqueos y activar tu autoliderazgo en favor de tu vida y tu negocio.
+                    </p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">📑</div>
+                    <h3 class="pillar-title">Workbooks & PDFs</h3>
+                    <p class="pillar-desc">
+                        Cuadernos de trabajo interactivos e imprimibles con matrices de autodiagnóstico, preguntas incómodas y ejercicios guiados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== CONTENIDO & DINÁMICA DEL ENTRENAMIENTO ==================== -->
+    <section class="section-main">
+        
+        <!-- Tarjeta de Apertura y Declaración de Impacto -->
+        <div class="content-card-box" style="background: linear-gradient(135deg, #181E2C 0%, #0E121B 100%); border: 1.5px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2.8rem 2.5rem; margin-bottom: 3.5rem; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.4);">
+            <div style="margin-bottom: 1.5rem;">
+                <span class="sec-heading-mobile" style="font-size: 1.85rem; font-weight: 900; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 3px; text-transform: uppercase; display: block; margin-bottom: 0.4rem;">
+                    MÉTODO MODO LÍDER
+                </span>
+                <span style="font-size: 1.05rem; font-weight: 700; color: #CCD2DC; letter-spacing: 2px; text-transform: uppercase; display: block;">
+                    CREADO POR LIC. ROMINA LORENA MONTIEL
+                </span>
+            </div>
+            <p style="font-size: 1.3rem; font-weight: 600; color: #F8E2A7; max-width: 860px; margin: 0 auto; line-height: 1.65;">
+                Este no es solamente un curso para aprender a emprender.<br>
+                <span style="color: #FFFFFF; font-weight: 400;">Es un entrenamiento para aprender a liderar el negocio que querés construir y convertirte en la mujer que necesitás ser para hacerlo realidad.</span>
+            </p>
+        </div>
+
+        <!-- Bloque: ¿Qué significa activar en tu negocio el MÉTODO MODO LÍDER? (Fondo Blanco) -->
+        <div class="content-card-box" style="background: #FFFFFF; border: 1px solid #E2E6EE; border-top: 5px solid var(--gold-primary); border-radius: var(--radius-md); padding: 3rem 2.8rem; margin-bottom: 3.5rem; box-shadow: 0 15px 40px rgba(0,0,0,0.25); color: #1B1F2A;">
+            <div style="margin-bottom: 1.2rem;">
+                <h3 class="sec-heading-mobile" style="font-size: 1.6rem; font-weight: 800; color: #0E121B;">¿Qué significa activar en tu negocio el MÉTODO MODO LÍDER?</h3>
+            </div>
+            
+            <p style="font-size: 1.12rem; color: #374151; line-height: 1.75; margin-bottom: 1.8rem;">
+                Significa dejar de esperar que las cosas sucedan y comenzar a tomar decisiones conscientes sobre tu negocio, tu dinero, tus clientes, tu comunicación, tus ventas y tu crecimiento COMBINANDO:
+            </p>
+
+            <!-- La Ecuación de Activación -->
+            <div style="background: #0E121B; border: 1.5px solid var(--border-gold); border-radius: 12px; padding: 1.8rem 1rem; text-align: center; margin-bottom: 2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
+                <div class="equation-formula" style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px; margin-bottom: 0.6rem;">
+                    PROPÓSITO + IDENTIDAD + MENTALIDAD + ACCIÓN + ESTRATEGIA
+                </div>
+                <div style="font-size: 0.85rem; font-weight: 700; color: #A0AEC0; text-transform: uppercase; margin-bottom: 0.4rem;">para generar:</div>
+                <div class="equation-result" style="font-size: 1.45rem; font-weight: 900; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    IMPACTO + DINERO + SOSTENIBILIDAD
+                </div>
+            </div>
+
+            <!-- Filosofía y Declaración -->
+            <div style="background: #FAF8F2; border-left: 4px solid var(--gold-primary); border-radius: 0 10px 10px 0; padding: 1.6rem 1.8rem;">
+                <p style="font-size: 1.1rem; color: #1F2937; line-height: 1.75; margin-bottom: 1rem;">
+                    <strong style="color: #0E121B;">No vamos a romantizar el emprendimiento.</strong><br>
+                    Vas a aprender a construir un negocio que tenga sentido para ti, pero que a su vez genere renta y que pueda sostener el estilo de vida que deseas.
+                </p>
+                <p style="font-size: 1.1rem; color: #1F2937; line-height: 1.75;">
+                    Vamos a trabajar sobre <strong>propósito, dinero, ventas, mentalidad, autoliderazgo, estrategia, comunicación y acción consciente.</strong><br>
+                    <span style="color: #B4871E; font-weight: 800;">Liderar tu negocio también significa aprender a liderarte a vos misma.</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Bloque: Cronograma, Modalidad y Estructura de Clases (Fondo Marrón Caqui / Camel) -->
+        <div class="content-card-box" style="background: linear-gradient(135deg, #C4AB8F 0%, #B09475 100%); border: 1.5px solid #997B5C; border-radius: var(--radius-lg); padding: 3.2rem 2.5rem; margin-bottom: 3.8rem; box-shadow: 0 15px 40px rgba(0,0,0,0.2);">
+            
+            <div class="sec-header" style="margin-bottom: 2.4rem; text-align: center;">
+                <h2 class="sec-heading-mobile" style="font-size: 2.1rem; font-weight: 900; color: #1E150F; letter-spacing: 2px; text-transform: uppercase;">
+                    MODALIDAD & ENCUENTROS EN VIVO
+                </h2>
+            </div>
+
+            <!-- Fila de Datos Clave -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-bottom: 2rem;">
+                <div style="background: #FFFFFF; border: 1px solid #D8C6B4; border-top: 3px solid #8A6405; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 6px 18px rgba(60,40,20,0.06);">
+                    <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">📅</div>
+                    <div style="font-size: 0.8rem; font-weight: 800; color: #8A6405; text-transform: uppercase;">Días de Cursada</div>
+                    <div style="font-size: 1.15rem; font-weight: 800; color: #1E150F; margin-top: 0.2rem;">Todos los martes</div>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid #D8C6B4; border-top: 3px solid #8A6405; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 6px 18px rgba(60,40,20,0.06);">
+                    <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">🕖</div>
+                    <div style="font-size: 0.8rem; font-weight: 800; color: #8A6405; text-transform: uppercase;">Horario</div>
+                    <div style="font-size: 1.15rem; font-weight: 800; color: #1E150F; margin-top: 0.2rem;">19:00 a 20:00 hs</div>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid #D8C6B4; border-top: 3px solid #8A6405; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 6px 18px rgba(60,40,20,0.06);">
+                    <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">💻</div>
+                    <div style="font-size: 0.8rem; font-weight: 800; color: #8A6405; text-transform: uppercase;">Lugar</div>
+                    <div style="font-size: 1.15rem; font-weight: 800; color: #1E150F; margin-top: 0.2rem;">Aula Zoom en Vivo</div>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid #D8C6B4; border-top: 3px solid #8A6405; border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 6px 18px rgba(60,40,20,0.06);">
+                    <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">📍</div>
+                    <div style="font-size: 0.8rem; font-weight: 800; color: #8A6405; text-transform: uppercase;">Duración</div>
+                    <div style="font-size: 1.15rem; font-weight: 800; color: #1E150F; margin-top: 0.2rem;">Hasta Diciembre</div>
+                </div>
+            </div>
+
+            <!-- Estructura de cada Encuentro (30 + 30) -->
+            <div class="block-30-30" style="background: #FAF7F2; border: 1.5px solid #A38466; border-radius: var(--radius-md); padding: 2.2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; box-shadow: 0 8px 20px rgba(60,40,20,0.08);">
+                <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <div style="background: rgba(212, 175, 55, 0.18); border: 1px solid var(--border-gold); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0;">
+                        🎓
+                    </div>
+                    <div>
+                        <div style="font-size: 0.8rem; font-weight: 800; color: #8A6405; text-transform: uppercase; letter-spacing: 0.5px;">Primer Bloque • 30 Minutos</div>
+                        <h4 style="font-size: 1.25rem; font-weight: 800; color: #1E150F; margin: 0.3rem 0;">Formación Estratégica</h4>
+                        <p style="font-size: 0.94rem; color: #4A3B32; line-height: 1.55;">Conceptos, herramientas, neurociencias, modelos comerciales y metodologías directas al grano.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+                    <div style="background: rgba(212, 175, 55, 0.18); border: 1px solid var(--border-gold); width: 55px; height: 55px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0;">
+                        👥
+                    </div>
+                    <div>
+                        <div style="font-size: 0.8rem; font-weight: 800; color: #8A6405; text-transform: uppercase; letter-spacing: 0.5px;">Segundo Bloque • 30 Minutos</div>
+                        <h4 style="font-size: 1.25rem; font-weight: 800; color: #1E150F; margin: 0.3rem 0;">Coaching Grupal en Vivo</h4>
+                        <p style="font-size: 0.94rem; color: #4A3B32; line-height: 1.55;">Conversamos sobre nuestros negocios, planteamos desafíos reales y compartimos experiencias y conocimientos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque: Todo lo que te llevás (Pilares Principales + 3 Bonus en Fondo Marrón Claro / Latte) -->
+        <div class="content-card-box" style="background: linear-gradient(135deg, #EFE8DE 0%, #E5DACD 100%); border: 1.5px solid #D6C5B3; border-radius: var(--radius-lg); padding: 3.2rem 2.5rem; margin-bottom: 4rem; box-shadow: 0 15px 40px rgba(0,0,0,0.25);">
+            
+            <div class="sec-header" style="margin-bottom: 2.6rem; text-align: center;">
+                <h2 class="sec-heading-mobile" style="font-size: 2.1rem; font-weight: 900; color: #2C2018; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.4rem;">
+                    TODO LO QUE TE LLEVÁS
+                </h2>
+                <span style="font-size: 1.15rem; font-weight: 700; color: #705849; letter-spacing: 1px; display: block;">
+                    Recursos & Herramientas Exclusivas
+                </span>
+            </div>
+
+            <!-- Los 3 Pilares Principales -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+                
+                <div style="background: #FFFFFF; border: 1px solid #D8C9BB; border-top: 4px solid var(--gold-primary); border-radius: 14px; padding: 2rem; box-shadow: 0 10px 25px rgba(60,40,20,0.08);">
+                    <div style="margin-bottom: 0.8rem;">
+                        <span style="font-size: 2.2rem;">👥</span>
+                    </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #1E1612; margin-bottom: 0.5rem;">Clases en Vivo</h4>
+                    <p style="font-size: 0.94rem; color: #4A3B32; line-height: 1.6;">Todos los martes 19 a 20 hs por Zoom: 30 min de Formación Estratégica + 30 min de Coaching Grupal e interacción directa.</p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid #D8C9BB; border-top: 4px solid var(--gold-primary); border-radius: 14px; padding: 2rem; box-shadow: 0 10px 25px rgba(60,40,20,0.08);">
+                    <div style="margin-bottom: 0.8rem;">
+                        <span style="font-size: 2.2rem;">🎥</span>
+                    </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #1E1612; margin-bottom: 0.5rem;">Clases Grabadas</h4>
+                    <p style="font-size: 0.94rem; color: #4A3B32; line-height: 1.6;">Acceso 24/7 en tu aula virtual a todas las grabaciones divididas en 2 bloques para que repases y avances a tu ritmo.</p>
+                </div>
+
+                <div style="background: #FFFFFF; border: 1px solid #D8C9BB; border-top: 4px solid var(--gold-primary); border-radius: 14px; padding: 2rem; box-shadow: 0 10px 25px rgba(60,40,20,0.08);">
+                    <div style="margin-bottom: 0.8rem;">
+                        <span style="font-size: 2.2rem;">📚</span>
+                    </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #1E1612; margin-bottom: 0.5rem;">Workbooks Prácticos</h4>
+                    <p style="font-size: 0.94rem; color: #4A3B32; line-height: 1.6;">Cuadernos de trabajo descargables e interactivos para llevar cada lección directamente a la acción en tu negocio.</p>
+                </div>
+
+            </div>
+
+            <!-- Fila de los 3 BONUS EXCLUSIVOS -->
+            <div style="background: #FAF7F2; border: 1.5px solid #C4A482; border-radius: var(--radius-lg); padding: 2.4rem 2rem; box-shadow: 0 10px 25px rgba(60,40,20,0.08);">
+                <div style="text-align: center; margin-bottom: 1.8rem;">
+                    <span style="font-size: 0.82rem; font-weight: 800; color: #8A6405; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 0.3rem;">VALOR AGREGADO SIN CARGO EXTRA</span>
+                    <h3 style="font-size: 1.55rem; font-weight: 800; color: #2C2018;">🎁 3 Bonus Exclusivos Incluidos</h3>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem;">
+                    
+                    <div style="background: #FFFFFF; border: 1px solid #E5DACD; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(60,40,20,0.04);">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🎙️</div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: #8A6405; text-transform: uppercase; margin-bottom: 0.2rem;">BONUS #1</div>
+                        <h4 style="font-size: 1.1rem; font-weight: 800; color: #1E1612; margin-bottom: 0.4rem;">Podcasts de Mentalidad</h4>
+                        <p style="font-size: 0.9rem; color: #524238; line-height: 1.55;">Cápsulas de audio para reprogramar tu mente, superar bloqueos y activar tu autoliderazgo en favor de tu vida y tu negocio.</p>
+                    </div>
+
+                    <div style="background: #FFFFFF; border: 1px solid #E5DACD; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(60,40,20,0.04);">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">👩🏻‍💼</div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: #8A6405; text-transform: uppercase; margin-bottom: 0.2rem;">BONUS #2</div>
+                        <h4 style="font-size: 1.1rem; font-weight: 800; color: #1E1612; margin-bottom: 0.4rem;">Profesionales Invitadas</h4>
+                        <p style="font-size: 0.9rem; color: #524238; line-height: 1.55;">Colaboraciones y masterclasses especiales con referentes para sumar distintas miradas y herramientas complementarias.</p>
+                    </div>
+
+                    <div style="background: #FFFFFF; border: 1px solid #E5DACD; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(60,40,20,0.04);">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🏆</div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: #8A6405; text-transform: uppercase; margin-bottom: 0.2rem;">BONUS #3</div>
+                        <h4 style="font-size: 1.1rem; font-weight: 800; color: #1E1612; margin-bottom: 0.4rem;">Certificado Oficial</h4>
+                        <p style="font-size: 0.9rem; color: #524238; line-height: 1.55;">Quienes completen todo el recorrido recibirán su certificado oficial de participación emitido por Método Modo Líder.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner de Acceso Directo -->
+        <div class="access-banner">
+            <h2 class="access-banner-title">¿Lista para comenzar tu transformación?</h2>
+            <p class="access-banner-desc">
+                Accedé a tu aula virtual para ver las clases grabadas, escuchar los podcasts y completar tu primer workbook de autoliderazgo.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="campus_alumnas.html" class="btn-hero-primary">
+                    👑 Ingresar al Campus de Alumnas
+                </a>
+                <a href="landing_metodo_lider.html" class="btn-home" style="padding: 0.9rem 1.6rem; font-size: 0.95rem;">
+                    🏠 Regresar a la Home
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-course">
+        <div>MÉTODO MODO LÍDER • Romina Lorena Montiel</div>
+        <div class="footer-nav">
+            <a href="landing_metodo_lider.html" class="footer-link">Regresar a la Home</a>
+            <a href="campus_alumnas.html" class="footer-link">Campus de Alumnas</a>
+            <a href="clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente.html" class="footer-link">Workbook Clase 1</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -13,9 +13,9 @@ export default function Historia() {
                       &quot;Yo misma atravesé esos momentos donde sabía exactamente lo que tenía que hacer pero, por alguna razón, no lograba accionar con la contundencia que mi negocio demandaba.&quot;
                   </div>
 
-                  <p>Fue entonces cuando decidí investigar a fondo qué es lo que realmente nos frena: combinando las bases biológicas de las <strong>Neurociencias</strong>, la reprogramación de patrones de la <strong>Psicología Cognitiva</strong> y la visión táctica de la <strong>Estrategia de Negocios</strong>.</p>
+                  <p>Fue entonces cuando decidí investigar a fondo qué es lo que realmente nos frena: combinando las bases biológicas de las <strong>Neurociencias</strong> y la <strong>reprogramación de patrones</strong>, a las que sumé mi <strong>formación en negocios</strong> junto a mis <strong>10 años de experiencia</strong> para integrar al <strong>Método MODO LÍDER</strong> una <strong>Inteligencia Estratégica de Negocios</strong> adecuada a los tiempos que corren.</p>
                   
-                  <p>Así nació el <strong>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para desbloquear tu autoliderazgo y poner tu accionar en sincronía con tu visión más expansiva.</p>
+                  <p>Así nació el <strong>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para desbloquear tu autoliderazgo y poner tu accionar en sintonía con lo que necesita tu negocio para crear impacto, conectar con tus clientes y atraer ventas.</p>
               </div>
 
               <div className="historia-card-portrait">

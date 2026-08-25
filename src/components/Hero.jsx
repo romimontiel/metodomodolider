@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="hero-section" id="inicio">
@@ -33,13 +35,13 @@ export default function Hero() {
                   No te dice qué hacer. Te da el <span className="highlight">sistema</span> para que dejes de postergar y dirijas tu <span className="highlight">accionar</span> hacia lo que <span className="highlight">tu negocio</span> necesita hoy de vos.
               </p>
 
-              {/* Píldoras de valor */}
+              {/* Píldoras de los 3 Pilares Científicos y Estratégicos */}
               <div className="hero-pillars-pills">
-                  <span className="pillar-pill-item">MENOS POSTERGO</span>
+                  <span className="pillar-pill-item">NEUROCIENCIAS</span>
                   <div className="pillar-dot"></div>
-                  <span className="pillar-pill-item">MÁS CLARIDAD</span>
+                  <span className="pillar-pill-item">MENTALIDAD</span>
                   <div className="pillar-dot"></div>
-                  <span className="pillar-pill-item">MÁS IMPACTO</span>
+                  <span className="pillar-pill-item">INTELIGENCIA DE NEGOCIOS</span>
               </div>
 
               {/* Botón CTA */}
@@ -48,6 +50,10 @@ export default function Hero() {
                       <span>Descubre el Método</span>
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </a>
+                  <Link href="/curso" className="btn-gold" style={{ background: "rgba(212, 175, 55, 0.15)", color: "#F7E7CE", border: "1.5px solid #D4AF37", boxShadow: "0 8px 25px rgba(212, 175, 55, 0.25)" }}>
+                      <span>🎓 Curso & Campus Alumnas</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </Link>
                   <a href="#historia" className="btn-secondary-link">
                       <span>Conoce mi historia</span>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
@@ -71,12 +77,8 @@ export default function Hero() {
                   <div className="portrait-glow"></div>
                   <img src="/romina.png" alt="Romina Lorena Montiel - Creadora de Método Modo Líder" className="portrait-img" />
                   
-                  {/* Sello de Marca Flotante */}
-                  <div className="gold-badge-seal">
-                      <span className="seal-pre">MÉTODO</span>
-                      <span className="seal-title">MODO<br />LÍDER</span>
-                      <span className="seal-tagline">CREÁ • LIDERÁ • IMPACTÁ</span>
-                  </div>
+                  {/* Sello de Marca Flotante Oficial */}
+                  <img src="/logo modolider.png" alt="Método Modo Líder - Sello Oficial" className="gold-badge-seal" />
               </div>
           </div>
 
