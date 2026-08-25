@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function Historia() {
   return (
     <section className="historia-section" id="historia">
       <div className="container">
           <span className="section-tag">Trayectoria & Propósito</span>
-          <h2 className="section-title-dark">Mi Historia</h2>
+          <h2 className="section-title-dark">Así Nació Método Modo Líder</h2>
           
           <div className="historia-grid">
               <div className="historia-text">
@@ -22,7 +24,29 @@ export default function Historia() {
                   <img src="/romina2.png" alt="Romina Lorena Montiel" />
                   <div className="historia-card-caption">
                       <h4>Romina Lorena Montiel</h4>
-                      <p>Mentora de Líderes & Estratega de Negocios</p>
+                      <p>Mentora de Líderes &amp; Estratega de Negocios</p>
+                      <Link href="/historia" style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                        marginTop: "1rem",
+                        padding: "0.65rem 1.2rem",
+                        background: "rgba(212, 175, 55, 0.18)",
+                        border: "1.5px solid rgba(212, 175, 55, 0.55)",
+                        borderRadius: "8px",
+                        color: "#F7E7CE",
+                        textDecoration: "none",
+                        fontSize: "0.88rem",
+                        fontWeight: "750",
+                        transition: "all 0.25s ease",
+                        boxShadow: "0 4px 15px rgba(212, 175, 55, 0.15)"
+                      }}>
+                        <span>✨ Conoce Mi Historia Completa</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </Link>
                   </div>
               </div>
           </div>

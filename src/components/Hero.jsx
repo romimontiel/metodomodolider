@@ -54,10 +54,10 @@ export default function Hero() {
                       <span>🎓 Curso & Campus Alumnas</span>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </Link>
-                  <a href="#historia" className="btn-secondary-link">
+                  <Link href="/historia" className="btn-secondary-link">
                       <span>Conoce mi historia</span>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
-                  </a>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  </Link>
               </div>
 
               {/* Bloque de Romina Lorena Montiel */}
