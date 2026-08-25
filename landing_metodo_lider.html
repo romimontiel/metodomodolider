@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método MODO LÍDER | Romina Lorena Montiel</title>
+    <!-- Google Fonts: Playfair Display + Outfit + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #090A0F;
+            --bg-card: rgba(22, 26, 37, 0.7);
+            --bg-surface: #12151E;
+            --gold-primary: #D4AF37;
+            --gold-light: #F7E7CE;
+            --gold-gradient: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%);
+            --gold-text-grad: linear-gradient(135deg, #FFF6E5 0%, #ECC369 50%, #C89124 100%);
+            --accent-coral: #E94560;
+            --text-main: #F3F4F6;
+            --text-muted: #A0AEC0;
+            --text-dark: #1F2937;
+            --border-gold: rgba(212, 175, 55, 0.25);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --font-display: 'Playfair Display', serif;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .serif-title {
+            font-family: var(--font-display);
+        }
+
+        /* --- HERO SECTION NATIVA INTEGRADA --- */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem 5rem 2rem;
+            background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+                        radial-gradient(circle at 90% 40%, rgba(233, 69, 96, 0.08) 0%, transparent 50%),
+                        linear-gradient(180deg, #090A0F 0%, #0E121B 100%);
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        /* Ambient Glow & Decorative Arcs */
+        .hero-glow-ambient {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(233, 182, 66, 0.15) 0%, transparent 70%);
+            filter: blur(60px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-arcs-bg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 650px;
+            height: 650px;
+            opacity: 0.25;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 3.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Columna Izquierda: Contenido & Propuesta de Valor */
+        .hero-text-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero-pretitle-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-line {
+            width: 40px;
+            height: 1.5px;
+            background: var(--gold-gradient);
+        }
+
+        .hero-pretitle {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: var(--gold-text-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-main-title {
+            font-family: var(--font-display);
+            font-size: 4.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
+            text-shadow: 0 4px 25px rgba(0,0,0,0.5);
+            line-height: 1.08;
+        }
+
+        .hero-statement {
+            font-size: 1.35rem;
+            color: #E2E8F0;
+            line-height: 1.55;
+            margin-bottom: 2rem;
+            max-width: 620px;
+            font-weight: 400;
+        }
+
+        .hero-statement .highlight {
+            color: #F6C85F;
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: rgba(246, 200, 95, 0.4);
+            text-underline-offset: 4px;
+        }
+
+        /* Badges de Beneficios (Pill Bar) */
+        .hero-pillars-pills {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.2rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            border-radius: 50px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .pillar-pill-item {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #FFF3D1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pillar-dot {
+            width: 6px;
+            height: 6px;
+            background: #E9B642;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #E9B642;
+        }
+
+        /* Banner de la Fórmula de Impacto y Dinero */
+        .formula-banner-home {
+            background: linear-gradient(135deg, rgba(22, 26, 37, 0.95) 0%, rgba(14, 18, 27, 0.98) 100%);
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            border-left: 5px solid var(--gold-primary);
+            border-radius: 14px;
+            padding: 1.1rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.18);
+            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+
+        .formula-title-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold-primary);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .formula-equation-text {
+            font-size: 0.98rem;
+            font-weight: 750;
+            line-height: 1.5;
+            color: #FFFFFF;
+            letter-spacing: 0.2px;
+        }
+
+        .formula-factor {
+            color: #F8E2A7;
+            font-weight: 800;
+        }
+
+        .formula-operator {
+            color: var(--gold-primary);
+            font-weight: 900;
+            margin: 0 4px;
+        }
+
+        .formula-equal {
+            color: #E9B642;
+            font-weight: 900;
+            margin: 0 6px;
+        }
+
+        .formula-result {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            display: inline;
+        }
+
+        /* Botón de Acción Principal */
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1.1rem 2.6rem;
+            background: var(--gold-gradient);
+            color: #0A0D14;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.08rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 12px 30px rgba(233, 182, 66, 0.35);
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(233, 182, 66, 0.55);
+            filter: brightness(1.08);
+        }
+
+        .btn-secondary-link {
+            color: #CBD5E1;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .btn-secondary-link:hover {
+            color: #F6C85F;
+        }
+
+        /* Barra de Autor / Romina Signature Card */
+        .hero-author-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.2rem 1.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid #E9B642;
+            border-radius: 0 14px 14px 0;
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .author-monogram {
+            font-family: 'Monarda', 'Great Vibes', 'Allura', 'Cinzel Decorative', cursive, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ECC369;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .author-details {
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding-left: 1.2rem;
+        }
+
+        .author-name {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        .author-role {
+            font-size: 0.85rem;
+            color: #ECC369;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+
+        .author-quote {
+            font-size: 0.92rem;
+            font-style: italic;
+            color: #94A3B8;
+        }
+
+        /* Columna Derecha: Imagen Romina & Sello Dorado Integrado */
+        .hero-visual-col {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+        }
+
+        .portrait-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            z-index: 2;
+        }
+
+        .portrait-glow {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(233, 69, 96, 0.1) 50%, transparent 75%);
+            filter: blur(40px);
+            z-index: -1;
+        }
+
+        .portrait-img {
+            width: 100%;
+            height: auto;
+            max-height: 580px;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85));
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+        }
+
+        /* Sello Circular Dorado Flotante Oficial */
+        .gold-badge-seal {
+            position: absolute;
+            bottom: 25px;
+            right: -15px;
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            object-fit: contain;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(233, 182, 66, 0.35);
+            z-index: 4;
+            animation: floatSlow 5s ease-in-out infinite alternate;
+        }
+
+        /* --- SECCIÓN HISTORIA REFINADA --- */
+        .historia-section {
+            padding: 7rem 2rem;
+            background: #FFFFFF;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #B8860B;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            display: block;
+        }
+
+        .section-title-dark {
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            margin-bottom: 3.5rem;
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .historia-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .historia-text p {
+            margin-bottom: 1.6rem;
+            font-size: 1.12rem;
+            color: #374151;
+            line-height: 1.8;
+        }
+
+        .historia-quote-box {
+            background: #FAF8F2;
+            border-left: 4px solid #D4AF37;
+            padding: 1.5rem 1.8rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4B5563;
+            font-size: 1.1rem;
+        }
+
+        .historia-card-portrait {
+            background: linear-gradient(145deg, #0F121C, #1E2333);
+            padding: 15px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+        }
+
+        .historia-card-portrait img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+        }
+
+        .historia-card-caption {
+            padding: 1.2rem 0 0.5rem 0;
+        }
+
+        .historia-card-caption h4 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: #FFFFFF;
+            margin-bottom: 0.2rem;
+        }
+
+        .historia-card-caption p {
+            color: #ECC369;
+            font-size: 0.9rem;
+        }
+
+        /* --- SECCIÓN EL MÉTODO (3 PILARES - ENTORNO CAQUI / CAMEL) --- */
+        .metodo-section {
+            padding: 7rem 2rem;
+            background: linear-gradient(135deg, #C4AB8F 0%, #B09475 100%);
+            position: relative;
+            border-top: 1.5px solid #997B5C;
+            border-bottom: 1.5px solid #997B5C;
+            color: #1E150F;
+        }
+
+        .metodo-header {
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 4.5rem auto;
+        }
+
+        .metodo-header .section-tag {
+            color: #8A6405;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.88rem;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+
+        .metodo-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: #1E150F;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+        }
+
+        .metodo-subtitle {
+            font-size: 1.18rem;
+            color: #3E3027;
+            line-height: 1.65;
+            font-weight: 500;
+        }
+
+        .fundamentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5.5rem;
+        }
+
+        .fundamento-card {
+            background: #FFFFFF;
+            border: 1px solid #D8C6B4;
+            border-top: 3px solid #8A6405;
+            border-radius: 20px;
+            padding: 2.8rem 2.2rem;
+            box-shadow: 0 10px 30px rgba(60, 40, 20, 0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fundamento-card:hover {
+            transform: translateY(-8px);
+            border-color: #8A6405;
+            box-shadow: 0 18px 45px rgba(60, 40, 20, 0.15);
+        }
+
+        .fundamento-icon-wrap {
+            font-size: 2.8rem;
+            margin-bottom: 1.3rem;
+            display: inline-block;
+        }
+
+        .fundamento-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 0.9rem;
+            color: #1E150F;
+            font-weight: 800;
+        }
+
+        .fundamento-card p {
+            color: #4A3B32;
+            font-size: 1.02rem;
+            line-height: 1.7;
+        }
+
+        /* --- SECCIÓN 3 PROBLEMAS PARALIZANTES (DENTRO DEL ENTORNO CAQUI) --- */
+        .problemas-wrapper {
+            background: #FAF7F2;
+            padding: 4rem 2.5rem;
+            border-radius: 24px;
+            border: 1.5px solid #A38466;
+            box-shadow: 0 15px 35px rgba(60, 40, 20, 0.1);
+        }
+
+        .problemas-title {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1E150F;
+            margin-bottom: 3rem;
+        }
+
+        .problemas-title span {
+            color: #8A6405;
+        }
+
+        .problemas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .problema-item {
+            text-align: center;
+            padding: 2.2rem 1.8rem;
+            background: #FFFFFF;
+            border-radius: 16px;
+            border: 1px solid #DFCDBD;
+            border-bottom: 3px solid #8A6405;
+            box-shadow: 0 8px 20px rgba(60, 40, 20, 0.06);
+            transition: all 0.35s ease;
+        }
+
+        .problema-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 30px rgba(60, 40, 20, 0.12);
+        }
+
+        .problema-icon {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .problema-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: #1E150F;
+            font-weight: 800;
+        }
+
+        .problema-item p {
+            color: #4A3B32;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* --- CTA FINAL SECTION --- */
+        .cta-final-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, #0E121B 0%, #090A0F 100%);
+            position: relative;
+        }
+
+        .cta-final-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2.5rem;
+            background: rgba(22, 27, 40, 0.8);
+            border-radius: 28px;
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 35px rgba(212, 175, 55, 0.12);
+        }
+
+        .cta-final-box h2 {
+            font-family: var(--font-display);
+            font-size: 2.6rem;
+            color: #FFFFFF;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-final-box p {
+            font-size: 1.2rem;
+            color: #CBD5E1;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Animaciones */
+        @keyframes floatSlow {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* Responsividad Móvil y Tablets */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+            .hero-text-col {
+                align-items: center;
+            }
+            .hero-pretitle-wrap {
+                justify-content: center;
+            }
+            .hero-main-title {
+                font-size: 3.2rem;
+            }
+            .hero-author-card {
+                margin: 0 auto;
+                text-align: left;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .historia-grid {
+                grid-template-columns: 1fr;
+            }
+            .problemas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1.2rem 3rem;
+            }
+            .hero-main-title {
+                font-size: 2.3rem;
+                line-height: 1.15;
+            }
+            .hero-statement {
+                font-size: 1.05rem;
+                line-height: 1.6;
+            }
+            .hero-pillars-pills {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.8rem 1rem;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .pillar-pill-item {
+                font-size: 0.82rem;
+            }
+            .pillar-divider-dot {
+                display: none;
+            }
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.9rem;
+            }
+            .hero-actions a {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 1rem 1.4rem;
+            }
+            .hero-author-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.8rem;
+                padding: 1.2rem 1rem;
+                border-radius: 12px;
+                border-left: none;
+                border-top: 3px solid #E9B642;
+            }
+            .author-details {
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding-left: 0;
+                padding-top: 0.6rem;
+            }
+            .gold-badge-seal {
+                width: 95px;
+                height: 95px;
+                right: 0px;
+                bottom: 0px;
+            }
+            .seal-title {
+                font-size: 0.78rem;
+            }
+            .section-title-dark {
+                font-size: 1.8rem;
+            }
+            .metodo-title {
+                font-size: 1.8rem;
+            }
+            .cta-final-box {
+                padding: 2.8rem 1.4rem;
+            }
+            .cta-final-box h2 {
+                font-size: 1.8rem;
+            }
+            .cta-final-box p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-main-title {
+                font-size: 1.95rem;
+            }
+            .hero-pretitle-text {
+                font-size: 0.75rem;
+            }
+            .section-title-dark,
+            .metodo-title {
+                font-size: 1.55rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación Superior Fija y Visible -->
+    <nav class="top-nav" style="display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 2.5rem; background: rgba(10, 13, 20, 0.95); border-bottom: 1px solid rgba(212, 175, 55, 0.25); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+        <a href="#inicio" class="nav-brand" style="text-decoration: none; display: flex; align-items: center; gap: 0.9rem;">
+            <img src="logo modolider.png" alt="Logo Método Modo Líder" style="height: 42px; width: 42px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 10px rgba(233, 182, 66, 0.3);">
+            <span class="brand-logo-text" style="font-size: 1.25rem; font-weight: 900; background: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px;">MÉTODO MODO LÍDER</span>
+        </a>
+        <div class="nav-actions" style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+            <!-- Botón Información del Curso -->
+            <a href="curso_info_acceso.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(212, 175, 55, 0.15); border: 1.5px solid rgba(212, 175, 55, 0.5); color: #F7E7CE; text-decoration: none; padding: 0.65rem 1.2rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; transition: all 0.2s;">
+                🎓 Info del Curso
+            </a>
+            <!-- Botón Acceder al Campus -->
+            <a href="campus_alumnas.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%); color: #0E121B; text-decoration: none; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 800; font-size: 0.9rem; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35); transition: all 0.2s;">
+                👑 Campus de Alumnas
+            </a>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION NATIVA INTEGRADA ==================== -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-glow-ambient"></div>
+        
+        <!-- Decorative SVG Arcs in Background -->
+        <svg class="hero-arcs-bg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="250" cy="250" r="120" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4 8"/>
+            <circle cx="250" cy="250" r="180" stroke="url(#goldGrad)" stroke-width="1" opacity="0.6"/>
+            <circle cx="250" cy="250" r="240" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.3"/>
+            <defs>
+                <linearGradient id="goldGrad" x1="0" y1="0" x2="500" y2="500" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9D976"/>
+                    <stop offset="0.5" stop-color="#E9B642"/>
+                    <stop offset="1" stop-color="#C38B1E" stop-opacity="0.2"/>
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Copywriting, Título y Badges -->
+            <div class="hero-text-col">
+                <div class="hero-pretitle-wrap">
+                    <div class="hero-line"></div>
+                    <span class="hero-pretitle">MÉTODO</span>
+                    <div class="hero-line"></div>
+                </div>
+
+                <h1 class="hero-main-title">Modo Líder</h1>
+
+                <p class="hero-statement">
+                    No te dice qué hacer. Te da el <span class="highlight">sistema</span> para que dejes de postergar y dirijas tu <span class="highlight">accionar</span> hacia lo que <span class="highlight">tu negocio</span> necesita hoy de vos.
+                </p>
+
+                <!-- Píldoras de los 3 Pilares Científicos y Estratégicos -->
+                <div class="hero-pillars-pills">
+                    <span class="pillar-pill-item">NEUROCIENCIAS</span>
+                    <div class="pillar-dot"></div>
+                    <span class="pillar-pill-item">MENTALIDAD</span>
+                    <div class="pillar-dot"></div>
+                    <span class="pillar-pill-item">INTELIGENCIA DE NEGOCIOS</span>
+                </div>
+
+
+
+                <!-- Botón CTA -->
+                <div class="hero-actions">
+                    <a href="#metodo" class="btn-gold">
+                        <span>Descubre el Método</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="curso_info_acceso.html" class="btn-gold" style="background: rgba(212, 175, 55, 0.15); color: #F7E7CE; border: 1.5px solid #D4AF37; box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);">
+                        <span>🎓 Curso & Campus Alumnas</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#historia" class="btn-secondary-link">
+                        <span>Conoce mi historia</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                    </a>
+                </div>
+
+                <!-- Bloque de Romina Lorena Montiel -->
+                <div class="hero-author-card">
+                    <div class="author-monogram">RM</div>
+                    <div class="author-details">
+                        <div class="author-name">ROMINA LORENA MONTIEL</div>
+                        <div class="author-role">Creadora de Método Modo Líder</div>
+                        <div class="author-quote">"Creá. Liderá. Impactá. Desde quién sos."</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Retrato de Romina & Sello Dorado Integrado -->
+            <div class="hero-visual-col">
+                <div class="portrait-wrap">
+                    <div class="portrait-glow"></div>
+                    <img src="romina.png" alt="Romina Lorena Montiel - Creadora de Método Modo Líder" class="portrait-img">
+                    
+                    <!-- Sello de Marca Flotante Oficial -->
+                    <img src="logo modolider.png" alt="Método Modo Líder - Sello Oficial" class="gold-badge-seal">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== HISTORIA SECTION ==================== -->
+    <section class="historia-section" id="historia">
+        <div class="container">
+            <span class="section-tag">Trayectoria & Propósito</span>
+            <h2 class="section-title-dark">Mi Historia</h2>
+            
+            <div class="historia-grid">
+                <div class="historia-text">
+                    <p>Durante años vi cómo profesionales brillantes y emprendedores con ideas increíbles se quedaban estancados. No por falta de talento, visión o capacidad de trabajo, sino por <strong>barreras invisibles de postergación y sobrecarga</strong> que los mantenían en una parálisis silenciosa.</p>
+                    
+                    <div class="historia-quote-box">
+                        "Yo misma atravesé esos momentos donde sabía exactamente lo que tenía que hacer pero, por alguna razón, no lograba accionar con la contundencia que mi negocio demandaba."
+                    </div>
+
+                    <p>Fue entonces cuando decidí investigar a fondo qué es lo que realmente nos frena: combinando las bases biológicas de las <strong>Neurociencias</strong> y la <strong>reprogramación de patrones</strong>, a las que sumé mi <strong>formación en negocios</strong> junto a mis <strong>10 años de experiencia</strong> para integrar al <strong>Método MODO LÍDER</strong> una <strong>Inteligencia Estratégica de Negocios</strong> adecuada a los tiempos que corren.</p>
+                    
+                    <p>Así nació el <strong>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para desbloquear tu autoliderazgo y poner tu accionar en sintonía con lo que necesita tu negocio para crear impacto, conectar con tus clientes y atraer ventas.</p>
+                </div>
+
+                <div class="historia-card-portrait">
+                    <img src="romina2.png" alt="Romina Lorena Montiel">
+                    <div class="historia-card-caption">
+                        <h4>Romina Lorena Montiel</h4>
+                        <p>Mentora de Líderes & Estratega de Negocios</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== EL MÉTODO SECTION (3 PILARES) ==================== -->
+    <section class="metodo-section" id="metodo">
+        <div class="container">
+            
+            <div class="metodo-header">
+                <h2 class="metodo-title">El Método MODO LÍDER</h2>
+                <p class="metodo-subtitle">Una metodología única que integra ciencia del comportamiento, mentalidad y ejecución de alto impacto para resultados reales y sostenibles.</p>
+            </div>
+
+            <!-- Los 3 Pilares -->
+            <div class="fundamentos-grid">
+                <div class="fundamento-card">
+                    <div class="fundamento-icon-wrap" style="width: 58px; height: 58px; background: #1E1612; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem; color: #FFFFFF; box-shadow: 0 6px 16px rgba(0,0,0,0.15);">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/>
+                            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/>
+                        </svg>
+                    </div>
+                    <h3>Neurociencias</h3>
+                    <p>Entendemos la biología de tu cerebro para hackear hábitos improductivos, optimizar tu foco atencional y reprogramar respuestas neurológicas hacia el éxito sin caer en el agotamiento extremo.</p>
+                </div>
+
+                <div class="fundamento-card">
+                    <div class="fundamento-icon-wrap" style="width: 58px; height: 58px; background: #1E1612; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem; color: #FFFFFF; box-shadow: 0 6px 16px rgba(0,0,0,0.15);">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
+                            <path d="M9 21h6"/>
+                            <path d="M10 17v-2"/>
+                            <path d="M14 17v-2"/>
+                        </svg>
+                    </div>
+                    <h3>Psicología Cognitiva</h3>
+                    <p>Identificamos y transformamos los patrones de pensamiento limitantes y el autosabotaje inconsciente, alineando tus creencias con la ambición y altura de tus objetivos.</p>
+                </div>
+
+                <div class="fundamento-card">
+                    <div class="fundamento-icon-wrap" style="width: 58px; height: 58px; background: #1E1612; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.4rem; color: #FFFFFF; box-shadow: 0 6px 16px rgba(0,0,0,0.15);">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3>Inteligencia de Negocios</h3>
+                    <p>Estrategia pura y aplicable. Toma de decisiones con agilidad, estructuración de procesos eficientes y visión táctica para dirigir tu empresa hacia el crecimiento exponencial.</p>
+                </div>
+            </div>
+
+            <!-- Los 3 Problemas Paralizantes -->
+            <div class="problemas-wrapper">
+                <h3 class="problemas-title">Diseñado para erradicar los <span>3 problemas más paralizantes</span>:</h3>
+                
+                <div class="problemas-grid">
+                    <div class="problema-item">
+                        <div class="problema-icon" style="color: #6B7280; display: flex; justify-content: center; margin-bottom: 1rem;">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h4>La Postergación</h4>
+                        <p>Eliminamos la procrastinación en decisiones críticas. Transformamos la inercia mental en acción contundente y constante.</p>
+                    </div>
+
+                    <div class="problema-item">
+                        <div class="problema-icon" style="color: #6B7280; display: flex; justify-content: center; margin-bottom: 1rem;">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                            </svg>
+                        </div>
+                        <h4>Falta de Autoliderazgo</h4>
+                        <p>Recuperas el dominio total sobre tu tiempo, tus emociones y tus prioridades. Lideras tu mente primero.</p>
+                    </div>
+
+                    <div class="problema-item">
+                        <div class="problema-icon" style="color: #6B7280; display: flex; justify-content: center; margin-bottom: 1rem;">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h4>Bloqueo Mental</h4>
+                        <p>Rompemos de raíz la parálisis por análisis. Ganas una claridad mental absoluta para ejecutar sin dudas.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== CTA FINAL SECTION ==================== -->
+    <section class="cta-final-section">
+        <div class="container">
+            <div class="cta-final-box">
+                <span class="section-tag" style="color: #ECC369;">Tu Próximo Nivel</span>
+                <h2>¿Listo para activar tu Modo Líder?</h2>
+                <p>Deja de postergar el crecimiento de tu negocio. Accede a las herramientas y acompañamiento que transformarán tu manera de ejecutar.</p>
+                <a href="#inicio" class="btn-gold">
+                    <span>Quiero Mi Transformación</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

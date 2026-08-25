@@ -1,0 +1,713 @@
+
+        :root {
+            --bg-dark: #090A0F;
+            --bg-card: rgba(22, 26, 37, 0.7);
+            --bg-surface: #12151E;
+            --gold-primary: #D4AF37;
+            --gold-light: #F7E7CE;
+            --gold-gradient: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%);
+            --gold-text-grad: linear-gradient(135deg, #FFF6E5 0%, #ECC369 50%, #C89124 100%);
+            --accent-coral: #E94560;
+            --text-main: #F3F4F6;
+            --text-muted: #A0AEC0;
+            --text-dark: #1F2937;
+            --border-gold: rgba(212, 175, 55, 0.25);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --font-display: var(--font-playfair), 'Playfair Display', serif;
+            --font-heading: var(--font-outfit), 'Outfit', sans-serif;
+            --font-body: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .serif-title {
+            font-family: var(--font-display);
+        }
+
+        /* --- HERO SECTION NATIVA INTEGRADA --- */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem 5rem 2rem;
+            background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+                        radial-gradient(circle at 90% 40%, rgba(233, 69, 96, 0.08) 0%, transparent 50%),
+                        linear-gradient(180deg, #090A0F 0%, #0E121B 100%);
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        /* Ambient Glow & Decorative Arcs */
+        .hero-glow-ambient {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(233, 182, 66, 0.15) 0%, transparent 70%);
+            filter: blur(60px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-arcs-bg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 650px;
+            height: 650px;
+            opacity: 0.25;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 3.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Columna Izquierda: Contenido & Propuesta de Valor */
+        .hero-text-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero-pretitle-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-line {
+            width: 40px;
+            height: 1.5px;
+            background: var(--gold-gradient);
+        }
+
+        .hero-pretitle {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: var(--gold-text-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-main-title {
+            font-family: var(--font-display);
+            font-size: 4.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
+            text-shadow: 0 4px 25px rgba(0,0,0,0.5);
+            line-height: 1.08;
+        }
+
+        .hero-statement {
+            font-size: 1.35rem;
+            color: #E2E8F0;
+            line-height: 1.55;
+            margin-bottom: 2rem;
+            max-width: 620px;
+            font-weight: 400;
+        }
+
+        .hero-statement .highlight {
+            color: #F6C85F;
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: rgba(246, 200, 95, 0.4);
+            text-underline-offset: 4px;
+        }
+
+        /* Badges de Beneficios (Pill Bar) */
+        .hero-pillars-pills {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            padding: 0.75rem 1.4rem;
+            background: rgba(212, 175, 55, 0.06);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 50px;
+            backdrop-filter: blur(8px);
+        }
+
+        .pillar-pill-item {
+            font-family: var(--font-heading);
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #F8E2A7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pillar-dot {
+            width: 5px;
+            height: 5px;
+            background: #E9B642;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        /* Botón de Acción Principal */
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1.1rem 2.6rem;
+            background: var(--gold-gradient);
+            color: #0A0D14;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.08rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 12px 30px rgba(233, 182, 66, 0.35);
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(233, 182, 66, 0.55);
+            filter: brightness(1.08);
+        }
+
+        .btn-secondary-link {
+            color: #CBD5E1;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .btn-secondary-link:hover {
+            color: #F6C85F;
+        }
+
+        /* Barra de Autor / Romina Signature Card */
+        .hero-author-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.2rem 1.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid #E9B642;
+            border-radius: 0 14px 14px 0;
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .author-monogram {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #ECC369;
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+
+        .author-details {
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding-left: 1.2rem;
+        }
+
+        .author-name {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        .author-role {
+            font-size: 0.85rem;
+            color: #ECC369;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+
+        .author-quote {
+            font-size: 0.92rem;
+            font-style: italic;
+            color: #94A3B8;
+        }
+
+        /* Columna Derecha: Imagen Romina & Sello Dorado Integrado */
+        .hero-visual-col {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+        }
+
+        .portrait-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            z-index: 2;
+        }
+
+        .portrait-glow {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(233, 69, 96, 0.1) 50%, transparent 75%);
+            filter: blur(40px);
+            z-index: -1;
+        }
+
+        .portrait-img {
+            width: 100%;
+            height: auto;
+            max-height: 580px;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.85));
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+        }
+
+        /* Sello Circular Dorado Flotante */
+        .gold-badge-seal {
+            position: absolute;
+            bottom: 25px;
+            right: -15px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #251D0B 0%, #0F0E0A 100%);
+            border: 2px solid #E9B642;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(233, 182, 66, 0.35);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            z-index: 4;
+            animation: floatSlow 5s ease-in-out infinite alternate;
+        }
+
+        .seal-pre {
+            font-size: 0.55rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #E9B642;
+            font-weight: 700;
+        }
+
+        .seal-title {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.1;
+            margin: 2px 0;
+        }
+
+        .seal-tagline {
+            font-size: 0.55rem;
+            letter-spacing: 1px;
+            color: #ECC369;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* --- SECCIÓN HISTORIA REFINADA --- */
+        .historia-section {
+            padding: 7rem 2rem;
+            background: #FFFFFF;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #B8860B;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            display: block;
+        }
+
+        .section-title-dark {
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            margin-bottom: 3.5rem;
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .historia-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .historia-text p {
+            margin-bottom: 1.6rem;
+            font-size: 1.12rem;
+            color: #374151;
+            line-height: 1.8;
+        }
+
+        .historia-quote-box {
+            background: #FAF8F2;
+            border-left: 4px solid #D4AF37;
+            padding: 1.5rem 1.8rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4B5563;
+            font-size: 1.1rem;
+        }
+
+        .historia-card-portrait {
+            background: linear-gradient(145deg, #0F121C, #1E2333);
+            padding: 15px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+        }
+
+        .historia-card-portrait img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+        }
+
+        .historia-card-caption {
+            padding: 1.2rem 0 0.5rem 0;
+        }
+
+        .historia-card-caption h4 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: #FFFFFF;
+            margin-bottom: 0.2rem;
+        }
+
+        .historia-card-caption p {
+            color: #ECC369;
+            font-size: 0.9rem;
+        }
+
+        /* --- SECCIÓN EL MÉTODO (3 PILARES) --- */
+        .metodo-section {
+            padding: 7rem 2rem;
+            background: #0E121B;
+            position: relative;
+            border-top: 1px solid var(--border-gold);
+        }
+
+        .metodo-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4.5rem auto;
+        }
+
+        .metodo-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: #FFFFFF;
+            margin-bottom: 1.2rem;
+        }
+
+        .metodo-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .fundamentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 6rem;
+        }
+
+        .fundamento-card {
+            background: rgba(22, 27, 40, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 22px;
+            padding: 2.8rem 2.2rem;
+            backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fundamento-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .fundamento-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.15);
+        }
+
+        .fundamento-card:hover::before {
+            opacity: 1;
+        }
+
+        .fundamento-icon-wrap {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .fundamento-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 1rem;
+            color: #F8E2A7;
+            font-weight: 700;
+        }
+
+        .fundamento-card p {
+            color: #A0AEC0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* --- SECCIÓN 3 PROBLEMAS PARALIZANTES --- */
+        .problemas-wrapper {
+            background: radial-gradient(circle at center, #191E2D 0%, #0F121C 100%);
+            padding: 4.5rem 3rem;
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+        }
+
+        .problemas-title {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 3.5rem;
+        }
+
+        .problemas-title span {
+            color: var(--accent-coral);
+        }
+
+        .problemas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.2rem;
+        }
+
+        .problema-item {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: rgba(10, 13, 20, 0.6);
+            border-radius: 18px;
+            border-bottom: 3px solid var(--accent-coral);
+            transition: all 0.35s ease;
+        }
+
+        .problema-item:hover {
+            background: rgba(233, 69, 96, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .problema-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .problema-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.9rem;
+            color: #FFFFFF;
+        }
+
+        .problema-item p {
+            color: #94A3B8;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* --- CTA FINAL SECTION --- */
+        .cta-final-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, #0E121B 0%, #090A0F 100%);
+            position: relative;
+        }
+
+        .cta-final-box {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2.5rem;
+            background: rgba(22, 27, 40, 0.8);
+            border-radius: 28px;
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 35px rgba(212, 175, 55, 0.12);
+        }
+
+        .cta-final-box h2 {
+            font-family: var(--font-display);
+            font-size: 2.6rem;
+            color: #FFFFFF;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-final-box p {
+            font-size: 1.2rem;
+            color: #CBD5E1;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Animaciones */
+        @keyframes floatSlow {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        /* Responsividad */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+            .hero-text-col {
+                align-items: center;
+            }
+            .hero-pretitle-wrap {
+                justify-content: center;
+            }
+            .hero-main-title {
+                font-size: 3.5rem;
+            }
+            .hero-author-card {
+                margin: 0 auto;
+                text-align: left;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .historia-grid {
+                grid-template-columns: 1fr;
+            }
+            .problemas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-main-title {
+                font-size: 2.8rem;
+            }
+            .hero-statement {
+                font-size: 1.15rem;
+            }
+            .hero-pillars-pills {
+                justify-content: center;
+                gap: 0.8rem;
+                padding: 0.8rem 1rem;
+            }
+            .pillar-pill-item {
+                font-size: 0.78rem;
+            }
+            .gold-badge-seal {
+                width: 110px;
+                height: 110px;
+                right: 0px;
+                bottom: 10px;
+            }
+            .seal-title {
+                font-size: 0.85rem;
+            }
+            .section-title-dark {
+                font-size: 2.2rem;
+            }
+            .metodo-title {
+                font-size: 2.2rem;
+            }
+        }
+    
