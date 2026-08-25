@@ -211,9 +211,17 @@ export default function ServiciosPage() {
                 Curso Método MODO LÍDER
               </h2>
 
-              <p style={{ color: "#CBD5E1", fontSize: "1.05rem", lineHeight: "1.7", marginBottom: "2.5rem" }}>
-                El entrenamiento sistemático y estructurado para erradicar la postergación de raíz, dominar tu foco atencional y aplicar la fórmula de 3 pilares (<strong>Neurociencias • Transformación • Inteligencia de Negocios</strong>) en tu vida diaria y proyectos.
-              </p>
+              <div style={{ color: "#CBD5E1", fontSize: "1.02rem", lineHeight: "1.7", marginBottom: "2rem", display: "flex", flexDirection: "column", gap: "0.9rem" }}>
+                <p>
+                  Vas a aprender a construir un negocio <strong>DESDE CERO</strong>, que te represente y que nazca de tu propósito.
+                </p>
+                <p>
+                  Pero no vamos a romantizar el emprender: un negocio no solo debe nutrir el alma, también debe <strong>generar ingresos</strong> que sostengan tu vida y tu estilo de vida.
+                </p>
+                <p>
+                  Vamos a trabajar comunicación y conexión con tus clientes, dinero, ventas, mentalidad, patrones limitantes y autoliderazgo, integrando estrategias y acción consciente para crear una marca con valor, impacto real y capacidad de generar ingresos.
+                </p>
+              </div>
 
               {/* Botones de Acción para el Curso */}
               <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", marginTop: "auto" }}>
