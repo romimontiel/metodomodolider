@@ -2,26 +2,77 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "Mi Historia | Romina Lorena Montiel - Método MODO LÍDER",
-  description: "Conoce la historia, visión y trayectoria de Romina Lorena Montiel, creadora del Método MODO LÍDER.",
+  title: "Mi Historia | Romina Lorena Montiel - Neuropsicoeducadora y Mentora de Negocios",
+  description: "Conoce el recorrido real de Romina Lorena Montiel: de Controller Financiera en España y Consultora de PyMEs en Córdoba, a Neuropsicoeducadora y creadora del Método MODO LÍDER.",
 };
 
 export default function HistoriaPage() {
+  const hitos = [
+    {
+      year: "2003 - 2009",
+      flag: "🇪🇸",
+      title: "Finanzas y Gestión en España",
+      desc: "Soy correntina, pero viví en España donde me desempeñé como Contable, Controller y Jefe de Finanzas durante 6 años, administrando estructuras de alta exigencia."
+    },
+    {
+      year: "2009",
+      flag: "🧠",
+      title: "El Despertar: El Descubrimiento de las Neurociencias",
+      desc: "En España conocí las Neurociencias y me cambió la vida para siempre: transformó radicalmente mi forma de trabajar y de autoliderarme. Pasé de vivir nerviosa y sobrecargada a vivir con bienestar y a entregarme desde ese equilibrio a donde sea que voy."
+    },
+    {
+      year: "2010 - 2014",
+      flag: "🇦🇷",
+      title: "Consultoría y Coaching Gerencial en Córdoba",
+      desc: "De regreso en Argentina, trabajé en Córdoba como Consultora Empresarial y Coach Gerencial para dueños de PyMEs durante 4 años, diagnosticando cuellos de botella y liderando equipos."
+    },
+    {
+      year: "2017",
+      flag: "🎓",
+      title: "Neuropsicoeducadora y Posgrado en Neurociencias",
+      desc: "Obtuve mi diploma oficial de NEUROPSICOEDUCADORA y completé mi posgrado en NEUROCIENCIAS DE LAS EMOCIONES, validando científicamente las herramientas de reprogramación mental y conductual."
+    },
+    {
+      year: "Pre-Pandemia",
+      flag: "🏫",
+      title: "Impacto en Colegios y Proyectos de Vida",
+      desc: "Recorrí colegios secundarios brindando talleres vivenciales sobre Gestión de Emociones y Construcción de Proyecto de Vida para jóvenes y educadores."
+    },
+    {
+      year: "2020",
+      flag: "💻",
+      title: "Pandemia: Mindfulness y Regulación Emocional Online",
+      desc: "En pleno confinamiento, dicté talleres online sobre Emociones y Mindfulness, brindando contención, foco y calma mental a cientos de personas en momentos de incertidumbre."
+    },
+    {
+      year: "2021",
+      flag: "🤝",
+      title: "Mentoría 1 a 1 y Nacimiento de un Método Propio",
+      desc: "Comencé a acompañar de manera privada en sesiones individuales. Construí un método propio para educar y guiar a personas adultas, niños y adolescentes en procesos complicados, con éxito total en cada caso. Personas que hoy me siguen acompañando y apoyando."
+    },
+    {
+      year: "Actualidad",
+      flag: "👑",
+      title: "Integración Total: Método MODO LÍDER",
+      desc: "Sumé a emprendedores, profesionales y empresarios que necesitaron unir las habilidades blandas (mente y emociones) con la estrategia pura de negocios. Con orgullo de ser quien soy hoy: Neuropsicoeducadora y Mentora de Mentes y de Negocios."
+    }
+  ];
+
   return (
     <>
       <Navbar />
       
-      <main style={{ minHeight: "100vh", background: "#090A0F", color: "#F3F4F6", paddingBottom: "5rem" }}>
+      <main style={{ minHeight: "100vh", background: "#090A0F", color: "#F3F4F6", paddingBottom: "6rem" }}>
         
-        {/* Header / Hero de la Página */}
+        {/* Hero Header */}
         <section style={{
           position: "relative",
-          padding: "4.5rem 2rem 3.5rem 2rem",
-          background: "radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 65%), linear-gradient(180deg, #090A0F 0%, #0E121B 100%)",
+          padding: "4.5rem 2rem 4rem 2rem",
+          background: "radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.16) 0%, transparent 65%), linear-gradient(180deg, #090A0F 0%, #0E121B 100%)",
           borderBottom: "1px solid rgba(212, 175, 55, 0.25)",
           textAlign: "center"
         }}>
-          <div style={{ maxWidth: "850px", margin: "0 auto" }}>
+          <div style={{ maxWidth: "900px", margin: "0 auto" }}>
             <Link href="/" style={{
               display: "inline-flex",
               alignItems: "center",
@@ -29,12 +80,13 @@ export default function HistoriaPage() {
               color: "#ECC369",
               textDecoration: "none",
               fontSize: "0.9rem",
-              fontWeight: "600",
+              fontWeight: "700",
               marginBottom: "1.5rem",
               background: "rgba(212, 175, 55, 0.1)",
-              padding: "0.4rem 1rem",
+              padding: "0.45rem 1.1rem",
               borderRadius: "50px",
-              border: "1px solid rgba(212, 175, 55, 0.3)"
+              border: "1px solid rgba(212, 175, 55, 0.35)",
+              transition: "all 0.2s"
             }}>
               ← Volver al Inicio
             </Link>
@@ -48,12 +100,12 @@ export default function HistoriaPage() {
               color: "#D4AF37",
               marginBottom: "0.8rem"
             }}>
-              TRAYECTORIA & PROPÓSITO
+              TRAYECTORIA • CIENCIA • NEGOCIOS
             </span>
 
             <h1 style={{
               fontFamily: "var(--font-display)",
-              fontSize: "3.5rem",
+              fontSize: "3.6rem",
               fontWeight: "800",
               color: "#FFFFFF",
               marginBottom: "1.2rem",
@@ -63,154 +115,240 @@ export default function HistoriaPage() {
             </h1>
 
             <p style={{
-              fontSize: "1.25rem",
-              color: "#CBD5E1",
-              lineHeight: 1.6,
-              maxWidth: "700px",
+              fontSize: "1.28rem",
+              color: "#E2E8F0",
+              lineHeight: 1.65,
+              maxWidth: "760px",
               margin: "0 auto"
             }}>
-              La mujer, los aprendizajes y la visión detrás del <span style={{ color: "#ECC369", fontWeight: "700" }}>Método MODO LÍDER</span>.
+              De las finanzas corporativas y la consultoría empresarial al descubrimiento de las <span style={{ color: "#ECC369", fontWeight: "700" }}>Neurociencias</span>: el camino que dio origen al <span style={{ color: "#ECC369", fontWeight: "700" }}>Método MODO LÍDER</span>.
             </p>
           </div>
         </section>
 
-        {/* Contenido Principal de Historia */}
-        <section style={{ maxWidth: "1140px", margin: "4rem auto 0 auto", padding: "0 2rem" }}>
+        {/* Sección Biográfica Principal */}
+        <section style={{ maxWidth: "1160px", margin: "4.5rem auto 0 auto", padding: "0 2rem" }}>
           
-          {/* Grid: Foto Principal + Bloque Biográfico */}
           <div style={{
             display: "grid",
-            gridTemplateColumns: "1.15fr 0.85fr",
+            gridTemplateColumns: "1.18fr 0.82fr",
             gap: "3.5rem",
             alignItems: "start",
-            marginBottom: "4.5rem"
+            marginBottom: "5rem"
           }}>
             
-            {/* Texto Narrativo */}
+            {/* Narrativa Escrita */}
             <div style={{ fontSize: "1.15rem", lineHeight: "1.85", color: "#E2E8F0" }}>
               
+              <div style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "10px",
+                padding: "0.4rem 0.9rem",
+                background: "rgba(212, 175, 55, 0.12)",
+                borderLeft: "3px solid #D4AF37",
+                borderRadius: "0 8px 8px 0",
+                color: "#F7E7CE",
+                fontSize: "0.95rem",
+                fontWeight: "750",
+                marginBottom: "1.5rem"
+              }}>
+                👋 ¡Hola! Soy Romina Lorena Montiel
+              </div>
+
               <h2 style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "2.2rem",
+                fontSize: "2.3rem",
                 color: "#FFFFFF",
-                marginBottom: "1.5rem",
+                marginBottom: "1.4rem",
                 lineHeight: 1.2
               }}>
-                El Punto de Quiebre: Cuando el talento no alcanza
+                De los números a la mente: un puente entre dos mundos
               </h2>
 
-              <p style={{ marginBottom: "1.6rem" }}>
-                Durante años vi cómo profesionales brillantes, líderes y emprendedores con ideas extraordinarias se quedaban estancados en el camino. No por falta de talento, visión o capacidad de trabajo, sino por <strong>barreras invisibles de postergación, sobrecarga y dudas internas</strong> que los mantenían en una parálisis silenciosa.
+              <p style={{ marginBottom: "1.5rem" }}>
+                Soy <strong>correntina</strong>, pero mi viaje profesional me llevó a vivir en <strong>España</strong> durante muchos años. Allí me desempeñé como <strong>Contable, Controller y Jefe de Finanzas</strong> por más de 6 años, inmersa en la exigencia de balances, auditorías y presión constante.
+              </p>
+
+              <p style={{ marginBottom: "1.5rem" }}>
+                Fue allí, en <strong>2009</strong>, cuando descubrí las <strong>Neurociencias</strong>. Ese encuentro marcó un antes y un después absoluto: <strong>me cambió la vida, mi forma de trabajar y mi manera de autoliderarme</strong>. Pasé de vivir con estrés y nerviosismo a vivir desde un bienestar genuino, y desde ese lugar me entrego a donde sea que voy.
               </p>
 
               <div style={{
-                background: "rgba(22, 26, 37, 0.85)",
+                background: "linear-gradient(135deg, rgba(22, 26, 37, 0.95) 0%, rgba(14, 18, 27, 0.95) 100%)",
                 borderLeft: "4px solid #D4AF37",
                 padding: "1.6rem 2rem",
                 borderRadius: "0 14px 14px 0",
-                margin: "2rem 0",
+                margin: "2.2rem 0",
                 fontStyle: "italic",
                 color: "#F7E7CE",
                 fontSize: "1.15rem",
-                boxShadow: "0 8px 25px rgba(0,0,0,0.3)"
+                boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
+                borderTop: "1px solid rgba(255,255,255,0.05)",
+                borderRight: "1px solid rgba(255,255,255,0.05)",
+                borderBottom: "1px solid rgba(255,255,255,0.05)"
               }}>
-                &quot;Yo misma atravesé esos momentos donde sabía exactamente lo que tenía que hacer pero, por alguna razón, no lograba accionar con la contundencia que mi negocio demandaba.&quot;
+                &quot;No podés liderar un negocio próspero ni sostener tus metas si primero no aprendés a liderar tu propia biología y tus estados mentales.&quot;
               </div>
-
-              <p style={{ marginBottom: "1.6rem" }}>
-                Entendí que el problema nunca fue la falta de información: vivimos en una era saturada de cursos, libros y estrategias. El verdadero desafío está en la <strong>ejecución</strong>, en el dominio de nuestra propia mente y en cómo dirigimos la energía hacia las decisiones que mueven la aguja.
-              </p>
 
               <h2 style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "2.2rem",
+                fontSize: "2.1rem",
                 color: "#FFFFFF",
-                marginTop: "2.5rem",
-                marginBottom: "1.5rem",
+                marginTop: "2.8rem",
+                marginBottom: "1.4rem",
                 lineHeight: 1.2
               }}>
-                La Fusión Científica y Estratégica
+                La experiencia en terreno con PyMEs y Personas
               </h2>
 
-              <p style={{ marginBottom: "1.6rem" }}>
-                Decidí profundizar en qué es lo que biológica y psicológicamente nos frena. Combiné los descubrimientos de las <strong>Neurociencias</strong> para entender cómo optimizar el foco atencional y desactivar el piloto automático del miedo, con la <strong>Psicología Cognitiva</strong> para desarmar creencias limitantes.
+              <p style={{ marginBottom: "1.5rem" }}>
+                A mi regreso a Argentina, trabajé en <strong>Córdoba</strong> durante 4 años como <strong>Consultora Empresarial y Coach Gerencial para dueños de PyMEs</strong>. Allí confirmé una realidad cotidiana: los negocios no se traban por falta de ideas, sino por bloqueos emocionales, postergación en la toma de decisiones y falta de claridad de sus líderes.
               </p>
 
-              <p style={{ marginBottom: "1.6rem" }}>
-                A esto le sumé mi <strong>formación profesional en negocios</strong> y mis más de <strong>10 años de experiencia</strong> trabajando con empresas y emprendedores. De esta convergencia nació el <strong>Método MODO LÍDER</strong>: un ecosistema integral que alinea mentalidad, comportamiento y estrategia comercial práctica.
+              <p style={{ marginBottom: "1.5rem" }}>
+                En <strong>2017</strong> me gradué con diploma oficial como <strong>NEUROPSICOEDUCADORA</strong> y realicé un posgrado en <strong>NEUROCIENCIAS DE LAS EMOCIONES</strong>. Comencé brindando talleres en colegios sobre emociones y proyecto de vida, y luego talleres online de Mindfulness en pandemia.
+              </p>
+
+              <p style={{ marginBottom: "1.5rem" }}>
+                Desde <strong>2021</strong> creé mi <strong>método propio</strong> acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos complejos, con éxito en todos los casos. Al ver la potencia transformadora de este sistema, <strong>sumé a emprendedores, profesionales y empresarios</strong> que necesitaban integrar las habilidades blandas con la estrategia de negocios.
+              </p>
+
+              <p style={{ marginBottom: "1.5rem", color: "#F9D976", fontWeight: "750", fontSize: "1.2rem" }}>
+                Hoy me presento con orgullo de ser quien soy: Neuropsicoeducadora y Mentora de Mentes y de Negocios.
               </p>
 
             </div>
 
-            {/* Tarjeta de Romina con Foto */}
+            {/* Tarjeta Visual Lateral */}
             <div style={{
               position: "sticky",
               top: "100px",
               background: "linear-gradient(145deg, #121624, #1B2133)",
-              padding: "1.5rem",
+              padding: "1.6rem",
               borderRadius: "24px",
               border: "1.5px solid rgba(212, 175, 55, 0.35)",
               boxShadow: "0 25px 50px rgba(0,0,0,0.6), 0 0 30px rgba(212, 175, 55, 0.15)",
               textAlign: "center"
             }}>
-              <div style={{ overflow: "hidden", borderRadius: "18px", marginBottom: "1.2rem" }}>
+              <div style={{ overflow: "hidden", borderRadius: "18px", marginBottom: "1.4rem", boxShadow: "0 10px 25px rgba(0,0,0,0.4)" }}>
                 <img 
                   src="/romina2.png" 
                   alt="Romina Lorena Montiel" 
                   style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }} 
                 />
               </div>
+
               <h3 style={{
                 fontFamily: "var(--font-heading)",
-                fontSize: "1.4rem",
+                fontSize: "1.45rem",
                 fontWeight: "800",
                 color: "#FFFFFF",
                 marginBottom: "0.3rem"
               }}>
                 Romina Lorena Montiel
               </h3>
-              <p style={{ color: "#ECC369", fontSize: "0.95rem", fontWeight: "600", marginBottom: "1.2rem" }}>
-                Mentora de Líderes &amp; Estratega de Negocios
+
+              <p style={{ color: "#ECC369", fontSize: "0.95rem", fontWeight: "700", marginBottom: "0.6rem" }}>
+                Neuropsicoeducadora &amp; Mentora de Negocios
+              </p>
+
+              <p style={{ color: "#A0AEC0", fontSize: "0.85rem", marginBottom: "1.3rem" }}>
+                Instagram: <strong style={{ color: "#F7E7CE" }}>@rominalorenamontiel</strong>
               </p>
 
               <div style={{
-                background: "rgba(0,0,0,0.3)",
-                padding: "1rem",
-                borderRadius: "12px",
-                border: "1px solid rgba(255,255,255,0.06)",
-                fontSize: "0.9rem",
+                background: "rgba(0,0,0,0.35)",
+                padding: "1.1rem",
+                borderRadius: "14px",
+                border: "1px solid rgba(255,255,255,0.08)",
+                fontSize: "0.95rem",
                 color: "#CBD5E1",
-                fontStyle: "italic"
+                fontStyle: "italic",
+                lineHeight: "1.5"
               }}>
                 &quot;Creá. Liderá. Impactá. Desde quién sos.&quot;
               </div>
 
               <div style={{
                 display: "flex",
+                alignItems: "center",
                 justifyContent: "center",
                 gap: "1rem",
                 marginTop: "1.5rem",
-                paddingTop: "1.2rem",
+                paddingTop: "1.3rem",
                 borderTop: "1px solid rgba(255,255,255,0.1)"
               }}>
-                <img src="/logo modolider.png" alt="Sello Oficial" style={{ height: "45px", width: "45px", borderRadius: "50%" }} />
+                <img src="/logo modolider.png" alt="Sello Oficial" style={{ height: "48px", width: "48px", borderRadius: "50%", boxShadow: "0 2px 10px rgba(212,175,55,0.3)" }} />
                 <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: "0.85rem", fontWeight: "800", color: "#F7E7CE" }}>MÉTODO MODO LÍDER</div>
-                  <div style={{ fontSize: "0.75rem", color: "#A0AEC0" }}>Metodología Registrada</div>
+                  <div style={{ fontSize: "0.88rem", fontWeight: "800", color: "#F7E7CE" }}>MÉTODO MODO LÍDER</div>
+                  <div style={{ fontSize: "0.75rem", color: "#A0AEC0" }}>Creá • Liderá • Impactá</div>
                 </div>
               </div>
             </div>
 
           </div>
 
-          {/* Bloque Destacado de Misión & Filosofía */}
+          {/* Línea de Tiempo Visual de Hitos (Timeline) */}
+          <div style={{ marginTop: "2rem", marginBottom: "5rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+              <span style={{ color: "#D4AF37", fontSize: "0.85rem", fontWeight: "800", letterSpacing: "3px", textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>
+                EL CAMINO RECORRIDO
+              </span>
+              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", color: "#FFFFFF", fontWeight: "800" }}>
+                Los Hitos de Mi Trayectoria
+              </h2>
+            </div>
+
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "1.5rem"
+            }}>
+              {hitos.map((hito, idx) => (
+                <div key={idx} style={{
+                  background: "linear-gradient(180deg, #131724 0%, #0E121C 100%)",
+                  border: "1px solid rgba(212, 175, 55, 0.25)",
+                  borderTop: "3px solid #D4AF37",
+                  borderRadius: "16px",
+                  padding: "1.8rem 1.5rem",
+                  boxShadow: "0 8px 25px rgba(0,0,0,0.3)",
+                  display: "flex",
+                  flexDirection: "column"
+                }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.8rem" }}>
+                    <span style={{ fontSize: "1.6rem" }}>{hito.flag}</span>
+                    <span style={{
+                      background: "rgba(212, 175, 55, 0.15)",
+                      color: "#ECC369",
+                      padding: "0.25rem 0.75rem",
+                      borderRadius: "50px",
+                      fontSize: "0.8rem",
+                      fontWeight: "800",
+                      border: "1px solid rgba(212, 175, 55, 0.3)"
+                    }}>
+                      {hito.year}
+                    </span>
+                  </div>
+                  <h3 style={{ fontSize: "1.1rem", fontWeight: "800", color: "#FFFFFF", marginBottom: "0.6rem", lineHeight: "1.3" }}>
+                    {hito.title}
+                  </h3>
+                  <p style={{ color: "#A0AEC0", fontSize: "0.9rem", lineHeight: "1.6", flex: 1 }}>
+                    {hito.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bloque Destacado de Cierre & CTA */}
           <div style={{
-            background: "linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(22, 26, 37, 0.95) 100%)",
-            border: "1.5px solid rgba(212, 175, 55, 0.4)",
+            background: "linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(22, 26, 37, 0.98) 100%)",
+            border: "1.5px solid rgba(212, 175, 55, 0.45)",
             borderRadius: "24px",
-            padding: "3.5rem 3rem",
+            padding: "4rem 3rem",
             textAlign: "center",
-            boxShadow: "0 20px 45px rgba(0,0,0,0.4)"
+            boxShadow: "0 25px 50px rgba(0,0,0,0.5), 0 0 35px rgba(212, 175, 55, 0.15)"
           }}>
             <span style={{
               fontSize: "0.85rem",
@@ -221,24 +359,26 @@ export default function HistoriaPage() {
               display: "block",
               marginBottom: "0.8rem"
             }}>
-              MI COMPROMISO CONTIGO
+              ACTIVÁ TU MODO LÍDER
             </span>
+
             <h2 style={{
               fontFamily: "var(--font-display)",
-              fontSize: "2.4rem",
+              fontSize: "2.5rem",
               color: "#FFFFFF",
               marginBottom: "1.2rem"
             }}>
-              Tu visión merece un sistema que la respalde
+              Trabajemos juntos en la transformación de tu negocio
             </h2>
+
             <p style={{
-              fontSize: "1.15rem",
+              fontSize: "1.18rem",
               color: "#E2E8F0",
-              maxWidth: "780px",
-              margin: "0 auto 2.5rem auto",
+              maxWidth: "800px",
+              margin: "0 auto 2.8rem auto",
               lineHeight: "1.7"
             }}>
-              Mi misión es darte la claridad y el marco de acción exacto para que dirijas tu tiempo, superes la postergación y construyas un negocio de alto impacto con propósito y rentabilidad real.
+              Integrá la ciencia de tu cerebro, la reprogramación de patrones limitantes y las tácticas de negocios que te permitirán liderar con claridad y atraer resultados reales.
             </p>
 
             <div style={{ display: "flex", justifyContent: "center", gap: "1.2rem", flexWrap: "wrap" }}>
@@ -246,30 +386,30 @@ export default function HistoriaPage() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.6rem",
-                padding: "1rem 2.2rem",
+                padding: "1.1rem 2.4rem",
                 background: "linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%)",
                 color: "#0E121B",
                 textDecoration: "none",
                 fontWeight: "800",
-                fontSize: "1.05rem",
+                fontSize: "1.08rem",
                 borderRadius: "50px",
-                boxShadow: "0 10px 25px rgba(212, 175, 55, 0.35)"
+                boxShadow: "0 12px 30px rgba(212, 175, 55, 0.4)"
               }}>
-                <span>Conocer el Método</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <span>Descubrir el Método</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </Link>
               
               <Link href="/curso" style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.6rem",
-                padding: "1rem 2.2rem",
-                background: "rgba(255, 255, 255, 0.08)",
-                border: "1px solid rgba(255, 255, 255, 0.2)",
-                color: "#FFFFFF",
+                padding: "1.1rem 2.4rem",
+                background: "rgba(212, 175, 55, 0.15)",
+                border: "1.5px solid #D4AF37",
+                color: "#F7E7CE",
                 textDecoration: "none",
-                fontWeight: "700",
-                fontSize: "1.05rem",
+                fontWeight: "750",
+                fontSize: "1.08rem",
                 borderRadius: "50px"
               }}>
                 <span>🎓 Ver Curso &amp; Campus</span>
