@@ -43,6 +43,20 @@ next-env.d.ts
 # large files (>100MB)
 mi historia.pdf
 
+# private client consulting files
+/CLIENTES/
+/MAIRA TRAUB/
+*.xlsx
 
-.vercel
-.env*
+# development scratch and python cache
+__pycache__/
+*.pyc
+scratch/
+
+# helper scripts and root presentations
+convert_all_md_to_docx.py
+generate_manual_docx.py
+generate_planilla*.py
+generate_tenant_docx.py
+Presentacion_*.pdf
+

@@ -32,7 +32,7 @@ export default function Hero() {
               <h1 className="hero-main-title">Modo Líder</h1>
 
               <p className="hero-statement">
-                  No te dice qué hacer. Te da el <span className="highlight">sistema</span> para que dejes de postergar y dirijas tu <span className="highlight">accionar</span> hacia lo que <span className="highlight">tu negocio</span> necesita hoy de vos.
+                  Con las herramientas, recursos y guía de procesos adecuados todos podemos <span className="highlight">transformar nuestros bloqueos en potencial</span> para crear, conseguir resultados y prosperar.
               </p>
 
               {/* Píldoras de los 3 Pilares Científicos y Estratégicos */}
@@ -44,30 +44,29 @@ export default function Hero() {
                   <span className="pillar-pill-item">INTELIGENCIA DE NEGOCIOS</span>
               </div>
 
-              {/* Botón CTA */}
+              {/* Botones de Acción Hero */}
               <div className="hero-actions">
                   <a href="#metodo" className="btn-gold">
                       <span>Descubre el Método</span>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </a>
-                  <Link href="/curso" className="btn-gold" style={{ background: "rgba(212, 175, 55, 0.15)", color: "#F7E7CE", border: "1.5px solid #D4AF37", boxShadow: "0 8px 25px rgba(212, 175, 55, 0.25)" }}>
-                      <span>🎓 Curso & Campus Alumnas</span>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <Link href="/curso" className="btn-outline-gold">
+                      <span>🎓 Curso</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </Link>
-                  <Link href="/historia" className="btn-secondary-link">
-                      <span>Conoce mi historia</span>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  <Link href="/historia" className="btn-story">
+                      <span>Ver mi historia</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </Link>
               </div>
 
-              {/* Bloque de Romina Lorena Montiel */}
+              {/* Bloque de Romina Lorena Montiel - Nueva Identidad */}
               <div className="hero-author-card">
-                  <div className="author-monogram">RM</div>
-                  <div className="author-details">
-                      <div className="author-name">ROMINA LORENA MONTIEL</div>
-                      <div className="author-role">Lic. en Administración • Neuropsicoeducadora | Mentora de Mentes y de Negocios</div>
-                      <div className="author-quote">&quot;Creá. Liderá. Impactá. Desde quién sos.&quot;</div>
-                  </div>
+                  <img 
+                      src="/romina-signature@2x.png" 
+                      alt="Lic. Romina Lorena Montiel - Mentora de Mentes y Negocios" 
+                      className="hero-signature-img"
+                  />
               </div>
           </div>
 

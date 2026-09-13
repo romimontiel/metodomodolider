@@ -3,10 +3,11 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer style={{
-      background: "#080A0F",
-      borderTop: "1px solid rgba(212, 175, 55, 0.2)",
-      padding: "4rem 1.5rem 3rem 1.5rem",
-      color: "#94A3B8"
+      background: "#FFFFFF",
+      borderTop: "3.5px solid #D4AF37",
+      boxShadow: "0 -10px 30px rgba(0, 0, 0, 0.04)",
+      padding: "4.5rem 1.5rem 3rem 1.5rem",
+      color: "#475569"
     }}>
       <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
         
@@ -19,62 +20,76 @@ export default function Footer() {
           
           {/* Columna 1: Marca & Misión */}
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.2rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", marginBottom: "1.2rem" }}>
               <img 
                 src="/logo modolider.png" 
                 alt="Logo Método Modo Líder" 
-                style={{ height: "42px", width: "42px", borderRadius: "50%", objectFit: "cover", boxShadow: "0 2px 10px rgba(233, 182, 66, 0.3)" }} 
+                style={{ 
+                  height: "44px", 
+                  width: "44px", 
+                  borderRadius: "50%", 
+                  objectFit: "cover", 
+                  boxShadow: "0 4px 12px rgba(212, 175, 55, 0.25)",
+                  border: "2px solid #D4AF37"
+                }} 
               />
               <span style={{
-                fontSize: "1.2rem",
+                fontSize: "1.25rem",
                 fontWeight: 900,
-                background: "linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                letterSpacing: "1.5px"
+                color: "#0F172A",
+                letterSpacing: "1.5px",
+                fontFamily: "var(--font-heading, sans-serif)"
               }}>
                 MÉTODO MODO LÍDER
               </span>
             </div>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: "#CBD5E1", marginBottom: "1.2rem" }}>
-              La integración definitiva entre <strong>Neurociencias</strong>, <strong>Transformación</strong> e <strong>Inteligencia de Negocios</strong> para erradicar la postergación y liderar con impacto.
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: "#334155", marginBottom: "1.3rem" }}>
+              La integración definitiva entre <strong style={{ color: "#0F172A" }}>Neurociencias</strong>, <strong style={{ color: "#0F172A" }}>Transformación</strong> e <strong style={{ color: "#0F172A" }}>Inteligencia de Negocios</strong> para erradicar la postergación y liderar con impacto.
             </p>
-            <p style={{ fontSize: "0.9rem", color: "#ECC369", fontWeight: "700" }}>
+            <p style={{ fontSize: "0.95rem", color: "#B47C13", fontWeight: "800", marginBottom: "0.2rem" }}>
               Romina Lorena Montiel
             </p>
-            <p style={{ fontSize: "0.85rem", color: "#94A3B8" }}>
+            <p style={{ fontSize: "0.85rem", color: "#64748B", fontWeight: "500" }}>
               Lic. en Administración • Neuropsicoeducadora
             </p>
           </div>
 
           {/* Columna 2: Navegación Rápida */}
           <div>
-            <h4 style={{ color: "#FFFFFF", fontSize: "1.05rem", fontWeight: "800", marginBottom: "1.2rem", textTransform: "uppercase", letterSpacing: "1px" }}>
+            <h4 style={{ 
+              color: "#0F172A", 
+              fontSize: "1.05rem", 
+              fontWeight: "800", 
+              marginBottom: "1.3rem", 
+              textTransform: "uppercase", 
+              letterSpacing: "1px",
+              fontFamily: "var(--font-heading, sans-serif)"
+            }}>
               Explorar
             </h4>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.8rem" }}>
               <li>
-                <Link href="/" style={{ color: "#CBD5E1", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }}>
+                <Link href="/" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
                   🏠 Inicio
                 </Link>
               </li>
               <li>
-                <Link href="/historia" style={{ color: "#CBD5E1", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }}>
+                <Link href="/historia" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
                   📖 Mi Historia
                 </Link>
               </li>
               <li>
-                <Link href="/servicios" style={{ color: "#CBD5E1", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }}>
+                <Link href="/servicios" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
                   ✨ Servicios &amp; Mentoría 1 a 1
                 </Link>
               </li>
               <li>
-                <Link href="/curso" style={{ color: "#CBD5E1", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }}>
+                <Link href="/curso" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
                   🎓 Curso Emprender de Cero a Impacto y Ventas
                 </Link>
               </li>
               <li>
-                <Link href="/campus" style={{ color: "#CBD5E1", textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }}>
+                <Link href="/campus" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
                   🔐 Campus Virtual
                 </Link>
               </li>
@@ -83,14 +98,19 @@ export default function Footer() {
 
           {/* Columna 3: Redes Sociales & Contacto */}
           <div>
-            <h4 style={{ color: "#FFFFFF", fontSize: "1.05rem", fontWeight: "800", marginBottom: "1.2rem", textTransform: "uppercase", letterSpacing: "1px" }}>
-              Redes Sociales Oficiales
+            <h4 style={{ 
+              color: "#0F172A", 
+              fontSize: "1.05rem", 
+              fontWeight: "800", 
+              marginBottom: "1.3rem", 
+              textTransform: "uppercase", 
+              letterSpacing: "1px",
+              fontFamily: "var(--font-heading, sans-serif)"
+            }}>
+              Redes Sociales
             </h4>
-            <p style={{ fontSize: "0.9rem", color: "#94A3B8", marginBottom: "1.2rem" }}>
-              Conecta conmigo y accede a contenido exclusivo sobre neurociencias y mentalidad de negocios:
-            </p>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
               
               {/* Instagram Personal */}
               <a 
@@ -101,15 +121,16 @@ export default function Footer() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.65rem",
-                  padding: "0.6rem 1rem",
-                  background: "rgba(225, 48, 108, 0.12)",
-                  border: "1px solid rgba(225, 48, 108, 0.4)",
-                  borderRadius: "10px",
-                  color: "#FF8BA7",
+                  padding: "0.65rem 1.1rem",
+                  background: "rgba(225, 48, 108, 0.08)",
+                  border: "1.5px solid rgba(225, 48, 108, 0.35)",
+                  borderRadius: "12px",
+                  color: "#D62976",
                   textDecoration: "none",
                   fontSize: "0.92rem",
-                  fontWeight: "700",
-                  transition: "all 0.2s"
+                  fontWeight: "750",
+                  transition: "all 0.2s",
+                  boxShadow: "0 2px 8px rgba(225, 48, 108, 0.06)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -125,15 +146,16 @@ export default function Footer() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.65rem",
-                  padding: "0.6rem 1rem",
+                  padding: "0.65rem 1.1rem",
                   background: "rgba(212, 175, 55, 0.12)",
-                  border: "1px solid rgba(212, 175, 55, 0.4)",
-                  borderRadius: "10px",
-                  color: "#ECC369",
+                  border: "1.5px solid rgba(212, 175, 55, 0.45)",
+                  borderRadius: "12px",
+                  color: "#8F640A",
                   textDecoration: "none",
                   fontSize: "0.92rem",
-                  fontWeight: "700",
-                  transition: "all 0.2s"
+                  fontWeight: "750",
+                  transition: "all 0.2s",
+                  boxShadow: "0 2px 8px rgba(212, 175, 55, 0.06)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -149,15 +171,16 @@ export default function Footer() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.65rem",
-                  padding: "0.6rem 1rem",
-                  background: "rgba(255, 0, 0, 0.12)",
-                  border: "1px solid rgba(255, 0, 0, 0.4)",
-                  borderRadius: "10px",
-                  color: "#FF6B6B",
+                  padding: "0.65rem 1.1rem",
+                  background: "rgba(255, 0, 0, 0.08)",
+                  border: "1.5px solid rgba(255, 0, 0, 0.35)",
+                  borderRadius: "12px",
+                  color: "#CC0000",
                   textDecoration: "none",
                   fontSize: "0.92rem",
-                  fontWeight: "700",
-                  transition: "all 0.2s"
+                  fontWeight: "750",
+                  transition: "all 0.2s",
+                  boxShadow: "0 2px 8px rgba(255, 0, 0, 0.06)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
@@ -173,15 +196,16 @@ export default function Footer() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.65rem",
-                  padding: "0.6rem 1rem",
-                  background: "rgba(37, 211, 102, 0.12)",
-                  border: "1px solid rgba(37, 211, 102, 0.4)",
-                  borderRadius: "10px",
-                  color: "#25D366",
+                  padding: "0.65rem 1.1rem",
+                  background: "rgba(37, 211, 102, 0.1)",
+                  border: "1.5px solid rgba(37, 211, 102, 0.4)",
+                  borderRadius: "12px",
+                  color: "#15803D",
                   textDecoration: "none",
                   fontSize: "0.92rem",
-                  fontWeight: "700",
-                  transition: "all 0.2s"
+                  fontWeight: "750",
+                  transition: "all 0.2s",
+                  boxShadow: "0 2px 8px rgba(37, 211, 102, 0.06)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -197,17 +221,18 @@ export default function Footer() {
         </div>
 
         <div style={{
-          borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+          borderTop: "1px solid #E2E8F0",
           paddingTop: "2rem",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
           gap: "1rem",
-          fontSize: "0.85rem"
+          fontSize: "0.85rem",
+          color: "#64748B"
         }}>
           <p>© {new Date().getFullYear()} Método MODO LÍDER • Romina Lorena Montiel. Todos los derechos reservados.</p>
-          <p style={{ color: "#ECC369" }}>De la Mentalidad a las Ventas</p>
+          <p style={{ color: "#B47C13", fontWeight: "750" }}>De la Mentalidad a las Ventas</p>
         </div>
 
       </div>
