@@ -140,7 +140,7 @@ export default function ServiciosPage() {
               <div style={{ marginTop: "auto" }}>
                 <a 
                   href={mentoriaLink}
-                  target="_blank"
+                  target="_blank" 
                   rel="noopener noreferrer"
                   style={{
                     display: "flex",
@@ -148,13 +148,14 @@ export default function ServiciosPage() {
                     justifyContent: "center",
                     gap: "0.75rem",
                     padding: "1.15rem 1.8rem",
-                    background: "linear-gradient(135deg, #25D366 0%, #128C7E 100%)",
-                    color: "#FFFFFF",
+                    background: "#FFFFFF",
+                    border: "2px solid #FFFFFF",
+                    color: "#000000",
                     textDecoration: "none",
-                    fontWeight: "800",
+                    fontWeight: "900",
                     fontSize: "1.08rem",
                     borderRadius: "14px",
-                    boxShadow: "0 10px 25px rgba(37, 211, 102, 0.35)",
+                    boxShadow: "0 8px 20px rgba(0, 0, 0, 0.35)",
                     transition: "transform 0.2s, box-shadow 0.2s"
                   }}
                 >
@@ -245,22 +246,23 @@ export default function ServiciosPage() {
 
                 <a 
                   href={cursoLink}
-                  target="_blank"
+                  target="_blank" 
                   rel="noopener noreferrer"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "0.75rem",
-                    padding: "0.95rem 1.6rem",
-                    background: "linear-gradient(135deg, #25D366 0%, #128C7E 100%)",
-                    color: "#FFFFFF",
+                    padding: "1.05rem 1.6rem",
+                    background: "#FFFFFF",
+                    border: "2px solid #FFFFFF",
+                    color: "#000000",
                     textDecoration: "none",
-                    fontWeight: "800",
-                    fontSize: "1rem",
+                    fontWeight: "900",
+                    fontSize: "1.05rem",
                     borderRadius: "14px",
-                    boxShadow: "0 8px 20px rgba(37, 211, 102, 0.25)",
-                    transition: "transform 0.2s"
+                    boxShadow: "0 8px 20px rgba(0, 0, 0, 0.35)",
+                    transition: "transform 0.2s, box-shadow 0.2s"
                   }}
                 >
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
