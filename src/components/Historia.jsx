@@ -21,26 +21,25 @@ export default function Historia() {
               </div>
 
               <div className="historia-card-portrait">
-                  <img src="/romina_historia.png" alt="Romina Lorena Montiel" style={{ background: "radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.22) 0%, rgba(10, 13, 20, 0.95) 80%)", objectFit: "contain" }} />
+                  <img src="/romina_historia.png" alt="Romina Lorena Montiel" style={{ background: "#FFFFFF", objectFit: "contain" }} />
                   <div className="historia-card-caption">
                       <h4>Romina Lorena Montiel</h4>
-                      <p style={{ fontSize: "0.95rem", color: "#ECC369", fontWeight: "700", margin: "0.2rem 0" }}>Lic. en Administración • Neuropsicoeducadora</p>
-                      <p style={{ fontSize: "0.9rem", color: "#F7E7CE", fontWeight: "800", marginBottom: "0.5rem" }}>Mentora de Mentes y de Negocios</p>
+                      <p style={{ fontSize: "0.95rem", color: "#8A6405", fontWeight: "750", margin: "0.2rem 0" }}>Lic. en Administración • Neuropsicoeducadora</p>
+                      <p style={{ fontSize: "0.9rem", color: "#0F172A", fontWeight: "800", marginBottom: "0.5rem" }}>Mentora de Mentes y de Negocios</p>
                       <Link href="/historia" style={{
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.5rem",
                         marginTop: "1rem",
-                        padding: "0.65rem 1.2rem",
-                        background: "rgba(212, 175, 55, 0.18)",
-                        border: "1.5px solid rgba(212, 175, 55, 0.55)",
-                        borderRadius: "8px",
-                        color: "#F7E7CE",
+                        padding: "0.7rem 1.4rem",
+                        background: "linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%)",
+                        borderRadius: "50px",
+                        color: "#0E121B",
                         textDecoration: "none",
-                        fontSize: "0.88rem",
-                        fontWeight: "750",
+                        fontSize: "0.9rem",
+                        fontWeight: "800",
                         transition: "all 0.25s ease",
-                        boxShadow: "0 4px 15px rgba(212, 175, 55, 0.15)"
+                        boxShadow: "0 6px 18px rgba(212, 175, 55, 0.35)"
                       }}>
                         <span>✨ Conoce Mi Historia Completa</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

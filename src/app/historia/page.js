@@ -75,14 +75,14 @@ export default function HistoriaPage() {
     <>
       <Navbar />
       
-      <main style={{ minHeight: "100vh", background: "#090A0F", color: "#F3F4F6", paddingBottom: "6rem" }}>
+      <main style={{ minHeight: "100vh", background: "#FFFFFF", color: "#1E293B", paddingBottom: "6rem" }}>
         
         {/* Hero Header */}
         <section style={{
           position: "relative",
           padding: "4.5rem 2rem 4rem 2rem",
-          background: "radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.16) 0%, transparent 65%), linear-gradient(180deg, #090A0F 0%, #0E121B 100%)",
-          borderBottom: "1px solid rgba(212, 175, 55, 0.25)",
+          background: "linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)",
+          borderBottom: "1px solid #E2E8F0",
           textAlign: "center"
         }}>
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
@@ -90,15 +90,15 @@ export default function HistoriaPage() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              color: "#ECC369",
+              color: "#8A6405",
               textDecoration: "none",
               fontSize: "0.9rem",
-              fontWeight: "700",
+              fontWeight: "750",
               marginBottom: "1.5rem",
-              background: "rgba(212, 175, 55, 0.1)",
+              background: "#FAF7F2",
               padding: "0.45rem 1.1rem",
               borderRadius: "50px",
-              border: "1px solid rgba(212, 175, 55, 0.35)",
+              border: "1px solid #E2D9CC",
               transition: "all 0.2s"
             }}>
               ← Volver al Inicio
@@ -110,7 +110,7 @@ export default function HistoriaPage() {
               fontWeight: "800",
               letterSpacing: "4px",
               textTransform: "uppercase",
-              color: "#D4AF37",
+              color: "#8A6405",
               marginBottom: "0.8rem"
             }}>
               TRAYECTORIA • CIENCIA • NEGOCIOS
@@ -119,8 +119,8 @@ export default function HistoriaPage() {
             <h1 style={{
               fontFamily: "var(--font-display)",
               fontSize: "clamp(2.4rem, 6vw, 3.6rem)",
-              fontWeight: "800",
-              color: "#FFFFFF",
+              fontWeight: "900",
+              color: "#0F172A",
               marginBottom: "1.2rem",
               lineHeight: 1.15
             }}>
@@ -129,12 +129,12 @@ export default function HistoriaPage() {
 
             <p style={{
               fontSize: "clamp(1.05rem, 2.5vw, 1.28rem)",
-              color: "#E2E8F0",
+              color: "#475569",
               lineHeight: 1.65,
               maxWidth: "760px",
               margin: "0 auto"
             }}>
-              De las finanzas corporativas y la consultoría empresarial al descubrimiento de las <span style={{ color: "#ECC369", fontWeight: "700" }}>Neurociencias</span>: el camino que dio origen al <span style={{ color: "#ECC369", fontWeight: "700" }}>Método MODO LÍDER</span>.
+              De las finanzas corporativas y la consultoría empresarial al descubrimiento de las <span style={{ color: "#8A6405", fontWeight: "700" }}>Neurociencias</span>: el camino que dio origen al <span style={{ color: "#8A6405", fontWeight: "700" }}>Método MODO LÍDER</span>.
             </p>
           </div>
         </section>
@@ -145,19 +145,19 @@ export default function HistoriaPage() {
           <div className="historia-page-grid">
             
             {/* Narrativa Escrita */}
-            <div style={{ fontSize: "1.15rem", lineHeight: "1.85", color: "#E2E8F0" }}>
+            <div style={{ fontSize: "1.15rem", lineHeight: "1.85", color: "#334155" }}>
               
               <div style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "10px",
-                padding: "0.4rem 0.9rem",
-                background: "rgba(212, 175, 55, 0.12)",
-                borderLeft: "3px solid #D4AF37",
+                padding: "0.45rem 1rem",
+                background: "#FFF9E6",
+                borderLeft: "4px solid #D4AF37",
                 borderRadius: "0 8px 8px 0",
-                color: "#F7E7CE",
+                color: "#8A6405",
                 fontSize: "0.95rem",
-                fontWeight: "750",
+                fontWeight: "800",
                 marginBottom: "1.5rem"
               }}>
                 👋 ¡Hola! Soy Romina Lorena Montiel
@@ -166,34 +166,34 @@ export default function HistoriaPage() {
               <h2 style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "2.3rem",
-                color: "#FFFFFF",
+                color: "#0F172A",
+                fontWeight: "900",
                 marginBottom: "1.4rem",
                 lineHeight: 1.2
               }}>
                 De los números a la mente: un puente entre dos mundos
               </h2>
 
-              <p style={{ marginBottom: "1.5rem" }}>
-                Soy <strong>correntina</strong>, pero mi viaje profesional me llevó a vivir en <strong>España</strong> durante muchos años. Allí me desempeñé como <strong>Contable, Controller y Jefe de Finanzas</strong> por más de 6 años, inmersa en la exigencia de balances, auditorías y presión constante.
+              <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
+                Soy <strong style={{ color: "#0F172A" }}>correntina</strong>, pero mi viaje profesional me llevó a vivir en <strong style={{ color: "#0F172A" }}>España</strong> durante muchos años. Allí me desempeñé como <strong style={{ color: "#0F172A" }}>Contable, Controller y Jefe de Finanzas</strong> por más de 6 años, inmersa en la exigencia de balances, auditorías y presión constante.
               </p>
 
-              <p style={{ marginBottom: "1.5rem" }}>
-                Fue allí, en <strong>2009</strong>, cuando descubrí las <strong>Neurociencias</strong>. Ese encuentro marcó un antes y un después absoluto: <strong>me cambió la vida, mi forma de trabajar y mi manera de autoliderarme</strong>. Pasé de vivir con estrés y nerviosismo a vivir desde un bienestar genuino, y desde ese lugar me entrego a donde sea que voy.
+              <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
+                Fue allí, en <strong style={{ color: "#0F172A" }}>2009</strong>, cuando descubrí las <strong style={{ color: "#8A6405" }}>Neurociencias</strong>. Ese encuentro marcó un antes y un después absoluto: <strong style={{ color: "#0F172A" }}>me cambió la vida, mi forma de trabajar y mi manera de autoliderarme</strong>. Pasé de vivir con estrés y nerviosismo a vivir desde un bienestar genuino, y desde ese lugar me entrego a donde sea que voy.
               </p>
 
               <div style={{
-                background: "linear-gradient(135deg, rgba(22, 26, 37, 0.95) 0%, rgba(14, 18, 27, 0.95) 100%)",
+                background: "#FAF8F2",
                 borderLeft: "4px solid #D4AF37",
                 padding: "1.6rem 2rem",
                 borderRadius: "0 14px 14px 0",
                 margin: "2.2rem 0",
                 fontStyle: "italic",
-                color: "#F7E7CE",
+                color: "#1E293B",
                 fontSize: "1.15rem",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
-                borderTop: "1px solid rgba(255,255,255,0.05)",
-                borderRight: "1px solid rgba(255,255,255,0.05)",
-                borderBottom: "1px solid rgba(255,255,255,0.05)"
+                boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
+                border: "1px solid #EAE3D2",
+                borderLeftWidth: "4px"
               }}>
                 &quot;No podés liderar un negocio próspero ni sostener tus metas si primero no aprendés a liderar tu propia biología y tus estados mentales.&quot;
               </div>
@@ -201,7 +201,8 @@ export default function HistoriaPage() {
               <h2 style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "2.1rem",
-                color: "#FFFFFF",
+                color: "#0F172A",
+                fontWeight: "900",
                 marginTop: "2.8rem",
                 marginBottom: "1.4rem",
                 lineHeight: 1.2
@@ -209,43 +210,43 @@ export default function HistoriaPage() {
                 La experiencia en terreno con PyMEs y Personas
               </h2>
 
-              <p style={{ marginBottom: "1.5rem" }}>
-                A mi regreso a Argentina, trabajé en <strong>Córdoba</strong> durante 4 años como <strong>Consultora Empresarial y Coach Gerencial para dueños de PyMEs</strong>. Allí confirmé una realidad cotidiana: los negocios no se traban por falta de ideas, sino por bloqueos emocionales, postergación en la toma de decisiones y falta de claridad de sus líderes.
+              <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
+                A mi regreso a Argentina, trabajé en <strong style={{ color: "#0F172A" }}>Córdoba</strong> durante 4 años como <strong style={{ color: "#0F172A" }}>Consultora Empresarial y Coach Gerencial para dueños de PyMEs</strong>. Allí confirmé una realidad cotidiana: los negocios no se traban por falta de ideas, sino por bloqueos emocionales, postergación en la toma de decisiones y falta de claridad de sus líderes.
               </p>
 
-              <p style={{ marginBottom: "1.5rem" }}>
-                En <strong>2017</strong> me gradué con diploma oficial como <strong>NEUROPSICOEDUCADORA</strong> y realicé un posgrado en <strong>NEUROCIENCIAS DE LAS EMOCIONES</strong>. Comencé brindando talleres en colegios secundarios sobre emociones y proyecto de vida, y luego entre <strong>2020 y 2022</strong> talleres online de Mindfulness y contención emocional.
+              <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
+                En <strong style={{ color: "#0F172A" }}>2017</strong> me gradué con diploma oficial como <strong style={{ color: "#8A6405" }}>NEUROPSICOEDUCADORA</strong> y realicé un posgrado en <strong style={{ color: "#8A6405" }}>NEUROCIENCIAS DE LAS EMOCIONES</strong>. Comencé brindando talleres en colegios secundarios sobre emociones y proyecto de vida, y luego entre <strong style={{ color: "#0F172A" }}>2020 y 2022</strong> talleres online de Mindfulness y contención emocional.
               </p>
 
-              <p style={{ marginBottom: "1.5rem" }}>
-                Entre <strong>2023 y 2025</strong> consolidé mi <strong>método propio</strong> acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos complejos, con éxito en todos los casos.
+              <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
+                Entre <strong style={{ color: "#0F172A" }}>2023 y 2025</strong> consolidé mi <strong style={{ color: "#0F172A" }}>método propio</strong> acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos complejos, con éxito en todos los casos.
               </p>
 
-              <p style={{ marginBottom: "1.5rem" }}>
-                En <strong>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong>&quot;Primero Ámate&quot;</strong>, editado por <strong>Tinta Libre</strong>, y tuve el gran honor de presentarlo en la <strong>Feria del Libro en los escenarios de Goya y Corrientes</strong>, transmitiendo el valor del autoliderazgo y la autovaloración como cimiento de cualquier proyecto.
+              <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
+                En <strong style={{ color: "#0F172A" }}>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong style={{ color: "#0F172A" }}>&quot;Primero Ámate&quot;</strong>, editado por <strong style={{ color: "#0F172A" }}>Tinta Libre</strong>, y tuve el gran honor de presentarlo en la <strong style={{ color: "#0F172A" }}>Feria del Libro en los escenarios de Goya y Corrientes</strong>, transmitiendo el valor del autoliderazgo y la autovaloración como cimiento de cualquier proyecto.
               </p>
 
-              <p style={{ marginBottom: "1.5rem" }}>
-                En <strong>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida.
+              <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
+                En <strong style={{ color: "#0F172A" }}>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong style={{ color: "#8A6405" }}>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida.
               </p>
 
-              <p style={{ marginBottom: "1.5rem", color: "#F9D976", fontWeight: "750", fontSize: "1.2rem", lineHeight: "1.6" }}>
-                Hoy me presento con orgullo de ser quien soy: <span style={{ color: "#FFFFFF" }}>Licenciada en Administración y Neuropsicoeducadora</span>. Hoy me identifico como <span style={{ color: "#ECC369" }}>Mentora de Mentes y de Negocios</span>.
+              <p style={{ marginBottom: "1.5rem", color: "#8A6405", fontWeight: "750", fontSize: "1.2rem", lineHeight: "1.6" }}>
+                Hoy me presento con orgullo de ser quien soy: <span style={{ color: "#0F172A", fontWeight: "800" }}>Licenciada en Administración y Neuropsicoeducadora</span>. Hoy me identifico como <span style={{ color: "#B47C13", fontWeight: "800" }}>Mentora de Mentes y de Negocios</span>.
               </p>
 
               <div style={{
                 marginTop: "2rem",
-                padding: "1.6rem 1.8rem",
-                background: "linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(26, 32, 48, 0.9) 100%)",
-                borderRadius: "14px",
-                border: "1.5px solid rgba(212, 175, 55, 0.4)",
-                boxShadow: "0 10px 25px rgba(0,0,0,0.3)"
+                padding: "1.8rem 2rem",
+                background: "linear-gradient(135deg, #FFFDF8 0%, #FAF6EE 100%)",
+                borderRadius: "16px",
+                border: "1.5px solid #E6D7BD",
+                boxShadow: "0 8px 25px rgba(212, 175, 55, 0.1)"
               }}>
-                <span style={{ fontSize: "0.85rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", color: "#ECC369", display: "block", marginBottom: "0.6rem" }}>
+                <span style={{ fontSize: "0.85rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", color: "#8A6405", display: "block", marginBottom: "0.6rem" }}>
                   🎯 MI TRABAJO Y MISIÓN HOY
                 </span>
-                <p style={{ margin: 0, fontSize: "1.08rem", lineHeight: "1.75", color: "#F3F4F6" }}>
-                  Hoy trabajo junto a <strong>empresarios y emprendedores</strong> creando sus negocios desde cero o transformando su mentalidad e instalando la <strong>Inteligencia de Negocios adecuada</strong> para que todo el impacto y valor que generan hacia el exterior se traduzca de forma contundente en <strong>clientes, ventas reales y crecimiento sostenible</strong>.
+                <p style={{ margin: 0, fontSize: "1.08rem", lineHeight: "1.75", color: "#1E293B" }}>
+                  Hoy trabajo junto a <strong style={{ color: "#0F172A" }}>empresarios y emprendedores</strong> creando sus negocios desde cero o transformando su mentalidad e instalando la <strong style={{ color: "#8A6405" }}>Inteligencia de Negocios adecuada</strong> para que todo el impacto y valor que generan hacia el exterior se traduzca de forma contundente en <strong style={{ color: "#0F172A" }}>clientes, ventas reales y crecimiento sostenible</strong>.
                 </p>
               </div>
 
@@ -255,20 +256,21 @@ export default function HistoriaPage() {
             <div style={{
               position: "sticky",
               top: "100px",
-              background: "linear-gradient(145deg, #121624, #1B2133)",
+              background: "#FFFFFF",
               padding: "1.6rem",
               borderRadius: "24px",
-              border: "1.5px solid rgba(212, 175, 55, 0.35)",
-              boxShadow: "0 25px 50px rgba(0,0,0,0.6), 0 0 30px rgba(212, 175, 55, 0.15)",
+              border: "1.5px solid #E2E8F0",
+              boxShadow: "0 20px 40px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04)",
               textAlign: "center"
             }}>
               <div style={{
                 overflow: "hidden",
                 borderRadius: "18px",
                 marginBottom: "1.4rem",
-                background: "radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.22) 0%, rgba(10, 13, 20, 0.95) 80%)",
-                boxShadow: "0 10px 25px rgba(0,0,0,0.4)",
-                padding: "0.5rem"
+                background: "#FFFFFF",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
+                padding: "0.5rem",
+                border: "1px solid #F1F5F9"
               }}>
                 <img 
                   src="/romina_historia.png" 
@@ -281,31 +283,31 @@ export default function HistoriaPage() {
                 fontFamily: "var(--font-heading)",
                 fontSize: "1.45rem",
                 fontWeight: "800",
-                color: "#FFFFFF",
+                color: "#0F172A",
                 marginBottom: "0.3rem"
               }}>
                 Romina Lorena Montiel
               </h3>
 
-              <p style={{ color: "#ECC369", fontSize: "0.92rem", fontWeight: "700", marginBottom: "0.3rem" }}>
+              <p style={{ color: "#8A6405", fontSize: "0.92rem", fontWeight: "750", marginBottom: "0.3rem" }}>
                 Lic. en Administración • Neuropsicoeducadora
               </p>
 
-              <p style={{ color: "#F7E7CE", fontSize: "0.95rem", fontWeight: "800", marginBottom: "0.6rem" }}>
+              <p style={{ color: "#0F172A", fontSize: "0.95rem", fontWeight: "800", marginBottom: "0.6rem" }}>
                 Mentora de Mentes y de Negocios
               </p>
 
-              <p style={{ color: "#A0AEC0", fontSize: "0.85rem", marginBottom: "1.3rem" }}>
-                Instagram: <strong style={{ color: "#F7E7CE" }}>@rominalorenamontiel</strong>
+              <p style={{ color: "#64748B", fontSize: "0.88rem", marginBottom: "1.3rem" }}>
+                Instagram: <strong style={{ color: "#8A6405" }}>@rominalorenamontiel</strong>
               </p>
 
               <div style={{
-                background: "rgba(0,0,0,0.35)",
+                background: "#F8FAFC",
                 padding: "1.1rem",
                 borderRadius: "14px",
-                border: "1px solid rgba(255,255,255,0.08)",
+                border: "1px solid #E2E8F0",
                 fontSize: "0.95rem",
-                color: "#CBD5E1",
+                color: "#334155",
                 fontStyle: "italic",
                 lineHeight: "1.5"
               }}>
@@ -319,12 +321,12 @@ export default function HistoriaPage() {
                 gap: "1rem",
                 marginTop: "1.5rem",
                 paddingTop: "1.3rem",
-                borderTop: "1px solid rgba(255,255,255,0.1)"
+                borderTop: "1px solid #E2E8F0"
               }}>
-                <img src="/logo modolider.png" alt="Sello Oficial" style={{ height: "48px", width: "48px", borderRadius: "50%", boxShadow: "0 2px 10px rgba(212,175,55,0.3)" }} />
+                <img src="/logo modolider.png" alt="Sello Oficial" style={{ height: "48px", width: "48px", borderRadius: "50%", boxShadow: "0 2px 10px rgba(212,175,55,0.25)" }} />
                 <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: "0.88rem", fontWeight: "800", color: "#F7E7CE" }}>MÉTODO MODO LÍDER</div>
-                  <div style={{ fontSize: "0.75rem", color: "#A0AEC0" }}>Creá • Liderá • Impactá</div>
+                  <div style={{ fontSize: "0.88rem", fontWeight: "800", color: "#0F172A" }}>MÉTODO MODO LÍDER</div>
+                  <div style={{ fontSize: "0.75rem", color: "#64748B" }}>Creá • Liderá • Impactá</div>
                 </div>
               </div>
             </div>
@@ -332,12 +334,12 @@ export default function HistoriaPage() {
           </div>
 
           {/* Línea de Tiempo Visual de Hitos (Timeline) */}
-          <div style={{ marginTop: "2rem", marginBottom: "5rem" }}>
+          <div style={{ marginTop: "3rem", marginBottom: "5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-              <span style={{ color: "#D4AF37", fontSize: "0.85rem", fontWeight: "800", letterSpacing: "3px", textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>
+              <span style={{ color: "#8A6405", fontSize: "0.85rem", fontWeight: "800", letterSpacing: "3px", textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>
                 EL CAMINO RECORRIDO
               </span>
-              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", color: "#FFFFFF", fontWeight: "800" }}>
+              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", color: "#0F172A", fontWeight: "900" }}>
                 Los Hitos de Mi Trayectoria
               </h2>
             </div>
