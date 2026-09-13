@@ -187,7 +187,7 @@ export default function Footer() {
                 <span>YouTube: @RominaLorenaMontiel</span>
               </a>
 
-              {/* WhatsApp Direct - Tono Nogal / Caqui Tierra Oscuro */}
+              {/* WhatsApp Direct - Fondo Blanco y Letras Negras */}
               <a 
                 href="https://wa.me/543794322272" 
                 target="_blank" 
@@ -197,15 +197,15 @@ export default function Footer() {
                   alignItems: "center",
                   gap: "0.65rem",
                   padding: "0.65rem 1.1rem",
-                  background: "rgba(74, 60, 44, 0.08)",
-                  border: "1.5px solid rgba(74, 60, 44, 0.40)",
+                  background: "#FFFFFF",
+                  border: "1.5px solid #000000",
                   borderRadius: "12px",
-                  color: "#3B2E20",
+                  color: "#000000",
                   textDecoration: "none",
                   fontSize: "0.92rem",
-                  fontWeight: "750",
+                  fontWeight: "800",
                   transition: "all 0.2s",
-                  boxShadow: "0 2px 8px rgba(59, 46, 32, 0.06)"
+                  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
