@@ -635,13 +635,13 @@
             font-weight: 700;
         }
 
-        /* --- SECCIÓN EL MÉTODO (3 PILARES - ENTORNO CAQUI / CAMEL) --- */
+        /* --- SECCIÓN EL MÉTODO (3 PILARES - ENTORNO CREMA / MARFIL) --- */
         .metodo-section {
             padding: 7rem 2rem;
-            background: linear-gradient(135deg, #C4AB8F 0%, #B09475 100%);
+            background: linear-gradient(145deg, #FAF7F2 0%, #F3EBDD 100%);
             position: relative;
-            border-top: 1.5px solid #997B5C;
-            border-bottom: 1.5px solid #997B5C;
+            border-top: 1.5px solid #E5D9C3;
+            border-bottom: 1.5px solid #E5D9C3;
             color: #1E150F;
         }
 
@@ -685,11 +685,11 @@
 
         .fundamento-card {
             background: #FFFFFF;
-            border: 1px solid #D8C6B4;
-            border-top: 3px solid #8A6405;
+            border: 1.5px solid #E5D9C3;
+            border-top: 3px solid #D4AF37;
             border-radius: 20px;
             padding: 2.8rem 2.2rem;
-            box-shadow: 0 10px 30px rgba(60, 40, 20, 0.08);
+            box-shadow: 0 10px 30px rgba(180, 150, 100, 0.08);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
             overflow: hidden;
@@ -709,8 +709,8 @@
 
         .fundamento-card:hover {
             transform: translateY(-8px);
-            border-color: #8A6405;
-            box-shadow: 0 18px 45px rgba(60, 40, 20, 0.15);
+            border-color: #D4AF37;
+            box-shadow: 0 18px 45px rgba(180, 150, 100, 0.16);
         }
 
         .fundamento-card:hover::before {
@@ -736,13 +736,13 @@
             line-height: 1.7;
         }
 
-        /* --- SECCIÓN 3 PROBLEMAS PARALIZANTES (DENTRO DEL ENTORNO CAQUI) --- */
+        /* --- SECCIÓN 3 PROBLEMAS PARALIZANTES (DENTRO DEL ENTORNO CREMA) --- */
         .problemas-wrapper {
-            background: #FAF7F2;
+            background: #FFFFFF;
             padding: 4rem 2.5rem;
             border-radius: 24px;
-            border: 1.5px solid #A38466;
-            box-shadow: 0 15px 35px rgba(60, 40, 20, 0.1);
+            border: 1.5px solid #E5D9C3;
+            box-shadow: 0 15px 35px rgba(60, 40, 20, 0.05);
         }
 
         .problemas-title {
@@ -767,17 +767,17 @@
         .problema-item {
             text-align: center;
             padding: 2.2rem 1.8rem;
-            background: #FFFFFF;
+            background: #FDFBF7;
             border-radius: 16px;
-            border: 1px solid #DFCDBD;
-            border-bottom: 3px solid #8A6405;
-            box-shadow: 0 8px 20px rgba(60, 40, 20, 0.06);
+            border: 1px solid #EADDCB;
+            border-bottom: 3px solid #D4AF37;
+            box-shadow: 0 8px 20px rgba(60, 40, 20, 0.04);
             transition: all 0.35s ease;
         }
 
         .problema-item:hover {
             transform: translateY(-6px);
-            box-shadow: 0 14px 28px rgba(60, 40, 20, 0.12);
+            box-shadow: 0 14px 28px rgba(60, 40, 20, 0.1);
         }
 
         .problema-icon {
