@@ -58,16 +58,20 @@ export default function HistoriaPage() {
       desc: "En marzo de 2025 presenté mi libro 'Primero Ámate', editado por Tinta Libre. Tuve el honor de presentarlo en la Feria del Libro en los escenarios de Goya y Corrientes, inspirando a cientos de personas en el autoliderazgo y amor propio."
     },
     {
-      year: "2026",
+      year: "2026 — HOY",
       flag: "👑",
-      title: "Integración Total: Método MODO LÍDER",
-      desc: "Nació el Método MODO LÍDER: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida."
-    },
-    {
-      year: "HOY",
-      flag: "🚀",
-      title: "Lo Que Hago Hoy: De la Mentalidad a las Ventas",
-      desc: "Hoy trabajo junto a empresarios y emprendedores creando sus modelos de negocio desde cero o transformando su mentalidad e instalando la Inteligencia de Negocios adecuada para que todo su impacto y propuesta de valor se traduzca en clientes y ventas reales."
+      title: "Integración Total: Método MODO LÍDER • De la Mentalidad a las Ventas",
+      isFullWidth: true,
+      bloque1: {
+        year: "2026",
+        title: "Integración Total: Método MODO LÍDER",
+        desc: "Nació el Método MODO LÍDER: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida."
+      },
+      bloque2: {
+        year: "HOY",
+        title: "Lo Que Hago Hoy: De la Mentalidad a las Ventas",
+        desc: "Hoy trabajo junto a empresarios y emprendedores creando sus modelos de negocio desde cero o transformando su mentalidad e instalando la Inteligencia de Negocios adecuada para que todo su impacto y propuesta de valor se traduzca en clientes y ventas reales."
+      }
     }
   ];
 
@@ -351,45 +355,124 @@ export default function HistoriaPage() {
             }}>
               {hitos.map((hito, idx) => (
                 <div key={idx} style={{
+                  gridColumn: hito.isFullWidth ? "1 / -1" : "auto",
                   background: "linear-gradient(145deg, #FDFBF7 0%, #F5EFE3 100%)",
                   border: "1.5px solid #E5D9C3",
                   borderTop: "4px solid #D4AF37",
                   borderRadius: "16px",
-                  padding: "1.8rem 1.6rem",
+                  padding: hito.isFullWidth ? "2.2rem 2.2rem" : "1.8rem 1.6rem",
                   boxShadow: "0 10px 25px rgba(180, 150, 100, 0.1), 0 2px 8px rgba(0,0,0,0.04)",
                   display: "flex",
                   flexDirection: "column",
                   transition: "transform 0.2s, box-shadow 0.2s"
                 }}>
-                  <div style={{ marginBottom: "1rem" }}>
-                    <span style={{
-                      background: "#FFF9E6",
-                      color: "#8A6405",
-                      padding: "0.35rem 0.95rem",
-                      borderRadius: "50px",
-                      fontSize: "0.82rem",
-                      fontWeight: "800",
-                      letterSpacing: "0.5px",
-                      border: "1.5px solid #EBD79E",
-                      display: "inline-block",
-                      boxShadow: "0 2px 6px rgba(138, 100, 5, 0.08)"
+                  {hito.isFullWidth ? (
+                    <div style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                      gap: "2.2rem",
+                      alignItems: "start"
                     }}>
-                      {hito.year}
-                    </span>
-                  </div>
-                  <h3 style={{
-                    fontSize: "1.18rem",
-                    fontWeight: "800",
-                    color: "#0F172A",
-                    marginBottom: "0.75rem",
-                    lineHeight: "1.35",
-                    fontFamily: "var(--font-heading)"
-                  }}>
-                    {hito.title}
-                  </h3>
-                  <p style={{ color: "#334155", fontSize: "0.95rem", lineHeight: "1.65", flex: 1, fontWeight: "500" }}>
-                    {hito.desc}
-                  </p>
+                      <div>
+                        <div style={{ marginBottom: "1rem" }}>
+                          <span style={{
+                            background: "#FFF9E6",
+                            color: "#8A6405",
+                            padding: "0.35rem 0.95rem",
+                            borderRadius: "50px",
+                            fontSize: "0.82rem",
+                            fontWeight: "800",
+                            letterSpacing: "0.5px",
+                            border: "1.5px solid #EBD79E",
+                            display: "inline-block",
+                            boxShadow: "0 2px 6px rgba(138, 100, 5, 0.08)"
+                          }}>
+                            {hito.bloque1.year}
+                          </span>
+                        </div>
+                        <h3 style={{
+                          fontSize: "1.22rem",
+                          fontWeight: "800",
+                          color: "#0F172A",
+                          marginBottom: "0.75rem",
+                          lineHeight: "1.35",
+                          fontFamily: "var(--font-heading)"
+                        }}>
+                          {hito.bloque1.title}
+                        </h3>
+                        <p style={{ color: "#334155", fontSize: "0.96rem", lineHeight: "1.7", margin: 0, fontWeight: "500" }}>
+                          {hito.bloque1.desc}
+                        </p>
+                      </div>
+
+                      <div style={{
+                        borderLeft: "2px solid rgba(212, 175, 55, 0.35)",
+                        paddingLeft: "2.2rem"
+                      }}>
+                        <div style={{ marginBottom: "1rem" }}>
+                          <span style={{
+                            background: "#FFF9E6",
+                            color: "#8A6405",
+                            padding: "0.35rem 0.95rem",
+                            borderRadius: "50px",
+                            fontSize: "0.82rem",
+                            fontWeight: "800",
+                            letterSpacing: "0.5px",
+                            border: "1.5px solid #EBD79E",
+                            display: "inline-block",
+                            boxShadow: "0 2px 6px rgba(138, 100, 5, 0.08)"
+                          }}>
+                            {hito.bloque2.year}
+                          </span>
+                        </div>
+                        <h3 style={{
+                          fontSize: "1.22rem",
+                          fontWeight: "800",
+                          color: "#0F172A",
+                          marginBottom: "0.75rem",
+                          lineHeight: "1.35",
+                          fontFamily: "var(--font-heading)"
+                        }}>
+                          {hito.bloque2.title}
+                        </h3>
+                        <p style={{ color: "#334155", fontSize: "0.96rem", lineHeight: "1.7", margin: 0, fontWeight: "500" }}>
+                          {hito.bloque2.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <div style={{ marginBottom: "1rem" }}>
+                        <span style={{
+                          background: "#FFF9E6",
+                          color: "#8A6405",
+                          padding: "0.35rem 0.95rem",
+                          borderRadius: "50px",
+                          fontSize: "0.82rem",
+                          fontWeight: "800",
+                          letterSpacing: "0.5px",
+                          border: "1.5px solid #EBD79E",
+                          display: "inline-block",
+                          boxShadow: "0 2px 6px rgba(138, 100, 5, 0.08)"
+                        }}>
+                          {hito.year}
+                        </span>
+                      </div>
+                      <h3 style={{
+                        fontSize: "1.18rem",
+                        fontWeight: "800",
+                        color: "#0F172A",
+                        marginBottom: "0.75rem",
+                        lineHeight: "1.35",
+                        fontFamily: "var(--font-heading)"
+                      }}>
+                        {hito.title}
+                      </h3>
+                      <p style={{ color: "#334155", fontSize: "0.95rem", lineHeight: "1.65", flex: 1, fontWeight: "500" }}>
+                        {hito.desc}
+                      </p>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
