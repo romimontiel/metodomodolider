@@ -1032,12 +1032,12 @@
         }
 
         .historia-cta-box {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(22, 26, 37, 0.98) 100%);
-            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            background: #000000;
+            border: 1.5px solid rgba(212, 175, 55, 0.55);
             border-radius: 24px;
             padding: 3.5rem 2.5rem;
             text-align: center;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 35px rgba(212, 175, 55, 0.15);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 35px rgba(212, 175, 55, 0.15);
         }
 
         .historia-cta-title {

@@ -396,7 +396,7 @@ export default function HistoriaPage() {
           </div>
 
           {/* Bloque Destacado de Cierre & CTA */}
-          <div className="historia-cta-box">
+          <div className="historia-cta-box" style={{ background: "#000000" }}>
             <span style={{
               fontSize: "0.85rem",
               fontWeight: "800",
