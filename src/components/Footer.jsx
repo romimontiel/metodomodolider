@@ -112,7 +112,7 @@ export default function Footer() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
               
-              {/* Instagram Personal */}
+              {/* Instagram Personal - Tono Chocolate Profundo */}
               <a 
                 href="https://www.instagram.com/rominalorenamontiel/" 
                 target="_blank" 
@@ -122,22 +122,22 @@ export default function Footer() {
                   alignItems: "center",
                   gap: "0.65rem",
                   padding: "0.65rem 1.1rem",
-                  background: "rgba(225, 48, 108, 0.08)",
-                  border: "1.5px solid rgba(225, 48, 108, 0.35)",
+                  background: "rgba(92, 58, 33, 0.08)",
+                  border: "1.5px solid rgba(92, 58, 33, 0.38)",
                   borderRadius: "12px",
-                  color: "#D62976",
+                  color: "#4A2E1B",
                   textDecoration: "none",
                   fontSize: "0.92rem",
                   fontWeight: "750",
                   transition: "all 0.2s",
-                  boxShadow: "0 2px 8px rgba(225, 48, 108, 0.06)"
+                  boxShadow: "0 2px 8px rgba(74, 46, 27, 0.06)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 <span>Instagram: @rominalorenamontiel</span>
               </a>
 
-              {/* Instagram Modo Líder */}
+              {/* Instagram Modo Líder - Tono Caramelo / Toffee Tostado */}
               <a 
                 href="https://www.instagram.com/modolider.co/" 
                 target="_blank" 
@@ -147,22 +147,22 @@ export default function Footer() {
                   alignItems: "center",
                   gap: "0.65rem",
                   padding: "0.65rem 1.1rem",
-                  background: "rgba(212, 175, 55, 0.12)",
-                  border: "1.5px solid rgba(212, 175, 55, 0.45)",
+                  background: "rgba(180, 116, 20, 0.10)",
+                  border: "1.5px solid rgba(180, 116, 20, 0.42)",
                   borderRadius: "12px",
-                  color: "#8F640A",
+                  color: "#784B08",
                   textDecoration: "none",
                   fontSize: "0.92rem",
                   fontWeight: "750",
                   transition: "all 0.2s",
-                  boxShadow: "0 2px 8px rgba(212, 175, 55, 0.06)"
+                  boxShadow: "0 2px 8px rgba(120, 75, 8, 0.06)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 <span>Instagram: @modolider.co</span>
               </a>
 
-              {/* YouTube */}
+              {/* YouTube - Tono Terracota / Avellana Cálido */}
               <a 
                 href="https://www.youtube.com/@RominaLorenaMontiel" 
                 target="_blank" 
@@ -172,22 +172,22 @@ export default function Footer() {
                   alignItems: "center",
                   gap: "0.65rem",
                   padding: "0.65rem 1.1rem",
-                  background: "rgba(255, 0, 0, 0.08)",
-                  border: "1.5px solid rgba(255, 0, 0, 0.35)",
+                  background: "rgba(142, 60, 24, 0.08)",
+                  border: "1.5px solid rgba(142, 60, 24, 0.38)",
                   borderRadius: "12px",
-                  color: "#CC0000",
+                  color: "#692B10",
                   textDecoration: "none",
                   fontSize: "0.92rem",
                   fontWeight: "750",
                   transition: "all 0.2s",
-                  boxShadow: "0 2px 8px rgba(255, 0, 0, 0.06)"
+                  boxShadow: "0 2px 8px rgba(105, 43, 16, 0.06)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
                 <span>YouTube: @RominaLorenaMontiel</span>
               </a>
 
-              {/* WhatsApp Direct */}
+              {/* WhatsApp Direct - Tono Nogal / Caqui Tierra Oscuro */}
               <a 
                 href="https://wa.me/543794322272" 
                 target="_blank" 
@@ -197,15 +197,15 @@ export default function Footer() {
                   alignItems: "center",
                   gap: "0.65rem",
                   padding: "0.65rem 1.1rem",
-                  background: "rgba(37, 211, 102, 0.1)",
-                  border: "1.5px solid rgba(37, 211, 102, 0.4)",
+                  background: "rgba(74, 60, 44, 0.08)",
+                  border: "1.5px solid rgba(74, 60, 44, 0.40)",
                   borderRadius: "12px",
-                  color: "#15803D",
+                  color: "#3B2E20",
                   textDecoration: "none",
                   fontSize: "0.92rem",
                   fontWeight: "750",
                   transition: "all 0.2s",
-                  boxShadow: "0 2px 8px rgba(37, 211, 102, 0.06)"
+                  boxShadow: "0 2px 8px rgba(59, 46, 32, 0.06)"
                 }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
