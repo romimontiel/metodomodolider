@@ -351,43 +351,43 @@ export default function HistoriaPage() {
             }}>
               {hitos.map((hito, idx) => (
                 <div key={idx} style={{
-                  background: "linear-gradient(135deg, #C4AB8F 0%, #B09475 100%)",
-                  border: "1.5px solid #997B5C",
-                  borderTop: "5px solid #6E4924",
+                  background: "linear-gradient(145deg, #FDFBF7 0%, #F5EFE3 100%)",
+                  border: "1.5px solid #E5D9C3",
+                  borderTop: "4px solid #D4AF37",
                   borderRadius: "16px",
                   padding: "1.8rem 1.6rem",
-                  boxShadow: "0 10px 25px rgba(90, 65, 45, 0.15), 0 2px 8px rgba(0,0,0,0.06)",
+                  boxShadow: "0 10px 25px rgba(180, 150, 100, 0.1), 0 2px 8px rgba(0,0,0,0.04)",
                   display: "flex",
                   flexDirection: "column",
                   transition: "transform 0.2s, box-shadow 0.2s"
                 }}>
                   <div style={{ marginBottom: "1rem" }}>
                     <span style={{
-                      background: "#FFFFFF",
-                      color: "#3B2514",
+                      background: "#FFF9E6",
+                      color: "#8A6405",
                       padding: "0.35rem 0.95rem",
                       borderRadius: "50px",
                       fontSize: "0.82rem",
                       fontWeight: "800",
                       letterSpacing: "0.5px",
-                      border: "1.5px solid #8C6A48",
+                      border: "1.5px solid #EBD79E",
                       display: "inline-block",
-                      boxShadow: "0 2px 6px rgba(0,0,0,0.08)"
+                      boxShadow: "0 2px 6px rgba(138, 100, 5, 0.08)"
                     }}>
                       {hito.year}
                     </span>
                   </div>
                   <h3 style={{
                     fontSize: "1.18rem",
-                    fontWeight: "900",
-                    color: "#1A1009",
+                    fontWeight: "800",
+                    color: "#0F172A",
                     marginBottom: "0.75rem",
                     lineHeight: "1.35",
                     fontFamily: "var(--font-heading)"
                   }}>
                     {hito.title}
                   </h3>
-                  <p style={{ color: "#2E1C10", fontSize: "0.95rem", lineHeight: "1.65", flex: 1, fontWeight: "550" }}>
+                  <p style={{ color: "#334155", fontSize: "0.95rem", lineHeight: "1.65", flex: 1, fontWeight: "500" }}>
                     {hito.desc}
                   </p>
                 </div>
