@@ -351,7 +351,7 @@ export default function ServiciosPage() {
                 gap: "0.9rem",
                 width: "100%"
               }}>
-                {/* Instagram Personal */}
+                {/* Instagram Personal - Borde Negro */}
                 <a 
                   href="https://www.instagram.com/rominalorenamontiel/" 
                   target="_blank" 
@@ -361,22 +361,22 @@ export default function ServiciosPage() {
                     alignItems: "center",
                     gap: "0.6rem",
                     padding: "0.8rem 1.4rem",
-                    background: "rgba(225, 48, 108, 0.08)",
-                    border: "1.5px solid rgba(225, 48, 108, 0.35)",
+                    background: "rgba(15, 23, 42, 0.04)",
+                    border: "1.5px solid #0F172A",
                     borderRadius: "12px",
-                    color: "#D62976",
+                    color: "#0F172A",
                     textDecoration: "none",
                     fontSize: "0.95rem",
                     fontWeight: "750",
                     transition: "all 0.2s",
-                    boxShadow: "0 2px 8px rgba(225, 48, 108, 0.08)"
+                    boxShadow: "0 2px 8px rgba(15, 23, 42, 0.06)"
                   }}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                   <span>@rominalorenamontiel</span>
                 </a>
 
-                {/* Instagram Modo Lider */}
+                {/* Instagram Modo Lider - Borde Marrón Caramelo */}
                 <a 
                   href="https://www.instagram.com/modolider.co/" 
                   target="_blank" 
@@ -386,22 +386,22 @@ export default function ServiciosPage() {
                     alignItems: "center",
                     gap: "0.6rem",
                     padding: "0.8rem 1.4rem",
-                    background: "rgba(212, 175, 55, 0.12)",
-                    border: "1.5px solid rgba(212, 175, 55, 0.5)",
+                    background: "rgba(180, 116, 20, 0.08)",
+                    border: "1.5px solid #784B08",
                     borderRadius: "12px",
-                    color: "#8F640A",
+                    color: "#784B08",
                     textDecoration: "none",
                     fontSize: "0.95rem",
                     fontWeight: "750",
                     transition: "all 0.2s",
-                    boxShadow: "0 2px 8px rgba(212, 175, 55, 0.08)"
+                    boxShadow: "0 2px 8px rgba(120, 75, 8, 0.06)"
                   }}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                   <span>@modolider.co</span>
                 </a>
 
-                {/* YouTube */}
+                {/* YouTube - Borde Marrón Chocolate (Sin Rojo) */}
                 <a 
                   href="https://www.youtube.com/@RominaLorenaMontiel" 
                   target="_blank" 
@@ -411,15 +411,15 @@ export default function ServiciosPage() {
                     alignItems: "center",
                     gap: "0.6rem",
                     padding: "0.8rem 1.4rem",
-                    background: "rgba(255, 0, 0, 0.08)",
-                    border: "1.5px solid rgba(255, 0, 0, 0.35)",
+                    background: "rgba(74, 46, 27, 0.06)",
+                    border: "1.5px solid #4A2E1B",
                     borderRadius: "12px",
-                    color: "#CC0000",
+                    color: "#4A2E1B",
                     textDecoration: "none",
                     fontSize: "0.95rem",
                     fontWeight: "750",
                     transition: "all 0.2s",
-                    boxShadow: "0 2px 8px rgba(255, 0, 0, 0.08)"
+                    boxShadow: "0 2px 8px rgba(74, 46, 27, 0.06)"
                   }}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
