@@ -210,19 +210,18 @@
         }
 
         .pillar-card {
-            background: linear-gradient(180deg, rgba(30, 36, 50, 0.85) 0%, rgba(22, 26, 37, 0.75) 100%);
-            border: 1px solid var(--border-glass);
-            border-top: 3px solid var(--gold-primary);
+            background: #FFFFFF;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-top: 4px solid var(--gold-primary);
             border-radius: var(--radius-md);
             padding: 2rem;
-            backdrop-filter: blur(12px);
             transition: all 0.3s ease;
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
         .pillar-card:hover {
             transform: translateY(-4px);
-            border-color: var(--border-gold);
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+            border-color: var(--gold-primary);
+            box-shadow: 0 14px 32px rgba(212, 175, 55, 0.3);
         }
 
         .pillar-icon {
@@ -232,16 +231,21 @@
         }
 
         .pillar-title {
-            font-size: 1.15rem;
-            font-weight: 750;
-            color: #FFFFFF;
+            font-size: 1.18rem;
+            font-weight: 800;
+            color: #0F172A;
             margin-bottom: 0.6rem;
         }
 
         .pillar-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.55;
+            font-size: 0.92rem;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .pillar-desc strong {
+            color: #0F172A;
+            font-weight: 750;
         }
 
         /* Course Curriculum / Structure */
