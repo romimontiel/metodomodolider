@@ -70,27 +70,27 @@ export default function Footer() {
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.8rem" }}>
               <li>
                 <Link href="/" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
-                  🏠 Inicio
+                  Inicio
                 </Link>
               </li>
               <li>
                 <Link href="/historia" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
-                  📖 Mi Historia
+                  Mi Historia
                 </Link>
               </li>
               <li>
                 <Link href="/servicios" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
-                  ✨ Servicios &amp; Mentoría 1 a 1
+                  Servicios &amp; Mentoría 1 a 1
                 </Link>
               </li>
               <li>
                 <Link href="/curso" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
-                  🎓 Curso Emprender de Cero a Impacto y Ventas
+                  Emprender de Cero a Impacto y Ventas
                 </Link>
               </li>
               <li>
                 <Link href="/campus" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
-                  🔐 Campus Virtual
+                  Campus Virtual
                 </Link>
               </li>
             </ul>
