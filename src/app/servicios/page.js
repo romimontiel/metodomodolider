@@ -208,7 +208,7 @@ export default function ServiciosPage() {
                 marginBottom: "1rem",
                 lineHeight: "1.2"
               }}>
-                Curso Emprender de Cero a Impacto y Ventas
+                Emprender de Cero a Impacto y Ventas
               </h2>
 
               <div style={{ color: "#CBD5E1", fontSize: "1.05rem", lineHeight: "1.7", marginBottom: "2.5rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
