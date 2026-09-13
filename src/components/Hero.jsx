@@ -35,13 +35,13 @@ export default function Hero() {
                   Con las herramientas, recursos y guía de procesos adecuados todos podemos <span className="highlight">transformar nuestros bloqueos en potencial</span> para crear, conseguir resultados y prosperar.
               </p>
 
-              {/* Píldoras de los 3 Pilares Científicos y Estratégicos */}
-              <div className="hero-pillars-pills">
-                  <span className="pillar-pill-item">NEUROCIENCIAS</span>
-                  <div className="pillar-dot"></div>
-                  <span className="pillar-pill-item">TRANSFORMACIÓN</span>
-                  <div className="pillar-dot"></div>
-                  <span className="pillar-pill-item">INTELIGENCIA DE NEGOCIOS</span>
+              {/* Pilares Científicos y Estratégicos (Texto blanco, fuera de botón) */}
+              <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", flexWrap: "wrap", marginBottom: "2rem", fontFamily: "var(--font-heading)", fontSize: "0.95rem", fontWeight: 800, letterSpacing: "1.5px", textTransform: "uppercase" }}>
+                  <span style={{ color: "#FFFFFF" }}>NEUROCIENCIAS</span>
+                  <span style={{ color: "rgba(255, 255, 255, 0.5)", fontWeight: 700 }}>+</span>
+                  <span style={{ color: "#FFFFFF" }}>MENTALIDAD</span>
+                  <span style={{ color: "rgba(255, 255, 255, 0.5)", fontWeight: 700 }}>+</span>
+                  <span style={{ color: "#FFFFFF" }}>INTELIGENCIA DE NEGOCIOS</span>
               </div>
 
               {/* Botones de Acción Hero */}
@@ -51,11 +51,11 @@ export default function Hero() {
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </a>
                   <Link href="/curso" className="btn-outline-gold">
-                      <span>🎓 Curso</span>
+                      <span>Curso</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </Link>
                   <Link href="/historia" className="btn-story">
-                      <span>Ver mi historia</span>
+                      <span>Mi Historia</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </Link>
               </div>
