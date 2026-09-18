@@ -6,7 +6,7 @@ export default function Metodo() {
           <div className="metodo-header">
               <span className="section-tag">Metodología Comprobada</span>
               <h2 className="metodo-title">El Método MODO LÍDER</h2>
-              <p className="metodo-subtitle">Una metodología única donde integro neurociencias, mentalidad y ejecución de alto impacto para resultados reales y sostenibles.</p>
+              <p className="metodo-subtitle">Una metodología única donde integro neurociencias, desbloqueo mental e inteligencia estratégica de negocios para potenciar tu marca, hacerte visible y generar ventas reales.</p>
           </div>
 
           {/* Los 3 Pilares */}
@@ -31,8 +31,8 @@ export default function Metodo() {
                           <path d="M14 17v-2"/>
                       </svg>
                   </div>
-                  <h3>Transformación</h3>
-                  <p>Identifico y transformo tus patrones de pensamiento limitantes y el autosabotaje inconsciente, alineando tus creencias con la ambición y altura de tus objetivos.</p>
+                  <h3>Desbloqueo Mental</h3>
+                  <p>Identifico y transformo los bloqueos y patrones limitantes que te impiden avanzar, alineando tu mentalidad con la ambición de tu marca y la altura de tus objetivos de negocio.</p>
               </div>
 
               <div className="fundamento-card">
@@ -47,42 +47,43 @@ export default function Metodo() {
               </div>
           </div>
 
-          {/* Los 3 Problemas Paralizantes */}
+          {/* Los 3 Resultados Clave */}
           <div className="problemas-wrapper">
-              <h3 className="problemas-title">Diseñado para erradicar los <span>3 problemas más paralizantes</span>:</h3>
+              <h3 className="problemas-title">Lo que álcanzan quienes trabajan con el método: <span>3 resultados reales y sostenibles</span>:</h3>
               
               <div className="problemas-grid">
                   <div className="problema-item">
                       <div className="problema-icon" style={{ color: "#8A6405", display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
                           <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                              <circle cx="12" cy="12" r="10"/>
-                              <polyline points="12 6 12 12 16 14"/>
+                              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                              <path d="M2 17l10 5 10-5"/>
+                              <path d="M2 12l10 5 10-5"/>
                           </svg>
                       </div>
-                      <h4>La Postergación</h4>
-                      <p>Elimino la procrastinación en tus decisiones críticas. Transformo tu inercia mental en acción contundente y constante.</p>
+                      <h4>Marca Personal Visible</h4>
+                      <p>Posicionás tu marca con claridad y autoridad. Tu mensaje llega al cliente ideal y te diferenciás en un mercado saturado con una presencia que atrae e impacta.</p>
                   </div>
 
                   <div className="problema-item">
                       <div className="problema-icon" style={{ color: "#8A6405", display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
                           <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                              <circle cx="12" cy="12" r="10"/>
-                              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                              <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/>
+                              <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/>
                           </svg>
                       </div>
-                      <h4>Falta de Autoliderazgo</h4>
-                      <p>Te ayudo a recuperar el dominio total sobre tu tiempo, tus emociones y tus prioridades. Lideras tu mente primero.</p>
+                      <h4>Mente Desbloqueada</h4>
+                      <p>Desbloqueamos los patrones que te frenaban y alineamos tu mentalidad con tus metas. Ejecutás con foco, claridad y la confianza de quien sabe exactamente hacia dónde va.</p>
                   </div>
 
                   <div className="problema-item">
                       <div className="problema-icon" style={{ color: "#8A6405", display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
                           <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                              <line x1="12" y1="1" x2="12" y2="23"/>
+                              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                           </svg>
                       </div>
-                      <h4>Bloqueo Mental</h4>
-                      <p>Rompo de raíz tu parálisis por análisis. Ganas una claridad mental absoluta para ejecutar sin dudas.</p>
+                      <h4>Negocio que Vende</h4>
+                      <p>Te enseño a aplicar inteligencia de negocio accionable + estrategias correctas para que tu negocio surja, produzca impacto y genere ventas.</p>
                   </div>
               </div>
           </div>

@@ -7,7 +7,7 @@ export default function CtaFinal() {
           <div className="cta-final-box">
               <span className="section-tag" style={{ color: '#ECC369' }}>Tu Próximo Nivel</span>
               <h2>¿Listo para activar tu Modo Líder?</h2>
-              <p>Deja de postergar el crecimiento de tu negocio. Accede a las herramientas y acompañamiento que transformarán tu manera de ejecutar.</p>
+              <p>Es el momento de potenciar tu marca personal y escalar tu negocio. Accedé a las herramientas, la estrategia y el acompañamiento que transformarán tu visión en impacto real y ventas consistentes.</p>
               <Link href="/servicios" className="btn-gold">
                   <span>Quiero Mi Transformación</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>

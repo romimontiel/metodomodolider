@@ -3,3 +3,11 @@ mi historia.pdf
 .git
 .next
 node_modules
+public/videos
+public/CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS
+CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS
+videos
+*.mp4
+*.MOV
+*.zip
+*.avi

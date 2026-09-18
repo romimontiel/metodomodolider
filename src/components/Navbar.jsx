@@ -22,7 +22,7 @@ export default function Navbar() {
           🎓 Info del Curso
         </Link>
         <Link href="/campus" className="nav-link-item nav-link-campus">
-          👑 Campus
+          🏛️ Campus Alumnas
         </Link>
       </div>
     </nav>

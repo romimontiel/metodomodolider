@@ -44,7 +44,7 @@ export default function Footer() {
               </span>
             </div>
             <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: "#334155", marginBottom: "1.3rem" }}>
-              La integración definitiva entre <strong style={{ color: "#0F172A" }}>Neurociencias</strong>, <strong style={{ color: "#0F172A" }}>Transformación</strong> e <strong style={{ color: "#0F172A" }}>Inteligencia de Negocios</strong> para erradicar la postergación y liderar con impacto.
+              La integración definitiva entre <strong style={{ color: "#0F172A" }}>Neurociencias</strong>, <strong style={{ color: "#0F172A" }}>Desbloqueo Mental</strong> e <strong style={{ color: "#0F172A" }}>Inteligencia de Negocios</strong> para potenciar tu marca personal, hacerte visible y liderar con impacto.
             </p>
             <p style={{ fontSize: "0.95rem", color: "#B47C13", fontWeight: "800", marginBottom: "0.2rem" }}>
               Romina Lorena Montiel
@@ -86,11 +86,6 @@ export default function Footer() {
               <li>
                 <Link href="/curso" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
                   Emprender de Cero a Impacto y Ventas
-                </Link>
-              </li>
-              <li>
-                <Link href="/campus" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
-                  Campus Virtual
                 </Link>
               </li>
             </ul>

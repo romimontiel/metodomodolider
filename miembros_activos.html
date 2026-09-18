@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miembros Activos | Comunidad Emprendedoras Conscientes — Método MODO LÍDER</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #FAF7F2;
+            --bg-surface: #FFFFFF;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #FFFEFA;
+            --gold-primary: #D4AF37;
+            --gold-light: #8A6405;
+            --gold-soft: rgba(212, 175, 55, 0.12);
+            --gold-gradient: linear-gradient(135deg, #F5D372 0%, #E5B544 50%, #B88214 100%);
+            --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            --coral-accent: #E11D48;
+            --emerald-accent: #059669;
+            --blue-accent: #2563EB;
+            --text-main: #1E150F;
+            --text-muted: #645547;
+            --border-glass: #EADBCC;
+            --border-gold: #D4AF37;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --shadow-card: 0 10px 30px rgba(180, 150, 100, 0.09);
+            --shadow-gold: 0 8px 24px rgba(212, 175, 55, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FAF7F2;
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 10%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 85% 60%, rgba(221, 42, 123, 0.05) 0%, transparent 45%),
+                linear-gradient(180deg, #FAF7F2 0%, #F5EFE6 100%);
+        }
+
+        /* Top Header */
+        .directory-header {
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1.5px solid var(--border-glass);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 20px rgba(180, 150, 100, 0.06);
+        }
+
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn-back-campus {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #7A5508;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 750;
+            padding: 0.5rem 1.1rem;
+            border-radius: 50px;
+            background: #FFFFFF;
+            border: 1.5px solid #D4AF37;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);
+        }
+
+        .btn-back-campus:hover {
+            background: var(--gold-gradient);
+            color: #1E150F;
+            transform: translateX(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-logo-badge {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--gold-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: #1E150F;
+            font-weight: 900;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
+        }
+
+        .header-title-text {
+            font-size: 0.95rem;
+            font-weight: 850;
+            letter-spacing: 0.5px;
+            color: #1E150F;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 5rem;
+        }
+
+        /* Hero */
+        .directory-hero {
+            text-align: center;
+            margin-bottom: 2.8rem;
+            position: relative;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1.5px solid #D4AF37;
+            color: #8A6405;
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.4rem 1.1rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #1E150F;
+            line-height: 1.25;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, #B88214 0%, #D4AF37 50%, #8A6405 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: #5C4E40;
+            max-width: 780px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Spotlight Banner */
+        .spotlight-section {
+            margin-bottom: 3rem;
+        }
+
+        .spotlight-main-heading {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #1E150F;
+            margin-bottom: 1.2rem;
+            text-align: left;
+            letter-spacing: -0.5px;
+        }
+
+        .mentor-spotlight-card {
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
+            border-top: 3.5px solid #D4AF37;
+            border-radius: var(--radius-lg);
+            padding: 2rem 2.4rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 2.2rem;
+            position: relative;
+            box-shadow: 0 12px 35px rgba(180, 150, 100, 0.12);
+            overflow: hidden;
+        }
+
+        .mentor-spotlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold-gradient);
+        }
+
+        .spotlight-photo-wrap {
+            width: 140px;
+            height: 140px;
+            position: relative;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spotlight-photo-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold-primary);
+            box-shadow: 0 8px 25px rgba(180, 150, 100, 0.25);
+            background: #FAF7F2;
+        }
+
+        .spotlight-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .spotlight-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .spotlight-title {
+            font-size: 1.55rem;
+            font-weight: 900;
+            color: #1E150F;
+            letter-spacing: -0.5px;
+        }
+
+        .spotlight-chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.3rem 0.95rem;
+            border-radius: 50px;
+            border: 1.5px solid #D4AF37;
+            background: rgba(212, 175, 55, 0.12);
+            color: #8A6405;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            width: fit-content;
+        }
+
+        .spotlight-desc {
+            font-size: 0.95rem;
+            color: #5C4E40;
+            line-height: 1.65;
+            max-width: 600px;
+        }
+
+        .spotlight-handles-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 0.4rem;
+        }
+
+        .spotlight-handle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #FAF7F2;
+            border: 1.5px solid #E5D9C3;
+            color: #1E150F;
+            padding: 0.45rem 1.1rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 750;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .spotlight-handle-btn:hover {
+            background: var(--instagram-gradient);
+            color: #FFFFFF;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(221, 42, 123, 0.35);
+        }
+
+        .spotlight-brand-action {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 0.8rem;
+            flex-shrink: 0;
+            border-left: 1.5px solid #EADBCC;
+            padding-left: 2rem;
+        }
+
+        .spotlight-logo-wrap {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            filter: drop-shadow(0 6px 18px rgba(180, 150, 100, 0.2));
+            background: #FFFFFF;
+        }
+
+        .spotlight-logo-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-gold);
+            box-shadow: 0 4px 15px rgba(180, 150, 100, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .spotlight-logo-img:hover {
+            transform: scale(1.05);
+            border-color: #B88214;
+        }
+
+        .spotlight-mentor-label {
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: #8A6405;
+        }
+
+        .btn-solicitar-mentoria {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #1E150F;
+            border: 1px solid #1E150F;
+            color: #FFFFFF;
+            padding: 0.65rem 1.4rem;
+            border-radius: 50px;
+            font-size: 0.86rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(30, 21, 15, 0.2);
+        }
+
+        .btn-solicitar-mentoria:hover {
+            background: var(--gold-gradient);
+            color: #1E150F;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* Controls Bar */
+        .controls-bar {
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
+            border-radius: var(--radius-lg);
+            padding: 1.2rem 1.8rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            box-shadow: 0 6px 20px rgba(180, 150, 100, 0.08);
+        }
+
+        .filter-pills {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #FAF7F2;
+            border: 1.5px solid #E5D9C3;
+            color: #5C4E40;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover {
+            color: #1E150F;
+            border-color: #D4AF37;
+            background: #FFFFFF;
+        }
+
+        .filter-btn.active {
+            background: var(--gold-gradient);
+            color: #1E150F;
+            border-color: transparent;
+            font-weight: 850;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+        }
+
+        .search-box {
+            position: relative;
+            min-width: 280px;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-input {
+            width: 100%;
+            background: #FAF7F2;
+            border: 1.5px solid #E5D9C3;
+            border-radius: 50px;
+            padding: 0.65rem 1.2rem 0.65rem 2.6rem;
+            color: #1E150F;
+            font-family: inherit;
+            font-size: 0.88rem;
+            outline: none;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .search-input:focus {
+            background: #FFFFFF;
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8C7E70;
+            pointer-events: none;
+        }
+
+        /* Members Grid */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 1.8rem;
+        }
+
+        /* Member Card */
+        .member-card {
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
+            border-top: 3px solid #D4AF37;
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(180, 150, 100, 0.08);
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+            background: #FFFEFA;
+            box-shadow: 0 16px 35px rgba(180, 150, 100, 0.16), 0 0 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .member-card-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .member-avatar {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FAF7F2 0%, #EFE8DA 100%);
+            border: 2.5px solid var(--gold-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 850;
+            color: #8A6405;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(180, 150, 100, 0.18);
+            overflow: hidden;
+        }
+
+        .member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-info-header {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .member-type-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.2rem 0.65rem;
+            border-radius: 50px;
+            margin-bottom: 0.35rem;
+        }
+
+        .badge-producto {
+            background: rgba(225, 29, 72, 0.1);
+            color: #9F1239;
+            border: 1px solid rgba(225, 29, 72, 0.3);
+        }
+
+        .badge-servicio {
+            background: rgba(5, 150, 105, 0.1);
+            color: #065F46;
+            border: 1px solid rgba(5, 150, 105, 0.3);
+        }
+
+        .badge-ambos {
+            background: rgba(212, 175, 55, 0.15);
+            color: #7A5508;
+            border: 1px solid #D4AF37;
+        }
+
+        .member-name {
+            font-size: 1.15rem;
+            font-weight: 850;
+            color: #1E150F;
+            margin-bottom: 0.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .member-business {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #946E13;
+            line-height: 1.35;
+        }
+
+        .member-meta-tags {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 0.8rem 0;
+        }
+
+        .meta-chip {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            background: #FAF7F2;
+            border: 1px solid #E5D9C3;
+            color: #5C4E40;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .meta-chip-online {
+            background: rgba(5, 150, 105, 0.1);
+            border-color: rgba(5, 150, 105, 0.3);
+            color: #065F46;
+            font-weight: 700;
+        }
+
+        .member-desc {
+            font-size: 0.88rem;
+            color: #5C4E40;
+            line-height: 1.6;
+            margin-bottom: 1.4rem;
+            flex-grow: 1;
+        }
+
+        .member-card-footer {
+            border-top: 1px solid #EFE8DA;
+            padding-top: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+        }
+
+        .member-instagram-handle {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            font-weight: 650;
+            color: #645547;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Buy Me Instagram Button */
+        .btn-buy-me {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: var(--instagram-gradient);
+            color: #FFFFFF;
+            padding: 0.6rem 1.3rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(221, 42, 123, 0.3);
+            white-space: nowrap;
+        }
+
+        .btn-buy-me:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(221, 42, 123, 0.5);
+            color: #FFFFFF;
+        }
+
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #FFFFFF;
+            border: 1.5px dashed #D4AF37;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 8px 25px rgba(180, 150, 100, 0.08);
+        }
+
+        .empty-state h3 {
+            font-size: 1.4rem;
+            color: #8A6405;
+            margin-bottom: 0.6rem;
+            font-weight: 800;
+        }
+
+        .empty-state p {
+            color: #5C4E40;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .mentor-spotlight-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+                padding: 1.8rem;
+            }
+            .spotlight-photo-wrap {
+                margin: 0 auto;
+            }
+            .spotlight-title-row {
+                justify-content: center;
+            }
+            .spotlight-desc {
+                margin: 0 auto;
+            }
+            .spotlight-handles-row {
+                justify-content: center;
+            }
+            .spotlight-brand-action {
+                border-left: none;
+                border-top: 1px solid var(--border-glass);
+                padding-left: 0;
+                padding-top: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .controls-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-box {
+                max-width: 100%;
+            }
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Bar -->
+    <header class="directory-header">
+        <div class="header-inner">
+            <a href="/campus_modo_lider.html" class="btn-back-campus">
+                <span>← Volver al Campus Modo Líder</span>
+            </a>
+
+            <div class="header-brand">
+                <div class="header-logo-badge">👑</div>
+                <div class="header-title-text">MÉTODO MODO LÍDER</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="directory-hero">
+            <span class="hero-tag">👑 Comunidad Oficial</span>
+            <h1 class="hero-title">Emprendedoras y <span>Miembros Activos</span></h1>
+            <p class="hero-desc">
+                Conoce a las líderes de nuestra comunidad. Aquí encontrarás sus emprendimientos, los productos y servicios profesionales que ofrecen con dedicación consciente, y sus perfiles directos de Instagram para conectar y comprar con el botón <strong>Comprame</strong>.
+            </p>
+        </section>
+
+        <!-- SPOTLIGHT DESTACADO: NUESTROS PRODUCTOS Y SERVICIOS CON IDENTIDAD (LIC. ROMINA LORENA MONTIEL) -->
+        <section class="spotlight-section">
+            <h2 class="spotlight-main-heading">Nuestros productos y servicios con identidad</h2>
+            
+            <div class="mentor-spotlight-card">
+                <div class="spotlight-photo-wrap">
+                    <img src="/romina-transparente.png" alt="Lic. Romina Lorena Montiel" class="spotlight-photo-img" onerror="this.src='/romina.png'">
+                </div>
+
+                <div class="spotlight-info">
+                    <div class="spotlight-title-row">
+                        <h3 class="spotlight-title">Mentalidad e inteligencia de negocios</h3>
+                    </div>
+                    <div class="spotlight-chip">Cursos, Talleres y MasterClases</div>
+                    <p class="spotlight-desc">
+                        Desarrollá estrategias correctas, fortalecé tu autoliderazgo y alineá tu mundo interno con el negocio que querés construir.
+                    </p>
+                    <div class="spotlight-handles-row">
+                        <a href="https://www.instagram.com/rominalorenamontiel/" target="_blank" rel="noopener noreferrer" class="spotlight-handle-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <span>@rominalorenamontiel</span>
+                        </a>
+                        <a href="https://www.instagram.com/modolider.co/" target="_blank" rel="noopener noreferrer" class="spotlight-handle-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <span>@modolider.co</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="spotlight-brand-action">
+                    <div class="spotlight-logo-wrap">
+                        <img src="/logo_modo_lider_oficial.png" alt="Método Modo Líder" class="spotlight-logo-img">
+                    </div>
+                    <div class="spotlight-mentor-label">Lic. Romina Lorena Montiel</div>
+                    <a href="https://wa.me/5491130190250?text=Hola%20Romina,%20deseo%20solicitar%20una%20mentor%C3%ADa%20personalizada" target="_blank" rel="noopener noreferrer" class="btn-solicitar-mentoria">
+                        <span>Solicita una mentoría</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Controls -->
+        <div class="controls-bar">
+            <div class="filter-pills">
+                <button class="filter-btn active" onclick="setFilter('todos', this)">
+                    ✨ Todos (<span id="count-todos">0</span>)
+                </button>
+                <button class="filter-btn" onclick="setFilter('producto', this)">
+                    🛍️ Productos (<span id="count-productos">0</span>)
+                </button>
+                <button class="filter-btn" onclick="setFilter('servicio', this)">
+                    💼 Servicios Profesionales (<span id="count-servicios">0</span>)
+                </button>
+            </div>
+
+            <div class="search-box">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Buscar por nombre, negocio, ciudad o rubro..." 
+                    oninput="handleSearch()"
+                >
+            </div>
+        </div>
+
+        <!-- Grid de Miembros -->
+        <div class="members-grid" id="membersGrid">
+            <!-- Renderizado dinámico vía JavaScript -->
+        </div>
+
+    </main>
+
+    <script>
+        // BASE DE DATOS OFICIAL DE MIEMBROS ACTIVOS
+        // Datos extraídos directamente de la planilla de la comunidad Método Modo Líder
+        const miembrosData = [
+            {
+                        "nombre": "Lic. Romina Lorena Montiel",
+                        "foto": "/romina-transparente.png",
+                        "emprendimiento": "Método Modo Líder • Mentora de Mentes y Negocios",
+                        "tipo": "ambos",
+                        "descripcion": "Mentalidad e inteligencia de negocios. Desarrollá estrategias correctas, fortalecé tu autoliderazgo y alineá tu mundo interno con el negocio que querés construir: Cursos, Talleres, MasterClases y Mentorías.",
+                        "lugar": "Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@rominalorenamontiel • @modolider.co",
+                        "instagramLink": "https://www.instagram.com/rominalorenamontiel/",
+                        "instagramLink2": "https://www.instagram.com/modolider.co/"
+            },
+            {
+                        "nombre": "Stefania SotoMayor",
+                        "emprendimiento": "Lidera Tu Ser • Coach de Bienestar & Mentalidad",
+                        "tipo": "servicio",
+                        "descripcion": "Coach de bienestar, mentalidad y liderazgo interno. Te acompaño a habitar tu esencia y tomar el mando de tu vida.",
+                        "lugar": "Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@lideratuser.ok",
+                        "instagramLink": "https://www.instagram.com/lideratuser.ok/"
+            },
+            {
+                        "nombre": "Analia Soto",
+                        "emprendimiento": "Bioterapeuta - Profesora de Inglés",
+                        "tipo": "servicio",
+                        "descripcion": "Para derivar tu consulta, elegí una opción: 1️⃣ Sesiones de *Barras de Access* 2️⃣ *Clase de Barras* 3️⃣ *Clases avanzadas – Octubre* 4️⃣ *Formación en Bioterapia* 5️⃣ *Sesiones de Bioterapia* 6️⃣ *Clases de Inglés – English Xperience*",
+                        "lugar": "Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@analiasotobioterapeuta",
+                        "instagramLink": "https://www.instagram.com/analiasotobioterapeuta/"
+            },
+            {
+                        "nombre": "Maira Traub",
+                        "emprendimiento": "Micropigmentadora - Laminado de Cejas y Pestañas",
+                        "tipo": "producto",
+                        "descripcion": "Micropigmentación de Cejas, labios y estrías Laminado de Cejas y Pestañas",
+                        "lugar": "Comodoro Rivadavia, Chubut",
+                        "vendeOnline": false,
+                        "instagramHandle": "@mairatraub.beauty.studio",
+                        "instagramLink": "https://www.instagram.com/mairatraub.beauty.studio/"
+            },
+            {
+                        "nombre": "Melany Denise Alvarenga",
+                        "emprendimiento": "Trenzadora - Make Up",
+                        "tipo": "producto",
+                        "descripcion": "Trenzas y Make Up para automimos, fiestas, fines de semana, desfiles o eventos.",
+                        "lugar": "Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@lunaticxs.makeup.trenzas",
+                        "instagramLink": "https://www.instagram.com/lunaticxs.makeup.trenzas/"
+            },
+            {
+                        "nombre": "Elsa Elena Martin",
+                        "emprendimiento": "Propietaria Inmobiliaria - Depatamentos en Alquiler",
+                        "tipo": "producto",
+                        "descripcion": "Te alquilo un departamento en Corrientes",
+                        "lugar": "Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@elsaelena41",
+                        "instagramLink": "https://www.instagram.com/elsaelena41/"
+            },
+            {
+                        "nombre": "Ivana Galban",
+                        "emprendimiento": "Ingeniera Agrónoma",
+                        "tipo": "servicio",
+                        "descripcion": "Soy Ingeniera Agrónoma y estoy desarrollando Mi Marca y mi Negocio",
+                        "lugar": "Formosa",
+                        "vendeOnline": false,
+                        "instagramHandle": "@ivank.ibg",
+                        "instagramLink": "https://www.instagram.com/ivank.ibg/"
+            },
+            {
+                        "nombre": "Alejandra Humeres",
+                        "emprendimiento": "Profesora de Yoga - Panes con harinas saludables",
+                        "tipo": "ambos",
+                        "descripcion": "🛍️ Productos: Panes y Productos eleborados con Harinas Saludables • 💼 Servicios: Clases de Yoga Online",
+                        "lugar": "Goya, Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@humeresalejandra",
+                        "instagramLink": "https://www.instagram.com/humeresalejandra/"
+            },
+            {
+                        "nombre": "Sandra Umeres",
+                        "emprendimiento": "Licenciada en Recursos Humanos - Talento",
+                        "tipo": "servicio",
+                        "descripcion": "Talent Recruiter, Potenciá tu Talento Multiplicá tus resultados, elevá tus estándares y materializá tus proyectos profesionales para avanzá con absoluta determinación hacia tus metas más ambiciosas: Cursos, Talleres y MasterClases",
+                        "lugar": "Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@sbumeres",
+                        "instagramLink": "https://www.instagram.com/sbumeres/"
+            },
+            {
+                        "nombre": "Natalia Itatí Blanco",
+                        "emprendimiento": "Alta Costura",
+                        "tipo": "ambos",
+                        "descripcion": "🛍️ Productos: Vestidos Para Fiestas mujeres, niñas y adulto mayor • 💼 Servicios: Vestidos e Indumentaria a Pedido, me especializo en ropa de mujer para fiestas, y eventos especiales",
+                        "lugar": "Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@nataliablanco_atelier",
+                        "instagramLink": "https://www.instagram.com/nataliablanco_atelier/"
+            },
+            {
+                        "nombre": "Marina Oviedo",
+                        "emprendimiento": "Abogada",
+                        "tipo": "servicio",
+                        "descripcion": "Abogacia",
+                        "lugar": "Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@magiaconvos",
+                        "instagramLink": "https://www.instagram.com/magiaconvos/"
+            },
+            {
+                        "nombre": "Jesica Jensen",
+                        "emprendimiento": "Abogada, Pastelería casera, Emprendedora Essen",
+                        "tipo": "ambos",
+                        "descripcion": "🛍️ Productos: Alfajores de maizena, santafesinos, mar del plata, masitas, y otros productos de pastelería casera para compartir los fines de semana o para tus fiestas y eventos. Venta de Essen. • 💼 Servicios: Abogacia",
+                        "lugar": "Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@jesicachain.jeedessen",
+                        "instagramLink": "https://www.instagram.com/jesicachain.jeedessen/"
+            },
+            {
+                        "nombre": "María Lujan Figueroa",
+                        "emprendimiento": "Decoración y detallers para fiestas",
+                        "tipo": "producto",
+                        "descripcion": "Alquiler de mobiliario, ambientaciones y detalles que hacen de tus fiestas las mejores que soñaste",
+                        "lugar": "Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@deco_detalles22",
+                        "instagramLink": "https://www.instagram.com/deco_detalles22/"
+            },
+            {
+                        "nombre": "Cecilia Codutti",
+                        "emprendimiento": "Ingeniera Agrónoma, tengo una agropecuaria y también realizo servicio de parquizado/jardineria integral",
+                        "tipo": "ambos",
+                        "descripcion": "🛍️ Productos: Productos Agropecuarios • 💼 Servicios: Ingeniera Agrónoma. Parquizado de Jardines",
+                        "lugar": "Puerto Tirol, Chaco",
+                        "vendeOnline": false,
+                        "instagramHandle": "@cecicodutti",
+                        "instagramLink": "https://www.instagram.com/cecicodutti/"
+            },
+            {
+                        "nombre": "Marisol Fernández",
+                        "emprendimiento": "Terapeuta Holistica",
+                        "tipo": "servicio",
+                        "descripcion": "Terapias de armonizacion y sanación Péndulo, Péndulo Hebreo. Registros Akashicos Tameana( sanación vibracional con cristales)",
+                        "lugar": "Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@volviendoacasaholistica",
+                        "instagramLink": "https://www.instagram.com/volviendoacasaholistica/"
+            },
+            {
+                        "nombre": "Guadalupe Oliva",
+                        "emprendimiento": "Calzados e Indumentarias",
+                        "tipo": "producto",
+                        "descripcion": "Zapatos e indumentaria a pedido con venta Online para Damas y ñinas con venta online",
+                        "lugar": "Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@oliva_indumentaria",
+                        "instagramLink": "https://www.instagram.com/oliva_indumentaria/"
+            },
+            {
+                        "nombre": "Noel Molina Daveta",
+                        "emprendimiento": "Joyería con flores y resina",
+                        "tipo": "producto",
+                        "descripcion": "Aros, collares, pulseras y accesorios para usar y regalar hechos con resina y flores naturales",
+                        "lugar": "Goya, Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@floreaando",
+                        "instagramLink": "https://www.instagram.com/floreaando/"
+            },
+            {
+                        "nombre": "Jesica Pozzer",
+                        "emprendimiento": "Biodecodificadora integral - Estudiante de Coaching",
+                        "tipo": "servicio",
+                        "descripcion": "Biodecodificación integral, sanación de tu niña interior",
+                        "lugar": "Goya, Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@jesicapozzer.decodificadora",
+                        "instagramLink": "https://www.instagram.com/jesicapozzer.decodificadora/"
+            },
+            {
+                        "nombre": "Sabrina Montichelli",
+                        "emprendimiento": "Lder Bagues Equipo Om",
+                        "tipo": "servicio",
+                        "descripcion": "Asesora y lider de equipo de la línea Bagués ¿Querés unirte a mi equipo?",
+                        "lugar": "Goya, Corrientes",
+                        "vendeOnline": false,
+                        "instagramHandle": "@ombaguesombagues",
+                        "instagramLink": "https://www.instagram.com/ombaguesombagues/"
+            },
+            {
+                        "nombre": "Lujan Roig",
+                        "emprendimiento": "Lencería femenina y Ropa interior para ellas y ellos",
+                        "tipo": "producto",
+                        "descripcion": "| Ropa interior| lencería | Pijamas | bikinis y más",
+                        "lugar": "Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@caprichosasshowroom_",
+                        "instagramLink": "https://www.instagram.com/caprichosasshowroom_/"
+            },
+            {
+                        "nombre": "Rosalía Casco",
+                        "emprendimiento": "Ingeniera Agrónoma",
+                        "tipo": "servicio",
+                        "descripcion": "Tramites con SENASA: Tránsito vegetal,Importación vegetal, Viveros Empaques",
+                        "lugar": "Bella Vista, Corrientes",
+                        "vendeOnline": true,
+                        "instagramHandle": "@rosaliacascoo",
+                        "instagramLink": "https://www.instagram.com/rosaliacascoo/"
+            }
+];
+
+        let currentFilter = 'todos';
+        let searchQuery = '';
+
+        function renderMembers() {
+            const grid = document.getElementById('membersGrid');
+            grid.innerHTML = '';
+
+            const q = searchQuery.toLowerCase().trim();
+
+            const filtered = miembrosData.filter(m => {
+                // Filtro por categoría
+                let matchFilter = false;
+                if (currentFilter === 'todos') {
+                    matchFilter = true;
+                } else if (currentFilter === 'producto') {
+                    matchFilter = (m.tipo === 'producto' || m.tipo === 'ambos');
+                } else if (currentFilter === 'servicio') {
+                    matchFilter = (m.tipo === 'servicio' || m.tipo === 'ambos');
+                }
+
+                // Filtro por búsqueda de texto
+                const matchSearch = !q || 
+                    (m.nombre && m.nombre.toLowerCase().includes(q)) ||
+                    (m.emprendimiento && m.emprendimiento.toLowerCase().includes(q)) ||
+                    (m.descripcion && m.descripcion.toLowerCase().includes(q)) ||
+                    (m.lugar && m.lugar.toLowerCase().includes(q));
+
+                return matchFilter && matchSearch;
+            });
+
+            // Actualizar contadores
+            const countTodos = miembrosData.length;
+            const countProductos = miembrosData.filter(m => m.tipo === 'producto' || m.tipo === 'ambos').length;
+            const countServicios = miembrosData.filter(m => m.tipo === 'servicio' || m.tipo === 'ambos').length;
+            
+            document.getElementById('count-todos').innerText = countTodos;
+            document.getElementById('count-productos').innerText = countProductos;
+            document.getElementById('count-servicios').innerText = countServicios;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">🔍</div>
+                        <h3>No se encontraron miembros</h3>
+                        <p>Intenta con otra palabra clave o cambia los filtros seleccionados.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(m => {
+                let typeClass = 'badge-servicio';
+                let typeLabel = '💼 Servicio Profesional';
+                if (m.tipo === 'producto') {
+                    typeClass = 'badge-producto';
+                    typeLabel = '🛍️ Producto';
+                } else if (m.tipo === 'ambos') {
+                    typeClass = 'badge-ambos';
+                    typeLabel = '🛍️ Producto & 💼 Servicio';
+                }
+
+                const initials = getInitials(m.nombre);
+                const igLink = m.instagramLink || '#';
+                const handleText = m.instagramHandle || 'Instagram';
+
+                const card = document.createElement('div');
+                card.className = 'member-card';
+                card.innerHTML = `
+                    <div>
+                        <div class="member-card-top">
+                            <div class="member-avatar">
+                                ${m.foto ? `<img src="${m.foto}" alt="${m.nombre}" onerror="this.onerror=null; this.src='/romina.png';">` : initials}
+                            </div>
+                            <div class="member-info-header">
+                                <span class="member-type-badge ${typeClass}">${typeLabel}</span>
+                                <h3 class="member-name" title="${m.nombre}">${m.nombre}</h3>
+                                <div class="member-business">${m.emprendimiento}</div>
+                            </div>
+                        </div>
+
+                        <div class="member-meta-tags">
+                            ${m.lugar ? `<span class="meta-chip">📍 ${m.lugar}</span>` : ''}
+                            ${m.vendeOnline ? `<span class="meta-chip meta-chip-online">🌐 Venta Online</span>` : ''}
+                        </div>
+
+                        <p class="member-desc">${m.descripcion}</p>
+                    </div>
+
+                    <div class="member-card-footer">
+                        <div class="member-instagram-handle" title="${handleText}">
+                            <span>📸</span>
+                            <span>${handleText}</span>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap;">
+                            <a href="${igLink}" target="_blank" rel="noopener noreferrer" class="btn-buy-me">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                <span>Comprame</span>
+                            </a>
+                            ${m.instagramLink2 ? `
+                            <a href="${m.instagramLink2}" target="_blank" rel="noopener noreferrer" class="btn-buy-me" style="background:#1E150F; border:1.5px solid var(--border-gold); color:#FAF7F2;">
+                                <span>@modolider.co</span>
+                            </a>` : ''}
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function getInitials(name) {
+            if (!name) return 'ML';
+            const parts = name.trim().split(' ');
+            if (parts.length >= 2) {
+                return (parts[0][0] + parts[1][0]).toUpperCase();
+            }
+            return name.substring(0, 2).toUpperCase();
+        }
+
+        function setFilter(filter, btn) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderMembers();
+        }
+
+        function handleSearch() {
+            searchQuery = document.getElementById('searchInput').value;
+            renderMembers();
+        }
+
+        // Carga inicial
+        window.addEventListener('DOMContentLoaded', () => {
+            renderMembers();
+        });
+    </script>
+</body>
+</html>

@@ -9,15 +9,15 @@ export default function Historia() {
           
           <div className="historia-grid">
               <div className="historia-text">
-                  <p>Durante años vi cómo profesionales brillantes y emprendedores con ideas increíbles se quedaban estancados. No por falta de talento, visión o capacidad de trabajo, sino por <strong>barreras invisibles de postergación y sobrecarga</strong> que los mantenían en una parálisis silenciosa.</p>
+                  <p>Durante años vi cómo profesionales brillantes y emprendedores con ideas increíbles permanecían en la sombra. No por falta de talento, visión o capacidad, sino por la ausencia de las <strong>estrategias correctas para hacerse visibles, generar impacto real y atraer ventas</strong> de manera consistente.</p>
                   
                   <div className="historia-quote-box">
-                      &quot;Yo misma atravesé esos momentos donde sabía exactamente lo que tenía que hacer pero, por alguna razón, no lograba accionar con la contundencia que mi negocio demandaba.&quot;
+                      &quot;Yo misma viví el momento en que tenía el conocimiento y la experiencia, pero me faltaba la integración entre mi mentalidad, mi marca y la inteligencia estratégica que mi negocio necesitaba para despegar.&quot;
                   </div>
 
-                  <p>Fue entonces cuando decidí investigar a fondo qué es lo que realmente nos frena: combinando las bases biológicas de las <strong>Neurociencias</strong> y la <strong>reprogramación de patrones</strong>, a las que sumé mi <strong>formación en negocios</strong> junto a mis <strong>10 años de experiencia</strong> para integrar al <strong>Método MODO LÍDER</strong> una <strong>Inteligencia Estratégica de Negocios</strong> adecuada a los tiempos que corren.</p>
+                  <p>Fue entonces cuando decidí unir lo mejor de dos mundos: las bases biológicas de las <strong>Neurociencias</strong> y el <strong>desbloqueo mental</strong> con mi <strong>formación en negocios</strong> y mis <strong>10 años de experiencia</strong> para crear una <strong>Inteligencia Estratégica de Negocios</strong> que impulsa tu marca personal y tu empresa desde adentro hacia afuera.</p>
                   
-                  <p>Así nació el <strong>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para desbloquear tu autoliderazgo y poner tu accionar en sintonía con lo que necesita tu negocio para crear impacto, conectar con tus clientes y atraer ventas.</p>
+                  <p>Así nació el <strong>Método MODO LÍDER</strong>: un sistema diseñado para potenciar tu marca personal, alinear tu mente con tus metas y aplicar las estrategias correctas para que tu negocio surja, se haga visible, produzca impacto y genere ventas reales.</p>
               </div>
 
               <div className="historia-card-portrait">

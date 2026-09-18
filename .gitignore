@@ -42,6 +42,12 @@ next-env.d.ts
 
 # large files (>100MB)
 mi historia.pdf
+public/videos/
+videos/
+*.mp4
+*.mpeg
+*.MOV
+*.avi
 
 # private client consulting files
 /CLIENTES/
@@ -51,6 +57,7 @@ mi historia.pdf
 # development scratch and python cache
 __pycache__/
 *.pyc
+*.py
 scratch/
 
 # helper scripts and root presentations

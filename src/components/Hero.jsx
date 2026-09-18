@@ -31,8 +31,12 @@ export default function Hero() {
 
               <h1 className="hero-main-title">Modo Líder</h1>
 
+              <p className="hero-tagline" style={{ fontSize: "1.05rem", fontWeight: 700, color: "#E9B642", letterSpacing: "0.5px", marginBottom: "1rem", textTransform: "uppercase" }}>
+                  Entrenate para llevar tu negocio o proyecto al próximo nivel.
+              </p>
+
               <p className="hero-statement">
-                  Con las herramientas, recursos y guía de procesos adecuados todos podemos <span className="highlight">transformar nuestros bloqueos en potencial</span> para crear, conseguir resultados y prosperar.
+                  Con las herramientas, recursos y guía de procesos adecuados todos podemos <span className="highlight">transformar nuestra mentalidad y salir de nuestros bloqueos</span> para crear un negocio que genere ventas o conseguir resultados y prosperar.
               </p>
 
               {/* Pilares Científicos y Estratégicos (Texto blanco, fuera de botón) */}

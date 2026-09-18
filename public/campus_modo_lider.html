@@ -1,0 +1,3243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMPUS MODO LIDER | Portal Exclusivo de Alumnas</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #07090E;
+            --bg-surface: #0E121C;
+            --bg-card: #151B28;
+            --bg-card-hover: #1C2436;
+            --gold-primary: #D4AF37;
+            --gold-light: #F7E7CE;
+            --gold-soft: rgba(212, 175, 55, 0.12);
+            --gold-gradient: linear-gradient(135deg, #FCE08B 0%, #E5B544 50%, #B88214 100%);
+            --coral-accent: #FF5A78;
+            --emerald-accent: #10B981;
+            --blue-accent: #3B82F6;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(212, 175, 55, 0.35);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-gold: 0 8px 24px rgba(212, 175, 55, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 10%, rgba(212, 175, 55, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 85% 60%, rgba(233, 69, 96, 0.04) 0%, transparent 40%);
+        }
+
+        /* Top Header */
+        .campus-header {
+            background: rgba(10, 13, 20, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-glass);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0.9rem 2rem;
+        }
+
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .brand-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .campus-logo-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon-box {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: var(--gold-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #07090E;
+            box-shadow: var(--shadow-gold);
+            font-weight: 900;
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .campus-title {
+            font-size: 1.15rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .campus-subtitle {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .student-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-glass);
+            padding: 0.4rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #CBD5E1;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--emerald-accent);
+            box-shadow: 0 0 10px var(--emerald-accent);
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+        }
+
+        .btn-whatsapp-support {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37, 211, 102, 0.12);
+            color: #25D366;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            padding: 0.45rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn-whatsapp-support:hover {
+            background: #25D366;
+            color: #07090E;
+            transform: translateY(-1px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Course Title Banner */
+        .course-hero-banner {
+            background: linear-gradient(135deg, rgba(21, 27, 40, 0.9) 0%, rgba(14, 18, 28, 0.95) 100%);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-lg);
+            padding: 2.2rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .course-hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold-gradient);
+        }
+
+        .course-hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .course-hero-text h1 {
+            font-size: 1.75rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            color: #FFFFFF;
+            margin-bottom: 0.4rem;
+        }
+
+        .course-hero-text h1 span {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .course-hero-author {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .mentor-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--gold-primary);
+        }
+
+        .course-stats-badges {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        /* Hero Right Round "Buy Me" Button */
+        .course-hero-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .hero-buyme-round-btn {
+            position: relative;
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(135deg, #182030 0%, #0E131E 100%);
+            border: 2.5px solid var(--gold-primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-buyme-round-btn:hover {
+            transform: scale(1.08) rotate(2deg);
+            border-color: #FCE08B;
+            box-shadow: 0 14px 40px rgba(221, 42, 123, 0.45), 0 0 35px rgba(212, 175, 55, 0.65);
+        }
+
+        .buyme-glow-ring {
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 2px dashed rgba(212, 175, 55, 0.5);
+            animation: rotateGlowRing 15s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotateGlowRing {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .buyme-round-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0.5rem;
+            z-index: 2;
+        }
+
+        .buyme-icon {
+            font-size: 1.65rem;
+            line-height: 1;
+            margin-bottom: 0.35rem;
+            filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.6));
+        }
+
+        .buyme-subtitle {
+            font-size: 0.76rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            letter-spacing: 1.1px;
+            line-height: 1.25;
+            margin-bottom: 0.65rem;
+            text-transform: uppercase;
+        }
+
+        .buyme-pill {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #FFFFFF;
+            font-size: 0.86rem;
+            font-weight: 900;
+            letter-spacing: 0.7px;
+            padding: 0.38rem 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 14px rgba(221, 42, 123, 0.55);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            white-space: nowrap;
+            transition: transform 0.2s ease;
+        }
+
+        .hero-buyme-round-btn:hover .buyme-pill {
+            transform: scale(1.06);
+            box-shadow: 0 6px 20px rgba(221, 42, 123, 0.8);
+        }
+
+        .stat-badge {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-sm);
+            padding: 0.5rem 0.9rem;
+            text-align: center;
+        }
+
+        .stat-badge .num {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--gold-light);
+        }
+
+        .stat-badge .label {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+        }
+
+        /* SECTION: VIDEO DE BIENVENIDA */
+        .welcome-section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .section-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .section-title-group {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .section-badge {
+            background: var(--gold-soft);
+            color: var(--gold-primary);
+            border: 1px solid var(--border-gold);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .video-theatre-grid {
+            display: grid;
+            grid-template-columns: 1.7fr 1fr;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        @media (max-width: 960px) {
+            .video-theatre-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .video-theatre-box {
+            background: #000000;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-player-real {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            background: #000000;
+            outline: none;
+            display: block;
+        }
+
+        /* Playlist selector under main video */
+        .video-playlist-bar {
+            background: #0B0E17;
+            padding: 0.8rem 1.2rem;
+            border-top: 1px solid var(--border-glass);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            overflow-x: auto;
+            flex-wrap: wrap;
+        }
+
+        .playlist-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--gold-primary);
+            margin-right: 0.4rem;
+        }
+
+        .playlist-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            color: #CBD5E1;
+            padding: 0.35rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            white-space: nowrap;
+        }
+
+        .playlist-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #FFFFFF;
+        }
+
+        .playlist-btn.active {
+            background: var(--gold-soft);
+            color: var(--gold-light);
+            border-color: var(--gold-primary);
+            font-weight: 700;
+        }
+
+        /* Welcome text info card */
+        .welcome-info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .mentor-quote-box {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+        }
+
+        .mentor-photo-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold-primary);
+            flex-shrink: 0;
+        }
+
+        .mentor-name-title h4 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--gold-light);
+        }
+
+        .mentor-name-title p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .welcome-message-body {
+            font-size: 0.88rem;
+            color: #CBD5E1;
+            margin-bottom: 1.5rem;
+        }
+
+        .welcome-message-body p {
+            margin-bottom: 0.8rem;
+        }
+
+        .welcome-checklist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .welcome-checklist li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #E2E8F0;
+        }
+
+        .check-icon {
+            color: var(--emerald-accent);
+            font-weight: bold;
+        }
+
+        .btn-start-now {
+            width: 100%;
+            background: var(--gold-gradient);
+            color: #07090E;
+            border: none;
+            padding: 0.9rem;
+            border-radius: var(--radius-md);
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow-gold);
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn-start-now:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.4);
+        }
+
+        /* SECTION: BIENVENIDA Y MANIFIESTO DE COMUNIDAD */
+        .welcome-manifesto-section {
+            margin-bottom: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .manifesto-header-box {
+            background: linear-gradient(135deg, rgba(24, 30, 44, 0.95) 0%, rgba(14, 18, 27, 0.95) 100%);
+            border: 1.5px solid var(--border-gold);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .manifesto-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-light);
+            border: 1px solid var(--border-gold);
+            padding: 0.35rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .manifesto-title {
+            font-size: 2.1rem;
+            font-weight: 900;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.8rem;
+            line-height: 1.25;
+        }
+
+        .manifesto-subtitle {
+            font-size: 1.05rem;
+            color: #CCD2DC;
+            max-width: 780px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .manifesto-card {
+            background: #FFFFFF;
+            border: 1.5px solid rgba(212, 175, 55, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15), 0 0 30px rgba(212, 175, 55, 0.08);
+            position: relative;
+        }
+
+        .manifesto-card h2 {
+            font-size: 1.4rem;
+            color: #0F141F;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 900;
+        }
+
+        .manifesto-card p {
+            color: #2D3748;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            margin-bottom: 1.1rem;
+        }
+
+        .manifesto-card p strong {
+            color: #0A0D14;
+            font-weight: 800;
+        }
+
+        .manifesto-highlight-quote {
+            border-left: 4px solid #B88E28;
+            background: #FAF7F0;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 1.4rem 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2C2106;
+            font-style: italic;
+        }
+
+        .manifesto-signature-block {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            margin-top: 1.6rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(184, 142, 40, 0.3);
+        }
+
+        .manifesto-sig-avatar {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2.5px solid #B88E28;
+            box-shadow: 0 4px 15px rgba(184, 142, 40, 0.25);
+            flex-shrink: 0;
+            background-color: #EDE6D6;
+        }
+
+        .manifesto-sig-name {
+            font-size: 1.18rem;
+            font-weight: 800;
+            color: #0F141F;
+            line-height: 1.25;
+        }
+
+        .manifesto-sig-title {
+            font-size: 0.9rem;
+            color: #555E6F;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        /* Steps grid from screenshot */
+        .roadmap-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .roadmap-step-item {
+            background: #FFFFFF;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: var(--radius-md);
+            padding: 1.6rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .roadmap-step-item:hover {
+            border-color: #B88E28;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(184, 142, 40, 0.15);
+        }
+
+        .roadmap-step-num {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #B88E28;
+            margin-bottom: 0.4rem;
+        }
+
+        .roadmap-step-title {
+            font-size: 1.08rem;
+            font-weight: 800;
+            color: #0F141F;
+            margin-bottom: 0.5rem;
+        }
+
+        .roadmap-step-desc {
+            font-size: 0.9rem;
+            color: #4A5568;
+            line-height: 1.65;
+        }
+
+        .roadmap-step-desc strong {
+            color: #0F141F;
+        }
+
+        /* WhatsApp Community Invite Box - WHITE BACKGROUND */
+        .whatsapp-community-invite-box {
+            margin-top: 2rem;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(37, 211, 102, 0.45);
+            border-radius: var(--radius-md);
+            padding: 1.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .invite-content-left {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .invite-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37, 211, 102, 0.12);
+            color: #16A34A;
+            border: 1px solid rgba(37, 211, 102, 0.35);
+            padding: 0.3rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.8rem;
+        }
+
+        .whatsapp-community-invite-box .invite-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #0E121B !important;
+            margin-bottom: 0.5rem;
+        }
+
+        .whatsapp-community-invite-box .invite-desc,
+        .manifesto-card .whatsapp-community-invite-box p {
+            font-size: 0.94rem !important;
+            color: #4A5568 !important;
+            line-height: 1.65 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .whatsapp-community-invite-box .invite-desc strong,
+        .manifesto-card .whatsapp-community-invite-box p strong {
+            color: #0E121B !important;
+            font-weight: 800 !important;
+        }
+
+        .whatsapp-community-invite-box .invite-hint {
+            color: #718096 !important;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .invite-action-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .btn-whatsapp-community {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: #25D366;
+            color: #07090E;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .btn-whatsapp-community:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+            color: #07090E;
+        }
+
+        .invite-hint {
+            font-size: 0.78rem;
+            color: var(--gold-light);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Community letter card - WHITE BACKGROUND */
+        .community-letter-card {
+            background: #FFFFFF;
+            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            border-radius: var(--radius-lg);
+            padding: 2.8rem 2.5rem;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25), 0 0 30px rgba(212, 175, 55, 0.1);
+            position: relative;
+        }
+
+        .community-tag-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #FDF6E3;
+            border: 1px solid #D4AF37;
+            color: #8C660D;
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            margin-bottom: 1.2rem;
+        }
+
+        .btn-members-round {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, #111622 0%, #1A2234 100%);
+            color: #D4AF37;
+            border: 1.5px solid #D4AF37;
+            padding: 0.55rem 1.4rem;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-members-round:hover {
+            background: var(--gold-gradient);
+            color: #07090E;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Introduccion Side-by-Side Video & Methodology Grid */
+        .intro-video-methodology-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 1.8rem;
+            align-items: stretch;
+        }
+
+        .methodology-side-card {
+            background: #FFFFFF;
+            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12), 0 0 20px rgba(212, 175, 55, 0.08);
+        }
+
+        .methodology-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #FDF6E3;
+            border: 1px solid #D4AF37;
+            color: #8C660D;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            margin-bottom: 0.8rem;
+            width: fit-content;
+        }
+
+        .methodology-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #0E121B;
+            margin-bottom: 0.8rem;
+        }
+
+        .methodology-intro {
+            font-size: 0.92rem;
+            color: #4A5568;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+
+        .methodology-intro strong {
+            color: #0E121B;
+        }
+
+        .methodology-points-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .methodology-point-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            padding: 0.85rem 1rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .methodology-point-item .point-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .methodology-point-item strong {
+            display: block;
+            font-size: 0.88rem;
+            color: #8C660D;
+            margin-bottom: 0.2rem;
+        }
+
+        .methodology-point-item p {
+            font-size: 0.82rem;
+            color: #4A5568;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .methodology-point-item p strong {
+            color: #0E121B;
+            display: inline;
+        }
+
+        @media (max-width: 992px) {
+            .intro-video-methodology-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .community-quote-lead {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0E121B;
+            line-height: 1.65;
+            margin-bottom: 1.4rem;
+            padding: 1.2rem 1.6rem;
+            background: #F9F7F2;
+            border-left: 4px solid #B88E28;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+
+        .community-quote-impact {
+            font-size: 1.45rem;
+            font-weight: 900;
+            color: #B88E28;
+            margin-bottom: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+
+        .community-signature-block {
+            margin-top: 2.2rem;
+            padding-top: 1.8rem;
+            border-top: 1.5px solid rgba(184, 142, 40, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .signature-author-wrap {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .signature-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 2.5px solid #B88E28;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(184, 142, 40, 0.25);
+            background-color: #FAF7F0;
+        }
+
+        .signature-details h4 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #0E121B;
+            margin-bottom: 0.25rem;
+        }
+
+        .signature-details p {
+            font-size: 0.85rem;
+            color: #555E6F;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .signature-warm-phrase {
+            font-style: italic;
+            color: #5C450A;
+            font-size: 0.96rem;
+            font-weight: 600;
+            max-width: 480px;
+            line-height: 1.6;
+            border-left: 3px solid #B88E28;
+            padding-left: 1rem;
+        }
+
+        /* SECTION: CARPETAS DE ESTUDIO DEL CURSO */
+        .folders-section {
+            margin-bottom: 4rem;
+        }
+
+        .folders-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .folders-header h2 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .folders-header p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        /* Navigation Tabs / Folder Selector */
+        .folder-nav-tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .folder-nav-tab {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 1.1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            position: relative;
+            text-align: left;
+        }
+
+        .folder-nav-tab:hover {
+            background: var(--bg-card);
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .folder-nav-tab.active {
+            background: linear-gradient(145deg, #182032 0%, #111624 100%);
+            border: 1px solid var(--gold-primary);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.18);
+        }
+
+        .folder-nav-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 20%;
+            width: 60%;
+            height: 3px;
+            background: var(--gold-gradient);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .tab-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tab-icon {
+            font-size: 1.5rem;
+        }
+
+        .tab-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+        }
+
+        .folder-nav-tab.active .tab-badge {
+            background: var(--gold-soft);
+            color: var(--gold-light);
+            border: 1px solid var(--border-gold);
+        }
+
+        .tab-title {
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .folder-nav-tab.active .tab-title {
+            color: var(--gold-light);
+        }
+
+        .tab-desc {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* FOLDER CONTENT VIEWER CONTAINER */
+        .folder-view-container {
+            background: #FFFFFF;
+            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            border-radius: var(--radius-xl);
+            padding: 2.2rem;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15), 0 0 30px rgba(212, 175, 55, 0.08);
+            position: relative;
+        }
+
+        .folder-active-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #E2E8F0;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .active-folder-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .active-folder-header .big-icon {
+            font-size: 2.5rem;
+        }
+
+        .active-folder-header h3 {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #0E121B;
+        }
+
+        .active-folder-header p {
+            font-size: 0.85rem;
+            color: #64748B;
+        }
+
+        .folder-materials-count {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .material-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.35rem 0.8rem;
+            border-radius: 50px;
+            background: #F1F5F9;
+            border: 1px solid #CBD5E1;
+            color: #334155;
+        }
+
+        .chip-video { color: #E11D48; border-color: rgba(225, 29, 72, 0.3); background: #FFE4E6; }
+        .chip-audio { color: #2563EB; border-color: rgba(37, 99, 235, 0.3); background: #DBEAFE; }
+        .chip-docs  { color: #D97706; border-color: rgba(217, 119, 6, 0.3); background: #FEF3C7; }
+
+        /* The 3 Pillars inside each folder: Video, Audio, Downloads */
+        .folder-pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.2rem;
+        }
+
+        /* PILLAR 1: VIDEO PLAYER */
+        .pillar-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .pillar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .pillar-title {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #0E121B;
+        }
+
+        .pillar-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.7rem;
+            border-radius: 50px;
+            background: #E2E8F0;
+            color: #475569;
+        }
+
+        .folder-video-screen {
+            width: 100%;
+            background: #000000;
+            border-radius: var(--radius-md);
+            border: 1px solid #E2E8F0;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            margin-bottom: 1rem;
+        }
+
+        .folder-video-screen video {
+            width: 100%;
+            max-height: 480px;
+            display: block;
+            outline: none;
+            background: #000000;
+        }
+
+        .video-description-box {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: var(--radius-sm);
+            padding: 0.9rem 1.2rem;
+            font-size: 0.85rem;
+            color: #334155;
+            margin-top: 0.8rem;
+            border-left: 3px solid #D4AF37;
+        }
+
+        /* PILLAR 2: AUDIO / PODCAST PLAYER */
+        .audio-player-box {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .audio-track-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .track-details {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .podcast-cover-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+        }
+
+        .track-title-box h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #0E121B;
+        }
+
+        .track-title-box p {
+            font-size: 0.75rem;
+            color: #64748B;
+        }
+
+        .real-audio-element {
+            width: 100%;
+            height: 44px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        /* PILLAR 3: MATERIALES DESCARGABLES */
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .download-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: var(--radius-md);
+            padding: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .download-card:hover {
+            border-color: #D4AF37;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .doc-icon-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .doc-format-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+        }
+
+        .badge-pdf {
+            background: rgba(239, 68, 68, 0.15);
+            color: #EF4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .badge-docx {
+            background: rgba(59, 130, 246, 0.15);
+            color: #3B82F6;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .badge-pptx {
+            background: rgba(249, 115, 22, 0.15);
+            color: #F97316;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+
+        .badge-html {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10B981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .doc-meta h5 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #0E121B;
+            line-height: 1.3;
+            margin-bottom: 0.2rem;
+        }
+
+        .doc-meta span {
+            font-size: 0.72rem;
+            color: #64748B;
+        }
+
+        .doc-desc {
+            font-size: 0.8rem;
+            color: #4A5568;
+            line-height: 1.4;
+        }
+
+        .doc-action-btns {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 0.3rem;
+        }
+
+        .btn-download-primary {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            background: linear-gradient(135deg, #111622 0%, #1A2234 100%);
+            color: #D4AF37;
+            border: 1.5px solid #D4AF37;
+            padding: 0.65rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-download-primary:hover {
+            background: var(--gold-gradient);
+            color: #07090E;
+            font-weight: 900;
+            border-color: transparent;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-view-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 0.75rem;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            color: #E2E8F0;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-view-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #FFFFFF;
+        }
+
+        /* TESTIMONIALS CARDS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .testimonial-student-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .testimonial-student-card::before {
+            content: '“';
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            font-size: 3.5rem;
+            color: rgba(212, 175, 55, 0.15);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .testimonial-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            color: #07090E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-info h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .testimonial-info p {
+            font-size: 0.72rem;
+            color: var(--gold-light);
+        }
+
+        .testimonial-quote {
+            font-size: 0.84rem;
+            color: #CBD5E1;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .testimonial-metric {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34D399;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .campus-footer {
+            background: #05070B;
+            border-top: 1px solid var(--border-glass);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            margin-top: 4rem;
+        }
+
+        .campus-footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .campus-footer .signature {
+            color: var(--gold-primary);
+            font-weight: 700;
+        }
+
+        /* ==========================================================
+           RESPONSIVE MOBILE ADAPTATION
+           ========================================================== */
+        @media (max-width: 992px) {
+            .intro-video-methodology-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .course-hero-banner {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                gap: 1.8rem;
+            }
+            .course-hero-author {
+                justify-content: center;
+            }
+            .course-stats-badges {
+                justify-content: center;
+            }
+            .course-hero-right {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .container {
+                padding: 1.2rem 0.85rem;
+                max-width: 100vw;
+                box-sizing: border-box;
+            }
+
+            /* Header */
+            .campus-header {
+                padding: 0.6rem 0.8rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.6rem;
+            }
+            .brand-area {
+                display: flex;
+                justify-content: center;
+            }
+            .campus-logo-badge {
+                gap: 0.6rem;
+            }
+            .logo-icon-box {
+                width: 32px;
+                height: 32px;
+                font-size: 1.1rem;
+            }
+            .campus-title {
+                font-size: 0.95rem;
+            }
+            .campus-subtitle {
+                font-size: 0.65rem;
+            }
+            .header-meta {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                gap: 0.4rem;
+            }
+            .student-pill {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+            }
+            .btn-whatsapp-support {
+                font-size: 0.72rem;
+                padding: 0.35rem 0.75rem;
+            }
+
+            /* Hero Banner */
+            .course-hero-banner {
+                padding: 1.4rem 1rem;
+                border-radius: var(--radius-md);
+                margin-bottom: 1.8rem;
+            }
+            .course-hero-text h1 {
+                font-size: 1.3rem;
+                line-height: 1.3;
+            }
+            .course-hero-author {
+                font-size: 0.8rem;
+                flex-wrap: wrap;
+                line-height: 1.4;
+            }
+            .stat-badge {
+                padding: 0.35rem 0.65rem;
+            }
+            .stat-badge .num {
+                font-size: 0.95rem;
+            }
+            .stat-badge .label {
+                font-size: 0.62rem;
+            }
+            .hero-buyme-round-btn {
+                width: 125px;
+                height: 125px;
+            }
+            .buyme-icon {
+                font-size: 1.4rem;
+            }
+            .buyme-subtitle {
+                font-size: 0.68rem;
+            }
+            .buyme-pill {
+                font-size: 0.75rem;
+                padding: 0.28rem 0.8rem;
+            }
+
+            /* Bienvenida Section & Manifesto Cards */
+            .manifesto-card, 
+            .community-letter-card {
+                padding: 1.4rem 1rem;
+                border-radius: var(--radius-md);
+                margin-bottom: 1.6rem;
+            }
+            .manifesto-card h2, 
+            .community-letter-card h2 {
+                font-size: 1.2rem;
+                line-height: 1.35;
+            }
+            .manifesto-card p, 
+            .community-letter-card p {
+                font-size: 0.92rem;
+                line-height: 1.6;
+                margin-bottom: 0.85rem;
+            }
+            .manifesto-highlight-quote, 
+            .community-quote-lead {
+                padding: 0.85rem 1rem;
+                font-size: 0.92rem;
+                line-height: 1.5;
+                margin: 1.1rem 0;
+            }
+            .manifesto-signature-block {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                gap: 0.7rem;
+            }
+            .manifesto-sig-avatar {
+                width: 58px;
+                height: 58px;
+            }
+            .manifesto-sig-name {
+                font-size: 1.05rem;
+            }
+            .manifesto-sig-title {
+                font-size: 0.78rem;
+            }
+            .signature-author-wrap {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.7rem;
+            }
+            .signature-warm-phrase {
+                border-left: none;
+                border-top: 2px solid #B88E28;
+                padding-left: 0;
+                padding-top: 0.8rem;
+                font-size: 0.88rem;
+                text-align: center;
+            }
+
+            /* Roadmap Steps */
+            .roadmap-steps-grid {
+                grid-template-columns: 1fr;
+                gap: 0.85rem;
+            }
+            .roadmap-step-item {
+                padding: 1.1rem 0.95rem;
+            }
+            .roadmap-step-num {
+                font-size: 1.4rem;
+            }
+            .roadmap-step-title {
+                font-size: 0.98rem;
+            }
+            .roadmap-step-desc {
+                font-size: 0.86rem;
+            }
+
+            /* WhatsApp Invite Card */
+            .whatsapp-community-invite-box {
+                padding: 1.3rem 1rem;
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                gap: 1.1rem;
+                margin-top: 1.4rem;
+            }
+            .invite-content-left {
+                min-width: unset;
+                width: 100%;
+                text-align: center;
+            }
+            .invite-badge {
+                margin: 0 auto 0.6rem auto;
+            }
+            .whatsapp-community-invite-box .invite-title {
+                font-size: 1.1rem;
+            }
+            .whatsapp-community-invite-box .invite-desc,
+            .manifesto-card .whatsapp-community-invite-box p {
+                font-size: 0.88rem !important;
+                line-height: 1.55 !important;
+            }
+            .invite-action-right {
+                width: 100%;
+            }
+            .btn-whatsapp-community {
+                width: 100%;
+                justify-content: center;
+                font-size: 0.88rem;
+                padding: 0.8rem 1.1rem;
+                white-space: normal;
+                text-align: center;
+            }
+            .btn-members-round {
+                width: 100%;
+                justify-content: center;
+                font-size: 0.84rem;
+                padding: 0.6rem 1.2rem;
+            }
+
+            /* Folder Navigation Tabs */
+            .folders-section {
+                margin-bottom: 2.5rem;
+            }
+            .folders-header h2 {
+                font-size: 1.25rem;
+            }
+            .folders-header p {
+                font-size: 0.82rem;
+            }
+            .folder-nav-tabs {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+                margin-bottom: 1.4rem;
+            }
+            .folder-nav-tab {
+                padding: 0.75rem 0.65rem;
+                gap: 0.3rem;
+            }
+            .tab-icon {
+                font-size: 1.15rem;
+            }
+            .tab-badge {
+                font-size: 0.6rem;
+                padding: 0.12rem 0.38rem;
+            }
+            .tab-title {
+                font-size: 0.78rem;
+                line-height: 1.25;
+            }
+            .tab-desc {
+                display: none;
+            }
+
+            /* Folder Content Viewer */
+            .folder-view-container {
+                padding: 1.2rem 0.85rem;
+                border-radius: var(--radius-md);
+            }
+            .folder-active-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+                padding-bottom: 1rem;
+                margin-bottom: 1.2rem;
+            }
+            .active-folder-header {
+                gap: 0.6rem;
+            }
+            .active-folder-header .big-icon {
+                font-size: 1.8rem;
+            }
+            .active-folder-header h3 {
+                font-size: 1.1rem;
+                line-height: 1.3;
+            }
+            .active-folder-header p {
+                font-size: 0.78rem;
+            }
+            .folder-materials-count {
+                width: 100%;
+                gap: 0.35rem;
+            }
+            .material-chip {
+                font-size: 0.66rem;
+                padding: 0.22rem 0.55rem;
+            }
+
+            /* Folder Pillars */
+            .folder-pillars-grid {
+                gap: 1.4rem;
+            }
+            .pillar-card {
+                padding: 1.1rem 0.85rem;
+                border-radius: var(--radius-md);
+            }
+            .pillar-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+                margin-bottom: 0.85rem;
+            }
+            .pillar-title {
+                font-size: 0.98rem;
+                line-height: 1.3;
+            }
+            .pillar-badge {
+                font-size: 0.66rem;
+                padding: 0.18rem 0.5rem;
+            }
+
+            /* Video Elements */
+            .folder-video-screen {
+                border-radius: var(--radius-sm);
+                margin-bottom: 0.75rem;
+            }
+            .folder-video-screen video {
+                aspect-ratio: 16 / 9;
+                max-height: 220px;
+                object-fit: cover;
+            }
+            .video-playlist-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.45rem;
+                padding: 0.55rem;
+            }
+            .playlist-label {
+                font-size: 0.72rem;
+                margin-bottom: 0.1rem;
+            }
+            .playlist-btn {
+                width: 100%;
+                justify-content: flex-start;
+                padding: 0.5rem 0.7rem;
+                font-size: 0.74rem;
+                white-space: normal;
+                line-height: 1.3;
+                text-align: left;
+            }
+            .video-description-box {
+                padding: 0.7rem 0.85rem;
+                font-size: 0.78rem;
+                line-height: 1.45;
+                margin-top: 0.65rem;
+            }
+
+            /* Methodology Card */
+            .methodology-side-card {
+                padding: 1.1rem 0.85rem;
+            }
+            .methodology-badge {
+                font-size: 0.65rem;
+                padding: 0.18rem 0.55rem;
+            }
+            .methodology-title {
+                font-size: 1.05rem;
+            }
+            .methodology-intro {
+                font-size: 0.84rem;
+                line-height: 1.5;
+                margin-bottom: 0.9rem;
+            }
+            .methodology-points-list {
+                gap: 0.65rem;
+            }
+            .methodology-point-item {
+                padding: 0.65rem 0.75rem;
+                gap: 0.6rem;
+            }
+            .methodology-point-item .point-icon {
+                font-size: 1.05rem;
+            }
+            .methodology-point-item strong {
+                font-size: 0.82rem;
+            }
+            .methodology-point-item p {
+                font-size: 0.76rem;
+                line-height: 1.4;
+            }
+
+            /* Audio Player */
+            .audio-player-box {
+                padding: 1rem 0.8rem;
+                gap: 0.85rem;
+            }
+            .audio-track-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .track-details {
+                gap: 0.65rem;
+                width: 100%;
+            }
+            .podcast-cover-icon {
+                width: 38px;
+                height: 38px;
+                font-size: 1.15rem;
+            }
+            .track-title-box h4 {
+                font-size: 0.88rem;
+            }
+            .track-title-box p {
+                font-size: 0.7rem;
+            }
+            .real-audio-element {
+                height: 38px;
+            }
+
+            /* Downloads Grid */
+            .downloads-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+            .download-card {
+                padding: 1rem 0.85rem;
+                gap: 0.75rem;
+            }
+            .doc-format-badge {
+                width: 38px;
+                height: 38px;
+                font-size: 0.68rem;
+            }
+            .doc-meta h5 {
+                font-size: 0.86rem;
+            }
+            .doc-meta span {
+                font-size: 0.66rem;
+            }
+            .doc-desc {
+                font-size: 0.76rem;
+                line-height: 1.35;
+            }
+            .doc-action-btns {
+                flex-direction: column;
+                gap: 0.45rem;
+                width: 100%;
+            }
+            .btn-download-primary, 
+            .btn-view-secondary {
+                width: 100%;
+                justify-content: center;
+                font-size: 0.78rem;
+                padding: 0.6rem 0.8rem;
+                text-align: center;
+            }
+
+            /* Testimonials */
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .testimonial-student-card {
+                padding: 1.1rem 0.9rem;
+            }
+            .testimonial-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+            .testimonial-info h4 {
+                font-size: 0.88rem;
+            }
+            .testimonial-quote {
+                font-size: 0.8rem;
+            }
+
+            /* Footer */
+            .campus-footer {
+                padding: 1.8rem 1rem;
+                margin-top: 2.2rem;
+                font-size: 0.74rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .container {
+                padding: 0.8rem 0.55rem;
+            }
+            .folder-nav-tabs {
+                grid-template-columns: 1fr;
+            }
+            .header-meta {
+                flex-direction: column;
+                gap: 0.35rem;
+            }
+            .student-pill, 
+            .btn-whatsapp-support {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP HEADER BAR: CAMPUS MODO LIDER -->
+    <header class="campus-header">
+        <div class="header-inner">
+            <div class="brand-area">
+                <a href="#inicio" class="campus-logo-badge">
+                    <div class="logo-icon-box">👑</div>
+                    <div class="logo-text-group">
+                        <span class="campus-title">CAMPUS MODO LIDER</span>
+                        <span class="campus-subtitle">Portal de Estudio Exclusivo de Alumnas</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="header-meta">
+                <div class="student-pill">
+                    <div class="status-dot"></div>
+                    <span>Alumna Activa • Cohorte 2026</span>
+                </div>
+                <a href="https://wa.me/543794322272?text=Hola%20Romina,%20soy%20alumna%20del%20Campus%20Modo%20Líder%20y%20tengo%20una%20consulta" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-support">
+                    <span>💬 WhatsApp con Romina</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="inicio">
+
+        <!-- ================================================================= -->
+        <!-- SECTOR: BIENVENIDA AL MÉTODO MODO LÍDER & COMUNIDAD DE EMPRENDEDORAS -->
+        <!-- ================================================================= -->
+        <section class="welcome-manifesto-section" id="bienvenida-introduccion">
+
+            <!-- 1. HEADER HERO: BIENVENIDA AL MÉTODO MODO LÍDER -->
+            <div class="manifesto-header-box">
+                <span class="manifesto-tag">✨ MÓDULO 00 • INTRODUCCIÓN</span>
+                <h2 class="manifesto-title">Bienvenida al Método MODO LÍDER</h2>
+                <p class="manifesto-subtitle">
+                    Mensaje oficial y guía de primeros pasos para transformar tu negocio desde el autoliderazgo consciente.
+                </p>
+            </div>
+
+            <!-- 2. CARD: BIENVENIDA & FIRMA OFICIAL -->
+            <div class="manifesto-card">
+                <p>
+                    ¡Qué emoción darte la bienvenida a este espacio! Si estás aquí es porque tomaste una decisión que pocas personas se animan a tomar: <strong>asumir el liderazgo total de tu vida y de tu emprendimiento.</strong>
+                </p>
+                <p>
+                    No viniste a coleccionar teoría. Viniste a construir un negocio con alma que te dé libertad financiera y paz mental. En este camino vamos a derrumbar mitos: no vamos a romantizar el emprender, pero tampoco vamos a resignar tu bienestar.
+                </p>
+                <div class="manifesto-highlight-quote">
+                    "Liderar tu negocio empieza por aprender a liderarte a ti misma."
+                </div>
+
+                <!-- FIRMA OFICIAL: LIC. ROMINA LORENA MONTIEL -->
+                <div class="manifesto-signature-block">
+                    <img src="/romina-transparente.png" alt="Lic. Romina Lorena Montiel" class="manifesto-sig-avatar" onerror="this.src='/romina.png'">
+                    <div>
+                        <div class="manifesto-sig-name">Lic. Romina Lorena Montiel</div>
+                        <div class="manifesto-sig-title">Licenciada en Administración • Neuropsicoeducadora • Mentora</div>
+                    </div>
+                </div>
+            </div>
+
+<!-- 4. CARD: BIENVENIDA A LA COMUNIDAD DE EMPRENDEDORAS CONSCIENTES (Manifiesto con firma de Romina) -->
+            <div class="community-letter-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.2rem;">
+                    <span class="community-tag-badge" style="margin-bottom: 0;">👑 COMUNIDAD EXCLUSIVA</span>
+                    <a href="/miembros_activos.html" class="btn-members-round">
+                        <span>👥 Ver Miembros Activos</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    </a>
+                </div>
+                <h2 style="font-size: 1.65rem; font-weight: 900; color: #0E121B; margin-bottom: 1.3rem; display: flex; align-items: center; gap: 0.6rem;">
+                    Bienvenida a la Comunidad de Emprendedoras Conscientes
+                </h2>
+
+                <div class="community-quote-lead">
+                    &ldquo;Podemos ser emprendedoras. Pero mientras exploramos nuestros productos o servicios, también podemos entrenarnos en una mentalidad de empresaria.&rdquo;
+                </div>
+
+                <div class="community-quote-impact">
+                    Y eso lo cambia todo.
+                </div>
+
+                <p style="font-size: 1.02rem; color: #2D3748; line-height: 1.8; margin-bottom: 1.2rem;">
+                    No es solo un cambio de vocabulario. Es un cambio profundo en cómo nos posicionamos frente a la vida, frente a nuestro negocio y frente a nosotras mismas. Nos sentimos diferentes — <strong style="color: #0A0D14;">porque empezamos a pensar diferente</strong>.
+                </p>
+
+                <p style="font-size: 1.02rem; color: #2D3748; line-height: 1.8; margin-bottom: 1.2rem;">
+                    Y esa mentalidad, sumada a los nuevos conocimientos que vamos incorporando en el camino, es lo que nos permite tomar mejores decisiones para nuestro emprendimiento. <strong style="color: #0A0D14;">No decisiones perfectas: decisiones conscientes.</strong>
+                </p>
+
+                <div style="background: #FDF9EE; border: 1.5px solid #D4AF37; border-radius: var(--radius-md); padding: 1.4rem 1.8rem; margin: 1.8rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                    <p style="font-size: 1.05rem; font-weight: 700; color: #402E05; margin: 0; line-height: 1.65;">
+                        ⚡ Por eso este no es un contenido para <em>&ldquo;algún día, cuando seas empresaria&rdquo;</em>. Es para hoy, mientras todavía estás construyendo — porque la mentalidad se entrena antes de que el negocio esté &ldquo;listo&rdquo;, no después.
+                    </p>
+                </div>
+
+                <!-- Bloque de Firma Oficial Romina -->
+                <div class="community-signature-block">
+                    <div class="signature-author-wrap">
+                        <img src="/romina-transparente.png" alt="Lic. Romina Lorena Montiel" class="signature-avatar" onerror="this.src='/romina.png'">
+                        <div class="signature-details">
+                            <h4>Lic. Romina Lorena Montiel</h4>
+                            <p>Mentora de Mentes y Negocios • Creadora del Método MODO LÍDER</p>
+                        </div>
+                    </div>
+
+                    <div class="signature-warm-phrase">
+                        &ldquo;Te abrazo y te deseo una hermosa jornada y mucho éxito en este camino que hoy comenzamos a transitar juntas.&rdquo;
+                    </div>
+                </div>
+            
+                <!-- BANNER DE ACCESO E INVITACIÓN A LA COMUNIDAD DE WHATSAPP -->
+                <div class="whatsapp-community-invite-box">
+                    <div class="invite-content-left">
+                        <div class="invite-badge">
+                            <span style="font-size: 1.1rem;">💬</span>
+                            <span>GRUPO OFICIAL DE WHATSAPP</span>
+                        </div>
+                        <h3 class="invite-title">Comunidad de Emprendedoras Conscientes</h3>
+                        <p class="invite-desc">
+                            Este es nuestro vínculo directo de acompañamiento y movimiento grupal. <strong>¡Sumate y también invitá a otras emprendedoras</strong> a participar y nutrirse de nuestra comunidad!
+                        </p>
+                    </div>
+                    <div class="invite-action-right">
+                        <a href="https://chat.whatsapp.com/L4UDQmtCHazAV6Q3Skqjpg?s=sh&p=a&ilr=4" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-community">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.58 1.964.928 3.149.929 3.182 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.768-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/></svg>
+                            <span>Unirme al Grupo de WhatsApp</span>
+                        </a>
+                        <span class="invite-hint">✨ Invitá a tus colegas y amigas emprendedoras</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+<!-- COURSE TITLE HERO BANNER -->
+        <section class="course-hero-banner">
+            <div class="course-hero-left">
+                <div class="course-hero-text">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(212, 175, 55, 0.15); border: 1px solid var(--border-gold); padding: 0.25rem 0.8rem; border-radius: 50px; font-size: 0.72rem; font-weight: 800; color: var(--gold-light); margin-bottom: 0.8rem; text-transform: uppercase;">
+                        ✨ Formación Oficial
+                    </div>
+                    <h1>CURSO: <span>EMPRENDER DE CERO A IMPACTO Y VENTAS</span></h1>
+                    <div class="course-hero-author">
+                        <img src="/romina-transparente.png" alt="Lic. Romina Lorena Montiel" class="mentor-avatar" onerror="this.src='/romina.png'">
+                        <span>Dictado por <strong>Lic. Romina Lorena Montiel</strong> • Mentora de Líderes y Emprendedoras</span>
+                    </div>
+                </div>
+
+                <div class="course-stats-badges">
+                    <div class="stat-badge">
+                        <span class="num">🎬 10+</span>
+                        <span class="label">Videos Reales</span>
+                    </div>
+                    <div class="stat-badge">
+                        <span class="num">100%</span>
+                        <span class="label">Acceso Total</span>
+                    </div>
+                    <div class="stat-badge">
+                        <span class="num">PDF + DOCX</span>
+                        <span class="label">Descargas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTÓN REDONDO DE MIEMBROS ACTIVOS "BUY ME" A LA DERECHA -->
+            <div class="course-hero-right">
+                <a href="/miembros_activos.html" class="hero-buyme-round-btn" title="Ver Directorio de Miembros Activos y Comprar">
+                    <div class="buyme-glow-ring"></div>
+                    <div class="buyme-round-content">
+                        <div class="buyme-subtitle">MIEMBROS ACTIVOS</div>
+                        <div class="buyme-pill">COMPRAME ↗</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. CARD: HOJA DE RUTA DE 3 PASOS PARA EMPEZAR (El Proceso de Transformación) -->
+            <div class="manifesto-card" style="margin-bottom: 2.5rem;">
+                <h2>🗺️ Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
+                <div class="roadmap-steps-grid">
+                    <div class="roadmap-step-item">
+                        <div class="roadmap-step-num">01</div>
+                        <div class="roadmap-step-title">Mirá tu clase y completá el Workbook</div>
+                        <p class="roadmap-step-desc">
+                            Mirá la clase correspondiente y desarrollá el Workbook a tu manera y a tu propio ritmo, aplicando cada ejercicio a tu emprendimiento.
+                        </p>
+                    </div>
+                    <div class="roadmap-step-item">
+                        <div class="roadmap-step-num">02</div>
+                        <div class="roadmap-step-title">Coaching Grupal en Vivo</div>
+                        <p class="roadmap-step-desc">
+                            Vení a las clases en vivo: <strong>lunes, martes y miércoles de 19:00 a 20:00 hs</strong>. Un espacio para destrabar desafíos, profundizar y entrenar mentalidad juntas.
+                        </p>
+                    </div>
+                    <div class="roadmap-step-item">
+                        <div class="roadmap-step-num">03</div>
+                        <div class="roadmap-step-title">Inspirate y Potenciate</div>
+                        <p class="roadmap-step-desc">
+                            Inspirate con los testimonios y el contenido que se genera dentro del movimiento grupal durante los vivos y en la comunidad de Emprendedoras Conscientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- ESPACIO PARA VER EL VIDEO DE BIENVENIDA -->
+        <section class="welcome-section" id="bienvenida">
+            <div class="section-header-row">
+                <div class="section-title-group">
+                    <span class="section-icon">🎬</span>
+                    <h2 class="section-title">Espacio del Video de Bienvenida</h2>
+                </div>
+                <span class="section-badge">Paso 1 Obligatorio</span>
+            </div>
+
+            <div class="video-theatre-grid">
+                <!-- Video Screen con Video Real MP4 -->
+                <div class="video-theatre-box">
+                    <video 
+                        id="welcomeVideoPlayer" 
+                        class="video-player-real" 
+                        controls 
+                        preload="metadata" 
+                        poster="/miniatura_bienvenida.png?v=2">
+                        <source src="/videos/BIENVENIDA/1.CURSO%20EMPRENDER%20DESDE%20CERO%20INTRODUCCI%C3%93N.mp4" type="video/mp4">
+                        Tu navegador no soporta reproducción directa de video HTML5.
+                    </video>
+
+                    <!-- Barra del Video de Bienvenida Oficial -->
+                    <div class="video-playlist-bar" style="justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <span class="playlist-label" style="margin-right: 0;">Video de Entrada:</span>
+                            <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-light);">▶ 1. Bienvenida al Curso</span>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Video Oficial • Romina Lorena Montiel</span>
+                    </div>
+                </div>
+
+                <!-- Info Card -->
+                <div class="welcome-info-card">
+                    <div>
+                        <div class="mentor-quote-box">
+                            <img src="/romina-transparente.png" alt="Romina Montiel" class="mentor-photo-circle" onerror="this.src='/romina.png'">
+                            <div class="mentor-name-title">
+                                <h4>Lic. Romina Lorena Montiel</h4>
+                                <p>Tu Mentora en Método Modo Líder</p>
+                            </div>
+                        </div>
+                        <div class="welcome-message-body">
+                            <p><strong>¡Bienvenida a tu espacio sagrado de transformación!</strong></p>
+                            <p>Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
+                        </div>
+                        <ul class="welcome-checklist">
+                            <li><span class="check-icon">✓</span> Presiona Play en el video para comenzar tu formación.</li>
+                            <li><span class="check-icon">✓</span> Disfruta de la bienvenida oficial de Romina.</li>
+                            <li><span class="check-icon">✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
+                        </ul>
+                    </div>
+                    <a href="#carpetas" class="btn-start-now">
+                        📂 Ir a las Carpetas de Estudio ↓
+                    </a>
+                </div>
+            </div>
+        </section>
+
+                <!-- SECTOR: CARPETAS DE ESTUDIO DEL CURSO -->
+        <section class="folders-section" id="carpetas">
+            <div class="folders-header">
+                <h2>📁 Carpetas de Estudio del Curso</h2>
+                <p>Haz click en cualquier carpeta para acceder directamente a sus videos, podcasts y archivos descargables.</p>
+            </div>
+
+            <!-- FOLDER NAVIGATION TABS -->
+            <div class="folder-nav-tabs">
+                <!-- Tab 0: INTRODUCCIÓN -->
+                <div class="folder-nav-tab active" id="tab-intro" onclick="switchFolder('intro')">
+                    <div class="tab-top-row">
+                        <span class="tab-icon">📁</span>
+                        <span class="tab-badge">Módulo 0</span>
+                    </div>
+                    <span class="tab-title">INTRODUCCIÓN</span>
+                    <span class="tab-desc">Workflow & Metodología de Trabajo</span>
+                </div>
+
+                <!-- Tab: MINICURSO PROCRASTINACIÓN -->
+                <div class="folder-nav-tab" id="tab-procrastinacion" onclick="switchFolder('procrastinacion')">
+                    <div class="tab-top-row">
+                        <span class="tab-icon">⚡</span>
+                        <span class="tab-badge" style="background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.3);">Minicurso</span>
+                    </div>
+                    <span class="tab-title">PROCRASTINACIÓN</span>
+                    <span class="tab-desc">Salir del Modo Procrastinación</span>
+                </div>
+
+                <!-- Tab 1: CLASE 1 -->
+                <div class="folder-nav-tab" id="tab-clase1" onclick="switchFolder('clase1')">
+                    <div class="tab-top-row">
+                        <span class="tab-icon">📁</span>
+                        <span class="tab-badge">Clase 1</span>
+                    </div>
+                    <span class="tab-title">CLASE 1</span>
+                    <span class="tab-desc">Emprender Conscientemente</span>
+                </div>
+
+                <!-- Tab: DESAFÍOS -->
+                <div class="folder-nav-tab" id="tab-desafios" onclick="switchFolder('desafios')">
+                    <div class="tab-top-row">
+                        <span class="tab-icon">🎯</span>
+                        <span class="tab-badge" style="background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3);">Retos de Acción</span>
+                    </div>
+                    <span class="tab-title">DESAFÍOS</span>
+                    <span class="tab-desc">Retos Prácticos & Casos Reales</span>
+                </div>
+
+                <!-- Tab 5: TESTIMONIOS -->
+                <div class="folder-nav-tab" id="tab-testimonios" onclick="switchFolder('testimonios')">
+                    <div class="tab-top-row">
+                        <span class="tab-icon">📁</span>
+                        <span class="tab-badge">Casos Reales</span>
+                    </div>
+                    <span class="tab-title">TESTIMONIOS</span>
+                    <span class="tab-desc">Video Analía Soto & Casos</span>
+                </div>
+            </div>
+
+            <!-- FOLDER CONTENT PANELS -->
+            <div class="folder-view-container">
+
+                <!-- PANEL 0: INTRODUCCIÓN -->
+                <div class="folder-panel" id="panel-intro">
+                    <div class="folder-active-banner">
+                        <div class="active-folder-header">
+                            <span class="big-icon">📂</span>
+                            <div>
+                                <h3>CARPETA: INTRODUCCIÓN Y METODOLOGÍA</h3>
+                                <p>Fundamentos del Método Modo Líder, Foco, Dirección y Metodología 30/30.</p>
+                            </div>
+                        </div>
+                        <div class="folder-materials-count">
+                            <span class="material-chip chip-video">🎬 1 Video Masterclass</span>
+                            <span class="material-chip chip-audio">🎙️ 1 Audio Podcast</span>
+                            <span class="material-chip chip-docs">📄 1 Documento</span>
+                        </div>
+                    </div>
+
+                    <div class="folder-pillars-grid">
+                        <!-- 1. Video Player Real + Explicación del Método al Costado -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎬</span>
+                                    <span id="title-video-intro">1. Video: Workflow y Propósito del Curso & Metodología de Trabajo</span>
+                                </div>
+                                <span class="pillar-badge">Video Real MP4 & Método</span>
+                            </div>
+
+                            <div class="intro-video-methodology-grid">
+                                <!-- Columna Izquierda: Video Player Real -->
+                                <div>
+                                    <div class="folder-video-screen">
+                                        <video id="videoElement-intro" controls preload="metadata" poster="/miniatura_workflow.png?v=2">
+                                            <source src="/videos/INTRODUCCI%C3%93N/WORKFLOW.%20Y%20PROPOSITO%20DEL%20CURSO.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="video-playlist-bar" style="justify-content: space-between;">
+                                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                            <span class="playlist-label" style="margin-right: 0;">Video de Introducción:</span>
+                                            <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-light);">▶ Workflow y Propósito del Curso (275 MB)</span>
+                                        </div>
+                                    </div>
+                                    <div class="video-description-box" id="desc-video-intro" style="margin-top: 0.8rem;">
+                                        💡 <strong>Enfoque:</strong> Romina te enseña el mapa de trabajo (Workflow), el propósito de tu proyecto y cómo el liderazgo consciente redefine tu forma de vender.
+                                    </div>
+
+                                    <!-- Material Oficial Adjunto: Arquitectura de Marca Modo Líder -->
+                                    <div class="download-card" style="margin-top: 1.2rem; background: #FFFFFF; border: 1.5px solid rgba(212, 175, 55, 0.45); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);">
+                                        <div class="doc-icon-header">
+                                            <div class="doc-format-badge badge-pdf">PDF</div>
+                                            <div class="doc-meta">
+                                                <h5>Arquitectura de Marca Modo Líder</h5>
+                                                <span>PDF Oficial • Lectura Online</span>
+                                            </div>
+                                        </div>
+                                        <p class="doc-desc">Estructura visual, pilares de marca y ADN de la propuesta formativa.</p>
+                                        <div class="doc-action-btns">
+                                            <a href="/Modo-Lider-Arquitectura-de-Marca.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                                <span>👁️ Ver Online</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Columna Derecha: Explicación Escrita del Método del Curso (Al costado) -->
+                                <div class="methodology-side-card">
+                                    <div>
+                                        <div class="methodology-badge">
+                                            <span>⚡ METODOLOGÍA DEL CURSO</span>
+                                        </div>
+                                        <h4 class="methodology-title">¿Cómo trabajamos en este programa?</h4>
+                                        <p class="methodology-intro">
+                                            Un curso adaptado para <strong>impulsar y acompañar el desarrollo de un negocio que se inicia</strong> o la <strong>transformación por adecuación al mercado de uno ya en marcha</strong>.
+                                        </p>
+                                    </div>
+
+                                    <div class="methodology-points-list">
+                                        <div class="methodology-point-item">
+                                            <span class="point-icon">🎬</span>
+                                            <div>
+                                                <strong>Videos, Podcasts y Workbooks precisos:</strong>
+                                                <p>Videos, podcasts y workbook precisos que impulsan tu formación en mentalidad de empresaria, conducen y apoyan en tus reflexiones diarias sobre tu negocio y te guían durante tu participación en el coaching grupal semanal online.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="methodology-point-item">
+                                            <span class="point-icon">🧠</span>
+                                            <div>
+                                                <strong>Coaching Grupal Online Semanal:</strong>
+                                                <p>Un espacio en vivo que te reúne con otras emprendedoras y junto a la mentora <strong>Romina Lorena Montiel</strong> se crea un espacio de coaching de mentalidad, autoliderazgo y desarrollo de negocios.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="methodology-point-item">
+                                            <span class="point-icon">👑</span>
+                                            <div>
+                                                <strong>El Poder del Movimiento Grupal:</strong>
+                                                <p>Apertura mental al vincularte con otras emprendedoras, escuchando y compartiendo problemáticas, retos, aprendizajes y éxitos colectivos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Audio Podcast -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎙️</span>
+                                    <span>2. Podcast de Bienvenida: Mentalidad de Líder</span>
+                                </div>
+                                <span class="pillar-badge">Audio Oficial de Integración</span>
+                            </div>
+                            <div class="audio-player-box">
+                                <div class="audio-track-info">
+                                    <div class="track-details">
+                                        <div class="podcast-cover-icon">🎙️</div>
+                                        <div class="track-title-box">
+                                            <h4>Episodio 00: El Salto Cuántico Interior</h4>
+                                            <p>Por Lic. Romina Lorena Montiel • Audio de Mentalidad</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <audio controls class="real-audio-element">
+                                    <source src="/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PANEL: MINICURSO SALIR DEL MODO PROCRASTINACIÓN -->
+                <div class="folder-panel" id="panel-procrastinacion" style="display: none;">
+                    <div class="folder-active-banner">
+                        <div class="active-folder-header">
+                            <span class="big-icon">⚡</span>
+                            <div>
+                                <h3>CARPETA: MINICURSO - SALIR DEL MODO PROCRASTINACIÓN</h3>
+                                <p>Comprende la neurociencia del autosabotaje, elimina la culpa emocional y activa la regla de Stanford para pasar a la acción inmediata.</p>
+                            </div>
+                        </div>
+                        <div class="folder-materials-count">
+                            <span class="material-chip chip-video">🎬 5 Videos Grabados</span>
+                            <span class="material-chip chip-docs">📄 5 Workbooks & Artículos</span>
+                            <span class="material-chip chip-audio" style="background: rgba(168, 85, 247, 0.15); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3);">🧠 1 Módulo Neurociencia</span>
+                        </div>
+                    </div>
+
+                    <div class="folder-pillars-grid">
+                        <!-- 1. Video Player Real con Selector de Videos -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎬</span>
+                                    <span id="title-video-procrastinacion">1. Video Principal: Soñás en grande pero procrastinás</span>
+                                </div>
+                                <span class="pillar-badge">Minicurso en Video MP4</span>
+                            </div>
+                            <div class="folder-video-screen">
+                                <video id="videoElement-procrastinacion" controls preload="none" poster="/miniatura_procrastinacion.png?v=2">
+                                    <source src="/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/1.%20SO%C3%91AS%20EN%20GRANDE%20PERO%20PROCRASTINAS%20%28VIDEO%20PRINCIPAL%29.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Selector de videos del Minicurso -->
+                            <div class="video-playlist-bar">
+                                <span class="playlist-label">Opciones de Video:</span>
+                                <button class="playlist-btn active" onclick="switchFolderVideo('procrastinacion', '/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/1.%20SO%C3%91AS%20EN%20GRANDE%20PERO%20PROCRASTINAS%20%28VIDEO%20PRINCIPAL%29.mp4', '1. Video Principal: Soñás en grande pero procrastinás', this, '/miniatura_procrastinacion.png?v=2')">
+                                    ▶ 1. Soñás en grande (Principal)
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('procrastinacion', '/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/2.%20EL%20SENTIMIENTO%20DE%20CULPA%20DETRAS%20DE%20LA%20PROCRASTINACION.mp4', '2. El sentimiento de culpa detrás de la procrastinación', this)">
+                                    ▶ 2. La culpa detrás de procrastinar
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('procrastinacion', '/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/3.Rompe%20tu%20procrastinaci%C3%B3n%20%20el%20m%C3%A9todo%20de%20Stanford%20para%20empezar%20en%2030%20I%20Romina%20Lorena%20Montiel.mp4', '3. Método de Stanford para empezar en 30s', this)">
+                                    ▶ 3. Método de Stanford en 30s
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('procrastinacion', '/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/El%20ciclo%20de%20la%20Procrastinaci%C3%B3n%20en%201%20minuto.mp4', '4. El ciclo de la Procrastinación en 1 minuto', this)">
+                                    ▶ 4. Ciclo en 1 minuto
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('procrastinacion', '/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/Tu%20mente%20es%20lo%20que%20te%20bloquea.mp4', '5. Tu mente es lo que te bloquea', this)">
+                                    ▶ 5. Tu mente te bloquea
+                                </button>
+                            </div>
+                            <div class="video-description-box" id="desc-video-procrastinacion">
+                                💡 <strong>Clave de Autoliderazgo:</strong> Procrastinar no es holgazanería; es una respuesta automática del sistema nervioso ante la incertidumbre y la exigencia interna. Con este minicurso aprendés a hackear ese ciclo y pasar a la acción con autocompasión y foco.
+                            </div>
+                        </div>
+
+                        <!-- 2. Módulo Especial: Neurociencia de la Procrastinación -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🧠</span>
+                                    <span>2. Módulo Especial: Neurociencia de la Procrastinación</span>
+                                </div>
+                                <span class="pillar-badge">Interactividad & Arquetipos</span>
+                            </div>
+                            <div style="background: #FDFBF7; border: 1.5px solid #D4AF37; border-radius: var(--radius-md); padding: 1.8rem; display: flex; flex-direction: column; gap: 1.2rem;">
+                                <div>
+                                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #F6EBD0; color: #8A640D; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.6rem;">
+                                        ✨ Test de Arquetipos
+                                    </div>
+                                    <h4 style="color: #0E121B; font-size: 1.2rem; font-weight: 800; margin-bottom: 0.4rem;">Guía Interactiva: Los 7 Arquetipos de la Procrastinación</h4>
+                                    <p style="color: #4A5568; font-size: 0.92rem; line-height: 1.6; margin: 0;">
+                                        Descubrí qué arquetipo domina tus bloqueos (La Perfeccionista, La Soñadora, La Agotada, etc.) y aplicá las soluciones neurocientíficas diseñadas por la Lic. Romina Lorena Montiel.
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/neurociencia-procrastinacion.html" target="_blank" class="btn-download-primary" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.6rem;">
+                                        <span>🚀 Abrir Módulo de Neurociencia Online ↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Workbooks y Artículos Descargables -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>📄</span>
+                                    <span>3. Workbooks y Artículos del Minicurso</span>
+                                </div>
+                                <span class="pillar-badge">Descargas y Lectura Online</span>
+                            </div>
+                            <div class="downloads-grid">
+                                <!-- Doc 1: 5 pasos para identificar la emocion -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf">PDF</div>
+                                        <div class="doc-meta">
+                                            <h5>5 Pasos: Emoción tras la Procrastinación</h5>
+                                            <span>PDF Oficial • Diagnóstico</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Guía paso a paso para identificar la emoción primaria que detona la postergación en tus tareas de negocio.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/PDF1%205%20pasos%20para%20identificar%20la%20emocion%20detras%20de%20tu%20procrastinaci%C3%B3n.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>👁️ Ver PDF Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 2: Qué tipo de procrastinadora eres -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf">PDF</div>
+                                        <div class="doc-meta">
+                                            <h5>¿Qué tipo de procrastinadora eres?</h5>
+                                            <span>Test & Perfil • PDF</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Test de autoevaluación para perfilar tus patrones de evasión y diseñar tu estrategia correctiva.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/PDF3%20QUE%20TIPO%20DE%20PROCRASTINADORA%20ERES.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>👁️ Ver PDF Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 3: Primer paso para salir de la procrastinación -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf">PDF</div>
+                                        <div class="doc-meta">
+                                            <h5>Primer Paso para Salir de la Procrastinación</h5>
+                                            <span>Guía Práctica • PDF</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Plan de acción accionable para destrabar proyectos estancados y reiniciar el movimiento productivo.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/PDF3%20PRIMER%20PASO%20PARA%20SALIR%20DE%20LA%20PROCRASTINACION.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>👁️ Ver PDF Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 4: Artículo Salir del modo procrastinacion -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf">PDF</div>
+                                        <div class="doc-meta">
+                                            <h5>Artículo: Método Primer Paso</h5>
+                                            <span>Artículo Editorial • PDF</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Artículo completo de Romina: fundamentos teóricos y prácticos para salir del modo procrastinación.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/ARTICULO%20Salir%20del%20modo%20procrastinacion%20con%20metodo%20primer%20paso%2C%20te%20lo%20explico.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>👁️ Ver Artículo Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 5: Artículo Romina Lorena Montiel -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf">PDF</div>
+                                        <div class="doc-meta">
+                                            <h5>Artículo: Lic. Romina Lorena Montiel</h5>
+                                            <span>Documento Oficial • PDF</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Manifiesto reflexivo sobre autoliderazgo y gestión de energía para mujeres que lideran negocios.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/ARTICULO%20ROMINA%20LORENA%20MONTIEL.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>👁️ Ver Documento Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PANEL 1: CLASE 1 -->
+                <div class="folder-panel" id="panel-clase1" style="display: none;">
+                    <div class="folder-active-banner">
+                        <div class="active-folder-header">
+                            <span class="big-icon">📂</span>
+                            <div>
+                                <h3>CARPETA: CLASE 1 - EMPRENDER CONSCIENTEMENTE</h3>
+                                <p>Rompe el techo de cristal, entrena tu mentalidad de empresaria y construye bases sólidas de negocio.</p>
+                            </div>
+                        </div>
+                        <div class="folder-materials-count">
+                            <span class="material-chip chip-video">🎬 3 Videos Grabados</span>
+                            <span class="material-chip chip-docs">📄 4 Materiales Online</span>
+                        </div>
+                    </div>
+
+                    <div class="folder-pillars-grid">
+                        <!-- 1. Video Player Real -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎬</span>
+                                    <span id="title-video-clase1">1. Video Clase: ¿Qué es ser una Emprendedora Consciente?</span>
+                                </div>
+                                <span class="pillar-badge">Video Real MP4</span>
+                            </div>
+                            <div class="folder-video-screen">
+                                <video id="videoElement-clase1" controls preload="none" poster="/miniatura_clase1.png?v=2">
+                                    <source src="/videos/CLASE%201%20Emprender%20Conscientemente/3.%C2%BFQU%C3%89%20ES%20SER%20UNA%20EMPRENDEDORA%20CONSCIENTE.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Selector de videos de la Clase 1 -->
+                            <div class="video-playlist-bar">
+                                <span class="playlist-label">Opciones de Video:</span>
+                                <button class="playlist-btn active" onclick="switchFolderVideo('clase1', '/videos/CLASE%201%20Emprender%20Conscientemente/3.%C2%BFQU%C3%89%20ES%20SER%20UNA%20EMPRENDEDORA%20CONSCIENTE.mp4', '1. Video: ¿Qué es ser una Emprendedora Consciente?', this, '/miniatura_clase1.png?v=2')">
+                                    ▶ 1. Emprendedora Consciente (214 MB)
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase1', '/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%201%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '2. Clase 1 en Vivo - Parte 1', this)">
+                                    ▶ 2. Clase 1 en Vivo - Parte 1
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase1', '/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%202%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '3. Clase 1 en Vivo - Parte 2', this)">
+                                    ▶ 3. Clase 1 en Vivo - Parte 2
+                                </button>
+                            </div>
+                            <div class="video-description-box" id="desc-video-clase1">
+                                💡 <strong>Contenido de la Clase:</strong> Rompe con la culpa de cobrar, define tu postura ante el cliente y establece las bases para escalar tu negocio con mentalidad de líder.
+                            </div>
+                        </div>
+
+                        <!-- 2. Materiales Online de la Clase 1 (Solo Visualización) -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>📄</span>
+                                    <span>2. Materiales de la Clase 1</span>
+                                </div>
+                                <span class="pillar-badge">Lectura y Visualización Online</span>
+                            </div>
+                            <div class="downloads-grid">
+                                <!-- Doc 1: Introducción Escrita Clase 1 -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-docx">DOCX</div>
+                                        <div class="doc-meta">
+                                            <h5>Introducción Escrita Clase 1</h5>
+                                            <span>Lectura Online • Fundamento</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Texto preparatorio de Romina: de mentalidad emprendedora a empresaria consciente.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/clase1_emprender_conscientemente/INTRO_ESCRITA_CLASE_1.html" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 2: PDF Workbook Oficial (Solo Lectura Online) -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf">PDF</div>
+                                        <div class="doc-meta">
+                                            <h5>Workbook Oficial: Emprender Conscientemente</h5>
+                                            <span>PDF Oficial • Lectura Online</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Cuaderno de trabajo paso a paso: ejercicios de diagnóstico, visión de negocio y autoliderazgo.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente_Oficial.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>👁️ Ver Workbook Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 3: Workbook Activa tu Mentalidad (Solo Lectura Online) -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf">PDF</div>
+                                        <div class="doc-meta">
+                                            <h5>Activa tu Mentalidad de Negocios</h5>
+                                            <span>Workbook PDF • Lectura Online</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Guía profunda de transformación mental para pasar de autoempleada a empresaria.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/videos/CLASE%201%20Emprender%20Conscientemente/woorkBook%20ACTIVA%20TU%20MENTALIDAD%20DE%20NEGOCIOS.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>👁️ Ver Guía Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 4: Presentación Diapositivas PPTX (Visualizador Web Online sin descarga) -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pptx">PPTX</div>
+                                        <div class="doc-meta">
+                                            <h5>Presentación Clase 1 (Diapositivas)</h5>
+                                            <span>Visualizador Web Online</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Diapositivas completas proyectadas por Romina. Navega las láminas interactivamente sin descargar.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/clase1_emprender_conscientemente/Presentacion_Clase_1_Interactiva.html" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>🚀 Ver Presentación Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PANEL: DESAFÍOS Y RETOS DE ACCIÓN -->
+                <div class="folder-panel" id="panel-desafios" style="display: none;">
+                    <div class="folder-active-banner">
+                        <div class="active-folder-header">
+                            <span class="big-icon">🎯</span>
+                            <div>
+                                <h3>CARPETA: DESAFÍOS Y RETOS DE ACCIÓN</h3>
+                                <p>Retos prácticos de la comunidad ordenados paso a paso: escucha primero los lineamientos de Romina y luego mira los videos de aplicación de tus compañeras.</p>
+                            </div>
+                        </div>
+                        <div class="folder-materials-count">
+                            <span class="material-chip chip-audio">🎙️ 3 Audios de Lineamientos</span>
+                            <span class="material-chip chip-video">🎬 6 Videos de Alumnas</span>
+                            <span class="material-chip chip-docs">🌟 Desafíos 1, 2 y 3</span>
+                        </div>
+                    </div>
+
+                    <div class="folder-pillars-grid">
+                        <!-- ================================================================= -->
+                        <!-- DESAFÍO 1: ME PRESENTO Y CUENTO A MI MERCADO LO QUE HAGO -->
+                        <!-- ================================================================= -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎯</span>
+                                    <span>DESAFÍO 1: Me presento y cuento a mi mercado lo que hago</span>
+                                </div>
+                                <span class="pillar-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.3);">Desafío 1 • Audio + Videos</span>
+                            </div>
+
+                            <!-- ARRIBA: Audio que habla de los lineamientos del reto -->
+                            <div class="audio-player-box" style="margin-bottom: 1.5rem; border-left: 4px solid var(--gold);">
+                                <div class="audio-track-info">
+                                    <div class="track-details">
+                                        <div class="podcast-cover-icon">📋</div>
+                                        <div class="track-title-box">
+                                            <h4>Lineamientos Oficiales del Desafío 1</h4>
+                                            <p>Por Lic. Romina Lorena Montiel • Audio Guía de Lineamientos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <audio controls class="real-audio-element">
+                                    <source src="/videos/DESAFIOS/RETOS/DESAFIO%201%20me%20presento%20y%20cuento%20a%20mi%20mercado%20lo%20que%20hago/LINEAMIENTOS%20DESAFIO%201.mpeg" type="audio/mpeg">
+                                </audio>
+                            </div>
+
+                            <!-- ABAJO: Videos del reto -->
+                            <div class="folder-video-screen">
+                                <video id="videoElement-desafio1" controls preload="none" poster="/banner_modo_lider.png">
+                                    <source src="/videos/DESAFIOS/RETOS/DESAFIO%201%20me%20presento%20y%20cuento%20a%20mi%20mercado%20lo%20que%20hago/PRESENTACION%20DE%20UN%20EMPRENDIMIENTO%20MAIRA%20TRAUB.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-playlist-bar">
+                                <span class="playlist-label">Videos del Desafío 1:</span>
+                                <button class="playlist-btn active" onclick="switchFolderVideo('desafio1', '/videos/DESAFIOS/RETOS/DESAFIO%201%20me%20presento%20y%20cuento%20a%20mi%20mercado%20lo%20que%20hago/PRESENTACION%20DE%20UN%20EMPRENDIMIENTO%20MAIRA%20TRAUB.mp4', '1. Presentación de un Emprendimiento: Maira Traub', this)">
+                                    ▶ 1. Maira Traub: Presentación
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('desafio1', '/videos/DESAFIOS/RETOS/DESAFIO%201%20me%20presento%20y%20cuento%20a%20mi%20mercado%20lo%20que%20hago/%F0%9F%92%8B%20FULL%20LIPSColor%2C%20definici%C3%B3n%20y%20armon%C3%ADa%20para%20realzar%20la%20belleza%20natural%20de%20tus%20labios%20BY%20maira%20traub.mp4', '2. Caso Full Lips: Color, Definición y Armonía (Maira Traub)', this)">
+                                    ▶ 2. Maira Traub: Caso Full Lips
+                                </button>
+                            </div>
+                            <div class="video-description-box" id="desc-video-desafio1">
+                                💡 <strong>Objetivo del Desafío 1:</strong> Romper la timidez frente a la cámara y contar de manera auténtica quién sos, a quién ayudás y cuál es el diferencial de tu propuesta.
+                            </div>
+                        </div>
+
+                        <!-- ================================================================= -->
+                        <!-- DESAFÍO 2: HABLO DE MI O DE MIS PRODUCTOS O SERVICIOS -->
+                        <!-- ================================================================= -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎯</span>
+                                    <span>DESAFÍO 2: Hablo de mí o de mis productos o servicios</span>
+                                </div>
+                                <span class="pillar-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.3);">Desafío 2 • Audio + Videos</span>
+                            </div>
+
+                            <!-- ARRIBA: Audio que habla de los lineamientos del reto -->
+                            <div class="audio-player-box" style="margin-bottom: 1.5rem; border-left: 4px solid var(--gold);">
+                                <div class="audio-track-info">
+                                    <div class="track-details">
+                                        <div class="podcast-cover-icon">📋</div>
+                                        <div class="track-title-box">
+                                            <h4>Lineamientos Oficiales del Desafío 2</h4>
+                                            <p>Por Lic. Romina Lorena Montiel • Audio Guía de Lineamientos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <audio controls class="real-audio-element">
+                                    <source src="/videos/DESAFIOS/RETOS/DESAFIO%202%20hablo%20de%20mi%20o%20de%20mis%20productos%20o%20servicios/lINEAMIENTOS%20DESAFIO%202.mpeg" type="audio/mpeg">
+                                </audio>
+                            </div>
+
+                            <!-- ABAJO: Videos del reto -->
+                            <div class="folder-video-screen">
+                                <video id="videoElement-desafio2" controls preload="none" poster="/banner_modo_lider.png">
+                                    <source src="/videos/DESAFIOS/RETOS/DESAFIO%202%20hablo%20de%20mi%20o%20de%20mis%20productos%20o%20servicios/ME%20PRESENTO%20Y%20COMUNICO%20LO%20QUE%20HAGO%20NATALIA%20BLANCO.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-playlist-bar">
+                                <span class="playlist-label">Videos del Desafío 2:</span>
+                                <button class="playlist-btn active" onclick="switchFolderVideo('desafio2', '/videos/DESAFIOS/RETOS/DESAFIO%202%20hablo%20de%20mi%20o%20de%20mis%20productos%20o%20servicios/ME%20PRESENTO%20Y%20COMUNICO%20LO%20QUE%20HAGO%20NATALIA%20BLANCO.mp4', '1. Me presento y comunico lo que hago: Natalia Blanco', this)">
+                                    ▶ 1. Natalia Blanco: Presentación y Valor
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('desafio2', '/videos/DESAFIOS/RETOS/DESAFIO%202%20hablo%20de%20mi%20o%20de%20mis%20productos%20o%20servicios/PRIMER%20PASO%20QUE%20DAMOS%20JUNTAS%20EN%20MIS%20SESIONES%20DE%20DECODIFICACI%C3%93N%20INTEGRAL%20JESI%20POZZER.mp4', '2. Primer paso en sesiones de Decodificación Integral: Jesi Pozzer', this)">
+                                    ▶ 2. Jesi Pozzer: Decodificación Integral
+                                </button>
+                            </div>
+                            <div class="video-description-box" id="desc-video-desafio2">
+                                💡 <strong>Objetivo del Desafío 2:</strong> Profundizar en tu propuesta de valor, mostrando la experiencia y los resultados concretos que tus clientes alcanzan a través de tus servicios o productos.
+                            </div>
+                        </div>
+
+                        <!-- ================================================================= -->
+                        <!-- DESAFÍO 3: HAGO UN REEL DE LO QUE NECESITO COMUNICAR A MIS CLIENTES HOY -->
+                        <!-- ================================================================= -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎯</span>
+                                    <span>DESAFÍO 3: Hago un reel de lo que necesito comunicar a mis clientes hoy</span>
+                                </div>
+                                <span class="pillar-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.3);">Desafío 3 • Audio + Videos</span>
+                            </div>
+
+                            <!-- ARRIBA: Audio que habla de los lineamientos del reto -->
+                            <div class="audio-player-box" style="margin-bottom: 1.5rem; border-left: 4px solid var(--gold);">
+                                <div class="audio-track-info">
+                                    <div class="track-details">
+                                        <div class="podcast-cover-icon">📋</div>
+                                        <div class="track-title-box">
+                                            <h4>Lineamientos Oficiales del Desafío 3</h4>
+                                            <p>Por Lic. Romina Lorena Montiel • Audio Guía de Lineamientos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <audio controls class="real-audio-element">
+                                    <source src="/videos/DESAFIOS/RETOS/DESAF%C3%8DO%203%20hago%20un%20reel%20de%20lo%20que%20necesito%20comunicar%20a%20mis%20clientes%20hoy/Lineamientos%20del%20desafio%203.ogg" type="audio/ogg">
+                                </audio>
+                            </div>
+
+                            <!-- ABAJO: Videos del reto -->
+                            <div class="folder-video-screen">
+                                <video id="videoElement-desafio3" controls preload="none" poster="/banner_modo_lider.png">
+                                    <source src="/videos/DESAFIOS/RETOS/DESAF%C3%8DO%203%20hago%20un%20reel%20de%20lo%20que%20necesito%20comunicar%20a%20mis%20clientes%20hoy/EXPRESAR%20LO%20QUE%20MI%20EMPRENDIMIENTO%20ME%20VA%20EXIGIENDO%20Y%20COMO%20ME%20SIENTO.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-playlist-bar">
+                                <span class="playlist-label">Videos del Desafío 3:</span>
+                                <button class="playlist-btn active" onclick="switchFolderVideo('desafio3', '/videos/DESAFIOS/RETOS/DESAF%C3%8DO%203%20hago%20un%20reel%20de%20lo%20que%20necesito%20comunicar%20a%20mis%20clientes%20hoy/EXPRESAR%20LO%20QUE%20MI%20EMPRENDIMIENTO%20ME%20VA%20EXIGIENDO%20Y%20COMO%20ME%20SIENTO.mp4', '1. Expresar lo que mi emprendimiento me va exigiendo y cómo me siento', this)">
+                                    ▶ 1. Reel: Lo que el negocio me exige
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('desafio3', '/videos/DESAFIOS/RETOS/DESAF%C3%8DO%203%20hago%20un%20reel%20de%20lo%20que%20necesito%20comunicar%20a%20mis%20clientes%20hoy/QUITARLE%20LOS%20MIEDOS%20A%20MIS%20CLIENTES.mp4', '2. Quitarle los miedos a mis clientes', this)">
+                                    ▶ 2. Reel: Quitarle los miedos a mis clientes
+                                </button>
+                            </div>
+                            <div class="video-description-box" id="desc-video-desafio3">
+                                💡 <strong>Objetivo del Desafío 3:</strong> Vencer el bloqueo técnico de crear Reels, comunicar sin filtros lo que tu negocio necesita transmitir y responder a las dudas y miedos de tus potenciales clientes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PANEL 5: TESTIMONIOS -->
+                <div class="folder-panel" id="panel-testimonios" style="display: none;">
+                    <div class="folder-active-banner">
+                        <div class="active-folder-header">
+                            <span class="big-icon">📂</span>
+                            <div>
+                                <h3>CARPETA: TESTIMONIOS Y CASOS DE ÉXITO</h3>
+                                <p>Historias reales de alumnas que aplicaron el Método Modo Líder y transformaron sus negocios.</p>
+                            </div>
+                        </div>
+                        <div class="folder-materials-count">
+                            <span class="material-chip chip-video">🎬 2 Videos Testimonio Real</span>
+                            <span class="material-chip chip-audio">🎙️ 1 Audio Testimonio</span>
+                        </div>
+                    </div>
+
+                    <div class="folder-pillars-grid">
+                        <!-- 1. Video Real Analia Soto -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎬</span>
+                                    <span>1. Video Testimonio: Analía Soto</span>
+                                </div>
+                                <span class="pillar-badge">Video Real MP4 • 147 MB</span>
+                            </div>
+                            <div class="folder-video-screen">
+                                <video id="videoElement-testimonios" controls preload="metadata" poster="/miniatura_testimonio_analiasoto.png?v=2">
+                                    <source src="/videos/TESTIMONIOS/TESTIMONIO%20ANALIA%20SOTO%20COACH.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-description-box">
+                                💡 <strong>Testimonio Real:</strong> Analía Soto comparte el por qué y para qué desea estar en este curso.
+                            </div>
+                        </div>
+
+                        <!-- 2. Video Real Jesica Pozzer -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎬</span>
+                                    <span>2. Video Testimonio: Jesica Pozzer</span>
+                                </div>
+                                <span class="pillar-badge">Video Real MP4 • 30 MB</span>
+                            </div>
+                            <div class="folder-video-screen">
+                                <video id="videoElement-testimonios-jesica" controls preload="metadata" poster="/miniatura_testimonio_jesicapozzer.png?v=2">
+                                    <source src="/videos/3%20TESTIMONIOS/Testimonio%20de%20Jesica%20Pozzer%20despues%20de%20escuchar%20el%20video%20sobre%20Procrastinaci%C3%B3n.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="video-description-box">
+                                💡 <strong>Testimonio Real:</strong> Jesica Pozzer comparte su experiencia y reflexión tras escuchar el video sobre cómo superar la procrastinación.
+                            </div>
+                        </div>
+
+                        <!-- 3. Audios de Alumnas -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎙️</span>
+                                    <span>3. Audio Testimonio: Marisol</span>
+                                </div>
+                                <span class="pillar-badge">Audio Real MP3</span>
+                            </div>
+                            <!-- Audio: Marisol -->
+                            <div class="audio-player-box">
+                                <div class="audio-track-info">
+                                    <div class="track-details">
+                                        <div class="podcast-cover-icon">🎙️</div>
+                                        <div class="track-title-box">
+                                            <h4>Mensaje de Marisol: Cómo me sentí después de experimentar la primera clase del curso</h4>
+                                            <p>Marisol • Alumna Método Modo Líder • Grabación de Voz</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <audio controls class="real-audio-element">
+                                    <source src="/videos/3%20TESTIMONIOS/Testimonio%20Marisol%20luego%20de%20experimental%20la%20clase%20n%C3%BAmero%201.mp3" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: EXCLUSIVO CAMPUS MODO LIDER -->
+    <footer class="campus-footer">
+        <p class="signature">CAMPUS MODO LIDER • Lic. Romina Lorena Montiel</p>
+        <p>Espacio privado y confidencial para alumnas del Método Modo Líder.</p>
+        <p style="font-size: 0.72rem; color: #64748B; margin-top: 0.5rem;">
+            © 2026 Modo Líder. Todos los derechos reservados. Prohibida su distribución no autorizada.
+        </p>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT ENGINE -->
+    <script>
+        // Folder navigation
+        const folderIds = ['intro', 'procrastinacion', 'clase1', 'desafios', 'testimonios'];
+
+        function switchFolder(selectedId) {
+            folderIds.forEach(id => {
+                const tab = document.getElementById(`tab-${id}`);
+                const panel = document.getElementById(`panel-${id}`);
+                if (tab && panel) {
+                    if (id === selectedId) {
+                        tab.classList.add('active');
+                        panel.style.display = 'block';
+                    } else {
+                        tab.classList.remove('active');
+                        panel.style.display = 'none';
+                    }
+                }
+            });
+
+            // Smooth scroll to folder area
+            const carpetasSec = document.getElementById('carpetas');
+            if (carpetasSec) {
+                carpetasSec.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Switch video in welcome area
+        function changeWelcomeVideo(videoSrc, title, btnElement) {
+            const player = document.getElementById('welcomeVideoPlayer');
+            if (player) {
+                player.src = videoSrc;
+                player.play().catch(e => console.log('Autoplay prevented:', e));
+            }
+            // Update active pill button
+            const buttons = document.querySelectorAll('.video-theatre-box .playlist-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            if (btnElement) btnElement.classList.add('active');
+        }
+
+        // Switch video in specific folder panel
+        function switchFolderVideo(folderKey, videoSrc, title, btnElement, posterSrc) {
+            const player = document.getElementById(`videoElement-${folderKey}`);
+            const titleElem = document.getElementById(`title-video-${folderKey}`);
+            if (player) {
+                if (posterSrc) {
+                    player.poster = posterSrc;
+                }
+                player.src = videoSrc;
+                player.play().catch(e => console.log('Autoplay prevented:', e));
+            }
+            if (titleElem && title) {
+                titleElem.innerText = title;
+            }
+            // Update active button
+            const parentBar = btnElement ? btnElement.parentElement : null;
+            if (parentBar) {
+                const buttons = parentBar.querySelectorAll('.playlist-btn');
+                buttons.forEach(b => b.classList.remove('active'));
+                btnElement.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
