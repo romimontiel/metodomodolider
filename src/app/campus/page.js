@@ -1,4 +1,4 @@
-import CampusClient from './CampusClient';
+import { redirect } from 'next/navigation';
 
 export const metadata = {
   title: "CAMPUS MODO LIDER | Portal Exclusivo de Alumnas",
@@ -6,5 +6,5 @@ export const metadata = {
 };
 
 export default function CampusPage() {
-  return <CampusClient />;
+  redirect('/campus_modo_lider.html');
 }

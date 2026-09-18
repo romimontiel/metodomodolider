@@ -40,14 +40,22 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large files (>100MB)
+# large files (>90MB)
 mi historia.pdf
 public/videos/
 videos/
-*.mp4
-*.mpeg
+public/CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS/
+CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS/
 *.MOV
 *.avi
+
+# allow campus media folders
+!public/audios/
+!public/audios/**
+!public/videos_campus/
+!public/videos_campus/**
+!public/materiales/
+!public/materiales/**
 
 # private client consulting files
 /CLIENTES/

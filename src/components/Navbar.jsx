@@ -21,9 +21,9 @@ export default function Navbar() {
         <Link href="/curso" className="nav-link-item nav-link-curso">
           🎓 Info del Curso
         </Link>
-        <Link href="/campus" className="nav-link-item nav-link-campus">
+        <a href="/campus_modo_lider.html" className="nav-link-item nav-link-campus">
           🏛️ Campus Alumnas
-        </Link>
+        </a>
       </div>
     </nav>
   );
