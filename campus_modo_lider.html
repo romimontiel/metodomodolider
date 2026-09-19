@@ -1339,6 +1339,133 @@
             border-left: 3px solid #D4AF37;
         }
 
+        /* =========================================================
+           REEL & STORIES VERTICAL VIEWER (FORMATO INSTAGRAM 9:16)
+           ========================================================= */
+        .desafio-interactive-grid {
+            display: grid;
+            grid-template-columns: 1fr 330px;
+            gap: 2.2rem;
+            align-items: start;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 960px) {
+            .desafio-interactive-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .desafio-guide-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .desafio-reel-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Smartphone Mockup Frame for 9:16 Reels */
+        .reel-phone-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            background: #090D16;
+            border-radius: 40px;
+            padding: 12px;
+            border: 3px solid rgba(212, 175, 55, 0.45);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.45),
+                0 0 25px rgba(212, 175, 55, 0.15),
+                inset 0 0 15px rgba(255, 255, 255, 0.04);
+            margin: 0 auto;
+        }
+
+        .reel-phone-notch {
+            width: 90px;
+            height: 18px;
+            background: #020408;
+            border-radius: 20px;
+            margin: 4px auto 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .reel-phone-notch::before {
+            content: '';
+            width: 34px;
+            height: 4px;
+            background: #1E293B;
+            border-radius: 4px;
+        }
+
+        .reel-phone-notch::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #1E293B;
+            border-radius: 50%;
+        }
+
+        .reel-phone-screen {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: #000000;
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reel-phone-screen video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            background: #000000;
+            outline: none;
+        }
+
+        .reel-floating-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #F8FAFC;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 0.3rem 0.75rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .reel-floating-badge .reel-icon {
+            color: #E1306C;
+        }
+
+        .reel-phone-home-bar {
+            width: 100px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 4px;
+            margin: 10px auto 2px auto;
+        }
+
         /* PILLAR 2: AUDIO / PODCAST PLAYER */
         .audio-player-box {
             background: #FFFFFF;
@@ -2990,44 +3117,63 @@
                             <div class="pillar-header">
                                 <div class="pillar-title">
                                     <span>🎯</span>
-                                    <span>DESAFÍO 1: Me presento y cuento a mi mercado lo que hago</span>
+                                    <span id="title-video-desafio1">DESAFÍO 1: Me presento y cuento a mi mercado lo que hago</span>
                                 </div>
-                                <span class="pillar-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.3);">Desafío 1 • Audio + Videos</span>
+                                <span class="pillar-badge" style="background: rgba(225, 48, 108, 0.15); color: #E1306C; border: 1px solid rgba(225, 48, 108, 0.3);">📱 Formato Reel Instagram (9:16)</span>
                             </div>
 
-                            <!-- ARRIBA: Audio que habla de los lineamientos del reto -->
-                            <div class="audio-player-box" style="margin-bottom: 1.5rem; border-left: 4px solid var(--gold);">
-                                <div class="audio-track-info">
-                                    <div class="track-details">
-                                        <div class="podcast-cover-icon">📋</div>
-                                        <div class="track-title-box">
-                                            <h4>Lineamientos Oficiales del Desafío 1</h4>
-                                            <p>Por Lic. Romina Lorena Montiel • Audio Guía de Lineamientos</p>
+                            <div class="desafio-interactive-grid">
+                                <!-- Columna Izquierda: Audio Guía + Selector + Explicación -->
+                                <div class="desafio-guide-col">
+                                    <!-- Audio Lineamientos -->
+                                    <div class="audio-player-box" style="border-left: 4px solid var(--gold);">
+                                        <div class="audio-track-info">
+                                            <div class="track-details">
+                                                <div class="podcast-cover-icon">🎙️</div>
+                                                <div class="track-title-box">
+                                                    <h4>Paso 1: Escucha los Lineamientos del Desafío 1</h4>
+                                                    <p>Por Lic. Romina Lorena Montiel • Audio Guía Oficial</p>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <audio controls class="real-audio-element">
+                                            <source src="/audios/lineamientos_desafio_1.mpeg" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+
+                                    <!-- Selector de Reels de alumnas -->
+                                    <div class="video-playlist-bar" style="margin-top: 0.2rem;">
+                                        <span class="playlist-label">Reels del Desafío 1:</span>
+                                        <button class="playlist-btn active" onclick="switchFolderVideo('desafio1', '/videos_campus/desafio1_maira_traub.mp4', '1. Presentación de un Emprendimiento: Maira Traub', this)">
+                                            ▶ 1. Maira Traub: Presentación
+                                        </button>
+                                        <button class="playlist-btn" onclick="switchFolderVideo('desafio1', '/videos_campus/desafio1_fulllips.mp4', '2. Caso Full Lips: Color, Definición y Armonía (Maira Traub)', this)">
+                                            ▶ 2. Maira Traub: Caso Full Lips
+                                        </button>
+                                    </div>
+
+                                    <!-- Caja de Objetivo -->
+                                    <div class="video-description-box" id="desc-video-desafio1" style="margin-top: 0;">
+                                        💡 <strong>Objetivo del Desafío 1:</strong> Romper la timidez frente a la cámara y contar de manera auténtica quién sos, a quién ayudás y cuál es el diferencial de tu propuesta en formato Reel / Historia vertical.
                                     </div>
                                 </div>
-                                <audio controls class="real-audio-element">
-                                    <source src="/audios/lineamientos_desafio_1.mpeg" type="audio/mpeg">
-                                </audio>
-                            </div>
 
-                            <!-- ABAJO: Videos del reto -->
-                            <div class="folder-video-screen">
-                                <video id="videoElement-desafio1" controls preload="none" poster="/banner_modo_lider.png">
-                                    <source src="/videos_campus/desafio1_maira_traub.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="video-playlist-bar">
-                                <span class="playlist-label">Videos del Desafío 1:</span>
-                                <button class="playlist-btn active" onclick="switchFolderVideo('desafio1', '/videos_campus/desafio1_maira_traub.mp4', '1. Presentación de un Emprendimiento: Maira Traub', this)">
-                                    ▶ 1. Maira Traub: Presentación
-                                </button>
-                                <button class="playlist-btn" onclick="switchFolderVideo('desafio1', '/videos_campus/desafio1_fulllips.mp4', '2. Caso Full Lips: Color, Definición y Armonía (Maira Traub)', this)">
-                                    ▶ 2. Maira Traub: Caso Full Lips
-                                </button>
-                            </div>
-                            <div class="video-description-box" id="desc-video-desafio1">
-                                💡 <strong>Objetivo del Desafío 1:</strong> Romper la timidez frente a la cámara y contar de manera auténtica quién sos, a quién ayudás y cuál es el diferencial de tu propuesta.
+                                <!-- Columna Derecha: Smartphone Mockup con Video Vertical 9:16 -->
+                                <div class="desafio-reel-col">
+                                    <div class="reel-phone-wrapper">
+                                        <div class="reel-phone-notch"></div>
+                                        <div class="reel-phone-screen">
+                                            <div class="reel-floating-badge">
+                                                <span class="reel-icon">▶</span>
+                                                <span>Reel 9:16</span>
+                                            </div>
+                                            <video id="videoElement-desafio1" controls controlsList="nodownload" oncontextmenu="return false;" preload="metadata">
+                                                <source src="/videos_campus/desafio1_maira_traub.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                        <div class="reel-phone-home-bar"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -3038,44 +3184,63 @@
                             <div class="pillar-header">
                                 <div class="pillar-title">
                                     <span>🎯</span>
-                                    <span>DESAFÍO 2: Hablo de mí o de mis productos o servicios</span>
+                                    <span id="title-video-desafio2">DESAFÍO 2: Hablo de mí o de mis productos o servicios</span>
                                 </div>
-                                <span class="pillar-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.3);">Desafío 2 • Audio + Videos</span>
+                                <span class="pillar-badge" style="background: rgba(225, 48, 108, 0.15); color: #E1306C; border: 1px solid rgba(225, 48, 108, 0.3);">📱 Formato Reel Instagram (9:16)</span>
                             </div>
 
-                            <!-- ARRIBA: Audio que habla de los lineamientos del reto -->
-                            <div class="audio-player-box" style="margin-bottom: 1.5rem; border-left: 4px solid var(--gold);">
-                                <div class="audio-track-info">
-                                    <div class="track-details">
-                                        <div class="podcast-cover-icon">📋</div>
-                                        <div class="track-title-box">
-                                            <h4>Lineamientos Oficiales del Desafío 2</h4>
-                                            <p>Por Lic. Romina Lorena Montiel • Audio Guía de Lineamientos</p>
+                            <div class="desafio-interactive-grid">
+                                <!-- Columna Izquierda: Audio Guía + Selector + Explicación -->
+                                <div class="desafio-guide-col">
+                                    <!-- Audio Lineamientos -->
+                                    <div class="audio-player-box" style="border-left: 4px solid var(--gold);">
+                                        <div class="audio-track-info">
+                                            <div class="track-details">
+                                                <div class="podcast-cover-icon">🎙️</div>
+                                                <div class="track-title-box">
+                                                    <h4>Paso 1: Escucha los Lineamientos del Desafío 2</h4>
+                                                    <p>Por Lic. Romina Lorena Montiel • Audio Guía Oficial</p>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <audio controls class="real-audio-element">
+                                            <source src="/audios/lineamientos_desafio_2.mpeg" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+
+                                    <!-- Selector de Reels de alumnas -->
+                                    <div class="video-playlist-bar" style="margin-top: 0.2rem;">
+                                        <span class="playlist-label">Reels del Desafío 2:</span>
+                                        <button class="playlist-btn active" onclick="switchFolderVideo('desafio2', '/videos_campus/desafio2_natalia_blanco.mp4', '1. Me presento y comunico lo que hago: Natalia Blanco', this)">
+                                            ▶ 1. Natalia Blanco: Presentación y Valor
+                                        </button>
+                                        <button class="playlist-btn" onclick="switchFolderVideo('desafio2', '/videos_campus/desafio2_jesi_pozzer.mp4', '2. Primer paso en sesiones de Decodificación Integral: Jesi Pozzer', this)">
+                                            ▶ 2. Jesi Pozzer: Decodificación Integral
+                                        </button>
+                                    </div>
+
+                                    <!-- Caja de Objetivo -->
+                                    <div class="video-description-box" id="desc-video-desafio2" style="margin-top: 0;">
+                                        💡 <strong>Objetivo del Desafío 2:</strong> Profundizar en tu propuesta de valor en formato Reel, mostrando la experiencia y los resultados concretos que tus clientes alcanzan a través de tus servicios o productos.
                                     </div>
                                 </div>
-                                <audio controls class="real-audio-element">
-                                    <source src="/audios/lineamientos_desafio_2.mpeg" type="audio/mpeg">
-                                </audio>
-                            </div>
 
-                            <!-- ABAJO: Videos del reto -->
-                            <div class="folder-video-screen">
-                                <video id="videoElement-desafio2" controls preload="none" poster="/banner_modo_lider.png">
-                                    <source src="/videos_campus/desafio2_natalia_blanco.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="video-playlist-bar">
-                                <span class="playlist-label">Videos del Desafío 2:</span>
-                                <button class="playlist-btn active" onclick="switchFolderVideo('desafio2', '/videos_campus/desafio2_natalia_blanco.mp4', '1. Me presento y comunico lo que hago: Natalia Blanco', this)">
-                                    ▶ 1. Natalia Blanco: Presentación y Valor
-                                </button>
-                                <button class="playlist-btn" onclick="switchFolderVideo('desafio2', '/videos_campus/desafio2_jesi_pozzer.mp4', '2. Primer paso en sesiones de Decodificación Integral: Jesi Pozzer', this)">
-                                    ▶ 2. Jesi Pozzer: Decodificación Integral
-                                </button>
-                            </div>
-                            <div class="video-description-box" id="desc-video-desafio2">
-                                💡 <strong>Objetivo del Desafío 2:</strong> Profundizar en tu propuesta de valor, mostrando la experiencia y los resultados concretos que tus clientes alcanzan a través de tus servicios o productos.
+                                <!-- Columna Derecha: Smartphone Mockup con Video Vertical 9:16 -->
+                                <div class="desafio-reel-col">
+                                    <div class="reel-phone-wrapper">
+                                        <div class="reel-phone-notch"></div>
+                                        <div class="reel-phone-screen">
+                                            <div class="reel-floating-badge">
+                                                <span class="reel-icon">▶</span>
+                                                <span>Reel 9:16</span>
+                                            </div>
+                                            <video id="videoElement-desafio2" controls controlsList="nodownload" oncontextmenu="return false;" preload="metadata">
+                                                <source src="/videos_campus/desafio2_natalia_blanco.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                        <div class="reel-phone-home-bar"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -3086,44 +3251,63 @@
                             <div class="pillar-header">
                                 <div class="pillar-title">
                                     <span>🎯</span>
-                                    <span>DESAFÍO 3: Hago un reel de lo que necesito comunicar a mis clientes hoy</span>
+                                    <span id="title-video-desafio3">DESAFÍO 3: Hago un reel de lo que necesito comunicar hoy</span>
                                 </div>
-                                <span class="pillar-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.3);">Desafío 3 • Audio + Videos</span>
+                                <span class="pillar-badge" style="background: rgba(225, 48, 108, 0.15); color: #E1306C; border: 1px solid rgba(225, 48, 108, 0.3);">📱 Formato Reel Instagram (9:16)</span>
                             </div>
 
-                            <!-- ARRIBA: Audio que habla de los lineamientos del reto -->
-                            <div class="audio-player-box" style="margin-bottom: 1.5rem; border-left: 4px solid var(--gold);">
-                                <div class="audio-track-info">
-                                    <div class="track-details">
-                                        <div class="podcast-cover-icon">📋</div>
-                                        <div class="track-title-box">
-                                            <h4>Lineamientos Oficiales del Desafío 3</h4>
-                                            <p>Por Lic. Romina Lorena Montiel • Audio Guía de Lineamientos</p>
+                            <div class="desafio-interactive-grid">
+                                <!-- Columna Izquierda: Audio Guía + Selector + Explicación -->
+                                <div class="desafio-guide-col">
+                                    <!-- Audio Lineamientos -->
+                                    <div class="audio-player-box" style="border-left: 4px solid var(--gold);">
+                                        <div class="audio-track-info">
+                                            <div class="track-details">
+                                                <div class="podcast-cover-icon">🎙️</div>
+                                                <div class="track-title-box">
+                                                    <h4>Paso 1: Escucha los Lineamientos del Desafío 3</h4>
+                                                    <p>Por Lic. Romina Lorena Montiel • Audio Guía Oficial</p>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <audio controls class="real-audio-element">
+                                            <source src="/audios/lineamientos_desafio_3.ogg" type="audio/ogg">
+                                        </audio>
+                                    </div>
+
+                                    <!-- Selector de Reels de alumnas -->
+                                    <div class="video-playlist-bar" style="margin-top: 0.2rem;">
+                                        <span class="playlist-label">Reels del Desafío 3:</span>
+                                        <button class="playlist-btn active" onclick="switchFolderVideo('desafio3', '/videos_campus/desafio3_expresar_negocio.mp4', '1. Expresar lo que mi emprendimiento me va exigiendo y cómo me siento', this)">
+                                            ▶ 1. Reel: Lo que el negocio me exige
+                                        </button>
+                                        <button class="playlist-btn" onclick="switchFolderVideo('desafio3', '/videos_campus/desafio3_quitar_miedos.mp4', '2. Quitarle los miedos a mis clientes', this)">
+                                            ▶ 2. Reel: Quitarle los miedos a mis clientes
+                                        </button>
+                                    </div>
+
+                                    <!-- Caja de Objetivo -->
+                                    <div class="video-description-box" id="desc-video-desafio3" style="margin-top: 0;">
+                                        💡 <strong>Objetivo del Desafío 3:</strong> Vencer el bloqueo técnico de crear Reels, comunicar sin filtros lo que tu negocio necesita transmitir y responder a las dudas y miedos de tus potenciales clientes.
                                     </div>
                                 </div>
-                                <audio controls class="real-audio-element">
-                                    <source src="/audios/lineamientos_desafio_3.ogg" type="audio/ogg">
-                                </audio>
-                            </div>
 
-                            <!-- ABAJO: Videos del reto -->
-                            <div class="folder-video-screen">
-                                <video id="videoElement-desafio3" controls preload="none" poster="/banner_modo_lider.png">
-                                    <source src="/videos_campus/desafio3_expresar_negocio.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="video-playlist-bar">
-                                <span class="playlist-label">Videos del Desafío 3:</span>
-                                <button class="playlist-btn active" onclick="switchFolderVideo('desafio3', '/videos_campus/desafio3_expresar_negocio.mp4', '1. Expresar lo que mi emprendimiento me va exigiendo y cómo me siento', this)">
-                                    ▶ 1. Reel: Lo que el negocio me exige
-                                </button>
-                                <button class="playlist-btn" onclick="switchFolderVideo('desafio3', '/videos_campus/desafio3_quitar_miedos.mp4', '2. Quitarle los miedos a mis clientes', this)">
-                                    ▶ 2. Reel: Quitarle los miedos a mis clientes
-                                </button>
-                            </div>
-                            <div class="video-description-box" id="desc-video-desafio3">
-                                💡 <strong>Objetivo del Desafío 3:</strong> Vencer el bloqueo técnico de crear Reels, comunicar sin filtros lo que tu negocio necesita transmitir y responder a las dudas y miedos de tus potenciales clientes.
+                                <!-- Columna Derecha: Smartphone Mockup con Video Vertical 9:16 -->
+                                <div class="desafio-reel-col">
+                                    <div class="reel-phone-wrapper">
+                                        <div class="reel-phone-notch"></div>
+                                        <div class="reel-phone-screen">
+                                            <div class="reel-floating-badge">
+                                                <span class="reel-icon">▶</span>
+                                                <span>Reel 9:16</span>
+                                            </div>
+                                            <video id="videoElement-desafio3" controls controlsList="nodownload" oncontextmenu="return false;" preload="metadata">
+                                                <source src="/videos_campus/desafio3_expresar_negocio.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                        <div class="reel-phone-home-bar"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
