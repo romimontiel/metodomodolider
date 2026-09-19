@@ -1786,6 +1786,482 @@
             display: inline-block;
         }
 
+        /* ==========================================================
+           INTERACTIVE COMMUNITY TESTIMONIALS SPEECH BUBBLES WALL
+           ========================================================== */
+        .community-dialogs-section {
+            margin-top: 3.5rem;
+            padding-top: 2.5rem;
+            border-top: 2px dashed rgba(212, 175, 55, 0.35);
+        }
+
+        .dialogs-header-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .dialogs-header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .dialogs-title-group h3 {
+            font-size: 1.45rem;
+            font-weight: 900;
+            color: #0E121B;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 0.4rem;
+        }
+
+        .dialogs-title-group p {
+            font-size: 0.88rem;
+            color: #64748B;
+            max-width: 700px;
+            line-height: 1.5;
+        }
+
+        .dialogs-stats-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.04));
+            border: 1.5px solid rgba(212, 175, 55, 0.35);
+            padding: 0.45rem 1rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: #D4AF37;
+        }
+
+        /* GRID OF SPEECH BUBBLE CARDS */
+        .dialogs-masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.6rem;
+            align-items: start;
+        }
+
+        .dialog-bubble-card {
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+            position: relative;
+            animation: cardAppear 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dialog-avatar-wrap {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .dialog-avatar-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.15rem;
+            color: #FFFFFF;
+            border: 2.5px solid #D4AF37;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+        }
+
+        .dialog-avatar-badge {
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            width: 20px;
+            height: 20px;
+            background: #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            border: 1.5px solid #FFFFFF;
+        }
+
+        /* SPEECH BUBBLE BODY */
+        .speech-bubble-body {
+            flex: 1;
+            background: #FFFFFF;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 4px 20px 20px 20px;
+            padding: 1.25rem 1.35rem;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .speech-bubble-body::before {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: -10px;
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-right: 10px solid #FFFFFF;
+            z-index: 2;
+        }
+
+        .speech-bubble-body::after {
+            content: '';
+            position: absolute;
+            top: 13px;
+            left: -12px;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 11px solid #E2E8F0;
+            z-index: 1;
+        }
+
+        .speech-bubble-body:hover {
+            transform: translateY(-3px);
+            border-color: #D4AF37;
+            box-shadow: 0 12px 28px rgba(212, 175, 55, 0.15);
+        }
+
+        .speech-bubble-body:hover::after {
+            border-right-color: #D4AF37;
+        }
+
+        .speech-bubble-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 0.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dialog-student-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .dialog-name-row {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .dialog-student-name {
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: #0E121B;
+            line-height: 1.2;
+        }
+
+        .dialog-verified-tag {
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 0.15rem 0.45rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
+        .dialog-student-role {
+            font-size: 0.76rem;
+            color: #64748B;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .dialog-insta-pill {
+            color: #E1306C;
+            font-weight: 700;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .dialog-insta-pill:hover {
+            text-decoration: underline;
+            opacity: 0.85;
+        }
+
+        .dialog-tag-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            background: rgba(212, 175, 55, 0.12);
+            color: #B45309;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            white-space: nowrap;
+        }
+
+        .dialog-message-text {
+            font-size: 0.88rem;
+            color: #334155;
+            line-height: 1.55;
+            margin: 0.65rem 0 1rem 0;
+            position: relative;
+        }
+
+        .dialog-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.75rem;
+            border-top: 1px solid #F1F5F9;
+            gap: 0.5rem;
+        }
+
+        /* LIKE BUTTON */
+        .btn-like-dialog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: #F8FAFC;
+            border: 1.5px solid #E2E8F0;
+            color: #64748B;
+            padding: 0.4rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+        }
+
+        .btn-like-dialog:hover {
+            border-color: #E1306C;
+            color: #E1306C;
+            background: rgba(225, 48, 108, 0.08);
+            transform: scale(1.05);
+        }
+
+        .btn-like-dialog.is-liked {
+            background: linear-gradient(135deg, #E1306C 0%, #C13584 100%);
+            border-color: transparent;
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(225, 48, 108, 0.35);
+        }
+
+        .btn-like-dialog.is-liked .like-heart-icon {
+            animation: heartPop 0.4s ease-out;
+            transform: scale(1.15);
+        }
+
+        @keyframes heartPop {
+            0% { transform: scale(1); }
+            40% { transform: scale(1.4); }
+            100% { transform: scale(1.15); }
+        }
+
+        .dialog-timestamp {
+            font-size: 0.7rem;
+            color: #94A3B8;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* CARD PARA COLOCAR NUEVOS TESTIMONIOS */
+        .new-testimonial-card {
+            background: linear-gradient(145deg, #0F1626 0%, #172138 100%);
+            border: 2px dashed rgba(212, 175, 55, 0.5);
+            border-radius: 24px;
+            padding: 2.2rem;
+            margin-top: 2.5rem;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .new-testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .new-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .new-card-header h4 {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #FFFFFF;
+        }
+
+        .new-card-header p {
+            font-size: 0.85rem;
+            color: #94A3B8;
+            margin-top: 0.2rem;
+        }
+
+        .new-testimonial-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-grid-two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid-two {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group-custom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group-custom label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #D4AF37;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input-custom,
+        .form-textarea-custom {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            color: #FFFFFF;
+            font-size: 0.88rem;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.25s ease;
+        }
+
+        .form-input-custom:focus,
+        .form-textarea-custom:focus {
+            border-color: #D4AF37;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+        }
+
+        .form-textarea-custom {
+            resize: vertical;
+            min-height: 90px;
+            line-height: 1.5;
+        }
+
+        .avatar-picker-box {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .avatar-emoji-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-emoji-btn:hover {
+            border-color: #D4AF37;
+            transform: scale(1.1);
+        }
+
+        .avatar-emoji-btn.selected {
+            background: var(--gold-gradient);
+            border-color: transparent;
+            transform: scale(1.15);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-submit-testimonial {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: var(--gold-gradient);
+            color: #07090E;
+            border: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+            align-self: flex-start;
+        }
+
+        .btn-submit-testimonial:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #F9E79F 0%, #D4AF37 100%);
+        }
+
+        .toast-success-testimonial {
+            display: none;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid #10B981;
+            color: #34D399;
+            padding: 0.75rem 1.2rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
         /* Footer */
         .campus-footer {
             background: #05070B;
