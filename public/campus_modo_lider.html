@@ -1320,6 +1320,14 @@
             background: #000000;
         }
 
+        .folder-video-screen iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: none;
+            background: #000000;
+        }
+
         .video-description-box {
             background: #FFFFFF;
             border: 1px solid #E2E8F0;
@@ -2835,23 +2843,32 @@
                                     <span>🎬</span>
                                     <span id="title-video-clase1">1. Video Clase: ¿Qué es ser una Emprendedora Consciente?</span>
                                 </div>
-                                <span class="pillar-badge">Video Real MP4</span>
+                                <span class="pillar-badge" id="badge-video-clase1">YouTube Oficial HD</span>
                             </div>
-                            <div class="folder-video-screen">
-                                <video id="videoElement-clase1" controls preload="none" poster="/miniatura_clase1.png?v=2">
+                            <div class="folder-video-screen" id="videoContainer-clase1">
+                                <iframe 
+                                    id="iframeElement-clase1"
+                                    src="https://www.youtube-nocookie.com/embed/6bYxRQYJqgo?rel=0&modestbranding=1" 
+                                    title="1. Video Clase: ¿Qué es ser una Emprendedora Consciente?" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                                </iframe>
+                                <video id="videoElement-clase1" controls controlsList="nodownload" oncontextmenu="return false;" preload="none" poster="/miniatura_clase1.png?v=2" style="display: none;">
                                     <source src="/videos/CLASE%201%20Emprender%20Conscientemente/3.%C2%BFQU%C3%89%20ES%20SER%20UNA%20EMPRENDEDORA%20CONSCIENTE.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <!-- Selector de videos de la Clase 1 -->
                             <div class="video-playlist-bar">
                                 <span class="playlist-label">Opciones de Video:</span>
-                                <button class="playlist-btn active" onclick="switchFolderVideo('clase1', '/videos/CLASE%201%20Emprender%20Conscientemente/3.%C2%BFQU%C3%89%20ES%20SER%20UNA%20EMPRENDEDORA%20CONSCIENTE.mp4', '1. Video: ¿Qué es ser una Emprendedora Consciente?', this, '/miniatura_clase1.png?v=2')">
-                                    ▶ 1. Emprendedora Consciente (214 MB)
+                                <button class="playlist-btn active" onclick="switchFolderVideo('clase1', 'https://www.youtube-nocookie.com/embed/6bYxRQYJqgo?rel=0&modestbranding=1', '1. Video Clase: ¿Qué es ser una Emprendedora Consciente?', this, '', true)">
+                                    ▶ 1. Emprendedora Consciente
                                 </button>
-                                <button class="playlist-btn" onclick="switchFolderVideo('clase1', '/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%201%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '2. Clase 1 en Vivo - Parte 1', this)">
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase1', '/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%201%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '2. Clase 1 en Vivo - Parte 1', this, '', false)">
                                     ▶ 2. Clase 1 en Vivo - Parte 1
                                 </button>
-                                <button class="playlist-btn" onclick="switchFolderVideo('clase1', '/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%202%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '3. Clase 1 en Vivo - Parte 2', this)">
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase1', '/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%202%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '3. Clase 1 en Vivo - Parte 2', this, '', false)">
                                     ▶ 3. Clase 1 en Vivo - Parte 2
                                 </button>
                             </div>
@@ -3252,16 +3269,38 @@
         }
 
         // Switch video in specific folder panel
-        function switchFolderVideo(folderKey, videoSrc, title, btnElement, posterSrc) {
+        function switchFolderVideo(folderKey, videoSrc, title, btnElement, posterSrc, isYouTube) {
             const player = document.getElementById(`videoElement-${folderKey}`);
+            const iframe = document.getElementById(`iframeElement-${folderKey}`);
             const titleElem = document.getElementById(`title-video-${folderKey}`);
-            if (player) {
-                if (posterSrc) {
-                    player.poster = posterSrc;
+            const badgeElem = document.getElementById(`badge-video-${folderKey}`);
+
+            const isYT = isYouTube || (videoSrc && (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')));
+
+            if (isYT) {
+                if (iframe) {
+                    iframe.src = videoSrc;
+                    iframe.style.display = 'block';
                 }
-                player.src = videoSrc;
-                player.play().catch(e => console.log('Autoplay prevented:', e));
+                if (player) {
+                    player.pause();
+                    player.style.display = 'none';
+                }
+                if (badgeElem) badgeElem.innerText = 'YouTube Oficial HD';
+            } else {
+                if (iframe) {
+                    iframe.src = '';
+                    iframe.style.display = 'none';
+                }
+                if (player) {
+                    player.style.display = 'block';
+                    if (posterSrc) player.poster = posterSrc;
+                    player.src = videoSrc;
+                    player.play().catch(e => console.log('Autoplay prevented:', e));
+                }
+                if (badgeElem) badgeElem.innerText = 'Video Real MP4';
             }
+
             if (titleElem && title) {
                 titleElem.innerText = title;
             }

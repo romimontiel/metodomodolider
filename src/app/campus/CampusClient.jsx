@@ -7,10 +7,11 @@ import './campus.css';
 export default function CampusClient() {
   const [activeFolder, setActiveFolder] = useState('intro');
   const [clase1Video, setClase1Video] = useState({
-    src: '/videos/CLASE%201%20Emprender%20Conscientemente/3.%C2%BFQU%C3%89%20ES%20SER%20UNA%20EMPRENDEDORA%20CONSCIENTE.mp4',
-    title: '1. Video: ¿Qué es ser una Emprendedora Consciente?',
+    src: 'https://www.youtube-nocookie.com/embed/6bYxRQYJqgo?rel=0&modestbranding=1',
+    title: '1. Video Clase: ¿Qué es ser una Emprendedora Consciente?',
     poster: '/MINIATURA_PARA_VIDEO_PRINCIPAL.png',
-    activeIndex: 0
+    activeIndex: 0,
+    isYouTube: true
   });
 
   const [clase3Video, setClase3Video] = useState({
@@ -30,9 +31,9 @@ export default function CampusClient() {
     }
   };
 
-  const handleClase1Video = (src, title, poster, index) => {
-    setClase1Video({ src, title, poster, activeIndex: index });
-    if (clase1VideoRef.current) {
+  const handleClase1Video = (src, title, poster, index, isYouTube = false) => {
+    setClase1Video({ src, title, poster, activeIndex: index, isYouTube });
+    if (!isYouTube && clase1VideoRef.current) {
       clase1VideoRef.current.src = src;
       if (poster) {
         clase1VideoRef.current.poster = poster;
@@ -555,25 +556,37 @@ export default function CampusClient() {
                             <div className="pillar-header">
                                 <div className="pillar-title">
                                     <span>🎬</span>
-                                    <span id="title-video-clase1">1. Video Clase: ¿Qué es ser una Emprendedora Consciente?</span>
+                                    <span id="title-video-clase1">{clase1Video.title}</span>
                                 </div>
-                                <span className="pillar-badge">Video Real MP4</span>
+                                <span className="pillar-badge">{clase1Video.isYouTube ? "YouTube Oficial HD" : "Video Real MP4"}</span>
                             </div>
                             <div className="folder-video-screen">
-                                <video id="videoElement-clase1" ref={clase1VideoRef} controls preload="none" poster="/MINIATURA_PARA_VIDEO_PRINCIPAL.png">
-                                    <source src="/videos/CLASE%201%20Emprender%20Conscientemente/3.%C2%BFQU%C3%89%20ES%20SER%20UNA%20EMPRENDEDORA%20CONSCIENTE.mp4" type="video/mp4" />
-                                </video>
+                                {clase1Video.isYouTube ? (
+                                    <iframe 
+                                        id="iframeElement-clase1"
+                                        src={clase1Video.src} 
+                                        title={clase1Video.title}
+                                        style={{ width: '100%', aspectRatio: '16 / 9', border: 'none', display: 'block' }}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerPolicy="strict-origin-when-cross-origin" 
+                                        allowFullScreen 
+                                    />
+                                ) : (
+                                    <video id="videoElement-clase1" ref={clase1VideoRef} controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="none" poster={clase1Video.poster}>
+                                        <source src={clase1Video.src} type="video/mp4" />
+                                    </video>
+                                )}
                             </div>
                             {/* Selector de videos de la Clase 1 */}
                             <div className="video-playlist-bar">
                                 <span className="playlist-label">Opciones de Video:</span>
-                                <button className={`playlist-btn ${clase1Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase1Video('/videos/CLASE%201%20Emprender%20Conscientemente/3.%C2%BFQU%C3%89%20ES%20SER%20UNA%20EMPRENDEDORA%20CONSCIENTE.mp4', '1. Video: ¿Qué es ser una Emprendedora Consciente?', '/MINIATURA_PARA_VIDEO_PRINCIPAL.png', 0)}>
-                                    ▶ 1. Emprendedora Consciente (214 MB)
+                                <button className={`playlist-btn ${clase1Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase1Video('https://www.youtube-nocookie.com/embed/6bYxRQYJqgo?rel=0&modestbranding=1', '1. Video Clase: ¿Qué es ser una Emprendedora Consciente?', '/MINIATURA_PARA_VIDEO_PRINCIPAL.png', 0, true)}>
+                                    ▶ 1. Emprendedora Consciente
                                 </button>
-                                <button className={`playlist-btn ${clase1Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase1Video('/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%201%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '2. Clase 1 en Vivo - Parte 1', '', 1)}>
+                                <button className={`playlist-btn ${clase1Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase1Video('/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%201%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '2. Clase 1 en Vivo - Parte 1', '', 1, false)}>
                                     ▶ 2. Clase 1 en Vivo - Parte 1
                                 </button>
-                                <button className={`playlist-btn ${clase1Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase1Video('/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%202%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '3. Clase 1 en Vivo - Parte 2', '', 2)}>
+                                <button className={`playlist-btn ${clase1Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase1Video('/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%202%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '3. Clase 1 en Vivo - Parte 2', '', 2, false)}>
                                     ▶ 3. Clase 1 en Vivo - Parte 2
                                 </button>
                             </div>
@@ -717,7 +730,7 @@ export default function CampusClient() {
                                 <span className="pillar-badge">Video Real MP4 • HD</span>
                             </div>
                             <div className="folder-video-screen">
-                                <video id="videoElement-clase2" controls preload="metadata" poster="/banner_modo_lider.png">
+                                <video id="videoElement-clase2" controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="metadata" poster="/banner_modo_lider.png">
                                     <source src="/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/CURSO%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS%20CLASE%202.mp4" type="video/mp4" />
                                 </video>
                             </div>
@@ -847,7 +860,7 @@ export default function CampusClient() {
                                 <span className="pillar-badge">Video Real MP4</span>
                             </div>
                             <div className="folder-video-screen">
-                                <video id="videoElement-clase3" ref={clase3VideoRef} controls preload="metadata" poster="/banner_modo_lider.png">
+                                <video id="videoElement-clase3" ref={clase3VideoRef} controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="metadata" poster="/banner_modo_lider.png">
                                     <source src="/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/CLASE%203%20PROPUESTA%20DE%20VALOR%20PARTE%201.mp4" type="video/mp4" />
                                 </video>
                             </div>
@@ -1006,7 +1019,7 @@ export default function CampusClient() {
                                 <span className="pillar-badge">Video Real MP4</span>
                             </div>
                             <div className="folder-video-screen">
-                                <video id="videoElement-clase4" controls preload="metadata" poster="/romina2.png">
+                                <video id="videoElement-clase4" controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="metadata" poster="/romina2.png">
                                     <source src="/videos/CLASE%204%20Regresar%20a%20mi%20y%20reconectar%20con%20mi%20Negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4" type="video/mp4" />
                                 </video>
                             </div>

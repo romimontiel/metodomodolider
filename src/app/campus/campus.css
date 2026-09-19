@@ -1308,6 +1308,14 @@
             background: #000000;
         }
 
+        .folder-video-screen iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: none;
+            background: #000000;
+        }
+
         .video-description-box {
             background: #FFFFFF;
             border: 1px solid #E2E8F0;
