@@ -2358,15 +2358,17 @@
             </div>
 
             <div class="video-theatre-grid">
-                <!-- Video Screen con Video Real MP4 -->
+                <!-- Video Screen con Video Real MP4 (Exclusivo en Campus) -->
                 <div class="video-theatre-box">
                     <video 
                         id="welcomeVideoPlayer" 
                         class="video-player-real" 
                         controls 
+                        controlsList="nodownload" 
+                        oncontextmenu="return false;" 
                         preload="metadata" 
                         poster="/miniatura_bienvenida.png?v=2">
-                        <source src="/videos/BIENVENIDA/1.CURSO%20EMPRENDER%20DESDE%20CERO%20INTRODUCCI%C3%93N.mp4" type="video/mp4">
+                        <source src="/videos_campus/bienvenida_modo_lider.mp4" type="video/mp4">
                         Tu navegador no soporta reproducción directa de video HTML5.
                     </video>
 
@@ -2502,8 +2504,15 @@
                                 <!-- Columna Izquierda: Video Player Real -->
                                 <div>
                                     <div class="folder-video-screen">
-                                        <video id="videoElement-intro" controls preload="metadata" poster="/miniatura_workflow.png?v=2">
-                                            <source src="/videos/INTRODUCCI%C3%93N/WORKFLOW.%20Y%20PROPOSITO%20DEL%20CURSO.mp4" type="video/mp4">
+                                        <video 
+                                            id="videoElement-intro" 
+                                            controls 
+                                            controlsList="nodownload" 
+                                            oncontextmenu="return false;" 
+                                            preload="metadata" 
+                                            poster="/miniatura_workflow.png?v=2">
+                                            <source src="/videos_campus/workflow_proposito_curso.mp4" type="video/mp4">
+                                            Tu navegador no soporta reproducción directa de video HTML5.
                                         </video>
                                     </div>
                                     <div class="video-playlist-bar" style="justify-content: space-between;">
@@ -2527,8 +2536,11 @@
                                         </div>
                                         <p class="doc-desc">Estructura visual, pilares de marca y ADN de la propuesta formativa.</p>
                                         <div class="doc-action-btns">
-                                            <a href="/Modo-Lider-Arquitectura-de-Marca.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <a href="/Modo-Lider-Arquitectura-de-Marca.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
                                                 <span>👁️ Ver Online</span>
+                                            </a>
+                                            <a href="/Modo-Lider-Arquitectura-de-Marca.pdf" download="Modo_Lider_Arquitectura_de_Marca.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                                <span>⬇️ Descargar</span>
                                             </a>
                                         </div>
                                     </div>
@@ -2630,7 +2642,7 @@
                                 <span class="pillar-badge">Minicurso en Video MP4</span>
                             </div>
                             <div class="folder-video-screen">
-                                <video id="videoElement-procrastinacion" controls preload="none" poster="/miniatura_procrastinacion.png?v=2">
+                                <video id="videoElement-procrastinacion" controls controlsList="nodownload" oncontextmenu="return false;" preload="none" poster="/miniatura_procrastinacion.png?v=2">
                                     <source src="/videos_campus/minicourse_procrastinacion_principal.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -2640,7 +2652,7 @@
                                 <button class="playlist-btn active" onclick="switchFolderVideo('procrastinacion', '/videos_campus/minicourse_procrastinacion_principal.mp4', '1. Video Principal: Soñás en grande pero procrastinás', this, '/miniatura_procrastinacion.png?v=2')">
                                     ▶ 1. Soñás en grande (Principal)
                                 </button>
-                                <button class="playlist-btn" onclick="switchFolderVideo('procrastinacion', '/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/2.%20EL%20SENTIMIENTO%20DE%20CULPA%20DETRAS%20DE%20LA%20PROCRASTINACION.mp4', '2. El sentimiento de culpa detrás de la procrastinación', this)">
+                                <button class="playlist-btn" onclick="switchFolderVideo('procrastinacion', '/videos_campus/minicourse_culpa_procrastinar.mp4', '2. El sentimiento de culpa detrás de la procrastinación', this, '/miniatura_culpa_procrastinar.png')">
                                     ▶ 2. La culpa detrás de procrastinar
                                 </button>
                                 <button class="playlist-btn" onclick="switchFolderVideo('procrastinacion', '/videos_campus/minicourse_stanford_30s.mp4', '3. Método de Stanford para empezar en 30s', this)">
@@ -2678,10 +2690,10 @@
                                     </p>
                                 </div>
                                 <div>
-                                    <a href="/videos/2%20MINICURSO%20SALIR%20DEL%20MODO%20PROCRASTINACION/neurociencia-procrastinacion.html" target="_blank" class="btn-download-primary" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.6rem;">
-                                        <span>🚀 Abrir Módulo de Neurociencia Online ↗</span>
-                                    </a>
-                                </div>
+                                    <a href="/materiales/neurociencia-procrastinacion.html" target="_blank" class="btn-download-primary" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.6rem;">
+                                         <span>🚀 Abrir Módulo de Neurociencia Online ↗</span>
+                                     </a>
+                                 </div>
                             </div>
                         </div>
 
@@ -2706,8 +2718,11 @@
                                     </div>
                                     <p class="doc-desc">Guía paso a paso para identificar la emoción primaria que detona la postergación en tus tareas de negocio.</p>
                                     <div class="doc-action-btns">
-                                        <a href="/materiales/PDF1_5_pasos_emocion_procrastinacion.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
-                                            <span>👁️ Ver PDF Online</span>
+                                        <a href="/materiales/PDF1_5_pasos_emocion_procrastinacion.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/PDF1_5_pasos_emocion_procrastinacion.pdf" download="5_Pasos_Emocion_Detras_De_Tu_Procrastinacion.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
@@ -2723,8 +2738,11 @@
                                     </div>
                                     <p class="doc-desc">Test de autoevaluación para perfilar tus patrones de evasión y diseñar tu estrategia correctiva.</p>
                                     <div class="doc-action-btns">
-                                        <a href="/materiales/PDF3_Que_tipo_de_procrastinadora_eres.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
-                                            <span>👁️ Ver PDF Online</span>
+                                        <a href="/materiales/PDF3_Que_tipo_de_procrastinadora_eres.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/PDF3_Que_tipo_de_procrastinadora_eres.pdf" download="Test_Que_Tipo_De_Procrastinadora_Eres.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
@@ -2740,8 +2758,11 @@
                                     </div>
                                     <p class="doc-desc">Plan de acción accionable para destrabar proyectos estancados y reiniciar el movimiento productivo.</p>
                                     <div class="doc-action-btns">
-                                        <a href="/materiales/PDF3_Primer_paso_salir_procrastinacion.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
-                                            <span>👁️ Ver PDF Online</span>
+                                        <a href="/materiales/PDF3_Primer_paso_salir_procrastinacion.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/PDF3_Primer_paso_salir_procrastinacion.pdf" download="Primer_Paso_Para_Salir_De_La_Procrastinacion.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
@@ -2757,8 +2778,11 @@
                                     </div>
                                     <p class="doc-desc">Artículo completo de Romina: fundamentos teóricos y prácticos para salir del modo procrastinación.</p>
                                     <div class="doc-action-btns">
-                                        <a href="/materiales/ARTICULO_Primer_paso_procrastinacion.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
-                                            <span>👁️ Ver Artículo Online</span>
+                                        <a href="/materiales/ARTICULO_Primer_paso_procrastinacion.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/ARTICULO_Primer_paso_procrastinacion.pdf" download="Articulo_Primer_Paso_Procrastinacion.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
@@ -2774,8 +2798,11 @@
                                     </div>
                                     <p class="doc-desc">Manifiesto reflexivo sobre autoliderazgo y gestión de energía para mujeres que lideran negocios.</p>
                                     <div class="doc-action-btns">
-                                        <a href="/materiales/ARTICULO_Romina_Lorena_Montiel.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
-                                            <span>👁️ Ver Documento Online</span>
+                                        <a href="/materiales/ARTICULO_Romina_Lorena_Montiel.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/ARTICULO_Romina_Lorena_Montiel.pdf" download="Articulo_Romina_Lorena_Montiel.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
@@ -2871,25 +2898,31 @@
                                     </div>
                                     <p class="doc-desc">Cuaderno de trabajo paso a paso: ejercicios de diagnóstico, visión de negocio y autoliderazgo.</p>
                                     <div class="doc-action-btns">
-                                        <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente_Oficial.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
-                                            <span>👁️ Ver Workbook Online</span>
+                                        <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente_Oficial.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente_Oficial.pdf" download="Workbook_Clase_1_Emprender_Conscientemente.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
 
-                                <!-- Doc 3: Workbook Activa tu Mentalidad (Solo Lectura Online) -->
+                                <!-- Doc 3: Workbook Activa tu Mentalidad -->
                                 <div class="download-card">
                                     <div class="doc-icon-header">
                                         <div class="doc-format-badge badge-pdf">PDF</div>
                                         <div class="doc-meta">
                                             <h5>Activa tu Mentalidad de Negocios</h5>
-                                            <span>Workbook PDF • Lectura Online</span>
+                                            <span>Workbook PDF • Lectura & Descarga</span>
                                         </div>
                                     </div>
                                     <p class="doc-desc">Guía profunda de transformación mental para pasar de autoempleada a empresaria.</p>
                                     <div class="doc-action-btns">
-                                        <a href="/videos/CLASE%201%20Emprender%20Conscientemente/woorkBook%20ACTIVA%20TU%20MENTALIDAD%20DE%20NEGOCIOS.pdf#toolbar=0" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
-                                            <span>👁️ Ver Guía Online</span>
+                                        <a href="/materiales/Workbook_Activa_Tu_Mentalidad_Negocios.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/Workbook_Activa_Tu_Mentalidad_Negocios.pdf" download="Workbook_Activa_Tu_Mentalidad_Negocios.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
@@ -3106,8 +3139,8 @@
                                 <span class="pillar-badge">Video Real MP4 • 147 MB</span>
                             </div>
                             <div class="folder-video-screen">
-                                <video id="videoElement-testimonios" controls preload="metadata" poster="/miniatura_testimonio_analiasoto.png?v=2">
-                                    <source src="/videos/TESTIMONIOS/TESTIMONIO%20ANALIA%20SOTO%20COACH.mp4" type="video/mp4">
+                                <video id="videoElement-testimonios" controls controlsList="nodownload" oncontextmenu="return false;" preload="metadata" poster="/miniatura_testimonio_analiasoto.png?v=2">
+                                    <source src="/videos_campus/testimonio_analia_soto.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="video-description-box">
@@ -3122,10 +3155,10 @@
                                     <span>🎬</span>
                                     <span>2. Video Testimonio: Jesica Pozzer</span>
                                 </div>
-                                <span class="pillar-badge">Video Real MP4 • 30 MB</span>
+                                <span class="pillar-badge">Video Real MP4</span>
                             </div>
                             <div class="folder-video-screen">
-                                <video id="videoElement-testimonios-jesica" controls preload="metadata" poster="/miniatura_testimonio_jesicapozzer.png?v=2">
+                                <video id="videoElement-testimonios-jesica" controls controlsList="nodownload" oncontextmenu="return false;" preload="metadata" poster="/miniatura_testimonio_jesicapozzer.png?v=3">
                                     <source src="/videos_campus/testimonio_jesica_pozzer.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -3208,7 +3241,9 @@
             const player = document.getElementById('welcomeVideoPlayer');
             if (player) {
                 player.src = videoSrc;
-                player.play().catch(e => console.log('Autoplay prevented:', e));
+                if (typeof player.play === 'function') {
+                    player.play().catch(e => console.log('Autoplay prevented:', e));
+                }
             }
             // Update active pill button
             const buttons = document.querySelectorAll('.video-theatre-box .playlist-btn');

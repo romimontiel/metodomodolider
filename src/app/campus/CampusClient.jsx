@@ -131,15 +131,17 @@ export default function CampusClient() {
             </div>
 
             <div className="video-theatre-grid">
-                {/* Video Screen con Video Real MP4 */}
+                {/* Video Screen con Video Real MP4 (Exclusivo en Campus) */}
                 <div className="video-theatre-box">
                     <video 
                         id="welcomeVideoPlayer" 
                         className="video-player-real" 
                         controls 
+                        controlsList="nodownload" 
+                        onContextMenu={(e) => e.preventDefault()} 
                         preload="metadata" 
-                        poster="/banner_modo_lider.png">
-                        <source src="/videos/BIENVENIDA/1.CURSO%20EMPRENDER%20DESDE%20CERO%20INTRODUCCI%C3%93N.mp4" type="video/mp4" />
+                        poster="/miniatura_bienvenida.png?v=2">
+                        <source src="/videos_campus/bienvenida_modo_lider.mp4" type="video/mp4" />
                         Tu navegador no soporta reproducción directa de video HTML5.
                     </video>
 
@@ -423,8 +425,15 @@ export default function CampusClient() {
                                 {/* Columna Izquierda: Video Player Real */}
                                 <div>
                                     <div className="folder-video-screen">
-                                        <video id="videoElement-intro" controls preload="metadata" poster="/banner_modo_lider.png">
-                                            <source src="/videos/INTRODUCCI%C3%93N/WORKFLOW.%20Y%20PROPOSITO%20DEL%20CURSO.mp4" type="video/mp4" />
+                                        <video 
+                                            id="videoElement-intro" 
+                                            controls 
+                                            controlsList="nodownload" 
+                                            onContextMenu={(e) => e.preventDefault()} 
+                                            preload="metadata" 
+                                            poster="/miniatura_workflow.png?v=2">
+                                            <source src="/videos_campus/workflow_proposito_curso.mp4" type="video/mp4" />
+                                            Tu navegador no soporta reproducción directa de video HTML5.
                                         </video>
                                     </div>
                                     <div className="video-playlist-bar" style={{ "justifyContent": "space-between" }}>
@@ -1067,8 +1076,14 @@ export default function CampusClient() {
                                 <span className="pillar-badge">Video Real MP4 • 147 MB</span>
                             </div>
                             <div className="folder-video-screen">
-                                <video id="videoElement-testimonios" controls preload="metadata" poster="/romina_historia.png">
-                                    <source src="/videos/TESTIMONIOS/TESTIMONIO%20ANALIA%20SOTO%20COACH.mp4" type="video/mp4" />
+                                <video 
+                                    id="videoElement-testimonios" 
+                                    controls 
+                                    controlsList="nodownload" 
+                                    onContextMenu={(e) => e.preventDefault()} 
+                                    preload="metadata" 
+                                    poster="/miniatura_testimonio_analiasoto.png?v=2">
+                                    <source src="/videos_campus/testimonio_analia_soto.mp4" type="video/mp4" />
                                 </video>
                             </div>
                             <div className="video-description-box">

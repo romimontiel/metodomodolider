@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurociencia de la Procrastinación — Método MODO LÍDER | Lic. Romina Lorena Montiel</title>
+  <meta name="description" content="Guía neurocientífica sobre los 7 arquetipos de procrastinación y sus soluciones. Método MODO LÍDER por Lic. Romina Lorena Montiel.">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --khaki: #C9A96E;
+      --khaki-light: #DFC08A;
+      --khaki-dark: #A8884D;
+      --khaki-bg: #FAF6F0;
+      --khaki-border: #E0D0B0;
+      --dark: #1C1C1E;
+      --dark-soft: #2A2A2C;
+      --dark-card: #232325;
+      --text: #3A3A3C;
+      --text-light: #7A7A7E;
+      --bg-page: #FAFAFA;
+      --bg-white: #FFFFFF;
+      --gold: #C9A96E;
+      --gold-light: #E8D5B0;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.14);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-page);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== HERO / HEADER ========== */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--dark-soft) 50%, #1C1C1E 100%);
+      color: white;
+      padding: 80px 40px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 140%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 50%, rgba(201,169,110,0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 30%, rgba(201,169,110,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      margin-bottom: 28px;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .hero-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid var(--khaki);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+      background: var(--dark-soft);
+    }
+
+    .hero-author-brand {
+      text-align: left;
+    }
+
+    .author-monogram {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--khaki-light);
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+
+    .author-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #FFFFFF;
+      margin-top: 4px;
+    }
+
+    .author-subtitle {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: var(--khaki-light);
+      opacity: 0.95;
+      margin-top: 3px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50px;
+      padding: 8px 24px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .hero h1 em {
+      color: var(--khaki-light);
+      font-style: italic;
+    }
+
+    .hero-author {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.5);
+      margin-top: 16px;
+      letter-spacing: 1px;
+      position: relative;
+    }
+
+    .hero-author strong {
+      color: var(--khaki-light);
+      font-weight: 500;
+    }
+
+    .hero p.subtitle {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* ========== CONTAINER ========== */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== INTRO SECTION ========== */
+    .intro-section {
+      padding: 72px 24px;
+    }
+
+    .intro-card {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      padding: 56px 48px;
+      box-shadow: var(--shadow-md);
+      max-width: 900px;
+      margin: 0 auto;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .intro-card .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--khaki);
+      margin-bottom: 20px;
+    }
+
+    .intro-card .section-label::before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--khaki);
+      border-radius: 2px;
+    }
+
+    .intro-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    .intro-card p {
+      font-size: 1.02rem;
+      color: var(--text);
+      margin-bottom: 18px;
+      line-height: 1.8;
+    }
+
+    .intro-card p strong {
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    .intro-card .highlight-box {
+      background: linear-gradient(135deg, var(--khaki-bg), #FDF8F0);
+      border-left: 4px solid var(--khaki);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .intro-card .study-ref {
+      background: #F5F5F5;
+      border-radius: var(--radius-sm);
+      padding: 18px 22px;
+      margin: 24px 0;
+      font-size: 0.92rem;
+      color: var(--text);
+      border: 1px solid #E0E0E0;
+      line-height: 1.7;
+    }
+
+    .intro-card .study-ref strong {
+      color: var(--dark);
+    }
+
+    .intro-card .conclusion {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--dark-soft);
+      border-top: 1px solid #eee;
+      padding-top: 24px;
+      margin-top: 8px;
+    }
+
+    /* ========== DIAGRAM SECTION ========== */
+    .diagram-section {
+      padding: 0 24px 72px;
+    }
+
+    .diagram-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .diagram-title-area {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .diagram-title-area .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--khaki);
+      margin-bottom: 12px;
+    }
+
+    .diagram-title-area .section-label::before,
+    .diagram-title-area .section-label::after {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--khaki);
+      border-radius: 2px;
+    }
+
+    .diagram-title-area h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--dark);
+    }
+
+    /* Flowchart */
+    .flowchart {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      padding: 48px 32px 40px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .flow-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .flow-row.center { justify-content: center; }
+
+    /* Connectors */
+    .connector-down {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+      height: 48px;
+    }
+
+    .connector-down .line {
+      width: 2px;
+      height: 100%;
+      background: #D0D0D8;
+    }
+
+    .connector-fork {
+      position: relative;
+      height: 48px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .connector-fork .vertical-center {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 20px;
+      background: #D0D0D8;
+      transform: translateX(-50%);
+    }
+
+    .connector-fork .horizontal {
+      position: absolute;
+      top: 20px;
+      left: 25%;
+      right: 25%;
+      height: 2px;
+      background: #D0D0D8;
+    }
+
+    .connector-fork .vertical-left {
+      position: absolute;
+      left: 25%;
+      top: 20px;
+      width: 2px;
+      height: 28px;
+      background: #D0D0D8;
+      transform: translateX(-50%);
+    }
+
+    .connector-fork .vertical-right {
+      position: absolute;
+      right: 25%;
+      top: 20px;
+      width: 2px;
+      height: 28px;
+      background: #D0D0D8;
+      transform: translateX(50%);
+    }
+
+    .connector-down-left,
+    .connector-down-right {
+      position: relative;
+      height: 40px;
+    }
+
+    .connector-down-left .line,
+    .connector-down-right .line {
+      width: 2px;
+      height: 100%;
+      background: #D0D0D8;
+      margin: 0 auto;
+    }
+
+    /* Nodes */
+    .node {
+      border-radius: var(--radius-sm);
+      padding: 18px 32px;
+      text-align: center;
+      min-width: 220px;
+      max-width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .node:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .node-trigger {
+      background: var(--bg-white);
+      border: 2px solid #D0D0D8;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .node-trigger .node-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--dark);
+    }
+
+    .node-trigger .node-sub {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    .node-amigdala {
+      background: var(--dark);
+      border: 2px solid var(--dark-soft);
+    }
+
+    .node-amigdala .node-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--khaki-light);
+    }
+
+    .node-amigdala .node-sub {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+    }
+
+    .node-prefrontal {
+      background: var(--khaki-bg);
+      border: 2px solid var(--khaki-border);
+    }
+
+    .node-prefrontal .node-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--khaki-dark);
+    }
+
+    .node-prefrontal .node-sub {
+      font-size: 0.88rem;
+      color: var(--khaki);
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    .node-evitacion {
+      background: var(--dark);
+      border: 2px solid var(--dark-soft);
+    }
+
+    .node-evitacion .node-title {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--khaki-light);
+    }
+
+    .node-evitacion .node-sub {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    .node-accion {
+      background: var(--khaki-bg);
+      border: 2px solid var(--khaki-border);
+    }
+
+    .node-accion .node-title {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--khaki-dark);
+    }
+
+    .node-accion .node-sub {
+      font-size: 0.85rem;
+      color: var(--khaki);
+      opacity: 0.75;
+      margin-top: 4px;
+    }
+
+    .flow-pair {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .flow-pair .flow-branch {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Animated pulse for amygdala */
+    @keyframes pulse-dark {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,169,110,0.25); }
+      50% { box-shadow: 0 0 0 12px rgba(201,169,110,0); }
+    }
+
+    .node-amigdala {
+      animation: pulse-dark 3s ease-in-out infinite;
+    }
+
+    /* VS badge */
+    .vs-badge-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0 4px;
+    }
+
+    .vs-badge {
+      background: var(--dark);
+      color: white;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      padding: 6px 18px;
+      border-radius: 20px;
+    }
+
+    /* ========== DUAL PATHWAY (LeDoux) SECTION ========== */
+    .pathway-section {
+      padding: 0 24px 72px;
+    }
+
+    .pathway-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .pathway-title-area {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .pathway-title-area .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .pathway-title-area .section-label::before,
+    .pathway-title-area .section-label::after {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .pathway-title-area h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .pathway-title-area p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .pathway-card {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    /* Dual pathway diagram */
+    .dual-pathway {
+      padding: 48px 40px 40px;
+      position: relative;
+    }
+
+    /* Stimulus node at top */
+    .pathway-stimulus {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .pathway-stimulus .node {
+      background: #F8F4FF;
+      border: 2px solid #D8C8F0;
+      min-width: 260px;
+    }
+
+    .pathway-stimulus .node .node-title {
+      color: #6B4FA0;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .pathway-stimulus .node .node-sub {
+      color: #8B73B8;
+      font-size: 0.85rem;
+      margin-top: 3px;
+    }
+
+    /* Thalamus node */
+    .pathway-thalamus {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    .node-thalamus {
+      background: #FFF8EE;
+      border: 2px solid var(--gold-light);
+    }
+
+    .node-thalamus .node-title {
+      color: #A07D30;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .node-thalamus .node-sub {
+      color: #B8943F;
+      font-size: 0.85rem;
+      margin-top: 3px;
+    }
+
+    /* Dual columns */
+    .pathway-columns {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      gap: 0;
+      margin-top: 0;
+    }
+
+    .pathway-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 12px;
+    }
+
+    .pathway-col-divider {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .pathway-col-divider::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      bottom: 20%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, #D0D0D8 20%, #D0D0D8 80%, transparent);
+    }
+
+    .vs-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--dark);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.65rem;
+      letter-spacing: 1px;
+      z-index: 1;
+    }
+
+    /* Path labels */
+    .path-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 16px 0 6px;
+    }
+
+    .path-label-short {
+      background: rgba(192,83,77,0.1);
+      color: var(--coral);
+      border: 1px solid var(--coral-border);
+    }
+
+    .path-label-long {
+      background: rgba(45,125,95,0.1);
+      color: var(--green);
+      border: 1px solid var(--green-border);
+    }
+
+    .path-label .path-icon {
+      font-size: 1rem;
+    }
+
+    /* Path connector arrows */
+    .path-arrow {
+      display: flex;
+      justify-content: center;
+      height: 32px;
+      position: relative;
+    }
+
+    .path-arrow::before {
+      content: '';
+      width: 2px;
+      height: 100%;
+    }
+
+    .path-arrow-coral::before {
+      background: var(--coral-border);
+    }
+
+    .path-arrow-green::before {
+      background: var(--green-border);
+    }
+
+    .path-arrow::after {
+      content: '▼';
+      position: absolute;
+      bottom: -4px;
+      font-size: 0.6rem;
+    }
+
+    .path-arrow-coral::after {
+      color: var(--coral-border);
+    }
+
+    .path-arrow-green::after {
+      color: var(--green-border);
+    }
+
+    /* Path description text */
+    .path-description {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin: 6px 0 12px;
+      line-height: 1.5;
+      max-width: 280px;
+    }
+
+    .path-description strong {
+      color: var(--text);
+    }
+
+    /* Timeline bar */
+    .timeline-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin: 4px 0 12px;
+    }
+
+    .timeline-bar-coral {
+      color: var(--coral);
+    }
+
+    .timeline-bar-green {
+      color: var(--green);
+    }
+
+    .timeline-dots {
+      display: flex;
+      gap: 3px;
+    }
+
+    .timeline-dots .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .timeline-dots .dot-coral {
+      background: var(--coral);
+    }
+
+    .timeline-dots .dot-green {
+      background: var(--green);
+    }
+
+    .timeline-dots .dot-empty {
+      background: #E0E0E0;
+    }
+
+    /* Resultado nodes */
+    .node-resultado {
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .node-resultado-coral {
+      background: var(--coral-bg);
+      border: 2px solid var(--coral-border);
+    }
+
+    .node-resultado-coral .node-title {
+      color: var(--coral);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .node-resultado-coral .node-sub {
+      color: var(--coral);
+      opacity: 0.75;
+      font-size: 0.82rem;
+      margin-top: 4px;
+    }
+
+    .node-resultado-green {
+      background: var(--green-bg);
+      border: 2px solid var(--green-border);
+    }
+
+    .node-resultado-green .node-title {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .node-resultado-green .node-sub {
+      color: var(--green);
+      opacity: 0.75;
+      font-size: 0.82rem;
+      margin-top: 4px;
+    }
+
+    /* Evidence footer in pathway */
+    .pathway-evidence {
+      background: linear-gradient(135deg, #FAFAFA, #F5F3F0);
+      padding: 28px 40px;
+      border-top: 1px solid #EEEAE6;
+    }
+
+    .pathway-evidence-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pathway-evidence p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .pathway-evidence p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pathway-evidence strong {
+      color: var(--dark);
+    }
+
+    .pathway-evidence em {
+      color: var(--text-light);
+    }
+
+    /* Pathway fork connector */
+    .pathway-fork {
+      position: relative;
+      height: 48px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .pathway-fork .v-center {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 18px;
+      background: var(--gold-light);
+      transform: translateX(-50%);
+    }
+
+    .pathway-fork .h-line {
+      position: absolute;
+      top: 18px;
+      left: calc(50% - 280px);
+      right: calc(50% - 280px);
+      height: 2px;
+      background: #D0D0D8;
+    }
+
+    .pathway-fork .v-left {
+      position: absolute;
+      left: calc(50% - 280px);
+      top: 18px;
+      width: 2px;
+      height: 28px;
+      background: var(--coral-border);
+      transform: translateX(-50%);
+    }
+
+    .pathway-fork .v-right {
+      position: absolute;
+      right: calc(50% - 280px);
+      top: 18px;
+      width: 2px;
+      height: 28px;
+      background: var(--green-border);
+      transform: translateX(50%);
+    }
+
+    .pathway-fork .arrow-left {
+      position: absolute;
+      left: calc(50% - 280px);
+      bottom: -2px;
+      transform: translateX(-50%);
+      color: var(--coral-border);
+      font-size: 0.6rem;
+    }
+
+    .pathway-fork .arrow-right {
+      position: absolute;
+      right: calc(50% - 280px);
+      bottom: -2px;
+      transform: translateX(50%);
+      color: var(--green-border);
+      font-size: 0.6rem;
+    }
+
+    @media (max-width: 768px) {
+      .pathway-columns {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .pathway-col-divider {
+        display: none;
+      }
+
+      .dual-pathway {
+        padding: 32px 20px;
+      }
+
+      .pathway-evidence {
+        padding: 20px;
+      }
+
+      .pathway-fork {
+        display: none;
+      }
+    }
+
+    /* ========== PROCRASTINATION CYCLE DIAGRAM ========== */
+    .cycle-container {
+      display: flex;
+      justify-content: center;
+      margin: 32px 0 40px;
+    }
+
+    .cycle-svg-wrapper {
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .cycle-svg-wrapper svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .cycle-title {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    /* Animate arrows rotation */
+    @keyframes cycle-pulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+
+    .cycle-arrow {
+      animation: cycle-pulse 3s ease-in-out infinite;
+    }
+
+    .cycle-arrow:nth-child(2) { animation-delay: 0.6s; }
+    .cycle-arrow:nth-child(3) { animation-delay: 1.2s; }
+    .cycle-arrow:nth-child(4) { animation-delay: 1.8s; }
+
+    /* ========== ARQUETIPOS SECTION ========== */
+    .arquetipos-section {
+      padding: 72px 24px 100px;
+    }
+
+    .arquetipos-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .arquetipos-header .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 12px;
+    }
+
+    .arquetipos-header .section-label::before,
+    .arquetipos-header .section-label::after {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--coral);
+      border-radius: 2px;
+    }
+
+    .arquetipos-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .arquetipos-header p {
+      color: var(--text-light);
+      font-size: 1rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Archetype Cards */
+    .archetype-card {
+      background: var(--bg-white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 32px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .archetype-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+
+    .archetype-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 32px;
+      background: var(--dark);
+      color: white;
+    }
+
+    .archetype-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      background: rgba(201,169,110,0.15);
+      border: 2px solid var(--khaki);
+      color: var(--khaki-light);
+    }
+
+    .archetype-name {
+      color: var(--khaki-light);
+    }
+
+    .archetype-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .archetype-card-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .card-panel {
+      padding: 32px;
+    }
+
+    .card-panel-left {
+      border-right: 1px solid #333;
+      background: linear-gradient(180deg, var(--dark-card) 0%, #1E1E20 100%);
+      color: rgba(255,255,255,0.85);
+    }
+
+    .card-panel-left p {
+      color: rgba(255,255,255,0.75) !important;
+    }
+
+    .card-panel-left .evidence {
+      color: rgba(255,255,255,0.5) !important;
+      border-top-color: rgba(255,255,255,0.1) !important;
+    }
+
+    .card-panel-left .evidence strong {
+      color: var(--khaki-light) !important;
+    }
+
+    .card-panel-right {
+      background: linear-gradient(180deg, var(--khaki-bg) 0%, #FEFCF8 100%);
+    }
+
+    .panel-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    .panel-label-brain {
+      background: rgba(201,169,110,0.15);
+      color: var(--khaki-light);
+    }
+
+    .panel-label-solution {
+      background: rgba(201,169,110,0.12);
+      color: var(--khaki-dark);
+    }
+
+    .panel-label .label-icon {
+      font-size: 0.85rem;
+    }
+
+    .card-panel h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .card-panel-left h4 {
+      color: var(--khaki-light);
+    }
+
+    .card-panel-right h4 {
+      color: var(--dark);
+    }
+
+    .card-panel p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .card-panel .evidence {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding-top: 12px;
+      margin-top: 8px;
+    }
+
+    .card-panel .evidence strong {
+      font-style: normal;
+      color: var(--text);
+    }
+
+    .strategy-block {
+      margin-bottom: 16px;
+    }
+
+    .strategy-block .strategy-title {
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--khaki-dark);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .strategy-block p {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .affirmation {
+      background: rgba(201,169,110,0.08);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--dark);
+      border-left: 3px solid var(--khaki);
+      line-height: 1.7;
+      margin-top: 8px;
+    }
+
+    /* ========== FOOTER ========== */
+    .page-footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.85rem;
+    }
+
+    .page-footer strong {
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 56px 20px 40px;
+      }
+
+      .intro-card {
+        padding: 36px 24px;
+      }
+
+      .flow-pair {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .connector-fork {
+        display: none;
+      }
+
+      .archetype-card-body {
+        grid-template-columns: 1fr;
+      }
+
+      .card-panel-left {
+        border-right: none;
+        border-bottom: 1px solid #F0EDEA;
+      }
+
+      .card-panel {
+        padding: 24px 20px;
+      }
+    }
+
+    /* ========== PRINT STYLES ========== */
+    @media print {
+      .hero {
+        background: var(--dark) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .archetype-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .node:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .archetype-card:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .node-amigdala {
+        animation: none;
+      }
+
+      .card-panel-left {
+        background: #232325 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-profile-header">
+      <img src="romina-montiel.png" alt="Lic. Romina Lorena Montiel" class="hero-photo">
+      <div class="hero-author-brand">
+        <div class="author-monogram">RM</div>
+        <div class="author-name">LIC. ROMINA LORENA MONTIEL</div>
+        <div class="author-subtitle">MENTORA DE MENTES Y NEGOCIOS</div>
+      </div>
+    </div>
+    <div class="hero-badge">MÉTODO MODO LÍDER</div>
+    <h1>Neurociencia de la <em>Procrastinación</em></h1>
+    <p class="subtitle">Qué sucede en tu cerebro cuando postergás — y cómo cada arquetipo puede desactivar ese patrón con ciencia.</p>
+  </header>
+
+  <!-- ===== INTRODUCCIÓN NEUROCIENTÍFICA ===== -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-card">
+        <div class="section-label">Base Neurocientífica</div>
+        <h2>No es falta de disciplina. Es una carrera dentro de tu cerebro.</h2>
+
+        <!-- Procrastination Cycle Diagram -->
+        <div class="cycle-container">
+          <div class="cycle-svg-wrapper">
+            <div class="cycle-title">El ciclo de la procrastinación</div>
+            <svg viewBox="0 0 520 440" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Circular arrow path (the main cycle ring) -->
+              <defs>
+                <marker id="arrowGold" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+                  <path d="M0,0 L10,4 L0,8" fill="#C9982A" />
+                </marker>
+              </defs>
+
+              <!-- Cycle arc segments with arrows -->
+              <!-- Top arc: right -->
+              <path d="M 310 80 A 160 160 0 0 1 430 230" stroke="#C9982A" stroke-width="3" fill="none" marker-end="url(#arrowGold)" class="cycle-arrow" />
+              <!-- Right arc: bottom -->
+              <path d="M 420 270 A 160 160 0 0 1 310 390" stroke="#C9982A" stroke-width="3" fill="none" marker-end="url(#arrowGold)" class="cycle-arrow" />
+              <!-- Bottom arc: left -->
+              <path d="M 210 390 A 160 160 0 0 1 90 270" stroke="#C9982A" stroke-width="3" fill="none" marker-end="url(#arrowGold)" class="cycle-arrow" />
+              <!-- Left arc: top -->
+              <path d="M 95 220 A 160 160 0 0 1 210 80" stroke="#C9982A" stroke-width="3" fill="none" marker-end="url(#arrowGold)" class="cycle-arrow" />
+
+              <!-- NODE 1: Top - EMOCIÓN / MIEDO -->
+              <rect x="175" y="38" width="170" height="60" rx="12" fill="#1C1C1E" />
+              <text x="260" y="62" text-anchor="middle" fill="#E8D5B0" font-family="Outfit, sans-serif" font-weight="700" font-size="14">EMOCIÓN / MIEDO</text>
+              <text x="260" y="82" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Outfit, sans-serif" font-weight="400" font-size="10.5">La tarea genera incomodidad</text>
+
+              <!-- NODE 2: Right Top - EVITO SENTIR -->
+              <rect x="362" y="130" width="155" height="72" rx="12" fill="#FAF6F0" stroke="#E0D0B0" stroke-width="1.5" />
+              <text x="440" y="157" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="700" font-size="11.5">EVITO SENTIR</text>
+              <text x="440" y="173" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="400" font-size="10">Haciendo otra cosa</text>
+              <text x="440" y="189" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="400" font-size="10">que me relaje</text>
+
+              <!-- NODE 3: Right Bottom - CULPA Y FRUSTRACIÓN -->
+              <rect x="362" y="275" width="155" height="60" rx="12" fill="#FAF6F0" stroke="#E0D0B0" stroke-width="1.5" />
+              <text x="440" y="300" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="700" font-size="12">CULPA Y</text>
+              <text x="440" y="318" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="700" font-size="12">FRUSTRACIÓN</text>
+
+              <!-- NODE 4: Bottom - MÁS MIEDO E INACCIÓN -->
+              <rect x="175" y="368" width="170" height="60" rx="12" fill="#1C1C1E" />
+              <text x="260" y="393" text-anchor="middle" fill="#E8D5B0" font-family="Outfit, sans-serif" font-weight="700" font-size="13">MÁS MIEDO</text>
+              <text x="260" y="412" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Outfit, sans-serif" font-weight="400" font-size="11">e inacción</text>
+
+              <!-- NODE 5: Left - NO RECONOZCO PORQUÉ ME PASA -->
+              <rect x="3" y="200" width="155" height="72" rx="12" fill="#FAF6F0" stroke="#E0D0B0" stroke-width="1.5" />
+              <text x="81" y="227" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="700" font-size="11">NO RECONOZCO</text>
+              <text x="81" y="244" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="400" font-size="10.5">porqué me pasa</text>
+              <text x="81" y="260" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="400" font-size="10.5">(no es pereza)</text>
+            </svg>
+          </div>
+        </div>
+
+        <p>Durante décadas se sostuvo el mito de que procrastinar era un fallo de disciplina o de gestión del tiempo. Sin embargo, más de veinte años de investigación —liderada por la <strong>Dra. Fuschia Sirois</strong> (Universidad de Durham) y el <strong>Dr. Timothy Pychyl</strong> (Universidad de Carleton)— demostraron algo diferente:</p>
+
+        <div class="highlight-box">
+          <strong>La procrastinación no es un problema de tiempo, es un problema de regulación emocional.</strong> Cuando una tarea te genera incomodidad —ansiedad, aburrimiento, miedo al juicio—, tu cerebro busca alivio inmediato. No postergas la tarea: postergas la emoción que la tarea te genera.
+        </div>
+
+        <p>El neurocientífico <strong>Joseph LeDoux</strong> (Universidad de Nueva York) descubrió que el cerebro procesa las señales emocionales a través de <strong>dos caminos simultáneos</strong> — y esa diferencia de velocidad es lo que explica la procrastinación:</p>
+
+        <div class="highlight-box" style="border-left-color: var(--dark); background: rgba(28,28,30,0.03);">
+          <strong>🔴 Camino Corto (Vía Rápida):</strong> La señal emocional viaja directo desde el <strong>tálamo</strong> (la central sensorial) hacia la <strong>amígdala</strong> en 125 milisegundos, sin pasar por la corteza. Es automático, impreciso y primitivo — pero llega primero. Dispara la alarma antes de que puedas pensar.
+        </div>
+
+        <div class="highlight-box" style="background: var(--khaki-bg); border-left-color: var(--khaki-dark);">
+          <strong>🟢 Camino Largo (Vía Lenta):</strong> La misma señal viaja del <strong>tálamo</strong> hacia la <strong>corteza prefrontal</strong> en 500 milisegundos, que la analiza, contextualiza y envía una respuesta regulada de vuelta a la amígdala. Es precisa, racional y madura — pero tarda 4 veces más en activarse.
+        </div>
+
+        <p>En ese desfase temporal entre ambos caminos, <strong>la emoción gana la carrera antes de que la razón llegue a la meta</strong>. Y el cerebro elige la salida más rápida: el celular, resolver algo urgente de otra persona, reorganizar algo que no es prioritario. No es falta de voluntad: es arquitectura cerebral.</p>
+
+        <div class="study-ref">
+          <strong>📄 Evidencia científica:</strong> LeDoux, J. (1996). <em>The Emotional Brain</em>. Simon & Schuster. Confirmado por un estudio de neuroimagen de 2021 (Xu, Sirois, Zhang & Feng — <em>Journal of Research in Personality</em>) que encontró que la capacidad de autocontrol frente a la procrastinación se relaciona directamente con la <strong>conectividad funcional entre la corteza prefrontal dorsolateral y las redes emocionales subcorticales</strong> — es decir, con cuánto "diálogo" logra establecer el camino largo con el camino corto.
+        </div>
+
+        <p class="conclusion">Cada arquetipo que identificaste es, en realidad, una variación de <strong>qué emoción específica activa la amígdala</strong> y <strong>qué estrategia de evitación usa tu cerebro</strong> para calmarla. Por eso las respuestas de abajo no son trucos de productividad: apuntan a regular la emoción de base, no a forzar la fuerza de voluntad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIAGRAMA: CAMINO CORTO vs CAMINO LARGO (LeDoux) ===== -->
+  <section class="pathway-section">
+    <div class="pathway-wrapper">
+      <div class="pathway-title-area">
+        <div class="section-label">Las dos vías cerebrales — Joseph LeDoux</div>
+        <h2>Camino Corto vs. Camino Largo</h2>
+        <p>Así es como tu cerebro procesa una tarea con carga emocional. Dos rutas simultáneas, dos velocidades, un solo ganador.</p>
+      </div>
+
+      <div class="pathway-card">
+        <div class="dual-pathway" style="padding: 48px 20px 32px; display: flex; justify-content: center;">
+
+          <svg viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg" fill="none" style="width: 100%; max-width: 680px; height: auto;">
+            <defs>
+              <marker id="arrDark" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8" fill="#1C1C1E"/></marker>
+              <marker id="arrKhaki" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8" fill="#A8884D"/></marker>
+              <filter id="dropShadow" x="-5%" y="-5%" width="110%" height="120%">
+                <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1A1A2E" flood-opacity="0.1"/>
+              </filter>
+              <!-- Glow for thalamus -->
+              <radialGradient id="thalamusGlow" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" stop-color="#DFC08A" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#DFC08A" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- ============ BRAIN SILHOUETTE (subtle background) ============ -->
+            <ellipse cx="350" cy="240" rx="310" ry="210" fill="#FAF6F0" stroke="#E0D0B0" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.7"/>
+
+            <!-- ============ TÁLAMO (center) ============ -->
+            <circle cx="350" cy="240" r="40" fill="#1C1C1E" stroke="#C9A96E" stroke-width="2.5" filter="url(#dropShadow)"/>
+            <circle cx="350" cy="240" r="55" fill="url(#thalamusGlow)"/>
+            <text x="350" y="236" text-anchor="middle" fill="#DFC08A" font-family="Outfit, sans-serif" font-weight="800" font-size="15">TÁLAMO</text>
+            <text x="350" y="254" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Outfit, sans-serif" font-weight="400" font-size="9.5">Central sensorial</text>
+
+            <!-- ============ CAMINO LARGO (arriba → lóbulos prefrontales) ============ -->
+            <!-- Curved arrow: Tálamo UP to Prefrontal -->
+            <path d="M 330 202 C 280 100, 180 50, 170 90" stroke="#A8884D" stroke-width="3.5" fill="none" stroke-linecap="round" marker-end="url(#arrKhaki)">
+              <animate attributeName="stroke-dashoffset" values="200;0" dur="2s" repeatCount="1" fill="freeze"/>
+            </path>
+
+            <!-- Time badge for long path -->
+            <rect x="195" y="100" width="90" height="36" rx="18" fill="#A8884D" filter="url(#dropShadow)"/>
+            <text x="240" y="123" text-anchor="middle" fill="white" font-family="Outfit, sans-serif" font-weight="800" font-size="15">500 ms</text>
+
+            <!-- Lóbulos Prefrontales box -->
+            <rect x="52" y="28" width="180" height="65" rx="14" fill="#FAF6F0" stroke="#E0D0B0" stroke-width="2" filter="url(#dropShadow)"/>
+            <text x="142" y="53" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="700" font-size="13.5">Lóbulos</text>
+            <text x="142" y="73" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="700" font-size="13.5">prefrontales</text>
+            <text x="142" y="88" text-anchor="middle" fill="#C9A96E" font-family="Outfit, sans-serif" font-weight="400" font-size="9" opacity="0.9">Evalúa · Regula · Planifica</text>
+
+            <!-- Label: CAMINO LARGO -->
+            <rect x="248" y="42" width="140" height="28" rx="14" fill="rgba(168,136,77,0.12)" stroke="#E0D0B0" stroke-width="1"/>
+            <text x="318" y="61" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">🧭 CAMINO LARGO</text>
+
+            <!-- Return arrow: Prefrontal back down (regulation) -->
+            <path d="M 145 95 C 150 170, 240 190, 310 235" stroke="#A8884D" stroke-width="2" fill="none" stroke-dasharray="6 4" opacity="0.6"/>
+            <text x="175" y="170" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="500" font-size="9" opacity="0.8" transform="rotate(-40 175 170)">regula la amígdala</text>
+
+            <!-- ============ CAMINO CORTO (abajo → sistema emocional) ============ -->
+            <!-- Curved arrow: Tálamo DOWN to Amígdala -->
+            <path d="M 370 278 C 420 360, 490 380, 500 350" stroke="#1C1C1E" stroke-width="3.5" fill="none" stroke-linecap="round" marker-end="url(#arrDark)">
+              <animate attributeName="stroke-dashoffset" values="200;0" dur="1s" repeatCount="1" fill="freeze"/>
+            </path>
+
+            <!-- Time badge for short path -->
+            <rect x="415" y="290" width="90" height="36" rx="18" fill="#1C1C1E" filter="url(#dropShadow)"/>
+            <text x="460" y="313" text-anchor="middle" fill="#DFC08A" font-family="Outfit, sans-serif" font-weight="800" font-size="15">125 ms</text>
+
+            <!-- Sistema Emocional / Amígdala box -->
+            <rect x="468" y="345" width="180" height="65" rx="14" fill="#1C1C1E" stroke="#A8884D" stroke-width="2" filter="url(#dropShadow)"/>
+            <text x="558" y="370" text-anchor="middle" fill="#DFC08A" font-family="Outfit, sans-serif" font-weight="700" font-size="13.5">Sistema</text>
+            <text x="558" y="390" text-anchor="middle" fill="#DFC08A" font-family="Outfit, sans-serif" font-weight="700" font-size="13.5">emocional</text>
+            <text x="558" y="405" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Outfit, sans-serif" font-weight="400" font-size="9" opacity="0.8">Amígdala · Alarma · Huida</text>
+
+            <!-- Label: CAMINO CORTO -->
+            <rect x="312" y="370" width="145" height="28" rx="14" fill="rgba(28,28,30,0.08)" stroke="#E0D0B0" stroke-width="1"/>
+            <text x="385" y="389" text-anchor="middle" fill="#1C1C1E" font-family="Outfit, sans-serif" font-weight="700" font-size="10.5" letter-spacing="1">⚡ CAMINO CORTO</text>
+
+            <!-- ============ SPEED COMPARISON BAR (bottom) ============ -->
+            <rect x="100" y="440" width="500" height="34" rx="17" fill="#FAF6F0" stroke="#E0D0B0" stroke-width="1"/>
+
+            <!-- Short path bar (fast) -->
+            <rect x="105" y="444" width="130" height="26" rx="13" fill="#1C1C1E"/>
+            <text x="170" y="461" text-anchor="middle" fill="#DFC08A" font-family="Outfit, sans-serif" font-weight="700" font-size="10">⚡ 125 milisegundos</text>
+
+            <!-- Separator -->
+            <text x="253" y="461" text-anchor="middle" fill="#7A7A7E" font-family="Outfit, sans-serif" font-weight="600" font-size="10">vs</text>
+
+            <!-- Long path bar (slow) -->
+            <rect x="275" y="444" width="320" height="26" rx="13" fill="rgba(168,136,77,0.15)"/>
+            <text x="435" y="461" text-anchor="middle" fill="#A8884D" font-family="Outfit, sans-serif" font-weight="700" font-size="10">🧭 500 milisegundos — la razón llega 4x más tarde</text>
+
+          </svg>
+        </div>
+
+        <!-- Evidence footer -->
+        <div class="pathway-evidence">
+          <div class="pathway-evidence-title">📚 Base Científica</div>
+          <p><strong>Joseph LeDoux</strong> (NYU, 1996 — <em>The Emotional Brain</em>) descubrió estas dos vías de procesamiento emocional. El <strong>camino corto</strong> (tálamo → amígdala, ~125 ms) es un sistema de supervivencia: responde antes de que puedas pensar, porque en la sabana un segundo de demora podía costar la vida. El <strong>camino largo</strong> (tálamo → corteza prefrontal, ~500 ms) permite evaluar si la amenaza es real — pero llega 4 veces después.</p>
+          <p>En el contexto de la procrastinación, esto significa que <strong>la incomodidad emocional de una tarea llega a tu conciencia antes de que la razón pueda regularla</strong>. El Método MODO LÍDER trabaja sobre esta ventana: las estrategias de cada arquetipo están diseñadas para <strong>reducir la activación del camino corto</strong> y <strong>facilitar la llegada del camino largo</strong> antes de que tomes la decisión de evitar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIAGRAMA 2: RESUMEN SIMPLE ===== -->
+  <section class="diagram-section">
+    <div class="diagram-wrapper">
+      <div class="diagram-title-area">
+        <div class="section-label">Diagrama Cerebral</div>
+        <h2>El desfase que genera la procrastinación</h2>
+      </div>
+
+      <div class="flowchart">
+        <!-- Row 1: Trigger -->
+        <div class="flow-row center">
+          <div class="node node-trigger">
+            <div class="node-title">Tarea con carga emocional</div>
+            <div class="node-sub">Ansiedad, aburrimiento, miedo</div>
+          </div>
+        </div>
+
+        <!-- Connector: Fork -->
+        <div class="connector-fork">
+          <div class="vertical-center"></div>
+          <div class="horizontal"></div>
+          <div class="vertical-left"></div>
+          <div class="vertical-right"></div>
+        </div>
+
+        <!-- Row 2: Amígdala & Corteza -->
+        <div class="flow-pair">
+          <div class="flow-branch">
+            <div class="node node-amigdala">
+              <div class="node-title">🔴 Amígdala</div>
+              <div class="node-sub">125 milisegundos</div>
+            </div>
+            <div class="connector-down-left"><div class="line"></div></div>
+            <div class="node node-evitacion">
+              <div class="node-title">Evitación</div>
+              <div class="node-sub">Busca alivio inmediato</div>
+            </div>
+          </div>
+
+          <div class="flow-branch">
+            <div class="node node-prefrontal">
+              <div class="node-title">🟢 Corteza prefrontal</div>
+              <div class="node-sub">500 milisegundos</div>
+            </div>
+            <div class="connector-down-right"><div class="line"></div></div>
+            <div class="node node-accion">
+              <div class="node-title">Acción regulada</div>
+              <div class="node-sub">Actúa pese al malestar</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VS Badge -->
+        <div class="vs-badge-row">
+          <div class="vs-badge">LA EMOCIÓN GANA LA CARRERA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ARQUETIPOS ===== -->
+  <section class="arquetipos-section">
+    <div class="container">
+      <div class="arquetipos-header">
+        <div class="section-label">Matriz de Arquetipos</div>
+        <h2>7 Patrones, 7 Caminos de Salida</h2>
+        <p>Cada arquetipo activa la amígdala con una emoción diferente. Cada uno necesita una estrategia distinta para regular esa emoción y actuar.</p>
+      </div>
+
+      <!-- 1. La Guardiana -->
+      <div class="archetype-card" id="guardiana">
+        <div class="archetype-card-header">
+          <div class="archetype-number">1</div>
+          <div class="archetype-name">La Guardiana</div>
+        </div>
+        <div class="archetype-card-body">
+          <div class="card-panel card-panel-left">
+            <div class="panel-label panel-label-brain"><span class="label-icon">🧠</span> Qué sucede en el cerebro</div>
+            <h4>Disparador: Incertidumbre</h4>
+            <p>La ambigüedad de una tarea nueva o sin estructura activa la amígdala exactamente igual que una amenaza física. El cerebro pide <strong>"más información"</strong> como forma de reducir esa incertidumbre — por eso sentís que necesitás otro curso, otro libro, otra preparación antes de empezar.</p>
+            <div class="evidence">
+              <strong>Evidencia:</strong> Peter Gollwitzer demostró que las <em>Intenciones de Implementación</em> ("Si pasa X, hago Y") reducen la carga de incertidumbre porque la decisión ya está tomada de antemano.
+            </div>
+          </div>
+          <div class="card-panel card-panel-right">
+            <div class="panel-label panel-label-solution"><span class="label-icon">✦</span> Su proceso para superarlo</div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Estrategia práctica</div>
+              <p>Comienza a crear el activo que desea vender —un libro, un curso, un producto, un servicio— durante <strong>30 minutos cada día</strong>, apartando el sentimiento de que todavía le falta más información u otro curso.</p>
+            </div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Atmósfera sonora</div>
+              <p>Música que active su poder creativo. Recomendable que hable de abundancia, prosperidad, paciencia y posibilidad.</p>
+            </div>
+
+            <div class="affirmation">
+              "Tengo el conocimiento necesario para este paso. La claridad no llega pensando — llega construyendo."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. La Arquitecta -->
+      <div class="archetype-card" id="arquitecta">
+        <div class="archetype-card-header">
+          <div class="archetype-number">2</div>
+          <div class="archetype-name">La Arquitecta</div>
+        </div>
+        <div class="archetype-card-body">
+          <div class="card-panel card-panel-left">
+            <div class="panel-label panel-label-brain"><span class="label-icon">🧠</span> Qué sucede en el cerebro</div>
+            <h4>Disparador: Autocrítica y Perfeccionismo</h4>
+            <p>El perfeccionismo activa los mismos circuitos de <strong>amenaza social</strong> que el miedo al rechazo. El estándar inalcanzable bloquea el inicio o impide cerrar, porque "todavía no está suficientemente bien" para mostrarlo.</p>
+            <div class="evidence">
+              <strong>Evidencia:</strong> Sirois (2014, <em>Self and Identity</em>) encontró que la <em>autocompasión</em> —tratarte con la misma comprensión que le darías a otra persona— reduce directamente el malestar que lleva a procrastinar, mucho más que la autoexigencia.
+            </div>
+          </div>
+          <div class="card-panel card-panel-right">
+            <div class="panel-label panel-label-solution"><span class="label-icon">✦</span> Su proceso para superarlo</div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Estrategia práctica</div>
+              <p>Dedica <strong>30 minutos cada día</strong> a avanzar su activo hasta el punto donde esté "suficientemente bien" —no perfecto— apartando la necesidad de revisarlo una vez más antes de mostrarlo.</p>
+            </div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Atmósfera sonora</div>
+              <p>Melodías de calma y aceptación. Recomendable que hable de que lo simple también es valioso, de soltar el control, y de que lo terminado vale más que lo perfecto.</p>
+            </div>
+
+            <div class="affirmation">
+              "Lo simple tiene un valor inmenso. Una obra terminada transforma vidas; una obra perfecta e invisible no ayuda a nadie."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. La Bombera -->
+      <div class="archetype-card" id="bombera">
+        <div class="archetype-card-header">
+          <div class="archetype-number">3</div>
+          <div class="archetype-name">La Bombera</div>
+        </div>
+        <div class="archetype-card-body">
+          <div class="card-panel card-panel-left">
+            <div class="panel-label panel-label-brain"><span class="label-icon">🧠</span> Qué sucede en el cerebro</div>
+            <h4>Disparador: Recompensa inmediata de resolver lo urgente</h4>
+            <p>Resolver una urgencia ajena da una <strong>descarga de dopamina rápida y medible</strong>: cierre inmediato, alivio inmediato. Tu propio proyecto, en cambio, es una recompensa lejana — y el cerebro, por diseño, descuenta el valor de las recompensas lejanas frente a las inmediatas.</p>
+            <div class="evidence">
+              <strong>Evidencia:</strong> Piers Steel (<em>Temporal Motivation Theory</em>) demostró que el cerebro aplica un <em>descuento hiperbólico</em>: infravalora sistemáticamente las metas a largo plazo cuando compiten con estímulos de gratificación inmediata.
+            </div>
+          </div>
+          <div class="card-panel card-panel-right">
+            <div class="panel-label panel-label-solution"><span class="label-icon">✦</span> Su proceso para superarlo</div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Estrategia práctica</div>
+              <p>Protege <strong>30 minutos cada día</strong> para avanzar su propio activo <strong>antes</strong> de resolver cualquier pedido ajeno, apartando la culpa de no responder de inmediato a los demás.</p>
+            </div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Atmósfera sonora</div>
+              <p>Sonidos que sostengan la sensación de merecimiento. Recomendable que hable de que su tiempo es valioso, de poner límites con amor, y de que priorizarse no es egoísmo, es liderazgo.</p>
+            </div>
+
+            <div class="affirmation">
+              "Mi tiempo y mi visión son valiosos. Poner límites con amor no es egoísmo — es liderar mi vida para servir mejor."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. La Equilibrista -->
+      <div class="archetype-card" id="equilibrista">
+        <div class="archetype-card-header">
+          <div class="archetype-number">4</div>
+          <div class="archetype-name">La Equilibrista</div>
+        </div>
+        <div class="archetype-card-body">
+          <div class="card-panel card-panel-left">
+            <div class="panel-label panel-label-brain"><span class="label-icon">🧠</span> Qué sucede en el cerebro</div>
+            <h4>Disparador: Sobrecarga de memoria de trabajo</h4>
+            <p>La corteza prefrontal solo puede sostener <strong>3 a 4 elementos complejos</strong> a la vez. Cuando saltás de tarea en tarea, queda lo que Sophie Leroy llamó <strong>"residuo de atención"</strong>: una parte de tu mente sigue procesando la tarea anterior mientras intentás empezar la siguiente.</p>
+            <div class="evidence">
+              <strong>Evidencia:</strong> Sophie Leroy demostró que el <em>residuo atencional</em> entre tareas genera la sensación de "trabajar todo el día sin avanzar nada", porque el cerebro nunca termina de procesar una cosa antes de empezar la otra.
+            </div>
+          </div>
+          <div class="card-panel card-panel-right">
+            <div class="panel-label panel-label-solution"><span class="label-icon">✦</span> Su proceso para superarlo</div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Estrategia práctica</div>
+              <p>Elige <strong>una sola parte</strong> de su activo para avanzar durante esos <strong>30 minutos</strong> —sin saltar a otra— apartando la sensación de que tiene que resolver todo al mismo tiempo.</p>
+            </div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Atmósfera sonora</div>
+              <p>Música instrumental continua que sostenga el foco. Recomendable que hable de claridad, de que un paso a la vez también construye, y de que no hace falta abarcarlo todo hoy.</p>
+            </div>
+
+            <div class="affirmation">
+              "Un solo paso enfocado construye imperios. No necesito resolver el todo hoy — solo necesito sostener este bloque presente."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. La Cazadora de Dopamina -->
+      <div class="archetype-card" id="cazadora">
+        <div class="archetype-card-header">
+          <div class="archetype-number">5</div>
+          <div class="archetype-name">La Cazadora de Dopamina</div>
+        </div>
+        <div class="archetype-card-body">
+          <div class="card-panel card-panel-left">
+            <div class="panel-label panel-label-brain"><span class="label-icon">🧠</span> Qué sucede en el cerebro</div>
+            <h4>Disparador: Recompensa variable e impredecible</h4>
+            <p>Las redes sociales explotan el circuito de dopamina descrito por Wolfram Schultz (<strong>"error de predicción de recompensa"</strong>): no sabés qué vas a encontrar, y esa incertidumbre libera más dopamina que una recompensa fija. Por eso una tarea profunda pierde siempre contra el celular.</p>
+            <div class="evidence">
+              <strong>Evidencia:</strong> Wolfram Schultz demostró que la <em>recompensa variable e impredecible</em> activa descargas dopaminérgicas mucho más intensas que las recompensas fijas — el mismo mecanismo que explotan las máquinas tragamonedas.
+            </div>
+          </div>
+          <div class="card-panel card-panel-right">
+            <div class="panel-label panel-label-solution"><span class="label-icon">✦</span> Su proceso para superarlo</div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Estrategia práctica</div>
+              <p>Empieza a trabajar su activo durante <strong>30 minutos sin esperar sentir ganas</strong>, apartando el celular fuera de su alcance (otra habitación, modo avión). El arranque es en frío.</p>
+            </div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Atmósfera sonora</div>
+              <p>Música con ritmo que genere impulso desde el primer minuto. Recomendable que hable de que la motivación llega después de empezar y de que la acción crea el deseo.</p>
+            </div>
+
+            <div class="affirmation">
+              "La motivación no precede a la acción: la acción genera la motivación. Doy el primer minuto y la energía me acompaña."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. La Fantasma -->
+      <div class="archetype-card" id="fantasma">
+        <div class="archetype-card-header">
+          <div class="archetype-number">6</div>
+          <div class="archetype-name">La Fantasma</div>
+        </div>
+        <div class="archetype-card-body">
+          <div class="card-panel card-panel-left">
+            <div class="panel-label panel-label-brain"><span class="label-icon">🧠</span> Qué sucede en el cerebro</div>
+            <h4>Disparador: Protección de la autoestima (auto-sabotaje)</h4>
+            <p>Abandonar antes de terminar es lo que la psicología llama <strong><em>self-handicapping</em></strong>: si no lo terminé, nunca sabré si "no hubiera sido suficientemente buena" — y esa incertidumbre protege la autoestima más que arriesgarse a un resultado real. <strong>Es protección, no falta de compromiso.</strong></p>
+            <div class="evidence">
+              <strong>Evidencia:</strong> Berglas & Jones conceptualizaron el <em>self-handicapping</em>: el cerebro prefiere el abandono antes que el riesgo de un resultado medible que pueda confirmar la insuficiencia que se teme.
+            </div>
+          </div>
+          <div class="card-panel card-panel-right">
+            <div class="panel-label panel-label-solution"><span class="label-icon">✦</span> Su proceso para superarlo</div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Estrategia práctica</div>
+              <p>Continúa, durante <strong>30 minutos</strong>, el mismo activo que ya empezó —sin abrir nada nuevo— apartando el impulso de comenzar otro proyecto que parezca más entusiasmante.</p>
+            </div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Atmósfera sonora</div>
+              <p>Música que sostenga la constancia. Recomendable que hable de paciencia con el propio proceso, de que sostener también es avanzar, y de que lo que se sostiene, florece.</p>
+            </div>
+
+            <div class="affirmation">
+              "Sostener también es crear. Honro mi compromiso inicial: lo que se cuida y se concluye es lo que florece y da fruto."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. La Camaleón -->
+      <div class="archetype-card" id="camaleon">
+        <div class="archetype-card-header">
+          <div class="archetype-number">7</div>
+          <div class="archetype-name">La Camaleón</div>
+        </div>
+        <div class="archetype-card-body">
+          <div class="card-panel card-panel-left">
+            <div class="panel-label panel-label-brain"><span class="label-icon">🧠</span> Qué sucede en el cerebro</div>
+            <h4>Disparador: Dolor social y miedo al rechazo</h4>
+            <p>El rechazo social activa la misma región cerebral (<strong>corteza cingulada anterior dorsal</strong>) que el dolor físico. Para tu cerebro, mostrarte y ser juzgada no es una metáfora: <strong>se procesa como una amenaza real a tu integridad.</strong></p>
+            <div class="evidence">
+              <strong>Evidencia:</strong> Dra. Naomi Eisenberger (UCLA) demostró mediante <em>fMRI</em> que la exclusión social activa los mismos circuitos neurales que el dolor físico. La <em>exposición gradual y repetida</em> es la estrategia con evidencia más consistente para reducir esa reactividad.
+            </div>
+          </div>
+          <div class="card-panel card-panel-right">
+            <div class="panel-label panel-label-solution"><span class="label-icon">✦</span> Su proceso para superarlo</div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Estrategia práctica</div>
+              <p>Dedica <strong>30 minutos</strong> a mostrar una parte de su activo —compartirlo, pedir una opinión, publicarlo— apartando el miedo a lo que puedan pensar los demás.</p>
+            </div>
+
+            <div class="strategy-block">
+              <div class="strategy-title">▸ Atmósfera sonora</div>
+              <p>Música que active la confianza y la voz propia. Recomendable que hable de autenticidad, de que lo genuino atrae abundancia, y de que mostrarse es el primer paso para vender.</p>
+            </div>
+
+            <div class="affirmation">
+              "Mi mensaje es un servicio para quien lo necesita. Mostrarse con autenticidad atrae abundancia y sana el miedo."
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="page-footer">
+    <p><strong>Método MODO LÍDER</strong> — Neurociencia aplicada a la procrastinación</p>
+    <p style="margin-top: 6px;">Lic. Romina Lorena Montiel · Mentora de Mentes y Negocios</p>
+    <p style="margin-top: 4px; font-size: 0.78rem;">Basado en investigaciones de Sirois, Pychyl, LeDoux, Gollwitzer, Steel, Leroy, Schultz, Berglas & Jones, Eisenberger.</p>
+    <p style="margin-top: 12px; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--khaki);">CREA. LIDERA. IMPACTA.</p>
+  </footer>
+
+</body>
+</html>
