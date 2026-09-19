@@ -1466,6 +1466,60 @@
             margin: 10px auto 2px auto;
         }
 
+        /* RETURN TO STUDY FOLDERS BUTTON */
+        .return-to-folders-box {
+            margin: 3.5rem 0 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(226, 232, 240, 0.8);
+            width: 100%;
+        }
+
+        .btn-return-folders {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #111622 0%, #1A2234 100%);
+            color: #D4AF37;
+            border: 1.5px solid #D4AF37;
+            padding: 0.95rem 2.2rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18), 0 0 15px rgba(212, 175, 55, 0.2);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        .btn-return-folders:hover {
+            background: var(--gold-gradient);
+            color: #07090E;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.45);
+        }
+
+        .btn-return-folders .btn-icon {
+            font-size: 1.25rem;
+        }
+
+        .btn-return-folders .btn-arrow {
+            font-size: 1.15rem;
+            font-weight: 900;
+            transition: transform 0.25s ease;
+            color: #D4AF37;
+        }
+
+        .btn-return-folders:hover .btn-arrow {
+            transform: translateY(-3px);
+            color: #07090E;
+        }
+
         /* PILLAR 2: AUDIO / PODCAST PLAYER */
         .audio-player-box {
             background: #FFFFFF;
@@ -2747,6 +2801,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- BOTÓN REGRESAR A CARPETAS DE ESTUDIO -->
+                    <div class="return-to-folders-box">
+                        <a href="#carpetas" class="btn-return-folders" onclick="scrollToFolders(event)">
+                            <span class="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span class="btn-arrow">↑</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- PANEL: MINICURSO SALIR DEL MODO PROCRASTINACIÓN -->
@@ -2826,9 +2889,9 @@
                                 </div>
                                 <div>
                                     <a href="/materiales/neurociencia-procrastinacion.html" target="_blank" class="btn-download-primary" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.6rem;">
-                                         <span>🚀 Abrir Módulo de Neurociencia Online ↗</span>
-                                     </a>
-                                 </div>
+                                        <span>🚀 Abrir Módulo de Neurociencia Online ↗</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -2943,6 +3006,15 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- BOTÓN REGRESAR A CARPETAS DE ESTUDIO -->
+                    <div class="return-to-folders-box">
+                        <a href="#carpetas" class="btn-return-folders" onclick="scrollToFolders(event)">
+                            <span class="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span class="btn-arrow">↑</span>
+                        </a>
                     </div>
                 </div>
 
@@ -3089,6 +3161,15 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- BOTÓN REGRESAR A CARPETAS DE ESTUDIO -->
+                    <div class="return-to-folders-box">
+                        <a href="#carpetas" class="btn-return-folders" onclick="scrollToFolders(event)">
+                            <span class="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span class="btn-arrow">↑</span>
+                        </a>
                     </div>
                 </div>
 
@@ -3311,6 +3392,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- BOTÓN REGRESAR A CARPETAS DE ESTUDIO -->
+                    <div class="return-to-folders-box">
+                        <a href="#carpetas" class="btn-return-folders" onclick="scrollToFolders(event)">
+                            <span class="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span class="btn-arrow">↑</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- PANEL 5: TESTIMONIOS -->
@@ -3394,6 +3484,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- BOTÓN REGRESAR A CARPETAS DE ESTUDIO -->
+                    <div class="return-to-folders-box">
+                        <a href="#carpetas" class="btn-return-folders" onclick="scrollToFolders(event)">
+                            <span class="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span class="btn-arrow">↑</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -3434,6 +3533,15 @@
             const carpetasSec = document.getElementById('carpetas');
             if (carpetasSec) {
                 carpetasSec.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Return to study folders
+        function scrollToFolders(e) {
+            if (e) e.preventDefault();
+            const carpetasSec = document.getElementById('carpetas');
+            if (carpetasSec) {
+                carpetasSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
 
