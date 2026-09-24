@@ -2637,6 +2637,16 @@
                     <span class="tab-desc">Emprender Conscientemente</span>
                 </div>
 
+                <!-- Tab 2: CLASE 2 -->
+                <div class="folder-nav-tab" id="tab-clase2" onclick="switchFolder('clase2')">
+                    <div class="tab-top-row">
+                        <span class="tab-icon">📁</span>
+                        <span class="tab-badge">Clase 2</span>
+                    </div>
+                    <span class="tab-title">CLASE 2</span>
+                    <span class="tab-desc">Propósito y Dirección</span>
+                </div>
+
                 <!-- Tab: DESAFÍOS -->
                 <div class="folder-nav-tab" id="tab-desafios" onclick="switchFolder('desafios')">
                     <div class="tab-top-row">
@@ -3173,6 +3183,174 @@
                     </div>
                 </div>
 
+                <!-- PANEL 2: CLASE 2 -->
+                <div class="folder-panel" id="panel-clase2" style="display: none;">
+                    <div class="folder-active-banner">
+                        <div class="active-folder-header">
+                            <span class="big-icon">📂</span>
+                            <div>
+                                <h3>CARPETA: CLASE 2 - PROPÓSITO Y DIRECCIÓN</h3>
+                                <p>Descubre el rumbo de tu negocio, alinea tus metas y conecta con tu audiencia ideal.</p>
+                            </div>
+                        </div>
+                        <div class="folder-materials-count">
+                            <span class="material-chip chip-video">🎬 Videos Grabados</span>
+                            <span class="material-chip chip-docs">📄 4 Materiales Online</span>
+                        </div>
+                    </div>
+
+                    <div class="folder-pillars-grid">
+                        <!-- 1. Video Player Real -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>🎬</span>
+                                    <span id="title-video-clase2">1. Grabación Oficial: Emprender de Cero a Impacto y Ventas - Clase 2</span>
+                                </div>
+                                <span class="pillar-badge" id="badge-video-clase2">Video HD</span>
+                            </div>
+                            <div class="folder-video-screen" id="videoContainer-clase2">
+                                <iframe 
+                                    id="iframeElement-clase2"
+                                    src="" 
+                                    title="Clase 2" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen
+                                    style="display: none;">
+                                </iframe>
+                                <video id="videoElement-clase2" controls controlsList="nodownload" oncontextmenu="return false;" preload="metadata" poster="/banner_modo_lider.png">
+                                    <source src="/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CURSO%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS%20CLASE%202.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Selector de videos de la Clase 2 -->
+                            <div class="video-playlist-bar">
+                                <span class="playlist-label">Opciones de Video:</span>
+                                <button class="playlist-btn active" onclick="switchFolderVideo('clase2', '/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CURSO%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS%20CLASE%202.mp4', '1. Grabación Oficial Completa - Clase 2', this, '/banner_modo_lider.png', false)">
+                                    ▶ 1. Clase Completa (2 GB)
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase2', '/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/BIENVENIDA%20A%20LA%20CLASE%202%20DE%20ESTE%20CURSO.mpeg', '2. Bienvenida a la Clase 2', this, '', false)">
+                                    ▶ 2. Bienvenida
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase2', '/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/CLASE%202%20NOS%20PRESENTAMOS%20Y%20PRESENTAMOS%20NUESTROS%20EMPRENDIMIENTOS.mp4', '3. Presentación de Emprendimientos', this, '', false)">
+                                    ▶ 3. Presentaciones
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase2', '/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/EL%20ANTES%20Y%20EL%20DESPUES%20DE%20DESCUBRIR%20TU%20PROPOSITO.mp4', '4. El Antes y Después de Descubrir tu Propósito', this, '', false)">
+                                    ▶ 4. El Antes y Después
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase2', '/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/ENTENDER%20LO%20QUE%20ES%20EL%20PROPOSITO.mp4', '5. Entender lo que es el Propósito', this, '', false)">
+                                    ▶ 5. Entender el Propósito
+                                </button>
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase2', '/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/HABER%20CREADO%20UN%20PRODUCTO%20QUE%20TE%20ENCANTA%20NO%20IMPLICA%20ALGO%20QUE%20TU%20CLIENTE%20DESEA%20COMPRAR.mpeg', '6. Lo que tu Cliente Desea Comprar', this, '', false)">
+                                    ▶ 6. Lo que el Cliente Desea
+                                </button>
+                            </div>
+                            <div class="video-description-box" id="desc-video-clase2">
+                                💡 <strong>Contenido de la Clase:</strong> Sesión estratégica de autoliderazgo y dirección: descubre cómo transitar del autoempleo al liderazgo con propósito, validar qué desea comprar tu cliente y estructurar una visión clara para tu negocio.
+                            </div>
+                        </div>
+
+                        <!-- 2. Materiales Online de la Clase 2 -->
+                        <div class="pillar-card">
+                            <div class="pillar-header">
+                                <div class="pillar-title">
+                                    <span>📄</span>
+                                    <span>2. Materiales de la Clase 2: Propósito y Dirección</span>
+                                </div>
+                                <span class="pillar-badge">Lectura y Visualización Online</span>
+                            </div>
+                            <div class="downloads-grid">
+                                <!-- Doc 1: Introducción Escrita Clase 2 -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-docx">DOCX</div>
+                                        <div class="doc-meta">
+                                            <h5>Introducción Escrita Clase 2</h5>
+                                            <span>Lectura Online • Fundamento</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Texto preparatorio de Romina: emprender es construir un negocio que genere libertad y una vida sostenible.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/clase2_proposito_y_direccion/INTRO_ESCRITA_CLASE_2.html" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/clase2_proposito_y_direccion/INTRO ESCRITA CLASE 2.docx" download="INTRO_ESCRITA_CLASE_2.docx" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 2: PDF Workbook Oficial (Interactivo & Descargable) -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf">PDF</div>
+                                        <div class="doc-meta">
+                                            <h5>Workbook Oficial: Propósito y Dirección</h5>
+                                            <span>PDF Oficial • Lectura & Descarga</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Cuaderno de trabajo interactivo: ejercicios de autodiagnóstico, matriz del propósito y mapa de ruta.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.html" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>✨ Abrir Interactivo</span>
+                                        </a>
+                                        <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.pdf" download="Workbook_Clase_2_Proposito_y_Direccion.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar PDF</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 3: Presentación Diapositivas PPTX -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pptx">PPTX</div>
+                                        <div class="doc-meta">
+                                            <h5>Presentación Clase 2 (Diapositivas)</h5>
+                                            <span>Visualizador Web Online & PPTX</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Diapositivas completas proyectadas por Romina. Navega las láminas interactivamente o descárgalas en PowerPoint.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/clase2_proposito_y_direccion/Presentacion_Clase_2_Proposito_y_Direccion.html" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
+                                            <span>🚀 Ver Presentación</span>
+                                        </a>
+                                        <a href="/clase2_proposito_y_direccion/Clase_2_Proposito_y_Direccion_MODOLIDER.pptx" download="Clase_2_Proposito_y_Direccion_MODOLIDER.pptx" class="btn-download-primary" style="flex: 1; justify-content: center;">
+                                            <span>⬇️ Descargar PPTX</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Doc 4: Reto Práctico del Propósito -->
+                                <div class="download-card">
+                                    <div class="doc-icon-header">
+                                        <div class="doc-format-badge badge-pdf" style="background: rgba(16, 185, 129, 0.2); color: #34D399; border-color: rgba(16, 185, 129, 0.4);">RETO</div>
+                                        <div class="doc-meta">
+                                            <h5>Reto Final: Cuadro del Propósito</h5>
+                                            <span>Esquema Visual de Aplicación</span>
+                                        </div>
+                                    </div>
+                                    <p class="doc-desc">Consigna práctica de cierre: completa el cuadro del propósito antes de iniciar la Clase 3.</p>
+                                    <div class="doc-action-btns">
+                                        <a href="/clase2_proposito_y_direccion/El reto final de esta clase es lograr completar el cuadro del PROPOSITO.PNG" target="_blank" class="btn-download-primary" style="justify-content: center; width: 100%;">
+                                            <span>🎯 Ver Cuadro del Reto</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOTÓN REGRESAR A CARPETAS DE ESTUDIO -->
+                    <div class="return-to-folders-box">
+                        <a href="#carpetas" class="btn-return-folders" onclick="scrollToFolders(event)">
+                            <span class="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span class="btn-arrow">↑</span>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- PANEL: DESAFÍOS Y RETOS DE ACCIÓN -->
                 <div class="folder-panel" id="panel-desafios" style="display: none;">
                     <div class="folder-active-banner">
@@ -3512,7 +3690,7 @@
     <!-- INTERACTIVE JAVASCRIPT ENGINE -->
     <script>
         // Folder navigation
-        const folderIds = ['intro', 'procrastinacion', 'clase1', 'desafios', 'testimonios'];
+        const folderIds = ['intro', 'procrastinacion', 'clase1', 'clase2', 'desafios', 'testimonios'];
 
         function switchFolder(selectedId) {
             folderIds.forEach(id => {

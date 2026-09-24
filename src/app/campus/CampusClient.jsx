@@ -534,7 +534,7 @@ export default function CampusClient() {
                 </div>
 
                 {/* PANEL 1: CLASE 1 */}
-                <div className="folder-panel" id="panel-clase1" style={{ "display": "none" }}>
+                <div className="folder-panel" id="panel-clase1" style={{ display: activeFolder === "clase1" ? "block" : "none" }}>
                     <div className="folder-active-banner">
                         <div className="active-folder-header">
                             <span className="big-icon">📂</span>
@@ -703,7 +703,7 @@ export default function CampusClient() {
                 </div>
 
                 {/* PANEL 2: CLASE 2 */}
-                <div className="folder-panel" id="panel-clase2" style={{ "display": "none" }}>
+                <div className="folder-panel" id="panel-clase2" style={{ display: activeFolder === "clase2" ? "block" : "none" }}>
                     <div className="folder-active-banner">
                         <div className="active-folder-header">
                             <span className="big-icon">📂</span>
@@ -713,9 +713,8 @@ export default function CampusClient() {
                             </div>
                         </div>
                         <div className="folder-materials-count">
-                            <span className="material-chip chip-video">🎬 1 Video Clase Completa (2.0 GB)</span>
-                            <span className="material-chip chip-audio">🎙️ 2 Audios</span>
-                            <span className="material-chip chip-docs">📥 3 Materiales</span>
+                            <span className="material-chip chip-video">🎬 Videos Grabados</span>
+                            <span className="material-chip chip-docs">📄 4 Materiales Online</span>
                         </div>
                     </div>
 
@@ -731,7 +730,7 @@ export default function CampusClient() {
                             </div>
                             <div className="folder-video-screen">
                                 <video id="videoElement-clase2" controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="metadata" poster="/banner_modo_lider.png">
-                                    <source src="/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/CURSO%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS%20CLASE%202.mp4" type="video/mp4" />
+                                    <source src="/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CURSO%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS%20CLASE%202.mp4" type="video/mp4" />
                                 </video>
                             </div>
                             <div className="video-description-box">
@@ -739,91 +738,83 @@ export default function CampusClient() {
                             </div>
                         </div>
 
-                        {/* 2. Audio Podcast */}
+                        {/* 2. Materiales Online de la Clase 2 */}
                         <div className="pillar-card">
                             <div className="pillar-header">
                                 <div className="pillar-title">
-                                    <span>🎙️</span>
-                                    <span>2. Audios de la Clase 2</span>
+                                    <span>📄</span>
+                                    <span>2. Materiales de la Clase 2: Propósito y Dirección</span>
                                 </div>
-                                <span className="pillar-badge">Audios Oficiales</span>
-                            </div>
-                            <div className="audio-player-box">
-                                <div className="audio-track-info">
-                                    <div className="track-details">
-                                        <div className="podcast-cover-icon">🎙️</div>
-                                        <div className="track-title-box">
-                                            <h4>Audio Introducción Clase 2</h4>
-                                            <p>Por Lic. Romina Lorena Montiel • Audio Guía</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <audio controls className="real-audio-element">
-                                    <source src="/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/INTRODUCCI%C3%93N%20CLASE%202.mpeg" type="audio/mpeg" />
-                                </audio>
-                            </div>
-                        </div>
-
-                        {/* 3. Descargables */}
-                        <div className="pillar-card">
-                            <div className="pillar-header">
-                                <div className="pillar-title">
-                                    <span>📥</span>
-                                    <span>3. Descargar Materiales de la Clase 2</span>
-                                </div>
-                                <span className="pillar-badge">PDFs y Presentación</span>
+                                <span className="pillar-badge">Lectura y Visualización Online</span>
                             </div>
                             <div className="downloads-grid">
-                                {/* Doc 1: PDF Workbook Clase 2 */}
+                                {/* Doc 1: Introducción Escrita Clase 2 */}
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-docx">DOCX</div>
+                                        <div className="doc-meta">
+                                            <h5>Introducción Escrita Clase 2</h5>
+                                            <span>Lectura Online • Fundamento</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Texto preparatorio de Romina: emprender es construir un negocio que genere libertad y una vida sostenible.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/clase2_proposito_y_direccion/INTRO_ESCRITA_CLASE_2.html" target="_blank" className="btn-download-primary" style={{ justifyContent: "center", width: "100%" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Doc 2: PDF Workbook Clase 2 */}
                                 <div className="download-card">
                                     <div className="doc-icon-header">
                                         <div className="doc-format-badge badge-pdf">PDF</div>
                                         <div className="doc-meta">
                                             <h5>Workbook Clase 2: Propósito y Dirección</h5>
-                                            <span>PDF Oficial • 2.6 MB</span>
+                                            <span>PDF Oficial • Lectura & Descarga</span>
                                         </div>
                                     </div>
-                                    <p className="doc-desc">Cuaderno de trabajo oficial con ejercicios de claridad y foco.</p>
+                                    <p className="doc-desc">Cuaderno de trabajo interactivo: ejercicios de autodiagnóstico, matriz del propósito y mapa de ruta.</p>
                                     <div className="doc-action-btns">
-                                        <a href="/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/Workbook_Clase_2_Proposito_y_Direccion.pdf" download className="btn-download-primary">
-                                            <span>📥 Descargar PDF</span>
+                                        <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.html" target="_blank" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>✨ Abrir Interactivo</span>
                                         </a>
-                                        <a href="/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/Workbook_Clase_2_Proposito_y_Direccion.pdf" target="_blank" className="btn-view-secondary">
-                                            <span>👁️ Abrir</span>
+                                        <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.pdf" download="Workbook_Clase_2_Proposito_y_Direccion.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
 
-                                {/* Doc 2: PPTX Clase 2 */}
-                                <div className="download-card">
-                                    <div className="doc-icon-header">
-                                        <div className="doc-format-badge badge-pptx">PPTX</div>
-                                        <div className="doc-meta">
-                                            <h5>Presentación Clase 2</h5>
-                                            <span>PowerPoint Oficial • 65 KB</span>
-                                        </div>
-                                    </div>
-                                    <p className="doc-desc">Diapositivas de la Clase 2 para repasar los conceptos proyectados.</p>
-                                    <div className="doc-action-btns">
-                                        <a href="/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/Presentacion_Clase_2_Proposito_y_Direccion.pptx" download className="btn-download-primary">
-                                            <span>📥 Descargar PPTX</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                {/* Doc 3: Web Interactiva */}
+                                {/* Doc 3: Presentación Web */}
                                 <div className="download-card">
                                     <div className="doc-icon-header">
                                         <div className="doc-format-badge badge-html">WEB</div>
                                         <div className="doc-meta">
-                                            <h5>Presentación Interactiva Online</h5>
-                                            <span>Versión Web Clase 2</span>
+                                            <h5>Presentación Interactiva Clase 2</h5>
+                                            <span>Visualizador Web Online</span>
                                         </div>
                                     </div>
-                                    <p className="doc-desc">Abre las diapositivas de la Clase 2 directamente en tu pantalla.</p>
+                                    <p className="doc-desc">Diapositivas completas proyectadas por Romina. Navega las láminas interactivamente sin descargar.</p>
                                     <div className="doc-action-btns">
-                                        <a href="/videos/CLASE%202%20Prop%C3%B3sito%20y%20Direcci%C3%B3n/Presentacion_Clase_2_Proposito_y_Direccion.html" target="_blank" className="btn-download-primary">
-                                            <span>🚀 Abrir Online</span>
+                                        <a href="/clase2_proposito_y_direccion/Presentacion_Clase_2_Proposito_y_Direccion.html" target="_blank" className="btn-download-primary" style={{ justifyContent: "center", width: "100%" }}>
+                                            <span>🚀 Ver Presentación Online</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Doc 4: Reto Práctico */}
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf" style={{ background: "rgba(16, 185, 129, 0.2)", color: "#34D399", borderColor: "rgba(16, 185, 129, 0.4)" }}>RETO</div>
+                                        <div className="doc-meta">
+                                            <h5>Reto Final: Cuadro del Propósito</h5>
+                                            <span>Esquema Visual de Aplicación</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Consigna práctica de cierre: completa el cuadro del propósito antes de iniciar la Clase 3.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/clase2_proposito_y_direccion/El reto final de esta clase es lograr completar el cuadro del PROPOSITO.PNG" target="_blank" className="btn-download-primary" style={{ justifyContent: "center", width: "100%" }}>
+                                            <span>🎯 Ver Cuadro del Reto</span>
                                         </a>
                                     </div>
                                 </div>
@@ -833,7 +824,7 @@ export default function CampusClient() {
                 </div>
 
                 {/* PANEL 3: CLASE 3 */}
-                <div className="folder-panel" id="panel-clase3" style={{ "display": "none" }}>
+                <div className="folder-panel" id="panel-clase3" style={{ display: activeFolder === "clase3" ? "block" : "none" }}>
                     <div className="folder-active-banner">
                         <div className="active-folder-header">
                             <span className="big-icon">📂</span>

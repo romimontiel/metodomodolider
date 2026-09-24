@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción Escrita - Clase 2: Propósito y Dirección | Método Modo Líder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #0B0E14;
+            --bg-card: #121824;
+            --bg-glass: rgba(18, 24, 36, 0.85);
+            --color-gold: #D4AF37;
+            --color-gold-light: #F3E5AB;
+            --color-text-main: #F0F4F8;
+            --color-text-muted: #9BA3AF;
+            --color-border: rgba(212, 175, 55, 0.25);
+            --radius-lg: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--color-text-main);
+            line-height: 1.8;
+            padding: 3rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+        }
+
+        .doc-container {
+            max-width: 820px;
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem 3rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.08);
+            position: relative;
+        }
+
+        .doc-header {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .doc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            color: var(--color-gold);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 1rem;
+        }
+
+        .doc-title {
+            font-size: 2.1rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-subtitle {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+
+        .doc-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: #CBD5E1;
+        }
+
+        .highlight-quote {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.03) 100%);
+            border-left: 4px solid var(--color-gold);
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-gold-light);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .key-concept {
+            color: var(--color-gold);
+            font-weight: 700;
+        }
+
+        .action-box {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .signature-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sig-name {
+            font-weight: 700;
+            color: #FFFFFF;
+            font-size: 1.05rem;
+        }
+
+        .sig-role {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
+            color: #0E121B;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.85rem 1.8rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+        }
+
+        @media (max-width: 768px) {
+            .doc-container {
+                padding: 2rem 1.5rem;
+            }
+            .doc-title {
+                font-size: 1.6rem;
+            }
+            .highlight-quote {
+                font-size: 1.1rem;
+                padding: 1.2rem 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="doc-container">
+        <header class="doc-header">
+            <span class="doc-badge">✨ Fundamento Escrito • Clase 2</span>
+            <h1 class="doc-title">Introducción Escrita: Propósito y Dirección</h1>
+            <p class="doc-subtitle">Método Modo Líder • Cohorte 2026</p>
+        </header>
+
+        <article class="doc-content">
+            <div class="highlight-quote">
+                "Emprender es comenzar a soñar con un negocio que no solo te sostenga, sino que te permita vivir de lo que genera."
+            </div>
+
+            <p>Porque emprender no es solamente tener algo para vender. Es construir algo que pueda <span class="key-concept">crecer, generar valor y convertirse en una fuente real de libertad</span>.</p>
+
+            <p>Muchas veces comenzamos creando productos que a nosotras mismas nos apasionan, pero nos encontramos con el desafío de conectar con el deseo genuino de nuestro cliente ideal. <span class="key-concept">Tener un producto excelente no garantiza una venta</span> si no existe una dirección clara, un propósito alineado y un mensaje que resuene con la necesidad de quien está del otro lado.</p>
+
+            <p>En esta Clase 2 profundizamos en el <strong>Propósito y la Dirección estratégica</strong>: cómo pasar de la confusión o dispersión a una visión nítida de negocio, ordenando tu oferta y asegurando que cada acción que tomes construya estabilidad y rentabilidad sostenible.</p>
+
+            <div style="background: rgba(255,255,255,0.03); border: 1px dashed rgba(212,175,55,0.3); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
+                <p style="font-size: 0.9rem; color: var(--color-gold); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">📌 Frase Clave para Recordar:</p>
+                <p style="margin-bottom: 0; font-size: 1rem; color: #E5E7EB; font-style: italic;">
+                    "No se trata solo de crear un negocio. Se trata de crear una vida que puedas sostener con lo que sos capaz de construir."
+                </p>
+            </div>
+        </article>
+
+        <footer class="action-box">
+            <div class="signature-info">
+                <span class="sig-name">Lic. Romina Lorena Montiel</span>
+                <span class="sig-role">Lic. en Administración • Neuropsicoeducadora • Mentora Modo Líder</span>
+            </div>
+            <a href="/clase2_proposito_y_direccion/INTRO ESCRITA CLASE 2.docx" download class="btn-download">
+                <span>📥 Descargar Word (.docx)</span>
+            </a>
+        </footer>
+    </main>
+
+</body>
+</html>

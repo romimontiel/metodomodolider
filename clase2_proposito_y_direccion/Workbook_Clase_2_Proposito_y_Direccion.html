@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbook Clase 2 — Propósito y Dirección | MODO LÍDER</title>
+    <meta name="description" content="Workbook interactivo de la Clase 2: Propósito y Dirección. Curso Emprender de Cero a Impacto y Ventas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-navy: #0E121B;
+            --color-surface-dark: #161A25;
+            --color-light-bg: #F8F9FB;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #B4871E;
+            --color-gold-light: #FFF8E7;
+            --color-coral: #E94560;
+            --color-coral-light: #FFF0F3;
+            --color-text-dark: #1B1F2A;
+            --color-text-light: #F4F5F8;
+            --color-text-muted: #5A6473;
+            --color-border: #E2E6EE;
+            --color-purple: #7C3AED;
+            --color-purple-light: #F3EEFF;
+            --color-orange: #F59E0B;
+            --color-orange-light: #FFFBEB;
+            --color-green: #10B981;
+            --color-green-light: #ECFDF5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--color-light-bg);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+        }
+
+        /* ============ PRINT STYLES ============ */
+        @media print {
+            body { background: #FFF; }
+            .workbook-container { box-shadow: none; max-width: 100%; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            .writing-area { border: 1.5px solid #CCC !important; background: #FAFAFA !important; min-height: 100px !important; }
+            .writing-area:focus { outline: none; }
+            section { page-break-inside: avoid; }
+        }
+
+        /* ============ LAYOUT ============ */
+        .workbook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+        }
+
+        /* ============ COVER ============ */
+        .cover {
+            background: #3E3E3E;
+            color: #FFFFFF;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .cover-top {
+            flex: 1;
+            padding: 3.5rem 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cover-author {
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #E8E0CC;
+            margin-bottom: 0.6rem;
+        }
+
+        .cover-divider {
+            width: 120px;
+            height: 1px;
+            background: #C8A82A;
+            margin: 0 auto 2rem;
+        }
+
+        .cover h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 2.5rem;
+            text-shadow: none;
+        }
+
+        .cover-course-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C8C0B0;
+            margin-bottom: 0.4rem;
+        }
+
+        .cover-course-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #E8E0CC;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+
+        /* Logo grande en cover */
+        .cover-logo-big {
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #0E0804 70%);
+            border: 4px solid #C8A82A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem auto 1rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+        }
+
+        .cover-logo-big .clb-metodo {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #DDD;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .cover-logo-big .clb-modo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #FFF;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .cover-logo-big .clb-lider {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            font-family: Georgia, serif;
+            margin-top: -2px;
+            margin-bottom: 4px;
+        }
+
+        .cover-logo-big .clb-slogan {
+            font-size: 0.5rem;
+            color: #BBA;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        /* Barra inferior de cover */
+        .cover-bottom-bar {
+            background: #2C2C2C;
+            padding: 1rem 3rem;
+            border-top: 2px solid #C8A82A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .cover-bottom-bar .cb-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: #C8A82A;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .cover-bottom-bar .cb-text {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #E8E0CC;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Campos de llenado (al reverso / en pantalla) */
+        .cover-fields {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cover-field {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(200,168,42,0.35);
+            border-radius: 8px;
+            padding: 0.7rem 1.3rem;
+            min-width: 180px;
+            text-align: left;
+        }
+
+        .cover-field label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #C8A82A;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .cover-field input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(200,168,42,0.4);
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            width: 100%;
+            padding: 0.25rem 0;
+            outline: none;
+        }
+
+        .cover-field input::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* ============ HOJA FINAL ============ */
+        .closing-page {
+            background: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            page-break-before: always;
+        }
+
+        .closing-top-bar {
+            height: 18px;
+            background: #3E3E3E;
+        }
+
+        .closing-body {
+            flex: 1;
+            padding: 3rem 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .closing-hoy {
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #1A1A1A;
+            margin-bottom: 1.2rem;
+        }
+
+        .closing-text {
+            font-size: 1.15rem;
+            color: #2C2C2C;
+            line-height: 1.8;
+            max-width: 520px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .closing-text strong {
+            font-weight: 800;
+        }
+
+        /* Logo grande en hoja final */
+        .closing-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #0E0804 70%);
+            border: 3px solid #C8A82A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .closing-logo .cl-metodo {
+            font-size: 0.42rem;
+            font-weight: 700;
+            color: #DDD;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .closing-logo .cl-modo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #FFF;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .closing-logo .cl-lider {
+            font-size: 1.6rem;
+            font-weight: 900;
+            background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .closing-logo .cl-slogan {
+            font-size: 0.33rem;
+            color: #BBA;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .closing-firma {
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 600;
+            color: #2C2C2C;
+            margin-bottom: 2rem;
+        }
+
+        .closing-next-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C8A82A;
+            margin-bottom: 0.3rem;
+        }
+
+        .closing-next-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 0.3rem;
+        }
+
+        .closing-next-date {
+            font-size: 0.8rem;
+            color: #6A7A8E;
+            font-style: italic;
+        }
+
+        .closing-footer {
+            border-top: 1px solid #E2E6EE;
+            padding: 1rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .closing-footer-brand {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #C8A82A;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .closing-footer-copy {
+            font-size: 0.65rem;
+            color: #8A9AB0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .closing-footer-num {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #2C2C2C;
+        }
+
+        @media print {
+            .cover { min-height: 100vh; }
+            .closing-page { min-height: 100vh; }
+            .cover-logo-big, .closing-logo {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        /* ============ SECTIONS ============ */
+        section {
+            padding: 3rem 4rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .section-number {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-gold-dark);
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--color-navy);
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        /* ============ CARDS & EXERCISES ============ */
+        .exercise-card {
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: 14px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .exercise-label {
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+
+        .exercise-question {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .exercise-hint {
+            font-size: 0.88rem;
+            color: var(--color-text-muted);
+            font-style: italic;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .writing-area {
+            width: 100%;
+            min-height: 120px;
+            border: 2px dashed var(--color-border);
+            border-radius: 10px;
+            padding: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.92rem;
+            color: var(--color-text-dark);
+            background: var(--color-light-bg);
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.2s ease, background 0.2s ease;
+            line-height: 1.6;
+        }
+
+        .writing-area:focus {
+            border-color: var(--color-gold);
+            background: var(--color-gold-light);
+        }
+
+        .writing-area-small {
+            min-height: 80px;
+        }
+
+        .writing-area-large {
+            min-height: 160px;
+        }
+
+        /* ============ DEFINITION GRID ============ */
+        .def-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        .def-card {
+            border-radius: 12px;
+            padding: 1.3rem;
+            border-left: 5px solid;
+        }
+
+        /* ============ CIRCLE HEADER ============ */
+        .circle-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .circle-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .circle-header-text h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--color-navy);
+        }
+
+        .circle-header-text p {
+            font-size: 0.88rem;
+            color: var(--color-text-muted);
+        }
+
+        /* ============ TRANSFORMATION FORMULA ============ */
+        .formula-box {
+            background: var(--color-navy);
+            border-radius: 14px;
+            padding: 2rem;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+        }
+
+        .formula-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .formula-label {
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 130px;
+            flex-shrink: 0;
+        }
+
+        .formula-input {
+            flex: 1;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.92rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .formula-input:focus {
+            border-color: var(--color-gold);
+        }
+
+        .formula-input::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+
+        .formula-arrow {
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            font-weight: 800;
+        }
+
+        /* ============ TRANSFORMATION A→B ============ */
+        .transform-box {
+            background: var(--color-light-bg);
+            border: 2px solid var(--color-border);
+            border-radius: 14px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .transform-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .transform-side {
+            flex: 1;
+        }
+
+        .transform-side label {
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .transform-arrow-center {
+            font-size: 2rem;
+            color: var(--color-gold);
+            font-weight: 800;
+            align-self: center;
+            margin-top: 1.5rem;
+        }
+
+        /* ============ TABLE ============ */
+        .desglose-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            margin-bottom: 1.5rem;
+        }
+
+        .desglose-table th {
+            padding: 0.9rem 1.2rem;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: var(--color-gold-light);
+            color: var(--color-gold-dark);
+            text-align: left;
+        }
+
+        .desglose-table td {
+            padding: 0.8rem 1.2rem;
+            border-top: 1px solid var(--color-border);
+            vertical-align: top;
+        }
+
+        .desglose-table tr:nth-child(even) td {
+            background: #FAFBFC;
+        }
+
+        .desglose-table textarea {
+            width: 100%;
+            min-height: 50px;
+            border: 1px dashed var(--color-border);
+            border-radius: 6px;
+            padding: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: var(--color-text-dark);
+            background: transparent;
+            resize: vertical;
+            outline: none;
+        }
+
+        .desglose-table textarea:focus {
+            border-color: var(--color-gold);
+            background: var(--color-gold-light);
+        }
+
+        /* ============ QUOTE BLOCK ============ */
+        .quote-block {
+            background: var(--color-gold-light);
+            border: 2px solid var(--color-gold);
+            border-radius: 14px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .quote-block p {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            line-height: 1.6;
+        }
+
+        /* ============ COACHING NOTES ============ */
+        .coaching-area {
+            background: linear-gradient(135deg, #F8F6FF 0%, #FFF8F0 100%);
+            border: 2px solid var(--color-purple);
+            border-radius: 14px;
+            padding: 2rem;
+        }
+
+        .coaching-area h4 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--color-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .coaching-area p {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* ============ TOOLBAR ============ */
+        .toolbar {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            z-index: 100;
+        }
+
+        .toolbar-btn {
+            background: var(--color-navy);
+            color: #FFFFFF;
+            border: 2px solid var(--color-gold);
+            border-radius: 50px;
+            padding: 0.7rem 1.3rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toolbar-btn:hover {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+
+        /* ============ FOOTER ============ */
+        .workbook-footer {
+            background: var(--color-navy);
+            color: #A0AEC0;
+            padding: 2.5rem 4rem;
+            text-align: center;
+            border-top: 2px solid var(--color-gold);
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        /* Logo CSS Modo Líder (footer) */
+        .footer-logo {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #1A0E03 70%);
+            border: 2px solid var(--color-gold);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .footer-logo .fl-metodo {
+            font-size: 0.32rem;
+            font-weight: 700;
+            color: #FFF;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-logo .fl-modo {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #FFF;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .footer-logo .fl-lider {
+            font-size: 0.85rem;
+            font-weight: 800;
+            background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .footer-logo .fl-slogan {
+            font-size: 0.2rem;
+            color: #CCC;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-brand-text {
+            text-align: left;
+        }
+
+        .footer-brand-text .name {
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: var(--color-gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .footer-brand-text .title {
+            font-size: 0.72rem;
+            color: #8A9AB0;
+            letter-spacing: 0.5px;
+            margin-top: 0.1rem;
+        }
+
+        .workbook-footer .footer-copy {
+            font-size: 0.78rem;
+            color: #6A7A8E;
+            margin-top: 0.4rem;
+        }
+
+        .workbook-footer .footer-doc {
+            font-size: 0.82rem;
+            color: #8A9AB0;
+            margin-top: 0.2rem;
+        }
+
+        /* ============ PAGE BRAND BAR (todas las páginas) ============ */
+        .page-brand-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.45rem 0.8rem 0.45rem 0;
+            margin-bottom: 1.2rem;
+            border-bottom: 1.5px solid var(--color-gold);
+        }
+
+        /* Logo circular CSS miniatura */
+        .page-brand-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #1A0E03 70%);
+            border: 1.5px solid var(--color-gold);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .page-brand-logo .pbl-metodo {
+            font-size: 0.22rem;
+            font-weight: 700;
+            color: #FFF;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .page-brand-logo .pbl-modo {
+            font-size: 0.44rem;
+            font-weight: 700;
+            color: #FFF;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .page-brand-logo .pbl-lider {
+            font-size: 0.58rem;
+            font-weight: 800;
+            background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .page-brand-name {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--color-text-muted);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .page-brand-sep {
+            color: var(--color-gold);
+            font-weight: 900;
+        }
+
+        .page-brand-copy {
+            font-weight: 500;
+            font-size: 0.68rem;
+            color: var(--color-text-muted);
+            opacity: 0.75;
+        }
+
+        @media print {
+            .page-brand-bar {
+                border-bottom: 1px solid #C8A82A;
+                margin-bottom: 1rem;
+                padding-bottom: 0.35rem;
+            }
+            .page-brand-logo {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .page-brand-name {
+                color: #4A5568 !important;
+            }
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            section { padding: 2rem 1.5rem; }
+            .cover { padding: 3rem 1.5rem; }
+            .cover h1 { font-size: 2rem; }
+            .def-grid { grid-template-columns: 1fr; }
+            .formula-row { flex-direction: column; gap: 0.5rem; }
+            .formula-label { min-width: auto; }
+            .transform-row { flex-direction: column; }
+            .transform-arrow-center { align-self: center; transform: rotate(90deg); }
+            .toolbar { bottom: 1rem; right: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="workbook-container">
+
+        <!-- ============ COVER ============ -->
+        <div class="cover">
+            <div class="cover-top">
+                <!-- Nombre arriba -->
+                <div class="cover-author">Lic. Romina Lorena Montiel</div>
+                <div class="cover-divider"></div>
+
+                <!-- Título principal -->
+                <h1>MODO LÍDER</h1>
+
+                <!-- Nombre del curso -->
+                <div class="cover-course-label">Curso</div>
+                <div class="cover-course-name">Emprender de Cero a<br>Impacto y Ventas</div>
+
+                <!-- Logo grande -->
+                <div class="cover-logo-big">
+                    <span class="clb-metodo">MÉTODO</span>
+                    <span class="clb-modo">MODO</span>
+                    <span class="clb-lider">LÍDER</span>
+                    <span class="clb-slogan">CREA · LIDERA · IMPACTA</span>
+                </div>
+            </div>
+
+            <!-- Barra inferior con número de clase -->
+            <div class="cover-bottom-bar">
+                <span class="cb-label">Clase 2:</span>
+                <span class="cb-text">¿Cuál es tu propósito y tu dirección?</span>
+            </div>
+        </div>
+
+        <!-- ============ SECCIÓN 1: DEFINICIONES ============ -->
+        <section>
+            <!-- MARCA DE PÁGINA -->
+            <div class="page-brand-bar">
+                <div class="page-brand-logo">
+                    <span class="pbl-metodo">MÉTODO</span>
+                    <span class="pbl-modo">MODO</span>
+                    <span class="pbl-lider">LÍDER</span>
+                </div>
+                <div class="page-brand-name">Lic. Romina Lorena Montiel <span class="page-brand-sep">·</span> <span class="page-brand-copy">Todos los derechos reservados</span></div>
+            </div>
+            <span class="section-number">SECCIÓN 1 DE 7</span>
+            <h2 class="section-title">Propósito ≠ Pasión ≠ Misión ≠ Meta</h2>
+            <p class="section-subtitle">Definí cada concepto con tus propias palabras. Esto te va a dar claridad para todo lo que viene.</p>
+
+            <div class="def-grid">
+                <div class="def-card" style="border-left-color: var(--color-coral); background: var(--color-coral-light);">
+                    <span class="exercise-label" style="color: var(--color-coral);">🔥 Mi Pasión</span>
+                    <p class="exercise-hint">Lo que me entusiasma. Lo que haría sin que me paguen.</p>
+                    <textarea class="writing-area writing-area-small" placeholder="Escribí tu pasión aquí..."></textarea>
+                </div>
+                <div class="def-card" style="border-left-color: var(--color-purple); background: var(--color-purple-light);">
+                    <span class="exercise-label" style="color: var(--color-purple);">💎 Mi Talento</span>
+                    <p class="exercise-hint">Lo que sé hacer. Mi habilidad natural o desarrollada.</p>
+                    <textarea class="writing-area writing-area-small" placeholder="Escribí tu talento aquí..."></textarea>
+                </div>
+                <div class="def-card" style="border-left-color: var(--color-navy); background: #F0F2F5;">
+                    <span class="exercise-label" style="color: var(--color-navy);">📚 Mi Experiencia</span>
+                    <p class="exercise-hint">Lo que aprendí y atravesé. Lo que la vida me enseñó.</p>
+                    <textarea class="writing-area writing-area-small" placeholder="Describí tu experiencia aquí..."></textarea>
+                </div>
+                <div class="def-card" style="border-left-color: var(--color-gold); background: var(--color-gold-light);">
+                    <span class="exercise-label" style="color: var(--color-gold-dark);">🧭 Mi Propósito</span>
+                    <p class="exercise-hint">¿Para qué hago lo que hago? La razón profunda detrás de todo.</p>
+                    <textarea class="writing-area writing-area-small" placeholder="Escribí tu propósito aquí..."></textarea>
+                </div>
+                <div class="def-card" style="border-left-color: var(--color-green); background: var(--color-green-light);">
+                    <span class="exercise-label" style="color: var(--color-green);">🎯 Mi Misión</span>
+                    <p class="exercise-hint">Qué hago concretamente para llevar ese propósito a la realidad.</p>
+                    <textarea class="writing-area writing-area-small" placeholder="Describí tu misión aquí..."></textarea>
+                </div>
+                <div class="def-card" style="border-left-color: var(--color-orange); background: var(--color-orange-light);">
+                    <span class="exercise-label" style="color: var(--color-orange);">🏆 Mi Meta</span>
+                    <p class="exercise-hint">Qué resultado quiero alcanzar. Es medible y tiene fecha.</p>
+                    <textarea class="writing-area writing-area-small" placeholder="Escribí tu meta aquí..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SECCIÓN 2: FÓRMULA DEL PROPÓSITO ============ -->
+        <section class="page-break">
+            <!-- MARCA DE PÁGINA -->
+            <div class="page-brand-bar">
+                <div class="page-brand-logo">
+                    <span class="pbl-metodo">MÉTODO</span>
+                    <span class="pbl-modo">MODO</span>
+                    <span class="pbl-lider">LÍDER</span>
+                </div>
+                <div class="page-brand-name">Lic. Romina Lorena Montiel <span class="page-brand-sep">·</span> <span class="page-brand-copy">Todos los derechos reservados</span></div>
+            </div>
+            <span class="section-number">SECCIÓN 2 DE 7</span>
+            <h2 class="section-title">Mi Fórmula del Propósito</h2>
+            <p class="section-subtitle">Tu propósito se escribe así: <strong>Problema que resuelvo → Persona que lo tiene → Transformación que genero.</strong></p>
+
+            <div class="quote-block">
+                <p>"La pasión puede encender tu negocio. En los negocios, el propósito le da <strong>flujo financiero y dirección</strong>."</p>
+            </div>
+
+            <div class="exercise-card">
+                <span class="exercise-label" style="color: var(--color-coral);">PASO 1</span>
+                <p class="exercise-question">¿Qué problema valioso resuelvo o estoy dispuesta a resolver?</p>
+                <p class="exercise-hint">El propósito sin problema concreto puede convertirse en inspiración, pero no necesariamente en negocio.</p>
+                <textarea class="writing-area" placeholder="Describí el problema valioso que resolvés o querés resolver..."></textarea>
+            </div>
+
+            <div class="exercise-card">
+                <span class="exercise-label" style="color: var(--color-gold-dark);">PASO 2</span>
+                <p class="exercise-question">¿Quién tiene ese problema? ¿A qué persona le hablo?</p>
+                <p class="exercise-hint">Pensá en quién es, qué le pasa, qué siente, qué necesita.</p>
+                <textarea class="writing-area" placeholder="Describí a la persona que tiene ese problema..."></textarea>
+            </div>
+
+            <div class="exercise-card">
+                <span class="exercise-label" style="color: var(--color-green);">PASO 3</span>
+                <p class="exercise-question">¿Qué transformación genero cuando resuelvo ese problema?</p>
+                <p class="exercise-hint">¿Qué cambia en su vida? ¿En qué se convierte?</p>
+                <textarea class="writing-area" placeholder="Describí la transformación que generás..."></textarea>
+            </div>
+
+            <div class="formula-box">
+                <div style="font-size: 0.82rem; font-weight: 800; color: var(--color-gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.2rem; text-align: center;">
+                    ✍️ AHORA ESCRIBÍ TU PROPÓSITO COMPLETO
+                </div>
+                <div class="formula-row">
+                    <span class="formula-label" style="color: var(--color-coral);">Ayudo a...</span>
+                    <input type="text" class="formula-input" placeholder="(persona)">
+                </div>
+                <div class="formula-row">
+                    <span class="formula-label" style="color: var(--color-gold);">que tienen...</span>
+                    <input type="text" class="formula-input" placeholder="(problema)">
+                </div>
+                <div class="formula-row">
+                    <span class="formula-label" style="color: var(--color-green);">a lograr...</span>
+                    <input type="text" class="formula-input" placeholder="(transformación)">
+                </div>
+                <div class="formula-row">
+                    <span class="formula-label" style="color: #A0AEC0;">a través de...</span>
+                    <input type="text" class="formula-input" placeholder="(método, producto o sistema)">
+                </div>
+            </div>
+
+            <div class="exercise-card" style="border: 2px solid var(--color-gold); background: var(--color-gold-light);">
+                <span class="exercise-label" style="color: var(--color-gold-dark);">MI PROPÓSITO EN UNA FRASE</span>
+                <p class="exercise-hint">Juntá todo lo anterior en una sola frase potente. Esta es tu declaración de propósito.</p>
+                <textarea class="writing-area writing-area-large" placeholder="Escribí tu declaración de propósito completa aquí..." style="border-color: var(--color-gold); background: #FFFFFF;"></textarea>
+            </div>
+        </section>
+
+        <!-- ============ SECCIÓN 3: MAPA DEL PROPÓSITO — CÍRCULO YO ============ -->
+        <section class="page-break">
+            <!-- MARCA DE PÁGINA -->
+            <div class="page-brand-bar">
+                <div class="page-brand-logo">
+                    <span class="pbl-metodo">MÉTODO</span>
+                    <span class="pbl-modo">MODO</span>
+                    <span class="pbl-lider">LÍDER</span>
+                </div>
+                <div class="page-brand-name">Lic. Romina Lorena Montiel <span class="page-brand-sep">·</span> <span class="page-brand-copy">Todos los derechos reservados</span></div>
+            </div>
+            <span class="section-number">SECCIÓN 3 DE 7 • EL MAPA DEL PROPÓSITO</span>
+            <h2 class="section-title">🟣 Círculo 1 — YO</h2>
+            <p class="section-subtitle">Todo empieza por conocerte. Tu negocio se construye desde quien sos y lo que viviste.</p>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+                <p class="exercise-question">¿Qué sé?</p>
+                <p class="exercise-hint">Conocimientos formales e informales que tenés.</p>
+                <textarea class="writing-area writing-area-small" placeholder="Listá todo lo que sabés..."></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+                <p class="exercise-question">¿Qué viví?</p>
+                <p class="exercise-hint">Experiencias de vida que te formaron como persona y profesional.</p>
+                <textarea class="writing-area writing-area-small" placeholder="Contá qué viviste..."></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+                <p class="exercise-question">¿Qué aprendí?</p>
+                <p class="exercise-hint">Lecciones valiosas que sacaste del camino recorrido.</p>
+                <textarea class="writing-area writing-area-small" placeholder="¿Qué lecciones te dejó el camino?"></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+                <p class="exercise-question">¿Qué experiencia tengo?</p>
+                <p class="exercise-hint">Práctica real en el campo, años de trabajo, proyectos realizados.</p>
+                <textarea class="writing-area writing-area-small" placeholder="Describí tu experiencia práctica..."></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+                <p class="exercise-question">¿Qué me importa profundamente?</p>
+                <p class="exercise-hint">Tu motor interno. Lo que te mueve más allá del dinero.</p>
+                <textarea class="writing-area writing-area-small" placeholder="¿Qué te importa de verdad?"></textarea>
+            </div>
+        </section>
+
+        <!-- ============ SECCIÓN 4: CÍRCULO PROBLEMA ============ -->
+        <section class="page-break">
+            <!-- MARCA DE PÁGINA -->
+            <div class="page-brand-bar">
+                <div class="page-brand-logo">
+                    <span class="pbl-metodo">MÉTODO</span>
+                    <span class="pbl-modo">MODO</span>
+                    <span class="pbl-lider">LÍDER</span>
+                </div>
+                <div class="page-brand-name">Lic. Romina Lorena Montiel <span class="page-brand-sep">·</span> <span class="page-brand-copy">Todos los derechos reservados</span></div>
+            </div>
+            <span class="section-number">SECCIÓN 4 DE 7 • EL MAPA DEL PROPÓSITO</span>
+            <h2 class="section-title">🔴 Círculo 2 — PROBLEMA</h2>
+            <p class="section-subtitle">Acá dejás de pensar en "qué quiero ofrecer" y empezás a mirar <strong>qué necesita el otro</strong>.</p>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-coral);">
+                <p class="exercise-question">¿Qué problema o necesidad de otras personas comprendo profundamente?</p>
+                <textarea class="writing-area" placeholder="Describí el problema que comprendés en profundidad..."></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-coral);">
+                <p class="exercise-question">¿Qué les está pasando?</p>
+                <p class="exercise-hint">Su realidad actual, su frustración, su día a día.</p>
+                <textarea class="writing-area writing-area-small" placeholder="¿Cuál es su realidad actual?"></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-coral);">
+                <p class="exercise-question">¿Qué necesitan y todavía no están pudiendo resolver?</p>
+                <textarea class="writing-area writing-area-small" placeholder="¿Qué no pueden resolver por sí solos?"></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-coral);">
+                <p class="exercise-question">¿Qué situación quiero ayudar a transformar?</p>
+                <textarea class="writing-area writing-area-small" placeholder="¿Qué querés cambiar?"></textarea>
+            </div>
+
+            <div class="quote-block" style="background: var(--color-coral-light); border-color: var(--color-coral);">
+                <p style="color: var(--color-coral);">👉 "Conectar con las necesidades de tus clientes."</p>
+            </div>
+        </section>
+
+        <!-- ============ SECCIÓN 5: CÍRCULO TRANSFORMACIÓN / IMPACTO ============ -->
+        <section class="page-break">
+            <!-- MARCA DE PÁGINA -->
+            <div class="page-brand-bar">
+                <div class="page-brand-logo">
+                    <span class="pbl-metodo">MÉTODO</span>
+                    <span class="pbl-modo">MODO</span>
+                    <span class="pbl-lider">LÍDER</span>
+                </div>
+                <div class="page-brand-name">Lic. Romina Lorena Montiel <span class="page-brand-sep">·</span> <span class="page-brand-copy">Todos los derechos reservados</span></div>
+            </div>
+            <span class="section-number">SECCIÓN 5 DE 7 • EL MAPA DEL PROPÓSITO</span>
+            <h2 class="section-title">🟠 Círculo 3 — TRANSFORMACIÓN / TU IMPACTO</h2>
+            <p class="section-subtitle"><strong>No vendo lo que hago, vendo lo que el/ella quiere o puede lograr con lo que hago.</strong></p>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-orange);">
+                <p class="exercise-question">¿Qué puede suceder en la vida de esa persona cuando obtiene esa transformación?</p>
+                <textarea class="writing-area" placeholder="Describí el impacto en su vida..."></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-orange);">
+                <p class="exercise-question">¿Cómo impacta esa transformación en su familia, trabajo, negocio, entorno o comunidad?</p>
+                <textarea class="writing-area" placeholder="¿Cómo se expande el impacto más allá de esa persona?"></textarea>
+            </div>
+
+            <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--color-navy); margin: 2rem 0 1rem;">✍️ Mi Frase de Transformación</h3>
+            <p class="section-subtitle" style="margin-bottom: 1.2rem;">Completá: <strong>"Mi cliente pasa de __A a __B con una o varias dosis de lo que vendo."</strong></p>
+
+            <div class="transform-box">
+                <div style="font-size: 0.8rem; font-weight: 800; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">TRANSFORMACIÓN 1</div>
+                <div class="transform-row">
+                    <div class="transform-side">
+                        <label style="color: var(--color-coral);">DE: (punto A — problema)</label>
+                        <textarea class="writing-area writing-area-small" placeholder="¿De dónde parte tu cliente?"></textarea>
+                    </div>
+                    <span class="transform-arrow-center">→</span>
+                    <div class="transform-side">
+                        <label style="color: var(--color-green);">A: (punto B — transformación)</label>
+                        <textarea class="writing-area writing-area-small" placeholder="¿A dónde llega con tu ayuda?"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transform-box">
+                <div style="font-size: 0.8rem; font-weight: 800; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">TRANSFORMACIÓN 2</div>
+                <div class="transform-row">
+                    <div class="transform-side">
+                        <label style="color: var(--color-coral);">DE: (punto A — problema)</label>
+                        <textarea class="writing-area writing-area-small" placeholder="Otro punto de partida..."></textarea>
+                    </div>
+                    <span class="transform-arrow-center">→</span>
+                    <div class="transform-side">
+                        <label style="color: var(--color-green);">A: (punto B — transformación)</label>
+                        <textarea class="writing-area writing-area-small" placeholder="Otro resultado posible..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transform-box">
+                <div style="font-size: 0.8rem; font-weight: 800; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">TRANSFORMACIÓN 3</div>
+                <div class="transform-row">
+                    <div class="transform-side">
+                        <label style="color: var(--color-coral);">DE: (punto A — problema)</label>
+                        <textarea class="writing-area writing-area-small" placeholder="Otro punto de partida..."></textarea>
+                    </div>
+                    <span class="transform-arrow-center">→</span>
+                    <div class="transform-side">
+                        <label style="color: var(--color-green);">A: (punto B — transformación)</label>
+                        <textarea class="writing-area writing-area-small" placeholder="Otro resultado posible..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SECCIÓN 6: PRODUCTO + CLIENTES Y VENTAS ============ -->
+        <section class="page-break">
+            <!-- MARCA DE PÁGINA -->
+            <div class="page-brand-bar">
+                <div class="page-brand-logo">
+                    <span class="pbl-metodo">MÉTODO</span>
+                    <span class="pbl-modo">MODO</span>
+                    <span class="pbl-lider">LÍDER</span>
+                </div>
+                <div class="page-brand-name">Lic. Romina Lorena Montiel <span class="page-brand-sep">·</span> <span class="page-brand-copy">Todos los derechos reservados</span></div>
+            </div>
+            <span class="section-number">SECCIÓN 6 DE 7 • EL MAPA DEL PROPÓSITO</span>
+            <h2 class="section-title">🟢 Producto → 🟣 Clientes y Ventas</h2>
+            <p class="section-subtitle">Del impacto al producto y del producto a la propuesta comercial.</p>
+
+            <!-- Producto -->
+            <div class="exercise-card" style="border-left: 5px solid var(--color-green);">
+                <span class="exercise-label" style="color: var(--color-green);">CÍRCULO 5 — PRODUCTO</span>
+                <p class="exercise-question">¿Qué producto o servicio puedo construir para facilitar esa transformación?</p>
+                <p class="exercise-hint">Creo y nombro el producto específico para cada tipo de cliente, le añado el problema que quiero resolver y cómo mi producto va a ayudar a transformar ese problema en beneficios.</p>
+                <textarea class="writing-area" placeholder="Describí tu producto o servicio..."></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-green);">
+                <p class="exercise-question">¿Qué va a suceder en la vida de esa persona cuando adquiere mi producto?</p>
+                <textarea class="writing-area writing-area-small" placeholder="¿Qué cambia cuando accede a tu producto?"></textarea>
+            </div>
+
+            <div class="exercise-card" style="border-left: 5px solid var(--color-green);">
+                <p class="exercise-question">¿Qué tipo de transformación ocurre?</p>
+                <p class="exercise-hint">Ahí aparece el impacto real.</p>
+                <textarea class="writing-area writing-area-small" placeholder="¿Cuál es la transformación concreta?"></textarea>
+            </div>
+
+            <!-- Clientes y Ventas -->
+            <div style="margin-top: 2.5rem;">
+                <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+                    <span class="exercise-label" style="color: var(--color-purple);">CÍRCULOS 6 Y 7 — CLIENTES Y VENTAS</span>
+                    <p class="exercise-question">¿Quiénes consumen este tipo de servicios, qué valor tiene para ellos y cuánto están dispuestos a pagar?</p>
+                    <p class="exercise-hint">Las ventas aparecen cuando existe una persona con un problema relevante, una solución que puede ayudarla a resolverlo y una propuesta cuyo valor puede comprender.</p>
+                    <textarea class="writing-area" placeholder="Describí quiénes son tus clientes y el valor que perciben..."></textarea>
+                </div>
+            </div>
+
+            <div class="quote-block">
+                <p>"Las ventas no son algo que forzás: son la <strong>consecuencia natural</strong> de un negocio con dirección."</p>
+            </div>
+        </section>
+
+        <!-- ============ SECCIÓN 7: DESGLOSE DE VALOR + COACHING ============ -->
+        <section class="page-break">
+            <!-- MARCA DE PÁGINA -->
+            <div class="page-brand-bar">
+                <div class="page-brand-logo">
+                    <span class="pbl-metodo">MÉTODO</span>
+                    <span class="pbl-modo">MODO</span>
+                    <span class="pbl-lider">LÍDER</span>
+                </div>
+                <div class="page-brand-name">Lic. Romina Lorena Montiel <span class="page-brand-sep">·</span> <span class="page-brand-copy">Todos los derechos reservados</span></div>
+            </div>
+            <span class="section-number">SECCIÓN 7 DE 7</span>
+            <h2 class="section-title">Desglose de Valor y Reflexiones</h2>
+            <p class="section-subtitle">Analizá tu propuesta desde diferentes ángulos para entender mejor el valor que generás.</p>
+
+            <!-- Tabla por edades -->
+            <h3 style="font-size: 1rem; font-weight: 800; color: var(--color-navy); margin-bottom: 0.8rem;">📊 Desglose por Edades</h3>
+            <table class="desglose-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Rango de Edad</th>
+                        <th style="width: 40%;">¿Qué necesitan específicamente?</th>
+                        <th style="width: 40%;">¿Cómo les hablo / qué les ofrezco?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: 700; font-size: 0.9rem;">18–25 años</td>
+                        <td><textarea placeholder="Necesidades de este grupo..."></textarea></td>
+                        <td><textarea placeholder="Tu mensaje para ellos..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 700; font-size: 0.9rem;">26–35 años</td>
+                        <td><textarea placeholder="Necesidades de este grupo..."></textarea></td>
+                        <td><textarea placeholder="Tu mensaje para ellos..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 700; font-size: 0.9rem;">36–45 años</td>
+                        <td><textarea placeholder="Necesidades de este grupo..."></textarea></td>
+                        <td><textarea placeholder="Tu mensaje para ellos..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 700; font-size: 0.9rem;">46+ años</td>
+                        <td><textarea placeholder="Necesidades de este grupo..."></textarea></td>
+                        <td><textarea placeholder="Tu mensaje para ellos..."></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Tabla por estilos -->
+            <h3 style="font-size: 1rem; font-weight: 800; color: var(--color-navy); margin: 2rem 0 0.8rem;">👥 Desglose por Estilos de Clientes</h3>
+            <table class="desglose-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Tipo de Cliente</th>
+                        <th style="width: 37%;">Características / Valores</th>
+                        <th style="width: 38%;">¿Qué producto les ofrezco?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><textarea placeholder="Ej: La que recién empieza..."></textarea></td>
+                        <td><textarea placeholder="¿Cómo es? ¿Qué valora?"></textarea></td>
+                        <td><textarea placeholder="¿Qué le ofrecés?"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea placeholder="Ej: La que ya tiene experiencia..."></textarea></td>
+                        <td><textarea placeholder="¿Cómo es? ¿Qué valora?"></textarea></td>
+                        <td><textarea placeholder="¿Qué le ofrecés?"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><textarea placeholder="Ej: La que necesita escalar..."></textarea></td>
+                        <td><textarea placeholder="¿Cómo es? ¿Qué valora?"></textarea></td>
+                        <td><textarea placeholder="¿Qué le ofrecés?"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Tabla por nivel de importancia -->
+            <h3 style="font-size: 1rem; font-weight: 800; color: var(--color-navy); margin: 2rem 0 0.8rem;">⚡ Desglose por Nivel de Importancia</h3>
+            <table class="desglose-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Nivel</th>
+                        <th style="width: 40%;">¿Qué lugar ocupa en su vida?</th>
+                        <th style="width: 40%;">¿Cuánto estarían dispuestos a invertir?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: 700; font-size: 0.9rem; color: var(--color-green);">🟢 Deseable</td>
+                        <td><textarea placeholder="Les gustaría tenerlo, pero no es urgente..."></textarea></td>
+                        <td><textarea placeholder="Rango de inversión..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 700; font-size: 0.9rem; color: var(--color-orange);">🟠 Importante</td>
+                        <td><textarea placeholder="Saben que lo necesitan..."></textarea></td>
+                        <td><textarea placeholder="Rango de inversión..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 700; font-size: 0.9rem; color: var(--color-coral);">🔴 Urgente</td>
+                        <td><textarea placeholder="No pueden seguir sin resolver esto..."></textarea></td>
+                        <td><textarea placeholder="Rango de inversión..."></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Coaching Grupal -->
+            <div style="margin-top: 2.5rem;">
+                <div class="coaching-area">
+                    <h4>🎙️ Reflexiones del Coaching Grupal</h4>
+                    <p>Usá este espacio para anotar insights, ideas y aprendizajes que surjan durante la sesión de coaching grupal.</p>
+                    <textarea class="writing-area writing-area-large" style="border-color: var(--color-purple); background: #FFFFFF;" placeholder="Anotá todo lo que te resuene durante el coaching grupal..."></textarea>
+                </div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <div class="coaching-area" style="border-color: var(--color-gold); background: linear-gradient(135deg, #FFFDF5 0%, #FFF8E7 100%);">
+                    <h4 style="color: var(--color-gold-dark);">💡 Mi mayor descubrimiento de esta clase</h4>
+                    <p>¿Qué fue lo más valioso que descubriste hoy? ¿Qué cambió en tu forma de ver tu negocio?</p>
+                    <textarea class="writing-area" style="border-color: var(--color-gold); background: #FFFFFF;" placeholder="Escribí tu mayor insight de hoy..."></textarea>
+                </div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <div class="coaching-area" style="border-color: var(--color-green); background: linear-gradient(135deg, #F0FDF9 0%, #ECFDF5 100%);">
+                    <h4 style="color: var(--color-green);">🚀 Mi próximo paso concreto</h4>
+                    <p>¿Qué acción vas a tomar esta semana basada en lo que trabajaste hoy?</p>
+                    <textarea class="writing-area" style="border-color: var(--color-green); background: #FFFFFF;" placeholder="Mi compromiso para esta semana es..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HOJA FINAL ============ -->
+        <div class="closing-page">
+            <!-- Barra oscura superior -->
+            <div class="closing-top-bar"></div>
+
+            <div class="closing-body">
+                <p class="closing-hoy">Hoy</p>
+                <p class="closing-text">
+                    ya puedes comenzar a dar <strong>pasos concretos</strong> con<br>
+                    el método hacia tu <strong>vida</strong> y tu <strong>negocio</strong>.
+                </p>
+
+                <!-- Logo grande -->
+                <div class="closing-logo">
+                    <span class="cl-metodo">MÉTODO</span>
+                    <span class="cl-modo">MODO</span>
+                    <span class="cl-lider">LÍDER</span>
+                    <span class="cl-slogan">CREA · LIDERA · IMPACTA</span>
+                </div>
+
+                <p class="closing-firma">Con vos en el proceso,</p>
+
+                <div>
+                    <p class="closing-next-label">Siguiente Clase:</p>
+                    <p class="closing-next-title">Tu propuesta de valor y tu cliente ideal</p>
+                    <p class="closing-next-date">" Próxima clase — Modo Líder Emprender "</p>
+                </div>
+            </div>
+
+            <!-- Pie de página final -->
+            <div class="closing-footer">
+                <div class="closing-footer-brand">Lic. Romina Lorena Montiel · Modo Líder</div>
+                <div class="closing-footer-copy">Todos los derechos reservados</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ TOOLBAR ============ -->
+    <div class="toolbar no-print">
+        <button class="toolbar-btn" onclick="window.print()">🖨️ Imprimir</button>
+        <button class="toolbar-btn" onclick="saveProgress()">💾 Guardar</button>
+        <button class="toolbar-btn" onclick="clearAll()">🗑️ Limpiar</button>
+    </div>
+
+    <script>
+        // Auto-save to localStorage
+        const STORAGE_KEY = 'workbook_clase2_proposito';
+
+        function saveProgress() {
+            const data = {};
+            document.querySelectorAll('textarea, input[type="text"]').forEach((el, i) => {
+                data[`field_${i}`] = el.value;
+            });
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            
+            // Visual feedback
+            const btn = document.querySelector('.toolbar-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✅ Guardado';
+            btn.style.background = 'var(--color-green)';
+            btn.style.color = '#FFF';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.style.color = '';
+            }, 1500);
+        }
+
+        function loadProgress() {
+            const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+            document.querySelectorAll('textarea, input[type="text"]').forEach((el, i) => {
+                if (data[`field_${i}`]) {
+                    el.value = data[`field_${i}`];
+                }
+            });
+        }
+
+        function clearAll() {
+            if (confirm('¿Estás segura de que querés borrar todo lo escrito? Esta acción no se puede deshacer.')) {
+                document.querySelectorAll('textarea, input[type="text"]').forEach(el => {
+                    el.value = '';
+                });
+                localStorage.removeItem(STORAGE_KEY);
+            }
+        }
+
+        // Auto-save every 30 seconds
+        setInterval(saveProgress, 30000);
+
+        // Load on page load
+        window.addEventListener('load', loadProgress);
+
+        // Auto-grow textareas
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = Math.max(this.scrollHeight, 80) + 'px';
+            });
+        });
+    </script>
+</body>
+</html>
+
