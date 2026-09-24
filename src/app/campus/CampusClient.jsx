@@ -14,6 +14,12 @@ export default function CampusClient() {
     isYouTube: true
   });
 
+  const [clase2Video, setClase2Video] = useState({
+    src: 'https://drive.google.com/file/d/18-q0UqjZKyrTZQi3GcO-8At06EnO2clY/preview',
+    title: '1. Clase 2: Presentamos Nuestros Emprendimientos',
+    activeIndex: 0
+  });
+
   const [clase3Video, setClase3Video] = useState({
     src: '/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/CLASE%203%20PROPUESTA%20DE%20VALOR%20PARTE%201.mp4',
     title: '1. Clase 3: Propuesta de Valor (Parte 1 - 711 MB)',
@@ -22,6 +28,10 @@ export default function CampusClient() {
 
   const clase1VideoRef = useRef(null);
   const clase3VideoRef = useRef(null);
+
+  const handleClase2Video = (src, title, index) => {
+    setClase2Video({ src, title, activeIndex: index });
+  };
 
   const switchFolder = (folderId) => {
     setActiveFolder(folderId);
@@ -581,14 +591,14 @@ export default function CampusClient() {
                             <div className="video-playlist-bar">
                                 <span className="playlist-label">Opciones de Video:</span>
                                 <button className={`playlist-btn ${clase1Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase1Video('https://www.youtube-nocookie.com/embed/6bYxRQYJqgo?rel=0&modestbranding=1', '1. Video Clase: ¿Qué es ser una Emprendedora Consciente?', '/MINIATURA_PARA_VIDEO_PRINCIPAL.png', 0, true)}>
-                                    ▶ 1. Emprendedora Consciente
+                                    ▶ 1. Emprendedora Consciente (YouTube HD)
                                 </button>
-                                <button className={`playlist-btn ${clase1Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase1Video('/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%201%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '2. Clase 1 en Vivo - Parte 1', '', 1, false)}>
-                                    ▶ 2. Clase 1 en Vivo - Parte 1
+                                <button className={`playlist-btn ${clase1Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase1Video('https://drive.google.com/file/d/126kZK09iW73ShPt3utyLhx2Qk1scy-Kf/preview', '2. Clase 1: ¿Qué es ser una Emprendedora Consciente? (Google Drive HD)', '', 1, true)}>
+                                    ▶ 2. Google Drive Oficial HD
                                 </button>
-                                <button className={`playlist-btn ${clase1Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase1Video('/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CLASE%201%20PARTE%202%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS.mp4', '3. Clase 1 en Vivo - Parte 2', '', 2, false)}>
-                                    ▶ 3. Clase 1 en Vivo - Parte 2
-                                </button>
+                                <a href="https://drive.google.com/drive/folders/1AgV_CxBZ7YOUQlJxQhXPiPLcL2cdgYbF" target="_blank" rel="noopener noreferrer" className="playlist-btn" style={{ background: "rgba(212, 175, 55, 0.15)", borderColor: "rgba(212, 175, 55, 0.4)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.4rem", color: "#F7E7CE" }}>
+                                    📁 Carpeta Drive Clase 1 ↗
+                                </a>
                             </div>
                             <div className="video-description-box" id="desc-video-clase1">
                                 💡 <strong>Contenido de la Clase:</strong> Rompe con la culpa de cobrar, define tu postura ante el cliente y establece las bases para escalar tu negocio con mentalidad de líder.
@@ -724,14 +734,45 @@ export default function CampusClient() {
                             <div className="pillar-header">
                                 <div className="pillar-title">
                                     <span>🎬</span>
-                                    <span>1. Video Oficial: Emprender de Cero a Impacto y Ventas - Clase 2</span>
+                                    <span>{clase2Video.title}</span>
                                 </div>
-                                <span className="pillar-badge">Video Real MP4 • HD</span>
+                                <span className="pillar-badge">Google Drive Oficial HD</span>
                             </div>
                             <div className="folder-video-screen">
-                                <video id="videoElement-clase2" controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="metadata" poster="/banner_modo_lider.png">
-                                    <source src="/videos/VIDEOS%20DE%20CLASES%20COMPLETAS/CURSO%20EMPRENDER%20DE%20CERO%20A%20IMPACTO%20Y%20VENTAS%20CLASE%202.mp4" type="video/mp4" />
-                                </video>
+                                <iframe 
+                                    id="iframeElement-clase2"
+                                    src={clase2Video.src} 
+                                    title={clase2Video.title} 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowFullScreen
+                                    style={{ display: "block", width: "100%", height: "100%", border: "none" }}>
+                                </iframe>
+                            </div>
+                            {/* Selector de videos de la Clase 2 */}
+                            <div className="video-playlist-bar">
+                                <span className="playlist-label">Opciones de Video:</span>
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase2Video('https://drive.google.com/file/d/18-q0UqjZKyrTZQi3GcO-8At06EnO2clY/preview', '1. Clase 2: Presentamos Nuestros Emprendimientos', 0)}>
+                                    ▶ 1. Emprendimientos (517 MB)
+                                </button>
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase2Video('https://drive.google.com/file/d/1WKLSxavn9OWdpfu1QJDa43ePgHzgL573/preview', '2. Entender lo que es el Propósito', 1)}>
+                                    ▶ 2. Qué es el Propósito (245 MB)
+                                </button>
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase2Video('https://drive.google.com/file/d/1-y36wzRd-PNxLbiJ8tOc5eUAhyjtseUu/preview', '3. El Antes y Después de Descubrir tu Propósito', 2)}>
+                                    ▶ 3. El Antes y Después (182 MB)
+                                </button>
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 3 ? "active" : ""}`} onClick={() => handleClase2Video('https://drive.google.com/file/d/1sSI5e4FRTcxDSab1dn1pBojdp7v0yyqS/preview', '4. Bienvenida a la Clase 2', 3)}>
+                                    ▶ 4. Bienvenida
+                                </button>
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 4 ? "active" : ""}`} onClick={() => handleClase2Video('https://drive.google.com/file/d/1xrt96ueQ1h7gVJMRa_smyNg6xaRdzP6p/preview', '5. Lo que tu Cliente Desea Comprar', 4)}>
+                                    ▶ 5. Lo que el Cliente Desea
+                                </button>
+                                <a href="https://drive.google.com/drive/folders/1QtrRfjfvnYUNsauvFDQBzHTYRwKXEj2w" target="_blank" rel="noopener noreferrer" className="playlist-btn" style={{ background: "rgba(212, 175, 55, 0.15)", borderColor: "rgba(212, 175, 55, 0.4)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.4rem", color: "#F7E7CE" }}>
+                                    📁 Abrir Carpeta en Drive ↗
+                                </a>
+                                <a href={clase2Video.src.replace('/preview', '/view')} target="_blank" rel="noopener noreferrer" className="playlist-btn" style={{ background: "rgba(233, 69, 96, 0.2)", borderColor: "rgba(233, 69, 96, 0.6)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.4rem", color: "#FFA0B0", fontWeight: 600 }}>
+                                    📺 Ver Video en Pantalla Completa en Drive ↗
+                                </a>
                             </div>
                             <div className="video-description-box">
                                 💡 <strong>Grabación de la Clase 2:</strong> Sesión intensiva de propósito, dirección y visión estratégica para ordenar tu oferta.
@@ -759,8 +800,11 @@ export default function CampusClient() {
                                     </div>
                                     <p className="doc-desc">Texto preparatorio de Romina: emprender es construir un negocio que genere libertad y una vida sostenible.</p>
                                     <div className="doc-action-btns">
-                                        <a href="/clase2_proposito_y_direccion/INTRO_ESCRITA_CLASE_2.html" target="_blank" className="btn-download-primary" style={{ justifyContent: "center", width: "100%" }}>
+                                        <a href="/clase2_proposito_y_direccion/INTRO_ESCRITA_CLASE_2.html" target="_blank" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
                                             <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/clase2_proposito_y_direccion/INTRO_ESCRITA_CLASE_2.docx" download="INTRO_ESCRITA_CLASE_2.docx" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
@@ -785,19 +829,22 @@ export default function CampusClient() {
                                     </div>
                                 </div>
 
-                                {/* Doc 3: Presentación Web */}
+                                {/* Doc 3: Presentación Web & PPTX */}
                                 <div className="download-card">
                                     <div className="doc-icon-header">
-                                        <div className="doc-format-badge badge-html">WEB</div>
+                                        <div className="doc-format-badge badge-pptx">PPTX</div>
                                         <div className="doc-meta">
-                                            <h5>Presentación Interactiva Clase 2</h5>
-                                            <span>Visualizador Web Online</span>
+                                            <h5>Presentación Diapositivas Clase 2</h5>
+                                            <span>Visualizador Web Online & PPTX</span>
                                         </div>
                                     </div>
-                                    <p className="doc-desc">Diapositivas completas proyectadas por Romina. Navega las láminas interactivamente sin descargar.</p>
+                                    <p className="doc-desc">Diapositivas completas proyectadas por Romina. Navega las láminas interactivamente o descárgalas en PowerPoint.</p>
                                     <div className="doc-action-btns">
-                                        <a href="/clase2_proposito_y_direccion/Presentacion_Clase_2_Proposito_y_Direccion.html" target="_blank" className="btn-download-primary" style={{ justifyContent: "center", width: "100%" }}>
-                                            <span>🚀 Ver Presentación Online</span>
+                                        <a href="/clase2_proposito_y_direccion/Presentacion_Clase_2_Proposito_y_Direccion.html" target="_blank" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>🚀 Ver Presentación</span>
+                                        </a>
+                                        <a href="/clase2_proposito_y_direccion/Clase_2_Proposito_y_Direccion_MODOLIDER.pptx" download="Clase_2_Proposito_y_Direccion_MODOLIDER.pptx" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar PPTX</span>
                                         </a>
                                     </div>
                                 </div>
