@@ -775,17 +775,15 @@
         <div class="folder-video-screen" id="videoContainer-clase2">
             <iframe 
                 id="iframeElement-clase2"
-                src="" 
-                title="Video Clase 2" 
+                src="https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1" 
+                title="1. Presentamos Nuestros Emprendimientos" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                 
                 allowfullscreen
-                style="display: none; width: 100%; aspect-ratio: 16/9; border: none;">
+                style="display: block; width: 100%; aspect-ratio: 16/9; border: none;">
             </iframe>
-            <video id="videoElement-clase2" controls playsinline controlsList="nodownload" oncontextmenu="return false;" preload="metadata" poster="fotito.PNG" style="display: block; width: 100%; height: auto; max-height: 480px;">
-                <source src="BIENVENIDA A LA CLASE 2 DE ESTE CURSO.mpeg" type="video/mpeg">
-                Tu celular o navegador no soporta reproducción directa.
+            <video id="videoElement-clase2" controls playsinline controlsList="nodownload" oncontextmenu="return false;" preload="none" poster="fotito.PNG" style="display: none; width: 100%; height: auto; max-height: 480px;">
+                <source src="CLASE 2 NOS PRESENTAMOS Y PRESENTAMOS NUESTROS EMPRENDIMIENTOS.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -793,67 +791,21 @@
         <div class="pillar-header">
             <div class="pillar-title">
                 <span>🎬</span>
-                <span id="title-video-clase2">1. Bienvenida a la Clase 2 de este Curso</span>
+                <span id="title-video-clase2">1. Presentamos Nuestros Emprendimientos (YouTube HD)</span>
             </div>
             <span class="pillar-badge" id="badge-video-clase2">Video Oficial HD</span>
         </div>
-        <!-- Selector de videos estilo Clase 1 -->
+                <!-- Selector de videos Clase 2 (Solo YouTube HD, sin Drive, sin botón externo) -->
         <div class="video-playlist-bar">
-            <span class="playlist-label">Opciones de Video:</span>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '2. Presentamos Nuestros Emprendimientos', this, '', true, 'Ronda estratégica y participativa en vivo de alumnas presentando sus proyectos y modelos de negocio.')">
-                🎬 2. Emprendimientos (YouTube HD)
+            <span class="playlist-label">Videos de la Clase:</span>
+            <button class="playlist-btn active" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '1. Presentamos Nuestros Emprendimientos (YouTube HD)', this, '', true, 'Ronda estratégica y participativa en vivo de alumnas presentando sus proyectos y modelos de negocio.')">
+                🎬 1. Emprendimientos
             </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '3. Entender lo que es el Propósito', this, '', true, 'Profundización conceptual y estratégica: qué es y cómo se aterriza el verdadero propósito empresarial.')">
-                🎬 3. Qué es el Propósito (YouTube HD)
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '2. Entender lo que es el Propósito (YouTube HD)', this, '', true, 'Profundización conceptual y estratégica: qué es y cómo se aterriza el verdadero propósito empresarial.')">
+                🎬 2. Qué es el Propósito
             </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '4. El Antes y Después de Descubrir tu Propósito', this, '', true, 'Claridad de visión, transformación de postura y orden prioritario para liderar tu negocio.')">
-                🎬 4. Antes y Después (YouTube HD)
-            </button>
-            <button class="playlist-btn active" onclick="switchFolderVideo('clase2', 'BIENVENIDA A LA CLASE 2 DE ESTE CURSO.mpeg', '1. Bienvenida a la Clase 2 de este Curso', this, 'fotito.PNG', false, 'Mensaje oficial de apertura y bienvenida a la Clase 2 por la Lic. Romina Lorena Montiel.')">
-                ▶ 1. Bienvenida
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'CLASE 2 NOS PRESENTAMOS Y PRESENTAMOS NUESTROS EMPRENDIMIENTOS.mp4', '2. Presentamos Nuestros Emprendimientos (Archivo Local)', this, 'fotito.PNG', false, 'Ronda estratégica y participativa con alumnas presentando sus proyectos y modelos de negocio (archivo local).')">
-                ▶ 2. Emprendimientos (Local)
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'ENTENDER LO QUE ES EL PROPOSITO.mp4', '3. Entender lo que es el Propósito', this, 'fotito.PNG', false, 'Profundización conceptual y estratégica: qué es y cómo se aterriza el verdadero propósito empresarial.')">
-                ▶ 3. Qué es el Propósito (Local)
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'EL ANTES Y EL DESPUES DE DESCUBRIR TU PROPOSITO.mp4', '4. El Antes y Después de Descubrir tu Propósito', this, 'fotito.PNG', false, 'Claridad de visión, transformación de postura y orden prioritario para liderar tu negocio.')">
-                ▶ 4. Antes y Después
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'HABER CREADO UN PRODUCTO QUE TE ENCANTA NO IMPLICA ALGO QUE TU CLIENTE DESEA COMPRAR.mpeg', '5. Lo que tu Cliente Desea Comprar', this, 'fotito.PNG', false, 'El mayor punto ciego al vender: la distinción entre crear un hobby personal y diseñar una oferta que el cliente compre.')">
-                ▶ 5. Cliente y Venta
-            </button>
-            <a id="driveDirectLink-clase2" href="https://youtu.be/uincuU4f_xg" target="_blank" rel="noopener noreferrer" class="playlist-btn" style="background: rgba(233, 69, 96, 0.2); border-color: rgba(233, 69, 96, 0.6); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; color: #FFA0B0; font-weight: 600;">
-                📺 Abrir en YouTube ↗
-            </a>
-        </div>
-        <!-- Barra de Streaming Online (Técnica Oficial Clase 1 / Drive y YouTube) -->
-        <div class="video-playlist-bar" style="margin-top: -0.25rem; background: rgba(0, 0, 0, 0.4); border-color: rgba(212, 175, 55, 0.2);">
-            <span class="playlist-label" style="color: #94A3B8;">☁️ Streaming Online:</span>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '2. Presentamos Nuestros Emprendimientos (YouTube HD)', this, '', true, 'Transmisión oficial de YouTube: Ronda en vivo de proyectos.')">
-                🎬 2. Emprendimientos (YouTube)
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '3. Entender lo que es el Propósito (YouTube HD)', this, '', true, 'Transmisión oficial de YouTube: Qué es el propósito.')">
-                🎬 3. Propósito (YouTube)
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '4. El Antes y Después (YouTube HD)', this, '', true, 'Transmisión oficial de YouTube: El Antes y el Después.')">
-                🎬 4. Antes y Después (YouTube)
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/1sSI5e4FRTcxDSab1dn1pBojdp7v0yyqS/preview', '1. Bienvenida (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
-                ☁️ 1. Bienvenida
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/18-q0UqjZKyrTZQi3GcO-8At06EnO2clY/preview', '2. Emprendimientos (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
-                ☁️ 2. Emprendimientos (Drive)
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/1WKLSxavn9OWdpfu1QJDa43ePgHzgL573/preview', '3. Entender el Propósito (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
-                ☁️ 3. Propósito (Drive)
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/1-y36wzRd-PNxLbiJ8tOc5eUAhyjtseUu/preview', '4. Antes y Después (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
-                ☁️ 4. Antes y Después
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/1xrt96ueQ1h7gVJMRa_smyNg6xaRdzP6p/preview', '5. Lo que el Cliente Desea (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
-                ☁️ 5. Cliente y Venta
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '3. El Antes y Después de Descubrir tu Propósito (YouTube HD)', this, '', true, 'Claridad de visión, transformación de postura y orden prioritario para liderar tu negocio.')">
+                🎬 3. Antes y Después
             </button>
         </div>
         <div class="video-description-box" id="desc-video-clase2">
@@ -1012,17 +964,17 @@
                 }
                 driveDirectBtn.href = ytUrl;
                 driveDirectBtn.innerHTML = '📺 Abrir en YouTube ↗';
-                driveDirectBtn.style.display = 'inline-flex';
+                driveDirectBtn.style.display = 'none';
             } else if (isDrive) {
                 driveDirectBtn.href = videoSrc.replace('/preview', '/view');
                 driveDirectBtn.innerHTML = '📺 Ver en Google Drive ↗';
-                driveDirectBtn.style.display = 'inline-flex';
+                driveDirectBtn.style.display = 'none';
             } else {
                 let driveUrl = driveMapClase2[videoSrc] || '';
                 if (driveUrl) {
                     driveDirectBtn.href = driveUrl.replace('/preview', '/view');
                     driveDirectBtn.innerHTML = '📺 Ver en Google Drive ↗';
-                    driveDirectBtn.style.display = 'inline-flex';
+                    driveDirectBtn.style.display = 'none';
                 } else {
                     driveDirectBtn.style.display = 'none';
                 }

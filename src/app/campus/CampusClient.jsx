@@ -733,7 +733,7 @@ export default function CampusClient() {
                                     <span>🎬</span>
                                     <span>{clase2Video.title}</span>
                                 </div>
-                                <span className="pillar-badge">Google Drive Oficial HD</span>
+                                <span className="pillar-badge">YouTube Oficial HD</span>
                             </div>
                             <div className="folder-video-screen">
                                 <iframe 
@@ -746,35 +746,18 @@ export default function CampusClient() {
                                     style={{ display: "block", width: "100%", height: "100%", border: "none" }}>
                                 </iframe>
                             </div>
-                            {/* Selector de videos de la Clase 2 */}
+                            {/* Selector de videos de la Clase 2 (Solo YouTube, sin Drive, sin botón externo) */}
                             <div className="video-playlist-bar">
-                                <span className="playlist-label">Opciones de Video:</span>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '1. Clase 2: Presentamos Nuestros Emprendimientos (YouTube HD)', 0)}>
-                                    ▶ 1. Emprendimientos (YouTube HD)
+                                <span className="playlist-label">Videos de la Clase:</span>
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '1. Presentamos Nuestros Emprendimientos (YouTube HD)', 0)}>
+                                    ▶ 1. Emprendimientos
                                 </button>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase2Video('https://drive.google.com/file/d/18-q0UqjZKyrTZQi3GcO-8At06EnO2clY/preview', '1. Clase 2: Presentamos Nuestros Emprendimientos (Drive)', 1)}>
-                                    ▶ 1. Emprendimientos (Drive)
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '2. Entender lo que es el Propósito (YouTube HD)', 1)}>
+                                    ▶ 2. Qué es el Propósito
                                 </button>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '2. Entender lo que es el Propósito (YouTube HD)', 2)}>
-                                    ▶ 2. Qué es el Propósito (YouTube HD)
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '3. El Antes y Después de Descubrir tu Propósito (YouTube HD)', 2)}>
+                                    ▶ 3. El Antes y Después
                                 </button>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 3 ? "active" : ""}`} onClick={() => handleClase2Video('https://drive.google.com/file/d/1WKLSxavn9OWdpfu1QJDa43ePgHzgL573/preview', '2. Entender lo que es el Propósito (Drive)', 3)}>
-                                    ▶ 2. Qué es el Propósito (Drive)
-                                </button>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 4 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '3. El Antes y Después de Descubrir tu Propósito (YouTube HD)', 4)}>
-                                    ▶ 3. El Antes y Después (YouTube HD)
-                                </button>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 5 ? "active" : ""}`} onClick={() => handleClase2Video('https://drive.google.com/file/d/1-y36wzRd-PNxLbiJ8tOc5eUAhyjtseUu/preview', '3. El Antes y Después de Descubrir tu Propósito (Drive)', 5)}>
-                                    ▶ 3. El Antes y Después (Drive)
-                                </button>
-                                <a 
-                                    href={clase2Video.src.includes('embed/') ? `https://youtu.be/${clase2Video.src.split('embed/')[1].split('?')[0]}` : (clase2Video.src.includes('/preview') ? clase2Video.src.replace('/preview', '/view') : clase2Video.src)}
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="playlist-btn"
-                                    style={{ background: "rgba(233, 69, 96, 0.25)", borderColor: "rgba(233, 69, 96, 0.7)", color: "#FFA0B0", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.4rem", fontWeight: "700" }}>
-                                    {clase2Video.src.includes('youtube') ? '📺 Abrir en YouTube ↗' : '☁️ Abrir en Drive ↗'}
-                                </a>
                             </div>
                             <div className="video-description-box">
                                 💡 <strong>Grabación de la Clase 2:</strong> Sesión intensiva de propósito, dirección y visión estratégica para ordenar tu oferta.
