@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Clase 2: Propósito y Dirección | Campus Móvil MODO LÍDER</title>
+    <meta name="description" content="Acceso móvil a la Clase 2: Propósito y Dirección. Método MODO LÍDER - Lic. Romina Lorena Montiel.">
+    <meta name="theme-color" content="#0B0E14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-body: #07090D;
+            --bg-card: #0E121B;
+            --bg-card-subtle: #141A26;
+            --bg-gold-glass: rgba(212, 175, 55, 0.08);
+            --gold: #D4AF37;
+            --gold-light: #F6E6B4;
+            --gold-dark: #A6821E;
+            --coral: #E94560;
+            --coral-soft: rgba(233, 69, 96, 0.15);
+            --emerald: #10B981;
+            --text-main: #F4F6F9;
+            --text-muted: #8E99A8;
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --radius-xl: 20px;
+            --radius-lg: 14px;
+            --radius-md: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding-bottom: 90px;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.14) 0%, transparent 60%),
+                radial-gradient(circle at 10% 80%, rgba(233, 69, 96, 0.06) 0%, transparent 40%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .mobile-container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1rem 1rem 2rem;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* Top Brand Header */
+        .brand-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0 1.25rem;
+            border-bottom: 1px solid var(--border-gold);
+            margin-bottom: 1.25rem;
+        }
+
+        .brand-logo-combo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #1A0E03 70%);
+            border: 2px solid var(--gold);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+        }
+
+        .logo-circle .l-metodo {
+            font-size: 0.26rem;
+            font-weight: 700;
+            color: #FFF;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .logo-circle .l-modo {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.58rem;
+            font-weight: 700;
+            color: #FFF;
+            line-height: 1;
+        }
+
+        .logo-circle .l-lider {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.76rem;
+            font-weight: 800;
+            background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .brand-names {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-rm {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.35rem;
+            background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .brand-signature {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        .brand-role {
+            font-size: 0.58rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.7rem;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--emerald);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--emerald);
+            box-shadow: 0 0 8px var(--emerald);
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(20, 26, 38, 0.9) 0%, rgba(44, 18, 7, 0.8) 100%);
+            border: 1.5px solid var(--border-gold);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem 1.25rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .chapter-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.25;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-desc {
+            font-size: 0.85rem;
+            color: #C6D0DC;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat-pill {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* Section Titles (Centered) */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.8rem auto 0.9rem auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-align: center;
+        }
+
+        /* Main Interactive Action Cards */
+        .interactive-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .action-card {
+            background: var(--bg-card);
+            border: 1.5px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .action-card:active {
+            transform: scale(0.98);
+        }
+
+        .action-card.highlight-gold {
+            border-color: rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(44, 25, 10, 0.6) 100%);
+        }
+
+        .action-card.highlight-coral {
+            border-color: rgba(233, 69, 96, 0.45);
+            background: linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(45, 14, 24, 0.6) 100%);
+        }
+
+        .action-card.highlight-emerald {
+            border-color: rgba(16, 185, 129, 0.45);
+            background: linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(10, 36, 26, 0.6) 100%);
+        }
+
+        .action-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .highlight-gold .action-icon {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .highlight-coral .action-icon {
+            background: rgba(233, 69, 96, 0.15);
+            border-color: rgba(233, 69, 96, 0.4);
+        }
+
+        .highlight-emerald .action-icon {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .action-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .action-badge {
+            font-size: 0.62rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.2rem;
+            display: inline-block;
+        }
+
+        .highlight-gold .action-badge { color: var(--gold); }
+        .highlight-coral .action-badge { color: var(--coral); }
+        .highlight-emerald .action-badge { color: var(--emerald); }
+
+        .action-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.25;
+            margin-bottom: 0.25rem;
+        }
+
+        .action-desc {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .action-chevron {
+            font-size: 1.2rem;
+            color: var(--gold);
+            flex-shrink: 0;
+            padding-left: 0.3rem;
+        }
+
+        /* =========================================================
+           PILLAR 1: VIDEO PLAYER (TÉCNICA OFICIAL CLASE 1)
+           ========================================================= */
+        .pillar-card {
+            background: var(--bg-card);
+            border: 1.5px solid var(--border-gold);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+            margin: 0 auto 1.5rem auto;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .pillar-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0.85rem auto 1rem auto;
+            gap: 0.4rem;
+            width: 100%;
+        }
+
+        .pillar-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.55rem;
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.35;
+            text-align: center;
+            width: 100%;
+        }
+
+        .pillar-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.22rem 0.65rem;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+
+        .folder-video-screen {
+            width: 100%;
+            background: #000000;
+            border-radius: var(--radius-md);
+            border: 1.5px solid rgba(212, 175, 55, 0.35);
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .folder-video-screen video {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            display: block;
+            outline: none;
+            background: #000000;
+            object-fit: contain;
+            object-position: bottom center;
+            margin: 0 auto;
+        }
+
+        .folder-video-screen video::-webkit-media-controls-panel {
+            bottom: 0 !important;
+            top: auto !important;
+            align-self: flex-end !important;
+        }
+
+        .folder-video-screen iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: none;
+            background: #000000;
+        }
+
+        .video-playlist-bar {
+            background: #0B0E17;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            padding: 0.75rem 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .playlist-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            letter-spacing: 0.5px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.15rem;
+        }
+
+        .playlist-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #CBD5E1;
+            padding: 0.48rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            white-space: nowrap;
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        .playlist-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #FFFFFF;
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .playlist-btn.active {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold-light);
+            border-color: var(--gold);
+            font-weight: 700;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .video-description-box {
+            background: rgba(20, 26, 38, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1.15rem;
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            border-left: 3px solid var(--gold);
+            line-height: 1.5;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        /* Image / Infographic Preview Modal & Card */
+        .reto-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .reto-img-thumb {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-gold);
+            cursor: pointer;
+        }
+
+        /* Downloads Grid */
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-md);
+            padding: 0.9rem 0.8rem;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.4rem;
+            transition: all 0.2s ease;
+        }
+
+        .download-btn:active {
+            transform: scale(0.97);
+            background: var(--bg-card-subtle);
+        }
+
+        .dl-icon {
+            font-size: 1.5rem;
+        }
+
+        .dl-name {
+            font-size: 0.78rem;
+            font-weight: 700;
+            line-height: 1.25;
+            color: #FFFFFF;
+        }
+
+        .dl-format {
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        /* Mobile Bottom Floating Sticky Dock */
+        .bottom-dock {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(11, 14, 20, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1.5px solid var(--border-gold);
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem 0.5rem;
+            padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+            z-index: 100;
+            box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .dock-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.65rem;
+            font-weight: 700;
+            gap: 0.25rem;
+            padding: 0.35rem 0.6rem;
+            border-radius: 8px;
+            transition: color 0.2s ease;
+        }
+
+        .dock-item.active, .dock-item:hover {
+            color: var(--gold);
+        }
+
+        .dock-icon {
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+
+        /* Lightbox modal for charts */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            flex-direction: column;
+        }
+
+        .lightbox-modal.show {
+            display: flex;
+        }
+
+        .lightbox-modal img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            border: 2px solid var(--gold);
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            margin-top: 1rem;
+            background: var(--gold);
+            color: #000;
+            font-weight: 800;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mobile-container">
+
+    <!-- TOP BRAND HEADER -->
+    <header class="brand-top">
+        <div class="brand-logo-combo">
+            <div class="logo-circle">
+                <span class="l-metodo">MÉTODO</span>
+                <span class="l-modo">MODO</span>
+                <span class="l-lider">LÍDER</span>
+            </div>
+            <div class="brand-names">
+                <span class="brand-rm">RM</span>
+                <span class="brand-signature">LIC. ROMINA LORENA MONTIEL</span>
+                <span class="brand-role">Mentora de Mentes y Negocios</span>
+            </div>
+        </div>
+        <div class="status-badge">
+            <div class="status-dot"></div>
+            <span>Clase Activa</span>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <div class="hero-banner">
+        <span class="chapter-tag">CAPÍTULO 2 • CURSO DE CERO A VENTAS</span>
+        <h1 class="hero-title">Propósito y Dirección</h1>
+        <p class="hero-desc">Descubrí cómo pasar de un producto que solo te gusta a vos, a una oferta que tu cliente ideal desea y compra con convicción.</p>
+        <div class="hero-stats">
+            <div class="hero-stat-pill">📱 100% Adaptado al Celular</div>
+            <div class="hero-stat-pill">📊 10 Slides Oficiales</div>
+            <div class="hero-stat-pill">✍️ Workbook con Auto-Guardado</div>
+            <div class="hero-stat-pill">🎬 5 Videos / Audios</div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: ACCESOS RÁPIDOS MÓVILES -->
+    <div class="section-header" id="sec-interactiva">
+        <div class="section-title">✨ Experiencias de Aprendizaje</div>
+    </div>
+
+    <div class="interactive-grid">
+        <!-- Tarjeta 1: Presentación Interactiva -->
+        <a href="Presentacion_Clase_2_Proposito_y_Direccion.html" class="action-card highlight-gold">
+            <div class="action-icon">📱</div>
+            <div class="action-content">
+                <span class="action-badge">Deslizá con el dedo</span>
+                <div class="action-title">La Empresaria Consciente</div>
+                <div class="action-desc">10 diapositivas oficiales: los 7 pilares para liderar un negocio consciente, adaptadas a tu celular.</div>
+            </div>
+            <div class="action-chevron">▶</div>
+        </a>
+
+        <!-- Tarjeta 2: Workbook Interactivo -->
+        <a href="Workbook_Clase_2_Proposito_y_Direccion.html" class="action-card highlight-emerald">
+            <div class="action-icon">📝</div>
+            <div class="action-content">
+                <span class="action-badge">Completá y guardá</span>
+                <div class="action-title">Workbook Interactivo</div>
+                <div class="action-desc">Respondé las preguntas de autoliderazgo; tus respuestas se guardan solas en tu móvil.</div>
+            </div>
+            <div class="action-chevron">▶</div>
+        </a>
+
+        <!-- Tarjeta 3: Introducción Escrita -->
+        <a href="INTRO_ESCRITA_CLASE_2.html" class="action-card highlight-coral">
+            <div class="action-icon">📖</div>
+            <div class="action-content">
+                <span class="action-badge">Lectura recomendada</span>
+                <div class="action-title">Introducción Escrita</div>
+                <div class="action-desc">El manifiesto y fundamento reflexivo de la Lic. Romina Lorena Montiel.</div>
+            </div>
+            <div class="action-chevron">▶</div>
+        </a>
+    </div>
+
+    <!-- SECCIÓN: REPRODUCTOR DE VIDEOS (100% CENTRADO) -->
+    <div class="section-header" id="sec-videos">
+        <div class="section-title">🎬 Videos y Audios de la Clase</div>
+    </div>
+
+    <!-- PILLAR CARD OFICIAL ESTILO CLASE 1 (CON BARRA INDICADORA ABAJO DEL VIDEO) -->
+    <div class="pillar-card">
+        <!-- 1. Pantalla del Video (Arriba y 100% Centrada) -->
+        <div class="folder-video-screen" id="videoContainer-clase2">
+            <iframe 
+                id="iframeElement-clase2"
+                src="" 
+                title="Video Clase 2" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 
+                allowfullscreen
+                style="display: none; width: 100%; aspect-ratio: 16/9; border: none;">
+            </iframe>
+            <video id="videoElement-clase2" controls playsinline controlsList="nodownload" oncontextmenu="return false;" preload="metadata" poster="fotito.PNG" style="display: block; width: 100%; height: auto; max-height: 480px;">
+                <source src="BIENVENIDA A LA CLASE 2 DE ESTE CURSO.mpeg" type="video/mpeg">
+                Tu celular o navegador no soporta reproducción directa.
+            </video>
+        </div>
+
+        <!-- 2. Barra que indica en qué punto/video está (ABAJO DEL VIDEO) -->
+        <div class="pillar-header">
+            <div class="pillar-title">
+                <span>🎬</span>
+                <span id="title-video-clase2">1. Bienvenida a la Clase 2 de este Curso</span>
+            </div>
+            <span class="pillar-badge" id="badge-video-clase2">Video Oficial HD</span>
+        </div>
+        <!-- Selector de videos estilo Clase 1 -->
+        <div class="video-playlist-bar">
+            <span class="playlist-label">Opciones de Video:</span>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '2. Presentamos Nuestros Emprendimientos', this, '', true, 'Ronda estratégica y participativa en vivo de alumnas presentando sus proyectos y modelos de negocio.')">
+                🎬 2. Emprendimientos (YouTube HD)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '3. Entender lo que es el Propósito', this, '', true, 'Profundización conceptual y estratégica: qué es y cómo se aterriza el verdadero propósito empresarial.')">
+                🎬 3. Qué es el Propósito (YouTube HD)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '4. El Antes y Después de Descubrir tu Propósito', this, '', true, 'Claridad de visión, transformación de postura y orden prioritario para liderar tu negocio.')">
+                🎬 4. Antes y Después (YouTube HD)
+            </button>
+            <button class="playlist-btn active" onclick="switchFolderVideo('clase2', 'BIENVENIDA A LA CLASE 2 DE ESTE CURSO.mpeg', '1. Bienvenida a la Clase 2 de este Curso', this, 'fotito.PNG', false, 'Mensaje oficial de apertura y bienvenida a la Clase 2 por la Lic. Romina Lorena Montiel.')">
+                ▶ 1. Bienvenida
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'CLASE 2 NOS PRESENTAMOS Y PRESENTAMOS NUESTROS EMPRENDIMIENTOS.mp4', '2. Presentamos Nuestros Emprendimientos (Archivo Local)', this, 'fotito.PNG', false, 'Ronda estratégica y participativa con alumnas presentando sus proyectos y modelos de negocio (archivo local).')">
+                ▶ 2. Emprendimientos (Local)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'ENTENDER LO QUE ES EL PROPOSITO.mp4', '3. Entender lo que es el Propósito', this, 'fotito.PNG', false, 'Profundización conceptual y estratégica: qué es y cómo se aterriza el verdadero propósito empresarial.')">
+                ▶ 3. Qué es el Propósito (Local)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'EL ANTES Y EL DESPUES DE DESCUBRIR TU PROPOSITO.mp4', '4. El Antes y Después de Descubrir tu Propósito', this, 'fotito.PNG', false, 'Claridad de visión, transformación de postura y orden prioritario para liderar tu negocio.')">
+                ▶ 4. Antes y Después
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'HABER CREADO UN PRODUCTO QUE TE ENCANTA NO IMPLICA ALGO QUE TU CLIENTE DESEA COMPRAR.mpeg', '5. Lo que tu Cliente Desea Comprar', this, 'fotito.PNG', false, 'El mayor punto ciego al vender: la distinción entre crear un hobby personal y diseñar una oferta que el cliente compre.')">
+                ▶ 5. Cliente y Venta
+            </button>
+            <a id="driveDirectLink-clase2" href="https://youtu.be/uincuU4f_xg" target="_blank" rel="noopener noreferrer" class="playlist-btn" style="background: rgba(233, 69, 96, 0.2); border-color: rgba(233, 69, 96, 0.6); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; color: #FFA0B0; font-weight: 600;">
+                📺 Abrir en YouTube ↗
+            </a>
+        </div>
+        <!-- Barra de Streaming Online (Técnica Oficial Clase 1 / Drive y YouTube) -->
+        <div class="video-playlist-bar" style="margin-top: -0.25rem; background: rgba(0, 0, 0, 0.4); border-color: rgba(212, 175, 55, 0.2);">
+            <span class="playlist-label" style="color: #94A3B8;">☁️ Streaming Online:</span>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '2. Presentamos Nuestros Emprendimientos (YouTube HD)', this, '', true, 'Transmisión oficial de YouTube: Ronda en vivo de proyectos.')">
+                🎬 2. Emprendimientos (YouTube)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '3. Entender lo que es el Propósito (YouTube HD)', this, '', true, 'Transmisión oficial de YouTube: Qué es el propósito.')">
+                🎬 3. Propósito (YouTube)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '4. El Antes y Después (YouTube HD)', this, '', true, 'Transmisión oficial de YouTube: El Antes y el Después.')">
+                🎬 4. Antes y Después (YouTube)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/1sSI5e4FRTcxDSab1dn1pBojdp7v0yyqS/preview', '1. Bienvenida (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
+                ☁️ 1. Bienvenida
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/18-q0UqjZKyrTZQi3GcO-8At06EnO2clY/preview', '2. Emprendimientos (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
+                ☁️ 2. Emprendimientos (Drive)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/1WKLSxavn9OWdpfu1QJDa43ePgHzgL573/preview', '3. Entender el Propósito (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
+                ☁️ 3. Propósito (Drive)
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/1-y36wzRd-PNxLbiJ8tOc5eUAhyjtseUu/preview', '4. Antes y Después (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
+                ☁️ 4. Antes y Después
+            </button>
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://drive.google.com/file/d/1xrt96ueQ1h7gVJMRa_smyNg6xaRdzP6p/preview', '5. Lo que el Cliente Desea (Drive HD)', this, '', true, 'Transmisión directa desde Google Drive Oficial.')">
+                ☁️ 5. Cliente y Venta
+            </button>
+        </div>
+        <div class="video-description-box" id="desc-video-clase2">
+            💡 <strong>Contenido de la Clase:</strong> Mensaje oficial de apertura y bienvenida a la Clase 2 por la Lic. Romina Lorena Montiel.
+        </div>
+    </div>
+
+    <!-- SECCIÓN: CUADRO DEL PROPÓSITO -->
+    <div class="section-header" id="sec-esquema">
+        <div class="section-title">🖼️ Reto Final: Cuadro del Propósito</div>
+    </div>
+
+    <div class="reto-card">
+        <div style="font-size:0.85rem; color:#E2E8F0; line-height:1.4;">
+            <strong>El reto final de esta clase</strong> es completar tu cuadro estratégico. Tocá la imagen para ampliarla en tu celular:
+        </div>
+        <img src="El reto final de esta clase es lograr completar el cuadro del PROPOSITO.PNG" alt="Cuadro del Propósito" class="reto-img-thumb" onclick="openLightbox(this.src)">
+        <div style="font-size:0.75rem; color:var(--text-muted); text-align:center;">
+            🔍 Tocá para ver en pantalla completa
+        </div>
+    </div>
+
+    <!-- SECCIÓN: DESCARGAS OFICIALES -->
+    <div class="section-header" id="sec-descargas">
+        <div class="section-title">📥 Archivos para Descargar</div>
+    </div>
+
+    <div class="downloads-grid">
+        <a href="Workbook_Clase_2_Proposito_y_Direccion.pdf" download class="download-btn">
+            <span class="dl-icon">📕</span>
+            <span class="dl-name">Workbook Oficial</span>
+            <span class="dl-format">PDF Imprimible</span>
+        </a>
+
+        <a href="Workbook_Clase_2_Proposito_y_Direccion.docx" download class="download-btn">
+            <span class="dl-icon">📘</span>
+            <span class="dl-name">Workbook Editable</span>
+            <span class="dl-format">Word (.docx)</span>
+        </a>
+
+        <a href="Clase_2_Proposito_y_Direccion_MODOLIDER.pptx" download class="download-btn">
+            <span class="dl-icon">📙</span>
+            <span class="dl-name">Presentación</span>
+            <span class="dl-format">PowerPoint (.pptx)</span>
+        </a>
+
+        <a href="INTRO ESCRITA CLASE 2.docx" download class="download-btn">
+            <span class="dl-icon">📄</span>
+            <span class="dl-name">Fundamento Escrito</span>
+            <span class="dl-format">Word (.docx)</span>
+        </a>
+    </div>
+
+    <!-- FOOTER MODO LÍDER -->
+    <footer style="text-align:center; padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:1rem;">
+        <div style="font-size:0.82rem; font-weight:700; color:var(--gold); letter-spacing:1px; margin-bottom:0.3rem;">
+            MÉTODO MODO LÍDER • LIC. ROMINA LORENA MONTIEL
+        </div>
+        <div style="font-size:0.7rem; color:var(--text-muted);">
+            Curso Emprender de Cero a Impacto y Ventas • Todos los derechos reservados
+        </div>
+    </footer>
+
+</div><!-- /mobile-container -->
+
+<!-- BOTTOM STICKY DOCK FOR MOBILE -->
+<nav class="bottom-dock">
+    <a href="#sec-interactiva" class="dock-item active">
+        <span class="dock-icon">📱</span>
+        <span>Aprender</span>
+    </a>
+    <a href="Presentacion_Clase_2_Proposito_y_Direccion.html" class="dock-item">
+        <span class="dock-icon">📊</span>
+        <span>Slides</span>
+    </a>
+    <a href="Workbook_Clase_2_Proposito_y_Direccion.html" class="dock-item">
+        <span class="dock-icon">✍️</span>
+        <span>Workbook</span>
+    </a>
+    <a href="#sec-videos" class="dock-item">
+        <span class="dock-icon">🎬</span>
+        <span>Videos</span>
+    </a>
+    <a href="#sec-descargas" class="dock-item">
+        <span class="dock-icon">📥</span>
+        <span>Descargas</span>
+    </a>
+</nav>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="Ampliación">
+    <button class="lightbox-close" onclick="closeLightbox()">Cerrar ✕</button>
+</div>
+
+<script>
+    const driveMapClase2 = {
+        'BIENVENIDA A LA CLASE 2 DE ESTE CURSO.mpeg': 'https://drive.google.com/file/d/1sSI5e4FRTcxDSab1dn1pBojdp7v0yyqS/preview',
+        'CLASE 2 NOS PRESENTAMOS Y PRESENTAMOS NUESTROS EMPRENDIMIENTOS.mp4': 'https://drive.google.com/file/d/18-q0UqjZKyrTZQi3GcO-8At06EnO2clY/preview',
+        'ENTENDER LO QUE ES EL PROPOSITO.mp4': 'https://drive.google.com/file/d/1WKLSxavn9OWdpfu1QJDa43ePgHzgL573/preview',
+        'EL ANTES Y EL DESPUES DE DESCUBRIR TU PROPOSITO.mp4': 'https://drive.google.com/file/d/1-y36wzRd-PNxLbiJ8tOc5eUAhyjtseUu/preview',
+        'HABER CREADO UN PRODUCTO QUE TE ENCANTA NO IMPLICA ALGO QUE TU CLIENTE DESEA COMPRAR.mpeg': 'https://drive.google.com/file/d/1xrt96ueQ1h7gVJMRa_smyNg6xaRdzP6p/preview'
+    };
+
+    function switchFolderVideo(folderKey, videoSrc, title, btnElement, posterSrc, isYouTube, desc) {
+        const player = document.getElementById(`videoElement-${folderKey}`);
+        const iframe = document.getElementById(`iframeElement-${folderKey}`);
+        const titleElem = document.getElementById(`title-video-${folderKey}`);
+        const badgeElem = document.getElementById(`badge-video-${folderKey}`);
+        const descElem = document.getElementById(`desc-video-${folderKey}`);
+        const driveDirectBtn = document.getElementById(`driveDirectLink-${folderKey}`);
+
+        const isDrive = videoSrc && videoSrc.includes('drive.google.com');
+        const isYT = isYouTube || (videoSrc && (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')));
+        const isEmbed = isDrive || isYT;
+
+        if (isEmbed) {
+            if (iframe) {
+                iframe.src = videoSrc;
+                iframe.style.display = 'block';
+            }
+            if (player) {
+                player.pause();
+                player.style.display = 'none';
+            }
+            if (badgeElem) badgeElem.innerText = isDrive ? 'Google Drive Oficial HD' : 'YouTube Oficial HD';
+        } else {
+            if (iframe) {
+                iframe.src = '';
+                iframe.style.display = 'none';
+            }
+            if (player) {
+                player.style.display = 'block';
+                if (posterSrc) player.poster = posterSrc;
+                player.src = videoSrc;
+                player.load();
+                player.play().catch(e => console.log('Autoplay prevented by browser:', e));
+            }
+            if (badgeElem) badgeElem.innerText = 'Video Oficial HD';
+        }
+
+        if (titleElem && title) {
+            titleElem.innerText = title;
+        }
+
+        if (descElem && desc) {
+            descElem.innerHTML = `💡 <strong>Contenido de la Clase:</strong> ${desc}`;
+        }
+
+        if (driveDirectBtn) {
+            if (isYT) {
+                let ytUrl = videoSrc;
+                if (videoSrc.includes('embed/')) {
+                    const ytId = videoSrc.split('embed/')[1].split('?')[0];
+                    ytUrl = `https://youtu.be/${ytId}`;
+                }
+                driveDirectBtn.href = ytUrl;
+                driveDirectBtn.innerHTML = '📺 Abrir en YouTube ↗';
+                driveDirectBtn.style.display = 'inline-flex';
+            } else if (isDrive) {
+                driveDirectBtn.href = videoSrc.replace('/preview', '/view');
+                driveDirectBtn.innerHTML = '📺 Ver en Google Drive ↗';
+                driveDirectBtn.style.display = 'inline-flex';
+            } else {
+                let driveUrl = driveMapClase2[videoSrc] || '';
+                if (driveUrl) {
+                    driveDirectBtn.href = driveUrl.replace('/preview', '/view');
+                    driveDirectBtn.innerHTML = '📺 Ver en Google Drive ↗';
+                    driveDirectBtn.style.display = 'inline-flex';
+                } else {
+                    driveDirectBtn.style.display = 'none';
+                }
+            }
+        }
+
+        // Update active button across all playlist bars
+        const allBars = document.querySelectorAll('.video-playlist-bar');
+        allBars.forEach(bar => {
+            bar.querySelectorAll('.playlist-btn').forEach(b => b.classList.remove('active'));
+        });
+        if (btnElement) {
+            btnElement.classList.add('active');
+        }
+
+        // Smooth scroll to video section if called on mobile
+        const sec = document.getElementById('sec-videos');
+        if (sec && window.innerWidth < 768) {
+            sec.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function openLightbox(src) {
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('lightbox').classList.add('show');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('show');
+    }
+</script>
+
+</body>
+</html>

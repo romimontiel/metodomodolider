@@ -158,15 +158,41 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 1.25rem 0.8rem;
+            }
             .doc-container {
-                padding: 2rem 1.5rem;
+                padding: 1.75rem 1.15rem;
+                border-radius: 14px;
+            }
+            .doc-badge {
+                font-size: 0.72rem;
+                padding: 0.35rem 0.75rem;
             }
             .doc-title {
-                font-size: 1.6rem;
+                font-size: clamp(1.35rem, 5.5vw, 1.75rem);
             }
             .highlight-quote {
-                font-size: 1.1rem;
-                padding: 1.2rem 1.4rem;
+                font-size: 1.05rem;
+                padding: 1.1rem 1.2rem;
+            }
+            .action-box {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+            .signature-info {
+                text-align: center;
+            }
+            .btn-download {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+            .btn-back-hub {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
             }
         }
     </style>
@@ -175,7 +201,10 @@
 
     <main class="doc-container">
         <header class="doc-header">
-            <span class="doc-badge">✨ Fundamento Escrito • Clase 2</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+                <span class="doc-badge" style="margin-bottom:0;">✨ Fundamento Escrito • Clase 2</span>
+                <a href="index.html" style="color:var(--color-gold); font-size:0.8rem; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">📱 Portal Móvil Clase 2 ▶</a>
+            </div>
             <h1 class="doc-title">Introducción Escrita: Propósito y Dirección</h1>
             <p class="doc-subtitle">Método Modo Líder • Cohorte 2026</p>
         </header>
@@ -204,9 +233,14 @@
                 <span class="sig-name">Lic. Romina Lorena Montiel</span>
                 <span class="sig-role">Lic. en Administración • Neuropsicoeducadora • Mentora Modo Líder</span>
             </div>
-            <a href="/clase2_proposito_y_direccion/INTRO ESCRITA CLASE 2.docx" download class="btn-download">
-                <span>📥 Descargar Word (.docx)</span>
-            </a>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; width:100%; justify-content:space-between;">
+                <a href="index.html" class="btn-download btn-back-hub" style="background:rgba(212,175,55,0.15); color:var(--color-gold); border:1px solid rgba(212,175,55,0.4); box-shadow:none;">
+                    <span>📱 Ir al Portal Móvil</span>
+                </a>
+                <a href="INTRO ESCRITA CLASE 2.docx" download class="btn-download">
+                    <span>📥 Descargar Word (.docx)</span>
+                </a>
+            </div>
         </footer>
     </main>
 

@@ -954,17 +954,280 @@
             }
         }
 
-        /* ============ RESPONSIVE ============ */
+        /* ============ RESPONSIVE & MOBILE (MODO CELULAR) ============ */
         @media (max-width: 768px) {
-            section { padding: 2rem 1.5rem; }
-            .cover { padding: 3rem 1.5rem; }
-            .cover h1 { font-size: 2rem; }
-            .def-grid { grid-template-columns: 1fr; }
-            .formula-row { flex-direction: column; gap: 0.5rem; }
-            .formula-label { min-width: auto; }
-            .transform-row { flex-direction: column; }
-            .transform-arrow-center { align-self: center; transform: rotate(90deg); }
-            .toolbar { bottom: 1rem; right: 1rem; }
+            body {
+                padding-bottom: 80px; /* Space for mobile floating dock */
+            }
+
+            .workbook-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            /* Cover */
+            .cover-top {
+                padding: 2.5rem 1.2rem 1.8rem;
+            }
+
+            .cover-author {
+                font-size: 0.72rem;
+                letter-spacing: 2px;
+            }
+
+            .cover-divider {
+                width: 80px;
+                margin-bottom: 1.5rem;
+            }
+
+            .cover h1 {
+                font-size: clamp(2.2rem, 9vw, 3.2rem) !important;
+                letter-spacing: 3px !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .cover-course-name {
+                font-size: 0.92rem;
+                letter-spacing: 1px;
+                margin-bottom: 1.5rem;
+            }
+
+            .cover-logo-big {
+                width: 130px;
+                height: 130px;
+                margin: 1rem auto;
+            }
+
+            .cover-logo-big .clb-metodo { font-size: 0.52rem; letter-spacing: 1.8px; }
+            .cover-logo-big .clb-modo { font-size: 1.3rem; }
+            .cover-logo-big .clb-lider { font-size: 1.85rem; }
+            .cover-logo-big .clb-slogan { font-size: 0.42rem; letter-spacing: 1px; }
+
+            .cover-bottom-bar {
+                padding: 0.8rem 1rem;
+                flex-direction: column;
+                gap: 0.25rem;
+                text-align: center;
+            }
+
+            .cover-bottom-bar .cb-label { font-size: 0.68rem; }
+            .cover-bottom-bar .cb-text { font-size: 0.75rem; }
+
+            .cover-fields {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.75rem;
+            }
+
+            .cover-field {
+                width: 100%;
+                min-width: auto;
+            }
+
+            /* Sections */
+            section {
+                padding: 1.75rem 1.15rem;
+            }
+
+            .section-number { font-size: 0.7rem; }
+            .section-title {
+                font-size: clamp(1.25rem, 5vw, 1.55rem);
+                line-height: 1.3;
+            }
+            .section-subtitle {
+                font-size: 0.88rem;
+                margin-bottom: 1.5rem;
+            }
+
+            /* Cards and Writing Areas */
+            .exercise-card {
+                padding: 1.25rem 1rem;
+                border-radius: 12px;
+                margin-bottom: 1.2rem;
+            }
+
+            .exercise-question {
+                font-size: 0.98rem;
+                line-height: 1.45;
+            }
+
+            .writing-area {
+                font-size: 16px !important; /* Prevents auto-zoom on iOS */
+                padding: 0.85rem;
+                border-radius: 8px;
+            }
+
+            /* Definition Grid */
+            .def-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Circle Header */
+            .circle-header {
+                gap: 0.75rem;
+            }
+
+            .circle-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 1.4rem;
+            }
+
+            .circle-header-text h3 {
+                font-size: 1.15rem;
+            }
+
+            /* Formula Box */
+            .formula-box {
+                padding: 1.25rem 1rem;
+                border-radius: 12px;
+            }
+
+            .formula-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.4rem;
+            }
+
+            .formula-label {
+                min-width: auto;
+                font-size: 0.78rem;
+            }
+
+            .formula-input {
+                font-size: 16px !important; /* Prevents iOS zoom */
+                padding: 0.75rem 0.85rem;
+            }
+
+            .formula-arrow {
+                display: none;
+            }
+
+            /* Transformation A->B */
+            .transform-box {
+                padding: 1.25rem 1rem;
+            }
+
+            .transform-row {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .transform-arrow-center {
+                transform: rotate(90deg);
+                margin: 0.2rem auto;
+                font-size: 1.5rem;
+            }
+
+            /* Tables */
+            .desglose-table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                font-size: 0.82rem;
+            }
+
+            .desglose-table th, .desglose-table td {
+                padding: 0.6rem 0.7rem;
+            }
+
+            .desglose-table textarea {
+                font-size: 16px !important;
+                min-width: 160px;
+            }
+
+            /* Quotes & Coaching */
+            .quote-block {
+                padding: 1.35rem 1rem;
+                margin: 1.5rem 0;
+            }
+
+            .quote-block p {
+                font-size: 1rem;
+            }
+
+            .coaching-area {
+                padding: 1.25rem 1rem;
+            }
+
+            /* Closing Page */
+            .closing-body {
+                padding: 2rem 1.2rem 1.5rem;
+            }
+
+            .closing-text {
+                font-size: 1rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .closing-logo {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 1.5rem;
+            }
+
+            .closing-logo .cl-metodo { font-size: 0.35rem; }
+            .closing-logo .cl-modo { font-size: 0.95rem; }
+            .closing-logo .cl-lider { font-size: 1.35rem; }
+            .closing-logo .cl-slogan { font-size: 0.28rem; }
+
+            .closing-footer {
+                padding: 1rem 1.2rem;
+                flex-direction: column;
+                gap: 0.4rem;
+                text-align: center;
+            }
+
+            /* Footer */
+            .workbook-footer {
+                padding: 1.75rem 1.2rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.8rem;
+            }
+
+            .footer-brand-text {
+                text-align: center;
+            }
+
+            /* Mobile Floating Dock Toolbar */
+            .toolbar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: auto;
+                flex-direction: row;
+                justify-content: space-around;
+                background: rgba(14, 18, 27, 0.94);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border-top: 1.5px solid var(--color-gold);
+                padding: 0.55rem 0.8rem;
+                padding-bottom: max(0.55rem, env(safe-area-inset-bottom));
+                gap: 0.45rem;
+                z-index: 999;
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+                border-radius: 0;
+            }
+
+            .toolbar-btn {
+                flex: 1;
+                justify-content: center;
+                padding: 0.6rem 0.3rem;
+                font-size: 0.75rem;
+                font-weight: 700;
+                border-radius: 8px;
+                box-shadow: none;
+                border-width: 1px;
+                white-space: nowrap;
+                gap: 0.3rem;
+            }
         }
     </style>
 </head>
@@ -1502,39 +1765,65 @@
 
     <!-- ============ TOOLBAR ============ -->
     <div class="toolbar no-print">
-        <button class="toolbar-btn" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="toolbar-btn" onclick="saveProgress()">💾 Guardar</button>
-        <button class="toolbar-btn" onclick="clearAll()">🗑️ Limpiar</button>
+        <button class="toolbar-btn" id="btnSave" onclick="saveProgress()">💾 Guardar</button>
+        <button class="toolbar-btn" id="btnPrint" onclick="window.print()">🖨️ Imprimir / PDF</button>
+        <button class="toolbar-btn" id="btnClear" onclick="clearAll()">🗑️ Limpiar</button>
+        <button class="toolbar-btn" id="btnTop" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Volver arriba">🔝 Arriba</button>
+    </div>
+
+    <!-- Toast Notification for Auto-Save -->
+    <div id="saveToast" style="position:fixed; top:1rem; left:50%; transform:translateX(-50%); background:var(--color-navy); color:var(--color-gold); border:1.5px solid var(--color-gold); padding:0.6rem 1.2rem; border-radius:50px; font-size:0.8rem; font-weight:700; z-index:1000; box-shadow:0 8px 25px rgba(0,0,0,0.4); opacity:0; pointer-events:none; transition:opacity 0.3s ease, transform 0.3s ease;">
+        ✅ Guardado con éxito en tu dispositivo
     </div>
 
     <script>
         // Auto-save to localStorage
         const STORAGE_KEY = 'workbook_clase2_proposito';
 
-        function saveProgress() {
+        function showToast(message) {
+            const toast = document.getElementById('saveToast');
+            if (toast) {
+                toast.innerHTML = message;
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateX(-50%) translateY(0)';
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateX(-50%) translateY(-10px)';
+                }, 2000);
+            }
+        }
+
+        function saveProgress(silent = false) {
             const data = {};
             document.querySelectorAll('textarea, input[type="text"]').forEach((el, i) => {
                 data[`field_${i}`] = el.value;
             });
             localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
             
-            // Visual feedback
-            const btn = document.querySelector('.toolbar-btn');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '✅ Guardado';
-            btn.style.background = 'var(--color-green)';
-            btn.style.color = '#FFF';
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-                btn.style.color = '';
-            }, 1500);
+            if (!silent) {
+                // Visual feedback on save button
+                const btn = document.getElementById('btnSave');
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '✅ Guardado';
+                    btn.style.background = 'var(--color-green)';
+                    btn.style.color = '#FFF';
+                    btn.style.borderColor = 'var(--color-green)';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = '';
+                        btn.style.color = '';
+                        btn.style.borderColor = '';
+                    }, 1800);
+                }
+                showToast('✨ Respuestas guardadas en tu celular');
+            }
         }
 
         function loadProgress() {
             const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
             document.querySelectorAll('textarea, input[type="text"]').forEach((el, i) => {
-                if (data[`field_${i}`]) {
+                if (data[`field_${i}`] !== undefined) {
                     el.value = data[`field_${i}`];
                 }
             });
@@ -1546,11 +1835,12 @@
                     el.value = '';
                 });
                 localStorage.removeItem(STORAGE_KEY);
+                showToast('🗑️ Cuaderno reiniciado');
             }
         }
 
-        // Auto-save every 30 seconds
-        setInterval(saveProgress, 30000);
+        // Auto-save every 30 seconds silently
+        setInterval(() => saveProgress(true), 30000);
 
         // Load on page load
         window.addEventListener('load', loadProgress);
