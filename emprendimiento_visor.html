@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Emprendimiento · Networking y Comunidad | Método Modo Líder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07090E;
+  --surface: #0E121C;
+  --card: #151B28;
+  --card-hover: #1C2436;
+  --gold: #FFD700;
+  --gold-primary: #D4AF37;
+  --gold-l: #FCE08B;
+  --gold-g: linear-gradient(135deg, #FFE27A 0%, #FFD700 50%, #B88E28 100%);
+  --coral: #FF5A78;
+  --emerald: #10B981;
+  --muted: #94A3B8;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-g: rgba(255, 215, 0, 0.4);
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: #F8FAFC;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(255, 215, 0, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(233, 69, 96, 0.06) 0%, transparent 45%);
+}
+
+/* TOP HEADER */
+.hdr {
+  background: rgba(7, 9, 14, 0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-g);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.hdr-in {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 1.5rem;
+  gap: 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 215, 0, 0.12);
+  color: var(--gold);
+  border: 1px solid var(--border-g);
+  padding: 0.45rem 1.1rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.back-btn:hover {
+  background: var(--gold-g);
+  color: #07090E;
+  border-color: transparent;
+  transform: translateX(-2px);
+}
+.hdr-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+}
+.badge-hdr {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--gold-g);
+  color: #07090E;
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.hdr-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #FFF;
+}
+.auth-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+}
+.auth-status-badge.logged-in {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34D399;
+}
+
+/* MAIN WRAPPER */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 4rem;
+}
+
+/* HERO SECTION */
+.hero-banner {
+  background: linear-gradient(135deg, rgba(28, 22, 12, 0.95) 0%, rgba(18, 14, 24, 0.98) 100%);
+  border: 1.5px solid var(--border-g);
+  border-radius: var(--r-lg);
+  padding: 2.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5), 0 0 30px rgba(255, 215, 0, 0.15);
+}
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gold-g);
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 215, 0, 0.18);
+  border: 1px solid var(--border-g);
+  color: var(--gold);
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+.hero-banner h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #FFF;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.hero-banner h1 span {
+  background: var(--gold-g);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-desc {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 780px;
+}
+.hero-chips {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #CBD5E1;
+}
+
+/* ==================================================================== */
+/* CARPETAS DE ESTUDIO (TOP SELECTOR GRID)                               */
+/* ==================================================================== */
+.folders-section {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 80px;
+}
+.folders-header {
+  margin-bottom: 1.2rem;
+}
+.folders-header h2 {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.folders-header p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+.folder-nav-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.folder-nav-tab {
+  background: rgba(18, 14, 24, 0.85);
+  border: 1.5px solid rgba(255, 215, 0, 0.25);
+  border-radius: var(--r-md);
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  position: relative;
+  text-align: left;
+}
+.folder-nav-tab:hover {
+  background: rgba(28, 22, 14, 0.95);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
+}
+.folder-nav-tab.active {
+  background: linear-gradient(145deg, rgba(38, 30, 14, 0.95) 0%, rgba(20, 14, 10, 0.98) 100%);
+  border-color: var(--gold);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.35);
+}
+.folder-nav-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5px;
+  left: 15%;
+  width: 70%;
+  height: 3px;
+  background: var(--gold-g);
+  border-radius: 3px 3px 0 0;
+}
+.tab-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tab-icon {
+  font-size: 1.5rem;
+}
+.tab-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
+  background: rgba(255, 215, 0, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+}
+.folder-nav-tab.active .tab-badge {
+  background: var(--gold-g);
+  color: #07090E;
+  border-color: transparent;
+}
+.tab-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-top: 0.2rem;
+}
+.folder-nav-tab.active .tab-title {
+  color: var(--gold-l);
+}
+.tab-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ==================================================================== */
+/* MATERIAL PANELS                                                       */
+/* ==================================================================== */
+.folder-content-container {
+  background: rgba(14, 18, 28, 0.95);
+  border: 1.5px solid var(--border-g);
+  border-radius: var(--r-lg);
+  padding: 2.2rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  position: relative;
+}
+.c-panel { display: none; }
+.c-panel.active { display: block; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ACTIVE FOLDER BANNER */
+.active-folder-banner {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.active-folder-title-group h3 {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.active-folder-title-group p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+/* PILLAR 1: VIDEO */
+.vid-area {
+  background: #000;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1.2rem;
+}
+.vid-area iframe, .vid-area video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  border: none;
+  background: #000;
+}
+.pl-bar {
+  background: #0B0E17;
+  padding: 0.85rem 1.2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+.pl-lbl {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-right: 0.3rem;
+  white-space: nowrap;
+}
+.pl-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: #CBD5E1;
+  padding: 0.45rem 1rem;
+  border-radius: 50px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.pl-btn:hover { background: rgba(255, 255, 255, 0.12); color: #FFF; }
+.pl-btn.active {
+  background: var(--gold-g);
+  color: #07090E;
+  border-color: transparent;
+  font-weight: 700;
+}
+.v-desc {
+  background: rgba(255, 215, 0, 0.06);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--r-sm);
+  padding: 1rem 1.3rem;
+  font-size: 0.86rem;
+  color: #CBD5E1;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* PILLAR 3: MATERIALS */
+.mats { margin-bottom: 2.5rem; }
+.mats-ttl {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--gold-l);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+.mats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+}
+.m-card {
+  background: var(--card);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: var(--r-md);
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.9rem;
+  transition: all 0.2s;
+}
+.m-card:hover {
+  background: var(--card-hover);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.m-ico-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.m-badge {
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.b-gold { background: var(--gold-g); color: #07090E; }
+.b-pdf { background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.m-meta h5 {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #FFF;
+  line-height: 1.3;
+}
+.m-meta span {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.m-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.m-btns {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+}
+.btn-p, .btn-s {
+  padding: 0.55rem 1rem;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: all 0.2s;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+.btn-p {
+  background: var(--gold-g);
+  color: #07090E;
+  border: none;
+}
+.btn-p:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.btn-s {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: #CBD5E1;
+}
+.btn-s:hover { background: rgba(255, 255, 255, 0.12); color: #FFF; }
+
+/* ==================================================================== */
+/* BOTONES DE REGRESO OBLIGATORIOS AL FINAL DEL MATERIAL               */
+/* ==================================================================== */
+.return-to-folders-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+.btn-return-folders {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #1C180E 0%, #2A2210 100%);
+  color: var(--gold);
+  border: 1.5px solid var(--gold);
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.25);
+  transition: all 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  max-width: 440px;
+}
+.btn-return-folders:hover {
+  background: var(--gold-g);
+  color: #07090E;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.45);
+}
+.btn-return-folders .btn-arrow {
+  font-size: 1.2rem;
+  font-weight: 900;
+  transition: transform 0.2s ease;
+}
+.btn-return-folders:hover .btn-arrow {
+  transform: translateY(-3px);
+}
+.btn-return-campus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.75rem 1.6rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  max-width: 440px;
+}
+.btn-return-campus:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ==================================================================== */
+/* AUTH MODAL                                                           */
+/* ==================================================================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(4, 6, 10, 0.9);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+.modal-overlay.open { display: flex; animation: fadeIn 0.25s ease; }
+.modal-card {
+  background: #0E121C;
+  border: 1.5px solid var(--gold);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 215, 0, 0.3);
+  border-radius: var(--r-lg);
+  max-width: 480px;
+  width: 100%;
+  padding: 2.2rem;
+  position: relative;
+}
+.modal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gold-g);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.modal-close-btn:hover { background: rgba(255, 255, 255, 0.15); color: #FFF; }
+.modal-header { text-align: center; margin-bottom: 1.6rem; }
+.modal-lock-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  border-radius: 16px;
+  background: rgba(255, 215, 0, 0.15);
+  border: 1.5px solid var(--border-g);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--gold);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+.modal-header h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 0.4rem;
+}
+.modal-header p {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.modal-form { display: flex; flex-direction: column; gap: 1.1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; text-align: left; }
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gold-l);
+}
+.form-input-wrap { position: relative; }
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--r-sm);
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  transition: all 0.2s;
+}
+.form-input:focus {
+  border-color: var(--gold);
+  background: rgba(255, 215, 0, 0.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.25);
+}
+.form-pwd-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.modal-err {
+  display: none;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #FCA5A5;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--r-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.btn-modal-submit {
+  width: 100%;
+  background: var(--gold-g);
+  color: #07090E;
+  border: none;
+  padding: 0.9rem;
+  border-radius: var(--r-sm);
+  font-size: 0.9rem;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.35);
+}
+.btn-modal-submit:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+/* FOOTER */
+.ftr {
+  background: #05070B;
+  border-top: 1px solid var(--border);
+  padding: 1.8rem 1.2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+/* RESPONSIVE MÓVIL */
+@media(max-width: 768px) {
+  .folder-nav-tabs { grid-template-columns: 1fr; }
+  .folder-content-container { padding: 1.4rem 1rem; }
+  .hero-banner { padding: 1.5rem 1.2rem; }
+  .hero-banner h1 { font-size: 1.35rem; }
+  .btn-return-folders, .btn-return-campus { width: 100%; max-width: 100%; }
+}
+@media(max-width: 480px) {
+  .hdr-in { padding: 0 0.8rem; gap: 0.5rem; }
+  .back-btn { font-size: 0.75rem; padding: 0.35rem 0.8rem; }
+  .badge-hdr { display: none; }
+  .container { padding: 1.2rem 0.6rem 3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP HEADER -->
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="/campus_modo_lider.html" class="back-btn">&#8592; Campus Principal</a>
+    <div class="hdr-brand">
+      <span class="badge-hdr">&#128640; Mi Emprendimiento</span>
+      <span class="hdr-name">Networking y Presentaci&oacute;n de Negocios</span>
+    </div>
+    <div id="authBadgeHdr" class="auth-status-badge" onclick="toggleAuthModal()">
+      <span id="authBadgeIcon">&#128274;</span>
+      <span id="authBadgeTxt">Acceso Alumnas</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO SECTION -->
+  <section class="hero-banner">
+    <div class="hero-tag">&#128640; &Aacute;REA EXCLUSIVA &bull; NETWORKING Y PRESENTACIONES</div>
+    <h1>Mi Emprendimiento: <span>Nos Presentamos y Presentamos Nuestros Negocios</span></h1>
+    <p class="hero-desc">Espacio de vinculaci&oacute;n, visibilidad y feedback en vivo entre las alumnas del Método Modo Líder y la <strong>Lic. Romina Lorena Montiel</strong>. Descubr&iacute; los proyectos de tus compa&ntilde;eras, entren&aacute; tu capacidad de comunicaci&oacute;n y fortalec&eacute; alianzas comerciales estrat&eacute;gicas.</p>
+    <div class="hero-chips">
+      <span class="hero-chip" style="background:rgba(255,215,0,0.2); color:var(--gold); border-color:rgba(255,215,0,0.4); font-weight:800;">&#129309; Comunidad de Emprendedoras</span>
+      <span class="hero-chip">&#127916; Sesi&oacute;n en Vivo Grabada</span>
+      <span class="hero-chip">&#128161; Casos Reales y Pitches</span>
+      <span class="hero-chip">&#128196; Gu&iacute;as de Venta y Valor</span>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- SECCIÓN DE CARPETAS DE ESTUDIO (Mobile-First Selector)           -->
+  <!-- ================================================================ -->
+  <section class="folders-section" id="carpetas">
+    <div class="folders-header">
+      <h2>&#128193; Carpetas de Mi Emprendimiento</h2>
+      <p>Toc&aacute; en cualquier carpeta para desplegar abajo su sesi&oacute;n en video y materiales descargables.</p>
+    </div>
+
+    <div class="folder-nav-tabs">
+      <!-- FOLDER 1: NETWORKING EN VIVO -->
+      <div class="folder-nav-tab active" id="tab-emp-vivo" onclick="sw('emp-vivo')">
+        <div class="tab-top-row">
+          <span class="tab-icon">&#128640;</span>
+          <span class="tab-badge">Sesi&oacute;n Grabada</span>
+        </div>
+        <span class="tab-title">PRESENTACI&Oacute;N EN VIVO</span>
+        <span class="tab-desc">Nos Presentamos y Presentamos Nuestros Emprendimientos</span>
+      </div>
+
+      <!-- FOLDER 2: GUÍA DE COMUNICACIÓN -->
+      <div class="folder-nav-tab" id="tab-emp-guia" onclick="sw('emp-guia')">
+        <div class="tab-top-row">
+          <span class="tab-icon">&#128188;</span>
+          <span class="tab-badge">Estrategia</span>
+        </div>
+        <span class="tab-title">GU&Iacute;A DE PROPUESTA</span>
+        <span class="tab-desc">C&oacute;mo Comunicar tu Propuesta de Valor con Impacto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- CONTENIDO DE LA CARPETA SELECCIONADA (SE DESPLIEGA ABAJO)        -->
+  <!-- ================================================================ -->
+  <div class="folder-content-container">
+
+    <!-- PANEL 1: SESIÓN EN VIVO -->
+    <div class="c-panel active" id="p-emp-vivo">
+      <div class="active-folder-banner">
+        <div class="active-folder-title-group">
+          <h3>&#128640; Carpeta: Nos Presentamos y Presentamos Nuestros Emprendimientos</h3>
+          <p>Sesi&oacute;n en vivo grabada completa con presentaciones de cada alumna, an&aacute;lisis de propuestas de valor y devoluciones en tiempo real de Romina Lorena Montiel.</p>
+        </div>
+      </div>
+
+      <!-- 1. VIDEO -->
+      <div class="vid-area">
+        <iframe id="vEmprendeVivo" src="https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&amp;modestbranding=1" title="Mi Emprendimiento - Nos Presentamos y Presentamos Nuestros Emprendimientos" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="pl-bar">
+          <span class="pl-lbl">Sesi&oacute;n Especial:</span>
+          <button class="pl-btn active" onclick="svidIframe('vEmprendeVivo','https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&amp;modestbranding=1','Nos Presentamos y Presentamos Nuestros Emprendimientos',this,'dEmprendeVivo')">&#9658; 1. Grabaci&oacute;n Completa en Vivo</button>
+        </div>
+      </div>
+      <div class="v-desc" id="dEmprendeVivo">&#128161; <strong>Ronda Participativa:</strong> An&aacute;lisis de proyectos de alumnas, correcci&oacute;n de discursos de venta y sinergias entre compa&ntilde;eras.</div>
+
+      <!-- 3. MATERIALES DESCARGABLES -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Recursos Estrat&eacute;gicos de la Carpeta</div>
+        <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-gold">GU&Iacute;A OFICIAL</div>
+              <div class="m-meta">
+                <h5>Gu&iacute;a Oficial: Propuesta de Valor</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Estructura para presentar tu proyecto ante clientes o inversores con total claridad y seguridad.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/Guia_Oficial_Propuesta_de_Valor.html" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PRESENTACI&Oacute;N</div>
+              <div class="m-meta">
+                <h5>Presentaci&oacute;n: Propuesta de Valor</h5>
+                <span>Visualizador Online</span>
+              </div>
+            </div>
+            <p class="m-desc">Diapositivas oficiales sobre arquitectura de marca y promesa de transformaci&oacute;n para tu clienta.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/Presentacion_Clase_3_Propuesta_de_Valor.html" target="_blank" class="btn-p">&#128640; Ver Diapositivas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTONES DE REGRESO -->
+      <div class="return-to-folders-box">
+        <button type="button" class="btn-return-folders" onclick="scrollToFolders()">
+          <span>&#128193; Regresar a las Carpetas de Mi Emprendimiento</span>
+          <span class="btn-arrow">&uarr;</span>
+        </button>
+        <a href="/campus_modo_lider.html" class="btn-return-campus">&#8592; Volver al Campus Principal</a>
+      </div>
+    </div>
+
+    <!-- PANEL 2: GUÍA DE COMUNICACIÓN -->
+    <div class="c-panel" id="p-emp-guia">
+      <div class="active-folder-banner">
+        <div class="active-folder-title-group">
+          <h3>&#128188; Carpeta: C&oacute;mo Comunicar tu Propuesta de Valor con Impacto</h3>
+          <p>Herramientas de pitch, narrativa persuasiva y encuadre para vender tus servicios desde la autoridad y el autoliderazgo.</p>
+        </div>
+      </div>
+
+      <!-- 3. MATERIALES DESCARGABLES -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Materiales de Comunicaci&oacute;n de Negocio</div>
+        <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-gold">WORKBOOK</div>
+              <div class="m-meta">
+                <h5>Workbook: Mi Propuesta de Valor</h5>
+                <span>Interactivo + Descargar PDF</span>
+              </div>
+            </div>
+            <p class="m-desc">Cuaderno de trabajo para afinar tu mensaje, definir tu promesa y eliminar las objeciones invisibles.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PSICOLOG&Iacute;A</div>
+              <div class="m-meta">
+                <h5>Los Miedos Detr&aacute;s de lo que Compran</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Entend&eacute; el inconsciente de tu clienta y qu&eacute; dolores o temores busca aliviar al adquirir tu servicio.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.html" target="_blank" class="btn-p">&#128065; Ver Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTONES DE REGRESO -->
+      <div class="return-to-folders-box">
+        <button type="button" class="btn-return-folders" onclick="scrollToFolders()">
+          <span>&#128193; Regresar a las Carpetas de Mi Emprendimiento</span>
+          <span class="btn-arrow">&uarr;</span>
+        </button>
+        <a href="/campus_modo_lider.html" class="btn-return-campus">&#8592; Volver al Campus Principal</a>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- AUTH MODAL -->
+<div class="modal-overlay" id="authModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-card">
+    <button class="modal-close-btn" onclick="closeModal()" title="Cerrar">&times;</button>
+    <div class="modal-header">
+      <div class="modal-lock-icon">&#128640;</div>
+      <h3>Acceso a Mi Emprendimiento</h3>
+      <p>Las grabaciones de presentaciones de alumnas y asesor&iacute;as de negocio est&aacute;n reservadas para alumnas activas.</p>
+    </div>
+
+    <form class="modal-form" onsubmit="handleAuthSubmit(event)" autocomplete="off">
+      <div class="form-group">
+        <label for="authId">Identificador / Correo de Alumna</label>
+        <div class="form-input-wrap">
+          <input type="text" id="authId" class="form-input" placeholder="Ingres&aacute; tu correo o usuario" required autocomplete="off">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="authPass">Clave de Acceso</label>
+        <div class="form-input-wrap">
+          <input type="password" id="authPass" class="form-input" placeholder="Ingres&aacute; tu clave de acceso" required autocomplete="new-password">
+          <button type="button" class="form-pwd-toggle" onclick="togglePwdVisibility()" id="pwdToggleIcon">&#128065;</button>
+        </div>
+      </div>
+
+      <div id="modalErr" class="modal-err">&#9888; Clave de acceso incorrecta.</div>
+
+      <button type="submit" class="btn-modal-submit">&#128273; Desbloquear Mi Emprendimiento</button>
+
+      <!-- BOTONES DE VOLVER SI NO TIENE LA CLAVE -->
+      <div style="margin-top:0.6rem; display:flex; flex-direction:column; gap:0.6rem;">
+        <a href="/campus_modo_lider.html" style="width:100%; background:linear-gradient(135deg, rgba(255,215,0,0.2) 0%, rgba(20,16,10,0.85) 100%); border:2px solid var(--gold); color:#FFFFFF; padding:0.95rem; border-radius:10px; font-size:0.9rem; font-weight:900; font-family:'Montserrat',sans-serif; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.5rem; text-transform:uppercase;">
+          &#8592; Volver al Campus Principal
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="ftr">
+  <p>&copy; 2026 Campus Modo L&iacute;der &middot; <strong style="color:#D4AF37">Lic. Romina Lorena Montiel</strong> &middot; Mi Emprendimiento &bull; Comunidad de Alumnas</p>
+</footer>
+
+<script>
+function isAuth() {
+  return localStorage.getItem('alumna_activa_modo_lider') === 'true';
+}
+
+function updateAuthUI() {
+  var authed = isAuth();
+  var badgeHdr = document.getElementById('authBadgeHdr');
+  var badgeTxt = document.getElementById('authBadgeTxt');
+  var badgeIco = document.getElementById('authBadgeIcon');
+  if (badgeHdr) {
+    if (authed) {
+      badgeHdr.classList.add('logged-in');
+      badgeTxt.textContent = 'Alumna Verificada \u2705';
+      badgeIco.textContent = '\uD83D\uDC51';
+    } else {
+      badgeHdr.classList.remove('logged-in');
+      badgeTxt.textContent = 'Acceso Alumnas';
+      badgeIco.textContent = '\uD83D\uDD12';
+    }
+  }
+}
+
+function openModal() {
+  var modal = document.getElementById('authModal');
+  var err = document.getElementById('modalErr');
+  if (err) err.style.display = 'none';
+  if (modal) modal.classList.add('open');
+}
+
+function closeModal() {
+  var modal = document.getElementById('authModal');
+  if (modal) modal.classList.remove('open');
+}
+
+function toggleAuthModal() {
+  if (isAuth()) {
+    if (confirm('\u00bfDeseas cerrar tu sesi\u00f3n?')) {
+      localStorage.removeItem('alumna_activa_modo_lider');
+      updateAuthUI();
+      openModal();
+    }
+  } else {
+    openModal();
+  }
+}
+
+function togglePwdVisibility() {
+  var p = document.getElementById('authPass');
+  var ico = document.getElementById('pwdToggleIcon');
+  if (!p) return;
+  if (p.type === 'password') {
+    p.type = 'text';
+    if (ico) ico.textContent = '\uD83D\uDE48';
+  } else {
+    p.type = 'password';
+    if (ico) ico.textContent = '\uD83D\uDC41';
+  }
+}
+
+function handleAuthSubmit(e) {
+  e.preventDefault();
+  var u = (document.getElementById('authId').value || '').trim().toUpperCase();
+  var p = (document.getElementById('authPass').value || '').trim().toUpperCase();
+  var err = document.getElementById('modalErr');
+
+  if (p === 'EXITOSAS888' || u === 'SOYALUMNAACTIVAMODOLIDER' || p === 'SOYALUMNAACTIVAMODOLIDER') {
+    localStorage.setItem('alumna_activa_modo_lider', 'true');
+    updateAuthUI();
+    closeModal();
+  } else {
+    if (err) {
+      err.style.display = 'block';
+      err.textContent = '\u26A0 Clave o usuario incorrecto.';
+    }
+  }
+}
+
+function sw(tabId) {
+  if (!isAuth()) {
+    openModal();
+    return;
+  }
+  document.querySelectorAll('.c-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.folder-nav-tab').forEach(function(t){ t.classList.remove('active'); });
+
+  var targetPanel = document.getElementById('p-' + tabId);
+  var targetTab = document.getElementById('tab-' + tabId);
+  if (targetPanel) targetPanel.classList.add('active');
+  if (targetTab) targetTab.classList.add('active');
+
+  // Smooth scroll down to content
+  if (targetPanel) {
+    targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function scrollToFolders() {
+  var el = document.getElementById('carpetas');
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function svidIframe(iframeId, url, desc, btn, descId) {
+  var el = document.getElementById(iframeId);
+  if (el) {
+    el.src = '';
+    setTimeout(function(){ el.src = url; }, 80);
+  }
+  var d = document.getElementById(descId);
+  if (d) d.innerHTML = '\uD83D\uDCA1 <strong>Reproduciendo:</strong> ' + desc;
+  if (btn) {
+    var bar = btn.closest('.pl-bar');
+    if (bar) bar.querySelectorAll('.pl-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+}
+
+window.addEventListener('DOMContentLoaded', function(){
+  updateAuthUI();
+  if (!isAuth()) {
+    openModal();
+  }
+});
+</script>
+</body>
+</html>

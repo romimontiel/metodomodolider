@@ -400,7 +400,7 @@ export default function CampusClient() {
                     <span className="tab-desc">Video Analía Soto & Casos</span>
                 </div>
 
-                {/* Tab ESPECIAL: ACCESO A CURSO COMPLETO */}
+                {/* Tab ESPECIAL 1: ACCESO A CURSO COMPLETO */}
                 <a href="/clases_visor.html" className="folder-nav-tab" id="tab-acceso-curso" style={{ textDecoration: "none", background: "#FFD700", border: "2px solid #E6B800", boxShadow: "0 8px 25px rgba(255, 215, 0, 0.4)", position: "relative", overflow: "hidden", transform: "scale(1.02)" }}>
                     <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "4px", background: "#000000" }}></div>
                     <div className="tab-top-row">
@@ -408,11 +408,11 @@ export default function CampusClient() {
                         <span className="tab-badge" style={{ background: "#000000", color: "#FFD700", border: "1px solid #333333", fontWeight: 900, fontSize: "0.68rem" }}>CLAVE VIP</span>
                     </div>
                     <span className="tab-title" style={{ color: "#000000", fontSize: "0.88rem", fontWeight: 900, textTransform: "uppercase" }}>ACCESO A CURSO COMPLETO</span>
-                    <span className="tab-desc" style={{ color: "#111111", fontWeight: 700, fontSize: "0.74rem" }}>Visor Carpeta a Carpeta ↗</span>
+                    <span className="tab-desc" style={{ color: "#111111", fontWeight: 700, fontSize: "0.74rem" }}>Clases 1 a 5 Oficiales ↗</span>
                 </a>
 
                 {/* Tab ESPECIAL 2: COACHING GRUPAL */}
-                <a href="/clases_visor.html#coaching" className="folder-nav-tab" id="tab-coaching-grupal" style={{ textDecoration: "none", background: "linear-gradient(145deg, #181224 0%, #100C18 100%)", border: "1.5px solid rgba(212, 175, 55, 0.6)", boxShadow: "0 8px 24px rgba(212, 175, 55, 0.15)", position: "relative", overflow: "hidden" }}>
+                <a href="/coaching_visor.html" className="folder-nav-tab" id="tab-coaching-grupal" style={{ textDecoration: "none", background: "linear-gradient(145deg, #181224 0%, #100C18 100%)", border: "1.5px solid rgba(212, 175, 55, 0.6)", boxShadow: "0 8px 24px rgba(212, 175, 55, 0.15)", position: "relative", overflow: "hidden" }}>
                     <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "3px", background: "linear-gradient(90deg, #FCE08B, #D4AF37)" }}></div>
                     <div className="tab-top-row">
                         <span className="tab-icon">👑</span>
@@ -422,8 +422,19 @@ export default function CampusClient() {
                     <span className="tab-desc" style={{ color: "rgba(247, 231, 206, 0.7)" }}>Martes y Miércoles ↗</span>
                 </a>
 
-                {/* Tab ESPECIAL 3: HERRAMIENTAS PARA CREAR MENTALIDAD CORRECTA */}
-                <a href="/clases_visor.html#musica" className="folder-nav-tab" id="tab-musica-positiva" style={{ textDecoration: "none", background: "linear-gradient(145deg, #17112E 0%, #0F0D1C 100%)", border: "1.5px solid rgba(167, 139, 250, 0.6)", boxShadow: "0 8px 24px rgba(124, 58, 237, 0.18)", position: "relative", overflow: "hidden" }}>
+                {/* Tab ESPECIAL 3: MI EMPRENDIMIENTO */}
+                <a href="/emprendimiento_visor.html" className="folder-nav-tab" id="tab-emprendimiento" style={{ textDecoration: "none", background: "linear-gradient(145deg, #1E1710 0%, #120F0C 100%)", border: "1.5px solid rgba(255, 215, 0, 0.5)", boxShadow: "0 8px 24px rgba(255, 215, 0, 0.15)", position: "relative", overflow: "hidden" }}>
+                    <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "3px", background: "linear-gradient(90deg, #FFE27A, #FFD700)" }}></div>
+                    <div className="tab-top-row">
+                        <span className="tab-icon">🚀</span>
+                        <span className="tab-badge" style={{ background: "rgba(255, 215, 0, 0.15)", color: "#FFD700", border: "1px solid rgba(255, 215, 0, 0.4)" }}>🔐 VIP</span>
+                    </div>
+                    <span className="tab-title" style={{ color: "#FFD700", fontSize: "0.84rem" }}>MI EMPRENDIMIENTO</span>
+                    <span className="tab-desc" style={{ color: "rgba(255, 215, 0, 0.7)" }}>Networking en Vivo ↗</span>
+                </a>
+
+                {/* Tab ESPECIAL 4: HERRAMIENTAS PARA CREAR MENTALIDAD CORRECTA */}
+                <a href="/mentalidad_visor.html" className="folder-nav-tab" id="tab-musica-positiva" style={{ textDecoration: "none", background: "linear-gradient(145deg, #17112E 0%, #0F0D1C 100%)", border: "1.5px solid rgba(167, 139, 250, 0.6)", boxShadow: "0 8px 24px rgba(124, 58, 237, 0.18)", position: "relative", overflow: "hidden" }}>
                     <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "3px", background: "linear-gradient(90deg, #C4B5FD, #8B5CF6)" }}></div>
                     <div className="tab-top-row">
                         <span className="tab-icon">🧠</span>
