@@ -104,6 +104,75 @@ export default function RoadmapPage() {
             </div>
           </div>
 
+          {/* 3. METODOLOGÍA DEL CURSO: ¿CÓMO TRABAJAMOS EN ESTE PROGRAMA? */}
+          <div style={{ background: "#FFFFFF", borderRadius: "16px", padding: "2.2rem", boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)", border: "1px solid rgba(212, 175, 55, 0.3)" }}>
+            <div style={{ display: "inline-block", background: "rgba(212, 175, 55, 0.15)", border: "1px solid #D4AF37", padding: "0.25rem 0.8rem", borderRadius: "20px", fontSize: "0.75rem", fontWeight: "900", color: "#8A6D1C", marginBottom: "0.8rem", letterSpacing: "0.5px" }}>
+              ⚡ METODOLOGÍA DEL CURSO
+            </div>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "900", color: "#0E121B", margin: "0 0 0.6rem" }}>¿Cómo trabajamos en este programa?</h3>
+            <p style={{ color: "#475569", fontSize: "0.95rem", lineHeight: "1.6", margin: "0 0 1.6rem" }}>
+              Un curso adaptado para <strong>impulsar y acompañar el desarrollo de un negocio que se inicia</strong> o la <strong>transformación por adecuación al mercado de uno ya en marcha</strong>.
+            </p>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.2rem" }}>
+              <div style={{ background: "#F8FAFC", padding: "1.4rem", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
+                <div style={{ fontSize: "1.8rem", marginBottom: "0.4rem" }}>🎬</div>
+                <strong style={{ fontSize: "0.98rem", color: "#0E121B", display: "block", marginBottom: "0.4rem" }}>Videos, Podcasts y Workbooks precisos:</strong>
+                <p style={{ fontSize: "0.86rem", color: "#475569", lineHeight: "1.55", margin: 0 }}>
+                  Videos, podcasts y workbook precisos que impulsan tu formación en mentalidad de empresaria, conducen y apoyan en tus reflexiones diarias sobre tu negocio y te guían durante tu participación en el coaching grupal semanal online.
+                </p>
+              </div>
+
+              <div style={{ background: "#F8FAFC", padding: "1.4rem", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
+                <div style={{ fontSize: "1.8rem", marginBottom: "0.4rem" }}>🧠</div>
+                <strong style={{ fontSize: "0.98rem", color: "#0E121B", display: "block", marginBottom: "0.4rem" }}>Coaching Grupal Online Semanal:</strong>
+                <p style={{ fontSize: "0.86rem", color: "#475569", lineHeight: "1.55", margin: 0 }}>
+                  Un espacio en vivo que te reúne con otras emprendedoras y junto a la mentora <strong>Romina Lorena Montiel</strong> se crea un espacio de coaching de mentalidad, autoliderazgo y desarrollo de negocios.
+                </p>
+              </div>
+
+              <div style={{ background: "#F8FAFC", padding: "1.4rem", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
+                <div style={{ fontSize: "1.8rem", marginBottom: "0.4rem" }}>👥</div>
+                <strong style={{ fontSize: "0.98rem", color: "#0E121B", display: "block", marginBottom: "0.4rem" }}>El Poder del Movimiento Grupal:</strong>
+                <p style={{ fontSize: "0.86rem", color: "#475569", lineHeight: "1.55", margin: 0 }}>
+                  Apertura mental al vincularte con otras emprendedoras, escuchando y compartiendo problemáticas, retos, aprendizajes y éxitos colectivos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 4. MATERIAL OFICIAL: ARQUITECTURA DE MARCA MODO LÍDER */}
+          <div style={{ background: "#FFFFFF", borderRadius: "16px", padding: "2.2rem", boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)", border: "1px solid rgba(212, 175, 55, 0.3)" }}>
+            <div style={{ display: "inline-block", background: "rgba(233, 69, 96, 0.15)", border: "1px solid #E94560", padding: "0.25rem 0.8rem", borderRadius: "20px", fontSize: "0.75rem", fontWeight: "900", color: "#E94560", marginBottom: "0.8rem", letterSpacing: "0.5px" }}>
+              📄 DOCUMENTO INSTITUCIONAL OFICIAL
+            </div>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "900", color: "#0E121B", margin: "0 0 0.6rem" }}>Arquitectura de Marca Modo Líder</h3>
+            <p style={{ color: "#475569", fontSize: "0.95rem", lineHeight: "1.6", margin: "0 0 1.6rem" }}>
+              Estructura visual, pilares de marca y ADN de la propuesta formativa integral dictada por la <strong>Lic. Romina Lorena Montiel</strong>.
+            </p>
+
+            <div style={{ background: "#F8FAFC", border: "1.5px solid rgba(212, 175, 55, 0.45)", boxShadow: "0 8px 25px rgba(0, 0, 0, 0.05)", padding: "1.5rem", borderRadius: "14px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1rem" }}>
+                <div style={{ background: "#FEE2E2", color: "#DC2626", fontWeight: "900", padding: "0.5rem 0.8rem", borderRadius: "8px", fontSize: "0.9rem" }}>PDF</div>
+                <div>
+                  <h5 style={{ color: "#0E121B", margin: 0, fontSize: "1.05rem", fontWeight: "800" }}>Arquitectura de Marca Modo Líder</h5>
+                  <span style={{ color: "#64748B", fontSize: "0.82rem" }}>PDF Oficial • Lectura Online</span>
+                </div>
+              </div>
+              <p style={{ color: "#475569", fontSize: "0.88rem", margin: "0 0 1.2rem", lineHeight: "1.5" }}>
+                Estructura visual, pilares de marca y ADN de la propuesta formativa.
+              </p>
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <a href="/Modo-Lider-Arquitectura-de-Marca.pdf" target="_blank" rel="noopener noreferrer" style={{ flex: 1, minWidth: "140px", justifyContent: "center", background: "#0F172A", color: "#FFFFFF", border: "1.5px solid #0F172A", fontWeight: "700", padding: "0.75rem 1.4rem", borderRadius: "8px", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <span>👁️ Ver Online</span>
+                </a>
+                <a href="/Modo-Lider-Arquitectura-de-Marca.pdf" download="Modo_Lider_Arquitectura_de_Marca.pdf" style={{ flex: 1, minWidth: "140px", justifyContent: "center", background: "linear-gradient(135deg, #FFD700 0%, #D4AF37 100%)", color: "#000000", fontWeight: "900", padding: "0.75rem 1.4rem", borderRadius: "8px", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem", boxShadow: "0 4px 15px rgba(212, 175, 55, 0.3)" }}>
+                  <span>⬇️ Descargar</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

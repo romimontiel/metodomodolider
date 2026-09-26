@@ -2637,13 +2637,164 @@
 
                 <!-- BOTÓN TU HOJA DE RUTA DEBAJO DEL VIDEO DE BIENVENIDA -->
                 <div class="welcome-roadmap-btn-wrap" style="margin-top: 1.8rem; display: flex; justify-content: center; width: 100%;">
-                    <a href="/curso/roadmap" class="btn-tu-hoja-de-ruta">
+                    <button type="button" class="btn-tu-hoja-de-ruta" id="btn-hoja-de-ruta" onclick="toggleHojaDeRuta()" title="Desplegar Tu Hoja de Ruta y Formalidades del Curso">
                         <span style="font-size: 1.35rem;">🗺️</span>
-                        <span>Tu Hoja de Ruta</span>
-                        <span class="btn-arrow" style="font-size: 1.2rem; font-weight: 900; margin-left: 0.3rem;">&rarr;</span>
+                        <span>Tu Hoja de Ruta &amp; Formalidades del Curso</span>
+                        <span class="btn-arrow" id="arrow-hoja-de-ruta" style="font-size: 1.2rem; font-weight: 900; margin-left: 0.3rem;">↓</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- SECTOR: ESPACIO TU HOJA DE RUTA & FORMALIDADES DEL CURSO           -->
+        <!-- (SE DESPLIEGA AL TOCAR EL BOTÓN)                                  -->
+        <!-- ================================================================= -->
+        <section class="roadmap-welcome-area" id="hoja-de-ruta" style="display: none; margin-bottom: 3.5rem; scroll-margin-top: 80px; flex-direction: column; gap: 2rem;">
+            
+            <!-- 1. MENSAJE Y BIENVENIDA DE ROMINA -->
+            <div class="welcome-info-card" style="background: linear-gradient(135deg, rgba(20, 26, 38, 0.98) 0%, rgba(13, 17, 26, 0.98) 100%); border: 1.5px solid var(--border-gold); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.15); padding: 2.2rem; border-radius: var(--radius-lg);">
+                <div>
+                    <div class="mentor-quote-box" style="margin-bottom: 1.2rem;">
+                        <img src="/romina-transparente.png" alt="Romina Montiel" class="mentor-photo-circle" onerror="this.src='/romina.png'">
+                        <div class="mentor-name-title">
+                            <h4>Lic. Romina Lorena Montiel</h4>
+                            <p>Tu Mentora en Método Modo Líder</p>
+                        </div>
+                    </div>
+                    <div class="welcome-message-body" style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.3rem;">
+                        <p style="font-size: 1.05rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.5rem;">¡Bienvenida a tu espacio sagrado de transformación!</p>
+                        <p style="color: #CBD5E1;">Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
+                    </div>
+                    <ul class="welcome-checklist" style="gap: 0.65rem; margin-bottom: 1.6rem;">
+                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Presiona Play en el video para comenzar tu formación.</li>
+                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Disfruta de la bienvenida oficial de Romina.</li>
+                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
+                    </ul>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                    <a href="#carpetas" class="btn-start-now" onclick="document.getElementById('carpetas')?.scrollIntoView({behavior: 'smooth'})" style="max-width: 320px;">
+                        📂 Ir a las Carpetas de Estudio ↓
+                    </a>
+                    <button type="button" onclick="toggleHojaDeRuta()" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1px solid rgba(255,255,255,0.2); padding: 0.8rem 1.6rem; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 0.85rem; font-family: 'Montserrat', sans-serif;">
+                        ↑ Ocultar Formalidades
+                    </button>
+                    <a href="/curso/roadmap" style="color: #FFD700; font-size: 0.85rem; font-weight: 800; text-decoration: underline; margin-left: auto;">
+                        Ver Programa Completo en Nueva Página &rarr;
                     </a>
                 </div>
             </div>
+
+            <!-- 2. TU HOJA DE RUTA DE 3 PASOS PARA EMPEZAR -->
+            <div class="manifesto-card" style="margin-bottom: 0;">
+                <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.4rem;">
+                    <span style="font-size: 1.5rem;">🗺️</span>
+                    <h2 style="font-size: 1.4rem; font-weight: 900; color: #0E121B; margin: 0;">Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
+                </div>
+                <div class="roadmap-steps-grid">
+                    <div class="roadmap-step-item">
+                        <div class="roadmap-step-num">01</div>
+                        <div class="roadmap-step-title">Mirá tu clase y completá el Workbook</div>
+                        <p class="roadmap-step-desc">
+                            Mirá la clase correspondiente y desarrollá el Workbook a tu manera y a tu propio ritmo, aplicando cada ejercicio a tu emprendimiento.
+                        </p>
+                    </div>
+                    <div class="roadmap-step-item">
+                        <div class="roadmap-step-num">02</div>
+                        <div class="roadmap-step-title">Coaching Grupal en Vivo</div>
+                        <p class="roadmap-step-desc">
+                            Vení a las clases en vivo: <strong>lunes, martes y miércoles de 19:00 a 20:00 hs</strong>. Un espacio para destrabar desafíos, profundizar y entrenar mentalidad juntas.
+                        </p>
+                    </div>
+                    <div class="roadmap-step-item">
+                        <div class="roadmap-step-num">03</div>
+                        <div class="roadmap-step-title">Inspirate y Potenciate</div>
+                        <p class="roadmap-step-desc">
+                            Inspirate con los testimonios y el contenido que se genera dentro del movimiento grupal durante los vivos y en la comunidad de Emprendedoras Conscientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. METODOLOGÍA DEL CURSO: ¿CÓMO TRABAJAMOS EN ESTE PROGRAMA? -->
+            <div class="manifesto-card" style="margin-bottom: 0;">
+                <div style="display: inline-block; background: rgba(212, 175, 55, 0.15); border: 1px solid #D4AF37; padding: 0.25rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 900; color: #8A6D1C; margin-bottom: 0.8rem; letter-spacing: 0.5px;">
+                    ⚡ METODOLOGÍA DEL CURSO
+                </div>
+                <h3 style="font-size: 1.45rem; font-weight: 900; color: #0E121B; margin: 0 0 0.6rem;">¿Cómo trabajamos en este programa?</h3>
+                <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0 0 1.5rem;">
+                    Un curso adaptado para <strong>impulsar y acompañar el desarrollo de un negocio que se inicia</strong> o la <strong>transformación por adecuación al mercado de uno ya en marcha</strong>.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem;">
+                    <div style="background: #F8FAFC; padding: 1.4rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">🎬</div>
+                        <strong style="font-size: 0.98rem; color: #0E121B; display: block; margin-bottom: 0.4rem;">Videos, Podcasts y Workbooks precisos:</strong>
+                        <p style="font-size: 0.86rem; color: #475569; line-height: 1.55; margin: 0;">
+                            Videos, podcasts y workbook precisos que impulsan tu formación en mentalidad de empresaria, conducen y apoyan en tus reflexiones diarias sobre tu negocio y te guían durante tu participación en el coaching grupal semanal online.
+                        </p>
+                    </div>
+
+                    <div style="background: #F8FAFC; padding: 1.4rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">🧠</div>
+                        <strong style="font-size: 0.98rem; color: #0E121B; display: block; margin-bottom: 0.4rem;">Coaching Grupal Online Semanal:</strong>
+                        <p style="font-size: 0.86rem; color: #475569; line-height: 1.55; margin: 0;">
+                            Un espacio en vivo que te reúne con otras emprendedoras y junto a la mentora <strong>Romina Lorena Montiel</strong> se crea un espacio de coaching de mentalidad, autoliderazgo y desarrollo de negocios.
+                        </p>
+                    </div>
+
+                    <div style="background: #F8FAFC; padding: 1.4rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.4rem;">👥</div>
+                        <strong style="font-size: 0.98rem; color: #0E121B; display: block; margin-bottom: 0.4rem;">El Poder del Movimiento Grupal:</strong>
+                        <p style="font-size: 0.86rem; color: #475569; line-height: 1.55; margin: 0;">
+                            Apertura mental al vincularte con otras emprendedoras, escuchando y compartiendo problemáticas, retos, aprendizajes y éxitos colectivos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. MATERIAL OFICIAL: ARQUITECTURA DE MARCA MODO LÍDER -->
+            <div class="manifesto-card" style="margin-bottom: 0;">
+                <div style="display: inline-block; background: rgba(233, 69, 96, 0.15); border: 1px solid #E94560; padding: 0.25rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 900; color: #E94560; margin-bottom: 0.8rem; letter-spacing: 0.5px;">
+                    📄 DOCUMENTO INSTITUCIONAL OFICIAL
+                </div>
+                <h3 style="font-size: 1.45rem; font-weight: 900; color: #0E121B; margin: 0 0 0.6rem;">Arquitectura de Marca Modo Líder</h3>
+                <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0 0 1.5rem;">
+                    Estructura visual, pilares de marca y ADN de la propuesta formativa integral dictada por la <strong>Lic. Romina Lorena Montiel</strong>.
+                </p>
+
+                <div class="download-card" style="background: #F8FAFC; border: 1.5px solid rgba(212, 175, 55, 0.45); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05); padding: 1.5rem; border-radius: 14px;">
+                    <div class="doc-icon-header" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="doc-format-badge badge-pdf" style="background: #FEE2E2; color: #DC2626; font-weight: 900; padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.9rem;">PDF</div>
+                        <div class="doc-meta">
+                            <h5 style="color: #0E121B; margin: 0; font-size: 1.05rem; font-weight: 800;">Arquitectura de Marca Modo Líder</h5>
+                            <span style="color: #64748B; font-size: 0.82rem;">PDF Oficial • Lectura Online</span>
+                        </div>
+                    </div>
+                    <p class="doc-desc" style="color: #475569; font-size: 0.88rem; margin: 0 0 1.2rem; line-height: 1.5;">
+                        Estructura visual, pilares de marca y ADN de la propuesta formativa.
+                    </p>
+                    <div class="doc-action-btns" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="/Modo-Lider-Arquitectura-de-Marca.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; min-width: 140px; justify-content: center; background: #0F172A; color: #FFFFFF; border: 1.5px solid #0F172A; font-weight: 700; padding: 0.75rem 1.4rem; border-radius: 8px; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                            <span>👁️ Ver Online</span>
+                        </a>
+                        <a href="/Modo-Lider-Arquitectura-de-Marca.pdf" download="Modo_Lider_Arquitectura_de_Marca.pdf" class="btn-download-primary" style="flex: 1; min-width: 140px; justify-content: center; background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%); color: #000000; font-weight: 900; padding: 0.75rem 1.4rem; border-radius: 8px; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);">
+                            <span>⬇️ Descargar</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTONES DE NAVEGACIÓN Y CIERRE DE FORMALIDADES -->
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <button type="button" onclick="toggleHojaDeRuta()" style="background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1.5px solid rgba(255,255,255,0.25); padding: 0.85rem 1.8rem; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 0.9rem; font-family: 'Montserrat', sans-serif;">
+                    ↑ Ocultar Formalidades del Curso
+                </button>
+                <a href="#carpetas" onclick="document.getElementById('carpetas')?.scrollIntoView({behavior: 'smooth'})" style="background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%); color: #000; font-weight: 800; padding: 0.85rem 1.8rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem;">
+                    📂 Ir a las Carpetas de Estudio ↓
+                </a>
+            </div>
+
         </section>
 
                 <!-- SECTOR: CARPETAS DE ESTUDIO DEL CURSO -->
@@ -2791,89 +2942,27 @@
                                 <span class="pillar-badge">Video Real MP4 & Método</span>
                             </div>
 
-                            <div class="intro-video-methodology-grid">
-                                <!-- Columna Izquierda: Video Player Real -->
-                                <div>
-                                    <div class="folder-video-screen">
-                                        <video 
-                                            id="videoElement-intro" 
-                                            controls 
-                                            controlsList="nodownload" 
-                                            oncontextmenu="return false;" 
-                                            preload="metadata" 
-                                            poster="/miniatura_workflow.png?v=2">
-                                            <source src="/videos_campus/workflow_proposito_curso.mp4" type="video/mp4">
-                                            Tu navegador no soporta reproducción directa de video HTML5.
-                                        </video>
-                                    </div>
-                                    <div class="video-playlist-bar" style="justify-content: space-between;">
-                                        <div style="display: flex; align-items: center; gap: 0.6rem;">
-                                            <span class="playlist-label" style="margin-right: 0;">Video de Introducción:</span>
-                                            <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-light);">▶ Workflow y Propósito del Curso (275 MB)</span>
-                                        </div>
-                                    </div>
-                                    <div class="video-description-box" id="desc-video-intro" style="margin-top: 0.8rem;">
-                                        💡 <strong>Enfoque:</strong> Romina te enseña el mapa de trabajo (Workflow), el propósito de tu proyecto y cómo el liderazgo consciente redefine tu forma de vender.
-                                    </div>
-
-                                    <!-- Material Oficial Adjunto: Arquitectura de Marca Modo Líder -->
-                                    <div class="download-card" style="margin-top: 1.2rem; background: #FFFFFF; border: 1.5px solid rgba(212, 175, 55, 0.45); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);">
-                                        <div class="doc-icon-header">
-                                            <div class="doc-format-badge badge-pdf">PDF</div>
-                                            <div class="doc-meta">
-                                                <h5>Arquitectura de Marca Modo Líder</h5>
-                                                <span>PDF Oficial • Lectura Online</span>
-                                            </div>
-                                        </div>
-                                        <p class="doc-desc">Estructura visual, pilares de marca y ADN de la propuesta formativa.</p>
-                                        <div class="doc-action-btns">
-                                            <a href="/Modo-Lider-Arquitectura-de-Marca.pdf" target="_blank" class="btn-view-secondary" style="flex: 1; justify-content: center;">
-                                                <span>👁️ Ver Online</span>
-                                            </a>
-                                            <a href="/Modo-Lider-Arquitectura-de-Marca.pdf" download="Modo_Lider_Arquitectura_de_Marca.pdf" class="btn-download-primary" style="flex: 1; justify-content: center;">
-                                                <span>⬇️ Descargar</span>
-                                            </a>
-                                        </div>
+                            <div style="max-width: 920px; margin: 0 auto; width: 100%;">
+                                <div class="folder-video-screen">
+                                    <video 
+                                        id="videoElement-intro" 
+                                        controls 
+                                        controlsList="nodownload" 
+                                        oncontextmenu="return false;" 
+                                        preload="metadata" 
+                                        poster="/miniatura_workflow.png?v=2">
+                                        <source src="/videos_campus/workflow_proposito_curso.mp4" type="video/mp4">
+                                        Tu navegador no soporta reproducción directa de video HTML5.
+                                    </video>
+                                </div>
+                                <div class="video-playlist-bar" style="justify-content: space-between;">
+                                    <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                        <span class="playlist-label" style="margin-right: 0;">Video de Introducción:</span>
+                                        <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-light);">▶ Workflow y Propósito del Curso (275 MB)</span>
                                     </div>
                                 </div>
-
-                                <!-- Columna Derecha: Explicación Escrita del Método del Curso (Al costado) -->
-                                <div class="methodology-side-card">
-                                    <div>
-                                        <div class="methodology-badge">
-                                            <span>⚡ METODOLOGÍA DEL CURSO</span>
-                                        </div>
-                                        <h4 class="methodology-title">¿Cómo trabajamos en este programa?</h4>
-                                        <p class="methodology-intro">
-                                            Un curso adaptado para <strong>impulsar y acompañar el desarrollo de un negocio que se inicia</strong> o la <strong>transformación por adecuación al mercado de uno ya en marcha</strong>.
-                                        </p>
-                                    </div>
-
-                                    <div class="methodology-points-list">
-                                        <div class="methodology-point-item">
-                                            <span class="point-icon">🎬</span>
-                                            <div>
-                                                <strong>Videos, Podcasts y Workbooks precisos:</strong>
-                                                <p>Videos, podcasts y workbook precisos que impulsan tu formación en mentalidad de empresaria, conducen y apoyan en tus reflexiones diarias sobre tu negocio y te guían durante tu participación en el coaching grupal semanal online.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="methodology-point-item">
-                                            <span class="point-icon">🧠</span>
-                                            <div>
-                                                <strong>Coaching Grupal Online Semanal:</strong>
-                                                <p>Un espacio en vivo que te reúne con otras emprendedoras y junto a la mentora <strong>Romina Lorena Montiel</strong> se crea un espacio de coaching de mentalidad, autoliderazgo y desarrollo de negocios.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="methodology-point-item">
-                                            <span class="point-icon">👑</span>
-                                            <div>
-                                                <strong>El Poder del Movimiento Grupal:</strong>
-                                                <p>Apertura mental al vincularte con otras emprendedoras, escuchando y compartiendo problemáticas, retos, aprendizajes y éxitos colectivos.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="video-description-box" id="desc-video-intro" style="margin-top: 0.8rem;">
+                                    💡 <strong>Enfoque:</strong> Romina te enseña el mapa de trabajo (Workflow), el propósito de tu proyecto y cómo el liderazgo consciente redefine tu forma de vender.
                                 </div>
                             </div>
                         </div>
@@ -3898,6 +3987,27 @@
         // ==============================================================
         // MODAL ACCESO A CURSO COMPLETO (SOLICITUD DE CLAVES)
         // ==============================================================
+        // Función para desplegar/ocultar el espacio de Tu Hoja de Ruta & Formalidades del Curso
+        function toggleHojaDeRuta() {
+            var el = document.getElementById('hoja-de-ruta');
+            var btn = document.getElementById('btn-hoja-de-ruta');
+            var arrow = document.getElementById('arrow-hoja-de-ruta');
+            if (!el) return;
+            var isHidden = (window.getComputedStyle(el).display === 'none' || el.style.display === 'none');
+            if (isHidden) {
+                el.style.display = 'flex';
+                if (btn) btn.classList.add('active');
+                if (arrow) arrow.textContent = '↑';
+                setTimeout(function() {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 50);
+            } else {
+                el.style.display = 'none';
+                if (btn) btn.classList.remove('active');
+                if (arrow) arrow.textContent = '↓';
+            }
+        }
+
         var campusAuthRedirectTarget = '/clases_visor.html';
 
         function openCampusAuthModal(targetUrl) {
