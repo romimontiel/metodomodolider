@@ -584,6 +584,42 @@
             box-shadow: 0 10px 28px rgba(212, 175, 55, 0.4);
         }
 
+        .btn-tu-hoja-de-ruta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.85rem;
+            background: linear-gradient(135deg, #111622 0%, #1E283C 100%);
+            color: #FFD700;
+            border: 2px solid #FFD700;
+            padding: 1.05rem 2.4rem;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 900;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.25);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .btn-tu-hoja-de-ruta:hover {
+            background: var(--gold-gradient);
+            color: #07090E;
+            border-color: transparent;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 35px rgba(255, 215, 0, 0.5);
+        }
+
+        .btn-tu-hoja-de-ruta .btn-arrow {
+            transition: transform 0.25s ease;
+        }
+
+        .btn-tu-hoja-de-ruta:hover .btn-arrow {
+            transform: translateY(4px);
+        }
+
         /* SECTION: BIENVENIDA Y MANIFIESTO DE COMUNIDAD */
         .welcome-manifesto-section {
             margin-bottom: 3.5rem;
@@ -2508,9 +2544,88 @@
             </div>
         </section>
 
-        <!-- 3. CARD: HOJA DE RUTA DE 3 PASOS PARA EMPEZAR (El Proceso de Transformación) -->
-            <div class="manifesto-card" style="margin-bottom: 2.5rem;">
-                <h2>🗺️ Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
+        <!-- ESPACIO PARA VER EL VIDEO DE BIENVENIDA -->
+        <section class="welcome-section" id="bienvenida">
+            <div class="section-header-row">
+                <div class="section-title-group">
+                    <span class="section-icon">🎬</span>
+                    <h2 class="section-title">Espacio del Video de Bienvenida</h2>
+                </div>
+                <span class="section-badge">Paso 1 Obligatorio</span>
+            </div>
+
+            <div style="max-width: 980px; margin: 0 auto; width: 100%;">
+                <!-- Video Screen con Video Real MP4 (Exclusivo en Campus) -->
+                <div class="video-theatre-box" style="box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(212, 175, 55, 0.15);">
+                    <video 
+                        id="welcomeVideoPlayer" 
+                        class="video-player-real" 
+                        controls 
+                        controlsList="nodownload" 
+                        oncontextmenu="return false;" 
+                        preload="metadata" 
+                        poster="/miniatura_bienvenida.png?v=2">
+                        <source src="/videos_campus/bienvenida_modo_lider.mp4" type="video/mp4">
+                        Tu navegador no soporta reproducción directa de video HTML5.
+                    </video>
+
+                    <!-- Barra del Video de Bienvenida Oficial -->
+                    <div class="video-playlist-bar" style="justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <span class="playlist-label" style="margin-right: 0;">Video de Entrada:</span>
+                            <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-light);">▶ 1. Bienvenida al Curso</span>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Video Oficial • Romina Lorena Montiel</span>
+                    </div>
+                </div>
+
+                <!-- BOTÓN TU HOJA DE RUTA DEBAJO DEL VIDEO DE BIENVENIDA -->
+                <div class="welcome-roadmap-btn-wrap" style="margin-top: 1.8rem; display: flex; justify-content: center; width: 100%;">
+                    <a href="#hoja-de-ruta" class="btn-tu-hoja-de-ruta" onclick="document.getElementById('hoja-de-ruta').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                        <span style="font-size: 1.35rem;">🗺️</span>
+                        <span>Tu Hoja de Ruta</span>
+                        <span class="btn-arrow" style="font-size: 1.2rem; font-weight: 900; margin-left: 0.3rem;">↓</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- SECTOR: ÁREA DE TU HOJA DE RUTA (QUE ABRE EL BOTÓN)                -->
+        <!-- ================================================================= -->
+        <section class="roadmap-welcome-area" id="hoja-de-ruta" style="margin-bottom: 3.5rem; scroll-margin-top: 80px; display: flex; flex-direction: column; gap: 2rem;">
+            
+            <!-- PRIMERO: MENSAJE Y BIENVENIDA DE ROMINA (IMAGEN 1) -->
+            <div class="welcome-info-card" style="background: linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(13, 17, 26, 0.98) 100%); border: 1.5px solid var(--border-gold); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(212, 175, 55, 0.12); padding: 2.2rem; border-radius: var(--radius-lg);">
+                <div>
+                    <div class="mentor-quote-box" style="margin-bottom: 1.2rem;">
+                        <img src="/romina-transparente.png" alt="Romina Montiel" class="mentor-photo-circle" onerror="this.src='/romina.png'">
+                        <div class="mentor-name-title">
+                            <h4>Lic. Romina Lorena Montiel</h4>
+                            <p>Tu Mentora en Método Modo Líder</p>
+                        </div>
+                    </div>
+                    <div class="welcome-message-body" style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.3rem;">
+                        <p style="font-size: 1.05rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.5rem;">¡Bienvenida a tu espacio sagrado de transformación!</p>
+                        <p style="color: #CBD5E1;">Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
+                    </div>
+                    <ul class="welcome-checklist" style="gap: 0.65rem; margin-bottom: 1.6rem;">
+                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Presiona Play en el video para comenzar tu formación.</li>
+                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Disfruta de la bienvenida oficial de Romina.</li>
+                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
+                    </ul>
+                </div>
+                <a href="#carpetas" class="btn-start-now" style="max-width: 340px;">
+                    📂 Ir a las Carpetas de Estudio ↓
+                </a>
+            </div>
+
+            <!-- LUEGO: TU HOJA DE RUTA DE 3 PASOS PARA EMPEZAR (IMAGEN 2) -->
+            <div class="manifesto-card" style="margin-bottom: 0;">
+                <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.4rem;">
+                    <span style="font-size: 1.5rem;">🗺️</span>
+                    <h2 style="font-size: 1.4rem; font-weight: 900; color: #0E121B; margin: 0;">Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
+                </div>
                 <div class="roadmap-steps-grid">
                     <div class="roadmap-step-item">
                         <div class="roadmap-step-num">01</div>
@@ -2536,66 +2651,6 @@
                 </div>
             </div>
 
-                <!-- ESPACIO PARA VER EL VIDEO DE BIENVENIDA -->
-        <section class="welcome-section" id="bienvenida">
-            <div class="section-header-row">
-                <div class="section-title-group">
-                    <span class="section-icon">🎬</span>
-                    <h2 class="section-title">Espacio del Video de Bienvenida</h2>
-                </div>
-                <span class="section-badge">Paso 1 Obligatorio</span>
-            </div>
-
-            <div class="video-theatre-grid">
-                <!-- Video Screen con Video Real MP4 (Exclusivo en Campus) -->
-                <div class="video-theatre-box">
-                    <video 
-                        id="welcomeVideoPlayer" 
-                        class="video-player-real" 
-                        controls 
-                        controlsList="nodownload" 
-                        oncontextmenu="return false;" 
-                        preload="metadata" 
-                        poster="/miniatura_bienvenida.png?v=2">
-                        <source src="/videos_campus/bienvenida_modo_lider.mp4" type="video/mp4">
-                        Tu navegador no soporta reproducción directa de video HTML5.
-                    </video>
-
-                    <!-- Barra del Video de Bienvenida Oficial -->
-                    <div class="video-playlist-bar" style="justify-content: space-between;">
-                        <div style="display: flex; align-items: center; gap: 0.6rem;">
-                            <span class="playlist-label" style="margin-right: 0;">Video de Entrada:</span>
-                            <span style="font-size: 0.82rem; font-weight: 700; color: var(--gold-light);">▶ 1. Bienvenida al Curso</span>
-                        </div>
-                        <span style="font-size: 0.75rem; color: var(--text-muted);">Video Oficial • Romina Lorena Montiel</span>
-                    </div>
-                </div>
-
-                <!-- Info Card -->
-                <div class="welcome-info-card">
-                    <div>
-                        <div class="mentor-quote-box">
-                            <img src="/romina-transparente.png" alt="Romina Montiel" class="mentor-photo-circle" onerror="this.src='/romina.png'">
-                            <div class="mentor-name-title">
-                                <h4>Lic. Romina Lorena Montiel</h4>
-                                <p>Tu Mentora en Método Modo Líder</p>
-                            </div>
-                        </div>
-                        <div class="welcome-message-body">
-                            <p><strong>¡Bienvenida a tu espacio sagrado de transformación!</strong></p>
-                            <p>Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
-                        </div>
-                        <ul class="welcome-checklist">
-                            <li><span class="check-icon">✓</span> Presiona Play en el video para comenzar tu formación.</li>
-                            <li><span class="check-icon">✓</span> Disfruta de la bienvenida oficial de Romina.</li>
-                            <li><span class="check-icon">✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
-                        </ul>
-                    </div>
-                    <a href="#carpetas" class="btn-start-now">
-                        📂 Ir a las Carpetas de Estudio ↓
-                    </a>
-                </div>
-            </div>
         </section>
 
                 <!-- SECTOR: CARPETAS DE ESTUDIO DEL CURSO -->
@@ -2621,7 +2676,7 @@
                 <div class="folder-nav-tab" id="tab-procrastinacion" onclick="switchFolder('procrastinacion')">
                     <div class="tab-top-row">
                         <span class="tab-icon">⚡</span>
-                        <span class="tab-badge" style="background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.3);">Minicurso</span>
+                        <span class="tab-badge" style="background: rgba(16, 185, 129, 0.18); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); font-weight: 800; letter-spacing: 0.5px;">⚡ ACCESO FREE</span>
                     </div>
                     <span class="tab-title">PROCRASTINACIÓN</span>
                     <span class="tab-desc">Salir del Modo Procrastinación</span>

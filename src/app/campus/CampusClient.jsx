@@ -26,11 +26,30 @@ export default function CampusClient() {
     activeIndex: 0
   });
 
+  const [procrastinacionVideo, setProcrastinacionVideo] = useState({
+    src: '/videos_campus/minicourse_procrastinacion_principal.mp4',
+    title: '1. Video Principal: Soñás en grande pero procrastinás',
+    poster: '/miniatura_procrastinacion.png?v=2',
+    activeIndex: 0
+  });
+
   const clase1VideoRef = useRef(null);
   const clase3VideoRef = useRef(null);
+  const procrastinacionVideoRef = useRef(null);
 
   const handleClase2Video = (src, title, index) => {
     setClase2Video({ src, title, activeIndex: index });
+  };
+
+  const handleProcrastinacionVideo = (src, title, poster, index) => {
+    setProcrastinacionVideo({ src, title, poster, activeIndex: index });
+    if (procrastinacionVideoRef.current) {
+      procrastinacionVideoRef.current.src = src;
+      if (poster) {
+        procrastinacionVideoRef.current.poster = poster;
+      }
+      procrastinacionVideoRef.current.play().catch((e) => console.log('Autoplay prevented:', e));
+    }
   };
 
   const switchFolder = (folderId) => {
@@ -141,9 +160,9 @@ export default function CampusClient() {
                 <span className="section-badge">Paso 1 Obligatorio</span>
             </div>
 
-            <div className="video-theatre-grid">
+            <div className="video-theatre-grid" style={{ display: "flex", flexDirection: "column", alignItems: "center", maxWidth: "900px", margin: "0 auto", width: "100%" }}>
                 {/* Video Screen con Video Real MP4 (Exclusivo en Campus) */}
-                <div className="video-theatre-box">
+                <div className="video-theatre-box" style={{ width: "100%" }}>
                     <video 
                         id="welcomeVideoPlayer" 
                         className="video-player-real" 
@@ -157,40 +176,87 @@ export default function CampusClient() {
                     </video>
 
                     {/* Barra del Video de Bienvenida Oficial */}
-                    <div className="video-playlist-bar" style={{ "justifyContent": "space-between" }}>
-                        <div style={{ "display": "flex", "alignItems": "center", "gap": "0.6rem" }}>
-                            <span className="playlist-label" style={{ "marginRight": "0" }}>Video de Entrada:</span>
-                            <span style={{ "fontSize": "0.82rem", "fontWeight": "700", "color": "var(--gold-light)" }}>▶ 1. Bienvenida al Curso</span>
+                    <div className="video-playlist-bar" style={{ justifyContent: "space-between" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+                            <span className="playlist-label" style={{ marginRight: "0" }}>Video de Entrada:</span>
+                            <span style={{ fontSize: "0.82rem", fontWeight: "700", color: "var(--gold-light)" }}>▶ 1. Bienvenida al Curso</span>
                         </div>
-                        <span style={{ "fontSize": "0.75rem", "color": "var(--text-muted)" }}>Video Oficial • Romina Lorena Montiel</span>
+                        <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Video Oficial • Romina Lorena Montiel</span>
                     </div>
                 </div>
 
-                {/* Info Card */}
-                <div className="welcome-info-card">
-                    <div>
-                        <div className="mentor-quote-box">
-                            <img src="/romina-transparente.png" alt="Romina Montiel" className="mentor-photo-circle" />
-                            <div className="mentor-name-title">
-                                <h4>Lic. Romina Lorena Montiel</h4>
-                                <p>Tu Mentora en Método Modo Líder</p>
-                            </div>
-                        </div>
-                        <div className="welcome-message-body">
-                            <p><strong>¡Bienvenida a tu espacio sagrado de transformación!</strong></p>
-                            <p>Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
-                        </div>
-                        <ul className="welcome-checklist">
-                            <li><span className="check-icon">✓</span> Presiona Play en el video para comenzar tu formación.</li>
-                            <li><span className="check-icon">✓</span> Disfruta de la bienvenida oficial de Romina.</li>
-                            <li><span className="check-icon">✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
-                        </ul>
-                    </div>
-                    <a href="#carpetas" className="btn-start-now">
-                        📂 Ir a las Carpetas de Estudio ↓
+                {/* BOTÓN TU HOJA DE RUTA DEBAJO DEL VIDEO DE BIENVENIDA */}
+                <div className="welcome-roadmap-btn-wrap" style={{ marginTop: "1.8rem", display: "flex", justifyContent: "center", width: "100%" }}>
+                    <a href="#hoja-de-ruta" className="btn-tu-hoja-de-ruta" onClick={(e) => { e.preventDefault(); document.getElementById('hoja-de-ruta')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+                        <span style={{ fontSize: "1.35rem" }}>🗺️</span>
+                        <span>Tu Hoja de Ruta</span>
+                        <span className="btn-arrow" style={{ fontSize: "1.2rem", fontWeight: "900", marginLeft: "0.3rem" }}>↓</span>
                     </a>
                 </div>
             </div>
+        </section>
+
+        {/* ================================================================= */}
+        {/* SECTOR: ÁREA DE TU HOJA DE RUTA (QUE ABRE EL BOTÓN)                */}
+        {/* ================================================================= */}
+        <section className="roadmap-welcome-area" id="hoja-de-ruta" style={{ marginBottom: "3.5rem", scrollMarginTop: "80px", display: "flex", flexDirection: "column", gap: "2rem" }}>
+            
+            {/* PRIMERO: MENSAJE Y BIENVENIDA DE ROMINA (IMAGEN 1) */}
+            <div className="welcome-info-card" style={{ background: "linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(13, 17, 26, 0.98) 100%)", border: "1.5px solid var(--border-gold)", boxShadow: "0 15px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(212, 175, 55, 0.12)", padding: "2.2rem", borderRadius: "var(--radius-lg)" }}>
+                <div>
+                    <div className="mentor-quote-box" style={{ marginBottom: "1.2rem" }}>
+                        <img src="/romina-transparente.png" alt="Romina Montiel" className="mentor-photo-circle" />
+                        <div className="mentor-name-title">
+                            <h4>Lic. Romina Lorena Montiel</h4>
+                            <p>Tu Mentora en Método Modo Líder</p>
+                        </div>
+                    </div>
+                    <div className="welcome-message-body" style={{ fontSize: "0.92rem", lineHeight: "1.6", marginBottom: "1.3rem" }}>
+                        <p style={{ fontSize: "1.05rem", fontWeight: "800", color: "#FFFFFF", marginBottom: "0.5rem" }}>¡Bienvenida a tu espacio sagrado de transformación!</p>
+                        <p style={{ color: "#CBD5E1" }}>Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
+                    </div>
+                    <ul className="welcome-checklist" style={{ gap: "0.65rem", marginBottom: "1.6rem" }}>
+                        <li style={{ fontSize: "0.88rem" }}><span className="check-icon">✓</span> Presiona Play en el video para comenzar tu formación.</li>
+                        <li style={{ fontSize: "0.88rem" }}><span className="check-icon">✓</span> Disfruta de la bienvenida oficial de Romina.</li>
+                        <li style={{ fontSize: "0.88rem" }}><span className="check-icon">✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
+                    </ul>
+                </div>
+                <a href="#carpetas" className="btn-start-now" style={{ maxWidth: "340px" }} onClick={(e) => { e.preventDefault(); document.getElementById('carpetas')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                    📂 Ir a las Carpetas de Estudio ↓
+                </a>
+            </div>
+
+            {/* LUEGO: TU HOJA DE RUTA DE 3 PASOS PARA EMPEZAR (IMAGEN 2) */}
+            <div className="manifesto-card" style={{ marginBottom: 0 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "1.4rem" }}>
+                    <span style={{ fontSize: "1.5rem" }}>🗺️</span>
+                    <h2 style={{ fontSize: "1.4rem", fontWeight: "900", color: "#0E121B", margin: 0 }}>Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
+                </div>
+                <div className="roadmap-steps-grid">
+                    <div className="roadmap-step-item">
+                        <div className="roadmap-step-num">01</div>
+                        <div className="roadmap-step-title">Mirá tu clase y completá el Workbook</div>
+                        <p className="roadmap-step-desc">
+                            Mirá la clase correspondiente y desarrollá el Workbook a tu manera y a tu propio ritmo, aplicando cada ejercicio a tu emprendimiento.
+                        </p>
+                    </div>
+                    <div className="roadmap-step-item">
+                        <div className="roadmap-step-num">02</div>
+                        <div className="roadmap-step-title">Coaching Grupal en Vivo</div>
+                        <p className="roadmap-step-desc">
+                            Vení a las clases en vivo: <strong>lunes, martes y miércoles de 19:00 a 20:00 hs</strong>. Un espacio para destrabar desafíos, profundizar y entrenar mentalidad juntas.
+                        </p>
+                    </div>
+                    <div className="roadmap-step-item">
+                        <div className="roadmap-step-num">03</div>
+                        <div className="roadmap-step-title">Inspirate y Potenciate</div>
+                        <p className="roadmap-step-desc">
+                            Inspirate con los testimonios y el contenido que se genera dentro del movimiento grupal durante los vivos y en la comunidad de Emprendedoras Conscientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         {/* ================================================================= */}
@@ -228,33 +294,6 @@ export default function CampusClient() {
                     </div>
                 </div>
             </div>
-
-            {/* 3. CARD: HOJA DE RUTA DE 3 PASOS PARA EMPEZAR (El Proceso de Transformación) */}
-            <div className="manifesto-card">
-                <h2>🗺️ Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
-                <div className="roadmap-steps-grid">
-                    <div className="roadmap-step-item">
-                        <div className="roadmap-step-num">01</div>
-                        <div className="roadmap-step-title">Mirá tu clase y completá el Workbook</div>
-                        <p className="roadmap-step-desc">
-                            Mirá la clase correspondiente y desarrollá el Workbook a tu manera y a tu propio ritmo, aplicando cada ejercicio a tu emprendimiento.
-                        </p>
-                    </div>
-                    <div className="roadmap-step-item">
-                        <div className="roadmap-step-num">02</div>
-                        <div className="roadmap-step-title">Coaching Grupal en Vivo</div>
-                        <p className="roadmap-step-desc">
-                            Vení a las clases en vivo: <strong>lunes, martes y miércoles de 19:00 a 20:00 hs</strong>. Un espacio para destrabar desafíos, profundizar y entrenar mentalidad juntas.
-                        </p>
-                    </div>
-                    <div className="roadmap-step-item">
-                        <div className="roadmap-step-num">03</div>
-                        <div className="roadmap-step-title">Inspirate y Potenciate</div>
-                        <p className="roadmap-step-desc">
-                            Inspirate con los testimonios y el contenido que se genera dentro del movimiento grupal durante los vivos y en la comunidad de Emprendedoras Conscientes.
-                        </p>
-                    </div>
-                </div>
 
                 {/* BANNER DE ACCESO E INVITACIÓN A LA COMUNIDAD DE WHATSAPP */}
                 <div className="whatsapp-community-invite-box">
@@ -350,11 +389,21 @@ export default function CampusClient() {
                     <span className="tab-desc">Workflow & Metodología de Trabajo</span>
                 </div>
 
+                {/* Tab: MINICURSO PROCRASTINACIÓN */}
+                <div className={`folder-nav-tab ${activeFolder === "procrastinacion" ? "active" : ""}`} id="tab-procrastinacion" onClick={() => switchFolder("procrastinacion")} style={{ cursor: "pointer" }}>
+                    <div className="tab-top-row">
+                        <span className="tab-icon">⚡</span>
+                        <span className="tab-badge" style={{ background: "rgba(16, 185, 129, 0.18)", color: "#34D399", border: "1px solid rgba(16, 185, 129, 0.4)", fontWeight: 800, letterSpacing: "0.5px" }}>⚡ ACCESO FREE</span>
+                    </div>
+                    <span className="tab-title">PROCRASTINACIÓN</span>
+                    <span className="tab-desc">Salir del Modo Procrastinación</span>
+                </div>
+
                 {/* Tab 1: CLASE 1 */}
                 <div className={`folder-nav-tab ${activeFolder === "clase1" ? "active" : ""}`} id="tab-clase1" onClick={() => switchFolder("clase1")} style={{ cursor: "pointer" }}>
                     <div className="tab-top-row">
                         <span className="tab-icon">📁</span>
-                        <span className="tab-badge">Clase 1</span>
+                        <span className="tab-badge" style={{ background: "rgba(16, 185, 129, 0.18)", color: "#34D399", border: "1px solid rgba(16, 185, 129, 0.4)", fontWeight: 800, letterSpacing: "0.5px" }}>FREE PASS</span>
                     </div>
                     <span className="tab-title">CLASE 1</span>
                     <span className="tab-desc">Emprender Conscientemente</span>
@@ -364,7 +413,7 @@ export default function CampusClient() {
                 <div className={`folder-nav-tab ${activeFolder === "clase2" ? "active" : ""}`} id="tab-clase2" onClick={() => switchFolder("clase2")} style={{ cursor: "pointer" }}>
                     <div className="tab-top-row">
                         <span className="tab-icon">📁</span>
-                        <span className="tab-badge">Clase 2</span>
+                        <span className="tab-badge" style={{ background: "rgba(16, 185, 129, 0.18)", color: "#34D399", border: "1px solid rgba(16, 185, 129, 0.4)", fontWeight: 800, letterSpacing: "0.5px" }}>FREE PASS</span>
                     </div>
                     <span className="tab-title">CLASE 2</span>
                     <span className="tab-desc">Propósito & Dirección</span>
@@ -584,6 +633,214 @@ export default function CampusClient() {
                                 </audio>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="return-to-folders-box">
+                        <a href="#carpetas" className="btn-return-folders" onClick={(e) => { e.preventDefault(); document.getElementById('carpetas')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                            <span className="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span className="btn-arrow">↑</span>
+                        </a>
+                    </div>
+                </div>
+
+                {/* PANEL: MINICURSO SALIR DEL MODO PROCRASTINACIÓN */}
+                <div className="folder-panel" id="panel-procrastinacion" style={{ display: activeFolder === "procrastinacion" ? "block" : "none" }}>
+                    <div className="folder-active-banner">
+                        <div className="active-folder-header">
+                            <span className="big-icon">⚡</span>
+                            <div>
+                                <h3>CARPETA: MINICURSO - SALIR DEL MODO PROCRASTINACIÓN</h3>
+                                <p>Comprende la neurociencia del autosabotaje, elimina la culpa emocional y activa la regla de Stanford para pasar a la acción inmediata.</p>
+                            </div>
+                        </div>
+                        <div className="folder-materials-count">
+                            <span className="material-chip chip-video">🎬 5 Videos Grabados</span>
+                            <span className="material-chip chip-docs">📄 5 Workbooks &amp; Artículos</span>
+                            <span className="material-chip chip-audio" style={{ background: "rgba(168, 85, 247, 0.15)", color: "#C084FC", border: "1px solid rgba(168, 85, 247, 0.3)" }}>🧠 1 Módulo Neurociencia</span>
+                        </div>
+                    </div>
+
+                    <div className="folder-pillars-grid">
+                        {/* 1. Video Player Real con Selector de Videos */}
+                        <div className="pillar-card">
+                            <div className="pillar-header">
+                                <div className="pillar-title">
+                                    <span>🎬</span>
+                                    <span id="title-video-procrastinacion">{procrastinacionVideo.title}</span>
+                                </div>
+                                <span className="pillar-badge">Minicurso en Video MP4</span>
+                            </div>
+                            <div className="folder-video-screen">
+                                <video id="videoElement-procrastinacion" ref={procrastinacionVideoRef} controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="none" poster={procrastinacionVideo.poster}>
+                                    <source src={procrastinacionVideo.src} type="video/mp4" />
+                                </video>
+                            </div>
+                            {/* Selector de videos del Minicurso */}
+                            <div className="video-playlist-bar">
+                                <span className="playlist-label">Opciones de Video:</span>
+                                <button className={`playlist-btn ${procrastinacionVideo.activeIndex === 0 ? "active" : ""}`} onClick={() => handleProcrastinacionVideo('/videos_campus/minicourse_procrastinacion_principal.mp4', '1. Video Principal: Soñás en grande pero procrastinás', '/miniatura_procrastinacion.png?v=2', 0)}>
+                                    ▶ 1. Soñás en grande (Principal)
+                                </button>
+                                <button className={`playlist-btn ${procrastinacionVideo.activeIndex === 1 ? "active" : ""}`} onClick={() => handleProcrastinacionVideo('/videos_campus/minicourse_culpa_procrastinar.mp4', '2. El sentimiento de culpa detrás de la procrastinación', '/miniatura_culpa_procrastinar.png', 1)}>
+                                    ▶ 2. La culpa detrás de procrastinar
+                                </button>
+                                <button className={`playlist-btn ${procrastinacionVideo.activeIndex === 2 ? "active" : ""}`} onClick={() => handleProcrastinacionVideo('/videos_campus/minicourse_stanford_30s.mp4', '3. Método de Stanford para empezar en 30s', '', 2)}>
+                                    ▶ 3. Método de Stanford en 30s
+                                </button>
+                                <button className={`playlist-btn ${procrastinacionVideo.activeIndex === 3 ? "active" : ""}`} onClick={() => handleProcrastinacionVideo('/videos_campus/minicourse_ciclo_1min.mp4', '4. El ciclo de la Procrastinación en 1 minuto', '', 3)}>
+                                    ▶ 4. Ciclo en 1 minuto
+                                </button>
+                                <button className={`playlist-btn ${procrastinacionVideo.activeIndex === 4 ? "active" : ""}`} onClick={() => handleProcrastinacionVideo('/videos_campus/minicourse_mente_bloquea.mp4', '5. Tu mente es lo que te bloquea', '', 4)}>
+                                    ▶ 5. Tu mente te bloquea
+                                </button>
+                            </div>
+                            <div className="video-description-box" id="desc-video-procrastinacion">
+                                💡 <strong>Clave de Autoliderazgo:</strong> Procrastinar no es holgazanería; es una respuesta automática del sistema nervioso ante la incertidumbre y la exigencia interna. Con este minicurso aprendés a hackear ese ciclo y pasar a la acción con autocompasión y foco.
+                            </div>
+                        </div>
+
+                        {/* 2. Módulo Especial: Neurociencia de la Procrastinación */}
+                        <div className="pillar-card">
+                            <div className="pillar-header">
+                                <div className="pillar-title">
+                                    <span>🧠</span>
+                                    <span>2. Módulo Especial: Neurociencia de la Procrastinación</span>
+                                </div>
+                                <span className="pillar-badge">Interactividad &amp; Arquetipos</span>
+                            </div>
+                            <div style={{ background: "#FDFBF7", border: "1.5px solid #D4AF37", borderRadius: "var(--radius-md)", padding: "1.8rem", display: "flex", flexDirection: "column", gap: "1.2rem" }}>
+                                <div>
+                                    <div style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "#F6EBD0", color: "#8A640D", padding: "0.25rem 0.75rem", borderRadius: "50px", fontSize: "0.72rem", fontWeight: 800, textTransform: "uppercase", marginBottom: "0.6rem" }}>
+                                        ✨ Test de Arquetipos
+                                    </div>
+                                    <h4 style={{ color: "#0E121B", fontSize: "1.2rem", fontWeight: 800, marginBottom: "0.4rem" }}>Guía Interactiva: Los 7 Arquetipos de la Procrastinación</h4>
+                                    <p style={{ color: "#4A5568", fontSize: "0.92rem", lineHeight: 1.6, margin: 0 }}>
+                                        Descubrí qué arquetipo domina tus bloqueos (La Perfeccionista, La Soñadora, La Agotada, etc.) y aplicá las soluciones neurocientíficas diseñadas por la Lic. Romina Lorena Montiel.
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="/materiales/neurociencia-procrastinacion.html" target="_blank" rel="noopener noreferrer" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem", padding: "0.85rem 1.6rem" }}>
+                                        <span>🚀 Abrir Módulo de Neurociencia Online ↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 3. Workbooks y Artículos Descargables */}
+                        <div className="pillar-card">
+                            <div className="pillar-header">
+                                <div className="pillar-title">
+                                    <span>📄</span>
+                                    <span>3. Workbooks y Artículos del Minicurso</span>
+                                </div>
+                                <span className="pillar-badge">Descargas y Lectura Online</span>
+                            </div>
+                            <div className="downloads-grid">
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf">PDF</div>
+                                        <div className="doc-meta">
+                                            <h5>5 Pasos: Emoción tras la Procrastinación</h5>
+                                            <span>PDF Oficial • Diagnóstico</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Guía paso a paso para identificar la emoción primaria que detona la postergación en tus tareas de negocio.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/materiales/PDF1_5_pasos_emocion_procrastinacion.pdf" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/PDF1_5_pasos_emocion_procrastinacion.pdf" download="5_Pasos_Emocion_Detras_De_Tu_Procrastinacion.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf">PDF</div>
+                                        <div className="doc-meta">
+                                            <h5>¿Qué tipo de procrastinadora eres?</h5>
+                                            <span>Test &amp; Perfil • PDF</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Test de autoevaluación para perfilar tus patrones de evasión y diseñar tu estrategia correctiva.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/materiales/PDF3_Que_tipo_de_procrastinadora_eres.pdf" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/PDF3_Que_tipo_de_procrastinadora_eres.pdf" download="Test_Que_Tipo_De_Procrastinadora_Eres.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf">PDF</div>
+                                        <div className="doc-meta">
+                                            <h5>Primer Paso para Salir de la Procrastinación</h5>
+                                            <span>Guía Práctica • PDF</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Plan de acción accionable para destrabar proyectos estancados y reiniciar el movimiento productivo.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/materiales/PDF3_Primer_paso_salir_procrastinacion.pdf" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/PDF3_Primer_paso_salir_procrastinacion.pdf" download="Primer_Paso_Para_Salir_De_La_Procrastinacion.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf">PDF</div>
+                                        <div className="doc-meta">
+                                            <h5>Artículo: Método Primer Paso</h5>
+                                            <span>Artículo Editorial • PDF</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Artículo completo de Romina: fundamentos teóricos y prácticos para salir del modo procrastinación.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/materiales/ARTICULO_Primer_paso_procrastinacion.pdf" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/ARTICULO_Primer_paso_procrastinacion.pdf" download="Articulo_Primer_Paso_Procrastinacion.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf">PDF</div>
+                                        <div className="doc-meta">
+                                            <h5>Artículo: Lic. Romina Lorena Montiel</h5>
+                                            <span>Documento Oficial • PDF</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Manifiesto reflexivo sobre autoliderazgo y gestión de energía para mujeres que lideran negocios.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/materiales/ARTICULO_Romina_Lorena_Montiel.pdf" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/materiales/ARTICULO_Romina_Lorena_Montiel.pdf" download="Articulo_Lic_Romina_Lorena_Montiel.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="return-to-folders-box">
+                        <a href="#carpetas" className="btn-return-folders" onClick={(e) => { e.preventDefault(); document.getElementById('carpetas')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                            <span className="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span className="btn-arrow">↑</span>
+                        </a>
                     </div>
                 </div>
 
