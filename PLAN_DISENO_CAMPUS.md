@@ -126,12 +126,14 @@ Formación troncal con las 5 clases centrales del Método:
 - **Carpeta 5: Cliente Ideal y Posicionamiento de Autoridad** (🔐 VIP) — Diapositivas, Workbook Interactivo + PDF.
 - **Navegación:** Botón superior `#carpetas` y botones finales `↑ Regresar a las Carpetas de Estudio` + `← Volver al Campus Principal`.
 
-### 👑 ÁREA 2: COACHING GRUPAL CLASES GRABADAS (`coaching_visor.html`)
+### 👥 ÁREA 2: COACHING GRUPAL CLASES GRABADAS (`coaching_visor.html`)
 Espacio exclusivo de mentoría colectiva y resolución de trabas en vivo con Romina Lorena Montiel:
+- **Entorno Visual:** **100% NEGRO Y AMARILLO (Sin rojo / Sin coral)**.
+- **Iconografía Oficial:** **Sin coronas (`👑` eliminadas por completo)**. Se utiliza el icono institucional de comunidad `👥` y de foco `🎯`.
+- **Paleta Cromática:** Negro profundo `#07090E` / `#000000`, superficie `#0E121A`, amarillo vibrante `#FFD700`, gradiente oro `#FFF085` a `#FFD700`, y bordes luminosos `rgba(255, 215, 0, 0.35)`.
 - **Carpeta 1: Introducción — ¿Para qué regresar a mí?** — Masterclass en video, audio de sintonización y Workbook "Mis Valores, Mi Vida y Mi Negocio" interactivo y descargable.
 - **Carpeta 2: Volver a Mí · Grupo Martes** — Grabación completa en vivo, Diario "15 Días para Volver a Mí" y Reto "7 Días para Reconectar Conmigo".
 - **Carpeta 3: Volver a Mí · Grupo Miércoles** — Grabación completa en vivo, Matriz de Valores y Protocolo de Autoliderazgo.
-- **Identidad:** Acentos en Coral/Rubí (`#E94560`, `#FF5A78`) y dorado tenue.
 
 ### 🚀 ÁREA 3: MI EMPRENDIMIENTO (`emprendimiento_visor.html`)
 Networking colaborativo, visibilidad de marca y presentación de modelos de negocio:
@@ -157,14 +159,13 @@ Música para crear nuevas redes positivas, neuroplasticidad y frecuencias de foc
 | Elemento | Token / Valor | Aplicación |
 |---|---|---|
 | **Tipografía Oficial** | `Montserrat`, sans-serif (400, 600, 700, 800, 900) | Todo el texto, botones, titulares e interfaces |
-| **Fondo Profundo** | `#07090E` / `#0A0A0F` | Fondos de página y contrastes maestros |
-| **Superficie de Tarjetas** | `#0E121C` / `#12121A` | Cards, módulos y paneles interactivos |
-| **Oro Maestro Primario** | `#D4AF37` / `#FCE08B` | Bordes, insignias, botones primarios y logos |
-| **Oro Brillante** | `#FFD700` | Botones de acceso directo VIP y destaques |
-| **Coral / Rubí** | `#E94560` / `#FF5A78` | Coaching grupal, insignias vivas y acentos |
+| **Fondo Profundo** | `#07090E` / `#0A0A0F` / `#000000` | Fondos de página y contrastes maestros en negro |
+| **Superficie de Tarjetas** | `#0E121C` / `#121622` | Cards, módulos y paneles interactivos |
+| **Amarillo Vibrante / Oro** | `#FFD700` / `#FFF085` | **Coaching Grupal (entorno Negro y Amarillo, sin rojo)**, botones VIP |
+| **Oro Maestro Primario** | `#D4AF37` / `#FCE08B` | Bordes, insignias del curso, botones primarios y logos |
 | **Violeta / Neurociencia**| `#8B5CF6` / `#C4B5FD` | Mentalidad, frecuencias y neuroplasticidad |
 | **Verde Esmeralda** | `#10B981` / `#34D399` | Insignias `FREE PASS` y `⚡ ACCESO FREE` |
-| **Bordes de Lujo** | `rgba(212, 175, 55, 0.25)` | Delimitaciones sutiles con estética premium |
+| **Bordes de Lujo** | `rgba(255, 215, 0, 0.35)` | Delimitaciones luminosas doradas y amarillas |
 
 ---
 

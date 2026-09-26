@@ -460,15 +460,15 @@ export default function CampusClient() {
                     <span className="tab-desc" style={{ color: "#111111", fontWeight: 700, fontSize: "0.74rem" }}>Clases 1 a 5 Oficiales ↗</span>
                 </a>
 
-                {/* Tab ESPECIAL 2: COACHING GRUPAL */}
-                <a href="/coaching_visor.html" className="folder-nav-tab" id="tab-coaching-grupal" style={{ textDecoration: "none", background: "linear-gradient(145deg, #181224 0%, #100C18 100%)", border: "1.5px solid rgba(212, 175, 55, 0.6)", boxShadow: "0 8px 24px rgba(212, 175, 55, 0.15)", position: "relative", overflow: "hidden" }}>
-                    <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "3px", background: "linear-gradient(90deg, #FCE08B, #D4AF37)" }}></div>
+                {/* Tab ESPECIAL 2: COACHING GRUPAL (NEGRO Y AMARILLO - SIN CORONAS) */}
+                <a href="/coaching_visor.html" className="folder-nav-tab" id="tab-coaching-grupal" style={{ textDecoration: "none", background: "linear-gradient(145deg, #121520 0%, #0A0D14 100%)", border: "1.5px solid rgba(255, 215, 0, 0.6)", boxShadow: "0 8px 24px rgba(255, 215, 0, 0.18)", position: "relative", overflow: "hidden" }}>
+                    <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "3px", background: "linear-gradient(90deg, #FFF085, #FFD700)" }}></div>
                     <div className="tab-top-row">
-                        <span className="tab-icon">👑</span>
-                        <span className="tab-badge" style={{ background: "rgba(212, 175, 55, 0.15)", color: "#F7E7CE", border: "1px solid rgba(212, 175, 55, 0.4)" }}>🔐 VIP</span>
+                        <span className="tab-icon">👥</span>
+                        <span className="tab-badge" style={{ background: "#000000", color: "#FFD700", border: "1px solid #FFD700", fontWeight: 900 }}>🔐 VIP</span>
                     </div>
-                    <span className="tab-title" style={{ color: "#F7E7CE", fontSize: "0.84rem" }}>COACHING GRUPAL</span>
-                    <span className="tab-desc" style={{ color: "rgba(247, 231, 206, 0.7)" }}>Martes y Miércoles ↗</span>
+                    <span className="tab-title" style={{ color: "#FFD700", fontSize: "0.84rem", fontWeight: 800 }}>COACHING GRUPAL</span>
+                    <span className="tab-desc" style={{ color: "rgba(255, 215, 0, 0.8)" }}>Martes y Miércoles ↗</span>
                 </a>
 
                 {/* Tab ESPECIAL 3: MI EMPRENDIMIENTO */}

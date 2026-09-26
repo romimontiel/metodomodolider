@@ -2733,15 +2733,15 @@
                     <span class="tab-desc" style="color: #111111 !important; font-weight: 700; font-size: 0.74rem;">Clases 1 a 5 Oficiales ↗</span>
                 </div>
 
-                <!-- Tab ESPECIAL 2: COACHING GRUPAL CLASES GRABADAS -->
-                <div onclick="openCampusAuthModal('/coaching_visor.html')" class="folder-nav-tab" id="tab-coaching-grupal" style="cursor: pointer; text-decoration: none; background: linear-gradient(145deg, #181224 0%, #100C18 100%); border: 1.5px solid rgba(212, 175, 55, 0.6); box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FCE08B, #D4AF37);"></div>
+                <!-- Tab ESPECIAL 2: COACHING GRUPAL CLASES GRABADAS (NEGRO Y AMARILLO - SIN CORONAS) -->
+                <div onclick="openCampusAuthModal('/coaching_visor.html')" class="folder-nav-tab" id="tab-coaching-grupal" style="cursor: pointer; text-decoration: none; background: linear-gradient(145deg, #121520 0%, #0A0D14 100%); border: 1.5px solid rgba(255, 215, 0, 0.6); box-shadow: 0 8px 24px rgba(255, 215, 0, 0.18); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FFF085, #FFD700);"></div>
                     <div class="tab-top-row">
-                        <span class="tab-icon">👑</span>
-                        <span class="tab-badge" style="background: rgba(212, 175, 55, 0.15); color: #F7E7CE; border: 1px solid rgba(212, 175, 55, 0.4);">🔐 VIP</span>
+                        <span class="tab-icon">👥</span>
+                        <span class="tab-badge" style="background: #000000; color: #FFD700; border: 1px solid #FFD700; font-weight: 900;">🔐 VIP</span>
                     </div>
-                    <span class="tab-title" style="color: #F7E7CE; font-size: 0.84rem;">COACHING GRUPAL</span>
-                    <span class="tab-desc" style="color: rgba(247, 231, 206, 0.7);">Martes y Mi&eacute;rcoles &nearr;</span>
+                    <span class="tab-title" style="color: #FFD700; font-size: 0.84rem; font-weight: 800;">COACHING GRUPAL</span>
+                    <span class="tab-desc" style="color: rgba(255, 215, 0, 0.8);">Martes y Mi&eacute;rcoles &nearr;</span>
                 </div>
 
                 <!-- Tab ESPECIAL 3: MI EMPRENDIMIENTO -->
@@ -3916,7 +3916,7 @@
             if (isCoach) {
                 if (titleElem) titleElem.textContent = 'Acceso a Coaching Grupal';
                 if (descElem) descElem.textContent = 'Las grabaciones en vivo de Coaching Grupal están reservadas para alumnas activas. Ingresá tu clave recibida por correo.';
-                if (iconElem) iconElem.textContent = '👑';
+                if (iconElem) iconElem.textContent = '👥';
                 if (btnText) btnText.textContent = '🔓 Ingresar a Coaching Grupal';
             } else {
                 if (titleElem) titleElem.textContent = 'Acceso a Curso Completo';
