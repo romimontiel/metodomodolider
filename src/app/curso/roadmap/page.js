@@ -45,6 +45,69 @@ export default function RoadmapPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════
+          SECCIÓN 0 — BIENVENIDA & HOJA DE RUTA DE 3 PASOS
+      ═══════════════════════════════════════════════ */}
+      <section className="roadmap-section" style={{ background: "#07090E", padding: "3rem 1.5rem 2rem" }}>
+        <div className="roadmap-container" style={{ display: "flex", flexDirection: "column", gap: "2.2rem", maxWidth: "980px" }}>
+
+          {/* 1. BIENVENIDA DE ROMINA */}
+          <div style={{ background: "linear-gradient(135deg, rgba(20, 26, 38, 0.98) 0%, rgba(13, 17, 26, 0.98) 100%)", border: "1.5px solid #D4AF37", boxShadow: "0 15px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.15)", padding: "2.2rem", borderRadius: "16px", color: "#FFFFFF" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.2rem" }}>
+              <img src="/romina-transparente.png" alt="Romina Montiel" style={{ width: "65px", height: "65px", borderRadius: "50%", objectFit: "cover", border: "2px solid #D4AF37" }} />
+              <div>
+                <h4 style={{ margin: 0, fontSize: "1.15rem", fontWeight: "800", color: "#FCE08B" }}>Lic. Romina Lorena Montiel</h4>
+                <p style={{ margin: "0.2rem 0 0", fontSize: "0.85rem", color: "#94A3B8" }}>Tu Mentora en Método Modo Líder</p>
+              </div>
+            </div>
+            <div style={{ fontSize: "0.95rem", lineHeight: "1.6", marginBottom: "1.3rem" }}>
+              <p style={{ fontSize: "1.15rem", fontWeight: "800", color: "#FFFFFF", marginBottom: "0.5rem" }}>¡Bienvenida a tu espacio sagrado de transformación!</p>
+              <p style={{ color: "#CBD5E1", margin: 0 }}>Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
+            </div>
+            <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.6rem", display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+              <li style={{ fontSize: "0.9rem", color: "#E2E8F0" }}><span style={{ color: "#34D399", fontWeight: "bold", marginRight: "0.5rem" }}>✓</span> Presiona Play en el video para comenzar tu formación.</li>
+              <li style={{ fontSize: "0.9rem", color: "#E2E8F0" }}><span style={{ color: "#34D399", fontWeight: "bold", marginRight: "0.5rem" }}>✓</span> Disfruta de la bienvenida oficial de Romina.</li>
+              <li style={{ fontSize: "0.9rem", color: "#E2E8F0" }}><span style={{ color: "#34D399", fontWeight: "bold", marginRight: "0.5rem" }}>✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
+            </ul>
+            <a href="/campus#carpetas" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "linear-gradient(135deg, #FFD700 0%, #D4AF37 100%)", color: "#000000", fontWeight: "900", padding: "0.85rem 1.8rem", borderRadius: "50px", textDecoration: "none", fontSize: "0.92rem", boxShadow: "0 4px 15px rgba(212, 175, 55, 0.3)" }}>
+              📂 Ir a las Carpetas de Estudio ↓
+            </a>
+          </div>
+
+          {/* 2. TU HOJA DE RUTA DE 3 PASOS PARA EMPEZAR */}
+          <div style={{ background: "#FFFFFF", borderRadius: "16px", padding: "2.2rem", boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)", border: "1px solid rgba(212, 175, 55, 0.3)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "1.5rem" }}>
+              <span style={{ fontSize: "1.6rem" }}>🗺️</span>
+              <h2 style={{ fontSize: "1.45rem", fontWeight: "900", color: "#0E121B", margin: 0 }}>Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
+              <div style={{ background: "#F8FAFC", padding: "1.5rem", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
+                <div style={{ fontSize: "1.8rem", fontWeight: "900", color: "#D4AF37", marginBottom: "0.5rem" }}>01</div>
+                <div style={{ fontSize: "1.05rem", fontWeight: "800", color: "#0E121B", marginBottom: "0.5rem" }}>Mirá tu clase y completá el Workbook</div>
+                <p style={{ fontSize: "0.88rem", color: "#475569", lineHeight: "1.5", margin: 0 }}>
+                  Mirá la clase correspondiente y desarrollá el Workbook a tu manera y a tu propio ritmo, aplicando cada ejercicio a tu emprendimiento.
+                </p>
+              </div>
+              <div style={{ background: "#F8FAFC", padding: "1.5rem", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
+                <div style={{ fontSize: "1.8rem", fontWeight: "900", color: "#D4AF37", marginBottom: "0.5rem" }}>02</div>
+                <div style={{ fontSize: "1.05rem", fontWeight: "800", color: "#0E121B", marginBottom: "0.5rem" }}>Coaching Grupal en Vivo</div>
+                <p style={{ fontSize: "0.88rem", color: "#475569", lineHeight: "1.5", margin: 0 }}>
+                  Vení a las clases en vivo: <strong>lunes, martes y miércoles de 19:00 a 20:00 hs</strong>. Un espacio para destrabar desafíos, profundizar y entrenar mentalidad juntas.
+                </p>
+              </div>
+              <div style={{ background: "#F8FAFC", padding: "1.5rem", borderRadius: "12px", border: "1px solid #E2E8F0" }}>
+                <div style={{ fontSize: "1.8rem", fontWeight: "900", color: "#D4AF37", marginBottom: "0.5rem" }}>03</div>
+                <div style={{ fontSize: "1.05rem", fontWeight: "800", color: "#0E121B", marginBottom: "0.5rem" }}>Inspirate y Potenciate</div>
+                <p style={{ fontSize: "0.88rem", color: "#475569", lineHeight: "1.5", margin: 0 }}>
+                  Inspirate con los testimonios y el contenido que se genera dentro del movimiento grupal durante los vivos y en la comunidad de Emprendedoras Conscientes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
           SECCIÓN 1 — EL MÉTODO: LOS 7 PILARES
       ═══════════════════════════════════════════════ */}
       <section className="roadmap-section roadmap-section-cream" id="pilares">

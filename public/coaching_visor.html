@@ -271,6 +271,146 @@ body {
   background: var(--yellow-g);
   border-radius: 3px 3px 0 0;
 }
+
+/* ==================================================================== */
+/* CARPETA GRANDE DEL TEMA Y SUBCARPETAS POR DÍA DE COACHING           */
+/* ==================================================================== */
+.theme-folder-master-box {
+  background: linear-gradient(145deg, rgba(20, 24, 34, 0.95) 0%, rgba(10, 13, 20, 0.98) 100%);
+  border: 2px solid var(--yellow);
+  border-radius: var(--r-lg);
+  padding: 1.8rem 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.15);
+  margin-top: 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.theme-folder-master-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--yellow-g);
+}
+.theme-folder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.theme-folder-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.theme-folder-icon {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.4));
+}
+.theme-folder-tag {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #FFF085;
+  text-transform: uppercase;
+}
+.theme-folder-title {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  margin: 0.1rem 0 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.theme-folder-badge {
+  background: rgba(255, 215, 0, 0.15);
+  color: #FFD700;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.theme-folder-desc {
+  font-size: 0.9rem;
+  color: #CBD5E1;
+  line-height: 1.55;
+  margin: 0.4rem 0 1.4rem;
+}
+.subfolders-header-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.8rem;
+}
+.subfolder-nav-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+}
+.subfolder-nav-tab {
+  background: rgba(14, 18, 26, 0.9);
+  border: 1.5px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--r-md);
+  padding: 1.15rem 1.3rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  position: relative;
+  text-align: left;
+}
+.subfolder-nav-tab:hover {
+  background: rgba(24, 28, 40, 0.95);
+  border-color: var(--yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
+}
+.subfolder-nav-tab.active {
+  background: linear-gradient(145deg, rgba(28, 32, 46, 0.98) 0%, rgba(14, 18, 26, 1) 100%);
+  border-color: var(--yellow);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.28);
+}
+.subfolder-nav-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5px;
+  left: 10%;
+  width: 80%;
+  height: 3.5px;
+  background: var(--yellow-g);
+  border-radius: 3px 3px 0 0;
+}
+.subfolder-day-pill {
+  font-size: 0.72rem;
+  font-weight: 900;
+  background: rgba(255, 215, 0, 0.15);
+  color: #FFD700;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+.subfolder-nav-tab.active .subfolder-day-pill {
+  background: var(--yellow-g);
+  color: #000000;
+  border-color: transparent;
+}
+.subfolder-nav-tab.active .tab-title {
+  color: #FFD700;
+}
+
 .tab-top-row {
   display: flex;
   justify-content: space-between;
@@ -913,43 +1053,56 @@ body {
   </section>
 
   <!-- ================================================================ -->
-  <!-- SECCIÓN DE CARPETAS DE ESTUDIO (Mobile-First Selector)           -->
+  <!-- SECCIÓN DE CARPETAS DE ESTUDIO (Estructura Temática con Subcarpetas) -->
   <!-- ================================================================ -->
   <section class="folders-section" id="carpetas">
     <div class="folders-header">
       <h2>&#128193; Carpetas de Coaching Grupal</h2>
-      <p>Toc&aacute; en cualquier carpeta para desplegar abajo sus grabaciones oficiales y materiales descargables.</p>
+      <p>Toc&aacute; en la subcarpeta del d&iacute;a para desplegar abajo sus grabaciones oficiales y materiales descargables.</p>
     </div>
 
-    <div class="folder-nav-tabs">
-      <!-- FOLDER 1: INTRO -->
-      <div class="folder-nav-tab active" id="tab-coach-intro" onclick="sw('coach-intro')">
-        <div class="tab-top-row">
-          <span class="tab-icon">👥</span>
-          <span class="tab-badge">M&oacute;dulo Base</span>
+    <!-- CARPETA GRANDE DEL TEMA: VOLVER A MÍ -->
+    <div class="theme-folder-master-box">
+      <div class="theme-folder-header">
+        <div class="theme-folder-icon-title">
+          <span class="theme-folder-icon">&#128194;</span>
+          <div>
+            <div class="theme-folder-tag">CICLO DE COACHING EN VIVO</div>
+            <h3 class="theme-folder-title">TEMA: VOLVER A M&Iacute;</h3>
+          </div>
         </div>
-        <span class="tab-title">INTRODUCCI&Oacute;N</span>
-        <span class="tab-desc">&iquest;Para qu&eacute; regresar a m&iacute;? &bull; Encuadre y Fundamentos</span>
+        <div class="theme-folder-badge">Sesiones Grupales Oficiales</div>
       </div>
 
-      <!-- FOLDER 2: MARTES -->
-      <div class="folder-nav-tab" id="tab-coach-martes" onclick="sw('coach-martes')">
-        <div class="tab-top-row">
-          <span class="tab-icon">👥</span>
-          <span class="tab-badge">Sesi&oacute;n Grabada</span>
-        </div>
-        <span class="tab-title">GRUPO MARTES</span>
-        <span class="tab-desc">Volver a M&iacute; &bull; Grabaci&oacute;n Completa en Vivo</span>
+      <p class="theme-folder-desc">
+        Espacio de autoliderazgo, alineaci&oacute;n emocional y superaci&oacute;n de trabas en tiempo real. Seleccion&aacute; abajo la subcarpeta del d&iacute;a de coaching que quer&eacute;s consultar:
+      </p>
+
+      <!-- SUBCARPETAS VINCULADAS A LOS DÍAS DE COACHING ASOCIADOS A ESTE TEMA -->
+      <div class="subfolders-header-label">
+        <span>👥 Subcarpetas por D&iacute;a de Coaching:</span>
       </div>
 
-      <!-- FOLDER 3: MIÉRCOLES -->
-      <div class="folder-nav-tab" id="tab-coach-miercoles" onclick="sw('coach-miercoles')">
-        <div class="tab-top-row">
-          <span class="tab-icon">👥</span>
-          <span class="tab-badge">Sesi&oacute;n Grabada</span>
+      <div class="subfolder-nav-tabs">
+        <!-- SUBCARPETA 1: GRUPO MARTES -->
+        <div class="subfolder-nav-tab active" id="tab-coach-martes" onclick="sw('coach-martes')">
+          <div class="tab-top-row">
+            <span class="subfolder-day-pill">📅 GRUPO MARTES</span>
+            <span class="tab-badge">Sesi&oacute;n Grabada</span>
+          </div>
+          <span class="tab-title">GRUPO MARTES</span>
+          <span class="tab-desc">Volver a M&iacute; &bull; Grabaci&oacute;n Completa en Vivo + Diario y Retos</span>
         </div>
-        <span class="tab-title">GRUPO MI&Eacute;RCOLES</span>
-        <span class="tab-desc">Volver a M&iacute; &bull; Grabaci&oacute;n Completa en Vivo</span>
+
+        <!-- SUBCARPETA 2: GRUPO MIÉRCOLES -->
+        <div class="subfolder-nav-tab" id="tab-coach-miercoles" onclick="sw('coach-miercoles')">
+          <div class="tab-top-row">
+            <span class="subfolder-day-pill">📅 GRUPO MI&Eacute;RCOLES</span>
+            <span class="tab-badge">Sesi&oacute;n Grabada</span>
+          </div>
+          <span class="tab-title">GRUPO MI&Eacute;RCOLES</span>
+          <span class="tab-desc">Volver a M&iacute; &bull; Grabaci&oacute;n Completa en Vivo + Matriz y Gu&iacute;as</span>
+        </div>
       </div>
     </div>
   </section>
@@ -959,95 +1112,11 @@ body {
   <!-- ================================================================ -->
   <div class="folder-content-container">
 
-    <!-- PANEL 1: INTRODUCCIÓN COACHING -->
-    <div class="c-panel active" id="p-coach-intro">
+    <!-- PANEL 2: GRUPO MARTES (ACTIVO POR DEFECTO) -->
+    <div class="c-panel active" id="p-coach-martes">
       <div class="active-folder-banner">
         <div class="active-folder-title-group">
-          <h3>📂 Carpeta: Introducci&oacute;n &mdash; &iquest;Para qu&eacute; regresar a m&iacute;?</h3>
-          <p>La base invisible de cualquier negocio exitoso es la solidez emocional y de autoliderazgo de quien lo conduce. Mir&aacute; la clase de encuadre oficial antes de las grabaciones de grupo.</p>
-        </div>
-        <a href="/clases_visor.html" class="btn-quick-teoricas">
-          <span>🎓 Ver Clases Te&oacute;ricas &rarr;</span>
-        </a>
-      </div>
-
-      <!-- 1. VIDEO -->
-      <div class="vid-area">
-        <iframe id="vCoachIntro" src="https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&amp;modestbranding=1" title="Introducción Coaching: Para qué regresar a mí" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-        <div class="pl-bar">
-          <span class="pl-lbl">Video Masterclass:</span>
-          <button class="pl-btn active" onclick="svidIframe('vCoachIntro','https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&amp;modestbranding=1','Introducci&oacute;n: &iquest;Para qu&eacute; regresar a m&iacute;?',this,'dCoachIntro')">&#9658; 1. &iquest;Para qu&eacute; regresar a m&iacute;?</button>
-        </div>
-      </div>
-      <div class="v-desc" id="dCoachIntro">&#128161; <strong>Encuadre Metodol&oacute;gico:</strong> Por qu&eacute; el autoconocimiento y el orden mental preceden al crecimiento comercial. Dictado por Romina Lorena Montiel.</div>
-
-      <!-- 2. AUDIO -->
-      <div class="audio-sec">
-        <div class="audio-hdr">
-          <div class="audio-ico">&#127897;</div>
-          <div class="audio-t">
-            <h4>Audio: Reconectar con el Ser Antes del Hacer</h4>
-            <p>Reflexi&oacute;n Clave &middot; Lic. Romina Lorena Montiel</p>
-          </div>
-        </div>
-        <audio controls controlsList="nodownload" class="real-audio"><source src="/audios/reflexion_producto_cliente_compra.mpeg" type="audio/mpeg"></audio>
-      </div>
-
-      <!-- 3. MATERIALES DESCARGABLES -->
-      <div class="mats">
-        <div class="mats-ttl">&#128196; Materiales Descargables de la Carpeta</div>
-        <div class="mats-grid">
-          <div class="m-card">
-            <div class="m-ico-row">
-              <div class="m-badge b-vip">WORKBOOK</div>
-              <div class="m-meta">
-                <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
-                <span>Interactivo + Descargar PDF</span>
-              </div>
-            </div>
-            <p class="m-desc">Cuaderno central para definir la br&uacute;jula de valores, l&iacute;mites y prioridades que sostienen tu emprendimiento.</p>
-            <div class="m-btns">
-              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
-              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.pdf" download class="btn-p">&#11015; Descargar PDF</a>
-            </div>
-          </div>
-
-          <div class="m-card">
-            <div class="m-ico-row">
-              <div class="m-badge b-pdf">GU&Iacute;A OFICIAL</div>
-              <div class="m-meta">
-                <h5>Gu&iacute;a Oficial: Volver a M&iacute; y Reconectar</h5>
-                <span>Lectura Online Exclusiva</span>
-              </div>
-            </div>
-            <p class="m-desc">Documento integrador con pautas de autoliderazgo y herramientas para desactivar el s&iacute;ndrome del impostor.</p>
-            <div class="m-btns">
-              <a href="/coaching_grupal/Guia_Volver_A_Mi_Reconectar_Negocio.pdf" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BOTONES DE REGRESO Y NAVEGACIÓN -->
-      <div class="return-to-folders-box">
-        <a href="/clases_visor.html" class="btn-goto-teoricas">
-          <span>🎓</span>
-          <span>Ir a Navegar las Clases Te&oacute;ricas del Curso</span>
-          <span class="btn-arrow">&rarr;</span>
-        </a>
-        <button type="button" class="btn-return-folders" onclick="scrollToFolders()">
-          <span>&#128193; Regresar a las Carpetas de Coaching</span>
-          <span class="btn-arrow">&uarr;</span>
-        </button>
-        <a href="/campus_modo_lider.html" class="btn-return-campus">&#8592; Volver al Campus Principal</a>
-      </div>
-    </div>
-
-    <!-- PANEL 2: GRUPO MARTES -->
-    <div class="c-panel" id="p-coach-martes">
-      <div class="active-folder-banner">
-        <div class="active-folder-title-group">
-          <h3>📂 Carpeta: Coaching Grupal &mdash; Grupo Martes</h3>
+          <h3>📂 Subcarpeta: Grupo Martes &mdash; Tema: Volver a M&iacute;</h3>
           <p>Grabaci&oacute;n completa del encuentro en vivo del Grupo Martes. An&aacute;lisis de casos reales, despeje de bloqueos y feedback individualizado.</p>
         </div>
         <a href="/clases_visor.html" class="btn-quick-teoricas">
@@ -1069,6 +1138,21 @@ body {
       <div class="mats">
         <div class="mats-ttl">&#128196; Materiales Descargables de la Carpeta</div>
         <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-vip">WORKBOOK CENTRAL</div>
+              <div class="m-meta">
+                <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
+                <span>Interactivo + Descargar PDF</span>
+              </div>
+            </div>
+            <p class="m-desc">Cuaderno central para definir la br&uacute;jula de valores, l&iacute;mites y prioridades que sostienen tu emprendimiento.</p>
+            <div class="m-btns">
+              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
           <div class="m-card">
             <div class="m-ico-row">
               <div class="m-badge b-vip">DIARIO 15 D&Iacute;AS</div>
@@ -1118,7 +1202,7 @@ body {
     <div class="c-panel" id="p-coach-miercoles">
       <div class="active-folder-banner">
         <div class="active-folder-title-group">
-          <h3>📂 Carpeta: Coaching Grupal &mdash; Grupo Mi&eacute;rcoles</h3>
+          <h3>📂 Subcarpeta: Grupo Mi&eacute;rcoles &mdash; Tema: Volver a M&iacute;</h3>
           <p>Grabaci&oacute;n completa del encuentro en vivo del Grupo Mi&eacute;rcoles. Profundizaci&oacute;n en alineaci&oacute;n de metas y sincron&iacute;a de equipo.</p>
         </div>
         <a href="/clases_visor.html" class="btn-quick-teoricas">
@@ -1304,7 +1388,7 @@ function sw(tabId) {
     return;
   }
   document.querySelectorAll('.c-panel').forEach(function(p){ p.classList.remove('active'); });
-  document.querySelectorAll('.folder-nav-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.folder-nav-tab, .subfolder-nav-tab').forEach(function(t){ t.classList.remove('active'); });
 
   var targetPanel = document.getElementById('p-' + tabId);
   var targetTab = document.getElementById('tab-' + tabId);

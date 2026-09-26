@@ -617,7 +617,63 @@
         }
 
         .btn-tu-hoja-de-ruta:hover .btn-arrow {
-            transform: translateY(4px);
+            transform: translateX(4px);
+        }
+
+        /* BOTÓN MINICURSO SALIR DE LA PROCRASTINACIÓN FREE PASS */
+        .btn-minicurso-freepass {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.9rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, rgba(6, 78, 59, 0.45) 100%);
+            border: 1.5px solid #10B981;
+            color: #FFFFFF;
+            padding: 0.95rem 2.2rem;
+            border-radius: 50px;
+            font-size: 0.96rem;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.25), inset 0 0 15px rgba(16, 185, 129, 0.15);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.4px;
+            width: 100%;
+            max-width: 620px;
+            text-decoration: none;
+        }
+        .btn-minicurso-freepass:hover,
+        .btn-minicurso-freepass.active {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: #000000;
+            border-color: #34D399;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.45);
+        }
+        .btn-minicurso-freepass .badge-free-pass-pill {
+            background: rgba(16, 185, 129, 0.25);
+            color: #34D399;
+            border: 1px solid #34D399;
+            padding: 0.28rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 0.8px;
+            transition: all 0.2s ease;
+        }
+        .btn-minicurso-freepass:hover .badge-free-pass-pill,
+        .btn-minicurso-freepass.active .badge-free-pass-pill {
+            background: #000000;
+            color: #34D399;
+            border-color: #000000;
+        }
+        @media (max-width: 600px) {
+            .btn-minicurso-freepass {
+                font-size: 0.82rem;
+                padding: 0.8rem 1.2rem;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
         }
 
         /* SECTION: BIENVENIDA Y MANIFIESTO DE COMUNIDAD */
@@ -2581,76 +2637,13 @@
 
                 <!-- BOTÓN TU HOJA DE RUTA DEBAJO DEL VIDEO DE BIENVENIDA -->
                 <div class="welcome-roadmap-btn-wrap" style="margin-top: 1.8rem; display: flex; justify-content: center; width: 100%;">
-                    <a href="#hoja-de-ruta" class="btn-tu-hoja-de-ruta" onclick="document.getElementById('hoja-de-ruta').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                    <a href="/curso/roadmap" class="btn-tu-hoja-de-ruta">
                         <span style="font-size: 1.35rem;">🗺️</span>
                         <span>Tu Hoja de Ruta</span>
-                        <span class="btn-arrow" style="font-size: 1.2rem; font-weight: 900; margin-left: 0.3rem;">↓</span>
+                        <span class="btn-arrow" style="font-size: 1.2rem; font-weight: 900; margin-left: 0.3rem;">&rarr;</span>
                     </a>
                 </div>
             </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- SECTOR: ÁREA DE TU HOJA DE RUTA (QUE ABRE EL BOTÓN)                -->
-        <!-- ================================================================= -->
-        <section class="roadmap-welcome-area" id="hoja-de-ruta" style="margin-bottom: 3.5rem; scroll-margin-top: 80px; display: flex; flex-direction: column; gap: 2rem;">
-            
-            <!-- PRIMERO: MENSAJE Y BIENVENIDA DE ROMINA (IMAGEN 1) -->
-            <div class="welcome-info-card" style="background: linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(13, 17, 26, 0.98) 100%); border: 1.5px solid var(--border-gold); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(212, 175, 55, 0.12); padding: 2.2rem; border-radius: var(--radius-lg);">
-                <div>
-                    <div class="mentor-quote-box" style="margin-bottom: 1.2rem;">
-                        <img src="/romina-transparente.png" alt="Romina Montiel" class="mentor-photo-circle" onerror="this.src='/romina.png'">
-                        <div class="mentor-name-title">
-                            <h4>Lic. Romina Lorena Montiel</h4>
-                            <p>Tu Mentora en Método Modo Líder</p>
-                        </div>
-                    </div>
-                    <div class="welcome-message-body" style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.3rem;">
-                        <p style="font-size: 1.05rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.5rem;">¡Bienvenida a tu espacio sagrado de transformación!</p>
-                        <p style="color: #CBD5E1;">Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
-                    </div>
-                    <ul class="welcome-checklist" style="gap: 0.65rem; margin-bottom: 1.6rem;">
-                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Presiona Play en el video para comenzar tu formación.</li>
-                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Disfruta de la bienvenida oficial de Romina.</li>
-                        <li style="font-size: 0.88rem;"><span class="check-icon">✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
-                    </ul>
-                </div>
-                <a href="#carpetas" class="btn-start-now" style="max-width: 340px;">
-                    📂 Ir a las Carpetas de Estudio ↓
-                </a>
-            </div>
-
-            <!-- LUEGO: TU HOJA DE RUTA DE 3 PASOS PARA EMPEZAR (IMAGEN 2) -->
-            <div class="manifesto-card" style="margin-bottom: 0;">
-                <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.4rem;">
-                    <span style="font-size: 1.5rem;">🗺️</span>
-                    <h2 style="font-size: 1.4rem; font-weight: 900; color: #0E121B; margin: 0;">Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
-                </div>
-                <div class="roadmap-steps-grid">
-                    <div class="roadmap-step-item">
-                        <div class="roadmap-step-num">01</div>
-                        <div class="roadmap-step-title">Mirá tu clase y completá el Workbook</div>
-                        <p class="roadmap-step-desc">
-                            Mirá la clase correspondiente y desarrollá el Workbook a tu manera y a tu propio ritmo, aplicando cada ejercicio a tu emprendimiento.
-                        </p>
-                    </div>
-                    <div class="roadmap-step-item">
-                        <div class="roadmap-step-num">02</div>
-                        <div class="roadmap-step-title">Coaching Grupal en Vivo</div>
-                        <p class="roadmap-step-desc">
-                            Vení a las clases en vivo: <strong>lunes, martes y miércoles de 19:00 a 20:00 hs</strong>. Un espacio para destrabar desafíos, profundizar y entrenar mentalidad juntas.
-                        </p>
-                    </div>
-                    <div class="roadmap-step-item">
-                        <div class="roadmap-step-num">03</div>
-                        <div class="roadmap-step-title">Inspirate y Potenciate</div>
-                        <p class="roadmap-step-desc">
-                            Inspirate con los testimonios y el contenido que se genera dentro del movimiento grupal durante los vivos y en la comunidad de Emprendedoras Conscientes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
                 <!-- SECTOR: CARPETAS DE ESTUDIO DEL CURSO -->
@@ -2658,6 +2651,16 @@
             <div class="folders-header">
                 <h2>📁 Carpetas de Estudio del Curso</h2>
                 <p>Haz click en cualquier carpeta para acceder directamente a sus videos, podcasts y archivos descargables.</p>
+            </div>
+
+            <!-- BOTÓN DESTACADO MINICURSO SALIR DE LA PROCRASTINACIÓN FREE PASS -->
+            <div class="minicurso-bar-wrap" style="display: flex; justify-content: center; margin: 1.4rem 0 2rem; width: 100%;">
+                <button type="button" class="btn-minicurso-freepass" id="btn-procrastinacion-main" onclick="switchFolder('procrastinacion')">
+                    <span style="font-size: 1.25rem;">⚡</span>
+                    <span class="btn-minicurso-text">MINICURSO SALIR DE LA PROCRASTINACIÓN</span>
+                    <span class="badge-free-pass-pill">FREE PASS</span>
+                    <span class="btn-arrow" style="font-size: 1.1rem; font-weight: 900;">&darr;</span>
+                </button>
             </div>
 
             <!-- FOLDER NAVIGATION TABS -->
@@ -2670,16 +2673,6 @@
                     </div>
                     <span class="tab-title">INTRODUCCIÓN</span>
                     <span class="tab-desc">Workflow & Metodología de Trabajo</span>
-                </div>
-
-                <!-- Tab: MINICURSO PROCRASTINACIÓN -->
-                <div class="folder-nav-tab" id="tab-procrastinacion" onclick="switchFolder('procrastinacion')">
-                    <div class="tab-top-row">
-                        <span class="tab-icon">⚡</span>
-                        <span class="tab-badge" style="background: rgba(16, 185, 129, 0.18); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); font-weight: 800; letter-spacing: 0.5px;">⚡ ACCESO FREE</span>
-                    </div>
-                    <span class="tab-title">PROCRASTINACIÓN</span>
-                    <span class="tab-desc">Salir del Modo Procrastinación</span>
                 </div>
 
                 <!-- Tab 1: CLASE 1 -->
@@ -3801,16 +3794,27 @@
             folderIds.forEach(id => {
                 const tab = document.getElementById(`tab-${id}`);
                 const panel = document.getElementById(`panel-${id}`);
-                if (tab && panel) {
+                if (tab) {
                     if (id === selectedId) {
                         tab.classList.add('active');
-                        panel.style.display = 'block';
                     } else {
                         tab.classList.remove('active');
-                        panel.style.display = 'none';
                     }
                 }
+                if (panel) {
+                    panel.style.display = (id === selectedId) ? 'block' : 'none';
+                }
             });
+
+            // Actualizar botón destacado de Minicurso Procrastinación
+            const btnProc = document.getElementById('btn-procrastinacion-main');
+            if (btnProc) {
+                if (selectedId === 'procrastinacion') {
+                    btnProc.classList.add('active');
+                } else {
+                    btnProc.classList.remove('active');
+                }
+            }
 
             // Smooth scroll to folder area
             const carpetasSec = document.getElementById('carpetas');

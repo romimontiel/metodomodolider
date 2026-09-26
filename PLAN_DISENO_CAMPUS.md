@@ -57,32 +57,34 @@ El entorno fue concebido con un estándar de **lujo sobrio y excelencia visual**
 1. **Espacio del Video de Bienvenida:**  
    - Reproductor cinematográfico HD centrado (`#welcomeVideoPlayer`) con la bienvenida oficial de Romina.
 2. **Botón Directo e Inmediato Debajo del Video:**  
-   - **`🗺️ Tu Hoja de Ruta ↓`** (`.btn-tu-hoja-de-ruta`): Botón dorado amplio, prominente y táctil que conduce directamente al área `#hoja-de-ruta`.
-3. **Orden Secuencial Estricto dentro del Área "Tu Hoja de Ruta" (`#hoja-de-ruta`):**
+   - **`🗺️ Tu Hoja de Ruta →`** (`.btn-tu-hoja-de-ruta`): Botón dorado amplio, prominente y táctil que conduce al área dedicada de Roadmap (`/curso/roadmap`), manteniendo el Campus central ágil y sin secciones redundantes.
+3. **Página Dedicada de Roadmap (`/curso/roadmap`):**
    - **1º Bloque (Imagen 1): Mensaje de Bienvenida e Instrucciones de Romina:**  
      - Card con estética nocturna y borde dorado (`.welcome-info-card`).
      - Avatar oficial de la Lic. Romina Lorena Montiel y su título de mentora.
      - Título: *"¡Bienvenida a tu espacio sagrado de transformación!"*.
-     - Detalle de bienvenida a las grabaciones, podcasts y workbooks.
-     - Checklist de 3 pasos:
-       - `✓ Presiona Play en el video para comenzar tu formación.`
-       - `✓ Disfruta de la bienvenida oficial de Romina.`
-       - `✓ Navega carpeta por carpeta para ver cada clase y material.`
-     - Botón de acción: **`📂 Ir a las Carpetas de Estudio ↓`** que lleva a la grilla `#carpetas`.
+     - Checklist de 3 pasos (Play al video, Bienvenida de Romina, Navegación de carpetas).
+     - Botón de retorno rápido: **`📂 Ir a las Carpetas de Estudio ↓`** hacia `/campus#carpetas`.
    - **2º Bloque (Imagen 2): Tu Hoja de Ruta de 3 Pasos para Empezar (`.manifesto-card`):**  
-     - **Paso 01: Mirá tu clase y completá el Workbook:** Mirá la clase correspondiente y desarrollá el Workbook a tu manera y ritmo, aplicando cada ejercicio a tu emprendimiento.
-     - **Paso 02: Coaching Grupal en Vivo:** Lunes, martes y miércoles de 19:00 a 20:00 hs para destrabar desafíos, profundizar y entrenar mentalidad juntas.
-     - **Paso 03: Inspirate y Potenciate:** Vínculo con testimonios, sinergia grupal y comunidad activa de emprendedoras.
+     - **Paso 01: Mirá tu clase y completá el Workbook.**
+     - **Paso 02: Coaching Grupal en Vivo.**
+     - **Paso 03: Inspirate y Potenciate.**
+   - **Continuación con el Método Completo:** Los 7 Pilares de Construcción y el desglose de las 17 clases.
 4. **Comunidad y Manifiesto Oficial:**  
    - Tarjeta de invitación al **Grupo Oficial de WhatsApp de Emprendedoras Conscientes**.
    - Manifiesto institucional: *"Podemos ser emprendedoras. Pero mientras exploramos nuestros productos o servicios, también podemos entrenarnos en una mentalidad de empresaria. Y eso lo cambia todo."* con la firma de Romina.
 
 ---
 
-## ⚡ 4. MINICURSO DE PROCRASTINACIÓN: BOTÓN "ACCESO FREE"
+## ⚡ 4. MINICURSO DE PROCRASTINACIÓN: BOTÓN "MINICURSO SALIR DE LA PROCRASTINACION FREE PASS"
 
-El Minicurso **"Salir del Modo Procrastinación"** se posiciona como una carpeta estratégica de alto valor dentro del Hub del Campus:
-- **Pestaña en la Grilla de Carpetas:** Identificada con el icono `⚡` y la insignia oficial: **`⚡ ACCESO FREE`** (fondo esmeralda translúcido `#10B981`, borde verde `#34D399` y tipografía destacada).
+El Minicurso **"Salir del Modo Procrastinación"** se presenta de forma destacada y autónoma en el Campus:
+- **Botón Destacado sobre las Carpetas (`.btn-minicurso-freepass`):**  
+  En lugar de ser una carpeta más en la grilla de módulos, se implementa como un botón protagónico de alta visibilidad:
+  - Texto oficial: **`MINICURSO SALIR DE LA PROCRASTINACIÓN`**
+  - Insignia luminosa: **`FREE PASS`**
+  - Estilo: Borde y acentos verde esmeralda (`#10B981` / `#34D399`), fondo degradado oscuro y efecto hover brillante.
+  - Al hacer clic: Activa el panel `#panel-procrastinacion` y realiza un desplazamiento suave hacia el contenido del minicurso.
 - **Contenido del Panel Desplegable (`#panel-procrastinacion`):**
   1. **🎬 5 Videos Grabados con Playlist Interactiva:**
      - 1. Soñás en grande pero procrastinás (Video Principal).
@@ -133,12 +135,14 @@ Espacio exclusivo de mentoría colectiva y resolución de trabas en vivo con Rom
 - **Paleta Cromática:** Negro profundo `#07090E` / `#000000`, superficie `#0E121A`, amarillo vibrante `#FFD700`, gradiente oro `#FFF085` a `#FFD700`, y bordes luminosos `rgba(255, 215, 0, 0.35)`.
 - **Navegación Superior en Cabecera (Header):**
   - Se sustituyó el icono/badge de "Alumna Verificada" por el botón directo: **`🎓 Ir a las Clases Teóricas →`** (`.hdr-teoricas-btn`), permitiendo a las alumnas alternar al instante entre el coaching y las clases teóricas troncales (`clases_visor.html`).
-- **Navegación Interna en las Carpetas:**
-  - **Banner de Carpeta:** Botón rápido **`🎓 Ver Clases Teóricas →`** (`.btn-quick-teoricas`).
-  - **Pie de Material (Caja de Retorno):** Botón principal **`🎓 Ir a Navegar las Clases Teóricas del Curso →`** (`.btn-goto-teoricas`) antes de los botones de regresar a carpetas y al campus.
-- **Carpeta 1: Introducción — ¿Para qué regresar a mí?** — Masterclass en video, audio de sintonización y Workbook "Mis Valores, Mi Vida y Mi Negocio" interactivo y descargable.
-- **Carpeta 2: Volver a Mí · Grupo Martes** — Grabación completa en vivo (`ojcVKLS0Rzw` / `https://www.youtube.com/watch?v=ojcVKLS0Rzw`), Diario "15 Días para Volver a Mí" y Reto "7 Días para Reconectar Conmigo".
-- **Carpeta 3: Volver a Mí · Grupo Miércoles** — Grabación completa en vivo, Matriz de Valores y Protocolo de Autoliderazgo.
+- **Arquitectura y Estructura Oficial de Diseño (Regla Institucional de Jerarquía):**
+  - **Carpeta Contenedora Principal por Tema:** Cada ciclo de coaching se organiza dentro de una **Carpeta Grande del Tema** (`.theme-folder-master-box`) con el formato obligatorio:  
+    **`TEMA: [NOMBRE DEL TEMA]`** (ejemplo actual: **`TEMA: VOLVER A MÍ`**).
+  - **Eliminación de Carpeta 'Introducción' Aislada:** No se muestran carpetas sueltas de introducción.
+  - **Subcarpetas Vinculadas a los Días de Coaching Asociados al Tema:** Dentro de la carpeta grande del tema se alojan las subcarpetas de los días de encuentro:
+    - **Subcarpeta: GRUPO MARTES** (`#tab-coach-martes` / `#p-coach-martes`): Grabación completa en vivo (`ojcVKLS0Rzw`), Diario "15 Días para Volver a Mí", Reto "7 Días para Reconectar Conmigo" y Workbook Central interactivo/descargable.
+    - **Subcarpeta: GRUPO MIÉRCOLES** (`#tab-coach-miercoles` / `#p-coach-miercoles`): Grabación completa en vivo (`O9Tf3gBkdFo`), Matriz de Valores, Protocolo de Autoliderazgo y Workbook Central interactivo/descargable.
+  - **Despliegue y Retorno:** Al tocar cada subcarpeta, se abre el material correspondiente en la zona inferior, concluyendo siempre con el botón a Clases Teóricas y el botón obligatorio `Regresar a las Carpetas de Coaching`.
 
 ### 🚀 ÁREA 3: MI EMPRENDIMIENTO (`emprendimiento_visor.html`)
 Networking colaborativo, visibilidad de marca y presentación de modelos de negocio:

@@ -187,76 +187,13 @@ export default function CampusClient() {
 
                 {/* BOTÓN TU HOJA DE RUTA DEBAJO DEL VIDEO DE BIENVENIDA */}
                 <div className="welcome-roadmap-btn-wrap" style={{ marginTop: "1.8rem", display: "flex", justifyContent: "center", width: "100%" }}>
-                    <a href="#hoja-de-ruta" className="btn-tu-hoja-de-ruta" onClick={(e) => { e.preventDefault(); document.getElementById('hoja-de-ruta')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+                    <a href="/curso/roadmap" className="btn-tu-hoja-de-ruta">
                         <span style={{ fontSize: "1.35rem" }}>🗺️</span>
                         <span>Tu Hoja de Ruta</span>
-                        <span className="btn-arrow" style={{ fontSize: "1.2rem", fontWeight: "900", marginLeft: "0.3rem" }}>↓</span>
+                        <span className="btn-arrow" style={{ fontSize: "1.2rem", fontWeight: "900", marginLeft: "0.3rem" }}>→</span>
                     </a>
                 </div>
             </div>
-        </section>
-
-        {/* ================================================================= */}
-        {/* SECTOR: ÁREA DE TU HOJA DE RUTA (QUE ABRE EL BOTÓN)                */}
-        {/* ================================================================= */}
-        <section className="roadmap-welcome-area" id="hoja-de-ruta" style={{ marginBottom: "3.5rem", scrollMarginTop: "80px", display: "flex", flexDirection: "column", gap: "2rem" }}>
-            
-            {/* PRIMERO: MENSAJE Y BIENVENIDA DE ROMINA (IMAGEN 1) */}
-            <div className="welcome-info-card" style={{ background: "linear-gradient(135deg, rgba(20, 26, 38, 0.95) 0%, rgba(13, 17, 26, 0.98) 100%)", border: "1.5px solid var(--border-gold)", boxShadow: "0 15px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(212, 175, 55, 0.12)", padding: "2.2rem", borderRadius: "var(--radius-lg)" }}>
-                <div>
-                    <div className="mentor-quote-box" style={{ marginBottom: "1.2rem" }}>
-                        <img src="/romina-transparente.png" alt="Romina Montiel" className="mentor-photo-circle" />
-                        <div className="mentor-name-title">
-                            <h4>Lic. Romina Lorena Montiel</h4>
-                            <p>Tu Mentora en Método Modo Líder</p>
-                        </div>
-                    </div>
-                    <div className="welcome-message-body" style={{ fontSize: "0.92rem", lineHeight: "1.6", marginBottom: "1.3rem" }}>
-                        <p style={{ fontSize: "1.05rem", fontWeight: "800", color: "#FFFFFF", marginBottom: "0.5rem" }}>¡Bienvenida a tu espacio sagrado de transformación!</p>
-                        <p style={{ color: "#CBD5E1" }}>Aquí tienes todas tus grabaciones en video en alta calidad listas para reproducir, tus podcasts de audio y los cuadernos de trabajo descargables.</p>
-                    </div>
-                    <ul className="welcome-checklist" style={{ gap: "0.65rem", marginBottom: "1.6rem" }}>
-                        <li style={{ fontSize: "0.88rem" }}><span className="check-icon">✓</span> Presiona Play en el video para comenzar tu formación.</li>
-                        <li style={{ fontSize: "0.88rem" }}><span className="check-icon">✓</span> Disfruta de la bienvenida oficial de Romina.</li>
-                        <li style={{ fontSize: "0.88rem" }}><span className="check-icon">✓</span> Navega carpeta por carpeta para ver cada clase y material.</li>
-                    </ul>
-                </div>
-                <a href="#carpetas" className="btn-start-now" style={{ maxWidth: "340px" }} onClick={(e) => { e.preventDefault(); document.getElementById('carpetas')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                    📂 Ir a las Carpetas de Estudio ↓
-                </a>
-            </div>
-
-            {/* LUEGO: TU HOJA DE RUTA DE 3 PASOS PARA EMPEZAR (IMAGEN 2) */}
-            <div className="manifesto-card" style={{ marginBottom: 0 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "1.4rem" }}>
-                    <span style={{ fontSize: "1.5rem" }}>🗺️</span>
-                    <h2 style={{ fontSize: "1.4rem", fontWeight: "900", color: "#0E121B", margin: 0 }}>Tu Hoja de Ruta de 3 Pasos para Empezar</h2>
-                </div>
-                <div className="roadmap-steps-grid">
-                    <div className="roadmap-step-item">
-                        <div className="roadmap-step-num">01</div>
-                        <div className="roadmap-step-title">Mirá tu clase y completá el Workbook</div>
-                        <p className="roadmap-step-desc">
-                            Mirá la clase correspondiente y desarrollá el Workbook a tu manera y a tu propio ritmo, aplicando cada ejercicio a tu emprendimiento.
-                        </p>
-                    </div>
-                    <div className="roadmap-step-item">
-                        <div className="roadmap-step-num">02</div>
-                        <div className="roadmap-step-title">Coaching Grupal en Vivo</div>
-                        <p className="roadmap-step-desc">
-                            Vení a las clases en vivo: <strong>lunes, martes y miércoles de 19:00 a 20:00 hs</strong>. Un espacio para destrabar desafíos, profundizar y entrenar mentalidad juntas.
-                        </p>
-                    </div>
-                    <div className="roadmap-step-item">
-                        <div className="roadmap-step-num">03</div>
-                        <div className="roadmap-step-title">Inspirate y Potenciate</div>
-                        <p className="roadmap-step-desc">
-                            Inspirate con los testimonios y el contenido que se genera dentro del movimiento grupal durante los vivos y en la comunidad de Emprendedoras Conscientes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
         {/* ================================================================= */}
@@ -377,6 +314,16 @@ export default function CampusClient() {
                 <p>Haz click en cualquier carpeta para acceder directamente a sus videos, podcasts y archivos descargables.</p>
             </div>
 
+            {/* BOTÓN DESTACADO MINICURSO SALIR DE LA PROCRASTINACIÓN FREE PASS */}
+            <div className="minicurso-bar-wrap" style={{ display: "flex", justifyContent: "center", margin: "1.4rem 0 2rem", width: "100%" }}>
+                <button type="button" className={`btn-minicurso-freepass ${activeFolder === "procrastinacion" ? "active" : ""}`} id="btn-procrastinacion-main" onClick={() => switchFolder("procrastinacion")}>
+                    <span style={{ fontSize: "1.25rem" }}>⚡</span>
+                    <span className="btn-minicurso-text">MINICURSO SALIR DE LA PROCRASTINACIÓN</span>
+                    <span className="badge-free-pass-pill">FREE PASS</span>
+                    <span className="btn-arrow" style={{ fontSize: "1.1rem", fontWeight: "900" }}>↓</span>
+                </button>
+            </div>
+
             {/* FOLDER NAVIGATION TABS */}
             <div className="folder-nav-tabs">
                 {/* Tab 0: INTRODUCCIÓN */}
@@ -387,16 +334,6 @@ export default function CampusClient() {
                     </div>
                     <span className="tab-title">INTRODUCCIÓN</span>
                     <span className="tab-desc">Workflow & Metodología de Trabajo</span>
-                </div>
-
-                {/* Tab: MINICURSO PROCRASTINACIÓN */}
-                <div className={`folder-nav-tab ${activeFolder === "procrastinacion" ? "active" : ""}`} id="tab-procrastinacion" onClick={() => switchFolder("procrastinacion")} style={{ cursor: "pointer" }}>
-                    <div className="tab-top-row">
-                        <span className="tab-icon">⚡</span>
-                        <span className="tab-badge" style={{ background: "rgba(16, 185, 129, 0.18)", color: "#34D399", border: "1px solid rgba(16, 185, 129, 0.4)", fontWeight: 800, letterSpacing: "0.5px" }}>⚡ ACCESO FREE</span>
-                    </div>
-                    <span className="tab-title">PROCRASTINACIÓN</span>
-                    <span className="tab-desc">Salir del Modo Procrastinación</span>
                 </div>
 
                 {/* Tab 1: CLASE 1 */}
