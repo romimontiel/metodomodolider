@@ -145,16 +145,22 @@ body {
   transition: width 0.4s ease;
 }
 
-/* MOBILE CHIPS BAR */
+/* MOBILE CHIPS BAR (STICKY EN LA PARTE SUPERIOR DEL CELULAR) */
 .mob-bar {
   display: none;
-  background: rgba(10, 13, 20, 0.98);
-  border-bottom: 1px solid var(--border);
-  padding: 0.7rem 0.8rem;
+  background: rgba(7, 9, 14, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1.5px solid var(--border-g);
+  padding: 0.75rem 0.9rem;
   overflow-x: auto;
-  gap: 0.5rem;
+  gap: 0.6rem;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  position: sticky;
+  top: 62px;
+  z-index: 150;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 .mob-bar::-webkit-scrollbar { display: none; }
 .mob-chip {
@@ -939,6 +945,7 @@ body {
   <div class="mob-chip coaching-chip" id="mobCoach1" onclick="sw('coach1')">&#128081; Volver a M&iacute; (Grupo Martes)</div>
   <div class="mob-chip coaching-chip" id="mobCoach3" onclick="sw('coach3')">&#128081; Volver a M&iacute; (Grupo Mi&eacute;rcoles)</div>
   <div class="mob-chip coaching-chip" id="mobEmprende" onclick="sw('emprende')" style="border-color:rgba(255,215,0,0.5); color:#FFD700;">&#128640; Mi Emprendimiento</div>
+  <div class="mob-chip coaching-chip" id="mobMusica" onclick="sw('musica')" style="border-color:rgba(167,139,250,0.5); color:#C4B5FD;">&#127925; Redes Positivas</div>
 </div>
 
 <div class="layout">
@@ -1049,10 +1056,24 @@ body {
       <span class="s-lock-ico" id="lockEmprende">&#128274;</span>
     </div>
 
+    <div class="s-div"></div>
+    <div class="sec-lbl" style="color:#A78BFA; font-weight:900; letter-spacing:0.8px;">
+      <span>🧠 MÚSICA &amp; REPROGRAMACIÓN</span>
+    </div>
+
+    <div class="s-item coaching-item" id="siMusica" onclick="sw('musica')" style="border-left-color:#A78BFA;">
+      <div class="s-num" style="font-weight:900; background:rgba(167,139,250,0.15); color:#C4B5FD; border-color:rgba(167,139,250,0.4);">🎵</div>
+      <div class="s-info">
+        <div class="s-title" style="color:#FFF;">Música: Nuevas Redes Positivas</div>
+        <div class="s-sub">7 Audios &middot; Meditación &middot; Foco</div>
+      </div>
+      <span class="s-lock-ico" id="lockMusica">&#128274;</span>
+    </div>
+
     <!-- SIDEBAR AUTH BOX -->
     <div class="side-auth-box">
       <div class="side-auth-card" id="sideAuthCard">
-        <p id="sideAuthMsg">Acceso a partir de Clase 3 y Coachings requiere clave de Alumna Activa.<br><span style="font-size:0.75rem; color:#D4AF37; display:block; margin-top:4px;">✉️ Las contraseñas se envían por correo electrónico.</span></p>
+        <p id="sideAuthMsg">Acceso a partir de Clase 3 y Coachings requiere clave de Alumna Activa.</p>
         <button class="btn-auth-unlock" id="btnSideAuth" onclick="toggleAuthModal()">&#128273; Ingresar Clave</button>
       </div>
     </div>
@@ -1778,6 +1799,183 @@ body {
 
       <div class="c-nav">
         <button class="btn-nav coaching-nav" onclick="sw('coach3')">&#8592; Carpeta: Volver a M&iacute; &mdash; Grupo Mi&eacute;rcoles</button>
+        <button class="btn-nav" style="background:rgba(167,139,250,0.15); border-color:#A78BFA; color:#DDD6FE;" onclick="sw('musica')">Carpeta: M&uacute;sica Nuevas Redes &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL: MÚSICA PARA CREAR NUEVAS REDES POSITIVAS               -->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="pMusica">
+      <div class="c-hero" style="border-color: rgba(167, 139, 250, 0.35); background: linear-gradient(135deg, rgba(167, 139, 250, 0.12) 0%, rgba(212, 175, 55, 0.08) 50%, rgba(14, 18, 28, 0.95) 100%);">
+        <div class="c-tag" style="background:rgba(167, 139, 250, 0.15); border-color:rgba(167, 139, 250, 0.4); color:#C4B5FD;">&#128193; CARPETA OFICIAL DEL DRIVE &bull; M&Uacute;SICA PARA CREAR REDES POSITIVAS NUEVAS</div>
+        <h1>Frecuencia y Reprogramaci&oacute;n: <span style="background: linear-gradient(135deg, #C4B5FD 0%, #A78BFA 50%, #F59E0B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Crear Nuevas Redes Positivas</span></h1>
+        <p class="c-desc">Colecci&oacute;n oficial de 7 audios de neuroplasticidad, meditaciones guiadas paso a paso, mantras de sanaci&oacute;n y frecuencias de alta vibraci&oacute;n seleccionadas por la <strong>Lic. Romina Lorena Montiel</strong> para reprogramar tu mente subconsciente, desactivar bloqueos limitantes y liderar tu negocio desde la certeza y la gratitud.</p>
+        <div class="c-chips">
+          <span class="c-chip" style="background:rgba(167, 139, 250, 0.2); color:#DDD6FE; border-color:rgba(167, 139, 250, 0.45); font-weight:800;">&#127911; 7 Audios Oficiales</span>
+          <span class="c-chip" style="border-color:rgba(212, 175, 55, 0.35); color:var(--gold);">&#129504; Neuroplasticidad &amp; Foco</span>
+          <span class="c-chip">&#10024; Meditaciones Guiadas</span>
+          <span class="c-chip">&#127926; Mantras &amp; Afrobeats</span>
+          <span class="c-chip" style="background:rgba(16,185,129,0.15); color:#34D399; border-color:rgba(16,185,129,0.3);">&#128275; Alumnas Activas</span>
+        </div>
+      </div>
+
+      <!-- MASTER AUDIO SUITE PLAYER -->
+      <div class="audio-sec" style="border: 1.5px solid rgba(167, 139, 250, 0.4); background: linear-gradient(145deg, #131124 0%, #0E121C 100%); box-shadow: 0 12px 35px rgba(124, 58, 237, 0.15); padding: 1.8rem; margin-bottom: 2.2rem; border-radius: var(--r-md);">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1.2rem;">
+          <div style="display:flex; align-items:center; gap:1rem;">
+            <div style="width:52px; height:52px; border-radius:14px; background:linear-gradient(135deg, #8B5CF6, #6D28D9); display:flex; align-items:center; justify-content:center; font-size:1.6rem; box-shadow:0 0 20px rgba(139,92,246,0.4); flex-shrink:0;">
+              &#127925;
+            </div>
+            <div>
+              <span style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:#A78BFA; font-weight:800; display:block;">Reproductor Principal &bull; Modo Inmersivo</span>
+              <h3 id="masterTrackTitle" style="font-size:1.15rem; font-weight:800; color:#FFF; margin:0.2rem 0;">1. Creer en Vos y en tus Sue&ntilde;os Potencia tu Poder</h3>
+              <p id="masterTrackDesc" style="font-size:0.78rem; color:var(--muted); margin:0;">Audio de Reprogramaci&oacute;n y Certeza Interior &middot; Duraci&oacute;n: 19:27 min</p>
+            </div>
+          </div>
+          <div style="background:rgba(167,139,250,0.1); border:1px solid rgba(167,139,250,0.3); padding:0.4rem 0.9rem; border-radius:50px; font-size:0.74rem; color:#DDD6FE; font-weight:700;">
+            &#128081; Audio Oficial Alumnas
+          </div>
+        </div>
+
+        <audio id="masterMusicAudio" controls controlsList="nodownload" class="real-audio" style="width:100%; border-radius:10px; margin-bottom:1.2rem;">
+          <source id="masterMusicSource" src="/musica_redes_positivas/01_creer_en_vos_y_en_tus_suenos.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- QUICK PLAYLIST PILLS -->
+        <div style="display:flex; gap:0.5rem; overflow-x:auto; padding-bottom:0.4rem; scrollbar-width:thin;">
+          <button class="pl-btn active" id="btnTrack1" onclick="playMusicTrack(1, '/musica_redes_positivas/01_creer_en_vos_y_en_tus_suenos.mp3', '1. Creer en Vos y en tus Sue&ntilde;os Potencia tu Poder', 'Audio de Reprogramaci&oacute;n y Certeza Interior &middot; Duraci&oacute;n: 19:27 min', this)">&#9658; 1. Creer en Vos</button>
+          <button class="pl-btn" id="btnTrack2" onclick="playMusicTrack(2, '/musica_redes_positivas/02_despierta_tu_mente_meditacion_romina_montiel.mp3', '2. Despierta tu Mente, Enf&oacute;cate en tus Logros', 'Meditaci&oacute;n Guiada Paso a Paso con Romina Lorena Montiel &middot; Duraci&oacute;n: 17:25 min', this)">&#9658; 2. Meditaci&oacute;n Guiada</button>
+          <button class="pl-btn" id="btnTrack3" onclick="playMusicTrack(3, '/musica_redes_positivas/03_preparar_tu_dia_reconfigurar_energia.mp3', '3. Preparar tu D&iacute;a y Reconfigurar tu Energ&iacute;a', 'Sintonizaci&oacute;n Matutina &middot; Duraci&oacute;n: 15:35 min', this)">&#9658; 3. Preparar tu D&iacute;a</button>
+          <button class="pl-btn" id="btnTrack4" onclick="playMusicTrack(4, '/musica_redes_positivas/04_mantra_conectar_alma_y_sanarla.mp3', '4. Mantra para Conectar con tu Alma y Sanarla', 'Mantra Profundo &amp; Sanaci&oacute;n Interior &middot; Duraci&oacute;n: 1:01:51 hrs', this)">&#9658; 4. Mantra del Alma</button>
+          <button class="pl-btn" id="btnTrack5" onclick="playMusicTrack(5, '/musica_redes_positivas/05_yo_me_bendigo.mp3', '5. Yo Me Bendigo', 'Autoliderazgo &amp; Decreto de Merecimiento &middot; Duraci&oacute;n: 04:20 min', this)">&#9658; 5. Yo Me Bendigo</button>
+          <button class="pl-btn" id="btnTrack6" onclick="playMusicTrack(6, '/musica_redes_positivas/06_yo_soy_sanacion.mp3', '6. Yo Soy Sanaci&oacute;n', 'Reconexi&oacute;n Som&aacute;tica &amp; Paz Interior &middot; Duraci&oacute;n: 13:01 min', this)">&#9658; 6. Yo Soy Sanaci&oacute;n</button>
+          <button class="pl-btn" id="btnTrack7" onclick="playMusicTrack(7, '/musica_redes_positivas/07_afrobeats_alegria_paz_buena_energia.mp3', '7. Afrobeats de la Ma&ntilde;ana: Alegr&iacute;a, Paz y Buena Energ&iacute;a', 'Sesi&oacute;n Instrumental de Alta Vibraci&oacute;n &amp; Flow &middot; Duraci&oacute;n: 1:25:21 hrs', this)">&#9658; 7. Afrobeats Ma&ntilde;ana</button>
+        </div>
+      </div>
+
+      <!-- DETAILED TRACK CARDS GRID -->
+      <div class="mats">
+        <div class="mats-ttl" style="color:#C4B5FD;">&#127926; Colecci&oacute;n Completa de 7 Pistas &middot; Carpeta de Estudio</div>
+        <div class="mats-grid">
+
+          <!-- Track 1 -->
+          <div class="m-card" style="border-color:rgba(167,139,250,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge" style="background:rgba(167,139,250,0.18); color:#DDD6FE; border:1px solid rgba(167,139,250,0.35);">01</div>
+              <div class="m-meta">
+                <h5>Creer en Vos y en tus Sue&ntilde;os Potencia tu Poder</h5>
+                <span>19:27 min &middot; Reprogramaci&oacute;n Subconsciente</span>
+              </div>
+            </div>
+            <p class="m-desc">Activa la convicci&oacute;n interior de merecimiento, disuelve el miedo al qu&eacute; dir&aacute;n y consolida tu determinaci&oacute;n para tomar decisiones valientes en tu negocio.</p>
+            <audio controls controlsList="nodownload" class="real-audio" style="margin-top:auto;"><source src="/musica_redes_positivas/01_creer_en_vos_y_en_tus_suenos.mp3" type="audio/mpeg"></audio>
+            <div class="m-btns" style="margin-top:0.4rem;">
+              <button type="button" class="btn-p" style="border-color:#A78BFA; color:#DDD6FE;" onclick="playMusicTrack(1, '/musica_redes_positivas/01_creer_en_vos_y_en_tus_suenos.mp3', '1. Creer en Vos y en tus Sue&ntilde;os Potencia tu Poder', 'Audio de Reprogramaci&oacute;n y Certeza Interior &middot; Duraci&oacute;n: 19:27 min', document.getElementById('btnTrack1'))">&#9658; Reproducir Principal</button>
+            </div>
+          </div>
+
+          <!-- Track 2 -->
+          <div class="m-card" style="border-color:rgba(167,139,250,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge" style="background:rgba(167,139,250,0.18); color:#DDD6FE; border:1px solid rgba(167,139,250,0.35);">02</div>
+              <div class="m-meta">
+                <h5>Despierta tu Mente, Enf&oacute;cate en tus Logros</h5>
+                <span>17:25 min &middot; Meditaci&oacute;n Guiada &middot; Romina Lorena Montiel</span>
+              </div>
+            </div>
+            <p class="m-desc">Guiada paso a paso por Romina. Calma el ruido mental, conecta con el prop&oacute;sito de tus proyectos y enfoca tu energ&iacute;a creadora en tus metas concretas.</p>
+            <audio controls controlsList="nodownload" class="real-audio" style="margin-top:auto;"><source src="/musica_redes_positivas/02_despierta_tu_mente_meditacion_romina_montiel.mp3" type="audio/mpeg"></audio>
+            <div class="m-btns" style="margin-top:0.4rem;">
+              <button type="button" class="btn-p" style="border-color:#A78BFA; color:#DDD6FE;" onclick="playMusicTrack(2, '/musica_redes_positivas/02_despierta_tu_mente_meditacion_romina_montiel.mp3', '2. Despierta tu Mente, Enf&oacute;cate en tus Logros', 'Meditaci&oacute;n Guiada Paso a Paso con Romina Lorena Montiel &middot; Duraci&oacute;n: 17:25 min', document.getElementById('btnTrack2'))">&#9658; Reproducir Principal</button>
+            </div>
+          </div>
+
+          <!-- Track 3 -->
+          <div class="m-card" style="border-color:rgba(167,139,250,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge" style="background:rgba(167,139,250,0.18); color:#DDD6FE; border:1px solid rgba(167,139,250,0.35);">03</div>
+              <div class="m-meta">
+                <h5>Preparar tu D&iacute;a y Reconfigurar tu Energ&iacute;a</h5>
+                <span>15:35 min &middot; Sintonizaci&oacute;n Matutina</span>
+              </div>
+            </div>
+            <p class="m-desc">Audio estrat&eacute;gico de la ma&ntilde;ana para setear una frecuencia de liderazgo proactivo, despejando la fatiga o la ansiedad antes de accionar.</p>
+            <audio controls controlsList="nodownload" class="real-audio" style="margin-top:auto;"><source src="/musica_redes_positivas/03_preparar_tu_dia_reconfigurar_energia.mp3" type="audio/mpeg"></audio>
+            <div class="m-btns" style="margin-top:0.4rem;">
+              <button type="button" class="btn-p" style="border-color:#A78BFA; color:#DDD6FE;" onclick="playMusicTrack(3, '/musica_redes_positivas/03_preparar_tu_dia_reconfigurar_energia.mp3', '3. Preparar tu D&iacute;a y Reconfigurar tu Energ&iacute;a', 'Sintonizaci&oacute;n Matutina &middot; Duraci&oacute;n: 15:35 min', document.getElementById('btnTrack3'))">&#9658; Reproducir Principal</button>
+            </div>
+          </div>
+
+          <!-- Track 4 -->
+          <div class="m-card" style="border-color:rgba(167,139,250,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge" style="background:rgba(167,139,250,0.18); color:#DDD6FE; border:1px solid rgba(167,139,250,0.35);">04</div>
+              <div class="m-meta">
+                <h5>Mantra para Conectar con tu Alma y Sanarla</h5>
+                <span>1:01:51 hrs &middot; Mantra Inmersivo &middot; Sanaci&oacute;n</span>
+              </div>
+            </div>
+            <p class="m-desc">Sesi&oacute;n extendida de frecuencias arm&oacute;nicas continuas. Ideal para soltar cargas emocionales profundas, restaurar tu paz interior y reconectar con tu esencia.</p>
+            <audio controls controlsList="nodownload" class="real-audio" style="margin-top:auto;"><source src="/musica_redes_positivas/04_mantra_conectar_alma_y_sanarla.mp3" type="audio/mpeg"></audio>
+            <div class="m-btns" style="margin-top:0.4rem;">
+              <button type="button" class="btn-p" style="border-color:#A78BFA; color:#DDD6FE;" onclick="playMusicTrack(4, '/musica_redes_positivas/04_mantra_conectar_alma_y_sanarla.mp3', '4. Mantra para Conectar con tu Alma y Sanarla', 'Mantra Profundo &amp; Sanaci&oacute;n Interior &middot; Duraci&oacute;n: 1:01:51 hrs', document.getElementById('btnTrack4'))">&#9658; Reproducir Principal</button>
+            </div>
+          </div>
+
+          <!-- Track 5 -->
+          <div class="m-card" style="border-color:rgba(167,139,250,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge" style="background:rgba(167,139,250,0.18); color:#DDD6FE; border:1px solid rgba(167,139,250,0.35);">05</div>
+              <div class="m-meta">
+                <h5>Yo Me Bendigo</h5>
+                <span>04:20 min &middot; Decreto de Alta Potencia</span>
+              </div>
+            </div>
+            <p class="m-desc">P&iacute;ldora concentrada de afirmaci&oacute;n positiva para bendecir tu capacidad, tu prosperidad, tus decisiones y la evoluci&oacute;n constante de tu proyecto.</p>
+            <audio controls controlsList="nodownload" class="real-audio" style="margin-top:auto;"><source src="/musica_redes_positivas/05_yo_me_bendigo.mp3" type="audio/mpeg"></audio>
+            <div class="m-btns" style="margin-top:0.4rem;">
+              <button type="button" class="btn-p" style="border-color:#A78BFA; color:#DDD6FE;" onclick="playMusicTrack(5, '/musica_redes_positivas/05_yo_me_bendigo.mp3', '5. Yo Me Bendigo', 'Autoliderazgo &amp; Decreto de Merecimiento &middot; Duraci&oacute;n: 04:20 min', document.getElementById('btnTrack5'))">&#9658; Reproducir Principal</button>
+            </div>
+          </div>
+
+          <!-- Track 6 -->
+          <div class="m-card" style="border-color:rgba(167,139,250,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge" style="background:rgba(167,139,250,0.18); color:#DDD6FE; border:1px solid rgba(167,139,250,0.35);">06</div>
+              <div class="m-meta">
+                <h5>Yo Soy Sanaci&oacute;n</h5>
+                <span>13:01 min &middot; Armonizaci&oacute;n Vibracional</span>
+              </div>
+            </div>
+            <p class="m-desc">Reconecta con la armon&iacute;a de tu cuerpo y mente. Disipa estados de tensi&oacute;n o sobreexigencia restableciendo el balance vital que una empresaria necesita.</p>
+            <audio controls controlsList="nodownload" class="real-audio" style="margin-top:auto;"><source src="/musica_redes_positivas/06_yo_soy_sanacion.mp3" type="audio/mpeg"></audio>
+            <div class="m-btns" style="margin-top:0.4rem;">
+              <button type="button" class="btn-p" style="border-color:#A78BFA; color:#DDD6FE;" onclick="playMusicTrack(6, '/musica_redes_positivas/06_yo_soy_sanacion.mp3', '6. Yo Soy Sanaci&oacute;n', 'Reconexi&oacute;n Som&aacute;tica &amp; Paz Interior &middot; Duraci&oacute;n: 13:01 min', document.getElementById('btnTrack6'))">&#9658; Reproducir Principal</button>
+            </div>
+          </div>
+
+          <!-- Track 7 -->
+          <div class="m-card" style="border-color:rgba(167,139,250,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge" style="background:rgba(167,139,250,0.18); color:#DDD6FE; border:1px solid rgba(167,139,250,0.35);">07</div>
+              <div class="m-meta">
+                <h5>Afrobeats de la Ma&ntilde;ana: Alegr&iacute;a, Paz y Buena Energ&iacute;a</h5>
+                <span>1:25:21 hrs &middot; Sesi&oacute;n Flow &middot; Alta Vibraci&oacute;n</span>
+              </div>
+            </div>
+            <p class="m-desc">M&uacute;sica r&iacute;tmica luminosa y motivadora para trabajar en estado de flujo creativo, dise&ntilde;ar propuestas, empaquetar servicios y celebrar cada avance.</p>
+            <audio controls controlsList="nodownload" class="real-audio" style="margin-top:auto;"><source src="/musica_redes_positivas/07_afrobeats_alegria_paz_buena_energia.mp3" type="audio/mpeg"></audio>
+            <div class="m-btns" style="margin-top:0.4rem;">
+              <button type="button" class="btn-p" style="border-color:#A78BFA; color:#DDD6FE;" onclick="playMusicTrack(7, '/musica_redes_positivas/07_afrobeats_alegria_paz_buena_energia.mp3', '7. Afrobeats de la Ma&ntilde;ana: Alegr&iacute;a, Paz y Buena Energ&iacute;a', 'Sesi&oacute;n Instrumental de Alta Vibraci&oacute;n &amp; Flow &middot; Duraci&oacute;n: 1:25:21 hrs', document.getElementById('btnTrack7'))">&#9658; Reproducir Principal</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav coaching-nav" onclick="sw('emprende')">&#8592; Carpeta: Mi Emprendimiento</button>
         <a href="/campus_modo_lider.html" class="btn-nav primary">&#127968; Volver al Campus Principal &#8594;</a>
       </div>
     </div>
@@ -1843,16 +2041,17 @@ body {
 <script>
 // Progress metadata
 var progressMap = {
-  1: { w: '11%', t: 'Carpeta 1 de 9' },
-  2: { w: '22%', t: 'Carpeta 2 de 9' },
-  3: { w: '33%', t: 'Carpeta 3 de 9' },
-  4: { w: '44%', t: 'Carpeta 4 de 9' },
-  5: { w: '55%', t: 'Carpeta 5 de 9' },
-  'coach2': { w: '66%', t: 'Coaching: Introducci\u00f3n' },
-  'coach1': { w: '77%', t: 'Coaching: Grupo Martes' },
-  'coach3': { w: '88%', t: 'Coaching: Grupo Mi\u00e9rcoles' },
-  'emprende': { w: '100%', t: 'Mi Emprendimiento' },
-  'coaching': { w: '66%', t: 'Coaching: Introducci\u00f3n' }
+  1: { w: '10%', t: 'Carpeta 1 de 10' },
+  2: { w: '20%', t: 'Carpeta 2 de 10' },
+  3: { w: '30%', t: 'Carpeta 3 de 10' },
+  4: { w: '40%', t: 'Carpeta 4 de 10' },
+  5: { w: '50%', t: 'Carpeta 5 de 10' },
+  'coach2': { w: '60%', t: 'Coaching: Introducci\u00f3n' },
+  'coach1': { w: '70%', t: 'Coaching: Grupo Martes' },
+  'coach3': { w: '80%', t: 'Coaching: Grupo Mi\u00e9rcoles' },
+  'emprende': { w: '90%', t: 'Mi Emprendimiento' },
+  'musica': { w: '100%', t: 'M\u00fasica: Nuevas Redes Positivas' },
+  'coaching': { w: '60%', t: 'Coaching: Introducci\u00f3n' }
 };
 
 var pendingTarget = null;
@@ -1882,7 +2081,7 @@ function updateAuthUI() {
   }
 
   // Sidebar locks
-  var locks = ['lock3', 'lock4', 'lock5', 'lockCoach1', 'lockCoach2', 'lockCoach3', 'lockEmprende'];
+  var locks = ['lock3', 'lock4', 'lock5', 'lockCoach1', 'lockCoach2', 'lockCoach3', 'lockEmprende', 'lockMusica'];
   locks.forEach(function(lid) {
     var el = document.getElementById(lid);
     if (el) {
@@ -1903,6 +2102,7 @@ function updateAuthUI() {
   var mc2 = document.getElementById('mobCoach2');
   var mc3 = document.getElementById('mobCoach3');
   var me = document.getElementById('mobEmprende');
+  var mm = document.getElementById('mobMusica');
   if (m3) m3.innerHTML = (authed ? '\uD83D\uDCC2' : '\uD83D\uDD12') + ' Carpeta 3';
   if (m4) m4.innerHTML = (authed ? '\uD83D\uDCC2' : '\uD83D\uDD12') + ' Carpeta 4';
   if (m5) m5.innerHTML = (authed ? '\uD83D\uDCC2' : '\uD83D\uDD12') + ' Carpeta 5';
@@ -1910,6 +2110,7 @@ function updateAuthUI() {
   if (mc1) mc1.innerHTML = (authed ? '\uD83D\uDC51' : '\uD83D\uDD12') + ' Volver a M\u00ed (Martes)';
   if (mc3) mc3.innerHTML = (authed ? '\uD83D\uDC51' : '\uD83D\uDD12') + ' Volver a M\u00ed (Mi\u00e9rcoles)';
   if (me) me.innerHTML = (authed ? '\uD83D\uDC51' : '\uD83D\uDD12') + ' Mi Emprendimiento';
+  if (mm) mm.innerHTML = (authed ? '\uD83C\uDFB5' : '\uD83D\uDD12') + ' Redes Positivas';
 
   // Sidebar auth box
   var sideCard = document.getElementById('sideAuthCard');
@@ -1924,7 +2125,7 @@ function updateAuthUI() {
       sideBtn.onclick = logout;
     } else {
       sideCard.className = 'side-auth-card';
-      sideMsg.innerHTML = 'Acceso a partir de Clase 3 y Coachings requiere clave de Alumna Activa.<br><span style="font-size:0.75rem; color:#D4AF37; display:block; margin-top:4px;">✉️ Las contraseñas se envían por correo electrónico.</span>';
+      sideMsg.innerHTML = 'Acceso a partir de Clase 3 y Coachings requiere clave de Alumna Activa.';
       sideBtn.className = 'btn-auth-unlock';
       sideBtn.textContent = '\uD83D\uDD11 Ingresar Clave';
       sideBtn.onclick = toggleAuthModal;
@@ -1944,21 +2145,27 @@ function openModal(target) {
   if (passInput) passInput.value = '';
 
   var isCoach = target && (typeof target === 'string' && (target.indexOf('coach') !== -1 || target === 'emprende'));
+  var isMusic = target === 'musica';
   var titleElem = document.getElementById('modalHeaderTitle');
   var descElem = document.getElementById('modalHeaderDesc');
   var iconElem = document.getElementById('modalHeaderIcon');
   var btnTxt = document.getElementById('modalBtnSubmitTxt');
 
-  if (isCoach) {
+  if (isMusic) {
+    if (titleElem) titleElem.textContent = 'M\u00fasica: Nuevas Redes Positivas';
+    if (descElem) descElem.textContent = 'Colecci\u00f3n de 7 audios de reprogramaci\u00f3n, meditaci\u00f3n y foco de Romina Lorena Montiel. Ingres\u00e1 tu clave oficial de alumna activa.';
+    if (iconElem) iconElem.textContent = '\uD83C\uDFB5';
+    if (btnTxt) btnTxt.textContent = '\uD83D\uDD13 Desbloquear Audios';
+  } else if (isCoach) {
     if (titleElem) titleElem.textContent = 'Acceso a Coaching Grupal';
-    if (descElem) descElem.textContent = 'Las grabaciones en vivo de Coaching Grupal y asesorías están reservadas para alumnas activas. Ingresá tu clave oficial enviada por correo.';
-    if (iconElem) iconElem.textContent = '👑';
-    if (btnTxt) btnTxt.textContent = '🔓 Ingresar a Coaching Grupal';
+    if (descElem) descElem.textContent = 'Las grabaciones en vivo de Coaching Grupal y asesor\u00edas est\u00e1n reservadas para alumnas activas. Ingres\u00e1 tu clave oficial.';
+    if (iconElem) iconElem.textContent = '\uD83D\uDC51';
+    if (btnTxt) btnTxt.textContent = '\uD83D\uDD13 Ingresar a Coaching Grupal';
   } else {
-    if (titleElem) titleElem.textContent = 'Área Exclusiva Alumnas Activas';
-    if (descElem) descElem.textContent = 'A partir de la Clase 3 y los Coachings Grupales, el contenido está reservado para alumnas activas del Método Modo Líder.';
-    if (iconElem) iconElem.textContent = '🔐';
-    if (btnTxt) btnTxt.textContent = '🔑 Desbloquear Contenido';
+    if (titleElem) titleElem.textContent = '\u00c1rea Exclusiva Alumnas Activas';
+    if (descElem) descElem.textContent = 'A partir de la Clase 3 y los Coachings Grupales, el contenido est\u00e1 reservado para alumnas activas del M\u00e9todo Modo L\u00edder.';
+    if (iconElem) iconElem.textContent = '\uD83D\uDD12';
+    if (btnTxt) btnTxt.textContent = '\uD83D\uDD11 Desbloquear Contenido';
   }
 
   if (modal) modal.classList.add('open');
@@ -2025,7 +2232,7 @@ function handleAuthSubmit(e) {
   } else {
     if (err) {
       err.style.display = 'block';
-      err.textContent = '\u26A0 Clave o usuario incorrecto. Record\u00e1 que las contrase\u00f1as se env\u00edan por correo electr\u00f3nico.';
+      err.textContent = '\u26A0 Clave o usuario incorrecto. Verific\u00e1 tus credenciales de acceso.';
     }
   }
 }
@@ -2037,11 +2244,13 @@ function logout() {
   sw(1);
 }
 
-// Switch between classes / coaching folders
+// Switch between classes / coaching folders / music
 function sw(n) {
   if (n === 'coaching' || n === 'coach') n = 'coach2';
+  if (n === 'music' || n === 'musica' || n === 'redes') n = 'musica';
+
   // Check auth for protected sections
-  var isProtected = (n === 3 || n === 4 || n === 5 || n === 'coach1' || n === 'coach2' || n === 'coach3' || n === 'emprende');
+  var isProtected = (n === 3 || n === 4 || n === 5 || n === 'coach1' || n === 'coach2' || n === 'coach3' || n === 'emprende' || n === 'musica');
   if (isProtected && !isAuth()) {
     openModal(n);
     return;
@@ -2064,6 +2273,10 @@ function sw(n) {
     panelId = 'pEmprende';
     sid = 'siEmprende';
     mobId = 'mobEmprende';
+  } else if (n === 'musica') {
+    panelId = 'pMusica';
+    sid = 'siMusica';
+    mobId = 'mobMusica';
   } else {
     panelId = 'p' + n;
     sid = 'si' + n;
@@ -2093,6 +2306,29 @@ function sw(n) {
   if (pTxt) pTxt.textContent = pInfo.t;
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Master music track switcher
+function playMusicTrack(num, url, title, desc, btn) {
+  var audio = document.getElementById('masterMusicAudio');
+  var src = document.getElementById('masterMusicSource');
+  var tElem = document.getElementById('masterTrackTitle');
+  var dElem = document.getElementById('masterTrackDesc');
+
+  if (tElem) tElem.innerHTML = title;
+  if (dElem) dElem.innerHTML = desc;
+
+  if (audio && src) {
+    src.src = url;
+    audio.load();
+    audio.play().catch(function(){});
+  }
+
+  for (var i = 1; i <= 7; i++) {
+    var b = document.getElementById('btnTrack' + i);
+    if (b) b.classList.remove('active');
+  }
+  if (btn) btn.classList.add('active');
 }
 
 // Player helpers
@@ -2134,7 +2370,9 @@ window.addEventListener('DOMContentLoaded', function(){
   // Check URL hash
   var h = window.location.hash;
   if (h) {
-    if (h.includes('coach2') || h.includes('clase2-coach')) {
+    if (h.includes('musica') || h.includes('redes') || h.includes('music')) {
+      sw('musica');
+    } else if (h.includes('coach2') || h.includes('clase2-coach')) {
       sw('coach2');
     } else if (h.includes('coach') || h.includes('coaching')) {
       sw('coach1');

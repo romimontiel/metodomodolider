@@ -66,8 +66,28 @@ En la sección **"Carpetas de Estudio del Curso"** se encuentran las áreas clav
 | **Carpeta 4: Regresar a mí y Reconectar con mi Negocio** | Avanzado Alumna | **🔐 REQUIERE ACCESO** |
 | **Carpeta 5: Cliente Ideal y Posicionamiento** | Avanzado Alumna | **🔐 REQUIERE ACCESO** |
 | **👑 COACHING GRUPAL CLASES GRABADAS:** | | |
-| ↳ **Carpeta: Volver a Mí — Clase 1** *(Valores, Identidad y Liderazgo)* | Acompañamiento VIP | **🔐 REQUIERE ACCESO** |
-| ↳ **Carpeta: Volver a Mí — Clase 2** *(Reconectar con mi Negocio y Bienestar)* | Acompañamiento VIP | **🔐 REQUIERE ACCESO** |
+| ↳ **Introducción: ¿PARA qué REGRESAR a mí?** | Acompañamiento VIP | **🔐 REQUIERE ACCESO** |
+| ↳ **Volver a Mí — Grupo Martes** | Acompañamiento VIP | **🔐 REQUIERE ACCESO** |
+| ↳ **Volver a Mí — Grupo Miércoles** | Acompañamiento VIP | **🔐 REQUIERE ACCESO** |
+| **🚀 MI EMPRENDIMIENTO (Networking en Vivo)** | Comunidad Activa | **🔐 REQUIERE ACCESO** |
+| **🧠 MÚSICA PARA CREAR NUEVAS REDES POSITIVAS** | Reprogramación VIP | **🔐 REQUIERE ACCESO** (7 Audios de Foco) |
+
+---
+
+### 📱 JERARQUÍA Y EXPERIENCIA MÓVIL OBLIGATORIA (DISPOSITIVOS CELULARES):
+
+> 📌 **REGLA DE ARQUITECTURA MÓVIL EN EL VISOR DE CLASES:**  
+> En vista para teléfonos celulares y tablets, la navegación y el contenido deben respetar estrictamente el siguiente patrón de diseño:
+>
+> 1. **📁 Carpetas Arriba de Todo (Barra Superior Sticky):**  
+>    El selector de carpetas (`.mob-bar`) se ubica en la parte superior fija de la pantalla, pegado justo debajo del encabezado institucional (`position: sticky; top: 62px; z-index: 150;`), con efecto *backdrop-filter* translúcido y deslizamiento táctil horizontal fluido. La alumna tiene siempre a la vista todas las carpetas del curso para cambiar de módulo en cualquier instante sin necesidad de scroll vertical excesivo.
+>
+> 2. **⬇️ Despliegue Vertical Estricto del Contenido por Carpeta:**  
+>    Al seleccionar cualquier carpeta, el contenido se despliega hacia abajo siguiendo de forma obligatoria y secuencial el siguiente orden pedagógico (idéntico en todas las áreas del curso):
+>    - **🎬 1º EL VIDEO DE CLASE:** Reproductor de video oficial embebido al tope del módulo (grabación en vivo o clase en video HD) con sus botones de selección de partes.
+>    - **🎙️ 2º EL AUDIO / PODCAST:** Reproductor HTML5 interno de sintonización y mentalidad ubicado inmediatamente debajo del video, sin botones de descarga.
+>    - **📥 3º EL CONTENIDO DESCARGABLE:** Bloque de Materiales y Workbooks donde **únicamente los Workbooks oficiales en PDF son descargables**, junto con el acceso a sus versiones interactivas online y presentaciones web.
+>    - **🧭 4º NAVEGACIÓN INFERIOR:** Botones para avanzar a la carpeta correlativa o volver al Campus Principal.
 
 ---
 
