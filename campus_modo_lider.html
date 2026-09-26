@@ -3828,6 +3828,26 @@
             var passInput = document.getElementById('campusAuthPass');
             if (idInput) idInput.value = '';
             if (passInput) passInput.value = '';
+            
+            // Adaptar títulos si es Coaching Grupal
+            var isCoach = targetUrl && (targetUrl.indexOf('coach') !== -1 || targetUrl.indexOf('coaching') !== -1);
+            var titleElem = document.getElementById('campusModalTitle');
+            var descElem = document.getElementById('campusModalDesc');
+            var iconElem = document.getElementById('campusModalIcon');
+            var btnText = document.getElementById('campusModalBtnTxt');
+
+            if (isCoach) {
+                if (titleElem) titleElem.textContent = 'Acceso a Coaching Grupal';
+                if (descElem) descElem.textContent = 'Las grabaciones en vivo de Coaching Grupal están reservadas para alumnas activas. Ingresá tu clave recibida por correo.';
+                if (iconElem) iconElem.textContent = '👑';
+                if (btnText) btnText.textContent = '🔓 Ingresar a Coaching Grupal';
+            } else {
+                if (titleElem) titleElem.textContent = 'Acceso a Curso Completo';
+                if (descElem) descElem.textContent = 'Ingresá tus credenciales oficiales de Alumna Activa para acceder al visor de clases y grabaciones exclusivas.';
+                if (iconElem) iconElem.textContent = '🔐';
+                if (btnText) btnText.textContent = '🔓 Ingresar al Curso Completo';
+            }
+
             if (modal) {
                 modal.style.display = 'flex';
                 if (idInput) setTimeout(function(){ idInput.focus(); }, 150);
@@ -3886,14 +3906,14 @@
 
     <!-- MODAL DE ACCESO A CURSO COMPLETO -->
     <div class="campus-modal-overlay" id="campusAuthModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(4,6,10,0.88); backdrop-filter:blur(14px); z-index:99999; align-items:center; justify-content:center; padding:1.2rem;" onclick="if(event.target===this)closeCampusAuthModal()">
-        <div style="background:#0E121C; border:2px solid #FFD700; box-shadow:0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(255,215,0,0.3); border-radius:24px; max-width:480px; width:100%; padding:2.2rem; position:relative; overflow:hidden; font-family:'Montserrat',sans-serif;">
+        <div style="background:#0E121C; border:2px solid #FFD700; box-shadow:0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(255,215,0,0.3); border-radius:24px; max-width:480px; width:100%; max-height:92vh; overflow-y:auto; overflow-x:hidden; padding:2.2rem; position:relative; font-family:'Montserrat',sans-serif;">
             <div style="position:absolute; top:0; left:0; width:100%; height:5px; background:#FFD700;"></div>
             <button onclick="closeCampusAuthModal()" style="position:absolute; top:1.2rem; right:1.2rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#94A3B8; width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:1.1rem; transition:all 0.2s;" onmouseover="this.style.color='#FFF'" onmouseout="this.style.color='#94A3B8'">&times;</button>
             
             <div style="text-align:center; margin-bottom:1.6rem;">
-                <div style="width:64px; height:64px; margin:0 auto 1rem; border-radius:18px; background:#FFD700; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 0 25px rgba(255,215,0,0.5);">🔐</div>
-                <h3 style="font-size:1.35rem; font-weight:900; color:#FFFFFF; margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.5px;">Acceso a Curso Completo</h3>
-                <p style="font-size:0.84rem; color:#94A3B8; line-height:1.5;">Ingresá tus credenciales oficiales de Alumna Activa para acceder al visor de clases y grabaciones exclusivas.</p>
+                <div id="campusModalIcon" style="width:64px; height:64px; margin:0 auto 1rem; border-radius:18px; background:#FFD700; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 0 25px rgba(255,215,0,0.5);">🔐</div>
+                <h3 id="campusModalTitle" style="font-size:1.35rem; font-weight:900; color:#FFFFFF; margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.5px;">Acceso a Curso Completo</h3>
+                <p id="campusModalDesc" style="font-size:0.84rem; color:#94A3B8; line-height:1.5;">Ingresá tus credenciales oficiales de Alumna Activa para acceder al visor de clases y grabaciones exclusivas.</p>
             </div>
 
             <form onsubmit="handleCampusAuthSubmit(event)" autocomplete="off" style="display:flex; flex-direction:column; gap:1.1rem;">
@@ -3913,7 +3933,7 @@
                 <div id="campusModalErr" style="display:none; background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.4); color:#FCA5A5; padding:0.75rem; border-radius:8px; font-size:0.82rem; font-weight:700; text-align:center;">⚠️ Clave incorrecta. Recordá que las contraseñas se envían por correo electrónico.</div>
 
                 <button type="submit" style="background:#FFD700; color:#000000; border:none; padding:0.95rem 1.4rem; border-radius:8px; font-size:0.95rem; font-weight:900; font-family:'Montserrat',sans-serif; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; justify-content:center; gap:0.5rem; box-shadow:0 8px 25px rgba(255,215,0,0.4); text-transform:uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 30px rgba(255,215,0,0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(255,215,0,0.4)'">
-                    <span>🔓 Ingresar al Curso Completo</span>
+                    <span id="campusModalBtnTxt">🔓 Ingresar al Curso Completo</span>
                 </button>
 
                 <div style="padding:0.85rem 1rem; background:rgba(255,215,0,0.12); border:1.5px solid #FFD700; border-radius:10px; font-size:0.82rem; color:#FFF; line-height:1.5; text-align:center;">
@@ -3921,8 +3941,8 @@
                     <span style="font-size:0.76rem; color:#F7E7CE; opacity:0.95;">Revisá tu bandeja de entrada o spam para obtener tu clave oficial de alumna activa.</span>
                 </div>
 
-                <!-- BOTÓN PARA VOLVER AL CAMPUS SI NO SE TIENE LA CONTRASEÑA -->
-                <button type="button" onclick="closeCampusAuthModal()" style="width:100%; background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.25); color:#F8FAFC; padding:0.85rem 1.4rem; border-radius:8px; font-size:0.88rem; font-weight:800; font-family:'Montserrat',sans-serif; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; justify-content:center; gap:0.5rem;" onmouseover="this.style.background='rgba(255,215,0,0.15)'; this.style.borderColor='#FFD700'; this.style.color='#FFD700';" onmouseout="this.style.background='rgba(255,255,255,0.06)'; this.style.borderColor='rgba(255,255,255,0.25)'; this.style.color='#F8FAFC';">
+                <!-- BOTÓN PRINCIPAL PARA VOLVER AL CAMPUS SI NO SE TIENE LA CONTRASEÑA -->
+                <button type="button" onclick="closeCampusAuthModal()" style="width:100%; background:linear-gradient(135deg, rgba(233,69,96,0.18) 0%, rgba(20,10,18,0.85) 100%); border:2px solid #FF5A78; color:#FFFFFF; padding:0.95rem 1.4rem; border-radius:10px; font-size:0.92rem; font-weight:900; font-family:'Montserrat',sans-serif; cursor:pointer; transition:all 0.25s; display:flex; align-items:center; justify-content:center; gap:0.6rem; box-shadow:0 4px 18px rgba(233,69,96,0.3); text-transform:uppercase;" onmouseover="this.style.background='linear-gradient(135deg, #FF5A78 0%, #E94560 100%)'; this.style.color='#FFF'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='linear-gradient(135deg, rgba(233,69,96,0.18) 0%, rgba(20,10,18,0.85) 100%)'; this.style.color='#FFFFFF'; this.style.transform='translateY(0)';">
                     <span>&#8592; Volver al Campus Principal</span>
                 </button>
 

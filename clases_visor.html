@@ -735,9 +735,11 @@ body {
   border-radius: var(--r-xl);
   max-width: 480px;
   width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 2.2rem;
   position: relative;
-  overflow: hidden;
 }
 .modal-card::before {
   content: '';
@@ -1790,8 +1792,8 @@ body {
   <div class="modal-card">
     <button class="modal-close-btn" onclick="closeModal()" title="Cerrar">&times;</button>
     <div class="modal-header">
-      <div class="modal-lock-icon">&#128274;</div>
-      <h3>&Aacute;rea Exclusiva Alumnas Activas</h3>
+      <div class="modal-lock-icon" id="modalHeaderIcon">&#128274;</div>
+      <h3 id="modalHeaderTitle">&Aacute;rea Exclusiva Alumnas Activas</h3>
       <p id="modalHeaderDesc">A partir de la Clase 3 y los Coachings Grupales, el contenido est&aacute; reservado para alumnas activas del M&eacute;todo Modo L&iacute;der.</p>
     </div>
 
@@ -1814,7 +1816,7 @@ body {
       <div id="modalErr" class="modal-err">&#9888; Clave de acceso incorrecta. Verific&aacute; tus datos o consult&aacute; tu correo electr&oacute;nico.</div>
 
       <button type="submit" class="btn-modal-submit">
-        <span>&#128273; Desbloquear Contenido</span>
+        <span id="modalBtnSubmitTxt">&#128273; Desbloquear Contenido</span>
       </button>
 
       <div style="margin-top:1.1rem; padding:0.85rem 1rem; background:rgba(212,175,55,0.12); border:1.5px solid #D4AF37; border-radius:10px; font-size:0.82rem; color:#FFF; line-height:1.5; text-align:center;">
@@ -1823,11 +1825,11 @@ body {
       </div>
 
       <!-- BOTONES DE RETORNO SI NO SE TIENE LA CONTRASEÑA -->
-      <div style="margin-top:0.8rem; display:flex; flex-direction:column; gap:0.55rem;">
-        <a href="/campus_modo_lider.html" style="width:100%; background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.25); color:#F8FAFC; padding:0.85rem 1.2rem; border-radius:var(--r-sm); font-size:0.88rem; font-weight:800; font-family:'Montserrat',sans-serif; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s;" onmouseover="this.style.background='rgba(212,175,55,0.15)'; this.style.borderColor='var(--gold)'; this.style.color='var(--gold-l)';" onmouseout="this.style.background='rgba(255,255,255,0.06)'; this.style.borderColor='rgba(255,255,255,0.25)'; this.style.color='#F8FAFC';">
+      <div style="margin-top:0.8rem; display:flex; flex-direction:column; gap:0.6rem;">
+        <a href="/campus_modo_lider.html" style="width:100%; background:linear-gradient(135deg, rgba(233,69,96,0.18) 0%, rgba(20,10,18,0.85) 100%); border:2px solid #FF5A78; color:#FFFFFF; padding:0.95rem 1.4rem; border-radius:10px; font-size:0.92rem; font-weight:900; font-family:'Montserrat',sans-serif; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.6rem; box-shadow:0 4px 18px rgba(233,69,96,0.3); text-transform:uppercase; box-sizing:border-box;" onmouseover="this.style.background='linear-gradient(135deg, #FF5A78 0%, #E94560 100%)'; this.style.color='#FFF'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='linear-gradient(135deg, rgba(233,69,96,0.18) 0%, rgba(20,10,18,0.85) 100%)'; this.style.color='#FFFFFF'; this.style.transform='translateY(0)';">
           <span>&#8592; Volver al Campus Principal</span>
         </a>
-        <button type="button" onclick="closeModal()" style="background:transparent; border:1px dashed rgba(255,255,255,0.2); color:var(--muted); padding:0.6rem 1rem; border-radius:var(--r-sm); font-size:0.76rem; font-weight:700; font-family:'Montserrat',sans-serif; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.color='#FFF'; this.style.borderColor='rgba(255,255,255,0.4)';" onmouseout="this.style.color='var(--muted)'; this.style.borderColor='rgba(255,255,255,0.2)';">
+        <button type="button" onclick="closeModal()" style="background:transparent; border:1px dashed rgba(255,255,255,0.2); color:var(--muted); padding:0.65rem 1rem; border-radius:var(--r-sm); font-size:0.78rem; font-weight:700; font-family:'Montserrat',sans-serif; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.color='#FFF'; this.style.borderColor='rgba(255,255,255,0.4)';" onmouseout="this.style.color='var(--muted)'; this.style.borderColor='rgba(255,255,255,0.2)';">
           Continuar explorando clases libres (Free Pass)
         </button>
       </div>
@@ -1945,6 +1947,25 @@ function openModal(target) {
   var passInput = document.getElementById('authPass');
   if (idInput) idInput.value = '';
   if (passInput) passInput.value = '';
+
+  var isCoach = target && (typeof target === 'string' && (target.indexOf('coach') !== -1 || target === 'emprende'));
+  var titleElem = document.getElementById('modalHeaderTitle');
+  var descElem = document.getElementById('modalHeaderDesc');
+  var iconElem = document.getElementById('modalHeaderIcon');
+  var btnTxt = document.getElementById('modalBtnSubmitTxt');
+
+  if (isCoach) {
+    if (titleElem) titleElem.textContent = 'Acceso a Coaching Grupal';
+    if (descElem) descElem.textContent = 'Las grabaciones en vivo de Coaching Grupal y asesorías están reservadas para alumnas activas. Ingresá tu clave oficial enviada por correo.';
+    if (iconElem) iconElem.textContent = '👑';
+    if (btnTxt) btnTxt.textContent = '🔓 Ingresar a Coaching Grupal';
+  } else {
+    if (titleElem) titleElem.textContent = 'Área Exclusiva Alumnas Activas';
+    if (descElem) descElem.textContent = 'A partir de la Clase 3 y los Coachings Grupales, el contenido está reservado para alumnas activas del Método Modo Líder.';
+    if (iconElem) iconElem.textContent = '🔐';
+    if (btnTxt) btnTxt.textContent = '🔑 Desbloquear Contenido';
+  }
+
   if (modal) modal.classList.add('open');
   if (idInput) setTimeout(function(){ idInput.focus(); }, 150);
 }
