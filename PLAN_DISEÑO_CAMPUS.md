@@ -84,6 +84,7 @@ Para proteger el contenido exclusivo a partir de la Clase 3 y los Coachings Grup
 2. La validación se persiste en `localStorage` del navegador del dispositivo.
 3. Una vez autenticada, la alumna navega libremente por todos los videos, audios y workbooks de las clases desbloqueadas y los coachings sin necesidad de reingresar las credenciales.
 4. Se provee un indicador visual de estado en el encabezado (*"Alumna Verificada ✅"*) con opción de cerrar sesión.
+5. **Botón Obligatorio de Retorno al Campus:** Todo modal de acceso (tanto en el portal general como en el visor de clases) dispone de forma clara y visible en la parte inferior de un botón destacado: **"← Volver al Campus Principal"**. Esto garantiza que si una alumna no conoce o no tiene a mano su contraseña recibida por correo, pueda retornar inmediatamente a los contenidos libres (Free Pass) sin fricción ni quedar atrapada en el formulario.
 
 ---
 

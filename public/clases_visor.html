@@ -1822,6 +1822,16 @@ body {
         <span style="font-size:0.76rem; color:#F7E7CE; opacity:0.95;">Revisá tu bandeja de entrada o spam para obtener tu clave oficial de alumna activa.</span>
       </div>
 
+      <!-- BOTONES DE RETORNO SI NO SE TIENE LA CONTRASEÑA -->
+      <div style="margin-top:0.8rem; display:flex; flex-direction:column; gap:0.55rem;">
+        <a href="/campus_modo_lider.html" style="width:100%; background:rgba(255,255,255,0.06); border:1.5px solid rgba(255,255,255,0.25); color:#F8FAFC; padding:0.85rem 1.2rem; border-radius:var(--r-sm); font-size:0.88rem; font-weight:800; font-family:'Montserrat',sans-serif; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.5rem; transition:all 0.2s;" onmouseover="this.style.background='rgba(212,175,55,0.15)'; this.style.borderColor='var(--gold)'; this.style.color='var(--gold-l)';" onmouseout="this.style.background='rgba(255,255,255,0.06)'; this.style.borderColor='rgba(255,255,255,0.25)'; this.style.color='#F8FAFC';">
+          <span>&#8592; Volver al Campus Principal</span>
+        </a>
+        <button type="button" onclick="closeModal()" style="background:transparent; border:1px dashed rgba(255,255,255,0.2); color:var(--muted); padding:0.6rem 1rem; border-radius:var(--r-sm); font-size:0.76rem; font-weight:700; font-family:'Montserrat',sans-serif; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.color='#FFF'; this.style.borderColor='rgba(255,255,255,0.4)';" onmouseout="this.style.color='var(--muted)'; this.style.borderColor='rgba(255,255,255,0.2)';">
+          Continuar explorando clases libres (Free Pass)
+        </button>
+      </div>
+
       <p class="modal-hint">Al identificarte, tu acceso se recordar&aacute; autom&aacute;ticamente en este navegador.</p>
     </form>
   </div>
