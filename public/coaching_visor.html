@@ -554,6 +554,53 @@ body {
 }
 .btn-s:hover { background: rgba(255, 255, 255, 0.12); color: #FFF; }
 
+/* BOTÓN DE CABECERA: IR A CLASES TEÓRICAS */
+.hdr-teoricas-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--yellow-g);
+  color: #000000;
+  border: 1px solid #FFD700;
+  padding: 0.45rem 1.15rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.25);
+}
+.hdr-teoricas-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.45);
+  filter: brightness(1.08);
+}
+
+/* BOTÓN RÁPIDO DENTRO DE CADA BANNER DE CARPETA */
+.btn-quick-teoricas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 215, 0, 0.12);
+  color: #FFD700;
+  border: 1px solid var(--border-y);
+  padding: 0.5rem 1.15rem;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn-quick-teoricas:hover {
+  background: var(--yellow-g);
+  color: #000000;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
 /* ==================================================================== */
 /* BOTONES DE REGRESO OBLIGATORIOS AL FINAL DEL MATERIAL               */
 /* ==================================================================== */
@@ -567,6 +614,39 @@ body {
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
+}
+.btn-goto-teoricas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--yellow-g);
+  color: #000000;
+  border: 1.5px solid #FFD700;
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+  transition: all 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  max-width: 440px;
+}
+.btn-goto-teoricas:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5);
+  filter: brightness(1.08);
+}
+.btn-goto-teoricas .btn-arrow {
+  font-size: 1.2rem;
+  font-weight: 900;
+  transition: transform 0.2s ease;
+}
+.btn-goto-teoricas:hover .btn-arrow {
+  transform: translateX(4px);
 }
 .btn-return-folders {
   display: inline-flex;
@@ -790,9 +870,11 @@ body {
   .btn-return-folders, .btn-return-campus { width: 100%; max-width: 100%; }
 }
 @media(max-width: 480px) {
-  .hdr-in { padding: 0 0.8rem; gap: 0.5rem; }
-  .back-btn { font-size: 0.75rem; padding: 0.35rem 0.8rem; }
+  .hdr-in { padding: 0 0.8rem; gap: 0.5rem; justify-content: space-between; }
+  .back-btn { font-size: 0.72rem; padding: 0.35rem 0.7rem; }
   .badge-hdr { display: none; }
+  .hdr-name { display: none; }
+  .hdr-teoricas-btn { font-size: 0.72rem; padding: 0.35rem 0.75rem; }
   .container { padding: 1.2rem 0.6rem 3rem; }
 }
 </style>
@@ -807,10 +889,11 @@ body {
       <span class="badge-hdr">👥 Coaching Grupal</span>
       <span class="hdr-name">Clases Grabadas y Acompa&ntilde;amiento</span>
     </div>
-    <div id="authBadgeHdr" class="auth-status-badge" onclick="toggleAuthModal()">
-      <span id="authBadgeIcon">&#128274;</span>
-      <span id="authBadgeTxt">Acceso Alumnas</span>
-    </div>
+    <a href="/clases_visor.html" class="hdr-teoricas-btn" title="Ir a las Clases Teóricas del Curso">
+      <span>🎓</span>
+      <span>Ir a las Clases Teóricas</span>
+      <span style="font-weight:900;">&rarr;</span>
+    </a>
   </div>
 </header>
 
@@ -883,6 +966,9 @@ body {
           <h3>📂 Carpeta: Introducci&oacute;n &mdash; &iquest;Para qu&eacute; regresar a m&iacute;?</h3>
           <p>La base invisible de cualquier negocio exitoso es la solidez emocional y de autoliderazgo de quien lo conduce. Mir&aacute; la clase de encuadre oficial antes de las grabaciones de grupo.</p>
         </div>
+        <a href="/clases_visor.html" class="btn-quick-teoricas">
+          <span>🎓 Ver Clases Te&oacute;ricas &rarr;</span>
+        </a>
       </div>
 
       <!-- 1. VIDEO -->
@@ -942,8 +1028,13 @@ body {
         </div>
       </div>
 
-      <!-- BOTONES DE REGRESO -->
+      <!-- BOTONES DE REGRESO Y NAVEGACIÓN -->
       <div class="return-to-folders-box">
+        <a href="/clases_visor.html" class="btn-goto-teoricas">
+          <span>🎓</span>
+          <span>Ir a Navegar las Clases Te&oacute;ricas del Curso</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
         <button type="button" class="btn-return-folders" onclick="scrollToFolders()">
           <span>&#128193; Regresar a las Carpetas de Coaching</span>
           <span class="btn-arrow">&uarr;</span>
@@ -959,14 +1050,17 @@ body {
           <h3>📂 Carpeta: Coaching Grupal &mdash; Grupo Martes</h3>
           <p>Grabaci&oacute;n completa del encuentro en vivo del Grupo Martes. An&aacute;lisis de casos reales, despeje de bloqueos y feedback individualizado.</p>
         </div>
+        <a href="/clases_visor.html" class="btn-quick-teoricas">
+          <span>🎓 Ver Clases Te&oacute;ricas &rarr;</span>
+        </a>
       </div>
 
       <!-- 1. VIDEO -->
       <div class="vid-area">
-        <iframe id="vCoachMartes" src="https://www.youtube-nocookie.com/embed/D34c7mU_j6U?rel=0&amp;modestbranding=1" title="Coaching Grupal: Volver a Mí - Grupo Martes" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <iframe id="vCoachMartes" src="https://www.youtube-nocookie.com/embed/ojcVKLS0Rzw?rel=0&amp;modestbranding=1" title="Coaching Grupal: Volver a Mí - Grupo Martes" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
         <div class="pl-bar">
           <span class="pl-lbl">Sesi&oacute;n Grabada:</span>
-          <button class="pl-btn active" onclick="svidIframe('vCoachMartes','https://www.youtube-nocookie.com/embed/D34c7mU_j6U?rel=0&amp;modestbranding=1','Coaching Grupal: Volver a M&iacute; &mdash; Grupo Martes',this,'dCoachMartes')">&#9658; 1. Grabaci&oacute;n Grupo Martes (Completa)</button>
+          <button class="pl-btn active" onclick="svidIframe('vCoachMartes','https://www.youtube-nocookie.com/embed/ojcVKLS0Rzw?rel=0&amp;modestbranding=1','Coaching Grupal: Volver a M&iacute; &mdash; Grupo Martes',this,'dCoachMartes')">&#9658; 1. Grabaci&oacute;n Grupo Martes (Completa)</button>
         </div>
       </div>
       <div class="v-desc" id="dCoachMartes">&#128161; <strong>Sesi&oacute;n Oficial:</strong> Encuentro de transformaci&oacute;n y an&aacute;lisis de casos del Grupo Martes con la Lic. Romina Lorena Montiel.</div>
@@ -1005,8 +1099,13 @@ body {
         </div>
       </div>
 
-      <!-- BOTONES DE REGRESO -->
+      <!-- BOTONES DE REGRESO Y NAVEGACIÓN -->
       <div class="return-to-folders-box">
+        <a href="/clases_visor.html" class="btn-goto-teoricas">
+          <span>🎓</span>
+          <span>Ir a Navegar las Clases Te&oacute;ricas del Curso</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
         <button type="button" class="btn-return-folders" onclick="scrollToFolders()">
           <span>&#128193; Regresar a las Carpetas de Coaching</span>
           <span class="btn-arrow">&uarr;</span>
@@ -1022,6 +1121,9 @@ body {
           <h3>📂 Carpeta: Coaching Grupal &mdash; Grupo Mi&eacute;rcoles</h3>
           <p>Grabaci&oacute;n completa del encuentro en vivo del Grupo Mi&eacute;rcoles. Profundizaci&oacute;n en alineaci&oacute;n de metas y sincron&iacute;a de equipo.</p>
         </div>
+        <a href="/clases_visor.html" class="btn-quick-teoricas">
+          <span>🎓 Ver Clases Te&oacute;ricas &rarr;</span>
+        </a>
       </div>
 
       <!-- 1. VIDEO -->
@@ -1055,8 +1157,13 @@ body {
         </div>
       </div>
 
-      <!-- BOTONES DE REGRESO -->
+      <!-- BOTONES DE REGRESO Y NAVEGACIÓN -->
       <div class="return-to-folders-box">
+        <a href="/clases_visor.html" class="btn-goto-teoricas">
+          <span>🎓</span>
+          <span>Ir a Navegar las Clases Te&oacute;ricas del Curso</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
         <button type="button" class="btn-return-folders" onclick="scrollToFolders()">
           <span>&#128193; Regresar a las Carpetas de Coaching</span>
           <span class="btn-arrow">&uarr;</span>

@@ -131,8 +131,13 @@ Espacio exclusivo de mentoría colectiva y resolución de trabas en vivo con Rom
 - **Entorno Visual:** **100% NEGRO Y AMARILLO (Sin rojo / Sin coral)**.
 - **Iconografía Oficial:** **Sin coronas (`👑` eliminadas por completo)**. Se utiliza el icono institucional de comunidad `👥` y de foco `🎯`.
 - **Paleta Cromática:** Negro profundo `#07090E` / `#000000`, superficie `#0E121A`, amarillo vibrante `#FFD700`, gradiente oro `#FFF085` a `#FFD700`, y bordes luminosos `rgba(255, 215, 0, 0.35)`.
+- **Navegación Superior en Cabecera (Header):**
+  - Se sustituyó el icono/badge de "Alumna Verificada" por el botón directo: **`🎓 Ir a las Clases Teóricas →`** (`.hdr-teoricas-btn`), permitiendo a las alumnas alternar al instante entre el coaching y las clases teóricas troncales (`clases_visor.html`).
+- **Navegación Interna en las Carpetas:**
+  - **Banner de Carpeta:** Botón rápido **`🎓 Ver Clases Teóricas →`** (`.btn-quick-teoricas`).
+  - **Pie de Material (Caja de Retorno):** Botón principal **`🎓 Ir a Navegar las Clases Teóricas del Curso →`** (`.btn-goto-teoricas`) antes de los botones de regresar a carpetas y al campus.
 - **Carpeta 1: Introducción — ¿Para qué regresar a mí?** — Masterclass en video, audio de sintonización y Workbook "Mis Valores, Mi Vida y Mi Negocio" interactivo y descargable.
-- **Carpeta 2: Volver a Mí · Grupo Martes** — Grabación completa en vivo, Diario "15 Días para Volver a Mí" y Reto "7 Días para Reconectar Conmigo".
+- **Carpeta 2: Volver a Mí · Grupo Martes** — Grabación completa en vivo (`ojcVKLS0Rzw` / `https://www.youtube.com/watch?v=ojcVKLS0Rzw`), Diario "15 Días para Volver a Mí" y Reto "7 Días para Reconectar Conmigo".
 - **Carpeta 3: Volver a Mí · Grupo Miércoles** — Grabación completa en vivo, Matriz de Valores y Protocolo de Autoliderazgo.
 
 ### 🚀 ÁREA 3: MI EMPRENDIMIENTO (`emprendimiento_visor.html`)
