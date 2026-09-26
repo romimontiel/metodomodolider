@@ -109,8 +109,8 @@ export default function CampusClient() {
                         <span className="label">Videos Reales</span>
                     </div>
                     <div className="stat-badge">
-                        <span className="num">100%</span>
-                        <span className="label">Acceso Total</span>
+                        <span className="num">🎙️ PODCASTS</span>
+                        <span className="label">Desafíos Prácticos y +</span>
                     </div>
                     <div className="stat-badge">
                         <span className="num">PDF + DOCX</span>
