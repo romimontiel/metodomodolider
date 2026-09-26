@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASE 3: ¿Qué Está Comprando Realmente Mi Clienta? | Método MODO LÍDER</title>
+    <meta name="description" content="Clase 3 del curso Emprender de Cero a Impacto y Ventas: Propuesta de Valor. Método MODO LÍDER.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brown:        #3D1A08;
+            --brown-deep:   #2C1207;
+            --khaki:        #C4A882;
+            --khaki-light:  #D9C9A8;
+            --khaki-pale:   #EDE4D3;
+            --white:        #FFFFFF;
+            --off-white:    #FAF6F0;
+            --black:        #111111;
+            --black-warm:   #1A1208;
+            --text-muted:   #8B7355;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--black);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .presentation-wrapper {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            max-width: 1333px;
+            max-height: 750px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+            background: var(--off-white);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── HEADER ── */
+        .brand-header {
+            background: var(--black-warm);
+            height: 72px;
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            gap: 1rem;
+            border-bottom: 2px solid var(--khaki);
+            z-index: 50;
+            flex-shrink: 0;
+        }
+
+        .logo-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #1A0E03 70%);
+            border: 2px solid var(--khaki);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .logo-circle .logo-metodo {
+            font-size: 0.35rem;
+            font-weight: 700;
+            color: #FFF;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo-circle .logo-modo {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #FFF;
+            line-height: 1;
+        }
+
+        .logo-circle .logo-lider {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            background: linear-gradient(to bottom, #D9C9A8 0%, #A08060 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .logo-circle .logo-slogan {
+            font-size: 0.22rem;
+            color: #CCC;
+            letter-spacing: 0.5px;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.05rem;
+        }
+
+        .header-rm {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to bottom, #D9C9A8 0%, #A08060 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .header-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--khaki);
+            letter-spacing: 0.5px;
+        }
+
+        .header-title {
+            font-size: 0.68rem;
+            font-weight: 500;
+            color: #A09070;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ── SLIDES ── */
+        .slide-container {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s;
+            padding: 2.2rem 3.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Temas */
+        .slide-dark {
+            background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown) 100%);
+            color: var(--white);
+        }
+
+        .slide-light {
+            background: var(--off-white);
+            color: var(--black);
+        }
+
+        .slide-black {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .slide-khaki {
+            background: var(--khaki-pale);
+            color: var(--black);
+        }
+
+        .slide-split {
+            display: flex;
+            padding: 0;
+            flex-direction: row;
+        }
+
+        .split-left {
+            width: 36%;
+            background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown) 100%);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-right: 3px solid var(--khaki);
+            position: relative;
+        }
+
+        .split-right {
+            width: 64%;
+            background: var(--off-white);
+            padding: 2.2rem 2.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .split-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--khaki);
+            line-height: 1;
+            opacity: 0.9;
+        }
+
+        /* ── ELEMENTOS ── */
+        .khaki-line {
+            width: 60px;
+            height: 3px;
+            background: var(--khaki);
+            border-radius: 2px;
+            margin: 0.8rem 0;
+        }
+
+        .slide-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--khaki);
+            margin-bottom: 0.4rem;
+        }
+
+        .title-dark {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+        }
+
+        .title-light {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--brown);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Cards */
+        .card-white {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1rem 1.3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid var(--khaki-light);
+        }
+
+        .card-dark {
+            background: rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 1.2rem;
+            border: 1px solid rgba(196,168,130,0.3);
+        }
+
+        .card-khaki {
+            background: var(--khaki-pale);
+            border-radius: 12px;
+            padding: 1rem 1.3rem;
+            border: 1px solid var(--khaki-light);
+        }
+
+        /* Quote */
+        .quote-box {
+            background: rgba(196,168,130,0.12);
+            border: 2px solid var(--khaki);
+            border-radius: 14px;
+            padding: 2rem 2.5rem;
+            text-align: center;
+        }
+
+        /* Grid */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+
+        /* Table */
+        .slide-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--khaki-light);
+        }
+
+        .slide-table th {
+            padding: 0.7rem 1rem;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: left;
+            background: var(--brown);
+            color: var(--khaki-light);
+        }
+
+        .slide-table td {
+            padding: 0.6rem 1rem;
+            border-top: 1px solid var(--khaki-light);
+            vertical-align: middle;
+            font-size: 0.84rem;
+            background: var(--white);
+        }
+
+        .slide-table tr:nth-child(even) td {
+            background: var(--khaki-pale);
+        }
+
+        /* Map flow */
+        .map-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .map-node {
+            padding: 0.7rem 1.3rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2.5px solid var(--khaki);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .map-node:hover { transform: scale(1.05); }
+
+        .map-arrow {
+            font-size: 1.6rem;
+            color: var(--khaki);
+            font-weight: 800;
+        }
+
+        /* Case row */
+        .case-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            align-items: start;
+            gap: 0.8rem;
+            margin-bottom: 0.55rem;
+        }
+
+        .case-label {
+            font-weight: 800;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: right;
+            padding-right: 0.5rem;
+            padding-top: 0.6rem;
+        }
+
+        .case-value {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 8px;
+            padding: 0.55rem 1rem;
+            font-size: 0.84rem;
+            line-height: 1.45;
+        }
+
+        /* ── NAV ── */
+        .nav-bar {
+            background: var(--black-warm);
+            height: 50px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            border-top: 1px solid var(--khaki);
+            z-index: 50;
+            flex-shrink: 0;
+        }
+
+        .nav-brand {
+            font-size: 0.78rem;
+            color: var(--khaki);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-controls { display: flex; align-items: center; gap: 0.8rem; }
+
+        .nav-btn {
+            background: rgba(196,168,130,0.15);
+            border: 1px solid rgba(196,168,130,0.4);
+            color: var(--khaki);
+            padding: 0.35rem 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: var(--khaki);
+            color: var(--brown);
+            border-color: var(--khaki);
+        }
+
+        .slide-counter {
+            font-size: 0.82rem;
+            color: #A09070;
+            min-width: 55px;
+            text-align: center;
+        }
+
+        .progress-bar-wrap {
+            width: 100%;
+            height: 3px;
+            background: rgba(255,255,255,0.08);
+            flex-shrink: 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #A08060, var(--khaki));
+            transition: width 0.3s ease;
+        }
+    
+    @media print {
+        @page {
+            size: 13.333in 7.5in;
+            margin: 0;
+        }
+        * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        body {
+            overflow: visible !important;
+            height: auto !important;
+            background: transparent !important;
+        }
+        .presentation-wrapper {
+            max-width: none !important;
+            max-height: none !important;
+            width: 100% !important;
+            height: auto !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+        }
+        .nav-bar, .progress-bar-wrap {
+            display: none !important;
+        }
+        .slide-container {
+            overflow: visible !important;
+            position: static !important;
+            height: auto !important;
+        }
+        .slide {
+            position: relative !important;
+            width: 13.333in !important;
+            height: 7.5in !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            page-break-after: always !important;
+            break-after: page !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="presentation-wrapper">
+
+    <!-- HEADER DE MARCA -->
+    <header class="brand-header">
+        <div class="logo-circle">
+            <span class="logo-metodo">MÉTODO</span>
+            <span class="logo-modo">MODO</span>
+            <span class="logo-lider">LÍDER</span>
+            <span class="logo-slogan">CREA · LIDERA · IMPACTA</span>
+        </div>
+        <div class="header-text">
+            <span class="header-rm">RM</span>
+            <span class="header-name">LIC. ROMINA LORENA MONTIEL</span>
+            <span class="header-title">Mentora de Mentes y Negocios</span>
+        </div>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progressBar" style="width: 10%;"></div>
+    </div>
+
+    <!-- SLIDES -->
+    <div class="slide-container">
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 1 — PORTADA -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-dark active" data-slide="1">
+            <div style="position:absolute; top:-80px; right:-80px; width:280px; height:280px; border-radius:50%; background:rgba(0,0,0,0.2);"></div>
+            <div style="position:absolute; bottom:-60px; left:60%; width:200px; height:200px; border-radius:50%; background:rgba(196,168,130,0.06);"></div>
+
+            <div style="text-align:center; max-width:950px; margin:0 auto; position:relative;">
+                <div style="font-size:0.85rem; font-weight:800; color:var(--khaki); letter-spacing:3px; text-transform:uppercase; margin-bottom:1rem;">MÉTODO MODO LÍDER</div>
+                <h1 style="font-family:'Playfair Display',serif; font-size:3.2rem; font-weight:800; color:var(--white); line-height:1.2; margin-bottom:1rem;">
+                    Clase 3: Propuesta de Valor
+                </h1>
+                <div class="khaki-line" style="margin:1.2rem auto;"></div>
+                <p style="font-size:1.15rem; color:rgba(250,246,240,0.85); line-height:1.6;">
+                    ¿Qué está comprando realmente mi clienta?
+                </p>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 2 — EL PROPÓSITO QUE VENDE (CARTA PRINCIPAL FRASE DESTACADA) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-light" data-slide="2" style="background:#FBF9F5; justify-content:center; padding:2.2rem 3.5rem;">
+            <div style="max-width:1150px; margin:0 auto 1.5rem; width:100%; text-align:center;">
+                <span class="slide-tag" style="color:var(--brown);">PUNTO 1 • PROPÓSITO DE VALOR</span>
+                <h2 style="font-family:'Montserrat', sans-serif; font-size:2.2rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.4rem;">
+                    EL PROPÓSITO QUE VENDE
+                </h2>
+                <p style="font-size:1.1rem; font-weight:500; color:#1A1816; line-height:1.4;">
+                    Es aquel que resuelve un problema y genera una transformación valiosa en la vida de las personas.
+                </p>
+            </div>
+
+            <!-- TARJETA PRINCIPAL DESTACADA (CONCEPTO CLAVE) -->
+            <div style="max-width:1100px; margin:0 auto 1.8rem; background:#C8AF86; border-radius:14px; padding:1.8rem 2.5rem; text-align:center; box-shadow:0 8px 25px rgba(74,53,37,0.15); border:2px solid #B59B72;">
+                <p style="font-size:1.25rem; font-weight:800; color:#1A1816; line-height:1.55; font-family:'Montserrat', sans-serif;">
+                    💡 Si creaste un producto que tiene propósito (es decir, que resuelve un problema, deseo o necesidad de tu cliente) y se vende, entonces creaste un producto cuyo propósito es de valor o activa un deseo de compra.
+                </p>
+            </div>
+
+            <!-- GRILLA DE PILARES DE PROPÓSITO DE VALOR (2X2) -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; max-width:1100px; margin:0 auto;">
+                <div style="background:#FFFFFF; border-radius:10px; padding:1.2rem 1.5rem; border-left:5px solid #C8AF86; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.4rem;">Resuelve un problema</h3>
+                    <p style="font-size:0.92rem; color:#1A1816; line-height:1.45;">Atiende una necesidad, deseo, dificultad o situación que la persona quiere transformar.</p>
+                </div>
+                <div style="background:#FFFFFF; border-radius:10px; padding:1.2rem 1.5rem; border-left:5px solid #4A3525; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.4rem;">Produce una transformación</h3>
+                    <p style="font-size:0.92rem; color:#1A1816; line-height:1.45;">Lo que ofrecés permite que tu cliente <strong>tenga, logre o viva algo diferente.</strong></p>
+                </div>
+                <div style="background:#FFFFFF; border-radius:10px; padding:1.2rem 1.5rem; border-left:5px solid #C8AF86; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.4rem;">Tiene valor para su mundo</h3>
+                    <p style="font-size:0.92rem; color:#1A1816; line-height:1.45;">Esa transformación es importante porque impacta en algo que realmente le importa.</p>
+                </div>
+                <div style="background:#FFFFFF; border-radius:10px; padding:1.2rem 1.5rem; border-left:5px solid #4A3525; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.4rem;">Genera emociones positivas</h3>
+                    <p style="font-size:0.92rem; color:#1A1816; line-height:1.45;">Puede producir <strong>seguridad, autoestima, alivio, expansión, bienestar, serenidad o disfrute</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 3 — LO QUE VENDO VS LO QUE COMPRA MI CLIENTE (TABLA EXACTA USER IMAGE) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-light" data-slide="3" style="background:#FBF9F5; justify-content:center; padding:2rem 3rem;">
+            <div style="max-width:1150px; margin:0 auto 1.2rem; width:100%; text-align:center;">
+                <span class="slide-tag" style="color:var(--brown);">PUNTO 2 • DE LA OFERTA A LA PERCEPCIÓN</span>
+                <h2 style="font-family:'Montserrat', sans-serif; font-size:2rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.3rem;">
+                    LO QUE VENDO VS. LO QUE COMPRA MI CLIENTE
+                </h2>
+                <p style="font-size:1.05rem; font-weight:500; color:#1A1816; line-height:1.4;">
+                    El propósito que vende: resolver un problema y generar una transformación valiosa.
+                </p>
+            </div>
+
+            <!-- TABLA ESTRUCTURADA RECREADA 1:1 DE LA IMAGEN DEL USUARIO -->
+            <table style="width:100%; max-width:1150px; margin:0 auto; border-collapse:collapse; background:#FFFFFF; border-radius:10px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.04);">
+                <thead>
+                    <tr style="border-bottom:2px solid #EAE2D8; background:#F8F4EE;">
+                        <th style="text-align:left; padding:1rem 1.6rem; font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:1px; width:45%;">
+                            LO QUE VENDO
+                        </th>
+                        <th style="text-align:left; padding:1rem 1.6rem; font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:1px; width:55%;">
+                            LO QUE COMPRA MI CLIENTE
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom:1px solid #F0ECE6;">
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; font-weight:700; color:#1A1816;">
+                            Una propuesta de valor
+                        </td>
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; font-weight:700; color:#1A1816;">
+                            Un resultado que considera valioso
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #F0ECE6; background:#FAF8F5;">
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; color:#1A1816;">
+                            Mi producto o servicio
+                        </td>
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; color:#1A1816;">
+                            La solución a su problema
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #F0ECE6;">
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; color:#1A1816;">
+                            Lo que hago
+                        </td>
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; color:#1A1816;">
+                            Lo que logra
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #F0ECE6; background:#FAF8F5;">
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; color:#1A1816;">
+                            Lo que ofrezco
+                        </td>
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; color:#1A1816;">
+                            El beneficio que obtiene
+                        </td>
+                    </tr>
+                    <tr style="border-bottom:2px solid #EAE2D8;">
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; color:#1A1816;">
+                            Mi conocimiento, experiencia y herramientas
+                        </td>
+                        <td style="padding:0.85rem 1.6rem; font-size:0.95rem; color:#1A1816;">
+                            La transformación que necesita
+                        </td>
+                    </tr>
+
+                    <!-- SECCIÓN: VALOR QUE ENTREGO / PERCIBE -->
+                    <tr style="background:#F4ECE1; border-bottom:1px solid #E5D6C3;">
+                        <td style="padding:0.9rem 1.6rem; font-size:0.92rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.8px;">
+                            VALOR QUE ENTREGO
+                        </td>
+                        <td style="padding:0.9rem 1.6rem; font-size:0.92rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.8px;">
+                            VALOR QUE PERCIBE Y OBTIENE
+                        </td>
+                    </tr>
+                    <tr style="background:#FAF8F5;">
+                        <td style="padding:0.4rem 1.6rem; font-size:1.2rem; text-align:center; color:#C8AF86;">⬇</td>
+                        <td style="padding:0.4rem 1.6rem; font-size:1.2rem; text-align:center; color:#C8AF86;">⬇</td>
+                    </tr>
+                    <tr style="background:#FFFFFF;">
+                        <td style="padding:0.9rem 1.6rem; font-size:0.92rem; font-weight:700; color:#1A1816; line-height:1.45; vertical-align:top;">
+                            Mi oferta tiene que ser atractiva y relevante para mi cliente objetivo.
+                        </td>
+                        <td style="padding:0.9rem 1.6rem; font-size:0.92rem; font-weight:700; color:#1A1816; line-height:1.45; vertical-align:top;">
+                            Tiene que sentir que con lo que le brindo puede lograr sus metas, cubrir sus necesidades o resolver sus problemas.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 4 — OFERTA DE VALOR VINCULADA A UN TIPO DE CLIENTE ESPECÍFICO -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-light" data-slide="4" style="background:#FBF9F5; justify-content:center; padding:2.5rem 3.5rem;">
+            <div style="text-align:center; max-width:1150px; margin:0 auto 1.8rem;">
+                <span class="slide-tag" style="color:var(--brown);">PUNTO 3 • ALINEACIÓN ESTRATÉGICA</span>
+                <h2 style="font-family:'Montserrat', sans-serif; font-size:2rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.5px; line-height:1.3;">
+                    OFERTA DE VALOR VINCULADA A UN TIPO DE CLIENTE ESPECÍFICO
+                </h2>
+                <div class="khaki-line" style="margin:0.8rem auto 0;"></div>
+            </div>
+
+            <!-- CONTENEDOR DE CONEXIÓN ESTRUCTURADA: OFERTA -> CONECTOR -> MERCADO -->
+            <div style="display:flex; align-items:center; justify-content:center; gap:1.8rem; max-width:1150px; margin:0 auto 1.8rem;">
+                
+                <!-- BLOQUE 1: EL BENEFICIO CLARO -->
+                <div style="flex:1; background:#FFFFFF; border-radius:14px; padding:2rem 2.2rem; border-top:5px solid #C8AF86; box-shadow:0 8px 25px rgba(0,0,0,0.04); text-align:center; min-height:270px; display:flex; flex-direction:column; justify-content:center;">
+                    <div style="width:52px; height:52px; border-radius:50%; background:#FAF6F0; border:2px solid #C8AF86; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:1.4rem;">
+                        💡
+                    </div>
+                    <h3 style="font-size:1.15rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.6rem; letter-spacing:0.5px;">
+                        El Beneficio Claro
+                    </h3>
+                    <p style="font-size:1.1rem; font-weight:700; color:#4A3525; line-height:1.5;">
+                        "Mi cliente tiene que entender el beneficio de lo que doy."
+                    </p>
+                    <p style="font-size:0.9rem; color:#666; margin-top:0.6rem; line-height:1.45;">
+                        Lo que ofrecés debe ser percibido como una solución real y valiosa en su mundo.
+                    </p>
+                </div>
+
+                <!-- CONECTOR CENTRAL -->
+                <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:150px; flex-shrink:0;">
+                    <div style="background:#C8AF86; color:#1A1816; font-size:0.75rem; font-weight:800; text-transform:uppercase; padding:0.45rem 0.9rem; border-radius:20px; letter-spacing:1px; margin-bottom:0.5rem; text-align:center; box-shadow:0 4px 10px rgba(74,53,37,0.1);">
+                        Se construye para
+                    </div>
+                    <svg viewBox="0 0 70 24" style="width:60px; height:24px;">
+                        <line x1="5" y1="12" x2="52" y2="12" stroke="#4A3525" stroke-width="3.5" stroke-linecap="round"/>
+                        <polygon points="52,6 64,12 52,18" fill="#4A3525"/>
+                    </svg>
+                </div>
+
+                <!-- BLOQUE 2: MERCADO OBJETIVO -->
+                <div style="flex:1; background:#FFFFFF; border-radius:14px; padding:2rem 2.2rem; border-top:5px solid #4A3525; box-shadow:0 8px 25px rgba(0,0,0,0.04); text-align:center; min-height:270px; display:flex; flex-direction:column; justify-content:center;">
+                    <div style="width:52px; height:52px; border-radius:50%; background:#FAF6F0; border:2px solid #4A3525; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:1.4rem;">
+                        🎯
+                    </div>
+                    <h3 style="font-size:1.15rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.5rem; letter-spacing:0.5px;">
+                        Mercado Objetivo
+                    </h3>
+                    <p style="font-size:0.95rem; font-weight:600; color:#1A1816; line-height:1.4; margin-bottom:0.8rem;">
+                        Tiene determinadas características específicas:
+                    </p>
+                    <div style="display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap;">
+                        <span style="background:#FAF6F0; border:1px solid #EAE2D8; border-radius:6px; padding:0.35rem 0.8rem; font-size:0.82rem; font-weight:700; color:#1A1816;">Edad</span>
+                        <span style="background:#FAF6F0; border:1px solid #EAE2D8; border-radius:6px; padding:0.35rem 0.8rem; font-size:0.82rem; font-weight:700; color:#1A1816;">Estilo de vida</span>
+                        <span style="background:#FAF6F0; border:1px solid #EAE2D8; border-radius:6px; padding:0.35rem 0.8rem; font-size:0.82rem; font-weight:700; color:#1A1816;">Tipo de pensamientos</span>
+                        <span style="background:#FAF6F0; border:1px solid #EAE2D8; border-radius:6px; padding:0.35rem 0.8rem; font-size:0.82rem; font-weight:700; color:#1A1816;">Estrato social</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TARJETA INFERIOR DE SÍNTESIS -->
+            <div style="max-width:1150px; margin:0 auto; background:#C8AF86; border-radius:10px; padding:0.9rem 1.6rem; text-align:center; box-shadow:0 4px 15px rgba(74,53,37,0.1);">
+                <p style="font-size:0.95rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.5px;">
+                    ✨ La propuesta de valor nace cuando lo que ofrecés encaja con las necesidades y la mentalidad de tu cliente objetivo.
+                </p>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 5 — PERSPECTIVAS VENDE VS COMPRA (CON OJOS NEGROS) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-light" data-slide="5" style="background:#F9F7F3; justify-content:center; padding:1.5rem 2rem;">
+            
+            <div style="display:flex; align-items:center; justify-content:center; width:100%; max-width:1300px; margin:0 auto; position:relative; min-height:480px;">
+                
+                <!-- LADO IZQUIERDO: OJOS NEGROS DEL QUE VENDE -->
+                <div style="position:absolute; left:0px; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:0.6rem; z-index:3;">
+                    <p style="font-size:0.95rem; font-weight:800; color:#1A1816; letter-spacing:0.5px; text-transform:uppercase; width:130px; text-align:right; line-height:1.3;">
+                        PUNTO DE VISTA<br>DEL QUE VENDE
+                    </p>
+
+                    <!-- OJO NEGRO Y LÍNEAS GUÍA -->
+                    <div style="display:flex; align-items:center; gap:0.3rem;">
+                        <svg viewBox="0 0 120 80" fill="none" style="width:110px; height:75px;">
+                            <!-- Parpado superior estilizado -->
+                            <path d="M 10 40 C 30 12, 90 12, 110 40 C 90 68, 30 68, 10 40 Z" stroke="#1A1816" stroke-width="4.5" fill="#FFFFFF"/>
+                            <!-- Iris y Pupila -->
+                            <circle cx="65" cy="40" r="19" fill="#1A1816"/>
+                            <circle cx="58" cy="33" r="5" fill="#FFFFFF"/>
+                            <!-- Ceja / Pestaña superior -->
+                            <path d="M 18 16 Q 60 4 102 16" stroke="#1A1816" stroke-width="3.5" stroke-linecap="round"/>
+                        </svg>
+                        
+                        <!-- Lineas de mirada -->
+                        <svg viewBox="0 0 60 70" style="width:50px; height:60px;">
+                            <line x1="0" y1="15" x2="55" y2="8" stroke="#1A1816" stroke-width="2" stroke-dasharray="4 3"/>
+                            <line x1="0" y1="35" x2="55" y2="35" stroke="#1A1816" stroke-width="2" stroke-dasharray="4 3"/>
+                            <line x1="0" y1="55" x2="55" y2="62" stroke="#1A1816" stroke-width="2" stroke-dasharray="4 3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- CÍRCULOS TRASLAPADOS CENTRO (DIAGRAMA DE VENN) -->
+                <div style="position:relative; width:720px; height:400px; display:flex; align-items:center; justify-content:center;">
+                    
+                    <!-- Círculo Izquierdo (Cream) -->
+                    <div style="position:absolute; left:20px; width:380px; height:380px; border-radius:50%; background:#F4ECE1; border:2px solid #D8C5A8; display:flex; align-items:center; justify-content:center; padding:3rem 2.8rem; text-align:center; z-index:1; box-shadow:0 8px 25px rgba(0,0,0,0.04);">
+                        <p style="font-size:0.96rem; color:#1A1816; line-height:1.5; font-weight:500;">
+                            Lo que <strong style="color:#1A1816; font-weight:800;">VENDO</strong> es una propuesta de valor que resulte atractiva y sea de <strong style="color:#1A1816; font-weight:800;">IMPACTO O VALOR</strong> para mi <strong style="color:#1A1816; font-weight:800;">CLIENTE OBJETIVO</strong>
+                        </p>
+                    </div>
+
+                    <!-- Círculo Derecho (Caqui) -->
+                    <div style="position:absolute; right:20px; width:380px; height:380px; border-radius:50%; background:#C8AF86; display:flex; align-items:center; justify-content:center; padding:2.8rem; text-align:center; z-index:2; box-shadow:0 8px 25px rgba(74,53,37,0.1);">
+                        <p style="font-size:1.02rem; color:#1A1816; line-height:1.55; font-weight:500;">
+                            Lo que <strong style="color:#1A1816; font-weight:800;">COMPRO</strong> tiene que ser útil o de provecho, es decir que pueda lograr lo que necesito
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- LADO DERECHO: OJOS NEGROS DEL QUE COMPRA -->
+                <div style="position:absolute; right:0px; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:0.6rem; z-index:3;">
+                    <!-- Lineas de mirada -->
+                    <div style="display:flex; align-items:center; gap:0.3rem;">
+                        <svg viewBox="0 0 60 70" style="width:50px; height:60px;">
+                            <line x1="60" y1="15" x2="5" y2="8" stroke="#1A1816" stroke-width="2" stroke-dasharray="4 3"/>
+                            <line x1="60" y1="35" x2="5" y2="35" stroke="#1A1816" stroke-width="2" stroke-dasharray="4 3"/>
+                            <line x1="60" y1="55" x2="5" y2="62" stroke="#1A1816" stroke-width="2" stroke-dasharray="4 3"/>
+                        </svg>
+
+                        <!-- Ojo mirando a la izquierda -->
+                        <svg viewBox="0 0 120 80" fill="none" style="width:110px; height:75px;">
+                            <path d="M 10 40 C 30 12, 90 12, 110 40 C 90 68, 30 68, 10 40 Z" stroke="#1A1816" stroke-width="4.5" fill="#FFFFFF"/>
+                            <circle cx="55" cy="40" r="19" fill="#1A1816"/>
+                            <circle cx="48" cy="33" r="5" fill="#FFFFFF"/>
+                            <path d="M 18 16 Q 60 4 102 16" stroke="#1A1816" stroke-width="3.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <p style="font-size:0.95rem; font-weight:800; color:#1A1816; letter-spacing:0.5px; text-transform:uppercase; width:130px; text-align:left; line-height:1.3;">
+                        PUNTO DE VISTA<br>DEL QUE COMPRA
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 6 — PUNTO 4: IDEA CENTRAL (SLIDE 6) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-black" data-slide="6">
+            <div style="text-align:center; margin-bottom:1.2rem;">
+                <span class="slide-tag">PUNTO 4 • IDEA CENTRAL</span>
+                <h2 class="title-dark" style="font-size:1.7rem; color:var(--khaki);">Las personas NO compran solamente productos.</h2>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:0.8rem; max-width:1050px; margin:0 auto 1rem;">
+                <div class="card-dark" style="border-left:4px solid var(--khaki);">
+                    <p style="font-size:0.92rem; color:rgba(250,246,240,0.9); line-height:1.6;">
+                        Compran soluciones, bienestar, belleza, comodidad, resultados, experiencias, conocimiento, títulos, facilidad, un cuerpo saludable, sentirse empoderadas, saber cómo hacer algo y alcanzar lo que necesitan.
+                    </p>
+                </div>
+                <div class="card-dark" style="border-left:4px solid var(--khaki);">
+                    <p style="font-size:0.92rem; color:rgba(250,246,240,0.9); line-height:1.6;">
+                        Compran una vida que quieren vivir y una persona en la que quieren convertirse.
+                    </p>
+                </div>
+                <div class="card-dark" style="border-left:4px solid var(--khaki);">
+                    <p style="font-size:0.92rem; color:rgba(250,246,240,0.9); line-height:1.6;">
+                        Compran un estatus o estrato social al que desean llegar, una manera de poder acceder a lo que necesitan alcanzar, una mentalidad que les permita lograr sus sueños.
+                    </p>
+                </div>
+                <div class="card-dark" style="border-left:4px solid var(--white);">
+                    <p style="font-size:0.92rem; color:rgba(250,246,240,0.9); line-height:1.6;">
+                        Somos seres complejos. Por eso, una emprendedora puede vender una cosa y su clienta estar comprando otra completamente diferente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quote-box" style="max-width:1050px; margin:0 auto; border-color:var(--khaki);">
+                <p style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:var(--khaki); line-height:1.4;">
+                    "¿Qué está comprando realmente tu clienta?"
+                </p>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-light" data-slide="7" style="background:#FBF9F5; justify-content:flex-start; padding:1.2rem 2.5rem; overflow-y:auto;">
+            <div style="text-align:center; max-width:1150px; margin:0 auto 0.6rem; width:100%;">
+                <span class="slide-tag" style="color:var(--brown); font-size:0.7rem; margin-bottom:0.15rem;">PUNTO 6 • CASO DE APLICACIÓN</span>
+                <h2 style="font-family:'Montserrat', sans-serif; font-size:1.4rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.5px; line-height:1.2;">
+                    PASAR DE SER COMMODITY A CREAR UNA OFERTA CON PROPÓSITO
+                </h2>
+            </div>
+
+            <!-- TABLA COMPARATIVA COMPLETA 1:1 -->
+            <table style="width:100%; max-width:1180px; margin:0 auto; border-collapse:collapse; background:#FFFFFF; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.04); font-size:0.78rem;">
+                <thead>
+                    <tr style="border-bottom:2px solid #EAE2D8;">
+                        <th style="text-align:left; padding:0.6rem 1.2rem; font-size:0.85rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.8px; width:36%; background:#F8F4EE;">
+                            DE PASTELERÍA COMMODITY
+                        </th>
+                        <th style="text-align:left; padding:0.6rem 1.2rem; font-size:0.85rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.8px; width:64%; background:#F4ECE1; border-left:2px solid #EAE2D8;">
+                            A PASTELERÍA CON PROPÓSITO
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1. ¿QUÉ VENDO? / ¿QUÉ RESUELVO? -->
+                    <tr style="border-bottom:1px solid #F0ECE6;">
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; background:#FAF8F5;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#7A6048; letter-spacing:0.5px; margin-bottom:0.1rem;">¿QUÉ VENDO?</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">Alfajores, budines, facturas, masitas, cupcakes.</span>
+                        </td>
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; border-left:2px solid #F0ECE6;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#4A3525; letter-spacing:0.5px; margin-bottom:0.1rem;">¿QUÉ RESUELVO?</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">La necesidad de tener una mesa dulce rica, linda y completa sin tener que ocuparse de organizarla.</span>
+                        </td>
+                    </tr>
+
+                    <!-- 2. PROBLEMA -->
+                    <tr style="border-bottom:1px solid #F0ECE6;">
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; background:#FAF8F5;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#7A6048; letter-spacing:0.5px; margin-bottom:0.1rem;">PROBLEMA</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">"Quiero comprar algo dulce."</span>
+                        </td>
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; border-left:2px solid #F0ECE6;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#4A3525; letter-spacing:0.5px; margin-bottom:0.1rem;">PROBLEMA</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">"Tengo un cumpleaños y necesito resolver la mesa dulce, pero no quiero perder tiempo buscando y eligiendo cada producto."</span>
+                        </td>
+                    </tr>
+
+                    <!-- 3. TRANSFORMACIÓN -->
+                    <tr style="border-bottom:1px solid #F0ECE6;">
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; background:#FAF8F5;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#7A6048; letter-spacing:0.5px; margin-bottom:0.1rem;">TRANSFORMACIÓN</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">Compra productos por separado.</span>
+                        </td>
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; border-left:2px solid #F0ECE6;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#4A3525; letter-spacing:0.5px; margin-bottom:0.1rem;">TRANSFORMACIÓN</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">Pasa de tener que buscar, elegir y combinar productos a tener <strong>todo listo y coordinado en una sola propuesta.</strong></span>
+                        </td>
+                    </tr>
+
+                    <!-- 4. IMPACTO -->
+                    <tr style="border-bottom:1px solid #F0ECE6;">
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; background:#FAF8F5;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#7A6048; letter-spacing:0.5px; margin-bottom:0.1rem;">IMPACTO</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">Obtiene productos de pastelería.</span>
+                        </td>
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; border-left:2px solid #F0ECE6;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#4A3525; letter-spacing:0.5px; margin-bottom:0.1rem;">IMPACTO</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;"><strong>Ahorra tiempo y dinero</strong>, evita el esfuerzo de buscar y elegir, y tiene la tranquilidad de saber que su mesa dulce está resuelta.</span>
+                        </td>
+                    </tr>
+
+                    <!-- 5. OFERTA -->
+                    <tr style="border-bottom:1px solid #F0ECE6;">
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; background:#FAF8F5;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#7A6048; letter-spacing:0.5px; margin-bottom:0.1rem;">OFERTA</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">"6 alfajores + 6 cupcakes."</span>
+                        </td>
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; border-left:2px solid #F0ECE6;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#4A3525; letter-spacing:0.5px; margin-bottom:0.1rem;">OFERTA</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">"Mesa dulce completa para tu cumpleaños, lista y coordinada."</span>
+                        </td>
+                    </tr>
+
+                    <!-- 6. COMUNICACIÓN -->
+                    <tr style="border-bottom:1px solid #F0ECE6;">
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; background:#FAF8F5;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#7A6048; letter-spacing:0.5px; margin-bottom:0.1rem;">COMUNICACIÓN</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">"Vendemos alfajores, budines y facturas artesanales."</span>
+                        </td>
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; border-left:2px solid #F0ECE6;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#4A3525; letter-spacing:0.5px; margin-bottom:0.1rem;">COMUNICACIÓN</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">"Te ayudamos a tener tu mesa dulce lista, sin perder tiempo buscando y eligiendo cada cosa."</span>
+                        </td>
+                    </tr>
+
+                    <!-- 7. PROPUESTA DE VALOR -->
+                    <tr>
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; background:#FAF8F5;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#7A6048; letter-spacing:0.5px; margin-bottom:0.1rem;">PROPUESTA DE VALOR</strong>
+                            <span style="color:#1A1816; font-size:0.8rem;">Vendo productos de pastelería.</span>
+                        </td>
+                        <td style="padding:0.4rem 1.2rem; vertical-align:top; border-left:2px solid #F0ECE6; background:#FCFAF7;">
+                            <strong style="display:block; font-size:0.72rem; text-transform:uppercase; color:#4A3525; letter-spacing:0.5px; margin-bottom:0.1rem;">PROPUESTA DE VALOR</strong>
+                            <span style="color:#1A1816; font-size:0.8rem; line-height:1.4;">Te brindo la tranquilidad de tenerlo todo listo, sin tener que pasar por el proceso de buscar y elegir productos para tu mesa dulce. Ahorrás tiempo y, al comprar todo junto, también dinero.</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 8 — PUNTO 7: MENSAJE FINAL (SLIDE 8) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-dark" data-slide="8">
+            <div style="position:absolute; top:-60px; right:-60px; width:220px; height:220px; border-radius:50%; background:rgba(196,168,130,0.06);"></div>
+            <div style="position:absolute; bottom:-80px; left:-40px; width:250px; height:250px; border-radius:50%; background:rgba(0,0,0,0.15);"></div>
+
+            <div class="quote-box" style="max-width:950px; margin:0 auto; padding:3rem; position:relative;">
+                <div style="font-size:0.8rem; font-weight:800; color:var(--khaki); letter-spacing:2px; text-transform:uppercase; margin-bottom:1.5rem;">PUNTO 7 • MENSAJE FINAL</div>
+                <p style="font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; color:var(--white); line-height:1.5; margin-bottom:1.2rem;">
+                    No necesitás crear algo que nadie venda.
+                </p>
+                <div class="khaki-line" style="margin:1rem auto;"></div>
+                <p style="font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; color:var(--khaki); line-height:1.5;">
+                    Necesitás encontrar una necesidad que puedas resolver de una manera que tenga valor para un cliente específico.
+                </p>
+                <div class="khaki-line" style="margin:1.5rem auto;"></div>
+                <div style="font-weight:700; font-size:0.85rem; color:var(--khaki); letter-spacing:2px; text-transform:uppercase;">MÉTODO MODO LÍDER ®</div>
+            </div>
+        </div>
+
+    </div><!-- /slide-container -->
+
+    <!-- NAV BAR -->
+    <footer class="nav-bar">
+        <div class="nav-brand">Clase 3 — Propuesta de Valor</div>
+        <div class="nav-controls">
+            <button class="nav-btn" onclick="prevSlide()">◀ Anterior</button>
+            <div class="slide-counter" id="slideCounter">1 / 8</div>
+            <button class="nav-btn" onclick="nextSlide()">Siguiente ▶</button>
+            <button class="nav-btn" onclick="toggleFullScreen()">⛶ Pantalla Completa</button>
+        </div>
+    </footer>
+
+</div><!-- /presentation-wrapper -->
+
+<script>
+    let currentSlide = 1;
+    const totalSlides = 8;
+
+    function updateSlide() {
+        document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+        const el = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
+        if (el) el.classList.add('active');
+        document.getElementById('slideCounter').innerText = `${currentSlide} / ${totalSlides}`;
+        document.getElementById('progressBar').style.width = `${(currentSlide / totalSlides) * 100}%`;
+    }
+
+    function nextSlide() { if (currentSlide < totalSlides) { currentSlide++; updateSlide(); } }
+    function prevSlide() { if (currentSlide > 1) { currentSlide--; updateSlide(); } }
+
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => console.log(err));
+        } else {
+            if (document.exitFullscreen) document.exitFullscreen();
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+        else if (e.key === 'ArrowLeft') prevSlide();
+        else if (e.key === 'f' || e.key === 'F') toggleFullScreen();
+    });
+</script>
+</body>
+</html>

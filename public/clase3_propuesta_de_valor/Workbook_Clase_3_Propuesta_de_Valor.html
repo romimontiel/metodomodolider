@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbook Clase 3 — Propuesta de Valor | MODO LÍDER</title>
+    <meta name="description" content="Workbook interactivo de la Clase 3: Propuesta de Valor. Curso Emprender de Cero a Impacto y Ventas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-navy: #0E121B;
+            --color-surface-dark: #161A25;
+            --color-light-bg: #F8F9FB;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #B4871E;
+            --color-gold-light: #FFF8E7;
+            --color-coral: #E94560;
+            --color-coral-light: #FFF0F3;
+            --color-text-dark: #1B1F2A;
+            --color-text-light: #F4F5F8;
+            --color-text-muted: #5A6473;
+            --color-border: #E2E6EE;
+            --color-purple: #7C3AED;
+            --color-purple-light: #F3EEFF;
+            --color-orange: #F59E0B;
+            --color-orange-light: #FFFBEB;
+            --color-green: #10B981;
+            --color-green-light: #ECFDF5;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--color-light-bg);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body { background: #FFF; }
+            .workbook-container { box-shadow: none; max-width: 100%; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            .writing-area { border: 1.5px solid #CCC !important; background: #FAFAFA !important; min-height: 100px !important; }
+            .writing-area:focus { outline: none; }
+            section { page-break-inside: avoid; }
+        }
+
+        .workbook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+        }
+
+        /* COVER */
+        .cover {
+            background: #3E3E3E;
+            color: #FFFFFF;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .cover-top {
+            flex: 1;
+            padding: 3.5rem 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cover-author {
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #E8E0CC;
+            margin-bottom: 0.6rem;
+        }
+
+        .cover-divider {
+            width: 120px;
+            height: 1px;
+            background: #C8A82A;
+            margin: 0 auto 2rem;
+        }
+
+        .cover h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 3.8rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .cover-course-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C8C0B0;
+            margin-bottom: 0.4rem;
+        }
+
+        .cover-course-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #E8E0CC;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+
+        .cover-logo-big {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #0E0804 70%);
+            border: 4px solid #C8A82A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem auto 1rem;
+        }
+
+        .cover-logo-big .clb-metodo { font-size: 0.52rem; font-weight: 700; color: #FFF; letter-spacing: 2px; text-transform: uppercase; }
+        .cover-logo-big .clb-modo { font-size: 1.1rem; font-weight: 700; color: #FFF; line-height: 1; font-family: Georgia, serif; }
+        .cover-logo-big .clb-lider { font-size: 1.4rem; font-weight: 800; background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; font-family: Georgia, serif; }
+
+        .cover-bottom { background: #2A2A2A; padding: 2rem 3rem; border-top: 1px solid #444; }
+
+        /* BRAND BAR FOR PAGES */
+        .page-brand-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .page-brand-logo { display: flex; align-items: center; gap: 0.4rem; font-weight: 800; font-size: 0.8rem; color: var(--color-navy); }
+        .page-brand-name { font-size: 0.78rem; font-weight: 600; color: var(--color-text-muted); }
+
+        /* SECTIONS */
+        section { padding: 3rem 3.5rem; }
+
+        .section-number { font-size: 0.78rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--color-gold-dark); margin-bottom: 0.3rem; }
+        .section-title { font-family: Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--color-navy); margin-bottom: 0.6rem; line-height: 1.2; }
+        .section-subtitle { font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem; }
+
+        /* CARDS AND INPUTS */
+        .exercise-card { background: var(--color-light-bg); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid var(--color-border); }
+        .exercise-label { font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .exercise-question { font-size: 1rem; font-weight: 700; color: var(--color-navy); margin-bottom: 0.5rem; }
+        .exercise-hint { font-size: 0.84rem; color: var(--color-text-muted); margin-bottom: 1rem; font-style: italic; }
+
+        .writing-area {
+            width: 100%; min-height: 80px; padding: 1rem; border-radius: 8px; border: 1.5px solid var(--color-border); font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: var(--color-text-dark); background: #FFFFFF; outline: none; transition: border-color 0.2s; resize: vertical;
+        }
+
+        .writing-area:focus { border-color: var(--color-gold); box-shadow: 0 0 0 3px rgba(212,175,55,0.15); }
+
+        /* CARD PROPÓSITO INTEGRADA */
+        .proposito-card-box {
+            background: #0F172A;
+            border-radius: 14px;
+            padding: 1.8rem;
+            color: #FFFFFF;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .proposito-card-title {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--color-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+
+        .proposito-row {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .proposito-row label {
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .proposito-row input[type="text"] {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.07);
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            outline: none;
+        }
+
+        .proposito-row input[type="text"]:focus {
+            border-color: var(--color-gold);
+            background: rgba(255,255,255,0.12);
+        }
+
+        /* TABLES */
+        .desglose-table { width: 100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); margin-bottom: 1.5rem; }
+        .desglose-table th { padding: 0.9rem 1.2rem; font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; background: var(--color-gold-light); color: var(--color-gold-dark); text-align: left; }
+        .desglose-table td { padding: 0.8rem 1.2rem; border-top: 1px solid var(--color-border); vertical-align: top; }
+        .desglose-table textarea { width: 100%; min-height: 60px; border: 1px dashed var(--color-border); border-radius: 6px; padding: 0.5rem; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; background: transparent; outline: none; resize: vertical; }
+
+        .quote-block { background: var(--color-gold-light); border: 2px solid var(--color-gold); border-radius: 14px; padding: 1.8rem; text-align: center; margin: 1.8rem 0; }
+        .quote-block p { font-size: 1.05rem; font-weight: 700; color: var(--color-navy); line-height: 1.5; }
+
+        /* TOOLBAR */
+        .toolbar { position: fixed; bottom: 2rem; right: 2rem; display: flex; flex-direction: column; gap: 0.6rem; z-index: 100; }
+        .toolbar-btn { background: var(--color-navy); color: #FFFFFF; border: 2px solid var(--color-gold); border-radius: 50px; padding: 0.7rem 1.3rem; font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .toolbar-btn:hover { background: var(--color-gold); color: var(--color-navy); }
+
+        /* CLOSING PAGE */
+        .closing-page { background: #3E3E3E; color: #FFFFFF; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
+        .closing-top-bar { height: 12px; background: linear-gradient(to right, #B4871E, #F0C040, #B4871E); }
+        .closing-body { flex: 1; padding: 4rem 3rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+
+<div class="workbook-container">
+
+    <!-- ============ PORTADA ============ -->
+    <div class="cover">
+        <div class="cover-top">
+            <p class="cover-author">LIC. ROMINA LORENA MONTIEL</p>
+            <div class="cover-divider"></div>
+
+            <p class="cover-course-label">CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS</p>
+            <p class="cover-course-name">MÉTODO MODO LÍDER ®</p>
+
+            <h1>WORKBOOK<br>CLASE 3</h1>
+
+            <div class="cover-logo-big">
+                <span class="clb-metodo">MÉTODO</span>
+                <span class="clb-modo">MODO</span>
+                <span class="clb-lider">LÍDER</span>
+            </div>
+
+            <h2 style="font-family: Georgia, serif; font-size: 1.8rem; color: #F0C040; margin-top: 1.5rem;">
+                Propuesta de Valor
+            </h2>
+            <p style="font-size: 0.9rem; color: #E8E0CC; margin-top: 0.4rem;">
+                Redefiniendo lo que vendés: Conociendo para qué te compra realmente tu cliente
+            </p>
+        </div>
+
+        <div class="cover-bottom">
+            <p style="font-size: 0.85rem; color: #CCC; letter-spacing: 1px;">
+                "No vendés lo que hacés. Vendés la transformación que el otro desea obtener."
+            </p>
+        </div>
+    </div>
+
+    <!-- ============ SECCIÓN 1: EL ESPEJO DE MI SERVICIO ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 1 DE 5 • REVELACIÓN DE VALOR</span>
+        <h2 class="section-title">💡 Matriz: "Lo que Hago" vs. "Lo que me Compran"</h2>
+        <p class="section-subtitle">Identificá la diferencia entre tu oferta técnica (commodity) y la transformación real que tu clienta busca.</p>
+
+        <table class="desglose-table">
+            <thead>
+                <tr>
+                    <th style="width: 35%;">Producto / Servicio Técnico (Lo que hacés)</th>
+                    <th style="width: 65%;">¿Qué está comprando realmente tu clienta? (Transformación, emoción, solución)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-weight: 700; font-size: 0.88rem;"><textarea placeholder="Ej: Sesión individual de coaching / Torta decorada..."></textarea></td>
+                    <td><textarea placeholder="Ej: Claridad para tomar decisiones sin culpa / Recuerdo memorable para el cumpleaños de su hijo..."></textarea></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 700; font-size: 0.88rem;"><textarea placeholder="Ej: Plan de 30 días / Servicio de diseño..."></textarea></td>
+                    <td><textarea placeholder="Ej: Volver a sentirse cómoda con su cuerpo y con energía / Profesionalismo para vender con confianza..."></textarea></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 700; font-size: 0.88rem;"><textarea placeholder="Ej: Clase semanal / Producto artesanal..."></textarea></td>
+                    <td><textarea placeholder="Ej: Serenidad y un espacio de desconexión del trabajo / Un regalo que emociona y genera pertenencia..."></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ============ SECCIÓN 2: DIAGNÓSTICO ANTI-COMMODITY ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 2 DE 5 • POSICIONAMIENTO</span>
+        <h2 class="section-title">⚠️ Test de Auditoría Anti-Commodity</h2>
+        <p class="section-subtitle">Analizá si tu mensaje actual te confunde en la multitud o te destaca como la única opción.</p>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-coral);">
+            <p class="exercise-question">1. ¿Cómo te presentabas habitualmente?</p>
+            <p class="exercise-hint">Ej: "Soy nutricionista y armo planes" / "Tengo una pastelería y vendo masitas".</p>
+            <textarea class="writing-area" placeholder="Escribí tu presentación habitual..."></textarea>
+        </div>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-orange);">
+            <p class="exercise-question">2. Si un cliente te compara con 5 competidoras, ¿cuál es la razón por la que te elegiría a vos y no al resto?</p>
+            <textarea class="writing-area" placeholder="¿Qué hace única tu propuesta?"></textarea>
+        </div>
+    </section>
+
+    <!-- ============ SECCIÓN 3: CASO PRÁCTICO APLICADO (ESPECIAL JESICA & COACH) ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 3 DE 5 • CONSTRUCCIÓN DE OFERTA</span>
+        <h2 class="section-title">🎯 De Producto Suelto a Solución Irresistible</h2>
+        <p class="section-subtitle">Transformá tu oferta aplicando la fórmula vista con el caso de la Pastelería de Jesica y la Coach Biodecodificadora.</p>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+            <span class="exercise-label" style="color: var(--color-purple);">PASO A · PRODUCTO/SERVICIO TÉCNICO</span>
+            <p class="exercise-question">¿Cuál es tu producto o servicio base (commodity)?</p>
+            <textarea class="writing-area" placeholder="Ej: Alfajores, cupcakes y masitas / Sesiones de coaching..."></textarea>
+        </div>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-orange);">
+            <span class="exercise-label" style="color: var(--color-orange);">PASO B · OCASIÓN O PROBLEMA CONCRETO DE TU CLIENTE</span>
+            <p class="exercise-question">¿En qué momento o necesidad puntual tu cliente busca esto?</p>
+            <textarea class="writing-area" placeholder="Ej: Resolver la mesa dulce del cumpleaños de sus hijos / Entender qué le pasa frente a una situación de salud..."></textarea>
+        </div>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-green);">
+            <span class="exercise-label" style="color: var(--color-green);">PASO C · TU PITCH DE IMPACTO REARMADO</span>
+            <p class="exercise-question">Escribí tu propuesta de valor rearmada:</p>
+            <p class="exercise-hint">Fórmula: "Te ayudo a [resolver ocasión/problema] con una propuesta que [solución concreta], para que puedas [lograr/sentir beneficio valioso]."</p>
+            <textarea class="writing-area" style="border-color: var(--color-green); min-height: 100px;" placeholder="Escribí tu propuesta de valor oficial aquí..."></textarea>
+        </div>
+    </section>
+
+    <!-- ============ SECCIÓN 4: CIERRE E INTEGRACIÓN — TU PROPÓSITO COMPLETO ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 4 DE 5 • INTEGRACIÓN Y CIERRE DE LA CLASE 3</span>
+        <h2 class="section-title">👑 Cierre: Tu Declaración de Propósito Completo</h2>
+        <p class="section-subtitle">Unimos todo lo trabajado en la clase para cerrar tu propósito reconvertido en valor irresistible.</p>
+
+        <div class="proposito-card-box">
+            <div class="proposito-card-title">✍️ AHORA ESCRIBÍ TU PROPÓSITO COMPLETO</div>
+            <div class="proposito-row">
+                <label style="color: #E98080;">AYUDO A...</label>
+                <input type="text" placeholder="(persona / mercado objetivo con dirección)">
+            </div>
+            <div class="proposito-row">
+                <label style="color: #FCD34D;">QUE TIENEN...</label>
+                <input type="text" placeholder="(problema o necesidad urgente que comprendés)">
+            </div>
+            <div class="proposito-row">
+                <label style="color: #6EDDB8;">A LOGRAR...</label>
+                <input type="text" placeholder="(transformación / LO QUE REALMENTE TE COMPRAN)">
+            </div>
+            <div class="proposito-row">
+                <label style="color: #94A3B8;">A TRAVÉS DE...</label>
+                <input type="text" placeholder="(método, producto o sistema — el vehículo)">
+            </div>
+        </div>
+
+        <div class="quote-block" style="margin-top: 1rem;">
+            <p style="font-size: 0.95rem;">
+                💡 <strong>Recordá:</strong> Tu cliente no busca el <em>"A través de..."</em>. Compra el <strong>"A LOGRAR..."</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ SECCIÓN 5: PUENTE HACIA CLASE 4 ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 5 DE 5 • PREPARACIÓN CLASE 4</span>
+        <h2 class="section-title">🔎 El Puente: Encontrar al Cliente al que le Vendo</h2>
+        <p class="section-subtitle">Dejamos armado el terreno para definir en la próxima clase la persona exacta que valora y compra tu propuesta.</p>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+            <p class="exercise-question">1. Basada en tu propuesta de valor, ¿quién es la persona que más urgente necesita esta transformación?</p>
+            <textarea class="writing-area" placeholder="¿Quién es esa persona en su día a día?"></textarea>
+        </div>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-orange);">
+            <p class="exercise-question">2. ¿Dónde creés que busca soluciones hoy esa persona y qué le impide comprar en este momento?</p>
+            <textarea class="writing-area" placeholder="Escribí tus observaciones sobre su búsqueda y dudas..."></textarea>
+        </div>
+
+        <div class="quote-block">
+            <p>👉 "Próxima Clase 4: Definiendo y Atrayending a tu Cliente Ideal (Avatar)."</p>
+        </div>
+    </section>
+
+    <!-- ============ HOJA FINAL ============ -->
+    <div class="closing-page">
+        <div class="closing-top-bar"></div>
+        <div class="closing-body">
+            <p style="font-size: 1.5rem; color: #FFF; font-weight: 700; margin-bottom: 1rem;">¡Felicitaciones!</p>
+            <p style="font-size: 1.1rem; color: #E8E0CC; line-height: 1.6; max-width: 600px; margin-bottom: 2rem;">
+                Completaste el Workbook de la <strong>Clase 3: Propuesta de Valor</strong>.<br>
+                Ahora tenés tu propuesta clara y estás lista para encontrar a tu cliente ideal en la Clase 4.
+            </p>
+
+            <div class="cover-logo-big" style="width: 140px; height: 140px; margin-bottom: 2rem;">
+                <span class="clb-metodo" style="font-size: 0.4rem;">MÉTODO</span>
+                <span class="clb-modo" style="font-size: 0.9rem;">MODO</span>
+                <span class="clb-lider" style="font-size: 1.1rem;">LÍDER</span>
+            </div>
+
+            <p style="font-size: 0.9rem; color: #C8A82A; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">
+                Lic. Romina Lorena Montiel · Método MODO LÍDER ®
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<!-- TOOLBAR -->
+<div class="toolbar no-print">
+    <button class="toolbar-btn" onclick="window.print()">🖨️ Imprimir PDF</button>
+    <button class="toolbar-btn" onclick="saveProgress()">💾 Guardar</button>
+    <button class="toolbar-btn" onclick="clearAll()">🗑️ Limpiar</button>
+</div>
+
+<script>
+    const STORAGE_KEY = 'workbook_clase3_propuesta_valor';
+
+    function saveProgress() {
+        const data = {};
+        document.querySelectorAll('textarea, input[type="text"]').forEach((el, i) => {
+            data[`field_${i}`] = el.value;
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        
+        const btn = document.querySelectorAll('.toolbar-btn')[1];
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Guardado';
+        setTimeout(() => { btn.innerHTML = originalText; }, 1500);
+    }
+
+    function loadProgress() {
+        const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        document.querySelectorAll('textarea, input[type="text"]').forEach((el, i) => {
+            if (data[`field_${i}`]) {
+                el.value = data[`field_${i}`];
+            }
+        });
+    }
+
+    function clearAll() {
+        if (confirm('¿Estás segura de que querés borrar todo lo escrito en el Workbook de la Clase 3?')) {
+            document.querySelectorAll('textarea, input[type="text"]').forEach(el => el.value = '');
+            localStorage.removeItem(STORAGE_KEY);
+        }
+    }
+
+    setInterval(saveProgress, 30000);
+    window.addEventListener('load', loadProgress);
+</script>
+</body>
+</html>

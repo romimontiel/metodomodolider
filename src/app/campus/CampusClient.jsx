@@ -15,8 +15,8 @@ export default function CampusClient() {
   });
 
   const [clase2Video, setClase2Video] = useState({
-    src: 'https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1',
-    title: '1. Clase 2: Presentamos Nuestros Emprendimientos (YouTube HD)',
+    src: 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1',
+    title: '1. Clase 2: Entender lo que es el Propósito (Video Oficial HD)',
     activeIndex: 0
   });
 
@@ -568,7 +568,7 @@ export default function CampusClient() {
                                     <span>🎬</span>
                                     <span id="title-video-clase1">{clase1Video.title}</span>
                                 </div>
-                                <span className="pillar-badge">{clase1Video.isYouTube ? "YouTube Oficial HD" : "Video Real MP4"}</span>
+                                <span className="pillar-badge">{clase1Video.isYouTube ? "Video Oficial HD" : "Video Real MP4"}</span>
                             </div>
                             <div className="folder-video-screen">
                                 {clase1Video.isYouTube ? (
@@ -733,7 +733,7 @@ export default function CampusClient() {
                                     <span>🎬</span>
                                     <span>{clase2Video.title}</span>
                                 </div>
-                                <span className="pillar-badge">YouTube Oficial HD</span>
+                                <span className="pillar-badge">Video Oficial HD</span>
                             </div>
                             <div className="folder-video-screen">
                                 <iframe 
@@ -746,17 +746,14 @@ export default function CampusClient() {
                                     style={{ display: "block", width: "100%", height: "100%", border: "none" }}>
                                 </iframe>
                             </div>
-                            {/* Selector de videos de la Clase 2 (Solo YouTube, sin Drive, sin botón externo) */}
+                            {/* Selector de videos de la Clase 2 (Reproducción Exclusiva en el Campus) */}
                             <div className="video-playlist-bar">
                                 <span className="playlist-label">Videos de la Clase:</span>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '1. Presentamos Nuestros Emprendimientos (YouTube HD)', 0)}>
-                                    ▶ 1. Emprendimientos
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '1. Qué es el Propósito (Video Oficial HD)', 0)}>
+                                    ▶ 1. Qué es el Propósito
                                 </button>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '2. Entender lo que es el Propósito (YouTube HD)', 1)}>
-                                    ▶ 2. Qué es el Propósito
-                                </button>
-                                <button className={`playlist-btn ${clase2Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '3. El Antes y Después de Descubrir tu Propósito (YouTube HD)', 2)}>
-                                    ▶ 3. El Antes y Después
+                                <button className={`playlist-btn ${clase2Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase2Video('https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '2. El Antes y Después de Descubrir tu Propósito (Video Oficial HD)', 1)}>
+                                    ▶ 2. El Antes y Después
                                 </button>
                             </div>
                             <div className="video-description-box">

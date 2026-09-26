@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso a Curso Completo | Campus Modo Líder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07090E;
+  --surface: #0E121C;
+  --card: #151B28;
+  --card-hover: #1C2436;
+  --gold: #D4AF37;
+  --gold-l: #F7E7CE;
+  --gold-g: linear-gradient(135deg, #FCE08B 0%, #E5B544 50%, #B88214 100%);
+  --coral: #FF5A78;
+  --coral-dark: #E94560;
+  --coral-g: linear-gradient(135deg, #FF758C 0%, #FF5A78 50%, #E94560 100%);
+  --emerald: #10B981;
+  --muted: #94A3B8;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-g: rgba(212, 175, 55, 0.35);
+  --border-c: rgba(255, 90, 120, 0.4);
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --side: 290px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: #F8FAFC;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 10% 5%, rgba(212, 175, 55, 0.07) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(233, 69, 96, 0.05) 0%, transparent 40%);
+}
+
+/* HEADER */
+.hdr {
+  background: rgba(7, 9, 14, 0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-g);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.hdr-in {
+  display: flex;
+  align-items: center;
+  height: 62px;
+  padding: 0 1.5rem;
+  gap: 1rem;
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+  border: 1px solid var(--border-g);
+  padding: 0.45rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.back-btn:hover {
+  background: var(--gold-g);
+  color: #07090E;
+  border-color: transparent;
+  transform: translateX(-2px);
+}
+.hdr-div { width: 1px; height: 26px; background: var(--border); flex-shrink: 0; }
+.hdr-brand { display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 0; }
+.badge-hdr {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--border-g);
+  color: var(--gold-l);
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.hdr-name {
+  font-size: 0.92rem;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #FFF;
+}
+.auth-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+}
+.auth-status-badge.logged-in {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34D399;
+}
+.auth-status-badge:hover { filter: brightness(1.15); }
+.prog-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.prog-lbl { font-size: 0.74rem; color: var(--muted); font-weight: 600; white-space: nowrap; }
+.prog-bar {
+  width: 90px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.prog-fill {
+  height: 100%;
+  background: var(--gold-g);
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+/* MOBILE CHIPS BAR */
+.mob-bar {
+  display: none;
+  background: rgba(10, 13, 20, 0.98);
+  border-bottom: 1px solid var(--border);
+  padding: 0.7rem 0.8rem;
+  overflow-x: auto;
+  gap: 0.5rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.mob-bar::-webkit-scrollbar { display: none; }
+.mob-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: #CBD5E1;
+  flex-shrink: 0;
+}
+.mob-chip.active {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--gold);
+  color: var(--gold-l);
+}
+.mob-chip.coaching-chip {
+  background: rgba(233, 69, 96, 0.08);
+  border-color: rgba(233, 69, 96, 0.3);
+  color: #FFAEC0;
+}
+.mob-chip.coaching-chip.active {
+  background: var(--coral-g);
+  color: #FFF;
+  border-color: transparent;
+}
+
+/* LAYOUT */
+.layout { display: flex; min-height: calc(100vh - 62px); }
+
+/* SIDEBAR */
+.sidebar {
+  width: var(--side);
+  flex-shrink: 0;
+  background: rgba(10, 13, 20, 0.98);
+  border-right: 1px solid var(--border);
+  position: sticky;
+  top: 62px;
+  height: calc(100vh - 62px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.3) transparent;
+  padding: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.3); border-radius: 4px; }
+.sec-lbl {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  padding: 0.6rem 1.2rem 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.s-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+  position: relative;
+}
+.s-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-left-color: rgba(212, 175, 55, 0.4);
+}
+.s-item.active {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.15) 0%, transparent 100%);
+  border-left-color: var(--gold);
+}
+.s-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.s-item.active .s-num {
+  background: var(--gold-g);
+  color: #07090E;
+  border-color: transparent;
+}
+.s-info { flex: 1; min-width: 0; }
+.s-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.s-item.active .s-title { color: var(--gold-l); }
+.s-sub {
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin-top: 0.12rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.s-lock-ico {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+.s-item.unlocked .s-lock-ico {
+  opacity: 0.9;
+  filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.5));
+}
+.s-div { height: 1px; background: var(--border); margin: 0.6rem 1.2rem; }
+
+/* SPECIAL COACHING ITEM */
+.s-item.coaching-item {
+  margin: 0.4rem 0.8rem;
+  border-radius: var(--r-md);
+  border: 1.5px solid rgba(233, 69, 96, 0.4);
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.08) 0%, rgba(20, 10, 18, 0.6) 100%);
+  border-left-width: 1.5px;
+  padding: 0.85rem 0.9rem;
+}
+.s-item.coaching-item:hover {
+  border-color: var(--coral);
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.15) 0%, rgba(20, 10, 18, 0.8) 100%);
+}
+.s-item.coaching-item.active {
+  border-color: var(--coral);
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.25) 0%, rgba(20, 10, 18, 0.95) 100%);
+  box-shadow: 0 4px 20px rgba(233, 69, 96, 0.2);
+}
+.s-item.coaching-item .s-num {
+  background: rgba(233, 69, 96, 0.15);
+  border-color: rgba(233, 69, 96, 0.4);
+  color: #FFAEC0;
+}
+.s-item.coaching-item.active .s-num {
+  background: var(--coral-g);
+  color: #FFF;
+  border-color: transparent;
+}
+.s-item.coaching-item .s-title { color: #FFAEC0; }
+.s-item.coaching-item.active .s-title { color: #FFF; font-weight: 800; }
+
+/* SIDEBAR FOOTER / AUTH BOX */
+.side-auth-box {
+  margin-top: auto;
+  padding: 1rem 1.2rem;
+  border-top: 1px solid var(--border);
+  background: rgba(7, 9, 14, 0.5);
+}
+.side-auth-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.8rem;
+  text-align: center;
+}
+.side-auth-card p {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+.btn-auth-unlock {
+  width: 100%;
+  background: var(--gold-g);
+  color: #07090E;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-auth-unlock:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+.side-auth-card.logged {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.05);
+}
+.side-auth-card.logged p {
+  color: #34D399;
+  font-weight: 700;
+}
+.btn-auth-logout {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  font-size: 0.68rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s;
+}
+.btn-auth-logout:hover { color: #FF5A78; border-color: rgba(255, 90, 120, 0.4); }
+
+/* MAIN CONTENT */
+.main { flex: 1; min-width: 0; padding: 2rem; max-width: 1100px; margin: 0 auto; }
+
+/* HERO CARD */
+.c-hero {
+  background: linear-gradient(135deg, rgba(21, 27, 40, 0.9) 0%, rgba(14, 18, 28, 0.95) 100%);
+  border: 1px solid var(--border-g);
+  border-radius: var(--r-lg);
+  padding: 1.8rem 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.c-hero.coaching-hero {
+  background: linear-gradient(135deg, rgba(28, 16, 26, 0.9) 0%, rgba(18, 12, 22, 0.95) 100%);
+  border-color: var(--border-c);
+}
+.c-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gold-g);
+}
+.c-hero.coaching-hero::before {
+  background: var(--coral-g);
+}
+.c-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--border-g);
+  color: var(--gold-l);
+  padding: 0.25rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.c-tag.coral-tag {
+  background: rgba(255, 90, 120, 0.15);
+  border-color: var(--border-c);
+  color: #FFAEC0;
+}
+.c-hero h1 {
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: #FFF;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.c-hero h1 span {
+  background: var(--gold-g);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.c-hero.coaching-hero h1 span {
+  background: var(--coral-g);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.c-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  max-width: 720px;
+  line-height: 1.6;
+}
+.c-chips {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.c-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: #CBD5E1;
+}
+
+/* VIDEO AREA */
+.vid-area {
+  background: #000;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1.5rem;
+}
+.vid-area iframe, .vid-area video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  border: none;
+  background: #000;
+  outline: none;
+}
+.pl-bar {
+  background: #0B0E17;
+  padding: 0.85rem 1.2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+.pl-lbl {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-right: 0.3rem;
+  white-space: nowrap;
+}
+.pl-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: #CBD5E1;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.pl-btn:hover { background: rgba(255, 255, 255, 0.12); color: #FFF; }
+.pl-btn.active {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-l);
+  border-color: var(--gold);
+  font-weight: 700;
+}
+.v-desc {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid var(--border-g);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--r-md);
+  padding: 1rem 1.4rem;
+  font-size: 0.86rem;
+  color: #CBD5E1;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* AUDIO SECTION */
+.audio-sec {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+}
+.audio-hdr { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem; }
+.audio-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.audio-t h4 { font-size: 0.95rem; font-weight: 800; color: #F8FAFC; margin-bottom: 0.15rem; }
+.audio-t p { font-size: 0.72rem; color: var(--muted); }
+.real-audio { width: 100%; border-radius: 8px; outline: none; }
+
+/* MATERIALS SECTION */
+.mats { margin-bottom: 2.5rem; }
+.mats-ttl {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.mats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.m-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: all 0.25s;
+}
+.m-card:hover {
+  border-color: var(--border-g);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+.m-ico-row { display: flex; align-items: center; gap: 0.8rem; }
+.m-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.b-pdf { background: rgba(239, 68, 68, 0.15); color: #EF4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+.b-docx { background: rgba(59, 130, 246, 0.15); color: #3B82F6; border: 1px solid rgba(59, 130, 246, 0.3); }
+.b-pptx { background: rgba(249, 115, 22, 0.15); color: #F97316; border: 1px solid rgba(249, 115, 22, 0.3); }
+.b-reto { background: rgba(168, 85, 247, 0.15); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3); }
+.b-vip { background: rgba(233, 69, 96, 0.15); color: #FF5A78; border: 1px solid rgba(233, 69, 96, 0.3); }
+.m-meta h5 { font-size: 0.9rem; font-weight: 700; color: #F8FAFC; line-height: 1.3; margin-bottom: 0.15rem; }
+.m-meta span { font-size: 0.68rem; color: var(--muted); }
+.m-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; flex-grow: 1; }
+.m-btns { display: flex; gap: 0.5rem; margin-top: auto; }
+
+/* STRICT BUTTON STYLING (WORKBOOK = DOWNLOADABLE; OTHERS = VIEW ONLY) */
+.btn-p {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #111622 0%, #1A2234 100%);
+  color: var(--gold);
+  border: 1.5px solid var(--gold);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--r-sm);
+  font-size: 0.78rem;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: all 0.2s;
+  text-align: center;
+}
+.btn-p:hover {
+  background: var(--gold-g);
+  color: #07090E;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+.btn-s {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: #E2E8F0;
+  font-size: 0.76rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: all 0.2s;
+  text-align: center;
+}
+.btn-s:hover { background: rgba(255, 255, 255, 0.12); color: #FFF; }
+
+/* NAVIGATION BUTTONS */
+.c-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: #CBD5E1;
+  padding: 0.75rem 1.3rem;
+  border-radius: var(--r-md);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+.btn-nav:hover { background: var(--card); border-color: var(--border-g); color: var(--gold-l); }
+.btn-nav.primary {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold);
+  color: var(--gold-l);
+}
+.btn-nav.primary:hover { background: var(--gold-g); color: #07090E; border-color: transparent; }
+.btn-nav.coaching-nav {
+  background: rgba(233, 69, 96, 0.15);
+  border-color: var(--coral);
+  color: #FFAEC0;
+}
+.btn-nav.coaching-nav:hover { background: var(--coral-g); color: #FFF; border-color: transparent; }
+.btn-nav:disabled, .btn-nav.dis { opacity: 0.3; pointer-events: none; }
+
+/* PANELS */
+.c-panel { display: none; }
+.c-panel.active { display: block; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* FOOTER */
+.ftr {
+  background: #05070B;
+  border-top: 1px solid var(--border);
+  padding: 1.6rem 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+/* ==================================================================== */
+/* LOGIN / ACCESS MODAL                                                  */
+/* ==================================================================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(4, 6, 10, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+}
+.modal-overlay.open { display: flex; animation: fadeIn 0.25s ease; }
+.modal-card {
+  background: #0E121C;
+  border: 1.5px solid var(--gold);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.2);
+  border-radius: var(--r-xl);
+  max-width: 480px;
+  width: 100%;
+  padding: 2.2rem;
+  position: relative;
+  overflow: hidden;
+}
+.modal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gold-g);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+.modal-close-btn:hover { background: rgba(255, 255, 255, 0.15); color: #FFF; }
+.modal-header {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+.modal-lock-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  border-radius: 16px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1.5px solid var(--border-g);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--gold);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+.modal-header h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFF;
+  margin-bottom: 0.4rem;
+}
+.modal-header p {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.modal-form { display: flex; flex-direction: column; gap: 1.1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; text-align: left; }
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gold-l);
+}
+.form-input-wrap { position: relative; }
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--r-sm);
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s;
+  outline: none;
+}
+.form-input:focus {
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+.form-pwd-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.modal-err {
+  display: none;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #FCA5A5;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--r-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+.btn-modal-submit {
+  background: #FFD700;
+  color: #000000;
+  border: none;
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--r-sm);
+  font-size: 0.92rem;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+.btn-modal-submit:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.6);
+}
+.modal-hint {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .sidebar { display: none; }
+  .mob-bar { display: flex; }
+  .main { padding: 1.2rem 0.9rem; }
+  .c-hero h1 { font-size: 1.25rem; }
+  .c-hero { padding: 1.3rem; }
+  .prog-wrap { display: none; }
+  .hdr-name { font-size: 0.82rem; }
+}
+@media(max-width: 560px) {
+  .hdr-in { padding: 0 0.75rem; gap: 0.6rem; }
+  .back-btn { font-size: 0.72rem; padding: 0.35rem 0.75rem; }
+  .badge-hdr { display: none; }
+  .main { padding: 0.9rem 0.6rem; }
+  .c-hero { padding: 1.1rem 0.9rem; margin-bottom: 1.2rem; }
+  .c-hero h1 { font-size: 1.1rem; }
+  .c-desc { font-size: 0.82rem; }
+  .mats-grid { grid-template-columns: 1fr; }
+  .m-btns { flex-direction: column; }
+  .btn-p, .btn-s { width: 100%; }
+  .c-nav { flex-direction: column; align-items: stretch; }
+  .btn-nav { justify-content: center; }
+  .modal-card { padding: 1.5rem 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP HEADER -->
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="/campus_modo_lider.html" class="back-btn">&#8592; Campus Principal</a>
+    <div class="hdr-div"></div>
+    <div class="hdr-brand">
+      <span class="badge-hdr" style="background:#FFD700; color:#000000; border:none; font-weight:900;">&#128274; Acceso a Curso Completo</span>
+      <span class="hdr-name">Emprender de Cero a Impacto y Ventas</span>
+    </div>
+    
+    <div id="authBadgeHdr" class="auth-status-badge" onclick="toggleAuthModal()">
+      <span id="authBadgeIcon">&#128274;</span>
+      <span id="authBadgeTxt">Acceso Alumnas</span>
+    </div>
+
+    <div class="prog-wrap">
+      <span class="prog-lbl">Progreso</span>
+      <div class="prog-bar"><div class="prog-fill" id="pFill" style="width:17%"></div></div>
+      <span class="prog-lbl" id="pTxt">Clase 1 de 5</span>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE HORIZONTAL BAR -->
+<div class="mob-bar">
+  <div class="mob-chip active" id="mob1" onclick="sw(1)">&#128193; Carpeta 1 &bull; FREE PASS</div>
+  <div class="mob-chip" id="mob2" onclick="sw(2)">&#128193; Carpeta 2 &bull; FREE PASS</div>
+  <div class="mob-chip" id="mob3" onclick="sw(3)">&#128274; Carpeta 3</div>
+  <div class="mob-chip" id="mob4" onclick="sw(4)">&#128274; Carpeta 4</div>
+  <div class="mob-chip" id="mob5" onclick="sw(5)">&#128274; Carpeta 5</div>
+  <div class="mob-chip coaching-chip" id="mobCoach2" onclick="sw('coach2')">&#128081; Intro: &iquest;PARA qu&eacute; REGRESAR a m&iacute;?</div>
+  <div class="mob-chip coaching-chip" id="mobCoach1" onclick="sw('coach1')">&#128081; Volver a M&iacute; (Grupo Martes)</div>
+  <div class="mob-chip coaching-chip" id="mobCoach3" onclick="sw('coach3')">&#128081; Volver a M&iacute; (Grupo Mi&eacute;rcoles)</div>
+  <div class="mob-chip coaching-chip" id="mobEmprende" onclick="sw('emprende')" style="border-color:rgba(255,215,0,0.5); color:#FFD700;">&#128640; Mi Emprendimiento</div>
+</div>
+
+<div class="layout">
+  <!-- SIDEBAR DESKTOP -->
+  <aside class="sidebar">
+    <div class="sec-lbl">&#128193; CARPETAS DEL CURSO &bull; FREE PASS</div>
+    
+    <div class="s-item active" id="si1" onclick="sw(1)">
+      <div class="s-num">01</div>
+      <div class="s-info">
+        <div class="s-title" style="display:flex; align-items:center; justify-content:space-between; gap:0.4rem;">
+          <span>Carpeta 1: Emprender Conscientemente</span>
+          <span style="font-size:0.58rem; background:rgba(16,185,129,0.18); color:#34D399; border:1px solid rgba(16,185,129,0.35); padding:0.1rem 0.45rem; border-radius:50px; font-weight:800; letter-spacing:0.4px;">FREE PASS</span>
+        </div>
+        <div class="s-sub">2 videos &middot; 4 materiales</div>
+      </div>
+      <span>&#128194;</span>
+    </div>
+
+    <div class="s-item" id="si2" onclick="sw(2)">
+      <div class="s-num">02</div>
+      <div class="s-info">
+        <div class="s-title" style="display:flex; align-items:center; justify-content:space-between; gap:0.4rem;">
+          <span>Carpeta 2: Prop&oacute;sito y Direcci&oacute;n</span>
+          <span style="font-size:0.58rem; background:rgba(16,185,129,0.18); color:#34D399; border:1px solid rgba(16,185,129,0.35); padding:0.1rem 0.45rem; border-radius:50px; font-weight:800; letter-spacing:0.4px;">FREE PASS</span>
+        </div>
+        <div class="s-sub">2 videos &middot; 4 materiales</div>
+      </div>
+      <span>&#128194;</span>
+    </div>
+
+    <div class="s-div"></div>
+    <div class="sec-lbl">
+      <span>&#128274; CARPETAS AVANZADAS</span>
+      <span style="font-size:0.6rem; color:var(--gold);">Alumnas Activas</span>
+    </div>
+
+    <div class="s-item" id="si3" onclick="sw(3)">
+      <div class="s-num">03</div>
+      <div class="s-info">
+        <div class="s-title">Carpeta 3: Propuesta de Valor</div>
+        <div class="s-sub">3 videos &middot; 3 materiales</div>
+      </div>
+      <span class="s-lock-ico" id="lock3">&#128274;</span>
+    </div>
+
+    <div class="s-item" id="si4" onclick="sw(4)">
+      <div class="s-num">04</div>
+      <div class="s-info">
+        <div class="s-title">Carpeta 4: Reconectar con mi Negocio</div>
+        <div class="s-sub">1 video &middot; 1 audio &middot; 1 gu&iacute;a</div>
+      </div>
+      <span class="s-lock-ico" id="lock4">&#128274;</span>
+    </div>
+
+    <div class="s-item" id="si5" onclick="sw(5)">
+      <div class="s-num">05</div>
+      <div class="s-info">
+        <div class="s-title">Carpeta 5: Cliente Ideal y Ventas</div>
+        <div class="s-sub">Presentaci&oacute;n &middot; Workbook</div>
+      </div>
+      <span class="s-lock-ico" id="lock5">&#128274;</span>
+    </div>
+
+    <div class="s-div"></div>
+    <div class="sec-lbl" style="color:var(--coral); font-weight:900; letter-spacing:0.8px;">
+      <span>&#128081; COACHING GRUPAL CLASES GRABADAS</span>
+    </div>
+
+    <div class="s-item coaching-item" id="siCoach2" onclick="sw('coach2')">
+      <div class="s-num" style="font-weight:900;">IN</div>
+      <div class="s-info">
+        <div class="s-title">Introducci&oacute;n: &iquest;PARA qu&eacute; REGRESAR a m&iacute;?</div>
+        <div class="s-sub">Video Reflexi&oacute;n &middot; Audio &middot; Workbook</div>
+      </div>
+      <span class="s-lock-ico" id="lockCoach2">&#128274;</span>
+    </div>
+
+    <div class="s-item coaching-item" id="siCoach1" onclick="sw('coach1')">
+      <div class="s-num" style="font-weight:900;">GM</div>
+      <div class="s-info">
+        <div class="s-title">Volver a M&iacute; &mdash; Grupo Martes</div>
+        <div class="s-sub">Clase Grabada Oficial en Vivo</div>
+      </div>
+      <span class="s-lock-ico" id="lockCoach1">&#128274;</span>
+    </div>
+
+    <div class="s-item coaching-item" id="siCoach3" onclick="sw('coach3')">
+      <div class="s-num" style="font-weight:900;">MI</div>
+      <div class="s-info">
+        <div class="s-title">Volver a M&iacute; &mdash; Grupo Mi&eacute;rcoles</div>
+        <div class="s-sub">Clase Grabada Oficial en Vivo</div>
+      </div>
+      <span class="s-lock-ico" id="lockCoach3">&#128274;</span>
+    </div>
+
+    <div class="s-div"></div>
+    <div class="sec-lbl" style="color:#FFD700; font-weight:900; letter-spacing:0.8px;">
+      <span>&#128640; MI EMPRENDIMIENTO</span>
+    </div>
+
+    <div class="s-item coaching-item" id="siEmprende" onclick="sw('emprende')" style="border-left-color:#FFD700;">
+      <div class="s-num" style="font-weight:900; background:rgba(255,215,0,0.15); color:#FFD700; border-color:rgba(255,215,0,0.4);">ME</div>
+      <div class="s-info">
+        <div class="s-title" style="color:#FFF;">Mi Emprendimiento</div>
+        <div class="s-sub">Presentaci&oacute;n de Alumnas en Vivo</div>
+      </div>
+      <span class="s-lock-ico" id="lockEmprende">&#128274;</span>
+    </div>
+
+    <!-- SIDEBAR AUTH BOX -->
+    <div class="side-auth-box">
+      <div class="side-auth-card" id="sideAuthCard">
+        <p id="sideAuthMsg">Acceso a partir de Clase 3 y Coachings requiere clave de Alumna Activa.<br><span style="font-size:0.75rem; color:#D4AF37; display:block; margin-top:4px;">✉️ Las contraseñas se envían por correo electrónico.</span></p>
+        <button class="btn-auth-unlock" id="btnSideAuth" onclick="toggleAuthModal()">&#128273; Ingresar Clave</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN VIEWPORT -->
+  <main class="main">
+
+    <!-- ============================================================== -->
+    <!-- PANEL 1: CLASE 1                                                -->
+    <!-- ============================================================== -->
+    <div class="c-panel active" id="p1">
+      <div class="c-hero">
+        <div class="c-tag" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.4); color:#34D399;">&#128193; CARPETA 1 &bull; FREE PASS &bull; Emprender Conscientemente</div>
+        <h1>&iquest;Qu&eacute; es ser una <span>Emprendedora Consciente</span>?</h1>
+        <p class="c-desc">Rompe el techo de cristal, entrena tu mentalidad de empresaria y construye las bases s&oacute;lidas de tu negocio desde el autoliderazgo consciente.</p>
+        <div class="c-chips">
+          <span class="c-chip" style="background:rgba(16,185,129,0.18); color:#34D399; border-color:rgba(16,185,129,0.35); font-weight:800;">&#128275; FREE PASS</span>
+          <span class="c-chip">&#127916; 2 Videos</span>
+          <span class="c-chip">&#128196; 4 Materiales</span>
+          <span class="c-chip">&#9201; Libre Acceso</span>
+        </div>
+      </div>
+
+      <!-- VIDEO PLAYER -->
+      <div class="vid-area">
+        <iframe id="v1" src="https://www.youtube-nocookie.com/embed/6bYxRQYJqgo?rel=0&amp;modestbranding=1" title="Clase 1" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="pl-bar">
+          <span class="pl-lbl">Videos:</span>
+          <button class="pl-btn active" onclick="svidIframe('v1','https://www.youtube-nocookie.com/embed/6bYxRQYJqgo?rel=0&amp;modestbranding=1','1. Video Clase Oficial',this,'d1')">&#9658; 1. Video Clase Oficial</button>
+          <button class="pl-btn" onclick="svidIframe('v1','https://drive.google.com/file/d/126kZK09iW73ShPt3utyLhx2Qk1scy-Kf/preview','2. Grabaci&oacute;n en Vivo',this,'d1')">&#9658; 2. Grabaci&oacute;n en Vivo</button>
+        </div>
+      </div>
+      <div class="v-desc" id="d1">&#128161; <strong>Contenido:</strong> Rompe con la culpa de cobrar, define tu postura ante el cliente y establece las bases para escalar tu negocio con mentalidad de l&iacute;der.</div>
+
+      <!-- AUDIO -->
+      <div class="audio-sec">
+        <div class="audio-hdr">
+          <div class="audio-ico">&#127897;</div>
+          <div class="audio-t">
+            <h4>Podcast: El Salto Cu&aacute;ntico Interior</h4>
+            <p>Audio de Mentalidad &middot; Lic. Romina Lorena Montiel</p>
+          </div>
+        </div>
+        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg"></audio>
+      </div>
+
+      <!-- MATERIALS -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Materiales de la Clase</div>
+        <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-docx">DOCX</div>
+              <div class="m-meta">
+                <h5>Introducci&oacute;n Escrita Clase 1</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Texto preparatorio de Romina: de mentalidad autoempleada a empresaria consciente.</p>
+            <div class="m-btns">
+              <a href="/clase1_emprender_conscientemente/INTRO_ESCRITA_CLASE_1.html" target="_blank" class="btn-p">&#128065; Ver Online</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Workbook: Emprender Conscientemente</h5>
+                <span>Cuaderno Oficial &middot; Descargable</span>
+              </div>
+            </div>
+            <p class="m-desc">Ejercicios pr&aacute;cticos de diagn&oacute;stico, visi&oacute;n y autoliderazgo.</p>
+            <div class="m-btns">
+              <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente_Oficial.pdf" target="_blank" class="btn-s">&#128065; Ver</a>
+              <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente_Oficial.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Workbook: Activa tu Mentalidad</h5>
+                <span>Gu&iacute;a de Transformaci&oacute;n &middot; Descargable</span>
+              </div>
+            </div>
+            <p class="m-desc">Herramientas de autoliderazgo para romper bloqueos con el dinero y las ventas.</p>
+            <div class="m-btns">
+              <a href="/materiales/Workbook_Activa_Tu_Mentalidad_Negocios.pdf" target="_blank" class="btn-s">&#128065; Ver</a>
+              <a href="/materiales/Workbook_Activa_Tu_Mentalidad_Negocios.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pptx">PPTX</div>
+              <div class="m-meta">
+                <h5>Presentaci&oacute;n Clase 1</h5>
+                <span>Visualizador Web Online</span>
+              </div>
+            </div>
+            <p class="m-desc">Diapositivas completas proyectadas por Romina durante la masterclass.</p>
+            <div class="m-btns">
+              <a href="/clase1_emprender_conscientemente/Presentacion_Clase_1_Interactiva.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav dis" disabled>&#8592; Primera Carpeta</button>
+        <button class="btn-nav primary" onclick="sw(2)">Carpeta 2: Prop&oacute;sito y Direcci&oacute;n &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL 2: CLASE 2                                                -->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="p2">
+      <div class="c-hero">
+        <div class="c-tag" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.4); color:#34D399;">&#128193; CARPETA 2 &bull; FREE PASS &bull; Prop&oacute;sito y Direcci&oacute;n</div>
+        <h1>Descubr&iacute; el <span>Prop&oacute;sito y Direcci&oacute;n</span> de tu Negocio</h1>
+        <p class="c-desc">Alinea tus metas, conecta con tu audiencia ideal y construye un negocio con rumbo claro y estrategia de largo plazo.</p>
+        <div class="c-chips">
+          <span class="c-chip" style="background:rgba(16,185,129,0.18); color:#34D399; border-color:rgba(16,185,129,0.35); font-weight:800;">&#128275; FREE PASS</span>
+          <span class="c-chip">&#127916; 2 Videos</span>
+          <span class="c-chip">&#127897; 1 Audio</span>
+          <span class="c-chip">&#128196; 4 Materiales</span>
+        </div>
+      </div>
+
+      <!-- VIDEO PLAYER -->
+      <div class="vid-area">
+        <iframe id="v2" src="https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&amp;modestbranding=1" title="Clase 2: Qué es el Propósito" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="pl-bar">
+          <span class="pl-lbl">Videos:</span>
+          <button class="pl-btn active" onclick="svidIframe('v2','https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&amp;modestbranding=1','1. Qu&eacute; es el Prop&oacute;sito',this,'d2')">&#9658; 1. Qu&eacute; es el Prop&oacute;sito</button>
+          <button class="pl-btn" onclick="svidIframe('v2','https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&amp;modestbranding=1','2. El Antes y Despu&eacute;s',this,'d2')">&#9658; 2. El Antes y Despu&eacute;s</button>
+        </div>
+      </div>
+      <div class="v-desc" id="d2">&#128161; <strong>Reproduciendo:</strong> 1. Qu&eacute; es el Prop&oacute;sito &bull; Descubr&iacute; c&oacute;mo transitar del autoempleo al liderazgo con prop&oacute;sito y estructurar una visi&oacute;n clara para tu negocio.</div>
+
+      <!-- AUDIO -->
+      <div class="audio-sec">
+        <div class="audio-hdr">
+          <div class="audio-ico">&#127897;</div>
+          <div class="audio-t">
+            <h4>Audio: Lo que tu Cliente Desea Comprar</h4>
+            <p>Audio Oficial &middot; Lic. Romina Lorena Montiel</p>
+          </div>
+        </div>
+        <audio controls controlsList="nodownload" class="real-audio"><source src="/audios/reflexion_producto_cliente_compra.mpeg" type="audio/mpeg"></audio>
+      </div>
+
+      <!-- MATERIALS -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Materiales de la Clase</div>
+        <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-docx">DOCX</div>
+              <div class="m-meta">
+                <h5>Introducci&oacute;n Escrita Clase 2</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Emprender es construir un negocio que genere libertad financiera y vida sostenible.</p>
+            <div class="m-btns">
+              <a href="/clase2_proposito_y_direccion/INTRO_ESCRITA_CLASE_2.html" target="_blank" class="btn-p">&#128065; Ver Online</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Workbook: Prop&oacute;sito y Direcci&oacute;n</h5>
+                <span>Interactivo + PDF Descargable</span>
+              </div>
+            </div>
+            <p class="m-desc">Ejercicios de autodiagn&oacute;stico, matriz del prop&oacute;sito y mapa de ruta estrat&eacute;gico.</p>
+            <div class="m-btns">
+              <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pptx">PPTX</div>
+              <div class="m-meta">
+                <h5>Presentaci&oacute;n Clase 2</h5>
+                <span>Visualizador Web Online</span>
+              </div>
+            </div>
+            <p class="m-desc">Diapositivas completas proyectadas por Romina durante la clase de prop&oacute;sito.</p>
+            <div class="m-btns">
+              <a href="/clase2_proposito_y_direccion/Presentacion_Clase_2_Proposito_y_Direccion.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-reto">RETO</div>
+              <div class="m-meta">
+                <h5>Reto Final: Cuadro del Prop&oacute;sito</h5>
+                <span>Visualizador Web Online</span>
+              </div>
+            </div>
+            <p class="m-desc">Complet&aacute; el esquema visual del prop&oacute;sito antes de avanzar a la Clase 3.</p>
+            <div class="m-btns">
+              <a href="/clase2_proposito_y_direccion/El reto final de esta clase es lograr completar el cuadro del PROPOSITO.PNG" target="_blank" class="btn-p">&#127919; Ver Cuadro del Reto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav" onclick="sw(1)">&#8592; Carpeta 1: Emprender Conscientemente</button>
+        <button class="btn-nav primary" onclick="sw(3)">&#128274; Carpeta 3: Propuesta de Valor &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL 3: CARPETA 3 (PROTEGIDA)                                  -->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="p3">
+      <div class="c-hero">
+        <div class="c-tag">&#128274; CARPETA 3 &bull; Propuesta de Valor y Posicionamiento</div>
+        <h1>Crear una <span>Propuesta de Valor</span> Irresistible</h1>
+        <p class="c-desc">Rompe el anonimato comercial. Descubr&iacute; exactamente qu&eacute; le est&aacute;s vendiendo al inconsciente de tu clienta y estructur&aacute; una oferta que te posicione como referente &uacute;nica.</p>
+        <div class="c-chips">
+          <span class="c-chip">&#127916; 3 Videos</span>
+          <span class="c-chip">&#127897; 2 Audios</span>
+          <span class="c-chip">&#128196; 3 Materiales</span>
+          <span class="c-chip" style="border-color:var(--gold); color:var(--gold-l);">&#128081; Alumna Activa</span>
+        </div>
+      </div>
+
+      <!-- VIDEO PLAYER -->
+      <div class="vid-area" id="vBox3">
+        <video id="v3" controls controlsList="nodownload" oncontextmenu="return false;">
+          <source src="/clase3_propuesta_de_valor/video_apertura.mp4" type="video/mp4">
+        </video>
+        <div class="pl-bar">
+          <span class="pl-lbl">Videos:</span>
+          <button class="pl-btn active" onclick="svidLocal('v3','/clase3_propuesta_de_valor/video_apertura.mp4','1. Video Apertura: Qu&eacute; es Crear una Propuesta de Valor',this,'d3')">&#9658; 1. Apertura: Propuesta de Valor</button>
+          <button class="pl-btn" onclick="svidLocal('v3','/clase3_propuesta_de_valor/clase3_parte1.mp4','2. Clase 3 - Parte 1: Propuesta de Valor y Autoridad',this,'d3')">&#9658; 2. Clase 3 - Parte 1</button>
+          <button class="pl-btn" onclick="svidLocal('v3','/clase3_propuesta_de_valor/clase3_parte2.mp4','3. Clase 3 - Parte 2: Mi Propuesta de Valor en Acci&oacute;n',this,'d3')">&#9658; 3. Clase 3 - Parte 2</button>
+        </div>
+      </div>
+      <div class="v-desc" id="d3">&#128161; <strong>Contenido:</strong> Qu&eacute; es crear una propuesta de valor, c&oacute;mo diferenciarte y c&oacute;mo romper las objeciones invisibles de tus clientas.</div>
+
+      <!-- AUDIOS -->
+      <div class="audio-sec">
+        <div class="audio-hdr">
+          <div class="audio-ico">&#127897;</div>
+          <div class="audio-t">
+            <h4>Audio: Mi Historia con el Marketing</h4>
+            <p>Lecci&oacute;n de Vida y Estrategia &middot; Lic. Romina Lorena Montiel</p>
+          </div>
+        </div>
+        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg"></audio>
+        
+        <div class="audio-hdr" style="margin-top:1.2rem; padding-top:1.2rem; border-top:1px solid var(--border);">
+          <div class="audio-ico" style="background:linear-gradient(135deg,#10B981,#047857);">&#127897;</div>
+          <div class="audio-t">
+            <h4>Audio: Construir a Pesar de Todo</h4>
+            <p>Mentalidad de Resiliencia &middot; Lic. Romina Lorena Montiel</p>
+          </div>
+        </div>
+        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase3_propuesta_de_valor/construir%20a%20pesar%20de%20todo.mp3" type="audio/mpeg"></audio>
+      </div>
+
+      <!-- MATERIALS -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Materiales de la Clase</div>
+        <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Workbook: Mi Propuesta de Valor</h5>
+                <span>Interactivo + PDF Descargable</span>
+              </div>
+            </div>
+            <p class="m-desc">Cuaderno oficial de trabajo para definir y pulir tu oferta de alto impacto.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pptx">PPTX</div>
+              <div class="m-meta">
+                <h5>Presentaci&oacute;n Clase 3</h5>
+                <span>Visualizador Web Online</span>
+              </div>
+            </div>
+            <p class="m-desc">Diapositivas oficiales: arquitectura de valor, mensaje clave y promesa transformacional.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/Presentacion_Clase_3_Propuesta_de_Valor.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Los Miedos Detr&aacute;s de lo que Compran</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Presentaci&oacute;n visual sobre la psicolog&iacute;a profunda de compra y los temores de tu clienta.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.html" target="_blank" class="btn-p">&#128065; Ver Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav" onclick="sw(2)">&#8592; Carpeta 2: Prop&oacute;sito y Direcci&oacute;n</button>
+        <button class="btn-nav primary" onclick="sw(4)">&#128274; Carpeta 4: Reconectar &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL 4: CARPETA 4 (PROTEGIDA)                                  -->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="p4">
+      <div class="c-hero">
+        <div class="c-tag">&#128274; CARPETA 4 &bull; Regresar a M&iacute; y Reconectar con mi Negocio</div>
+        <h1>Regresar a M&iacute; y <span>Reconectar con mi Negocio</span></h1>
+        <p class="c-desc">Cuando te desconectas de tu visi&oacute;n interior, el negocio se vuelve una carga pesada. En esta clase volvemos a la ra&iacute;z para sanar tu relaci&oacute;n con el emprendimiento y liderar desde la abundancia y la serenidad.</p>
+        <div class="c-chips">
+          <span class="c-chip">&#127916; 1 Video Master</span>
+          <span class="c-chip">&#127897; 1 Audio</span>
+          <span class="c-chip">&#128196; 1 Gu&iacute;a Oficial</span>
+          <span class="c-chip" style="border-color:var(--gold); color:var(--gold-l);">&#128081; Alumna Activa</span>
+        </div>
+      </div>
+
+      <!-- VIDEO PLAYER -->
+      <div class="vid-area">
+        <video id="v4" controls controlsList="nodownload" oncontextmenu="return false;">
+          <source src="/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4" type="video/mp4">
+        </video>
+        <div class="pl-bar">
+          <span class="pl-lbl">Videos:</span>
+          <button class="pl-btn active" onclick="svidLocal('v4','/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4','Regresar a M&iacute; y Reconectar con mi Negocio',this,'d4')">&#9658; 1. Grabaci&oacute;n Completa</button>
+        </div>
+      </div>
+      <div class="v-desc" id="d4">&#128161; <strong>Contenido:</strong> C&oacute;mo salir del agotamiento operativo, recuperar el amor por lo que haces y renovar tus energ&iacute;as de empresaria.</div>
+
+      <!-- AUDIO -->
+      <div class="audio-sec">
+        <div class="audio-hdr">
+          <div class="audio-ico">&#127897;</div>
+          <div class="audio-t">
+            <h4>Audio: &iquest;Qu&eacute; pas&oacute; en esta clase?</h4>
+            <p>Reflexi&oacute;n y Anclaje &middot; Lic. Romina Lorena Montiel</p>
+          </div>
+        </div>
+        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase4_reconectar_negocio/QUE%20PASO%20EN%20ESTA%20CLASE.mpeg" type="audio/mpeg"></audio>
+      </div>
+
+      <!-- MATERIALS -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Materiales de la Clase</div>
+        <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Gu&iacute;a: Volver a M&iacute; y Reconectar</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Documento de autoacompa&ntilde;amiento emocional y estrat&eacute;gico para reconectar con tu proyecto.</p>
+            <div class="m-btns">
+              <a href="/clase4_reconectar_negocio/GUIA%20PARA%20VOLVER%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO%20(1).pdf" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav" onclick="sw(3)">&#8592; Carpeta 3: Propuesta de Valor</button>
+        <button class="btn-nav primary" onclick="sw(5)">&#128274; Carpeta 5: Cliente Ideal &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL 5: CARPETA 5 (PROTEGIDA)                                  -->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="p5">
+      <div class="c-hero">
+        <div class="c-tag">&#128274; CARPETA 5 &bull; Posicionamiento y Venta Consciente</div>
+        <h1>Cliente Ideal y <span>Posicionamiento de Autoridad</span></h1>
+        <p class="c-desc">Deja de hablarle a la masa. Aprende a definir con precisi&oacute;n a tu clienta perfecta, dise&ntilde;ar guiones de conexi&oacute;n y posicionarte como la soluci&oacute;n evidente en su mente.</p>
+        <div class="c-chips">
+          <span class="c-chip">&#128196; 2 Materiales Clave</span>
+          <span class="c-chip">&#128202; Presentaci&oacute;n Online</span>
+          <span class="c-chip" style="border-color:var(--gold); color:var(--gold-l);">&#128081; Alumna Activa</span>
+        </div>
+      </div>
+
+      <!-- MATERIALS -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Materiales de la Clase</div>
+        <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Workbook: Cliente Ideal y Posicionamiento</h5>
+                <span>Interactivo + PDF Descargable</span>
+              </div>
+            </div>
+            <p class="m-desc">Estructura el avatar profundo de tu cliente so&ntilde;ado y dise&ntilde;a tus mensajes de conversi&oacute;n.</p>
+            <div class="m-btns">
+              <a href="/clase5_cliente_ideal/Workbook_Clase_4_Cliente_Ideal_y_Posicionamiento.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/clase5_cliente_ideal/Workbook_Clase_4_Cliente_Ideal_y_Posicionamiento.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pptx">PPTX</div>
+              <div class="m-meta">
+                <h5>Presentaci&oacute;n: Cliente Ideal y Posicionamiento</h5>
+                <span>Visualizador Web Online</span>
+              </div>
+            </div>
+            <p class="m-desc">Diapositivas oficiales dictadas por la Lic. Romina Lorena Montiel.</p>
+            <div class="m-btns">
+              <a href="/clase5_cliente_ideal/Presentacion_Clase_4_Cliente_Ideal_y_Posicionamiento.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav" onclick="sw(4)">&#8592; Carpeta 4: Reconectar</button>
+        <button class="btn-nav coaching-nav" onclick="sw('coach2')">&#128081; Introducci&oacute;n: &iquest;PARA qu&eacute; REGRESAR a m&iacute;? &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL COACHING 1: CARPETA VOLVER A MÍ — GRUPO MARTES (PROTEGIDA)-->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="pCoach1">
+      <div class="c-hero coaching-hero">
+        <div class="c-tag coral-tag">&#128081; COACHING GRUPAL CLASES GRABADAS &bull; CARPETA: VOLVER A M&Iacute; &mdash; GRUPO MARTES</div>
+        <h1>Volver a M&iacute;: <span>Encuentro Coaching Grupo Martes</span></h1>
+        <p class="c-desc">Clase grabada en vivo del encuentro de Coaching Grupal de los martes con la Lic. Romina Lorena Montiel. Desmontamos la culpa por cobrar, alineamos tus valores fundamentales no negociables y definimos la identidad s&oacute;lida de la empresaria que encabeza tu proyecto.</p>
+        <div class="c-chips">
+          <span class="c-chip" style="border-color:rgba(233,69,96,0.5); color:#FFAEC0;">&#128101; Grupo Martes</span>
+          <span class="c-chip">&#127916; Grabaci&oacute;n en Vivo Oficial</span>
+          <span class="c-chip">&#128196; Workbook Oficial</span>
+          <span class="c-chip">&#128274; Alumnas Activas</span>
+        </div>
+      </div>
+
+      <!-- VIDEO COACHING 1: GRUPO MARTES -->
+      <div class="vid-area">
+        <iframe id="vCoach1" src="https://www.youtube-nocookie.com/embed/ojcVKLS0Rzw?rel=0&amp;modestbranding=1" title="Coaching Grupal: Volver a Mí - Grupo Martes" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="pl-bar">
+          <span class="pl-lbl" style="color:var(--coral);">Sesi&oacute;n Grabada:</span>
+          <button class="pl-btn active" onclick="svidIframe('vCoach1','https://www.youtube-nocookie.com/embed/ojcVKLS0Rzw?rel=0&amp;modestbranding=1','Coaching Grupal: Volver a M&iacute; &mdash; Grupo Martes (Grabaci&oacute;n Completa)',this,'dCoach1')">&#9658; 1. Grabaci&oacute;n Grupo Martes (Video Oficial)</button>
+        </div>
+      </div>
+      <div class="v-desc" id="dCoach1" style="border-left-color:var(--coral); background:rgba(233,69,96,0.05);">
+        &#128161; <strong>Sesi&oacute;n Oficial:</strong> Encuentro en vivo de Coaching Grupal Volver a M&iacute; &bull; Grupo Martes. Dictado por la Lic. Romina Lorena Montiel.
+      </div>
+
+      <!-- MATERIALS COACHING 1 -->
+      <div class="mats">
+        <div class="mats-ttl" style="color:#FFAEC0;">&#128196; Materiales de la Carpeta: Volver a M&iacute; &mdash; Grupo Martes</div>
+        <div class="mats-grid">
+          <div class="m-card" style="border-color:rgba(233,69,96,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge b-vip">WORKBOOK</div>
+              <div class="m-meta">
+                <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
+                <span>Interactivo + PDF Descargable</span>
+              </div>
+            </div>
+            <p class="m-desc">Cuaderno de trabajo integral del coaching: mapa de valores fundamentales, matriz de coherencia y declaraci&oacute;n de l&iacute;der.</p>
+            <div class="m-btns">
+              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.pdf" download class="btn-p" style="border-color:var(--coral); color:#FFAEC0;">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">GU&Iacute;A</div>
+              <div class="m-meta">
+                <h5>Gu&iacute;a Oficial: Volver a M&iacute; y Reconectar con mi Negocio</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Material de soporte para sostener el progreso interior y el bienestar durante los procesos de transformaci&oacute;n.</p>
+            <div class="m-btns">
+              <a href="/coaching_grupal/Guia_Volver_A_Mi_Reconectar_Negocio.pdf" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav coaching-nav" onclick="sw('coach2')">&#8592; Introducci&oacute;n: &iquest;PARA qu&eacute; REGRESAR a m&iacute;?</button>
+        <button class="btn-nav coaching-nav" onclick="sw('coach3')">&#128081; Carpeta: Volver a M&iacute; &mdash; Grupo Mi&eacute;rcoles &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL COACHING 2: CARPETA VOLVER A MÍ — CLASE 2 (PROTEGIDA)     -->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="pCoach2">
+      <div class="c-hero coaching-hero">
+        <div class="c-tag coral-tag">&#128081; COACHING GRUPAL CLASES GRABADAS &bull; INTRODUCCI&Oacute;N</div>
+        <h1>Introducci&oacute;n: <span>&iquest;PARA qu&eacute; REGRESAR a m&iacute;?</span></h1>
+        <p class="c-desc">Video introductorio con la Lic. Romina Lorena Montiel. Supera la saturaci&oacute;n del d&iacute;a a d&iacute;a, renueva la conexi&oacute;n estrat&eacute;gica con tu emprendimiento y reactiva tus ventas desde el autoliderazgo y la claridad.</p>
+        <div class="c-chips">
+          <span class="c-chip" style="border-color:rgba(233,69,96,0.5); color:#FFAEC0;">&#10024; Video Introductorio</span>
+          <span class="c-chip">&#127916; Reflexi&oacute;n y Enfoque</span>
+          <span class="c-chip">&#127897; 1 Audio</span>
+          <span class="c-chip">&#128196; Workbook 7 D&iacute;as</span>
+          <span class="c-chip">&#128274; Alumnas Activas</span>
+        </div>
+      </div>
+
+      <!-- VIDEO PLAYER COACHING INTRO -->
+      <div class="vid-area">
+        <video id="vCoach2" controls controlsList="nodownload" oncontextmenu="return false;">
+          <source src="/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4" type="video/mp4">
+        </video>
+        <div class="pl-bar">
+          <span class="pl-lbl" style="color:var(--coral);">Video:</span>
+          <button class="pl-btn active" onclick="svidLocal('vCoach2','/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4','Introducci&oacute;n: &iquest;PARA qu&eacute; REGRESAR a m&iacute;?',this,'dCoach2')">&#9658; Video Introductorio: &iquest;PARA qu&eacute; REGRESAR a m&iacute;?</button>
+        </div>
+      </div>
+      <div class="v-desc" id="dCoach2" style="border-left-color:var(--coral); background:rgba(233,69,96,0.05);">
+        &#128161; <strong>Video Introductorio:</strong> &iquest;PARA qu&eacute; REGRESAR a m&iacute;? Reflexi&oacute;n y anclaje profundo con Romina Lorena Montiel para salir del agotamiento y liderar con claridad renovada.
+      </div>
+
+      <!-- AUDIO COACHING INTRO -->
+      <div class="audio-sec">
+        <div class="audio-hdr">
+          <div class="audio-ico">&#127897;</div>
+          <div class="audio-t">
+            <h4>Audio: &iquest;Qu&eacute; pas&oacute; en esta clase de Coaching?</h4>
+            <p>Reflexi&oacute;n y Anclaje &middot; Lic. Romina Lorena Montiel</p>
+          </div>
+        </div>
+        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase4_reconectar_negocio/QUE%20PASO%20EN%20ESTA%20CLASE.mpeg" type="audio/mpeg"></audio>
+      </div>
+
+      <!-- MATERIALS COACHING INTRO -->
+      <div class="mats">
+        <div class="mats-ttl" style="color:#FFAEC0;">&#128196; Materiales: Introducci&oacute;n &mdash; &iquest;PARA qu&eacute; REGRESAR a m&iacute;?</div>
+        <div class="mats-grid">
+          <div class="m-card" style="border-color:rgba(233,69,96,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge b-vip">WORKBOOK</div>
+              <div class="m-meta">
+                <h5>Workbook: 7 D&iacute;as para Reconectar Conmigo</h5>
+                <span>PDF Oficial Descargable</span>
+              </div>
+            </div>
+            <p class="m-desc">Gu&iacute;a pr&aacute;ctica intensiva de 7 d&iacute;as con ejercicios dise&ntilde;ados para reactivar tu claridad mental y reconectar con tus metas de negocio.</p>
+            <div class="m-btns">
+              <a href="/coaching_grupal/7_DIAS_PARA_RECONECTAR_CONMIGO.pdf" download class="btn-p" style="border-color:var(--coral); color:#FFAEC0;">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">GU&Iacute;A</div>
+              <div class="m-meta">
+                <h5>Gu&iacute;a Oficial: Volver a M&iacute; y Reconectar</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Documento complementario con protocolos de autoliderazgo y bienestar para sostener tu crecimiento.</p>
+            <div class="m-btns">
+              <a href="/coaching_grupal/Guia_Volver_A_Mi_Reconectar_Negocio.pdf" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav" onclick="sw(5)">&#8592; Carpeta 5: Cliente Ideal</button>
+        <button class="btn-nav coaching-nav" onclick="sw('coach1')">&#128081; Carpeta: Volver a M&iacute; &mdash; Grupo Martes &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL COACHING 3: CARPETA VOLVER A MÍ — GRUPO MIÉRCOLES (PROTEGIDA)-->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="pCoach3">
+      <div class="c-hero coaching-hero">
+        <div class="c-tag coral-tag">&#128081; COACHING GRUPAL CLASES GRABADAS &bull; CARPETA: VOLVER A M&Iacute; &mdash; GRUPO MI&Eacute;RCOLES</div>
+        <h1>Volver a M&iacute;: <span>Encuentro Coaching Grupo Mi&eacute;rcoles</span></h1>
+        <p class="c-desc">Clase grabada en vivo del encuentro de Coaching Grupal de los mi&eacute;rcoles con la Lic. Romina Lorena Montiel. Desmontamos la culpa por cobrar, profundizamos en tus valores esenciales y fortalecemos la identidad de liderazgo estrat&eacute;gico de tu negocio.</p>
+        <div class="c-chips">
+          <span class="c-chip" style="border-color:rgba(233,69,96,0.5); color:#FFAEC0;">&#128101; Grupo Mi&eacute;rcoles</span>
+          <span class="c-chip">&#127916; Grabaci&oacute;n en Vivo Oficial</span>
+          <span class="c-chip">&#128196; Workbook Oficial</span>
+          <span class="c-chip">&#128274; Alumnas Activas</span>
+        </div>
+      </div>
+
+      <!-- VIDEO COACHING 3: GRUPO MIÉRCOLES -->
+      <div class="vid-area">
+        <iframe id="vCoach3" src="https://www.youtube-nocookie.com/embed/O9Tf3gBkdFo?rel=0&amp;modestbranding=1" title="Coaching Grupal: Volver a Mí - Grupo Miércoles" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="pl-bar">
+          <span class="pl-lbl" style="color:var(--coral);">Sesi&oacute;n Grabada:</span>
+          <button class="pl-btn active" onclick="svidIframe('vCoach3','https://www.youtube-nocookie.com/embed/O9Tf3gBkdFo?rel=0&amp;modestbranding=1','Coaching Grupal: Volver a M&iacute; &mdash; Grupo Mi&eacute;rcoles (Grabaci&oacute;n Completa)',this,'dCoach3')">&#9658; 1. Grabaci&oacute;n Grupo Mi&eacute;rcoles (Video Oficial)</button>
+        </div>
+      </div>
+      <div class="v-desc" id="dCoach3" style="border-left-color:var(--coral); background:rgba(233,69,96,0.05);">
+        &#128161; <strong>Sesi&oacute;n Oficial:</strong> Encuentro en vivo de Coaching Grupal Volver a M&iacute; &bull; Grupo Mi&eacute;rcoles. Dictado por la Lic. Romina Lorena Montiel.
+      </div>
+
+      <!-- MATERIALS COACHING 3 -->
+      <div class="mats">
+        <div class="mats-ttl" style="color:#FFAEC0;">&#128196; Materiales de la Carpeta: Volver a M&iacute; &mdash; Grupo Mi&eacute;rcoles</div>
+        <div class="mats-grid">
+          <div class="m-card" style="border-color:rgba(233,69,96,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge b-vip">WORKBOOK</div>
+              <div class="m-meta">
+                <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
+                <span>Interactivo + PDF Descargable</span>
+              </div>
+            </div>
+            <p class="m-desc">Cuaderno de trabajo integral del coaching: mapa de valores fundamentales, matriz de coherencia y declaraci&oacute;n de l&iacute;der.</p>
+            <div class="m-btns">
+              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.pdf" download class="btn-p" style="border-color:var(--coral); color:#FFAEC0;">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">GU&Iacute;A</div>
+              <div class="m-meta">
+                <h5>Gu&iacute;a Oficial: Volver a M&iacute; y Reconectar con mi Negocio</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Material de soporte para sostener el progreso interior y el bienestar durante los procesos de transformaci&oacute;n.</p>
+            <div class="m-btns">
+              <a href="/coaching_grupal/Guia_Volver_A_Mi_Reconectar_Negocio.pdf" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav coaching-nav" onclick="sw('coach1')">&#8592; Carpeta: Volver a M&iacute; &mdash; Grupo Martes</button>
+        <button class="btn-nav coaching-nav" onclick="sw('emprende')" style="border-color:var(--gold); color:#FFD700;">&#128640; Carpeta: Mi Emprendimiento &#8594;</button>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- PANEL MI EMPRENDIMIENTO: CARPETA APARTE LUEGO DE COACHING      -->
+    <!-- ============================================================== -->
+    <div class="c-panel" id="pEmprende">
+      <div class="c-hero coaching-hero" style="border-color:rgba(255,215,0,0.35); background:radial-gradient(ellipse at top right, rgba(255,215,0,0.08), transparent 70%);">
+        <div class="c-tag" style="background:rgba(255,215,0,0.15); border-color:rgba(255,215,0,0.4); color:#FFD700;">&#128640; CARPETA ESPECIAL &bull; MI EMPRENDIMIENTO</div>
+        <h1>Mi Emprendimiento: <span>Nos Presentamos y Presentamos Nuestros Negocios</span></h1>
+        <p class="c-desc">Sesi&oacute;n especial grabada en vivo donde cada una de las alumnas presenta su emprendimiento, comparte su modelo de negocio y recibe retroalimentaci&oacute;n estrat&eacute;gica y acompa&ntilde;amiento en comunidad de la Lic. Romina Lorena Montiel.</p>
+        <div class="c-chips">
+          <span class="c-chip" style="border-color:rgba(255,215,0,0.5); color:#FFD700;">&#129309; Networking y Comunidad</span>
+          <span class="c-chip">&#127916; Video Presentaciones</span>
+          <span class="c-chip">&#128161; Casos Reales</span>
+          <span class="c-chip">&#128274; Alumnas Activas</span>
+        </div>
+      </div>
+
+      <!-- VIDEO MI EMPRENDIMIENTO -->
+      <div class="vid-area">
+        <iframe id="vEmprende" src="https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&amp;modestbranding=1" title="Mi Emprendimiento - Nos Presentamos y Presentamos Nuestros Emprendimientos" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+        <div class="pl-bar">
+          <span class="pl-lbl" style="color:#FFD700;">Sesi&oacute;n Especial:</span>
+          <button class="pl-btn active" onclick="svidIframe('vEmprende','https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&amp;modestbranding=1','Mi Emprendimiento: Nos Presentamos y Presentamos Nuestros Emprendimientos',this,'dEmprende')">&#9658; 1. Nos Presentamos y Presentamos Nuestros Emprendimientos</button>
+        </div>
+      </div>
+      <div class="v-desc" id="dEmprende" style="border-left-color:#FFD700; background:rgba(255,215,0,0.05);">
+        &#128161; <strong>Sesi&oacute;n de Networking:</strong> Ronda estrat&eacute;gica y participativa en vivo de alumnas presentando sus proyectos, desaf&iacute;os y propuestas con la Lic. Romina Lorena Montiel.
+      </div>
+
+      <!-- MATERIALS MI EMPRENDIMIENTO -->
+      <div class="mats">
+        <div class="mats-ttl" style="color:#FFD700;">&#128196; Recursos de la Carpeta: Mi Emprendimiento</div>
+        <div class="mats-grid">
+          <div class="m-card" style="border-color:rgba(255,215,0,0.25);">
+            <div class="m-ico-row">
+              <div class="m-badge b-vip" style="background:#FFD700; color:#000;">NETWORKING</div>
+              <div class="m-meta">
+                <h5>Gu&iacute;a: C&oacute;mo Comunicar tu Propuesta de Valor</h5>
+                <span>Lectura Online Exclusiva</span>
+              </div>
+            </div>
+            <p class="m-desc">Estructura clave para presentar tu proyecto ante clientes, socias e inversores con absoluta convicci&oacute;n y claridad.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/Guia_Oficial_Propuesta_de_Valor.html" target="_blank" class="btn-p" style="border-color:#FFD700; color:#FFD700;">&#128065; Ver Gu&iacute;a Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-nav">
+        <button class="btn-nav coaching-nav" onclick="sw('coach3')">&#8592; Carpeta: Volver a M&iacute; &mdash; Grupo Mi&eacute;rcoles</button>
+        <a href="/campus_modo_lider.html" class="btn-nav primary">&#127968; Volver al Campus Principal &#8594;</a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ==================================================================== -->
+<!-- AUTHENTICATION / ACCESS MODAL                                        -->
+<!-- ==================================================================== -->
+<div class="modal-overlay" id="authModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-card">
+    <button class="modal-close-btn" onclick="closeModal()" title="Cerrar">&times;</button>
+    <div class="modal-header">
+      <div class="modal-lock-icon">&#128274;</div>
+      <h3>&Aacute;rea Exclusiva Alumnas Activas</h3>
+      <p id="modalHeaderDesc">A partir de la Clase 3 y los Coachings Grupales, el contenido est&aacute; reservado para alumnas activas del M&eacute;todo Modo L&iacute;der.</p>
+    </div>
+
+    <form class="modal-form" onsubmit="handleAuthSubmit(event)" autocomplete="off">
+      <div class="form-group">
+        <label for="authId">Identificador / Correo de Alumna</label>
+        <div class="form-input-wrap">
+          <input type="text" id="authId" class="form-input" placeholder="Ingres&aacute; tu correo o usuario de alumna" required autocomplete="off" value="">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="authPass">Clave de Acceso</label>
+        <div class="form-input-wrap">
+          <input type="password" id="authPass" class="form-input" placeholder="Ingres&aacute; tu clave recibida por correo" required autocomplete="new-password" value="">
+          <button type="button" class="form-pwd-toggle" onclick="togglePwdVisibility()" id="pwdToggleIcon">&#128065;</button>
+        </div>
+      </div>
+
+      <div id="modalErr" class="modal-err">&#9888; Clave de acceso incorrecta. Verific&aacute; tus datos o consult&aacute; tu correo electr&oacute;nico.</div>
+
+      <button type="submit" class="btn-modal-submit">
+        <span>&#128273; Desbloquear Contenido</span>
+      </button>
+
+      <div style="margin-top:1.1rem; padding:0.85rem 1rem; background:rgba(212,175,55,0.12); border:1.5px solid #D4AF37; border-radius:10px; font-size:0.82rem; color:#FFF; line-height:1.5; text-align:center;">
+        ✉️ <strong>IMPORTANTE:</strong> LAS CONTRASEÑAS SE ENVIAN POR CORREO ELECTRÓNICO.<br>
+        <span style="font-size:0.76rem; color:#F7E7CE; opacity:0.95;">Revisá tu bandeja de entrada o spam para obtener tu clave oficial de alumna activa.</span>
+      </div>
+
+      <p class="modal-hint">Al identificarte, tu acceso se recordar&aacute; autom&aacute;ticamente en este navegador.</p>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="ftr">
+  <p>&copy; 2026 Campus Modo L&iacute;der &middot; <strong style="color:#D4AF37">Lic. Romina Lorena Montiel</strong> &middot; Todos los derechos reservados &middot; Contenido exclusivo para alumnas activas</p>
+</footer>
+
+<!-- JAVASCRIPT LOGIC -->
+<script>
+// Progress metadata
+var progressMap = {
+  1: { w: '11%', t: 'Carpeta 1 de 9' },
+  2: { w: '22%', t: 'Carpeta 2 de 9' },
+  3: { w: '33%', t: 'Carpeta 3 de 9' },
+  4: { w: '44%', t: 'Carpeta 4 de 9' },
+  5: { w: '55%', t: 'Carpeta 5 de 9' },
+  'coach2': { w: '66%', t: 'Coaching: Introducci\u00f3n' },
+  'coach1': { w: '77%', t: 'Coaching: Grupo Martes' },
+  'coach3': { w: '88%', t: 'Coaching: Grupo Mi\u00e9rcoles' },
+  'emprende': { w: '100%', t: 'Mi Emprendimiento' },
+  'coaching': { w: '66%', t: 'Coaching: Introducci\u00f3n' }
+};
+
+var pendingTarget = null;
+
+// Auth check
+function isAuth() {
+  return localStorage.getItem('alumna_activa_modo_lider') === 'true';
+}
+
+function updateAuthUI() {
+  var authed = isAuth();
+  
+  // Header badge
+  var badgeHdr = document.getElementById('authBadgeHdr');
+  var badgeTxt = document.getElementById('authBadgeTxt');
+  var badgeIco = document.getElementById('authBadgeIcon');
+  if (badgeHdr) {
+    if (authed) {
+      badgeHdr.classList.add('logged-in');
+      badgeTxt.textContent = 'Alumna Verificada \u2705';
+      badgeIco.textContent = '\uD83D\uDC51';
+    } else {
+      badgeHdr.classList.remove('logged-in');
+      badgeTxt.textContent = 'Acceso Alumnas';
+      badgeIco.textContent = '\uD83D\uDD12';
+    }
+  }
+
+  // Sidebar locks
+  var locks = ['lock3', 'lock4', 'lock5', 'lockCoach1', 'lockCoach2', 'lockCoach3', 'lockEmprende'];
+  locks.forEach(function(lid) {
+    var el = document.getElementById(lid);
+    if (el) {
+      el.textContent = authed ? '\uD83D\uDD13' : '\uD83D\uDD12';
+      if (authed) {
+        el.closest('.s-item').classList.add('unlocked');
+      } else {
+        el.closest('.s-item').classList.remove('unlocked');
+      }
+    }
+  });
+
+  // Mobile chips icons
+  var m3 = document.getElementById('mob3');
+  var m4 = document.getElementById('mob4');
+  var m5 = document.getElementById('mob5');
+  var mc1 = document.getElementById('mobCoach1');
+  var mc2 = document.getElementById('mobCoach2');
+  var mc3 = document.getElementById('mobCoach3');
+  var me = document.getElementById('mobEmprende');
+  if (m3) m3.innerHTML = (authed ? '\uD83D\uDCC2' : '\uD83D\uDD12') + ' Carpeta 3';
+  if (m4) m4.innerHTML = (authed ? '\uD83D\uDCC2' : '\uD83D\uDD12') + ' Carpeta 4';
+  if (m5) m5.innerHTML = (authed ? '\uD83D\uDCC2' : '\uD83D\uDD12') + ' Carpeta 5';
+  if (mc2) mc2.innerHTML = (authed ? '\uD83D\uDC51' : '\uD83D\uDD12') + ' Intro: \u00bfPara qu\u00e9 regresar?';
+  if (mc1) mc1.innerHTML = (authed ? '\uD83D\uDC51' : '\uD83D\uDD12') + ' Volver a M\u00ed (Martes)';
+  if (mc3) mc3.innerHTML = (authed ? '\uD83D\uDC51' : '\uD83D\uDD12') + ' Volver a M\u00ed (Mi\u00e9rcoles)';
+  if (me) me.innerHTML = (authed ? '\uD83D\uDC51' : '\uD83D\uDD12') + ' Mi Emprendimiento';
+
+  // Sidebar auth box
+  var sideCard = document.getElementById('sideAuthCard');
+  var sideMsg = document.getElementById('sideAuthMsg');
+  var sideBtn = document.getElementById('btnSideAuth');
+  if (sideCard && sideMsg && sideBtn) {
+    if (authed) {
+      sideCard.className = 'side-auth-card logged';
+      sideMsg.innerHTML = '\u2705 <strong>Sesi\u00f3n Activa</strong><br>Acceso completo habilitado';
+      sideBtn.className = 'btn-auth-logout';
+      sideBtn.textContent = 'Cerrar Sesi\u00f3n';
+      sideBtn.onclick = logout;
+    } else {
+      sideCard.className = 'side-auth-card';
+      sideMsg.innerHTML = 'Acceso a partir de Clase 3 y Coachings requiere clave de Alumna Activa.<br><span style="font-size:0.75rem; color:#D4AF37; display:block; margin-top:4px;">✉️ Las contraseñas se envían por correo electrónico.</span>';
+      sideBtn.className = 'btn-auth-unlock';
+      sideBtn.textContent = '\uD83D\uDD11 Ingresar Clave';
+      sideBtn.onclick = toggleAuthModal;
+    }
+  }
+}
+
+// Modal open/close
+function openModal(target) {
+  pendingTarget = target;
+  var modal = document.getElementById('authModal');
+  var err = document.getElementById('modalErr');
+  if (err) err.style.display = 'none';
+  var idInput = document.getElementById('authId');
+  var passInput = document.getElementById('authPass');
+  if (idInput) idInput.value = '';
+  if (passInput) passInput.value = '';
+  if (modal) modal.classList.add('open');
+  if (idInput) setTimeout(function(){ idInput.focus(); }, 150);
+}
+
+function closeModal() {
+  var modal = document.getElementById('authModal');
+  if (modal) modal.classList.remove('open');
+  pendingTarget = null;
+}
+
+function toggleAuthModal() {
+  if (isAuth()) {
+    if (confirm('\u00bfDeseas cerrar tu sesi\u00f3n de alumna activa?')) {
+      logout();
+    }
+  } else {
+    openModal(null);
+  }
+}
+
+function togglePwdVisibility() {
+  var p = document.getElementById('authPass');
+  var ico = document.getElementById('pwdToggleIcon');
+  if (!p) return;
+  if (p.type === 'password') {
+    p.type = 'text';
+    if (ico) ico.textContent = '\uD83D\uDE48';
+  } else {
+    p.type = 'password';
+    if (ico) ico.textContent = '\uD83D\uDC41';
+  }
+}
+
+function handleAuthSubmit(e) {
+  e.preventDefault();
+  var u = (document.getElementById('authId').value || '').trim().toUpperCase();
+  var p = (document.getElementById('authPass').value || '').trim();
+  var err = document.getElementById('modalErr');
+
+  // Acceptable credentials according to spec:
+  // User: SOYALUMNAACTIVAMODOLIDER
+  // Key: EXITOSAS888
+  var valid = false;
+  if (u === 'SOYALUMNAACTIVAMODOLIDER' && p.toUpperCase() === 'EXITOSAS888') {
+    valid = true;
+  } else if (p.toUpperCase() === 'EXITOSAS888') {
+    valid = true;
+  } else if (p.toUpperCase() === 'SOYALUMNAACTIVAMODOLIDER') {
+    valid = true;
+  }
+
+  if (valid) {
+    localStorage.setItem('alumna_activa_modo_lider', 'true');
+    localStorage.setItem('alumna_activa_user', u);
+    updateAuthUI();
+    closeModal();
+    
+    // Switch to target or class 3
+    var target = pendingTarget || 3;
+    pendingTarget = null;
+    sw(target);
+  } else {
+    if (err) {
+      err.style.display = 'block';
+      err.textContent = '\u26A0 Clave o usuario incorrecto. Record\u00e1 que las contrase\u00f1as se env\u00edan por correo electr\u00f3nico.';
+    }
+  }
+}
+
+function logout() {
+  localStorage.removeItem('alumna_activa_modo_lider');
+  localStorage.removeItem('alumna_activa_user');
+  updateAuthUI();
+  sw(1);
+}
+
+// Switch between classes / coaching folders
+function sw(n) {
+  if (n === 'coaching' || n === 'coach') n = 'coach2';
+  // Check auth for protected sections
+  var isProtected = (n === 3 || n === 4 || n === 5 || n === 'coach1' || n === 'coach2' || n === 'coach3' || n === 'emprende');
+  if (isProtected && !isAuth()) {
+    openModal(n);
+    return;
+  }
+
+  var panelId, sid, mobId;
+  if (n === 'coach1') {
+    panelId = 'pCoach1';
+    sid = 'siCoach1';
+    mobId = 'mobCoach1';
+  } else if (n === 'coach2') {
+    panelId = 'pCoach2';
+    sid = 'siCoach2';
+    mobId = 'mobCoach2';
+  } else if (n === 'coach3') {
+    panelId = 'pCoach3';
+    sid = 'siCoach3';
+    mobId = 'mobCoach3';
+  } else if (n === 'emprende') {
+    panelId = 'pEmprende';
+    sid = 'siEmprende';
+    mobId = 'mobEmprende';
+  } else {
+    panelId = 'p' + n;
+    sid = 'si' + n;
+    mobId = 'mob' + n;
+  }
+
+  // Panels
+  document.querySelectorAll('.c-panel').forEach(function(p){ p.classList.remove('active'); });
+  var activePanel = document.getElementById(panelId);
+  if (activePanel) activePanel.classList.add('active');
+
+  // Sidebar
+  document.querySelectorAll('.s-item').forEach(function(s){ s.classList.remove('active'); });
+  var activeSide = document.getElementById(sid);
+  if (activeSide) activeSide.classList.add('active');
+
+  // Mobile chips
+  document.querySelectorAll('.mob-chip').forEach(function(c){ c.classList.remove('active'); });
+  var activeMob = document.getElementById(mobId);
+  if (activeMob) activeMob.classList.add('active');
+
+  // Progress update
+  var pInfo = progressMap[n] || { w: '33%', t: '' };
+  var pFill = document.getElementById('pFill');
+  var pTxt = document.getElementById('pTxt');
+  if (pFill) pFill.style.width = pInfo.w;
+  if (pTxt) pTxt.textContent = pInfo.t;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Player helpers
+function svidIframe(iframeId, url, desc, btn, descId) {
+  var el = document.getElementById(iframeId);
+  if (el) {
+    el.src = '';
+    setTimeout(function(){ el.src = url; }, 80);
+  }
+  var d = document.getElementById(descId);
+  if (d) d.innerHTML = '\uD83D\uDCA1 <strong>Reproduciendo:</strong> ' + desc;
+  if (btn) {
+    var bar = btn.closest('.pl-bar');
+    if (bar) bar.querySelectorAll('.pl-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+}
+
+function svidLocal(videoId, url, desc, btn, descId) {
+  var el = document.getElementById(videoId);
+  if (el) {
+    el.src = url;
+    el.load();
+    el.play().catch(function(){});
+  }
+  var d = document.getElementById(descId);
+  if (d) d.innerHTML = '\uD83D\uDCA1 <strong>Reproduciendo:</strong> ' + desc;
+  if (btn) {
+    var bar = btn.closest('.pl-bar');
+    if (bar) bar.querySelectorAll('.pl-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+}
+
+// On DOM ready
+window.addEventListener('DOMContentLoaded', function(){
+  updateAuthUI();
+
+  // Check URL hash
+  var h = window.location.hash;
+  if (h) {
+    if (h.includes('coach2') || h.includes('clase2-coach')) {
+      sw('coach2');
+    } else if (h.includes('coach') || h.includes('coaching')) {
+      sw('coach1');
+    } else {
+      var m = h.match(/clase-(\d+)/);
+      if (m) sw(parseInt(m[1]));
+    }
+  }
+});
+</script>
+</body>
+</html>

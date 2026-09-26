@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbook Clase 4 — Cliente Ideal y Posicionamiento | MODO LÍDER</title>
+    <meta name="description" content="Workbook interactivo e imprimible de la Clase 4: Cliente Ideal y Posicionamiento. Curso Emprender de Cero a Impacto y Ventas por Lic. Romina Lorena Montiel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-navy: #0E121B;
+            --color-surface-dark: #161A25;
+            --color-light-bg: #F8F9FB;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #B4871E;
+            --color-gold-light: #FFF8E7;
+            --color-coral: #E94560;
+            --color-coral-light: #FFF0F3;
+            --color-text-dark: #1B1F2A;
+            --color-text-light: #F4F5F8;
+            --color-text-muted: #5A6473;
+            --color-border: #E2E6EE;
+            --color-purple: #7C3AED;
+            --color-purple-light: #F3EEFF;
+            --color-orange: #F59E0B;
+            --color-orange-light: #FFFBEB;
+            --color-green: #10B981;
+            --color-green-light: #ECFDF5;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--color-light-bg);
+            color: var(--color-text-dark);
+            line-height: 1.6;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body { background: #FFF; }
+            .workbook-container { box-shadow: none; max-width: 100%; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            .writing-area { border: 1.5px solid #CCC !important; background: #FAFAFA !important; min-height: 100px !important; }
+            .writing-area:focus { outline: none; }
+            section { page-break-inside: avoid; }
+        }
+
+        .workbook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+        }
+
+        /* COVER */
+        .cover {
+            background: #3E3E3E;
+            color: #FFFFFF;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .cover-top {
+            flex: 1;
+            padding: 3.5rem 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cover-author {
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #E8E0CC;
+            margin-bottom: 0.6rem;
+        }
+
+        .cover-divider {
+            width: 120px;
+            height: 1px;
+            background: #C8A82A;
+            margin: 0 auto 2rem;
+        }
+
+        .cover h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 3.8rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .cover-course-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C8C0B0;
+            margin-bottom: 0.4rem;
+        }
+
+        .cover-course-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #E8E0CC;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+
+        .cover-logo-big {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #0E0804 70%);
+            border: 4px solid #C8A82A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem auto 1rem;
+        }
+
+        .cover-logo-big .clb-metodo { font-size: 0.52rem; font-weight: 700; color: #FFF; letter-spacing: 2px; text-transform: uppercase; }
+        .cover-logo-big .clb-modo { font-size: 1.1rem; font-weight: 700; color: #FFF; line-height: 1; font-family: Georgia, serif; }
+        .cover-logo-big .clb-lider { font-size: 1.4rem; font-weight: 800; background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; font-family: Georgia, serif; }
+
+        .cover-bottom { background: #2A2A2A; padding: 2rem 3rem; border-top: 1px solid #444; }
+
+        /* BRAND BAR FOR PAGES */
+        .page-brand-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.8rem;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .page-brand-logo { display: flex; align-items: center; gap: 0.4rem; font-weight: 800; font-size: 0.8rem; color: var(--color-navy); }
+        .page-brand-name { font-size: 0.78rem; font-weight: 600; color: var(--color-text-muted); }
+
+        /* SECTIONS */
+        section { padding: 3rem 3.5rem; }
+
+        .section-number { font-size: 0.78rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--color-gold-dark); margin-bottom: 0.3rem; }
+        .section-title { font-family: Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--color-navy); margin-bottom: 0.6rem; line-height: 1.2; }
+        .section-subtitle { font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem; }
+
+        /* CARDS AND INPUTS */
+        .exercise-card { background: var(--color-light-bg); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid var(--color-border); }
+        .exercise-label { font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .exercise-question { font-size: 1rem; font-weight: 700; color: var(--color-navy); margin-bottom: 0.5rem; }
+        .exercise-hint { font-size: 0.84rem; color: var(--color-text-muted); margin-bottom: 1rem; font-style: italic; }
+
+        .writing-area {
+            width: 100%; min-height: 80px; padding: 1rem; border-radius: 8px; border: 1.5px solid var(--color-border); font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: var(--color-text-dark); background: #FFFFFF; outline: none; transition: border-color 0.2s; resize: vertical;
+        }
+
+        .writing-area:focus { border-color: var(--color-gold); box-shadow: 0 0 0 3px rgba(212,175,55,0.15); }
+
+        /* CARD AVATAR INTEGRADA */
+        .avatar-card-box {
+            background: #0F172A;
+            border-radius: 14px;
+            padding: 1.8rem;
+            color: #FFFFFF;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .avatar-card-title {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--color-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+
+        .avatar-row {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .avatar-row label {
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .avatar-row input[type="text"] {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.07);
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            outline: none;
+        }
+
+        .avatar-row input[type="text"]:focus {
+            border-color: var(--color-gold);
+            background: rgba(255,255,255,0.12);
+        }
+
+        .quote-block { background: var(--color-gold-light); border: 2px solid var(--color-gold); border-radius: 14px; padding: 1.8rem; text-align: center; margin: 1.8rem 0; }
+        .quote-block p { font-size: 1.05rem; font-weight: 700; color: var(--color-navy); line-height: 1.5; }
+
+        /* TOOLBAR */
+        .toolbar { position: fixed; bottom: 2rem; right: 2rem; display: flex; flex-direction: column; gap: 0.6rem; z-index: 100; }
+        .toolbar-btn { background: var(--color-navy); color: #FFFFFF; border: 2px solid var(--color-gold); border-radius: 50px; padding: 0.7rem 1.3rem; font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .toolbar-btn:hover { background: var(--color-gold); color: var(--color-navy); }
+
+        /* CLOSING PAGE */
+        .closing-page { background: #3E3E3E; color: #FFFFFF; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
+        .closing-top-bar { height: 12px; background: linear-gradient(to right, #B4871E, #F0C040, #B4871E); }
+        .closing-body { flex: 1; padding: 4rem 3rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+
+<div class="workbook-container">
+
+    <!-- ============ PORTADA ============ -->
+    <div class="cover">
+        <div class="cover-top">
+            <p class="cover-author">LIC. ROMINA LORENA MONTIEL</p>
+            <div class="cover-divider"></div>
+
+            <p class="cover-course-label">CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS</p>
+            <p class="cover-course-name">MÉTODO MODO LÍDER ®</p>
+
+            <h1>WORKBOOK<br>CLASE 4</h1>
+
+            <div class="cover-logo-big">
+                <span class="clb-metodo">MÉTODO</span>
+                <span class="clb-modo">MODO</span>
+                <span class="clb-lider">LÍDER</span>
+            </div>
+
+            <h2 style="font-family: Georgia, serif; font-size: 1.8rem; color: #F0C040; margin-top: 1.5rem;">
+                Cliente Ideal y Posicionamiento
+            </h2>
+            <p style="font-size: 0.9rem; color: #E8E0CC; margin-top: 0.4rem;">
+                Cómo ocupar el primer lugar en la mente de la persona que te necesita
+            </p>
+        </div>
+
+        <div class="cover-bottom">
+            <p style="font-size: 0.85rem; color: #CCC; letter-spacing: 1px;">
+                "El posicionamiento es lograr que, cuando aparezca esa necesidad específica, aparezcas vos."
+            </p>
+        </div>
+    </div>
+
+    <!-- ============ SECCIÓN 1: AUDITORÍA DE POSICIONAMIENTO ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 1 DE 5 • LUGAR EN LA MENTE</span>
+        <h2 class="section-title">🧠 ¿Por qué quiero ser recordada?</h2>
+        <p class="section-subtitle">Definí el espacio mental exacto que querés adueñarte frente a tu cliente ideal.</p>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-gold);">
+            <p class="exercise-question">1. ¿Cuál es la frase exacta que querés que tu cliente piense cuando alguien le pregunte por tu rubro?</p>
+            <p class="exercise-hint">Ej: "Si querés resolver la mesa dulce del cumpleaños sin estresarte, hablale a Aljesec." / "Si querés claridad sobre lo que estás viviendo, hablale a ella."</p>
+            <textarea class="writing-area" placeholder="Escribí la frase de recordación que querés instalar..."></textarea>
+        </div>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-purple);">
+            <p class="exercise-question">2. ¿En qué se diferencia el lugar que querés ocupar vos del que ocupan tus competidoras más cercanas?</p>
+            <textarea class="writing-area" placeholder="Ej: Ellas venden productos sueltos / Yo resuelvo la experiencia completa..."></textarea>
+        </div>
+    </section>
+
+    <!-- ============ SECCIÓN 2: EL MOMENTO DISPARADOR (TRIGGER) ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 2 DE 5 • EL DISPARADOR DE VENTA</span>
+        <h2 class="section-title">⚡ Mapeo del Momento Disparador (Trigger)</h2>
+        <p class="section-subtitle">Identificá la situación puntual de la vida de tu cliente que la impulsa a buscar tu solución.</p>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-coral);">
+            <p class="exercise-question">1. ¿Qué evento, crisis o situación de urgencia desencadena la necesidad de contratarte?</p>
+            <p class="exercise-hint">Ej: El cumpleaños del hijo a 10 días / Un síntoma de salud repetitivo / El miedo escénico antes de lanzar un proyecto.</p>
+            <textarea class="writing-area" placeholder="Describí el momento disparador exacto..."></textarea>
+        </div>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-orange);">
+            <p class="exercise-question">2. En ese momento disparador, ¿qué siente tu cliente? (Miedo, apuro, confusión, ganas de destacarse)</p>
+            <textarea class="writing-area" placeholder="Escribí las emociones del momento..."></textarea>
+        </div>
+    </section>
+
+    <!-- ============ SECCIÓN 3: RADIOGRAFÍA DEL CLIENTE IDEAL ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 3 DE 5 • PSICOLOGÍA DEL AVATAR</span>
+        <h2 class="section-title">🔎 Los 3 Niveles de Dolor de tu Avatar</h2>
+        <p class="section-subtitle">Para conectar y vender sin empujar, debemos comunicarnos en el nivel de identidad.</p>
+
+        <div class="exercise-card" style="border-left: 5px solid #38BDF8;">
+            <span class="exercise-label" style="color: #38BDF8;">NIVEL 1 · SUPERFICIAL / SÍNTOMA</span>
+            <p class="exercise-question">¿Cuál es su problema visible o externo?</p>
+            <textarea class="writing-area" placeholder="Ej: No sabe cocinar tortas lindas / No sabe qué publicar en redes..."></textarea>
+        </div>
+
+        <div class="exercise-card" style="border-left: 5px solid #FCD34D;">
+            <span class="exercise-label" style="color: #FCD34D;">NIVEL 2 · EMOCIONAL</span>
+            <p class="exercise-question">¿Cómo se siente por tener ese problema?</p>
+            <textarea class="writing-area" placeholder="Ej: Se siente frustrada, estresada y desbordada por la falta de tiempo..."></textarea>
+        </div>
+
+        <div class="exercise-card" style="border-left: 5px solid #F472B6;">
+            <span class="exercise-label" style="color: #F472B6;">NIVEL 3 · IDENTIDAD</span>
+            <p class="exercise-question">¿Quién teme ser o quién desea convertirse?</p>
+            <textarea class="writing-area" placeholder="Ej: Teme ser juzgada como mala madre / Quiere ser vista como una profesional exitosa y segura..."></textarea>
+        </div>
+    </section>
+
+    <!-- ============ SECCIÓN 4: FICHA OFICIAL DEL AVATAR MODO LÍDER ® ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 4 DE 5 • FICHA ESTRATÉGICA</span>
+        <h2 class="section-title">👑 Ficha Oficial del Avatar MODO LÍDER ®</h2>
+        <p class="section-subtitle">Sintetizá a tu cliente ideal en una sola tarjeta estratégica.</p>
+
+        <div class="avatar-card-box">
+            <div class="avatar-card-title">👤 RADIOGRAFÍA DE MI CLIENTE IDEAL</div>
+            
+            <div class="avatar-row">
+                <label style="color: #FCD34D;">NOMBRE FICICTICIO:</label>
+                <input type="text" placeholder="(Ej: Laura, la mamá profesional / Sofía, la coach estancada)">
+            </div>
+            <div class="avatar-row">
+                <label style="color: #6EDDB8;">MOMENTO CLAVE:</label>
+                <input type="text" placeholder="(La situación o evento exacto en que busca ayuda)">
+            </div>
+            <div class="avatar-row">
+                <label style="color: #E98080;">MAYOR OBSTÁCULO:</label>
+                <input type="text" placeholder="(El dolor o bloqueo principal que quiere resolver)">
+            </div>
+            <div class="avatar-row">
+                <label style="color: #94A3B8;">DESEO PROFUNDO:</label>
+                <input type="text" placeholder="(La emoción o transformación deseada tras la compra)">
+            </div>
+        </div>
+
+        <div class="quote-block">
+            <p>💡 "Cuando le hablás a todo el mundo, no le hablás a nadie. Cuando le hablás al Momento Disparador de tu Avatar, te compran."</p>
+        </div>
+    </section>
+
+    <!-- ============ SECCIÓN 5: MENSAJE DE ATRACCIÓN ============ -->
+    <section class="page-break">
+        <div class="page-brand-bar">
+            <div class="page-brand-logo">MÉTODO MODO LÍDER</div>
+            <div class="page-brand-name">Lic. Romina Lorena Montiel</div>
+        </div>
+        <span class="section-number">SECCIÓN 5 DE 5 • COMUNICACIÓN</span>
+        <h2 class="section-title">📢 Tu Pitch de Atracción de Posicionamiento</h2>
+        <p class="section-subtitle">Redactá el mensaje de atracción combinando lo trabajado en la Clase 3 y la Clase 4.</p>
+
+        <div class="exercise-card" style="border-left: 5px solid var(--color-green);">
+            <p class="exercise-question">Escribí tu mensaje de atracción oficial:</p>
+            <p class="exercise-hint">Fórmula: "Si sos [Avatar en momento disparador] y estás cansada de [Dolor emocional], te ayudo a [Transformación de propuesta de valor] para que puedas [Deseo de identidad]."</p>
+            <textarea class="writing-area" style="border-color: var(--color-green); min-height: 110px;" placeholder="Escribí tu mensaje oficial aquí..."></textarea>
+        </div>
+    </section>
+
+    <!-- ============ HOJA FINAL ============ -->
+    <div class="closing-page">
+        <div class="closing-top-bar"></div>
+        <div class="closing-body">
+            <p style="font-size: 1.5rem; color: #FFF; font-weight: 700; margin-bottom: 1rem;">¡Felicitaciones!</p>
+            <p style="font-size: 1.1rem; color: #E8E0CC; line-height: 1.6; max-width: 600px; margin-bottom: 2rem;">
+                Completaste el Workbook de la <strong>Clase 4: Cliente Ideal y Posicionamiento</strong>.<br>
+                Ahora tenés el lugar número 1 guardado en la mente de tu cliente. Estás lista para la Clase 5: Arquitectura de Marca.
+            </p>
+
+            <div class="cover-logo-big" style="width: 140px; height: 140px; margin-bottom: 2rem;">
+                <span class="clb-metodo" style="font-size: 0.4rem;">MÉTODO</span>
+                <span class="clb-modo" style="font-size: 0.9rem;">MODO</span>
+                <span class="clb-lider" style="font-size: 1.1rem;">LÍDER</span>
+            </div>
+
+            <p style="font-size: 0.9rem; color: #C8A82A; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">
+                Lic. Romina Lorena Montiel · Método MODO LÍDER ®
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<!-- TOOLBAR -->
+<div class="toolbar no-print">
+    <button class="toolbar-btn" onclick="window.print()">🖨️ Imprimir PDF</button>
+    <button class="toolbar-btn" onclick="saveProgress()">💾 Guardar</button>
+    <button class="toolbar-btn" onclick="clearAll()">🗑️ Limpiar</button>
+</div>
+
+<script>
+    const STORAGE_KEY = 'workbook_clase4_cliente_ideal_posicionamiento';
+
+    function saveProgress() {
+        const data = {};
+        document.querySelectorAll('textarea, input[type="text"]').forEach((el, i) => {
+            data[`field_${i}`] = el.value;
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        
+        const btn = document.querySelectorAll('.toolbar-btn')[1];
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Guardado';
+        setTimeout(() => { btn.innerHTML = originalText; }, 1500);
+    }
+
+    function loadProgress() {
+        const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        document.querySelectorAll('textarea, input[type="text"]').forEach((el, i) => {
+            if (data[`field_${i}`]) {
+                el.value = data[`field_${i}`];
+            }
+        });
+    }
+
+    function clearAll() {
+        if (confirm('¿Estás segura de que querés borrar todo lo escrito en el Workbook de la Clase 4?')) {
+            document.querySelectorAll('textarea, input[type="text"]').forEach(el => el.value = '');
+            localStorage.removeItem(STORAGE_KEY);
+        }
+    }
+
+    setInterval(saveProgress, 30000);
+    window.addEventListener('load', loadProgress);
+</script>
+</body>
+</html>

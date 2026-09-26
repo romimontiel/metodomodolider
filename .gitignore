@@ -49,6 +49,10 @@ public/CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS/
 CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS/
 *.MOV
 *.avi
+clase3_propuesta_de_valor/*.mp4
+clase4_reconectar_negocio/*.mp4
+public/clase3_propuesta_de_valor/*.mp4
+public/clase4_reconectar_negocio/*.mp4
 
 # allow campus media folders
 !public/audios/

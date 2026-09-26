@@ -2631,7 +2631,7 @@
                 <div class="folder-nav-tab" id="tab-clase1" onclick="switchFolder('clase1')">
                     <div class="tab-top-row">
                         <span class="tab-icon">📁</span>
-                        <span class="tab-badge">Clase 1</span>
+                        <span class="tab-badge" style="background: rgba(16, 185, 129, 0.18); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); font-weight: 800; letter-spacing: 0.5px;">FREE PASS</span>
                     </div>
                     <span class="tab-title">CLASE 1</span>
                     <span class="tab-desc">Emprender Conscientemente</span>
@@ -2641,7 +2641,7 @@
                 <div class="folder-nav-tab" id="tab-clase2" onclick="switchFolder('clase2')">
                     <div class="tab-top-row">
                         <span class="tab-icon">📁</span>
-                        <span class="tab-badge">Clase 2</span>
+                        <span class="tab-badge" style="background: rgba(16, 185, 129, 0.18); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); font-weight: 800; letter-spacing: 0.5px;">FREE PASS</span>
                     </div>
                     <span class="tab-title">CLASE 2</span>
                     <span class="tab-desc">Propósito y Dirección</span>
@@ -2664,7 +2664,29 @@
                         <span class="tab-badge">Casos Reales</span>
                     </div>
                     <span class="tab-title">TESTIMONIOS</span>
-                    <span class="tab-desc">Video Analía Soto & Casos</span>
+                    <span class="tab-desc">Video Analía Soto &amp; Casos</span>
+                </div>
+
+                <!-- Tab ESPECIAL: ACCESO A CURSO COMPLETO (FONDO AMARILLO LETRAS NEGRAS) -->
+                <div class="folder-nav-tab" id="tab-acceso-curso" onclick="openCampusAuthModal('/clases_visor.html')" style="cursor: pointer; text-decoration: none; background: #FFD700 !important; border: 2px solid #E6B800 !important; box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5) !important; position: relative; overflow: hidden; transform: scale(1.02); transition: all 0.25s ease;">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: #000000;"></div>
+                    <div class="tab-top-row">
+                        <span class="tab-icon" style="font-size: 1.3rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">🔐</span>
+                        <span class="tab-badge" style="background: #000000 !important; color: #FFD700 !important; border: 1px solid #333333 !important; font-weight: 900; font-size: 0.68rem; padding: 0.2rem 0.55rem; border-radius: 50px;">CLAVE VIP</span>
+                    </div>
+                    <span class="tab-title" style="color: #000000 !important; font-size: 0.88rem; font-weight: 900; letter-spacing: -0.2px; text-transform: uppercase;">ACCESO A CURSO COMPLETO</span>
+                    <span class="tab-desc" style="color: #111111 !important; font-weight: 700; font-size: 0.74rem;">Clave enviada por correo ↗</span>
+                </div>
+
+                <!-- Tab ESPECIAL 2: COACHING GRUPAL CLASES GRABADAS -->
+                <div onclick="openCampusAuthModal('/clases_visor.html#coaching')" class="folder-nav-tab" id="tab-coaching-grupal" style="cursor: pointer; text-decoration: none; background: linear-gradient(145deg, #181224 0%, #100C18 100%); border: 1.5px solid rgba(212, 175, 55, 0.6); box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FCE08B, #D4AF37);"></div>
+                    <div class="tab-top-row">
+                        <span class="tab-icon">👑</span>
+                        <span class="tab-badge" style="background: rgba(212, 175, 55, 0.15); color: #F7E7CE; border: 1px solid rgba(212, 175, 55, 0.4);">🔐 VIP</span>
+                    </div>
+                    <span class="tab-title" style="color: #F7E7CE; font-size: 0.84rem;">COACHING GRUPAL</span>
+                    <span class="tab-desc" style="color: rgba(247, 231, 206, 0.7);">Martes y Mi&eacute;rcoles &nearr;</span>
                 </div>
             </div>
 
@@ -3034,11 +3056,12 @@
                         <div class="active-folder-header">
                             <span class="big-icon">📂</span>
                             <div>
-                                <h3>CARPETA: CLASE 1 - EMPRENDER CONSCIENTEMENTE</h3>
+                                <h3>CARPETA: CLASE 1 - EMPRENDER CONSCIENTEMENTE <span style="display:inline-block; font-size:0.72rem; background:rgba(16,185,129,0.2); color:#34D399; border:1px solid rgba(16,185,129,0.4); padding:0.2rem 0.6rem; border-radius:50px; font-weight:800; vertical-align:middle; margin-left:0.5rem;">FREE PASS</span></h3>
                                 <p>Rompe el techo de cristal, entrena tu mentalidad de empresaria y construye bases sólidas de negocio.</p>
                             </div>
                         </div>
                         <div class="folder-materials-count">
+                            <span class="material-chip" style="background:rgba(16,185,129,0.15); color:#34D399; border:1px solid rgba(16,185,129,0.3); font-weight:800;">🔓 FREE PASS • Acceso Libre</span>
                             <span class="material-chip chip-video">🎬 3 Videos Grabados</span>
                             <span class="material-chip chip-docs">📄 4 Materiales Online</span>
                         </div>
@@ -3052,7 +3075,7 @@
                                     <span>🎬</span>
                                     <span id="title-video-clase1">1. Video Clase: ¿Qué es ser una Emprendedora Consciente?</span>
                                 </div>
-                                <span class="pillar-badge" id="badge-video-clase1">YouTube Oficial HD</span>
+                                <span class="pillar-badge" id="badge-video-clase1">Video Oficial HD</span>
                             </div>
                             <div class="folder-video-screen" id="videoContainer-clase1">
                                 <iframe 
@@ -3186,11 +3209,12 @@
                         <div class="active-folder-header">
                             <span class="big-icon">📂</span>
                             <div>
-                                <h3>CARPETA: CLASE 2 - PROPÓSITO Y DIRECCIÓN</h3>
+                                <h3>CARPETA: CLASE 2 - PROPÓSITO Y DIRECCIÓN <span style="display:inline-block; font-size:0.72rem; background:rgba(16,185,129,0.2); color:#34D399; border:1px solid rgba(16,185,129,0.4); padding:0.2rem 0.6rem; border-radius:50px; font-weight:800; vertical-align:middle; margin-left:0.5rem;">FREE PASS</span></h3>
                                 <p>Descubre el rumbo de tu negocio, alinea tus metas y conecta con tu audiencia ideal.</p>
                             </div>
                         </div>
                         <div class="folder-materials-count">
+                            <span class="material-chip" style="background:rgba(16,185,129,0.15); color:#34D399; border:1px solid rgba(16,185,129,0.3); font-weight:800;">🔓 FREE PASS • Acceso Libre</span>
                             <span class="material-chip chip-video">🎬 Videos Grabados</span>
                             <span class="material-chip chip-docs">📄 4 Materiales Online</span>
                         </div>
@@ -3202,15 +3226,15 @@
                             <div class="pillar-header">
                                 <div class="pillar-title">
                                     <span>🎬</span>
-                                    <span id="title-video-clase2">1. Clase 2: Presentamos Nuestros Emprendimientos</span>
+                                    <span id="title-video-clase2">1. Clase 2: Entender lo que es el Propósito</span>
                                 </div>
-                                <span class="pillar-badge" id="badge-video-clase2">YouTube Oficial HD</span>
+                                <span class="pillar-badge" id="badge-video-clase2">Video Oficial HD</span>
                             </div>
                             <div class="folder-video-screen" id="videoContainer-clase2">
                                 <iframe 
                                     id="iframeElement-clase2"
-                                    src="https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1" 
-                                    title="1. Clase 2: Presentamos Nuestros Emprendimientos" 
+                                    src="https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1" 
+                                    title="1. Clase 2: Entender lo que es el Propósito" 
                                     frameborder="0" 
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                     referrerpolicy="strict-origin-when-cross-origin" 
@@ -3224,14 +3248,11 @@
                                                         <!-- Selector de videos de la Clase 2 (Solo YouTube, sin Drive, sin botón externo) -->
                             <div class="video-playlist-bar">
                                 <span class="playlist-label">Videos de la Clase:</span>
-                                <button class="playlist-btn active" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '1. Presentamos Nuestros Emprendimientos (YouTube HD)', this, '', true)">
-                                    ▶ 1. Emprendimientos
+                                <button class="playlist-btn active" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '1. Entender lo que es el Propósito (YouTube HD)', this, '', true)">
+                                    ▶ 1. Qué es el Propósito
                                 </button>
-                                <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '2. Entender lo que es el Propósito (YouTube HD)', this, '', true)">
-                                    ▶ 2. Qué es el Propósito
-                                </button>
-                                <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '3. El Antes y Después de Descubrir tu Propósito (YouTube HD)', this, '', true)">
-                                    ▶ 3. El Antes y Después
+                                <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '2. El Antes y Después de Descubrir tu Propósito (YouTube HD)', this, '', true)">
+                                    ▶ 2. El Antes y Después
                                 </button>
                             </div>
                             <div class="video-description-box" id="desc-video-clase2">
@@ -3765,7 +3786,7 @@
                     player.pause();
                     player.style.display = 'none';
                 }
-                if (badgeElem) badgeElem.innerText = isDrive ? 'Google Drive Oficial HD' : 'YouTube Oficial HD';
+                if (badgeElem) badgeElem.innerText = isDrive ? 'Google Drive Oficial HD' : 'Video Oficial HD';
             } else {
                 if (iframe) {
                     iframe.src = '';
@@ -3792,6 +3813,117 @@
                 btnElement.classList.add('active');
             }
         }
+
+        // ==============================================================
+        // MODAL ACCESO A CURSO COMPLETO (SOLICITUD DE CLAVES)
+        // ==============================================================
+        var campusAuthRedirectTarget = '/clases_visor.html';
+
+        function openCampusAuthModal(targetUrl) {
+            campusAuthRedirectTarget = targetUrl || '/clases_visor.html';
+            var modal = document.getElementById('campusAuthModal');
+            var err = document.getElementById('campusModalErr');
+            if (err) err.style.display = 'none';
+            var idInput = document.getElementById('campusAuthId');
+            var passInput = document.getElementById('campusAuthPass');
+            if (idInput) idInput.value = '';
+            if (passInput) passInput.value = '';
+            if (modal) {
+                modal.style.display = 'flex';
+                if (idInput) setTimeout(function(){ idInput.focus(); }, 150);
+            }
+        }
+
+        function closeCampusAuthModal() {
+            var modal = document.getElementById('campusAuthModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function toggleCampusPwd() {
+            var p = document.getElementById('campusAuthPass');
+            var ico = document.getElementById('campusPwdToggle');
+            if (!p) return;
+            if (p.type === 'password') {
+                p.type = 'text';
+                if (ico) ico.textContent = '🙈';
+            } else {
+                p.type = 'password';
+                if (ico) ico.textContent = '👁';
+            }
+        }
+
+        function handleCampusAuthSubmit(e) {
+            e.preventDefault();
+            var u = (document.getElementById('campusAuthId').value || '').trim().toUpperCase();
+            var p = (document.getElementById('campusAuthPass').value || '').trim();
+            var err = document.getElementById('campusModalErr');
+
+            // Credenciales oficiales:
+            // Usuario: SOYALUMNAACTIVAMODOLIDER
+            // Clave: EXITOSAS888
+            var valid = false;
+            if (u === 'SOYALUMNAACTIVAMODOLIDER' && p.toUpperCase() === 'EXITOSAS888') {
+                valid = true;
+            } else if (p.toUpperCase() === 'EXITOSAS888') {
+                valid = true;
+            } else if (p.toUpperCase() === 'SOYALUMNAACTIVAMODOLIDER') {
+                valid = true;
+            }
+
+            if (valid) {
+                localStorage.setItem('alumna_activa_modo_lider', 'true');
+                localStorage.setItem('alumna_activa_user', u);
+                closeCampusAuthModal();
+                window.location.href = campusAuthRedirectTarget;
+            } else {
+                if (err) {
+                    err.style.display = 'block';
+                    err.textContent = '⚠️ Clave de acceso incorrecta. Recordá que las contraseñas se envían por correo electrónico.';
+                }
+            }
+        }
     </script>
+
+    <!-- MODAL DE ACCESO A CURSO COMPLETO -->
+    <div class="campus-modal-overlay" id="campusAuthModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(4,6,10,0.88); backdrop-filter:blur(14px); z-index:99999; align-items:center; justify-content:center; padding:1.2rem;" onclick="if(event.target===this)closeCampusAuthModal()">
+        <div style="background:#0E121C; border:2px solid #FFD700; box-shadow:0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(255,215,0,0.3); border-radius:24px; max-width:480px; width:100%; padding:2.2rem; position:relative; overflow:hidden; font-family:'Montserrat',sans-serif;">
+            <div style="position:absolute; top:0; left:0; width:100%; height:5px; background:#FFD700;"></div>
+            <button onclick="closeCampusAuthModal()" style="position:absolute; top:1.2rem; right:1.2rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#94A3B8; width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:1.1rem; transition:all 0.2s;" onmouseover="this.style.color='#FFF'" onmouseout="this.style.color='#94A3B8'">&times;</button>
+            
+            <div style="text-align:center; margin-bottom:1.6rem;">
+                <div style="width:64px; height:64px; margin:0 auto 1rem; border-radius:18px; background:#FFD700; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 0 25px rgba(255,215,0,0.5);">🔐</div>
+                <h3 style="font-size:1.35rem; font-weight:900; color:#FFFFFF; margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.5px;">Acceso a Curso Completo</h3>
+                <p style="font-size:0.84rem; color:#94A3B8; line-height:1.5;">Ingresá tus credenciales oficiales de Alumna Activa para acceder al visor de clases y grabaciones exclusivas.</p>
+            </div>
+
+            <form onsubmit="handleCampusAuthSubmit(event)" autocomplete="off" style="display:flex; flex-direction:column; gap:1.1rem;">
+                <div style="display:flex; flex-direction:column; gap:0.4rem; text-align:left;">
+                    <label style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; color:#FFD700;">Identificador / Correo de Alumna</label>
+                    <input type="text" id="campusAuthId" placeholder="Ingres&aacute; tu correo o usuario de alumna" style="width:100%; background:rgba(255,255,255,0.05); border:1.5px solid rgba(255,255,255,0.15); border-radius:8px; padding:0.85rem 1rem; font-size:0.9rem; color:#FFF; font-family:'Montserrat',sans-serif; outline:none;" required autocomplete="off" value="">
+                </div>
+
+                <div style="display:flex; flex-direction:column; gap:0.4rem; text-align:left; position:relative;">
+                    <label style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; color:#FFD700;">Clave de Acceso</label>
+                    <div style="position:relative;">
+                        <input type="password" id="campusAuthPass" placeholder="Ingres&aacute; la clave recibida por correo" style="width:100%; background:rgba(255,255,255,0.05); border:1.5px solid rgba(255,255,255,0.15); border-radius:8px; padding:0.85rem 2.8rem 0.85rem 1rem; font-size:0.9rem; color:#FFF; font-family:'Montserrat',sans-serif; outline:none;" required autocomplete="new-password" value="">
+                        <button type="button" onclick="toggleCampusPwd()" id="campusPwdToggle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#94A3B8; cursor:pointer; font-size:1.1rem;">👁</button>
+                    </div>
+                </div>
+
+                <div id="campusModalErr" style="display:none; background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.4); color:#FCA5A5; padding:0.75rem; border-radius:8px; font-size:0.82rem; font-weight:700; text-align:center;">⚠️ Clave incorrecta. Recordá que las contraseñas se envían por correo electrónico.</div>
+
+                <button type="submit" style="background:#FFD700; color:#000000; border:none; padding:0.95rem 1.4rem; border-radius:8px; font-size:0.95rem; font-weight:900; font-family:'Montserrat',sans-serif; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; justify-content:center; gap:0.5rem; box-shadow:0 8px 25px rgba(255,215,0,0.4); text-transform:uppercase;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 30px rgba(255,215,0,0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(255,215,0,0.4)'">
+                    <span>🔓 Ingresar al Curso Completo</span>
+                </button>
+
+                <div style="padding:0.85rem 1rem; background:rgba(255,215,0,0.12); border:1.5px solid #FFD700; border-radius:10px; font-size:0.82rem; color:#FFF; line-height:1.5; text-align:center;">
+                    ✉️ <strong>IMPORTANTE:</strong> LAS CONTRASEÑAS SE ENVIAN POR CORREO ELECTRÓNICO.<br>
+                    <span style="font-size:0.76rem; color:#F7E7CE; opacity:0.95;">Revisá tu bandeja de entrada o spam para obtener tu clave oficial de alumna activa.</span>
+                </div>
+
+                <p style="font-size:0.72rem; color:#94A3B8; text-align:center; margin-top:0.4rem;">Acceso institucional reservado &middot; M&eacute;todo Modo L&iacute;der</p>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

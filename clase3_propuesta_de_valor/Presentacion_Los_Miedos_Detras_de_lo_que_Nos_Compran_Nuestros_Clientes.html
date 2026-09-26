@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Miedos Detrás de lo que Nos Compran Nuestros Clientes | Método MODO LÍDER</title>
+    <meta name="description" content="Los miedos que subyacen a la decisión de compra de tu clienta. Método MODO LÍDER.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brown:        #3D1A08;
+            --brown-deep:   #2C1207;
+            --khaki:        #C4A882;
+            --khaki-light:  #D9C9A8;
+            --khaki-pale:   #EDE4D3;
+            --white:        #FFFFFF;
+            --off-white:    #FAF6F0;
+            --black:        #111111;
+            --black-warm:   #1A1208;
+            --text-muted:   #8B7355;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--black);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .presentation-wrapper {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            max-width: 1333px;
+            max-height: 750px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+            background: var(--off-white);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── HEADER ── */
+        .brand-header {
+            background: var(--black-warm);
+            height: 72px;
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            gap: 1rem;
+            border-bottom: 2px solid var(--khaki);
+            z-index: 50;
+            flex-shrink: 0;
+        }
+
+        .logo-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #1A0E03 70%);
+            border: 2px solid var(--khaki);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .logo-circle .logo-metodo {
+            font-size: 0.35rem;
+            font-weight: 700;
+            color: #FFF;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo-circle .logo-modo {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #FFF;
+            line-height: 1;
+        }
+
+        .logo-circle .logo-lider {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            background: linear-gradient(to bottom, #D9C9A8 0%, #A08060 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .logo-circle .logo-slogan {
+            font-size: 0.22rem;
+            color: #CCC;
+            letter-spacing: 0.5px;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.05rem;
+        }
+
+        .header-rm {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to bottom, #D9C9A8 0%, #A08060 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .header-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--khaki);
+            letter-spacing: 0.5px;
+        }
+
+        .header-title {
+            font-size: 0.68rem;
+            font-weight: 500;
+            color: #A09070;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ── SLIDES ── */
+        .slide-container {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s;
+            padding: 2.2rem 3.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Temas */
+        .slide-dark {
+            background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown) 100%);
+            color: var(--white);
+        }
+
+        .slide-light {
+            background: var(--off-white);
+            color: var(--black);
+        }
+
+        .slide-black {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .slide-khaki {
+            background: var(--khaki-pale);
+            color: var(--black);
+        }
+
+        /* ── ELEMENTOS ── */
+        .khaki-line {
+            width: 60px;
+            height: 3px;
+            background: var(--khaki);
+            border-radius: 2px;
+            margin: 0.8rem 0;
+        }
+
+        .slide-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--khaki);
+            margin-bottom: 0.4rem;
+        }
+
+        .title-dark {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+        }
+
+        .title-light {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--brown);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Cards */
+        .card-white {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1rem 1.3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid var(--khaki-light);
+        }
+
+        .card-dark {
+            background: rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 1.2rem;
+            border: 1px solid rgba(196,168,130,0.3);
+        }
+
+        .card-khaki {
+            background: var(--khaki-pale);
+            border-radius: 12px;
+            padding: 1rem 1.3rem;
+            border: 1px solid var(--khaki-light);
+        }
+
+        /* Quote */
+        .quote-box {
+            background: rgba(196,168,130,0.12);
+            border: 2px solid var(--khaki);
+            border-radius: 14px;
+            padding: 2rem 2.5rem;
+            text-align: center;
+        }
+
+        /* Table */
+        .slide-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--khaki-light);
+        }
+
+        .slide-table th {
+            padding: 0.7rem 1rem;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: left;
+            background: var(--brown);
+            color: var(--khaki-light);
+        }
+
+        .slide-table td {
+            padding: 0.6rem 1rem;
+            border-top: 1px solid var(--khaki-light);
+            vertical-align: middle;
+            font-size: 0.84rem;
+            background: var(--white);
+        }
+
+        .slide-table tr:nth-child(even) td {
+            background: var(--khaki-pale);
+        }
+
+        /* ── NAV ── */
+        .nav-bar {
+            background: var(--black-warm);
+            height: 50px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            border-top: 1px solid var(--khaki);
+            z-index: 50;
+            flex-shrink: 0;
+        }
+
+        .nav-brand {
+            font-size: 0.78rem;
+            color: var(--khaki);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-controls { display: flex; align-items: center; gap: 0.8rem; }
+
+        .nav-btn {
+            background: rgba(196,168,130,0.15);
+            border: 1px solid rgba(196,168,130,0.4);
+            color: var(--khaki);
+            padding: 0.35rem 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: var(--khaki);
+            color: var(--brown);
+            border-color: var(--khaki);
+        }
+
+        .slide-counter {
+            font-size: 0.82rem;
+            color: #A09070;
+            min-width: 55px;
+            text-align: center;
+        }
+
+        .progress-bar-wrap {
+            width: 100%;
+            height: 3px;
+            background: rgba(255,255,255,0.08);
+            flex-shrink: 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #A08060, var(--khaki));
+            transition: width 0.3s ease;
+        }
+    
+    @media print {
+        @page {
+            size: 13.333in 7.5in;
+            margin: 0;
+        }
+        * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        body {
+            overflow: visible !important;
+            height: auto !important;
+            background: transparent !important;
+        }
+        .presentation-wrapper {
+            max-width: none !important;
+            max-height: none !important;
+            width: 100% !important;
+            height: auto !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+        }
+        .nav-bar, .progress-bar-wrap {
+            display: none !important;
+        }
+        .slide-container {
+            overflow: visible !important;
+            position: static !important;
+            height: auto !important;
+        }
+        .slide {
+            position: relative !important;
+            width: 13.333in !important;
+            height: 7.5in !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            page-break-after: always !important;
+            break-after: page !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="presentation-wrapper">
+
+    <!-- HEADER DE MARCA -->
+    <header class="brand-header">
+        <div class="logo-circle">
+            <span class="logo-metodo">MÉTODO</span>
+            <span class="logo-modo">MODO</span>
+            <span class="logo-lider">LÍDER</span>
+            <span class="logo-slogan">CREA · LIDERA · IMPACTA</span>
+        </div>
+        <div class="header-text">
+            <span class="header-rm">RM</span>
+            <span class="header-name">LIC. ROMINA LORENA MONTIEL</span>
+            <span class="header-title">Mentora de Mentes y Negocios</span>
+        </div>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progressBar" style="width: 14.28%;"></div>
+    </div>
+
+    <!-- SLIDES -->
+    <div class="slide-container">
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 1 — PORTADA -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-dark active" data-slide="1">
+            <div style="position:absolute; top:-80px; right:-80px; width:280px; height:280px; border-radius:50%; background:rgba(0,0,0,0.2);"></div>
+            <div style="position:absolute; bottom:-60px; left:60%; width:200px; height:200px; border-radius:50%; background:rgba(196,168,130,0.06);"></div>
+
+            <div style="text-align:center; max-width:950px; margin:0 auto; position:relative;">
+                <div style="font-size:0.85rem; font-weight:800; color:var(--khaki); letter-spacing:3px; text-transform:uppercase; margin-bottom:1rem;">MÉTODO MODO LÍDER</div>
+                <h1 style="font-family:'Playfair Display',serif; font-size:2.8rem; font-weight:800; color:var(--white); line-height:1.2; margin-bottom:1rem;">
+                    Los Miedos Detrás de lo que Nos Compran Nuestros Clientes
+                </h1>
+                <div class="khaki-line" style="margin:1.2rem auto;"></div>
+                <p style="font-size:1.15rem; color:rgba(250,246,240,0.85); line-height:1.6;">
+                    No solo compran para ganar algo. Compran, sobre todo, para no perder algo.
+                </p>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 2 — PUNTO 1: IDEA CENTRAL -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-light" data-slide="2" style="background:#FBF9F5; justify-content:center; padding:2.2rem 3.5rem;">
+            <div style="max-width:1150px; margin:0 auto 1.5rem; width:100%; text-align:center;">
+                <span class="slide-tag" style="color:var(--brown);">PUNTO 1 • IDEA CENTRAL</span>
+                <h2 style="font-family:'Montserrat', sans-serif; font-size:2rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.4rem;">
+                    LO QUE EMPUJA LA DECISIÓN
+                </h2>
+                <p style="font-size:1.1rem; font-weight:500; color:#1A1816; line-height:1.4;">
+                    Atrás de cada deseo de transformación hay un miedo específico que lo activa.
+                </p>
+            </div>
+
+            <!-- TARJETA PRINCIPAL DESTACADA -->
+            <div style="max-width:1100px; margin:0 auto 1.8rem; background:#C8AF86; border-radius:14px; padding:1.8rem 2.5rem; text-align:center; box-shadow:0 8px 25px rgba(74,53,37,0.15); border:2px solid #B59B72;">
+                <p style="font-size:1.25rem; font-weight:800; color:#1A1816; line-height:1.55; font-family:'Montserrat', sans-serif;">
+                    💡 Toda transformación que persigue tu clienta tiene, del otro lado, un miedo que la está empujando a actuar. Ese miedo suele pesar más que el deseo — y es el que realmente activa la decisión de compra.
+                </p>
+            </div>
+
+            <!-- GRILLA 2X2 -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; max-width:1100px; margin:0 auto;">
+                <div style="background:#FFFFFF; border-radius:10px; padding:1.2rem 1.5rem; border-left:5px solid #C8AF86; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.4rem;">No solo se acercan al deseo</h3>
+                    <p style="font-size:0.92rem; color:#1A1816; line-height:1.45;">También se alejan de lo que temen perder, no lograr o que las demás noten.</p>
+                </div>
+                <div style="background:#FFFFFF; border-radius:10px; padding:1.2rem 1.5rem; border-left:5px solid #4A3525; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.4rem;">El miedo rara vez se dice</h3>
+                    <p style="font-size:0.92rem; color:#1A1816; line-height:1.45;">Se racionaliza como "quiero mejorar", pero por debajo hay algo puntual que quiere evitar.</p>
+                </div>
+                <div style="background:#FFFFFF; border-radius:10px; padding:1.2rem 1.5rem; border-left:5px solid #C8AF86; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.4rem;">Nombrarlo genera cercanía</h3>
+                    <p style="font-size:0.92rem; color:#1A1816; line-height:1.45;">Cuando comunicás el miedo específico, tu clienta se siente vista y entendida, no vendida.</p>
+                </div>
+                <div style="background:#FFFFFF; border-radius:10px; padding:1.2rem 1.5rem; border-left:5px solid #4A3525; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-size:1rem; font-weight:800; color:#1A1816; text-transform:uppercase; margin-bottom:0.4rem;">Conecta con el mapa</h3>
+                    <p style="font-size:0.92rem; color:#1A1816; line-height:1.45;"><strong>MIEDO → PROBLEMA → TRANSFORMACIÓN → IMPACTO.</strong> El miedo es el punto de partida real.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 3 — PUNTO 2: LOS MIEDOS MATRIZ -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-black" data-slide="3">
+            <div style="text-align:center; margin-bottom:1.2rem;">
+                <span class="slide-tag">PUNTO 2 • LOS MIEDOS MATRIZ</span>
+                <h2 class="title-dark" style="font-size:1.7rem; color:var(--khaki);">Los miedos que subyacen a casi todo</h2>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; max-width:1100px; margin:0 auto 1rem;">
+                <div class="card-dark" style="border-left:4px solid var(--khaki);">
+                    <p style="font-size:0.72rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--khaki); margin-bottom:0.3rem;">Quedarse atrás</p>
+                    <p style="font-size:0.9rem; color:rgba(250,246,240,0.9); line-height:1.55;">Que las demás avancen y ella no. "Mientras yo no resuelvo esto, otras ya lo lograron."</p>
+                </div>
+                <div class="card-dark" style="border-left:4px solid var(--khaki);">
+                    <p style="font-size:0.72rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--khaki); margin-bottom:0.3rem;">El juicio del otro</p>
+                    <p style="font-size:0.9rem; color:rgba(250,246,240,0.9); line-height:1.55;">Qué van a pensar, cómo la van a ver, si va a estar "a la altura".</p>
+                </div>
+                <div class="card-dark" style="border-left:4px solid var(--khaki);">
+                    <p style="font-size:0.72rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--khaki); margin-bottom:0.3rem;">Perder tiempo o plata</p>
+                    <p style="font-size:0.9rem; color:rgba(250,246,240,0.9); line-height:1.55;">Desconfianza acumulada por intentos previos que no funcionaron.</p>
+                </div>
+                <div class="card-dark" style="border-left:4px solid var(--khaki);">
+                    <p style="font-size:0.72rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--khaki); margin-bottom:0.3rem;">No ser capaz</p>
+                    <p style="font-size:0.9rem; color:rgba(250,246,240,0.9); line-height:1.55;">Que el problema no sea la estrategia sino ella misma. "Y si no me da la cabeza para esto."</p>
+                </div>
+                <div class="card-dark" style="border-left:4px solid var(--khaki);">
+                    <p style="font-size:0.72rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--khaki); margin-bottom:0.3rem;">Perder el control</p>
+                    <p style="font-size:0.9rem; color:rgba(250,246,240,0.9); line-height:1.55;">De su cuerpo, su economía, su tiempo, su negocio.</p>
+                </div>
+                <div class="card-dark" style="border-left:4px solid var(--white);">
+                    <p style="font-size:0.72rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--white); margin-bottom:0.3rem;">Que sea demasiado tarde</p>
+                    <p style="font-size:0.9rem; color:rgba(250,246,240,0.9); line-height:1.55;">La urgencia silenciosa de "esto ya lo vengo posponiendo hace rato".</p>
+                </div>
+            </div>
+
+            <div class="quote-box" style="max-width:1050px; margin:0 auto; border-color:var(--khaki);">
+                <p style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:var(--khaki); line-height:1.4;">
+                    "No solo compran para ganar algo. Compran para no perder algo."
+                </p>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 4 — PUNTO 3: MIEDOS POR RUBRO (PARTE 1) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-light" data-slide="4">
+            <span class="slide-tag" style="color:var(--brown);">PUNTO 3</span>
+            <h2 class="title-light" style="margin-bottom:1rem; font-size:1.65rem;">El miedo detrás de cada transformación, por rubro</h2>
+
+            <table class="slide-table" style="max-width:1150px; margin:0 auto;">
+                <thead>
+                    <tr>
+                        <th style="width:15%;">Rubro</th>
+                        <th style="width:20%;">Lo que compra (transformación)</th>
+                        <th>El miedo que hay detrás</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight:700;">Pastelería casera</td>
+                        <td>Un festejo lindo, sentirse buena anfitriona</td>
+                        <td>Que la mesa dulce quede pobre o desprolija, no estar a la altura de lo que "se espera" en un cumple, gastar y que no guste</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:700;">Abogada</td>
+                        <td>Protección, resolución del problema, tranquilidad legal</td>
+                        <td>Perder un juicio o una herencia, que la estafen, quedar desprotegida frente al otro, no saber a quién recurrir</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:700;">Clases de yoga online</td>
+                        <td>Bienestar, conexión con una misma, un espacio propio</td>
+                        <td>No poder sostener la constancia, sentirse sola frente a la pantalla, que el estrés le siga arruinando la salud</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:700;">Trenzadora</td>
+                        <td>Verse prolija y segura, mostrarse diferente, provocar sorpresa e impacto en los demás, pertenecer a un grupo</td>
+                        <td>Que el peinado se arruine, no quedar conforme el día del evento, no estar "a la moda", quedar afuera del grupo al que quiere pertenecer</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:700;">Micropigmentadora (labios, cejas y estrías)</td>
+                        <td>Verse mejor sin maquillarse todos los días, tapar algo que la incomoda, sentirse bien por dentro</td>
+                        <td>Necesitar sentirse arreglada sin perder tiempo en el día a día, dejar de sentir que tiene que maquillarse para estar bonita, dejar de sentir inseguridad por las partes de su cuerpo que no le gustan y no atraer miradas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 5 — PUNTO 3: MIEDOS POR RUBRO (PARTE 2) -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-light" data-slide="5">
+            <span class="slide-tag" style="color:var(--brown);">PUNTO 3 (CONT.)</span>
+            <h2 class="title-light" style="margin-bottom:1rem; font-size:1.65rem;">El miedo detrás de cada transformación, por rubro</h2>
+
+            <table class="slide-table" style="max-width:1150px; margin:0 auto;">
+                <thead>
+                    <tr>
+                        <th style="width:15%;">Rubro</th>
+                        <th style="width:20%;">Lo que compra (transformación)</th>
+                        <th>El miedo que hay detrás</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight:700;">Venta de zapatos e indumentaria online</td>
+                        <td>Verse bien, sentirse a la moda, resolver el tema del calzado sin salir de casa, comprar algo lindo y cómodo para trabajar sin tener tiempo para salir a buscarlo</td>
+                        <td>No exponerse a salir porque no le gusta cómo se ve o evitar el momento de mostrar los pies porque le incomoda, que no le quede la talla, gastar mal la plata en algo que no es de calidad, la desconfianza de comprar sin probarse y que lo de la comodidad no se cumpla</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:700;">Ingeniera agrónoma</td>
+                        <td>Producción asegurada, tranquilidad técnica en su campo o cultivo</td>
+                        <td>Perder la cosecha o el rinde, tomar una decisión técnica equivocada, no tener con quién consultar a tiempo</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:700;">Biodecodificadora</td>
+                        <td>Entender qué le pasa, encontrarle un motivo a su malestar y entender cómo sanar</td>
+                        <td>Que el síntoma siga sin explicación y que empeore, sentir que "está loca" o que nadie le entiende, querer sentirse en paz y ver que las demás están bien y ella no, necesitarlo porque sabe que estar feliz empieza por sentirse bien una misma</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight:700;">Venta de productos de belleza</td>
+                        <td>Verse bonita, oler agradable, cuidar su cuerpo y su rostro, lucir un rostro que impacte, lucir profesional o atractiva, regalar esos mismos sentimientos a otra persona</td>
+                        <td>No gustarse, no oler bien y que se note, descuidar su cuerpo y su rostro y que se le note el paso del tiempo, no verse profesional ni atractiva frente a los demás, elegir mal un regalo y que no cause el impacto que buscaba</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 6 — PUNTO 4: POR QUÉ IMPORTA PARA TU COMUNICACIÓN -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-khaki" data-slide="6" style="justify-content:center; padding:2.2rem 3.5rem;">
+            <div style="max-width:1100px; margin:0 auto; width:100%; text-align:center;">
+                <span class="slide-tag" style="color:var(--brown);">PUNTO 4 • POR QUÉ IMPORTA</span>
+                <h2 style="font-family:'Montserrat', sans-serif; font-size:1.9rem; font-weight:800; color:#1A1816; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:1.2rem;">
+                    Hablarle al miedo es hablarle a quien decide
+                </h2>
+
+                <div style="display:flex; gap:1.2rem; max-width:1000px; margin:0 auto 1.8rem;">
+                    <div style="flex:1; background:#FFFFFF; border-radius:12px; padding:1.4rem 1.6rem; box-shadow:0 6px 18px rgba(0,0,0,0.05);">
+                        <p style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#7A6048; margin-bottom:0.5rem;">Solo el deseo</p>
+                        <p style="font-size:0.95rem; color:#1A1816; line-height:1.5;">"Vas a sentirte segura, vas a tener claridad." Le hablás a la parte racional.</p>
+                    </div>
+                    <div style="flex:1; background:#4A3525; border-radius:12px; padding:1.4rem 1.6rem; box-shadow:0 6px 18px rgba(0,0,0,0.15);">
+                        <p style="font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--khaki); margin-bottom:0.5rem;">El miedo nombrado</p>
+                        <p style="font-size:0.95rem; color:#FFFFFF; line-height:1.5;">Le hablás a la parte que realmente decide comprar, porque se siente vista.</p>
+                    </div>
+                </div>
+
+                <div class="quote-box" style="max-width:1000px; margin:0 auto; background:#FFFFFF; border-color:#4A3525;">
+                    <p style="font-size:0.78rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:#7A6048; margin-bottom:0.8rem;">FÓRMULA AMPLIADA</p>
+                    <p style="font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; color:#1A1816; line-height:1.5;">
+                        "Te ayudo a [resolver problema], para que dejes de [miedo concreto] y puedas [transformación / beneficio]."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SLIDE 7 — MENSAJE FINAL -->
+        <!-- ═══════════════════════════════════════════ -->
+        <div class="slide slide-dark" data-slide="7">
+            <div style="position:absolute; top:-60px; right:-60px; width:220px; height:220px; border-radius:50%; background:rgba(196,168,130,0.06);"></div>
+            <div style="position:absolute; bottom:-80px; left:-40px; width:250px; height:250px; border-radius:50%; background:rgba(0,0,0,0.15);"></div>
+
+            <div class="quote-box" style="max-width:950px; margin:0 auto; padding:3rem; position:relative;">
+                <div style="font-size:0.8rem; font-weight:800; color:var(--khaki); letter-spacing:2px; text-transform:uppercase; margin-bottom:1.5rem;">MENSAJE FINAL</div>
+                <p style="font-family:'Playfair Display',serif; font-size:1.7rem; font-weight:700; color:var(--white); line-height:1.5; margin-bottom:1.2rem;">
+                    No vendas solo lo que tu clienta quiere lograr.
+                </p>
+                <div class="khaki-line" style="margin:1rem auto;"></div>
+                <p style="font-family:'Playfair Display',serif; font-size:1.7rem; font-weight:700; color:var(--khaki); line-height:1.5;">
+                    Nombrá también lo que tiene miedo de perder. Ahí está la decisión.
+                </p>
+                <div class="khaki-line" style="margin:1.5rem auto;"></div>
+                <div style="font-weight:700; font-size:0.85rem; color:var(--khaki); letter-spacing:2px; text-transform:uppercase;">MÉTODO MODO LÍDER ®</div>
+            </div>
+        </div>
+
+    </div><!-- /slide-container -->
+
+    <!-- NAV BAR -->
+    <footer class="nav-bar">
+        <div class="nav-brand">Los Miedos Detrás de lo que Nos Compran Nuestros Clientes</div>
+        <div class="nav-controls">
+            <button class="nav-btn" onclick="prevSlide()">◀ Anterior</button>
+            <div class="slide-counter" id="slideCounter">1 / 7</div>
+            <button class="nav-btn" onclick="nextSlide()">Siguiente ▶</button>
+            <button class="nav-btn" onclick="toggleFullScreen()">⛶ Pantalla Completa</button>
+        </div>
+    </footer>
+
+</div><!-- /presentation-wrapper -->
+
+<script>
+    let currentSlide = 1;
+    const totalSlides = 7;
+
+    function updateSlide() {
+        document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+        const el = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
+        if (el) el.classList.add('active');
+        document.getElementById('slideCounter').innerText = `${currentSlide} / ${totalSlides}`;
+        document.getElementById('progressBar').style.width = `${(currentSlide / totalSlides) * 100}%`;
+    }
+
+    function nextSlide() { if (currentSlide < totalSlides) { currentSlide++; updateSlide(); } }
+    function prevSlide() { if (currentSlide > 1) { currentSlide--; updateSlide(); } }
+
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => console.log(err));
+        } else {
+            if (document.exitFullscreen) document.exitFullscreen();
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+        else if (e.key === 'ArrowLeft') prevSlide();
+        else if (e.key === 'f' || e.key === 'F') toggleFullScreen();
+    });
+</script>
+</body>
+</html>

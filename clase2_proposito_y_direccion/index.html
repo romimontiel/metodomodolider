@@ -775,15 +775,15 @@
         <div class="folder-video-screen" id="videoContainer-clase2">
             <iframe 
                 id="iframeElement-clase2"
-                src="https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1" 
-                title="1. Presentamos Nuestros Emprendimientos" 
+                src="https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1" 
+                title="1. Qué es el Propósito" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen
                 style="display: block; width: 100%; aspect-ratio: 16/9; border: none;">
             </iframe>
             <video id="videoElement-clase2" controls playsinline controlsList="nodownload" oncontextmenu="return false;" preload="none" poster="fotito.PNG" style="display: none; width: 100%; height: auto; max-height: 480px;">
-                <source src="CLASE 2 NOS PRESENTAMOS Y PRESENTAMOS NUESTROS EMPRENDIMIENTOS.mp4" type="video/mp4">
+                <source src="ENTENDER LO QUE ES EL PROPOSITO.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -791,25 +791,22 @@
         <div class="pillar-header">
             <div class="pillar-title">
                 <span>🎬</span>
-                <span id="title-video-clase2">1. Presentamos Nuestros Emprendimientos (YouTube HD)</span>
+                <span id="title-video-clase2">1. Qué es el Propósito (Video Oficial HD)</span>
             </div>
             <span class="pillar-badge" id="badge-video-clase2">Video Oficial HD</span>
         </div>
-                <!-- Selector de videos Clase 2 (Solo YouTube HD, sin Drive, sin botón externo) -->
+        <!-- Selector de videos Clase 2 (Reproducción Exclusiva en el Campus) -->
         <div class="video-playlist-bar">
             <span class="playlist-label">Videos de la Clase:</span>
-            <button class="playlist-btn active" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/uincuU4f_xg?rel=0&modestbranding=1', '1. Presentamos Nuestros Emprendimientos (YouTube HD)', this, '', true, 'Ronda estratégica y participativa en vivo de alumnas presentando sus proyectos y modelos de negocio.')">
-                🎬 1. Emprendimientos
+            <button class="playlist-btn active" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '1. Qué es el Propósito (Video Oficial HD)', this, '', true, 'Profundización conceptual y estratégica: qué es y cómo se aterriza el verdadero propósito empresarial.')">
+                🎬 1. Qué es el Propósito
             </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/0ZYdjwNX3zo?rel=0&modestbranding=1', '2. Entender lo que es el Propósito (YouTube HD)', this, '', true, 'Profundización conceptual y estratégica: qué es y cómo se aterriza el verdadero propósito empresarial.')">
-                🎬 2. Qué es el Propósito
-            </button>
-            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '3. El Antes y Después de Descubrir tu Propósito (YouTube HD)', this, '', true, 'Claridad de visión, transformación de postura y orden prioritario para liderar tu negocio.')">
-                🎬 3. Antes y Después
+            <button class="playlist-btn" onclick="switchFolderVideo('clase2', 'https://www.youtube-nocookie.com/embed/zV2kFpcSSl8?rel=0&modestbranding=1', '2. El Antes y Después de Descubrir tu Propósito (Video Oficial HD)', this, '', true, 'Claridad de visión, transformación de postura y orden prioritario para liderar tu negocio.')">
+                🎬 2. Antes y Después
             </button>
         </div>
         <div class="video-description-box" id="desc-video-clase2">
-            💡 <strong>Contenido de la Clase:</strong> Mensaje oficial de apertura y bienvenida a la Clase 2 por la Lic. Romina Lorena Montiel.
+            💡 <strong>Contenido de la Clase:</strong> Profundización conceptual y estratégica: qué es y cómo se aterriza el verdadero propósito empresarial.
         </div>
     </div>
 
@@ -916,7 +913,6 @@
         const titleElem = document.getElementById(`title-video-${folderKey}`);
         const badgeElem = document.getElementById(`badge-video-${folderKey}`);
         const descElem = document.getElementById(`desc-video-${folderKey}`);
-        const driveDirectBtn = document.getElementById(`driveDirectLink-${folderKey}`);
 
         const isDrive = videoSrc && videoSrc.includes('drive.google.com');
         const isYT = isYouTube || (videoSrc && (videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be')));
@@ -931,7 +927,7 @@
                 player.pause();
                 player.style.display = 'none';
             }
-            if (badgeElem) badgeElem.innerText = isDrive ? 'Google Drive Oficial HD' : 'YouTube Oficial HD';
+            if (badgeElem) badgeElem.innerText = 'Video Oficial HD';
         } else {
             if (iframe) {
                 iframe.src = '';
@@ -953,32 +949,6 @@
 
         if (descElem && desc) {
             descElem.innerHTML = `💡 <strong>Contenido de la Clase:</strong> ${desc}`;
-        }
-
-        if (driveDirectBtn) {
-            if (isYT) {
-                let ytUrl = videoSrc;
-                if (videoSrc.includes('embed/')) {
-                    const ytId = videoSrc.split('embed/')[1].split('?')[0];
-                    ytUrl = `https://youtu.be/${ytId}`;
-                }
-                driveDirectBtn.href = ytUrl;
-                driveDirectBtn.innerHTML = '📺 Abrir en YouTube ↗';
-                driveDirectBtn.style.display = 'none';
-            } else if (isDrive) {
-                driveDirectBtn.href = videoSrc.replace('/preview', '/view');
-                driveDirectBtn.innerHTML = '📺 Ver en Google Drive ↗';
-                driveDirectBtn.style.display = 'none';
-            } else {
-                let driveUrl = driveMapClase2[videoSrc] || '';
-                if (driveUrl) {
-                    driveDirectBtn.href = driveUrl.replace('/preview', '/view');
-                    driveDirectBtn.innerHTML = '📺 Ver en Google Drive ↗';
-                    driveDirectBtn.style.display = 'none';
-                } else {
-                    driveDirectBtn.style.display = 'none';
-                }
-            }
         }
 
         // Update active button across all playlist bars

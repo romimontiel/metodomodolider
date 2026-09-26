@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4 — Cliente Ideal y Posicionamiento | MODO LÍDER</title>
+    <meta name="description" content="Presentación interactiva de la Clase 4: Cliente Ideal y Posicionamiento. Curso Emprender de Cero a Impacto y Ventas por Lic. Romina Lorena Montiel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-navy: #0E121B;
+            --color-navy-card: #161C2A;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #B4871E;
+            --color-gold-light: #FFF8E7;
+            --color-gold-gradient: linear-gradient(135deg, #F0C040 0%, #D4AF37 50%, #B4871E 100%);
+            --color-light-bg: #F4F6F9;
+            --color-text-light: #F8FAFC;
+            --color-text-muted: #94A3B8;
+            --color-coral: #E94560;
+            --color-purple: #7C3AED;
+            --color-green: #10B981;
+            --color-orange: #F59E0B;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--color-navy);
+            color: var(--color-text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* HEADER BRANDING */
+        .top-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2.5rem;
+            background: rgba(14, 18, 27, 0.95);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .brand-logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #3D2A08 0%, #0E0804 80%);
+            border: 2px solid var(--color-gold);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-logo-circle .l-modo { font-size: 0.35rem; font-weight: 700; color: #FFF; line-height: 1; }
+        .brand-logo-circle .l-lider { font-size: 0.45rem; font-weight: 800; color: var(--color-gold); line-height: 1; }
+
+        .brand-text-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+        }
+
+        .brand-author {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+
+        .slide-counter {
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--color-gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* SLIDE CONTAINER */
+        .presentation-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            max-width: 1000px;
+            background: var(--color-navy-card);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 24px;
+            padding: 3.5rem 4rem;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            min-height: 580px;
+            position: relative;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* SLIDE TYPOGRAPHY */
+        .slide-tag {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 0.8rem;
+            display: inline-block;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+        }
+
+        .slide-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        /* CARDS & CONTENT GRID */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--color-gold);
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .feature-card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 0.6rem;
+        }
+
+        .feature-card-desc {
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+        }
+
+        /* HIGHLIGHT BOXES */
+        .highlight-box {
+            background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, rgba(14, 18, 27, 0.4) 100%);
+            border: 2px solid var(--color-gold);
+            border-radius: 18px;
+            padding: 2.2rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .highlight-box span {
+            color: var(--color-gold);
+        }
+
+        /* COMPARISON TABLE SLIDE */
+        .compare-box {
+            border-radius: 14px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .compare-box.bad { background: rgba(233, 69, 96, 0.08); border-color: rgba(233, 69, 96, 0.3); }
+        .compare-box.good { background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3); }
+
+        .compare-title { font-size: 0.85rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.8rem; }
+        .compare-box.bad .compare-title { color: var(--color-coral); }
+        .compare-box.good .compare-title { color: var(--color-green); }
+
+        /* NAV CONTROLS */
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 3rem;
+            background: rgba(14, 18, 27, 0.95);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-nav {
+            background: var(--color-navy-card);
+            color: #FFFFFF;
+            border: 1.5px solid var(--color-gold);
+            padding: 0.75rem 1.8rem;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-nav:hover:not(:disabled) {
+            background: var(--color-gold);
+            color: var(--color-navy);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-nav:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            border-color: #475569;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .slide { padding: 2rem 1.5rem; min-height: 450px; }
+            .slide-title { font-size: 1.8rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP NAVBAR -->
+    <div class="top-navbar">
+        <div class="brand-badge">
+            <div class="brand-logo-circle">
+                <span class="l-modo">MODO</span>
+                <span class="l-lider">LÍDER</span>
+            </div>
+            <div>
+                <div class="brand-text-title">EMPRENDER DE CERO A IMPACTO Y VENTAS</div>
+                <div class="brand-author">Lic. Romina Lorena Montiel</div>
+            </div>
+        </div>
+        <div class="slide-counter" id="slideCounter">SLIDE 1 DE 15</div>
+    </div>
+
+    <!-- MAIN PRESENTATION SLIDES -->
+    <div class="presentation-wrapper">
+
+        <!-- SLIDE 1: PORTADA -->
+        <div class="slide active" id="slide-1">
+            <span class="slide-tag">CLASE 4 • MÉTODO MODO LÍDER ®</span>
+            <h1 class="slide-title" style="font-size: 3.2rem;">Cliente Ideal y Posicionamiento</h1>
+            <p class="slide-subtitle" style="font-size: 1.3rem; color: var(--color-gold);">
+                Cómo ocupar el primer lugar en la mente de la persona que te necesita.
+            </p>
+            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: 14px; border: 1px solid rgba(212,175,55,0.3); max-width: 700px;">
+                <p style="font-size: 0.95rem; color: #CBD5E1;">
+                    💡 <strong>Objetivo de hoy:</strong> Pasar de tener una oferta en el aire a dominar el momento exacto en el que tu cliente ideal piensa en vos y decide comprarte.
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: REPASO Y CONEXIÓN -->
+        <div class="slide" id="slide-2">
+            <span class="slide-tag">EL PUENTE ESTRATÉGICO</span>
+            <h2 class="slide-title">De la Propuesta de Valor al Posicionamiento</h2>
+            <p class="slide-subtitle">En la Clase 3 definimos <strong>qué vendés</strong> (transformación vs. commodity). Hoy definimos <strong>dónde te ubicas en su cabeza</strong>.</p>
+            
+            <div class="grid-2">
+                <div class="feature-card" style="border-left: 4px solid var(--color-gold);">
+                    <div class="feature-card-icon">💡</div>
+                    <div class="feature-card-title">Clase 3: Propuesta de Valor</div>
+                    <div class="feature-card-desc">Es la solución, la emoción y la transformación que entregás al mundo.</div>
+                </div>
+                <div class="feature-card" style="border-left: 4px solid var(--color-green);">
+                    <div class="feature-card-icon">🎯</div>
+                    <div class="feature-card-title">Clase 4: Posicionamiento & Avatar</div>
+                    <div class="feature-card-desc">Es el espacio mental y el momento exacto de necesidad en el que tu cliente te recuerda y te elige a vos por sobre el resto.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: QUÉ ES EL POSICIONAMIENTO -->
+        <div class="slide" id="slide-3">
+            <span class="slide-tag">CONCEPTO CLAVE</span>
+            <h2 class="slide-title">¿Qué es realmente el Posicionamiento?</h2>
+            <p class="slide-subtitle">Es aquello por lo que querés que tu cliente te recuerde y te elija.</p>
+            
+            <div class="highlight-box">
+                <p>
+                    "No es solamente lo que vendés.<br>
+                    Es <span>qué representás</span> para un determinado cliente y <span>en qué situación de su vida piensa en vos</span>."
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: DIFERENCIACIÓN VS POSICIONAMIENTO -->
+        <div class="slide" id="slide-4">
+            <span class="slide-tag">DISTINCIÓN FUNDAMENTAL</span>
+            <h2 class="slide-title">Diferenciación vs. Posicionamiento</h2>
+            <p class="slide-subtitle">Podés tener un producto único, pero si nadie te recuerda cuando surge la necesidad, no hay venta.</p>
+            
+            <div class="grid-2">
+                <div class="feature-card">
+                    <div class="feature-card-title" style="color: var(--color-orange);">🎨 Diferenciación</div>
+                    <div class="feature-card-desc">
+                        <strong>"¿Qué hago de una manera diferente o valiosa?"</strong><br><br>
+                        Es tu método, tu estética o tus ingredientes. Vive en tu propuesta.
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title" style="color: var(--color-gold);">🧠 Posicionamiento</div>
+                    <div class="feature-card-desc">
+                        <strong>"¿Por qué quiero que me recuerden y qué lugar ocupo en su mente?"</strong><br><br>
+                        Busca que, cuando aparezca esa necesidad específica en su vida, <strong>aparezcas vos de inmediato</strong>.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: EL MOMENTO DISPARADOR (TRIGGER) -->
+        <div class="slide" id="slide-5">
+            <span class="slide-tag">CLAVE MODO LÍDER ®</span>
+            <h2 class="slide-title">El "Momento Disparador" (Trigger)</h2>
+            <p class="slide-subtitle">Tu cliente no piensa en tu negocio todo el día. Se acuerda de vos cuando siente una urgencia o un deseo puntual.</p>
+            
+            <div class="highlight-box" style="border-color: var(--color-purple); background: rgba(124, 58, 237, 0.1);">
+                <p style="font-size: 1.1rem;">
+                    El Posicionamiento no se construye en el vacío: se activa en el <strong>momento exacto</strong> de mayor dolor o necesidad de tu cliente ideal.
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: CASO PRÁCTICO 1 - JESICA -->
+        <div class="slide" id="slide-6">
+            <span class="slide-tag">CASO REAL APLICADO</span>
+            <h2 class="slide-title">Caso 1: Pastelería (Aljesec)</h2>
+            <p class="slide-subtitle">De vender un producto suelto a adueñarse de la solución en la mente de la clienta.</p>
+            
+            <div class="grid-2">
+                <div class="compare-box bad">
+                    <div class="compare-title">❌ Posicionamiento Genérico (Commodity)</div>
+                    <p style="font-size: 0.95rem; color: #CBD5E1;">"Aljesec vende alfajores, masitas y cupcakes."</p>
+                </div>
+                <div class="compare-box good">
+                    <div class="compare-title">✅ Posicionamiento de Impacto (En la mente del cliente)</div>
+                    <p style="font-size: 0.95rem; color: #FFFFFF;">
+                        "Cuando tengo el cumpleaños de mis hijos y quiero la propuesta dulce, colorida y resuelta, pienso en Aljesec."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: CASO PRÁCTICO 2 - COACH -->
+        <div class="slide" id="slide-7">
+            <span class="slide-tag">CASO REAL APLICADO</span>
+            <h2 class="slide-title">Caso 2: Coach - Biodecodificadora</h2>
+            <p class="slide-subtitle">De vender "sesiones" a ser la referente en momentos de crisis.</p>
+            
+            <div class="grid-2">
+                <div class="compare-box bad">
+                    <div class="compare-title">❌ Posicionamiento Genérico (Commodity)</div>
+                    <p style="font-size: 0.95rem; color: #CBD5E1;">"Hace sesiones de coaching y biodecodificación."</p>
+                </div>
+                <div class="compare-box good">
+                    <div class="compare-title">✅ Posicionamiento de Impacto (En la mente del cliente)</div>
+                    <p style="font-size: 0.95rem; color: #FFFFFF;">
+                        "Cuando estoy atravesando una situación personal que no logro comprender y necesito una mirada diferente, pienso en ella."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: FÓRMULA DE POSICIONAMIENTO -->
+        <div class="slide" id="slide-8">
+            <span class="slide-tag">ARQUITECTURA DE MARCA</span>
+            <h2 class="slide-title">La Fórmula del Posicionamiento MODO LÍDER ®</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem;">
+                <div style="background: rgba(255,255,255,0.04); padding: 0.9rem 1.2rem; border-radius: 10px; border-left: 4px solid var(--color-gold);">
+                    <strong style="color: var(--color-gold);">1. LO QUE VENDO</strong> → Tu propuesta de transformación.
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 0.9rem 1.2rem; border-radius: 10px; border-left: 4px solid #38BDF8;">
+                    <strong style="color: #38BDF8;">2. PARA QUIÉN</strong> → Tu cliente específico (Avatar).
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 0.9rem 1.2rem; border-radius: 10px; border-left: 4px solid #FCD34D;">
+                    <strong style="color: #FCD34D;">3. QUÉ PROBLEMA / DESEO RESUELVO</strong> → El momento de dolor o necesidad.
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 0.9rem 1.2rem; border-radius: 10px; border-left: 4px solid #4ADE80;">
+                    <strong style="color: #4ADE80;">4. QUÉ TRANSFORMACIÓN GENERO</strong> → El beneficio valioso percibido.
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 0.9rem 1.2rem; border-radius: 10px; border-left: 4px solid #F472B6;">
+                    <strong style="color: #F472B6;">5. POR QUÉ QUIERO SER RECORDADA</strong> → Tu lugar en su mente.
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: LA PREGUNTA DE ORO -->
+        <div class="slide" id="slide-9">
+            <span class="slide-tag">PREGUNTA CLAVE DE AUDITORÍA</span>
+            <h2 class="slide-title">La Pregunta de Oro MODO LÍDER ®</h2>
+            
+            <div class="highlight-box" style="padding: 3rem 2.5rem;">
+                <p style="font-size: 1.4rem; font-family: 'Playfair Display', serif;">
+                    "Cuando mi cliente tenga este problema, deseo o necesidad…<br>
+                    <span>¿quiero ser una de las primeras personas o marcas que le vengan a la mente?</span>"
+                </p>
+            </div>
+            <p style="text-align: center; margin-top: 1.5rem; color: var(--color-gold); font-weight: 700;">
+                Si la respuesta es SÍ, estás empezando a construir Posicionamiento real.
+            </p>
+        </div>
+
+        <!-- SLIDE 10: RADIOGRAFÍA DEL AVATAR -->
+        <div class="slide" id="slide-10">
+            <span class="slide-tag">CONOCIENDO A TU CLIENTE</span>
+            <h2 class="slide-title">Radiografía del Cliente Ideal (Avatar)</h2>
+            <p class="slide-subtitle">Olvidate de los datos fríos (edad, ciudad). Tu Avatar se define por sus pensamientos internos.</p>
+            
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-card-icon">💔</div>
+                    <div class="feature-card-title">1. Sus Dolores</div>
+                    <div class="feature-card-desc">¿Qué no la deja dormir de noche? ¿Qué la frustra en su día a día?</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">⭐</div>
+                    <div class="feature-card-title">2. Sus Deseos</div>
+                    <div class="feature-card-desc">¿Qué quiere lograr desesperadamente? ¿Cómo quiere sentirse?</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">🛑</div>
+                    <div class="feature-card-title">3. Sus Objeciones</div>
+                    <div class="feature-card-desc">¿Qué miedo tiene antes de comprarte? ("Es caro", "No me va a funcionar").</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 11: LOS 3 NIVELES DEL DOLOR -->
+        <div class="slide" id="slide-11">
+            <span class="slide-tag">PROFUNDIDAD PSICOLÓGICA</span>
+            <h2 class="slide-title">Los 3 Niveles de Dolor de tu Cliente</h2>
+            <p class="slide-subtitle">Para conectar de verdad, debés hablarle al nivel más profundo.</p>
+            
+            <div class="grid-3">
+                <div class="feature-card" style="border-top: 4px solid #38BDF8;">
+                    <div class="feature-card-title">Level 1: Superficial</div>
+                    <div class="feature-card-desc">El síntoma externo.<br><em>"Tengo ganas de comer algo rico" / "No sé qué publicar".</em></div>
+                </div>
+                <div class="feature-card" style="border-top: 4px solid #FCD34D;">
+                    <div class="feature-card-title">Level 2: Emocional</div>
+                    <div class="feature-card-desc">La emoción que le genera.<br><em>"Siento estrés por el cumple" / "Me da vergüenza mostrarme".</em></div>
+                </div>
+                <div class="feature-card" style="border-top: 4px solid #F472B6;">
+                    <div class="feature-card-title">Level 3: Identidad</div>
+                    <div class="feature-card-desc">Quién teme ser o quién quiere ser.<br><em>"Quiero ser una buena madre" / "Quiero ser reconocida y cobrar lo que valgo".</em></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: EL PITCH DE ATRACCIÓN -->
+        <div class="slide" id="slide-12">
+            <span class="slide-tag">MENSAJE DE POSICIONAMIENTO</span>
+            <h2 class="slide-title">Tu Mensaje de Atracción en Vivo</h2>
+            <p class="slide-subtitle">Cómo hablarle a tu cliente para que sienta que <em>le estás leyendo la mente</em>.</p>
+            
+            <div class="highlight-box" style="text-align: left; background: rgba(14, 18, 27, 0.8);">
+                <p style="font-size: 1rem; font-weight: 400; line-height: 1.8;">
+                    🗣️ <strong>Fórmula de Conexión:</strong><br>
+                    <span style="color: var(--color-gold);">"Si sos [Avatar] y estás cansada de [Dolor/Frustración nivel 2], te ayudo a [Transformación deseada] para que puedas [Beneficio de Identidad]."</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 13: EJERCICIO EN VIVO -->
+        <div class="slide" id="slide-13">
+            <span class="slide-tag">PRÁCTICA INTERACTIVA</span>
+            <h2 class="slide-title">Ejercicio: Definiendo a tu Avatar MODO LÍDER ®</h2>
+            <p class="slide-subtitle">Abrí tu Workbook en la Sección 4 y completá las 3 preguntas quirúrgicas:</p>
+            
+            <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 14px; border: 1px solid rgba(212,175,55,0.3);">
+                <ol style="margin-left: 1.2rem; color: #E2E8F0; line-height: 2;">
+                    <li>¿En qué <strong>momento exacto</strong> de su día/vida tu cliente necesita tu ayuda?</li>
+                    <li>¿Qué <strong>frase exacta</strong> retumba en su cabeza antes de buscarte?</li>
+                    <li>¿Por qué <strong>frase o valor</strong> querés ser recordada por ella?</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- SLIDE 14: SÍNTESIS DE LA CLASE -->
+        <div class="slide" id="slide-14">
+            <span class="slide-tag">SÍNTESIS FINAL</span>
+            <h2 class="slide-title">Lo que te llevás hoy</h2>
+            
+            <div class="grid-2">
+                <div class="feature-card">
+                    <div class="feature-card-title" style="color: var(--color-gold);">1. Posicionamiento es Recordación</div>
+                    <div class="feature-card-desc">No se trata de vender todo el tiempo, sino de ocupar el lugar número 1 en su mente cuando surge la necesidad.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title" style="color: var(--color-green);">2. El Avatar se define por Momentos</div>
+                    <div class="feature-card-desc">Tu cliente ideal se activa en su momento disparador de dolor o deseo profundo.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 15: CIERRE Y PRÓXIMO PASO -->
+        <div class="slide" id="slide-15">
+            <span class="slide-tag">PRÓXIMA CLASE • MÓDULO 3</span>
+            <h2 class="slide-title">¡Felicitaciones! Completaste la Clase 4</h2>
+            <p class="slide-subtitle">Ahora tenés tu propuesta clara y a tu Cliente Ideal perfectamente identificado.</p>
+            
+            <div class="highlight-box">
+                <p>
+                    👉 <strong>Próxima Clase 5:</strong> Arquitectura de Marca — Construyendo tus Pilares de Contenido, Mensaje Ancla e Identidad de Marca.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION CONTROLS -->
+    <div class="nav-controls">
+        <button class="btn-nav" id="btnPrev" onclick="prevSlide()" disabled>← Anterior</button>
+        <div style="font-size: 0.85rem; color: var(--color-text-muted);">Lic. Romina Lorena Montiel · Método MODO LÍDER ®</div>
+        <button class="btn-nav" id="btnNext" onclick="nextSlide()">Siguiente →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 15;
+
+        function updateSlide() {
+            document.querySelectorAll('.slide').forEach((s, i) => {
+                s.classList.toggle('active', i + 1 === currentSlide);
+            });
+            document.getElementById('slideCounter').innerText = `SLIDE ${currentSlide} DE ${totalSlides}`;
+            document.getElementById('btnPrev').disabled = (currentSlide === 1);
+            document.getElementById('btnNext').innerText = (currentSlide === totalSlides) ? '🎉 Finalizar' : 'Siguiente →';
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>
