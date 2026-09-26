@@ -694,6 +694,96 @@ body {
 }
 .btn-s:hover { background: rgba(255, 255, 255, 0.12); color: #FFF; }
 
+/* ESTILOS DE BLOQUEO VIP PARA MATERIALES DESCARGABLES */
+.coaching-locked-banner {
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.14) 0%, rgba(20, 14, 28, 0.95) 100%);
+  border: 1.5px solid rgba(233, 69, 96, 0.5);
+  border-radius: var(--r-md);
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+}
+.coaching-unlocked-banner {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(10, 24, 20, 0.95) 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.5);
+  border-radius: var(--r-md);
+  padding: 1rem 1.4rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn-unlock-vip {
+  background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
+  color: #000 !important;
+  font-weight: 900;
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  text-decoration: none;
+}
+.btn-unlock-vip:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+.btn-ask-vip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #CBD5E1 !important;
+  font-weight: 700;
+  padding: 0.75rem 1.3rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s;
+}
+.btn-ask-vip:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFF !important;
+}
+.btn-locked-card {
+  width: 100%;
+  background: rgba(233, 69, 96, 0.12);
+  border: 1.5px dashed rgba(233, 69, 96, 0.5);
+  color: #FFA4B2;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s;
+}
+.btn-locked-card:hover {
+  background: rgba(233, 69, 96, 0.25);
+  border-color: #FF5A78;
+  color: #FFF;
+  transform: translateY(-1px);
+}
+
 /* BOTÓN DE CABECERA: IR A CLASES TEÓRICAS */
 .hdr-teoricas-btn {
   display: inline-flex;
@@ -1134,53 +1224,142 @@ body {
       </div>
       <div class="v-desc" id="dCoachMartes">&#128161; <strong>Sesi&oacute;n Oficial:</strong> Encuentro de transformaci&oacute;n y an&aacute;lisis de casos del Grupo Martes con la Lic. Romina Lorena Montiel.</div>
 
-      <!-- 3. MATERIALES DESCARGABLES -->
+      <!-- 3. MATERIALES DESCARGABLES (BLOQUEO VIP ANTE CLAVE GENERAL) -->
       <div class="mats">
         <div class="mats-ttl">&#128196; Materiales Descargables de la Carpeta</div>
-        <div class="mats-grid">
-          <div class="m-card">
-            <div class="m-ico-row">
-              <div class="m-badge b-vip">WORKBOOK CENTRAL</div>
-              <div class="m-meta">
-                <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
-                <span>Interactivo + Descargar PDF</span>
-              </div>
+
+        <!-- VISTA BLOQUEADA PARA CLAVE GENERAL (EXITOSAS888) -->
+        <div class="coaching-mats-locked-view">
+          <div class="coaching-locked-banner">
+            <div style="font-size: 2.2rem; line-height: 1;">🔒</div>
+            <div style="flex: 1; min-width: 250px;">
+              <h4 style="color: #FF5A78; margin-bottom: 0.35rem; font-size: 1.05rem; font-weight: 800;">Recursos Descargables con Acceso Restringido</h4>
+              <p style="color: #CBD5E1; font-size: 0.85rem; line-height: 1.55; margin: 0;">
+                Los Workbooks, Diarios y Retos en PDF son exclusivos del programa de <strong>Coaching Grupal VIP</strong>. La clave general de alumna (<strong>EXITOSAS888</strong>) permite acceder a las grabaciones en video pero <strong>no habilita la descarga ni visualización de estos materiales</strong>.
+              </p>
             </div>
-            <p class="m-desc">Cuaderno central para definir la br&uacute;jula de valores, l&iacute;mites y prioridades que sostienen tu emprendimiento.</p>
-            <div class="m-btns">
-              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
-              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <button type="button" onclick="openCoachingVipModal()" class="btn-unlock-vip">
+                🔓 Ingresar Clave VIP Coaching
+              </button>
+              <a href="https://wa.me/543794322272?text=Hola%20Romina,%20deseo%20solicitar%20la%20clave%20VIP%20para%20los%20Workbooks%20y%20descargas%20de%20Coaching%20Grupal" target="_blank" rel="noopener noreferrer" class="btn-ask-vip">
+                💬 Solicitar con Romina
+              </a>
             </div>
           </div>
 
-          <div class="m-card">
-            <div class="m-ico-row">
-              <div class="m-badge b-vip">DIARIO 15 D&Iacute;AS</div>
-              <div class="m-meta">
-                <h5>Diario: 15 D&iacute;as para Volver a M&iacute;</h5>
-                <span>PDF Descargable</span>
+          <div class="mats-grid">
+            <div class="m-card">
+              <div class="m-ico-row">
+                <div class="m-badge" style="background: rgba(233,69,96,0.2); color: #FF859A; border: 1px solid rgba(233,69,96,0.4);">🔒 COACHING VIP</div>
+                <div class="m-meta">
+                  <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
+                  <span>Interactivo + Descargar PDF</span>
+                </div>
+              </div>
+              <p class="m-desc">Cuaderno central para definir la br&uacute;jula de valores, l&iacute;mites y prioridades que sostienen tu emprendimiento.</p>
+              <div class="m-btns">
+                <button type="button" class="btn-locked-card" onclick="openCoachingVipModal()">
+                  <span>🔒 Desbloquear con Clave VIP Coaching</span>
+                </button>
               </div>
             </div>
-            <p class="m-desc">Rutina diaria estructurada de preguntas de autoliderazgo y registros de h&aacute;bitos conscientes.</p>
-            <div class="m-btns">
-              <a href="/coaching_grupal/DIARIO_15_DIAS_PARA_VOLVER_A_MI.pdf" download class="btn-p">&#11015; Descargar Diario PDF</a>
-            </div>
-          </div>
 
-          <div class="m-card">
-            <div class="m-ico-row">
-              <div class="m-badge b-pdf">RETO 7 D&Iacute;AS</div>
-              <div class="m-meta">
-                <h5>7 D&iacute;as para Reconectar Conmigo</h5>
-                <span>PDF Descargable</span>
+            <div class="m-card">
+              <div class="m-ico-row">
+                <div class="m-badge" style="background: rgba(233,69,96,0.2); color: #FF859A; border: 1px solid rgba(233,69,96,0.4);">🔒 COACHING VIP</div>
+                <div class="m-meta">
+                  <h5>Diario: 15 D&iacute;as para Volver a M&iacute;</h5>
+                  <span>PDF Descargable</span>
+                </div>
+              </div>
+              <p class="m-desc">Rutina diaria estructurada de preguntas de autoliderazgo y registros de h&aacute;bitos conscientes.</p>
+              <div class="m-btns">
+                <button type="button" class="btn-locked-card" onclick="openCoachingVipModal()">
+                  <span>🔒 Desbloquear con Clave VIP Coaching</span>
+                </button>
               </div>
             </div>
-            <p class="m-desc">Protocolo acelerado de reset mental para momentos de sobrecarga o p&eacute;rdida de direcci&oacute;n.</p>
-            <div class="m-btns">
-              <a href="/coaching_grupal/7_DIAS_PARA_RECONECTAR_CONMIGO.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+
+            <div class="m-card">
+              <div class="m-ico-row">
+                <div class="m-badge" style="background: rgba(233,69,96,0.2); color: #FF859A; border: 1px solid rgba(233,69,96,0.4);">🔒 COACHING VIP</div>
+                <div class="m-meta">
+                  <h5>7 D&iacute;as para Reconectar Conmigo</h5>
+                  <span>PDF Descargable</span>
+                </div>
+              </div>
+              <p class="m-desc">Protocolo acelerado de reset mental para momentos de sobrecarga o p&eacute;rdida de direcci&oacute;n.</p>
+              <div class="m-btns">
+                <button type="button" class="btn-locked-card" onclick="openCoachingVipModal()">
+                  <span>🔒 Desbloquear con Clave VIP Coaching</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- VISTA DESBLOQUEADA CON CLAVE VIP -->
+        <div class="coaching-mats-unlocked-view" style="display: none;">
+          <div class="coaching-unlocked-banner">
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="font-size: 1.5rem;">👑</span>
+              <div>
+                <strong style="color: #34D399; font-size: 0.95rem; display: block;">Membres&iacute;a VIP Coaching Activa</strong>
+                <span style="color: #94A3B8; font-size: 0.8rem;">Recursos descargables e interactivos habilitados para tu usuario.</span>
+              </div>
+            </div>
+            <button type="button" onclick="lockCoachingVip()" style="background: none; border: 1px solid rgba(255,255,255,0.2); color: #94A3B8; font-size: 0.75rem; padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer;">
+              🔒 Bloquear descargas
+            </button>
+          </div>
+
+          <div class="mats-grid">
+            <div class="m-card">
+              <div class="m-ico-row">
+                <div class="m-badge b-vip">WORKBOOK CENTRAL</div>
+                <div class="m-meta">
+                  <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
+                  <span>Interactivo + Descargar PDF</span>
+                </div>
+              </div>
+              <p class="m-desc">Cuaderno central para definir la br&uacute;jula de valores, l&iacute;mites y prioridades que sostienen tu emprendimiento.</p>
+              <div class="m-btns">
+                <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+                <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+              </div>
+            </div>
+
+            <div class="m-card">
+              <div class="m-ico-row">
+                <div class="m-badge b-vip">DIARIO 15 D&Iacute;AS</div>
+                <div class="m-meta">
+                  <h5>Diario: 15 D&iacute;as para Volver a M&iacute;</h5>
+                  <span>PDF Descargable</span>
+                </div>
+              </div>
+              <p class="m-desc">Rutina diaria estructurada de preguntas de autoliderazgo y registros de h&aacute;bitos conscientes.</p>
+              <div class="m-btns">
+                <a href="/coaching_grupal/DIARIO_15_DIAS_PARA_VOLVER_A_MI.pdf" download class="btn-p">&#11015; Descargar Diario PDF</a>
+              </div>
+            </div>
+
+            <div class="m-card">
+              <div class="m-ico-row">
+                <div class="m-badge b-pdf">RETO 7 D&Iacute;AS</div>
+                <div class="m-meta">
+                  <h5>7 D&iacute;as para Reconectar Conmigo</h5>
+                  <span>PDF Descargable</span>
+                </div>
+              </div>
+              <p class="m-desc">Protocolo acelerado de reset mental para momentos de sobrecarga o p&eacute;rdida de direcci&oacute;n.</p>
+              <div class="m-btns">
+                <a href="/coaching_grupal/7_DIAS_PARA_RECONECTAR_CONMIGO.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- BOTONES DE REGRESO Y NAVEGACIÓN -->
@@ -1220,25 +1399,82 @@ body {
       </div>
       <div class="v-desc" id="dCoachMiercoles">&#128161; <strong>Sesi&oacute;n Oficial:</strong> Encuentro de transformaci&oacute;n y an&aacute;lisis de casos del Grupo Mi&eacute;rcoles con la Lic. Romina Lorena Montiel.</div>
 
-      <!-- 3. MATERIALES DESCARGABLES -->
+      <!-- 3. MATERIALES DESCARGABLES (BLOQUEO VIP ANTE CLAVE GENERAL) -->
       <div class="mats">
         <div class="mats-ttl">&#128196; Materiales Descargables de la Carpeta</div>
-        <div class="mats-grid">
-          <div class="m-card">
-            <div class="m-ico-row">
-              <div class="m-badge b-vip">WORKBOOK</div>
-              <div class="m-meta">
-                <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
-                <span>Interactivo + Descargar PDF</span>
-              </div>
+
+        <!-- VISTA BLOQUEADA PARA CLAVE GENERAL (EXITOSAS888) -->
+        <div class="coaching-mats-locked-view">
+          <div class="coaching-locked-banner">
+            <div style="font-size: 2.2rem; line-height: 1;">🔒</div>
+            <div style="flex: 1; min-width: 250px;">
+              <h4 style="color: #FF5A78; margin-bottom: 0.35rem; font-size: 1.05rem; font-weight: 800;">Recursos Descargables con Acceso Restringido</h4>
+              <p style="color: #CBD5E1; font-size: 0.85rem; line-height: 1.55; margin: 0;">
+                Los Workbooks y materiales en PDF son exclusivos del programa de <strong>Coaching Grupal VIP</strong>. La clave general de alumna (<strong>EXITOSAS888</strong>) permite acceder a las grabaciones en video pero <strong>no habilita la descarga de estos materiales</strong>.
+              </p>
             </div>
-            <p class="m-desc">Cuaderno de trabajo integral del coaching: mapa de valores fundamentales y declaraci&oacute;n de l&iacute;der.</p>
-            <div class="m-btns">
-              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
-              <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <button type="button" onclick="openCoachingVipModal()" class="btn-unlock-vip">
+                🔓 Ingresar Clave VIP Coaching
+              </button>
+              <a href="https://wa.me/543794322272?text=Hola%20Romina,%20deseo%20solicitar%20la%20clave%20VIP%20para%20los%20Workbooks%20y%20descargas%20de%20Coaching%20Grupal" target="_blank" rel="noopener noreferrer" class="btn-ask-vip">
+                💬 Solicitar con Romina
+              </a>
+            </div>
+          </div>
+
+          <div class="mats-grid">
+            <div class="m-card">
+              <div class="m-ico-row">
+                <div class="m-badge" style="background: rgba(233,69,96,0.2); color: #FF859A; border: 1px solid rgba(233,69,96,0.4);">🔒 COACHING VIP</div>
+                <div class="m-meta">
+                  <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
+                  <span>Interactivo + Descargar PDF</span>
+                </div>
+              </div>
+              <p class="m-desc">Cuaderno de trabajo integral del coaching: mapa de valores fundamentales y declaraci&oacute;n de l&iacute;der.</p>
+              <div class="m-btns">
+                <button type="button" class="btn-locked-card" onclick="openCoachingVipModal()">
+                  <span>🔒 Desbloquear con Clave VIP Coaching</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- VISTA DESBLOQUEADA CON CLAVE VIP -->
+        <div class="coaching-mats-unlocked-view" style="display: none;">
+          <div class="coaching-unlocked-banner">
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="font-size: 1.5rem;">👑</span>
+              <div>
+                <strong style="color: #34D399; font-size: 0.95rem; display: block;">Membres&iacute;a VIP Coaching Activa</strong>
+                <span style="color: #94A3B8; font-size: 0.8rem;">Recursos descargables e interactivos habilitados para tu usuario.</span>
+              </div>
+            </div>
+            <button type="button" onclick="lockCoachingVip()" style="background: none; border: 1px solid rgba(255,255,255,0.2); color: #94A3B8; font-size: 0.75rem; padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer;">
+              🔒 Bloquear descargas
+            </button>
+          </div>
+
+          <div class="mats-grid">
+            <div class="m-card">
+              <div class="m-ico-row">
+                <div class="m-badge b-vip">WORKBOOK</div>
+                <div class="m-meta">
+                  <h5>Workbook: Mis Valores, Mi Vida y Mi Negocio</h5>
+                  <span>Interactivo + Descargar PDF</span>
+                </div>
+              </div>
+              <p class="m-desc">Cuaderno de trabajo integral del coaching: mapa de valores fundamentales y declaraci&oacute;n de l&iacute;der.</p>
+              <div class="m-btns">
+                <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+                <a href="/coaching_grupal/Workbook_Mis_Valores_Mi_Vida_y_Mi_Negocio.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- BOTONES DE REGRESO Y NAVEGACIÓN -->
@@ -1300,6 +1536,40 @@ body {
   </div>
 </div>
 
+<!-- MODAL DE DESBLOQUEO VIP COACHING GRUPAL -->
+<div class="modal-overlay" id="coachingVipModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(4,6,10,0.88); backdrop-filter:blur(14px); z-index:99999; align-items:center; justify-content:center; padding:1.2rem;" onclick="if(event.target===this)closeCoachingVipModal()">
+  <div style="background:#0E121C; border:2px solid #FFD700; box-shadow:0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(255,215,0,0.3); border-radius:24px; max-width:480px; width:100%; padding:2.2rem; position:relative; font-family:'Montserrat',sans-serif;">
+    <div style="position:absolute; top:0; left:0; width:100%; height:5px; background:linear-gradient(90deg, #FFD700, #E94560);"></div>
+    <button onclick="closeCoachingVipModal()" style="position:absolute; top:1.2rem; right:1.2rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#94A3B8; width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:1.1rem; transition:all 0.2s;" onmouseover="this.style.color='#FFF'" onmouseout="this.style.color='#94A3B8'">&times;</button>
+
+    <div style="text-align:center; margin-bottom:1.5rem;">
+      <div style="width:64px; height:64px; margin:0 auto 1rem; border-radius:18px; background:linear-gradient(135deg, #FFD700 0%, #D4AF37 100%); display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 0 25px rgba(255,215,0,0.4);">🔒</div>
+      <h3 style="font-size:1.35rem; font-weight:900; color:#FFFFFF; margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.5px;">Acceso a Recursos de Coaching VIP</h3>
+      <p style="font-size:0.84rem; color:#94A3B8; line-height:1.5;">Ingres&aacute; tu clave exclusiva de Coaching Grupal para desbloquear los Workbooks, Diarios y Retos descargables.</p>
+    </div>
+
+    <form onsubmit="handleCoachingVipSubmit(event)" autocomplete="off" style="display:flex; flex-direction:column; gap:1.1rem;">
+      <div style="display:flex; flex-direction:column; gap:0.4rem; text-align:left; position:relative;">
+        <label style="font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.8px; color:#FFD700;">Clave Exclusiva de Coaching VIP</label>
+        <div style="position:relative;">
+          <input type="password" id="coachingVipPass" placeholder="Ingres&aacute; tu clave de Coaching VIP" style="width:100%; background:rgba(255,255,255,0.05); border:1.5px solid rgba(255,255,255,0.15); border-radius:8px; padding:0.85rem 2.8rem 0.85rem 1rem; font-size:0.9rem; color:#FFF; font-family:'Montserrat',sans-serif; outline:none;" required autocomplete="new-password">
+          <button type="button" onclick="toggleCoachingVipPwd()" id="coachingVipPwdToggle" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; color:#94A3B8; cursor:pointer; font-size:1.1rem;">👁</button>
+        </div>
+      </div>
+
+      <div id="coachingVipErr" style="display:none; background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.4); color:#FCA5A5; padding:0.85rem; border-radius:8px; font-size:0.82rem; font-weight:700; text-align:center; line-height:1.45;"></div>
+
+      <button type="submit" style="background:linear-gradient(135deg, #FFD700 0%, #D4AF37 100%); color:#000000; border:none; padding:0.95rem 1.4rem; border-radius:8px; font-size:0.95rem; font-weight:900; font-family:'Montserrat',sans-serif; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; justify-content:center; gap:0.5rem; box-shadow:0 8px 25px rgba(255,215,0,0.4); text-transform:uppercase;">
+        <span>🔓 Desbloquear Recursos Descargables</span>
+      </button>
+
+      <a href="https://wa.me/543794322272?text=Hola%20Romina,%20deseo%20solicitar%20la%20clave%20VIP%20para%20los%20Workbooks%20y%20descargas%20de%20Coaching%20Grupal" target="_blank" rel="noopener noreferrer" style="width:100%; text-align:center; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18); color:#CBD5E1; padding:0.85rem; border-radius:8px; font-size:0.82rem; font-weight:700; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+        <span>💬 Solicitar Clave VIP por WhatsApp con Romina</span>
+      </a>
+    </form>
+  </div>
+</div>
+
 <footer class="ftr">
   <p>&copy; 2026 Campus Modo L&iacute;der &middot; <strong style="color:#FFD700">Lic. Romina Lorena Montiel</strong> &middot; Coaching Grupal Exclusivo</p>
 </footer>
@@ -1307,6 +1577,10 @@ body {
 <script>
 function isAuth() {
   return localStorage.getItem('alumna_activa_modo_lider') === 'true';
+}
+
+function isCoachingVip() {
+  return localStorage.getItem('coaching_vip_unlocked') === 'true';
 }
 
 function updateAuthUI() {
@@ -1343,7 +1617,9 @@ function toggleAuthModal() {
   if (isAuth()) {
     if (confirm('\u00bfDeseas cerrar tu sesi\u00f3n?')) {
       localStorage.removeItem('alumna_activa_modo_lider');
+      localStorage.removeItem('coaching_vip_unlocked');
       updateAuthUI();
+      updateCoachingMaterialsUI();
       openModal();
     }
   } else {
@@ -1370,16 +1646,99 @@ function handleAuthSubmit(e) {
   var p = (document.getElementById('authPass').value || '').trim().toUpperCase();
   var err = document.getElementById('modalErr');
 
-  if (p === 'EXITOSAS888' || u === 'SOYALUMNAACTIVAMODOLIDER' || p === 'SOYALUMNAACTIVAMODOLIDER') {
+  // Si ingresa directamente la clave VIP SOYVIPYEXITOSA:
+  if (p === 'SOYVIPYEXITOSA') {
     localStorage.setItem('alumna_activa_modo_lider', 'true');
+    localStorage.setItem('coaching_vip_unlocked', 'true');
     updateAuthUI();
     closeModal();
+    updateCoachingMaterialsUI();
+  } else if (p === 'EXITOSAS888' || u === 'SOYALUMNAACTIVAMODOLIDER' || p === 'SOYALUMNAACTIVAMODOLIDER') {
+    localStorage.setItem('alumna_activa_modo_lider', 'true');
+    // La clave general NO abre las descargas de coaching:
+    localStorage.removeItem('coaching_vip_unlocked');
+    updateAuthUI();
+    closeModal();
+    updateCoachingMaterialsUI();
   } else {
     if (err) {
       err.style.display = 'block';
       err.textContent = '\u26A0 Clave o usuario incorrecto.';
     }
   }
+}
+
+/* ==============================================================
+   LÓGICA VIP PARA MATERIALES DESCARGABLES (CLAVE: SOYVIPYEXITOSA)
+   ============================================================== */
+function openCoachingVipModal() {
+  var modal = document.getElementById('coachingVipModal');
+  var err = document.getElementById('coachingVipErr');
+  var passInput = document.getElementById('coachingVipPass');
+  if (err) err.style.display = 'none';
+  if (passInput) passInput.value = '';
+  if (modal) modal.style.display = 'flex';
+  if (passInput) setTimeout(function(){ passInput.focus(); }, 150);
+}
+
+function closeCoachingVipModal() {
+  var modal = document.getElementById('coachingVipModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function toggleCoachingVipPwd() {
+  var p = document.getElementById('coachingVipPass');
+  var ico = document.getElementById('coachingVipPwdToggle');
+  if (!p) return;
+  if (p.type === 'password') {
+    p.type = 'text';
+    if (ico) ico.textContent = '🙈';
+  } else {
+    p.type = 'password';
+    if (ico) ico.textContent = '👁';
+  }
+}
+
+function handleCoachingVipSubmit(e) {
+  e.preventDefault();
+  var p = (document.getElementById('coachingVipPass').value || '').trim().toUpperCase();
+  var err = document.getElementById('coachingVipErr');
+
+  // Si intentan usar la clave general EXITOSAS888:
+  if (p === 'EXITOSAS888' || p === 'SOYALUMNAACTIVAMODOLIDER') {
+    if (err) {
+      err.style.display = 'block';
+      err.innerHTML = '⚠️ La clave <strong>EXITOSAS888</strong> es para el campus general y clases teóricas. <strong>No autoriza la descarga de los recursos de Coaching VIP</strong>.<br><br>Si eres alumna de Coaching VIP, ingresá tu clave exclusiva.';
+    }
+    return;
+  }
+
+  // Clave oficial VIP que abre los candados: SOYVIPYEXITOSA
+  if (p === 'SOYVIPYEXITOSA') {
+    localStorage.setItem('coaching_vip_unlocked', 'true');
+    closeCoachingVipModal();
+    updateCoachingMaterialsUI();
+  } else {
+    if (err) {
+      err.style.display = 'block';
+      err.innerHTML = '⚠️ Clave de Coaching VIP incorrecta. Esta clave es exclusiva y reservada para alumnas de Coaching Grupal.';
+    }
+  }
+}
+
+function lockCoachingVip() {
+  localStorage.removeItem('coaching_vip_unlocked');
+  updateCoachingMaterialsUI();
+}
+
+function updateCoachingMaterialsUI() {
+  var unlocked = isCoachingVip();
+  document.querySelectorAll('.coaching-mats-locked-view').forEach(function(el) {
+    el.style.display = unlocked ? 'none' : 'block';
+  });
+  document.querySelectorAll('.coaching-mats-unlocked-view').forEach(function(el) {
+    el.style.display = unlocked ? 'block' : 'none';
+  });
 }
 
 function sw(tabId) {
@@ -1425,6 +1784,7 @@ function svidIframe(iframeId, url, desc, btn, descId) {
 
 window.addEventListener('DOMContentLoaded', function(){
   updateAuthUI();
+  updateCoachingMaterialsUI();
   if (!isAuth()) {
     openModal();
   }

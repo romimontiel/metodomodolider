@@ -143,6 +143,18 @@ Espacio exclusivo de mentoría colectiva y resolución de trabas en vivo con Rom
     - **Subcarpeta: GRUPO MARTES** (`#tab-coach-martes` / `#p-coach-martes`): Grabación completa en vivo (`ojcVKLS0Rzw`), Diario "15 Días para Volver a Mí", Reto "7 Días para Reconectar Conmigo" y Workbook Central interactivo/descargable.
     - **Subcarpeta: GRUPO MIÉRCOLES** (`#tab-coach-miercoles` / `#p-coach-miercoles`): Grabación completa en vivo (`O9Tf3gBkdFo`), Matriz de Valores, Protocolo de Autoliderazgo y Workbook Central interactivo/descargable.
   - **Despliegue y Retorno:** Al tocar cada subcarpeta, se abre el material correspondiente en la zona inferior, concluyendo siempre con el botón a Clases Teóricas y el botón obligatorio `Regresar a las Carpetas de Coaching`.
+  - **Seguridad y Candados en Materiales Descargables (Doble Nivel de Acceso):**
+    - **Nivel 1 — Clave General de Alumna (`EXITOSAS888` / `SOYALUMNAACTIVAMODOLIDER`):**
+      - Habilita la navegación del campus general, clases teóricas y la visualización de los **videos grabados** de Coaching Grupal.
+      - **Restricción Estricta:** **NO autoriza ni permite descargar los recursos descargables** (Workbooks, Diarios y Retos en PDF). Los materiales aparecen con insignia `🔒 COACHING VIP` y botón con candado.
+    - **Nivel 2 — Clave VIP Exclusiva de Coaching Grupal (`SOYVIPYEXITOSA`):**
+      - **Clave oficial que abre los candados:** **`SOYVIPYEXITOSA`**
+      - Abre y desbloquea el acceso completo a:
+        1. *Workbook: Mis Valores, Mi Vida y Mi Negocio* (Interactivo HTML + Descargar PDF).
+        2. *Diario: 15 Días para Volver a Mí* (PDF Oficial).
+        3. *Reto: 7 Días para Reconectar Conmigo* (PDF Oficial).
+      - **Comportamiento de rechazo a clave general:** Si una alumna intenta ingresar `EXITOSAS888` en el modal de desbloqueo de materiales, el sistema la rechaza con un mensaje claro que indica que dicha clave es solo para el campus y clases teóricas, y ofrece el botón directo de WhatsApp para solicitar la clave VIP con Romina.
+      - **Sesión VIP:** Se persiste mediante `coaching_vip_unlocked` en `localStorage` con la opción de bloquear nuevamente la sesión si lo desea.
 
 ### 🚀 ÁREA 3: MI EMPRENDIMIENTO (`emprendimiento_visor.html`)
 Networking colaborativo, visibilidad de marca y presentación de modelos de negocio:
