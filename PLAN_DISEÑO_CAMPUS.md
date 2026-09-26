@@ -70,7 +70,7 @@ En la sección **"Carpetas de Estudio del Curso"** se encuentran las 7 áreas cl
 | ↳ **Volver a Mí — Grupo Martes** | Acompañamiento VIP | **🔐 REQUIERE ACCESO** |
 | ↳ **Volver a Mí — Grupo Miércoles** | Acompañamiento VIP | **🔐 REQUIERE ACCESO** |
 | **🚀 MI EMPRENDIMIENTO (Networking en Vivo)** | Comunidad Activa | **🔐 REQUIERE ACCESO** |
-| **🧠 MÚSICA PARA CREAR NUEVAS REDES POSITIVAS** | Reprogramación VIP | **🔐 REQUIERE ACCESO** (7 Audios de Foco) |
+| **🧠 HERRAMIENTAS PARA CREAR MENTALIDAD CORRECTA** | Reprogramación VIP | **🔐 REQUIERE ACCESO** (7 Audios de Foco) |
 
 ---
 

@@ -422,15 +422,15 @@ export default function CampusClient() {
                     <span className="tab-desc" style={{ color: "rgba(247, 231, 206, 0.7)" }}>Martes y Miércoles ↗</span>
                 </a>
 
-                {/* Tab ESPECIAL 3: MÚSICA PARA CREAR NUEVAS REDES POSITIVAS */}
+                {/* Tab ESPECIAL 3: HERRAMIENTAS PARA CREAR MENTALIDAD CORRECTA */}
                 <a href="/clases_visor.html#musica" className="folder-nav-tab" id="tab-musica-positiva" style={{ textDecoration: "none", background: "linear-gradient(145deg, #17112E 0%, #0F0D1C 100%)", border: "1.5px solid rgba(167, 139, 250, 0.6)", boxShadow: "0 8px 24px rgba(124, 58, 237, 0.18)", position: "relative", overflow: "hidden" }}>
                     <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "3px", background: "linear-gradient(90deg, #C4B5FD, #8B5CF6)" }}></div>
                     <div className="tab-top-row">
-                        <span className="tab-icon">🎵</span>
+                        <span className="tab-icon">🧠</span>
                         <span className="tab-badge" style={{ background: "rgba(167, 139, 250, 0.18)", color: "#DDD6FE", border: "1px solid rgba(167, 139, 250, 0.45)" }}>7 AUDIOS</span>
                     </div>
-                    <span className="tab-title" style={{ color: "#DDD6FE", fontSize: "0.84rem" }}>REDES POSITIVAS</span>
-                    <span className="tab-desc" style={{ color: "rgba(221, 214, 254, 0.7)" }}>Música & Meditación ↗</span>
+                    <span className="tab-title" style={{ color: "#DDD6FE", fontSize: "0.8rem", fontWeight: 900, lineHeight: 1.25 }}>HERRAMIENTAS PARA CREAR MENTALIDAD CORRECTA</span>
+                    <span className="tab-desc" style={{ color: "rgba(221, 214, 254, 0.7)" }}>Música, Meditación &amp; Foco ↗</span>
                 </a>
             </div>
 
