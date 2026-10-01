@@ -519,25 +519,6 @@ export default function CampusClient() {
                     <span className="tab-desc">Propósito & Dirección</span>
                 </div>
 
-                {/* Tab 3: CLASE 3 */}
-                <div className={`folder-nav-tab ${activeFolder === "clase3" ? "active" : ""}`} id="tab-clase3" onClick={() => switchFolder("clase3")} style={{ cursor: "pointer" }}>
-                    <div className="tab-top-row">
-                        <span className="tab-icon">📁</span>
-                        <span className="tab-badge">Clase 3</span>
-                    </div>
-                    <span className="tab-title">CLASE 3</span>
-                    <span className="tab-desc">Propuesta de Valor (Partes 1 y 2)</span>
-                </div>
-
-                {/* Tab 4: CLASE 4 */}
-                <div className={`folder-nav-tab ${activeFolder === "clase4" ? "active" : ""}`} id="tab-clase4" onClick={() => switchFolder("clase4")} style={{ cursor: "pointer" }}>
-                    <div className="tab-top-row">
-                        <span className="tab-icon">📁</span>
-                        <span className="tab-badge">Clase 4</span>
-                    </div>
-                    <span className="tab-title">CLASE 4</span>
-                    <span className="tab-desc">Regresar a mí & Reconexión</span>
-                </div>
 
                 {/* Tab 5: TESTIMONIOS */}
                 <div className={`folder-nav-tab ${activeFolder === "testimonios" ? "active" : ""}`} id="tab-testimonios" onClick={() => switchFolder("testimonios")} style={{ cursor: "pointer" }}>
@@ -1220,8 +1201,8 @@ export default function CampusClient() {
                         <div className="active-folder-header">
                             <span className="big-icon">💎</span>
                             <div>
-                                <h3>CARPETA: CLASE 3 - CREAR UNA PROPUESTA DE VALOR IRRESISTIBLE <span style={{ display: "inline-block", fontSize: "0.72rem", background: "rgba(212,175,55,0.2)", color: "#FFD700", border: "1px solid rgba(212,175,55,0.4)", padding: "0.2rem 0.6rem", borderRadius: "50px", fontWeight: 800, verticalAlign: "middle", marginLeft: "0.5rem" }}>ALUMNAS VIP</span></h3>
-                                <p>Rompe el anonimato comercial: descubrí exactamente qué le estás vendiendo al inconsciente de tu clienta y estructurá una oferta que te posicione como referente única.</p>
+                                <h3>CARPETA: CLASE 3 - CONECTAR CON MI MERCADO OBJETIVO <span style={{ display: "inline-block", fontSize: "0.72rem", background: "rgba(212,175,55,0.2)", color: "#FFD700", border: "1px solid rgba(212,175,55,0.4)", padding: "0.2rem 0.6rem", borderRadius: "50px", fontWeight: 800, verticalAlign: "middle", marginLeft: "0.5rem" }}>ALUMNAS VIP</span></h3>
+                                <p>Rompe el anonimato comercial: conectá de forma profunda con tu mercado objetivo, descubrí exactamente qué le estás vendiendo al inconsciente de tu clienta y estructurá una propuesta de valor irresistible.</p>
                             </div>
                         </div>
                         <div className="folder-materials-count">

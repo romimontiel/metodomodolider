@@ -40,6 +40,11 @@ El entorno fue concebido con un estándar de **lujo sobrio y excelencia visual**
 4. **🔐 4. Salida Segura en Bloqueos de Contenido:**  
    - Si un módulo requiere credenciales de Alumna Activa (VIP) y la usuaria no posee la clave, el modal o caja de acceso restringido cuenta de forma obligatoria con el botón visible **`← Volver al Campus Principal`**, impidiendo que la usuaria quede atascada.
 
+5. **🛡️ 5. Jerarquía de Seguridad del Hub vs. Visores Especializados (Regla de Clases VIP):**  
+   - **Exclusión del Panel Público:** En el Hub Central del Campus (`campus_modo_lider.html`), la grilla superior `#carpetas` expone exclusivamente los módulos y clases de libre acceso o introducción (*FREE PASS*: Introducción Módulo 0, Clase 1, Clase 2, Desafíos, Testimonios y Minicurso Salir de la Procrastinación).  
+   - **Blindaje de Clases 3, 4 y Troncales:** **Las Clases 3, 4 y posteriores NO aparecen como carpetas directas en el panel del Campus Hub.** Están estrictamente resguardadas detrás del botón protagónico dorado **`ACCESO A CURSO COMPLETO` (Clave VIP)**.  
+   - **Acceso Exclusivo con Contraseña:** Al tocar dicho botón, el sistema activa el modal de validación de credenciales (`EXITOSAS888`) y da ingreso al visor especializado [clases_visor.html](file:///c:/Users/ecasa/Documents/MODO%20LIDER/METODOMODOLIDER/clases_visor.html), donde se despliega la totalidad del curso protegido para las alumnas verificadas.
+
 ---
 
 ## 🎬 3. ARQUITECTURA DEL HERO SUPERIOR, VIDEO DE BIENVENIDA Y BOTÓN "TU HOJA DE RUTA"
@@ -120,12 +125,11 @@ METODOMODOLIDER/
 ```
 
 ### 🎓 ÁREA 1: CURSO COMPLETO (`clases_visor.html`)
-Formación troncal con las 5 clases centrales del Método:
+Formación troncal protegida tras el botón **`ACCESO A CURSO COMPLETO` (Clave VIP)**:
 - **Carpeta 1: Emprender Conscientemente** (🔓 FREE PASS) — 2 Videos, 1 Podcast, Workbook Interactivo + PDF.
 - **Carpeta 2: Propósito y Dirección** (🔓 FREE PASS) — 2 Videos, 1 Audio, Workbook Interactivo + PDF, Reto Cuadro del Propósito.
-- **Carpeta 3: Propuesta de Valor y Posicionamiento** (🔐 VIP) — 3 Videos, 2 Audios, Workbook Interactivo + PDF.
-- **Carpeta 4: Reconectar con mi Negocio y Volver a Mí** (🔐 VIP) — 1 Video, 1 Audio, Guía Oficial en PDF.
-- **Carpeta 5: Cliente Ideal y Posicionamiento de Autoridad** (🔐 VIP) — Diapositivas, Workbook Interactivo + PDF.
+- **Carpeta 3: Conectar con mi Mercado Objetivo (Propuesta de Valor)** (🔐 VIP) — 2 Videos Masterclass Oficiales, 2 Audios de Estrategia, Workbook Interactivo + PDF, Diapositivas Oficiales y Guías.
+- **Carpeta 4: Trascender Bloqueos Mentales hacia Crear Reels y Contenido** (🔐 VIP) — Video Grabado Masterclass, Diario "7 Días para mejorar mi autodiálogo interno" en PDF.
 - **Navegación:** Botón superior `#carpetas` y botones finales `↑ Regresar a las Carpetas de Estudio` + `← Volver al Campus Principal`.
 
 ### 👥 ÁREA 2: COACHING GRUPAL CLASES GRABADAS (`coaching_visor.html`)
@@ -219,3 +223,4 @@ Para asegurar que cualquier despliegue (sea estático mediante HTML puro o diná
 1. **Confidencialidad Total:** Las credenciales y claves VIP **NUNCA se exponen en textos públicos ni en campos precargados**. Se envían de forma privada y exclusiva por correo electrónico a cada alumna activa.
 2. **Validación Unificada:** La sesión de Alumna Activa se almacena de forma segura en `localStorage ('alumna_activa_modo_lider')`, compartiéndose entre el Campus Hub y los 4 visores especializados.
 3. **Botón de Escape Obligatorio:** Todo diálogo o modal de contraseña dispone de un botón `← Volver al Campus Principal` para evitar bloqueos involuntarios.
+4. **Blindaje de Clases Troncales VIP (Norma de Estructura):** Las Clases 3, 4 y siguientes están estrictamente aisladas del panel de carpetas del Campus Hub. El único portal de ingreso a estas clases es el botón con candado **`ACCESO A CURSO COMPLETO` (Clave VIP)**. Ningún contenido de Clase 3 o 4 se expone de forma directa en el flujo público/free del Campus.
