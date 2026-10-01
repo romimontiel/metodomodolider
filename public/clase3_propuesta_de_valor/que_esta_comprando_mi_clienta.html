@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué está comprando realmente mi clienta? | Método Modo Líder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-page: #0B0E14;
+            --bg-card: #121824;
+            --bg-glass: rgba(18, 24, 36, 0.85);
+            --color-gold: #D4AF37;
+            --color-gold-light: #F3E5AB;
+            --color-text-main: #F0F4F8;
+            --color-text-muted: #9BA3AF;
+            --color-border: rgba(212, 175, 55, 0.25);
+            --radius-lg: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--color-text-main);
+            line-height: 1.8;
+            padding: 3rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background-image: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+        }
+
+        .doc-container {
+            max-width: 860px;
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem 3rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.08);
+            position: relative;
+        }
+
+        .doc-header {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .doc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--color-gold-light);
+            border: 1px solid var(--color-border);
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            line-height: 1.25;
+            margin-bottom: 0.8rem;
+        }
+
+        h1 span {
+            background: linear-gradient(135deg, #FFF085 0%, #FFD700 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .doc-meta {
+            font-size: 0.88rem;
+            color: var(--color-text-muted);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .doc-meta strong {
+            color: var(--color-gold-light);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--color-gold-light);
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            font-size: 0.96rem;
+            color: #CBD5E1;
+            margin-bottom: 1.2rem;
+        }
+
+        strong {
+            color: #FFFFFF;
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: linear-gradient(145deg, rgba(212, 175, 55, 0.08) 0%, rgba(14, 18, 28, 0.6) 100%);
+            border-left: 4px solid var(--color-gold);
+            padding: 1.4rem 1.6rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.6rem 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            border-right: 1px solid rgba(212, 175, 55, 0.15);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 0.98rem;
+            color: #E2E8F0;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1.6rem 0;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+            background: rgba(10, 14, 22, 0.7);
+        }
+
+        th {
+            background: rgba(212, 175, 55, 0.15);
+            color: #FFD700;
+            font-weight: 800;
+            padding: 0.9rem 1.1rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        td {
+            padding: 0.85rem 1.1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #CBD5E1;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        ul {
+            list-style: none;
+            margin: 1rem 0 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.6rem;
+            color: #CBD5E1;
+            font-size: 0.95rem;
+        }
+
+        ul li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--color-gold);
+            font-size: 0.9rem;
+        }
+
+        .author-box {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-info img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid var(--color-gold);
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 0.95rem;
+            color: #FFF;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            font-size: 0.78rem;
+            color: var(--color-text-muted);
+            margin: 0;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
+            color: #0B0E14;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .doc-container {
+                padding: 2rem 1.4rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .author-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="doc-container">
+        <header class="doc-header">
+            <div class="doc-badge">💎 Clase 3 &bull; Guía de Estudio Exclusiva</div>
+            <h1>¿Qué está comprando <span>realmente mi clienta?</span></h1>
+            <div class="doc-meta">
+                <span>Por <strong>Lic. Romina Lorena Montiel</strong></span>
+                <span>&bull;</span>
+                <span>Curso: Emprender de Cero a Impacto y Ventas</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Propósito + Dirección</h2>
+            <p><strong>Desde la mirada del que vende:</strong> El propósito de valor es el que resuelve un problema. Lo que doy produce una transformación, es decir, tiene una importancia para el mundo de tu cliente y le genera emociones positivas como seguridad, autoestima, alivio, expansión, bienestar, serenidad, disfrute o placer.</p>
+            
+            <div class="highlight-box">
+                <p>💡 <strong>Si creaste un producto que tiene propósito (es decir, que resuelve un problema, deseo o necesidad de tu cliente) y se vende, entonces creaste un producto cuyo propósito es de valor o activa un deseo de compra.</strong></p>
+            </div>
+
+            <p>La dirección es el tipo de cliente para el que construís o creás tu producto o servicio. Ese cliente forma parte de lo que llamamos <strong>mercado objetivo</strong>.</p>
+        </section>
+
+        <section>
+            <h2>2. Transformación e Impacto (El Punto de Vista del Cliente)</h2>
+            <p>Te compro lo que vendés porque con esto puedo tener, lograr o sentirme de determinada manera, y eso es muy valioso para mí.</p>
+            
+            <div class="highlight-box">
+                <p><strong>No vendo lo que hago, vendo lo que él o ella quiere o puede lograr con lo que hago.</strong></p>
+            </div>
+
+            <ul>
+                <li>¿Qué puede suceder de valioso en el interior o en la vida de esa persona cuando obtiene esa transformación?</li>
+                <li>¿Cómo impacta esa transformación en su familia, trabajo, negocio o comunidad?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. ¿Entonces yo qué vendo?</h2>
+            <p><strong>No vendés lo que hacés:</strong></p>
+            <ul>
+                <li>Una mentora no vende sesiones.</li>
+                <li>Una nutricionista no vende planes.</li>
+                <li>Una diseñadora no vende diseños.</li>
+                <li>Una profesora no vende clases.</li>
+                <li>Una terapeuta no vende terapia.</li>
+            </ul>
+            <p>Cada una vende una posibilidad: lograr algo que le interesa a su cliente y que puede cambiar algo en su vida. Lo que vendés es aquello que provoca un impacto en el mundo emocional de tu cliente.</p>
+
+            <div class="highlight-box" style="text-align: center; font-weight: 800; font-size: 1.05rem; letter-spacing: 1px;">
+                YO &rarr; PROBLEMA &rarr; TRANSFORMACIÓN &rarr; IMPACTO
+            </div>
+        </section>
+
+        <section>
+            <h2>4. El Reverso del Beneficio: Los Miedos que Desactivan la Compra</h2>
+            <p>El cerebro humano no solo compra para alcanzar un deseo o una aspiración: <strong>actúa con el doble de urgencia para EVITAR un dolor, una pérdida o una amenaza</strong>. Detrás de cada beneficio visible hay un miedo profundo que tu clienta paga para apagar.</p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Deseo / Beneficio Visible</th>
+                            <th>Lo que ella dice que quiere</th>
+                            <th>El Miedo Invisible que paga para apagar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Salud, Belleza & Bienestar</strong></td>
+                            <td>Sentirse vital, atractiva, bajar de peso, energía.</td>
+                            <td><strong>Miedo a envejecer deteriorada</strong>, a la invisibilidad social, al rechazo y a dejar de gustarse.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Estatus, Logros & Estrato Social</strong></td>
+                            <td>Éxito, reconocimiento, subir de nivel, pertenecer.</td>
+                            <td><strong>Miedo a la mediocridad</strong>, al fracaso público, a la vergüenza del juicio ajeno.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conocimiento, Títulos & Seguridad</strong></td>
+                            <td>Saber cómo hacer las cosas, diplomas, mentoría.</td>
+                            <td><strong>Miedo a sentirse un fraude (síndrome del impostor)</strong>, al ridículo profesional y a equivocarse gravemente.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Autonomía, Libertad & Dinero</strong></td>
+                            <td>Disponer de sus tiempos, facturar bien, independencia.</td>
+                            <td><strong>Miedo a la dependencia forzada</strong>, a la escasez crónica y a vivir resignada.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-box">
+                <p>🎯 <strong>Pregunta de Activación Modo Líder:</strong><br>
+                <em>"Si tu producto o servicio fuera un escudo protector... ¿de qué peligro real, dolor desgastante o vergüenza emocional está cuidando a tu clienta hoy?"</em></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Caso Aplicado: De Pastelería Commodity a Oferta con Propósito</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dimensión</th>
+                            <th>Pastelería Commodity</th>
+                            <th>Pastelería con Propósito (Aljesec)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>¿Qué resuelvo?</strong></td>
+                            <td>Alfajores, budines, facturas, cupcakes.</td>
+                            <td>La necesidad de tener una mesa dulce rica, linda y completa sin tener que ocuparse de organizarla.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Problema</strong></td>
+                            <td>"Quiero comprar algo dulce."</td>
+                            <td>"Tengo un cumpleaños y necesito resolver la mesa dulce, pero no quiero perder tiempo buscando y eligiendo cada producto."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transformación</strong></td>
+                            <td>Compra productos por separado.</td>
+                            <td>Pasa de buscar y combinar productos a tener <strong>todo listo y coordinado en una sola propuesta</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Propuesta de Valor</strong></td>
+                            <td>"Vendemos alfajores y cupcakes artesanales."</td>
+                            <td><strong>"La deco dulce y colorida para el cumple de tus hijos, resuelta en un solo lugar."</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-box">
+                <p>✨ <strong>Mensaje final de Romina:</strong><br>
+                <strong>No necesitás crear algo que nadie venda. Necesitás encontrar una necesidad que puedas resolver de una manera que tenga valor para un cliente específico.</strong></p>
+            </div>
+        </section>
+
+        <footer class="author-box">
+            <div class="author-info">
+                <img src="/romina.png" alt="Lic. Romina Lorena Montiel">
+                <div>
+                    <h4>Lic. Romina Lorena Montiel</h4>
+                    <p>Creadora del Método MODO LÍDER &bull; Formación de Emprendedoras</p>
+                </div>
+            </div>
+            <a href="/clases_visor.html#clase-3" class="btn-action">
+                <span>← Volver a la Clase 3</span>
+            </a>
+        </footer>
+    </main>
+
+</body>
+</html>

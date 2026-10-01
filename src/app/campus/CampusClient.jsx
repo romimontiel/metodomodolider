@@ -21,9 +21,11 @@ export default function CampusClient() {
   });
 
   const [clase3Video, setClase3Video] = useState({
-    src: '/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/CLASE%203%20PROPUESTA%20DE%20VALOR%20PARTE%201.mp4',
-    title: '1. Clase 3: Propuesta de Valor (Parte 1 - 711 MB)',
-    activeIndex: 0
+    src: 'https://www.youtube-nocookie.com/embed/znDuCwzIKrs?rel=0&modestbranding=1',
+    title: '1. Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento',
+    activeIndex: 0,
+    isYouTube: true,
+    directUrl: 'https://youtu.be/znDuCwzIKrs'
   });
 
   const [procrastinacionVideo, setProcrastinacionVideo] = useState({
@@ -72,9 +74,9 @@ export default function CampusClient() {
     }
   };
 
-  const handleClase3Video = (src, title, index) => {
-    setClase3Video({ src, title, activeIndex: index });
-    if (clase3VideoRef.current) {
+  const handleClase3Video = (src, title, index, isYouTube = true, directUrl = '') => {
+    setClase3Video({ src, title, activeIndex: index, isYouTube, directUrl });
+    if (!isYouTube && clase3VideoRef.current) {
       clase3VideoRef.current.src = src;
       clase3VideoRef.current.play().catch((e) => console.log('Autoplay prevented:', e));
     }
@@ -555,7 +557,7 @@ export default function CampusClient() {
                         <span className="tab-badge" style={{ background: "#000000", color: "#FFD700", border: "1px solid #333333", fontWeight: 900, fontSize: "0.68rem" }}>CLAVE VIP</span>
                     </div>
                     <span className="tab-title" style={{ color: "#000000", fontSize: "0.88rem", fontWeight: 900, textTransform: "uppercase" }}>ACCESO A CURSO COMPLETO</span>
-                    <span className="tab-desc" style={{ color: "#111111", fontWeight: 700, fontSize: "0.74rem" }}>Clases 1 a 5 Oficiales ↗</span>
+                    <span className="tab-desc" style={{ color: "#111111", fontWeight: 700, fontSize: "0.74rem" }}>Clases 1 a 6 Oficiales ↗</span>
                 </a>
 
                 {/* Tab ESPECIAL 2: COACHING GRUPAL (NEGRO Y AMARILLO - SIN CORONAS) */}
@@ -1212,163 +1214,315 @@ export default function CampusClient() {
                     </div>
                 </div>
 
-                {/* PANEL 3: CLASE 3 */}
+                {/* PANEL 3: CLASE 3 - PROPUESTA DE VALOR IRRESISTIBLE */}
                 <div className="folder-panel" id="panel-clase3" style={{ display: activeFolder === "clase3" ? "block" : "none" }}>
                     <div className="folder-active-banner">
                         <div className="active-folder-header">
-                            <span className="big-icon">📂</span>
+                            <span className="big-icon">💎</span>
                             <div>
-                                <h3>CARPETA: CLASE 3 - PROPUESTA DE VALOR Y POSICIONAMIENTO</h3>
-                                <p>Crea tu propuesta de valor irresistible, define precios y comprende qué compra tu cliente.</p>
+                                <h3>CARPETA: CLASE 3 - CREAR UNA PROPUESTA DE VALOR IRRESISTIBLE <span style={{ display: "inline-block", fontSize: "0.72rem", background: "rgba(212,175,55,0.2)", color: "#FFD700", border: "1px solid rgba(212,175,55,0.4)", padding: "0.2rem 0.6rem", borderRadius: "50px", fontWeight: 800, verticalAlign: "middle", marginLeft: "0.5rem" }}>ALUMNAS VIP</span></h3>
+                                <p>Rompe el anonimato comercial: descubrí exactamente qué le estás vendiendo al inconsciente de tu clienta y estructurá una oferta que te posicione como referente única.</p>
                             </div>
                         </div>
                         <div className="folder-materials-count">
-                            <span className="material-chip chip-video">🎬 2 Videos Grabados (Partes 1 y 2)</span>
-                            <span className="material-chip chip-audio">🎙️ 1 Audio Podcast</span>
-                            <span className="material-chip chip-docs">📥 4 Documentos</span>
+                            <span className="material-chip" style={{ background: "rgba(212,175,55,0.18)", color: "#FFD700", border: "1px solid rgba(212,175,55,0.4)", fontWeight: 800 }}>🔐 Acceso Exclusivo Alumnas</span>
+                            <span className="material-chip chip-video">🎬 3 Videos Grabados</span>
+                            <span className="material-chip chip-audio">🎙️ 2 Audios de Estrategia</span>
+                            <span className="material-chip chip-docs">📄 Workbooks y Presentaciones</span>
                         </div>
                     </div>
 
                     <div className="folder-pillars-grid">
-                        {/* 1. Video Player Real */}
+                        {/* 1. Video Apertura de Clase 3 (Visor Vertical 9:16) */}
+                        <div className="pillar-card" style={{ gridColumn: "1 / -1", background: "linear-gradient(145deg, #101522 0%, #0A0D16 100%)", border: "1.5px solid rgba(212,175,55,0.35)", borderRadius: "18px", padding: "1.6rem 1.4rem" }}>
+                            <div className="pillar-header" style={{ marginBottom: "0.8rem" }}>
+                                <div className="pillar-title">
+                                    <span>📱</span>
+                                    <span>Video Apertura: ¿Qué es Crear una Propuesta de Valor?</span>
+                                </div>
+                                <span className="pillar-badge" style={{ background: "rgba(212,175,55,0.18)", color: "#FFD700", border: "1px solid rgba(212,175,55,0.4)", fontWeight: 800 }}>Visor Vertical 9:16</span>
+                            </div>
+                            <p style={{ fontSize: "0.83rem", color: "#94A3B8", marginBottom: "1.3rem", textAlign: "center" }}>Apertura e introducción oficial de la <strong>Lic. Romina Lorena Montiel</strong> en formato vertical antes de avanzar a la masterclass completa.</p>
+                            
+                            <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.2rem" }}>
+                                <div className="reel-phone-wrapper" style={{ maxWidth: "310px", margin: "0 auto" }}>
+                                    <div className="reel-phone-notch"></div>
+                                    <div className="reel-phone-screen">
+                                        <div className="reel-floating-badge">
+                                            <span className="reel-icon">▶</span>
+                                            <span>SHORTS • APERTURA</span>
+                                        </div>
+                                        <iframe 
+                                            id="vAperturaCampus3" 
+                                            src="https://www.youtube-nocookie.com/embed/NSccd7Ou9m8?rel=0" 
+                                            title="Video Apertura Clase 3: Propuesta de Valor" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowFullScreen 
+                                            style={{ width: "100%", height: "100%", border: "none", display: "block" }}>
+                                        </iframe>
+                                    </div>
+                                    <div className="reel-phone-home-bar"></div>
+                                </div>
+                            </div>
+
+                            <div style={{ display: "flex", justifyContent: "center", gap: "0.8rem", flexWrap: "wrap" }}>
+                                <a href="https://www.youtube.com/shorts/NSccd7Ou9m8" target="_blank" rel="noopener noreferrer" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", textDecoration: "none", padding: "0.6rem 1.3rem", borderRadius: "50px", fontSize: "0.82rem", fontWeight: 800, background: "linear-gradient(135deg, #FFD700 0%, #D4AF37 100%)", color: "#000" }}>
+                                    <span>↗️ Abrir en YouTube Shorts</span>
+                                </a>
+                                <a href="/clase3_propuesta_de_valor/video_apertura.mp4" download="Video_Apertura_Clase_3.mp4" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", textDecoration: "none", padding: "0.6rem 1.3rem", borderRadius: "50px", fontSize: "0.82rem", fontWeight: 800, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.15)", color: "#FFF" }}>
+                                    <span>⬇️ Descargar Video MP4</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* 2. Video Player Real de Clase 3 (Partes 1 y 2 Panorámicas) */}
                         <div className="pillar-card">
                             <div className="pillar-header">
                                 <div className="pillar-title">
                                     <span>🎬</span>
-                                    <span id="title-video-clase3">1. Video: Clase 3 - Propuesta de Valor (Parte 1)</span>
+                                    <span id="title-video-clase3">{clase3Video.title}</span>
                                 </div>
-                                <span className="pillar-badge">Video Real MP4</span>
+                                <span className="pillar-badge">{clase3Video.isYouTube ? "Video Oficial HD" : "Video Local MP4"}</span>
                             </div>
                             <div className="folder-video-screen">
-                                <video id="videoElement-clase3" ref={clase3VideoRef} controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="metadata" poster="/banner_modo_lider.png">
-                                    <source src="/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/CLASE%203%20PROPUESTA%20DE%20VALOR%20PARTE%201.mp4" type="video/mp4" />
-                                </video>
+                                {clase3Video.isYouTube ? (
+                                    <iframe 
+                                        id="iframeElement-clase3" 
+                                        src={clase3Video.src} 
+                                        title={clase3Video.title} 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowFullScreen 
+                                        style={{ display: "block", width: "100%", aspectRatio: "16 / 9", border: "none", background: "#000" }}>
+                                    </iframe>
+                                ) : (
+                                    <video id="videoElement-clase3" ref={clase3VideoRef} controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="metadata" poster="/banner_modo_lider.png" style={{ display: "block", width: "100%", aspectRatio: "16 / 9", background: "#000", borderRadius: "12px" }}>
+                                        <source src={clase3Video.src} type="video/mp4" />
+                                    </video>
+                                )}
                             </div>
-                            {/* Selector de Parte 1 y Parte 2 */}
+                            {/* Selector de videos de la Clase 3 */}
                             <div className="video-playlist-bar">
-                                <span className="playlist-label">Partes de la Clase 3:</span>
-                                <button className={`playlist-btn ${clase3Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase3Video('/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/CLASE%203%20PROPUESTA%20DE%20VALOR%20PARTE%201.mp4', '1. Clase 3: Propuesta de Valor (Parte 1 - 711 MB)', 0)}>
-                                    ▶ Ver Parte 1 (711 MB)
+                                <span className="playlist-label">Selector:</span>
+                                <button className={`playlist-btn ${clase3Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase3Video('https://www.youtube-nocookie.com/embed/znDuCwzIKrs?rel=0', '1. Clase 3 - Parte 1: Propuesta de Valor (YouTube HD)', 0, true, 'https://www.youtube.com/watch?v=znDuCwzIKrs')}>
+                                    ▶ 1. Parte 1 (YouTube HD)
                                 </button>
-                                <button className={`playlist-btn ${clase3Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase3Video('/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/CLASE%203%20MI%20PROPUESTA%20DE%20VALOR%20PARTE%202.mp4', '2. Clase 3: Mi Propuesta de Valor (Parte 2 - 2.6 GB)', 1)}>
-                                    ▶ Ver Parte 2 (2.6 GB)
+                                <button className={`playlist-btn ${clase3Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase3Video('https://www.youtube-nocookie.com/embed/CHXXmFo63fc?rel=0', '2. Clase 3 - Parte 2: Mi Propuesta de Valor (YouTube HD)', 1, true, 'https://www.youtube.com/watch?v=CHXXmFo63fc')}>
+                                    ▶ 2. Parte 2 (YouTube HD)
+                                </button>
+                                <button className={`playlist-btn ${clase3Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase3Video('/clase3_propuesta_de_valor/clase3_parte1.mp4', '1. Clase 3 - Parte 1 (Local MP4 HD)', 2, false, 'https://www.youtube.com/watch?v=znDuCwzIKrs')}>
+                                    💾 3. Parte 1 (Local MP4)
+                                </button>
+                                <button className={`playlist-btn ${clase3Video.activeIndex === 3 ? "active" : ""}`} onClick={() => handleClase3Video('/clase3_propuesta_de_valor/clase3_parte2.mp4', '2. Clase 3 - Parte 2 (Local MP4 HD)', 3, false, 'https://www.youtube.com/watch?v=CHXXmFo63fc')}>
+                                    💾 4. Parte 2 (Local MP4)
                                 </button>
                             </div>
-                            <div className="video-description-box">
-                                💡 <strong>Clase 3:</strong> Aprende la fórmula exacta para armar una propuesta de valor atractiva y los miedos psicológicos que frenan la compra de tus clientas.
+                            <div style={{ marginTop: "0.6rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem", background: "rgba(0,0,0,0.3)", padding: "0.6rem 0.9rem", borderRadius: "8px" }}>
+                                <span style={{ fontSize: "0.74rem", color: "#94A3B8" }}>¿Error en YouTube? Usá el botón <strong>Local MP4</strong> o abrilo en pestaña nueva:</span>
+                                <div style={{ display: "flex", gap: "0.4rem" }}>
+                                    <a href={clase3Video.directUrl || "https://www.youtube.com/watch?v=znDuCwzIKrs"} target="_blank" rel="noopener noreferrer" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontSize: "0.74rem", padding: "0.35rem 0.8rem", textDecoration: "none", borderRadius: "50px", background: "rgba(255,255,255,0.08)", color: "#FFF", border: "1px solid rgba(255,255,255,0.15)" }}>
+                                        <span>↗️ Ver en YouTube</span>
+                                    </a>
+                                    <a href="/clase3_propuesta_de_valor/clase3_parte1.mp4" download="Clase3_Parte1.mp4" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontSize: "0.74rem", padding: "0.35rem 0.8rem", textDecoration: "none", borderRadius: "50px", background: "linear-gradient(135deg, #FFD700 0%, #D4AF37 100%)", color: "#000" }}>
+                                        <span>⬇️ Descargar MP4</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="video-description-box" id="desc-video-clase3">
+                                💡 <strong>Contenido de la Clase:</strong> Cómo definir tu diferencial estratégico, romper las objeciones invisibles y construir una promesa de alto valor irresistible.
                             </div>
                         </div>
 
-                        {/* 2. Audio Podcast Real */}
+                        {/* 3. Audios Oficiales de la Clase 3 */}
                         <div className="pillar-card">
                             <div className="pillar-header">
                                 <div className="pillar-title">
                                     <span>🎙️</span>
-                                    <span>2. Podcast Clase 3: Mi Historia con Marketing</span>
+                                    <span>3. Audios Oficiales de la Clase 3</span>
                                 </div>
-                                <span className="pillar-badge">Audio Oficial MP3</span>
+                                <span className="pillar-badge">Audios Oficiales de Romina</span>
                             </div>
-                            <div className="audio-player-box">
+                            {/* Audio 1 */}
+                            <div className="audio-player-box" style={{ marginBottom: "1.2rem" }}>
                                 <div className="audio-track-info">
                                     <div className="track-details">
                                         <div className="podcast-cover-icon">🎙️</div>
                                         <div className="track-title-box">
-                                            <h4>Episodio 03: Mi Historia con Marketing</h4>
-                                            <p>Por Lic. Romina Lorena Montiel • Audio Reflexivo Oficial</p>
+                                            <h4>Audio: Mi Historia con el Marketing</h4>
+                                            <p>Por Lic. Romina Lorena Montiel • Lección de Vida y Estrategia</p>
                                         </div>
                                     </div>
                                 </div>
-                                <audio controls className="real-audio-element">
-                                    <source src="/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg" />
+                                <audio controls className="real-audio-element" style={{ width: "100%", borderRadius: "8px" }}>
+                                    <source src="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg" />
                                 </audio>
+                                <div style={{ marginTop: "0.5rem", display: "flex", justifyContent: "flex-end" }}>
+                                    <a href="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" download="Mi_Historia_con_el_Marketing.mp3" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", fontSize: "0.76rem", padding: "0.45rem 0.9rem", textDecoration: "none", borderRadius: "50px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.15)", color: "#FFF" }}>
+                                        <span>⬇️ Descargar Audio MP3</span>
+                                    </a>
+                                </div>
+                            </div>
+                            {/* Audio 2 */}
+                            <div className="audio-player-box" style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: "1rem" }}>
+                                <div className="audio-track-info">
+                                    <div className="track-details">
+                                        <div className="podcast-cover-icon" style={{ background: "linear-gradient(135deg, #10B981, #047857)" }}>🎙️</div>
+                                        <div className="track-title-box">
+                                            <h4>Audio: Construir a Pesar de Todo</h4>
+                                            <p>Por Lic. Romina Lorena Montiel • Mentalidad y Resiliencia Emprendedora</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <audio controls className="real-audio-element" style={{ width: "100%", borderRadius: "8px" }}>
+                                    <source src="/clase3_propuesta_de_valor/construir%20a%20pesar%20de%20todo.mp3" type="audio/mpeg" />
+                                </audio>
+                                <div style={{ marginTop: "0.5rem", display: "flex", justifyContent: "flex-end" }}>
+                                    <a href="/clase3_propuesta_de_valor/construir%20a%20pesar%20de%20todo.mp3" download="Construir_a_Pesar_de_Todo.mp3" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", fontSize: "0.76rem", padding: "0.45rem 0.9rem", textDecoration: "none", borderRadius: "50px", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.15)", color: "#FFF" }}>
+                                        <span>⬇️ Descargar Audio MP3</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        {/* 3. Descargables */}
+                        {/* 4. Materiales Online de la Clase 3 */}
                         <div className="pillar-card">
                             <div className="pillar-header">
                                 <div className="pillar-title">
-                                    <span>📥</span>
-                                    <span>3. Descargar Materiales de la Clase 3</span>
+                                    <span>📄</span>
+                                    <span>4. Materiales de la Clase 3: Propuesta de Valor</span>
                                 </div>
-                                <span className="pillar-badge">Presentaciones Completas en PDF</span>
+                                <span className="pillar-badge">Lectura y Descarga Oficial</span>
                             </div>
                             <div className="downloads-grid">
-                                {/* Doc 1: Presentacion Propuesta de Valor */}
-                                <div className="download-card">
-                                    <div className="doc-icon-header">
-                                        <div className="doc-format-badge badge-pdf">PDF</div>
-                                        <div className="doc-meta">
-                                            <h5>Presentación: Propuesta de Valor</h5>
-                                            <span>PDF Oficial • 940 KB</span>
-                                        </div>
-                                    </div>
-                                    <p className="doc-desc">Diapositivas de la Clase 3: cómo diseñar tu propuesta de valor y destacar en el mercado.</p>
-                                    <div className="doc-action-btns">
-                                        <a href="/Presentacion_Clase_3_Propuesta_de_Valor.pdf" download className="btn-download-primary">
-                                            <span>📥 Descargar PDF</span>
-                                        </a>
-                                        <a href="/Presentacion_Clase_3_Propuesta_de_Valor.pdf" target="_blank" className="btn-view-secondary">
-                                            <span>👁️ Abrir</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                {/* Doc 2: Presentacion Los Miedos del Cliente */}
-                                <div className="download-card">
-                                    <div className="doc-icon-header">
-                                        <div className="doc-format-badge badge-pdf">PDF</div>
-                                        <div className="doc-meta">
-                                            <h5>Los Miedos Detrás de lo que Compran</h5>
-                                            <span>PDF Oficial • 725 KB</span>
-                                        </div>
-                                    </div>
-                                    <p className="doc-desc">Análisis psicológico de las decisiones de compra y claves para transmitir certeza absoluta.</p>
-                                    <div className="doc-action-btns">
-                                        <a href="/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pdf" download className="btn-download-primary">
-                                            <span>📥 Descargar PDF</span>
-                                        </a>
-                                        <a href="/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pdf" target="_blank" className="btn-view-secondary">
-                                            <span>👁️ Abrir</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                {/* Doc 3: Workbook Clase 3 */}
+                                {/* Doc 1: Workbook */}
                                 <div className="download-card">
                                     <div className="doc-icon-header">
                                         <div className="doc-format-badge badge-pdf">PDF</div>
                                         <div className="doc-meta">
                                             <h5>Workbook: Mi Propuesta de Valor</h5>
-                                            <span>PDF Oficial • 1.0 MB</span>
+                                            <span>Cuaderno de Trabajo • Interactivo + PDF</span>
                                         </div>
                                     </div>
-                                    <p className="doc-desc">Cuaderno de ejercicios para construir tu propuesta paso a paso.</p>
+                                    <p className="doc-desc">Ejercicios estructurados para aterrizar la promesa diferencial de tu oferta y afinar tu mensaje de venta.</p>
                                     <div className="doc-action-btns">
-                                        <a href="/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/Workbook%20Clase%203%20%E2%80%94%20Mi%20Propuesta%20de%20Valor%20_%20MODO%20L%C3%8DDER.pdf" download className="btn-download-primary">
-                                            <span>📥 Descargar PDF</span>
+                                        <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.html" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Interactivo</span>
+                                        </a>
+                                        <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.pdf" download="Workbook_Clase_3_Propuesta_de_Valor.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
 
-                                {/* Doc 4: Web Interactiva */}
+                                {/* Doc 2: Presentación Clase 3 */}
                                 <div className="download-card">
                                     <div className="doc-icon-header">
-                                        <div className="doc-format-badge badge-html">WEB</div>
+                                        <div className="doc-format-badge badge-pptx">PPTX</div>
                                         <div className="doc-meta">
-                                            <h5>Diapositivas Web Clase 3</h5>
-                                            <span>Versión Web Online</span>
+                                            <h5>Presentación Clase 3</h5>
+                                            <span>Diapositivas Oficiales • Online + PDF</span>
                                         </div>
                                     </div>
-                                    <p className="doc-desc">Diapositivas interactivas proyectables desde cualquier dispositivo.</p>
+                                    <p className="doc-desc">Diapositivas oficiales: arquitectura de valor, mensaje clave y promesa transformacional para tu clienta.</p>
                                     <div className="doc-action-btns">
-                                        <a href="/videos/CLASE%203%20Propuesta%20de%20Valor%20y%20Posicionamiento/Presentacion_Clase_3_Propuesta_de_Valor.html" target="_blank" className="btn-download-primary">
-                                            <span>🚀 Abrir Diapositivas</span>
+                                        <a href="/clase3_propuesta_de_valor/Presentacion_Clase_3_Propuesta_de_Valor.html" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/clase3_propuesta_de_valor/Presentacion_Clase_3_Propuesta_de_Valor.pdf" download="Presentacion_Clase_3_Propuesta_de_Valor.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Doc 3: Los Miedos Detrás de lo que Nos Compran */}
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf">PDF</div>
+                                        <div className="doc-meta">
+                                            <h5>Los Miedos Detrás de lo que Compran</h5>
+                                            <span>Psicología del Comprador • Online + PDF</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Presentación visual sobre la psicología profunda de compra y los temores de tu cliente ideal.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/clase3_propuesta_de_valor/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.html" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/clase3_propuesta_de_valor/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pdf" download="Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pdf" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Doc 4: Lectura Estratégica: ¿Qué está comprando realmente mi clienta? */}
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-docx">GUÍA</div>
+                                        <div className="doc-meta">
+                                            <h5>¿Qué está comprando realmente mi clienta?</h5>
+                                            <span>Lectura Online • Fundamento</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Guía teórica de Romina sobre el reverso del beneficio, mapa de miedos y cómo salir del commodity.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/clase3_propuesta_de_valor/que_esta_comprando_mi_clienta.html" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Online</span>
+                                        </a>
+                                        <a href="/clase3_propuesta_de_valor/que-esta-comprando-mi-clienta.md" download="que-esta-comprando-mi-clienta.md" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Doc 5: Esquema Visual 1 */}
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf" style={{ background: "rgba(16, 185, 129, 0.2)", color: "#34D399", borderColor: "rgba(16, 185, 129, 0.4)" }}>ESQUEMA</div>
+                                        <div className="doc-meta">
+                                            <h5>Esquema de Propuesta de Valor 1</h5>
+                                            <span>Infografía Visual • PNG</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Lámina visual de síntesis para tener presente en tu escritorio durante la clase.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/clase3_propuesta_de_valor/fotito 1.PNG" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Imagen</span>
+                                        </a>
+                                        <a href="/clase3_propuesta_de_valor/fotito 1.PNG" download="Esquema_Propuesta_Valor_1.png" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                {/* Doc 6: Esquema Visual 2 */}
+                                <div className="download-card">
+                                    <div className="doc-icon-header">
+                                        <div className="doc-format-badge badge-pdf" style={{ background: "rgba(16, 185, 129, 0.2)", color: "#34D399", borderColor: "rgba(16, 185, 129, 0.4)" }}>ESQUEMA</div>
+                                        <div className="doc-meta">
+                                            <h5>Esquema de Propuesta de Valor 2</h5>
+                                            <span>Infografía Visual • PNG</span>
+                                        </div>
+                                    </div>
+                                    <p className="doc-desc">Segunda lámina complementaria con la estructura de comunicación y posicionamiento.</p>
+                                    <div className="doc-action-btns">
+                                        <a href="/clase3_propuesta_de_valor/fotito 2.PNG" target="_blank" rel="noopener noreferrer" className="btn-view-secondary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>👁️ Ver Imagen</span>
+                                        </a>
+                                        <a href="/clase3_propuesta_de_valor/fotito 2.PNG" download="Esquema_Propuesta_Valor_2.png" className="btn-download-primary" style={{ flex: 1, justifyContent: "center" }}>
+                                            <span>⬇️ Descargar</span>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* BOTÓN REGRESAR A CARPETAS DE ESTUDIO */}
+                    <div className="return-to-folders-box">
+                        <a href="#carpetas" className="btn-return-folders" onClick={(e) => { e.preventDefault(); document.getElementById('carpetas')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                            <span className="btn-icon">📁</span>
+                            <span>Regresar a carpetas de estudio del curso</span>
+                            <span className="btn-arrow">↑</span>
+                        </a>
                     </div>
                 </div>
 

@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Clase 3: Propuesta de Valor y Posicionamiento | Campus Móvil MODO LÍDER</title>
+    <meta name="description" content="Acceso móvil a la Clase 3: Crear una Propuesta de Valor Irresistible. Método MODO LÍDER - Lic. Romina Lorena Montiel.">
+    <meta name="theme-color" content="#0B0E14">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-body: #07090D;
+            --bg-card: #0E121B;
+            --bg-card-subtle: #141A26;
+            --bg-gold-glass: rgba(212, 175, 55, 0.08);
+            --gold: #D4AF37;
+            --gold-light: #F6E6B4;
+            --gold-dark: #A6821E;
+            --coral: #E94560;
+            --coral-soft: rgba(233, 69, 96, 0.15);
+            --emerald: #10B981;
+            --text-main: #F4F6F9;
+            --text-muted: #8E99A8;
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --radius-xl: 20px;
+            --radius-lg: 14px;
+            --radius-md: 10px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding-bottom: 95px;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 10% 80%, rgba(233, 69, 96, 0.07) 0%, transparent 40%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        .mobile-container {
+            max-width: 620px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1rem 1rem 2rem;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* Top Brand Header */
+        .brand-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0 1.25rem;
+            border-bottom: 1px solid var(--border-gold);
+            margin-bottom: 1.25rem;
+        }
+
+        .brand-logo-combo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 35%, #3D2A08 0%, #1A0E03 70%);
+            border: 2px solid var(--gold);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+        }
+
+        .logo-circle .l-metodo {
+            font-size: 0.26rem;
+            font-weight: 700;
+            color: #FFF;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .logo-circle .l-modo {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.58rem;
+            font-weight: 700;
+            color: #FFF;
+            line-height: 1;
+        }
+
+        .logo-circle .l-lider {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.76rem;
+            font-weight: 800;
+            background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .brand-names {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-rm {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.35rem;
+            background: linear-gradient(to bottom, #F0C040 0%, #B4871E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .brand-signature {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        .brand-role {
+            font-size: 0.58rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.7rem;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: #FFD700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #FFD700;
+            box-shadow: 0 0 8px #FFD700;
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(20, 26, 38, 0.92) 0%, rgba(44, 28, 7, 0.85) 100%);
+            border: 1.5px solid var(--border-gold);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem 1.25rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .chapter-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.25;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-desc {
+            font-size: 0.85rem;
+            color: #C6D0DC;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 0.55rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat-pill {
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        /* Section Titles (Centered) */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.8rem auto 0.9rem auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Interactive Grid */
+        .interactive-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .action-card {
+            display: flex;
+            align-items: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 1rem 1.15rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-card:hover, .action-card:active {
+            transform: translateY(-2px);
+            border-color: var(--gold);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        }
+
+        .action-icon {
+            font-size: 1.6rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .action-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .action-badge {
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 0.2rem;
+            display: inline-block;
+        }
+
+        .highlight-gold .action-badge { color: var(--gold); }
+        .highlight-coral .action-badge { color: var(--coral); }
+        .highlight-emerald .action-badge { color: var(--emerald); }
+
+        .action-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.25;
+            margin-bottom: 0.25rem;
+        }
+
+        .action-desc {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .action-chevron {
+            font-size: 1.1rem;
+            color: var(--gold);
+            flex-shrink: 0;
+            padding-left: 0.4rem;
+        }
+
+        /* Mockup Smartphone Vertical 9:16 */
+        .vertical-apertura-card {
+            background: linear-gradient(145deg, #101522 0%, #0A0D16 100%);
+            border: 1.5px solid rgba(212, 175, 55, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem 1.2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        .reel-phone-wrapper {
+            width: 100%;
+            max-width: 310px;
+            margin: 0 auto;
+            aspect-ratio: 9 / 16;
+            background: #000;
+            border: 3.5px solid #2A303C;
+            border-radius: 36px;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.7), 0 0 25px rgba(212,175,55,0.25);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reel-phone-notch {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 18px;
+            background: #14171E;
+            border-radius: 12px;
+            z-index: 10;
+        }
+
+        .reel-phone-screen {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        .reel-phone-screen iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .reel-floating-badge {
+            position: absolute;
+            top: 36px;
+            left: 14px;
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212,175,55,0.4);
+            color: #FFD700;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 0.25rem 0.65rem;
+            border-radius: 50px;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            pointer-events: none;
+        }
+
+        .reel-phone-home-bar {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110px;
+            height: 4px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 3px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        /* Pillar Card (Main Video Player) */
+        .pillar-card {
+            background: var(--bg-card);
+            border: 1.5px solid var(--border-gold);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+            margin: 0 auto 1.5rem auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .pillar-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0.85rem auto 1rem auto;
+            gap: 0.4rem;
+            width: 100%;
+        }
+
+        .pillar-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.55rem;
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.35;
+            text-align: center;
+            width: 100%;
+        }
+
+        .pillar-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.22rem 0.65rem;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+
+        .folder-video-screen {
+            width: 100%;
+            background: #000000;
+            border-radius: var(--radius-md);
+            border: 1.5px solid rgba(212, 175, 55, 0.35);
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .folder-video-screen iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: none;
+            background: #000000;
+        }
+
+        .folder-video-screen video {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            display: none;
+            outline: none;
+            background: #000000;
+            object-fit: contain;
+        }
+
+        .video-playlist-bar {
+            background: #0B0E17;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            padding: 0.75rem 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .playlist-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            letter-spacing: 0.5px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.15rem;
+        }
+
+        .playlist-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #CBD5E1;
+            padding: 0.48rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            white-space: nowrap;
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        .playlist-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #FFFFFF;
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .playlist-btn.active {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold-light);
+            border-color: var(--gold);
+            font-weight: 700;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .video-description-box {
+            background: rgba(20, 26, 38, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1.15rem;
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            border-left: 3px solid var(--gold);
+            line-height: 1.5;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        /* Audios Section */
+        .audio-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .audio-hdr {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .audio-ico {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #D4AF37, #A6821E);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .audio-title {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #FFF;
+        }
+
+        .audio-sub {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        audio {
+            width: 100%;
+            height: 38px;
+            outline: none;
+            border-radius: 20px;
+        }
+
+        /* Infografías / Reto / Fotos */
+        .reto-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .reto-img-thumb {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-gold);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .reto-img-thumb:hover {
+            transform: scale(1.015);
+        }
+
+        /* Downloads Grid */
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-md);
+            padding: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .download-btn:hover {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .dl-icon {
+            font-size: 1.6rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .dl-name {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.25;
+            margin-bottom: 0.2rem;
+        }
+
+        .dl-format {
+            font-size: 0.65rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        /* Bottom Sticky Dock for Mobile */
+        .bottom-dock {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(11, 14, 23, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border-gold);
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem 0.5rem 0.75rem;
+            z-index: 100;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .dock-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .dock-item.active, .dock-item:hover {
+            color: var(--gold);
+        }
+
+        .dock-icon {
+            font-size: 1.15rem;
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 200;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        .lightbox-modal.show {
+            display: flex;
+        }
+
+        .lightbox-modal img {
+            max-width: 95%;
+            max-height: 90vh;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.4);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gold);
+            color: #000;
+            font-weight: 800;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .btn-direct {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
+            color: #000;
+        }
+        .btn-dark {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mobile-container">
+
+    <!-- TOP BRAND HEADER -->
+    <header class="brand-top">
+        <div class="brand-logo-combo">
+            <div class="logo-circle">
+                <span class="l-metodo">MÉTODO</span>
+                <span class="l-modo">MODO</span>
+                <span class="l-lider">LÍDER</span>
+            </div>
+            <div class="brand-names">
+                <span class="brand-rm">RM</span>
+                <span class="brand-signature">LIC. ROMINA LORENA MONTIEL</span>
+                <span class="brand-role">Mentora de Mentes y Negocios</span>
+            </div>
+        </div>
+        <div class="status-badge">
+            <div class="status-dot"></div>
+            <span>Clase Activa</span>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <div class="hero-banner">
+        <span class="chapter-tag">CAPÍTULO 3 • CURSO DE CERO A VENTAS</span>
+        <h1 class="hero-title">Crear una Propuesta de Valor Irresistible</h1>
+        <p class="hero-desc">Rompe el anonimato comercial. Descubrí exactamente qué le estás vendiendo al inconsciente de tu clienta y estructurá una oferta que te posicione como referente única.</p>
+        <div class="hero-stats">
+            <div class="hero-stat-pill">📱 100% Adaptado al Celular</div>
+            <div class="hero-stat-pill">🎬 3 Videos Oficiales (Apertura + Masterclass)</div>
+            <div class="hero-stat-pill">✍️ Workbook Interactivo</div>
+            <div class="hero-stat-pill">🎙️ 2 Audios de Estrategia</div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: ACCESOS RÁPIDOS MÓVILES -->
+    <div class="section-header" id="sec-interactiva">
+        <div class="section-title">✨ Experiencias de Aprendizaje</div>
+    </div>
+
+    <div class="interactive-grid">
+        <!-- Tarjeta 1: Workbook Interactivo -->
+        <a href="Workbook_Clase_3_Propuesta_de_Valor.html" class="action-card highlight-gold">
+            <div class="action-icon">✍️</div>
+            <div class="action-content">
+                <span class="action-badge">Completá y guardá</span>
+                <div class="action-title">Workbook Interactivo</div>
+                <div class="action-desc">Matriz de Propuesta de Valor, preguntas de autoliderazgo y auto-guardado en tu móvil.</div>
+            </div>
+            <div class="action-chevron">▶</div>
+        </a>
+
+        <!-- Tarjeta 2: Lectura Inconsciente Clienta -->
+        <a href="que_esta_comprando_mi_clienta.html" class="action-card highlight-coral">
+            <div class="action-icon">📖</div>
+            <div class="action-content">
+                <span class="action-badge">Lectura Clave</span>
+                <div class="action-title">¿Qué está comprando mi clienta?</div>
+                <div class="action-desc">El mapa mental de los deseos profundos, necesidades emocionales y objeciones de tu audiencia.</div>
+            </div>
+            <div class="action-chevron">▶</div>
+        </a>
+
+        <!-- Tarjeta 3: Diapositivas Oficiales -->
+        <a href="Presentacion_Clase_3_Propuesta_de_Valor.html" class="action-card highlight-emerald">
+            <div class="action-icon">📊</div>
+            <div class="action-content">
+                <span class="action-badge">Presentación Web</span>
+                <div class="action-title">Clase 3: Propuesta de Valor</div>
+                <div class="action-desc">Presentación completa con los marcos estratégicos dictados por Romina Lorena Montiel.</div>
+            </div>
+            <div class="action-chevron">▶</div>
+        </a>
+
+        <!-- Tarjeta 4: Los Miedos Detrás de lo que Nos Compran -->
+        <a href="Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.html" class="action-card highlight-gold">
+            <div class="action-icon">🧠</div>
+            <div class="action-content">
+                <span class="action-badge">Neuro-Ventas</span>
+                <div class="action-title">Los Miedos Detrás de la Compra</div>
+                <div class="action-desc">Análisis profundo sobre el miedo que frena la decisión de compra de tu clienta y cómo desactivarlo.</div>
+            </div>
+            <div class="action-chevron">▶</div>
+        </a>
+    </div>
+
+    <!-- SECCIÓN: VIDEO APERTURA VERTICAL (9:16) -->
+    <div class="section-header" id="sec-apertura">
+        <div class="section-title">📱 1. Video Apertura (Formato Vertical 9:16)</div>
+    </div>
+
+    <div class="vertical-apertura-card">
+        <div style="display:inline-flex; align-items:center; gap:0.4rem; background:rgba(212,175,55,0.18); color:#FFD700; border:1px solid rgba(212,175,55,0.4); padding:0.25rem 0.8rem; border-radius:50px; font-size:0.7rem; font-weight:800; text-transform:uppercase; margin-bottom:0.7rem;">
+            <span>⚡ CONCEPTO DISPARADOR OFICIAL</span>
+        </div>
+        <h3 style="font-size:1.1rem; color:#FFF; font-weight:800; margin-bottom:0.35rem;">Apertura: ¿Qué es Crear una Propuesta de Valor?</h3>
+        <p style="font-size:0.8rem; color:#94A3B8; max-width:540px; margin:0 auto 1.3rem auto; line-height:1.5;">
+            Mensaje introductorio de la <strong>Lic. Romina Lorena Montiel</strong> antes de adentrarse en la masterclass completa.
+        </p>
+
+        <!-- Mockup Smartphone Vertical 9:16 -->
+        <div class="reel-phone-wrapper">
+            <div class="reel-phone-notch"></div>
+            <div class="reel-phone-screen">
+                <div class="reel-floating-badge">
+                    <span>▶</span>
+                    <span>SHORTS • APERTURA</span>
+                </div>
+                <iframe id="vAperturaIndex3" src="https://www.youtube.com/embed/NSccd7Ou9m8?rel=0" title="Apertura Clase 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="reel-phone-home-bar"></div>
+        </div>
+
+        <div style="margin-top: 1.1rem; display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap;">
+            <a href="https://www.youtube.com/shorts/NSccd7Ou9m8" target="_blank" class="btn-direct btn-gold">
+                <span>↗️ Abrir en YouTube Shorts</span>
+            </a>
+            <a href="video_apertura.mp4" download="Apertura_Clase_3.mp4" class="btn-direct btn-dark">
+                <span>⬇️ Descargar MP4</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: REPRODUCTOR CLASE PRINCIPAL (PARTES 1 Y 2) -->
+    <div class="section-header" id="sec-videos">
+        <div class="section-title">🎬 2. Masterclass Oficial: Partes 1 y 2</div>
+    </div>
+
+    <div class="pillar-card">
+        <!-- 1. Pantalla del Video HD -->
+        <div class="folder-video-screen" id="videoContainer-clase3">
+            <iframe 
+                id="iframeElement-clase3"
+                src="https://www.youtube.com/embed/znDuCwzIKrs?rel=0" 
+                title="Clase 3: Propuesta de Valor" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+            <video id="videoElement-clase3" controls playsinline controlsList="nodownload" oncontextmenu="return false;" preload="none" poster="fotito 1.PNG">
+                <source src="clase3_parte1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- 2. Header indicador de video activo -->
+        <div class="pillar-header">
+            <div class="pillar-title">
+                <span>🎬</span>
+                <span id="title-video-clase3">1. Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento</span>
+            </div>
+            <span class="pillar-badge" id="badge-video-clase3">Video Oficial HD</span>
+        </div>
+
+        <!-- Selector de videos Clase 3 -->
+        <div class="video-playlist-bar">
+            <span class="playlist-label">Selector de Masterclass:</span>
+            <button class="playlist-btn active" onclick="switchClase3Video('https://www.youtube.com/embed/znDuCwzIKrs?rel=0', '1. Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento', this, true, 'https://www.youtube.com/watch?v=znDuCwzIKrs', 'Fundamento conceptual, anatomía de la propuesta y posicionamiento frente a la clienta.')">
+                🎬 1. Parte 1 (YouTube)
+            </button>
+            <button class="playlist-btn" onclick="switchClase3Video('https://www.youtube.com/embed/CHXXmFo63fc?rel=0', '2. Clase 3 - Parte 2: Mi Propuesta de Valor en Acción', this, true, 'https://www.youtube.com/watch?v=CHXXmFo63fc', 'Estructuración de la oferta irresistible, fijación de valor y comunicación convincente.')">
+                🎬 2. Parte 2 (YouTube)
+            </button>
+            <button class="playlist-btn" onclick="switchClase3Video('clase3_parte1.mp4', '1. Clase 3 - Parte 1 (Local MP4 HD)', this, false, 'https://www.youtube.com/watch?v=znDuCwzIKrs', 'Reproducción local directa en MP4.')">
+                💾 3. Parte 1 (Local MP4)
+            </button>
+            <button class="playlist-btn" onclick="switchClase3Video('clase3_parte2.mp4', '2. Clase 3 - Parte 2 (Local MP4 HD)', this, false, 'https://www.youtube.com/watch?v=CHXXmFo63fc', 'Reproducción local directa en MP4.')">
+                💾 4. Parte 2 (Local MP4)
+            </button>
+        </div>
+
+        <div style="margin-bottom: 0.8rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; background: rgba(0,0,0,0.3); padding: 0.6rem 0.9rem; border-radius: 8px;">
+            <span style="font-size: 0.74rem; color: #94A3B8;">¿Preferís verlo en YouTube?</span>
+            <div style="display: flex; gap: 0.4rem;">
+                <a id="btnDirectYTClase3" href="https://www.youtube.com/watch?v=znDuCwzIKrs" target="_blank" class="btn-direct btn-dark" style="font-size: 0.72rem; padding: 0.35rem 0.8rem;">
+                    <span>↗️ Ver en YouTube</span>
+                </a>
+                <a id="dlVideoClase3" href="clase3_parte1.mp4" download="Clase3_Parte1.mp4" class="btn-direct btn-gold" style="font-size: 0.72rem; padding: 0.35rem 0.8rem;">
+                    <span>⬇️ Descargar MP4</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="video-description-box" id="desc-video-clase3">
+            💡 <strong>Contenido de la Clase:</strong> Fundamento conceptual, anatomía de la propuesta y posicionamiento frente a la clienta.
+        </div>
+    </div>
+
+    <!-- SECCIÓN: AUDIOS ESTRATÉGICOS -->
+    <div class="section-header" id="sec-audios">
+        <div class="section-title">🎙️ Audios de Estrategia y Mentalidad</div>
+    </div>
+
+    <div class="audio-card">
+        <div class="audio-hdr">
+            <div class="audio-ico">🎙️</div>
+            <div>
+                <div class="audio-title">Mi Historia con el Marketing</div>
+                <div class="audio-sub">Lección de Vida y Estrategia • Lic. Romina Lorena Montiel</div>
+            </div>
+        </div>
+        <audio controls preload="metadata">
+            <source src="MI HISTORIA CON MARKETING CLASE 3.mp3" type="audio/mpeg">
+        </audio>
+        <div style="margin-top:0.5rem; text-align:right;">
+            <a href="MI HISTORIA CON MARKETING CLASE 3.mp3" download class="btn-direct btn-dark" style="font-size:0.7rem; padding:0.3rem 0.75rem;">⬇️ Descargar MP3</a>
+        </div>
+    </div>
+
+    <div class="audio-card">
+        <div class="audio-hdr">
+            <div class="audio-ico" style="background: linear-gradient(135deg, #10B981, #047857); color:#FFF;">💪</div>
+            <div>
+                <div class="audio-title">Construir a Pesar de Todo</div>
+                <div class="audio-sub">Mentalidad de Resiliencia y Enfoque • Lic. Romina Lorena Montiel</div>
+            </div>
+        </div>
+        <audio controls preload="metadata">
+            <source src="construir a pesar de todo.mp3" type="audio/mpeg">
+        </audio>
+        <div style="margin-top:0.5rem; text-align:right;">
+            <a href="construir a pesar de todo.mp3" download class="btn-direct btn-dark" style="font-size:0.7rem; padding:0.3rem 0.75rem;">⬇️ Descargar MP3</a>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: ESQUEMA / FOTOS DE LA CARPETA -->
+    <div class="section-header" id="sec-fotos">
+        <div class="section-title">🖼️ Infografías y Esquemas Clave</div>
+    </div>
+
+    <div class="reto-card">
+        <div style="font-size:0.85rem; color:#E2E8F0; line-height:1.4;">
+            <strong>Esquemas visuales de la Clase 3:</strong> Tocá cualquiera de las imágenes para ampliarla en pantalla completa:
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem;">
+            <img src="fotito 1.PNG" alt="Esquema Propuesta de Valor 1" class="reto-img-thumb" onclick="openLightbox(this.src)">
+            <img src="fotito 2.PNG" alt="Esquema Propuesta de Valor 2" class="reto-img-thumb" onclick="openLightbox(this.src)">
+        </div>
+        <div style="font-size:0.75rem; color:var(--text-muted); text-align:center;">
+            🔍 Tocá para ver en tamaño completo
+        </div>
+    </div>
+
+    <!-- SECCIÓN: DESCARGAS OFICIALES -->
+    <div class="section-header" id="sec-descargas">
+        <div class="section-title">📥 Archivos para Descargar</div>
+    </div>
+
+    <div class="downloads-grid">
+        <a href="Workbook_Clase_3_Propuesta_de_Valor.pdf" download class="download-btn">
+            <span class="dl-icon">📕</span>
+            <span class="dl-name">Workbook Oficial</span>
+            <span class="dl-format">PDF Imprimible</span>
+        </a>
+
+        <a href="Presentacion_Clase_3_Propuesta_de_Valor.pdf" download class="download-btn">
+            <span class="dl-icon">📙</span>
+            <span class="dl-name">Presentación Clase 3</span>
+            <span class="dl-format">PDF Oficial</span>
+        </a>
+
+        <a href="Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pdf" download class="download-btn">
+            <span class="dl-icon">📘</span>
+            <span class="dl-name">Los Miedos en la Compra</span>
+            <span class="dl-format">PDF Oficial</span>
+        </a>
+
+        <a href="Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pptx" download class="download-btn">
+            <span class="dl-icon">📊</span>
+            <span class="dl-name">Los Miedos en la Compra</span>
+            <span class="dl-format">PowerPoint (.pptx)</span>
+        </a>
+    </div>
+
+    <!-- RETORNO AL CAMPUS -->
+    <div style="margin: 1.5rem 0; display:flex; flex-direction:column; gap:0.6rem;">
+        <a href="/clases_visor.html#clase-3" class="btn-direct btn-gold" style="justify-content:center; padding:0.85rem; font-weight:800; border-radius:10px;">
+            <span>🎓 Ir al Visor General de Clases</span>
+        </a>
+        <a href="/campus_modo_lider.html" class="btn-direct btn-dark" style="justify-content:center; padding:0.75rem; font-weight:700; border-radius:10px;">
+            <span>← Volver al Campus Principal</span>
+        </a>
+    </div>
+
+    <!-- FOOTER MODO LÍDER -->
+    <footer style="text-align:center; padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.08); margin-top:1rem;">
+        <div style="font-size:0.82rem; font-weight:700; color:var(--gold); letter-spacing:1px; margin-bottom:0.3rem;">
+            MÉTODO MODO LÍDER • LIC. ROMINA LORENA MONTIEL
+        </div>
+        <div style="font-size:0.7rem; color:var(--text-muted);">
+            Curso Emprender de Cero a Impacto y Ventas • Todos los derechos reservados
+        </div>
+    </footer>
+
+</div><!-- /mobile-container -->
+
+<!-- BOTTOM STICKY DOCK FOR MOBILE -->
+<nav class="bottom-dock">
+    <a href="#sec-interactiva" class="dock-item active">
+        <span class="dock-icon">📱</span>
+        <span>Aprender</span>
+    </a>
+    <a href="#sec-apertura" class="dock-item">
+        <span class="dock-icon">⚡</span>
+        <span>Apertura</span>
+    </a>
+    <a href="#sec-videos" class="dock-item">
+        <span class="dock-icon">🎬</span>
+        <span>Videos</span>
+    </a>
+    <a href="Workbook_Clase_3_Propuesta_de_Valor.html" class="dock-item">
+        <span class="dock-icon">✍️</span>
+        <span>Workbook</span>
+    </a>
+    <a href="#sec-descargas" class="dock-item">
+        <span class="dock-icon">📥</span>
+        <span>Descargas</span>
+    </a>
+</nav>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="Ampliación">
+    <button class="lightbox-close" onclick="closeLightbox()">Cerrar ✕</button>
+</div>
+
+<script>
+    function switchClase3Video(videoSrc, title, btnElement, isYouTube, directYtUrl, desc) {
+        const player = document.getElementById('videoElement-clase3');
+        const iframe = document.getElementById('iframeElement-clase3');
+        const titleElem = document.getElementById('title-video-clase3');
+        const badgeElem = document.getElementById('badge-video-clase3');
+        const descElem = document.getElementById('desc-video-clase3');
+        const btnDirect = document.getElementById('btnDirectYTClase3');
+        const dlBtn = document.getElementById('dlVideoClase3');
+
+        if (isYouTube) {
+            if (iframe) {
+                iframe.src = videoSrc;
+                iframe.style.display = 'block';
+            }
+            if (player) {
+                player.pause();
+                player.style.display = 'none';
+            }
+            if (badgeElem) badgeElem.innerText = 'YouTube HD';
+        } else {
+            if (iframe) {
+                iframe.src = '';
+                iframe.style.display = 'none';
+            }
+            if (player) {
+                player.style.display = 'block';
+                player.src = videoSrc;
+                player.load();
+                player.play().catch(e => console.log('Autoplay:', e));
+            }
+            if (badgeElem) badgeElem.innerText = 'Local MP4 HD';
+            if (dlBtn) dlBtn.href = videoSrc;
+        }
+
+        if (titleElem && title) {
+            titleElem.innerText = title;
+        }
+
+        if (btnDirect && directYtUrl) {
+            btnDirect.href = directYtUrl;
+        }
+
+        if (descElem && desc) {
+            descElem.innerHTML = `💡 <strong>Contenido de la Clase:</strong> ${desc}`;
+        }
+
+        const allBars = document.querySelectorAll('.video-playlist-bar');
+        allBars.forEach(bar => {
+            bar.querySelectorAll('.playlist-btn').forEach(b => b.classList.remove('active'));
+        });
+        if (btnElement) {
+            btnElement.classList.add('active');
+        }
+
+        const sec = document.getElementById('sec-videos');
+        if (sec && window.innerWidth < 768) {
+            sec.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function openLightbox(src) {
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('lightbox').classList.add('show');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('show');
+    }
+</script>
+
+</body>
+</html>

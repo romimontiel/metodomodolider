@@ -423,6 +423,104 @@ body {
   line-height: 1.5;
 }
 
+/* ==================================================================== */
+/* VISOR VERTICAL PARA VIDEOS 9:16 (SMARTPHONE MOCKUP & REELS)          */
+/* ==================================================================== */
+.view-mode-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+.btn-mode {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-g);
+  color: #CBD5E1;
+  padding: 0.5rem 1.1rem;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.btn-mode:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: #FFF;
+}
+.btn-mode.active {
+  background: var(--gold-g);
+  color: #07090E;
+  border-color: transparent;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.reel-phone-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  background: #090D16;
+  border-radius: 40px;
+  padding: 12px;
+  border: 3px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.2);
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+.reel-phone-notch {
+  width: 90px;
+  height: 16px;
+  background: #020408;
+  border-radius: 20px;
+  margin: 4px auto 10px auto;
+}
+.reel-phone-screen {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: #000000;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reel-phone-screen iframe, .reel-phone-screen video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+.reel-phone-home-bar {
+  width: 100px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  margin: 10px auto 4px auto;
+}
+.reel-phone-wrapper.wide-mode {
+  max-width: 100%;
+  border-radius: var(--r-md);
+  padding: 0;
+  border: 1px solid var(--border);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+.reel-phone-wrapper.wide-mode .reel-phone-notch,
+.reel-phone-wrapper.wide-mode .reel-phone-home-bar {
+  display: none;
+}
+.reel-phone-wrapper.wide-mode .reel-phone-screen {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--r-md);
+}
+
 /* AUDIO SECTION */
 .audio-sec {
   background: var(--card);
@@ -821,14 +919,14 @@ body {
 
   <!-- HERO BANNER -->
   <section class="hero-banner">
-    <div class="hero-tag">&#127919; FORMACI&Oacute;N CENTRAL &bull; 5 CLASES OFICIALES</div>
+    <div class="hero-tag">&#127919; FORMACI&Oacute;N CENTRAL &bull; 6 CLASES OFICIALES</div>
     <h1>Curso Completo: <span>Emprender de Cero a Impacto y Ventas</span></h1>
     <p class="hero-desc">Desarroll&aacute; tu transformaci&oacute;n como empresaria consciente con la <strong>Lic. Romina Lorena Montiel</strong>. Las Clases 1 y 2 son de libre acceso (Free Pass); a partir de la Clase 3 el material est&aacute; protegido para alumnas activas.</p>
     <div class="hero-chips">
       <span class="hero-chip" style="background:rgba(16,185,129,0.18); color:#34D399; border-color:rgba(16,185,129,0.35); font-weight:800;">&#128275; Clases 1 y 2 Free Pass</span>
-      <span class="hero-chip">&#127916; 10+ Videos</span>
+      <span class="hero-chip">&#127916; 12+ Videos</span>
       <span class="hero-chip">&#128196; Workbooks &amp; Gu&iacute;as Oficiales</span>
-      <span class="hero-chip">&#128081; Clases 3 a 5 VIP</span>
+      <span class="hero-chip">&#128081; Clases 3 a 6 VIP</span>
     </div>
   </section>
 
@@ -876,10 +974,10 @@ body {
       <div class="folder-nav-tab" id="tab-clase4" onclick="sw(4)">
         <div class="tab-top-row">
           <span class="tab-icon" id="fIcon4">&#128274;</span>
-          <span class="tab-badge" style="background:rgba(212,175,55,0.15); color:var(--gold-l); border:1px solid var(--border-g); font-weight:800;">VIP</span>
+          <span class="tab-badge" style="background:rgba(225,48,108,0.18); color:#FF5A78; border:1px solid rgba(225,48,108,0.4); font-weight:800;">📱 PR&Aacute;CTICA</span>
         </div>
         <span class="tab-title">CLASE 4</span>
-        <span class="tab-desc">Reconectar con mi Negocio y Volver a M&iacute;</span>
+        <span class="tab-desc">Trascender Bloqueos &bull; Reels y Contenido</span>
       </div>
 
       <!-- FOLDER 5 -->
@@ -889,6 +987,16 @@ body {
           <span class="tab-badge" style="background:rgba(212,175,55,0.15); color:var(--gold-l); border:1px solid var(--border-g); font-weight:800;">VIP</span>
         </div>
         <span class="tab-title">CLASE 5</span>
+        <span class="tab-desc">Reconectar con mi Negocio y Volver a M&iacute;</span>
+      </div>
+
+      <!-- FOLDER 6 -->
+      <div class="folder-nav-tab" id="tab-clase6" onclick="sw(6)">
+        <div class="tab-top-row">
+          <span class="tab-icon" id="fIcon6">&#128274;</span>
+          <span class="tab-badge" style="background:rgba(212,175,55,0.15); color:var(--gold-l); border:1px solid var(--border-g); font-weight:800;">VIP</span>
+        </div>
+        <span class="tab-title">CLASE 6</span>
         <span class="tab-desc">Cliente Ideal y Posicionamiento de Autoridad</span>
       </div>
     </div>
@@ -943,7 +1051,10 @@ body {
             <p>Audio de Mentalidad &middot; Lic. Romina Lorena Montiel</p>
           </div>
         </div>
-        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg"></audio>
+        <audio controls class="real-audio"><source src="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg"></audio>
+        <div style="margin-top:0.6rem; display:flex; justify-content:flex-end;">
+          <a href="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" download="Podcast_El_Salto_Cuantico_Interior.mp3" class="btn-s">&#11015; Descargar Audio MP3</a>
+        </div>
       </div>
 
       <!-- 3. MATERIALES -->
@@ -955,12 +1066,13 @@ body {
               <div class="m-badge b-docx">DOCX</div>
               <div class="m-meta">
                 <h5>Introducci&oacute;n Escrita Clase 1</h5>
-                <span>Lectura Online Exclusiva</span>
+                <span>Lectura Online + Descarga DOCX</span>
               </div>
             </div>
             <p class="m-desc">Texto preparatorio de Romina: de mentalidad autoempleada a empresaria consciente.</p>
             <div class="m-btns">
               <a href="/clase1_emprender_conscientemente/INTRO_ESCRITA_CLASE_1.html" target="_blank" class="btn-p">&#128065; Ver Online</a>
+              <a href="/clase1_emprender_conscientemente/INTRO_ESCRITA_CLASE_1.docx" download="Introduccion_Escrita_Clase_1.docx" class="btn-s">&#11015; Descargar DOCX</a>
             </div>
           </div>
 
@@ -968,14 +1080,15 @@ body {
             <div class="m-ico-row">
               <div class="m-badge b-pdf">PDF</div>
               <div class="m-meta">
-                <h5>Workbook: Emprender Conscientemente</h5>
-                <span>Interactivo + Descargar PDF</span>
+                <h5>Workbook Oficial: Emprender Conscientemente</h5>
+                <span>Interactivo + Descargar PDF y DOCX</span>
               </div>
             </div>
             <p class="m-desc">Ejercicios pr&aacute;cticos de autodiagn&oacute;stico, visi&oacute;n y autoliderazgo.</p>
             <div class="m-btns">
-              <a href="/clase1_emprender_conscientemente/Workbook_Que_Es_Ser_Una_Emprendedora_Consciente.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
-              <a href="/clase1_emprender_conscientemente/Workbook_Que_Es_Ser_Una_Emprendedora_Consciente.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+              <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente_Oficial.pdf" download="Workbook_Clase_1_Emprender_Conscientemente.pdf" class="btn-p">&#11015; Descargar PDF</a>
+              <a href="/clase1_emprender_conscientemente/Workbook_Clase_1_Emprender_Conscientemente.docx" download="Workbook_Clase_1_Emprender_Conscientemente.docx" class="btn-s">&#11015; DOCX</a>
             </div>
           </div>
 
@@ -984,12 +1097,28 @@ body {
               <div class="m-badge b-pptx">PPTX</div>
               <div class="m-meta">
                 <h5>Presentaci&oacute;n Clase 1</h5>
-                <span>Visualizador Online</span>
+                <span>Visualizador Online + Descarga PPTX</span>
               </div>
             </div>
             <p class="m-desc">Diapositivas completas proyectadas por Romina durante la clase magistral.</p>
             <div class="m-btns">
-              <a href="/clase1_emprender_conscientemente/Presentacion_Que_Es_Ser_Una_Emprendedora_Consciente.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+              <a href="/clase1_emprender_conscientemente/Presentacion_Clase_1_Interactiva.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+              <a href="/clase1_emprender_conscientemente/Clase_1_Emprender_Conscientemente_MODOLIDER.pptx" download="Presentacion_Clase_1.pptx" class="btn-s">&#11015; Descargar PPTX</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Activa tu Mentalidad de Negocios</h5>
+                <span>Lectura Online + Descarga PDF</span>
+              </div>
+            </div>
+            <p class="m-desc">Gu&iacute;a de transformaci&oacute;n mental para pasar de autoempleada a empresaria.</p>
+            <div class="m-btns">
+              <a href="/materiales/Workbook_Activa_Tu_Mentalidad_Negocios.pdf" target="_blank" class="btn-p">&#128065; Ver Online</a>
+              <a href="/materiales/Workbook_Activa_Tu_Mentalidad_Negocios.pdf" download="Workbook_Activa_Tu_Mentalidad_Negocios.pdf" class="btn-s">&#11015; Descargar PDF</a>
             </div>
           </div>
         </div>
@@ -1033,7 +1162,10 @@ body {
             <p>Audio Oficial &middot; Lic. Romina Lorena Montiel</p>
           </div>
         </div>
-        <audio controls controlsList="nodownload" class="real-audio"><source src="/audios/reflexion_producto_cliente_compra.mpeg" type="audio/mpeg"></audio>
+        <audio controls class="real-audio"><source src="/audios/reflexion_producto_cliente_compra.mpeg" type="audio/mpeg"></audio>
+        <div style="margin-top:0.6rem; display:flex; justify-content:flex-end;">
+          <a href="/audios/reflexion_producto_cliente_compra.mpeg" download="Audio_Reflexion_Producto_Cliente_Desea_Comprar.mpeg" class="btn-s">&#11015; Descargar Audio</a>
+        </div>
       </div>
 
       <!-- 3. MATERIALES -->
@@ -1045,12 +1177,13 @@ body {
               <div class="m-badge b-docx">DOCX</div>
               <div class="m-meta">
                 <h5>Introducci&oacute;n Escrita Clase 2</h5>
-                <span>Lectura Online Exclusiva</span>
+                <span>Lectura Online + Descarga DOCX</span>
               </div>
             </div>
             <p class="m-desc">Emprender es construir un negocio que genere libertad financiera y vida sostenible.</p>
             <div class="m-btns">
               <a href="/clase2_proposito_y_direccion/INTRO_ESCRITA_CLASE_2.html" target="_blank" class="btn-p">&#128065; Ver Online</a>
+              <a href="/clase2_proposito_y_direccion/INTRO_ESCRITA_CLASE_2.docx" download="Introduccion_Escrita_Clase_2.docx" class="btn-s">&#11015; Descargar DOCX</a>
             </div>
           </div>
 
@@ -1058,14 +1191,15 @@ body {
             <div class="m-ico-row">
               <div class="m-badge b-pdf">PDF</div>
               <div class="m-meta">
-                <h5>Workbook: Prop&oacute;sito y Direcci&oacute;n</h5>
-                <span>Interactivo + Descargar PDF</span>
+                <h5>Workbook Oficial: Prop&oacute;sito y Direcci&oacute;n</h5>
+                <span>Interactivo + Descargar PDF y DOCX</span>
               </div>
             </div>
             <p class="m-desc">Ejercicios de autodiagn&oacute;stico, matriz del prop&oacute;sito y mapa de ruta estrat&eacute;gico.</p>
             <div class="m-btns">
               <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
-              <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+              <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.pdf" download="Workbook_Clase_2_Proposito_y_Direccion.pdf" class="btn-p">&#11015; Descargar PDF</a>
+              <a href="/clase2_proposito_y_direccion/Workbook_Clase_2_Proposito_y_Direccion.docx" download="Workbook_Clase_2_Proposito_y_Direccion.docx" class="btn-s">&#11015; DOCX</a>
             </div>
           </div>
 
@@ -1074,12 +1208,13 @@ body {
               <div class="m-badge b-pptx">PPTX</div>
               <div class="m-meta">
                 <h5>Presentaci&oacute;n Clase 2</h5>
-                <span>Visualizador Online</span>
+                <span>Visualizador Online + Descarga PPTX</span>
               </div>
             </div>
             <p class="m-desc">Diapositivas completas proyectadas por Romina durante la clase de prop&oacute;sito.</p>
             <div class="m-btns">
               <a href="/clase2_proposito_y_direccion/Presentacion_Clase_2_Proposito_y_Direccion.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+              <a href="/clase2_proposito_y_direccion/Clase_2_Proposito_y_Direccion_MODOLIDER.pptx" download="Presentacion_Clase_2.pptx" class="btn-s">&#11015; Descargar PPTX</a>
             </div>
           </div>
 
@@ -1088,12 +1223,13 @@ body {
               <div class="m-badge b-reto">RETO</div>
               <div class="m-meta">
                 <h5>Reto Final: Cuadro del Prop&oacute;sito</h5>
-                <span>Visualizador Online</span>
+                <span>Visualizador Online + Descarga PNG</span>
               </div>
             </div>
             <p class="m-desc">Complet&aacute; el esquema visual del prop&oacute;sito antes de avanzar a la Clase 3.</p>
             <div class="m-btns">
               <a href="/clase2_proposito_y_direccion/El reto final de esta clase es lograr completar el cuadro del PROPOSITO.PNG" target="_blank" class="btn-p">&#127919; Ver Cuadro del Reto</a>
+              <a href="/clase2_proposito_y_direccion/El reto final de esta clase es lograr completar el cuadro del PROPOSITO.PNG" download="Reto_Cuadro_del_Proposito.png" class="btn-s">&#11015; Descargar PNG</a>
             </div>
           </div>
         </div>
@@ -1115,21 +1251,86 @@ body {
         <span class="hero-tag">&#128274; CARPETA 3 &bull; ALUMNAS ACTIVAS VIP</span>
         <h3>Crear una Propuesta de Valor Irresistible</h3>
         <p>Rompe el anonimato comercial. Descubr&iacute; exactamente qu&eacute; le est&aacute;s vendiendo al inconsciente de tu clienta y estructur&aacute; una oferta que te posicione como referente &uacute;nica.</p>
-      </div>
-
-      <!-- 1. VIDEO -->
-      <div class="vid-area" id="vBox3">
-        <video id="v3" controls controlsList="nodownload" oncontextmenu="return false;">
-          <source src="/clase3_propuesta_de_valor/video_apertura.mp4" type="video/mp4">
-        </video>
-        <div class="pl-bar">
-          <span class="pl-lbl">Videos:</span>
-          <button class="pl-btn active" onclick="svidLocal('v3','/clase3_propuesta_de_valor/video_apertura.mp4','1. Video Apertura: Qu&eacute; es Crear una Propuesta de Valor',this,'d3')">&#9658; 1. Apertura: Propuesta de Valor</button>
-          <button class="pl-btn" onclick="svidLocal('v3','/clase3_propuesta_de_valor/clase3_parte1.mp4','2. Clase 3 - Parte 1: Propuesta de Valor y Autoridad',this,'d3')">&#9658; 2. Clase 3 - Parte 1</button>
-          <button class="pl-btn" onclick="svidLocal('v3','/clase3_propuesta_de_valor/clase3_parte2.mp4','3. Clase 3 - Parte 2: Mi Propuesta de Valor en Acci&oacute;n',this,'d3')">&#9658; 3. Clase 3 - Parte 2</button>
+        <div style="margin-top: 0.8rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
+          <a href="/clase3_propuesta_de_valor/index.html" class="btn-p" style="font-size:0.8rem; padding:0.5rem 1.1rem; text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem;">
+            <span>📱 Abrir Portal Móvil Clase 3 &rarr;</span>
+          </a>
         </div>
       </div>
-      <div class="v-desc" id="d3">&#128161; <strong>Contenido:</strong> Qu&eacute; es crear una propuesta de valor, c&oacute;mo diferenciarte y c&oacute;mo romper las objeciones invisibles de tus clientas.</div>
+
+      <!-- 1. VIDEO DE APERTURA (VISOR VERTICAL 9:16) -->
+      <div class="vertical-apertura-box" style="margin-bottom: 2.2rem; background: linear-gradient(145deg, rgba(14,18,28,0.92) 0%, rgba(10,14,22,0.92) 100%); border: 1.5px solid rgba(212,175,55,0.35); border-radius: 20px; padding: 1.8rem 1.2rem; text-align: center;">
+        <div style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(212,175,55,0.15); color:#FFD700; border:1px solid rgba(212,175,55,0.4); padding:0.35rem 0.95rem; border-radius:50px; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.8rem;">
+          <span>📱</span>
+          <span>Apertura Oficial &bull; Formato Vertical (9:16)</span>
+        </div>
+        <h4 style="font-size:1.15rem; font-weight:800; color:#FFFFFF; margin-bottom:0.4rem;">Video Apertura: ¿Qué es Crear una Propuesta de Valor?</h4>
+        <p style="font-size:0.82rem; color:#94A3B8; max-width:620px; margin:0 auto 1.4rem auto; line-height:1.5;">Concepto disparador clave de la <strong>Lic. Romina Lorena Montiel</strong> antes de avanzar con los dos bloques principales de la clase.</p>
+
+        <!-- MOCKUP SMARTPHONE VERTICAL 9:16 -->
+        <div class="reel-phone-wrapper" style="max-width: 310px; margin: 0 auto;">
+          <div class="reel-phone-notch"></div>
+          <div class="reel-phone-screen">
+            <div class="reel-floating-badge">
+              <span class="reel-icon">&#9658;</span>
+              <span>SHORTS &bull; APERTURA</span>
+            </div>
+            <iframe id="vApertura3" src="https://www.youtube.com/embed/NSccd7Ou9m8?rel=0" title="Video Apertura Clase 3: Propuesta de Valor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: 100%; border: none; display: block;"></iframe>
+          </div>
+          <div class="reel-phone-home-bar"></div>
+        </div>
+
+        <div style="margin-top: 1.1rem; display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap;">
+          <a href="https://www.youtube.com/shorts/NSccd7Ou9m8" target="_blank" class="btn-p" style="font-size:0.78rem; padding:0.55rem 1.2rem; text-decoration:none;">
+            <span>↗️ Abrir en YouTube Shorts</span>
+          </a>
+          <a href="/clase3_propuesta_de_valor/video_apertura.mp4" download="Video_Apertura_Clase_3.mp4" class="btn-s" style="font-size:0.78rem; padding:0.55rem 1.2rem; text-decoration:none;">
+            <span>⬇️ Descargar Video MP4</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. CLASE PRINCIPAL: PARTES 1 Y 2 (PANORÁMICO HD) -->
+      <div class="main-class-box" style="margin-bottom: 2.2rem;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
+          <h4 style="font-size:1.1rem; font-weight:800; color:#FFF; margin:0; display:flex; align-items:center; gap:0.5rem;">
+            <span>🎬</span>
+            <span>Clase Magistral: Partes 1 y 2</span>
+          </h4>
+          <span style="font-size:0.72rem; color:#FFD700; background:rgba(212,175,55,0.12); padding:0.25rem 0.75rem; border-radius:50px; border:1px solid rgba(212,175,55,0.3); font-weight:700;">Formato Panor&aacute;mico HD</span>
+        </div>
+
+        <div class="vid-area" id="vBox3">
+          <iframe id="v3-iframe" src="https://www.youtube.com/embed/znDuCwzIKrs?rel=0" title="Clase 3: Propuesta de Valor y Posicionamiento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; aspect-ratio: 16/9; display: block; border: none; background: #000;"></iframe>
+          <video id="v3-video" controls controlsList="nodownload" oncontextmenu="return false;" preload="metadata" poster="/banner_modo_lider.png" style="width: 100%; aspect-ratio: 16/9; display: none; background: #000;">
+            <source src="/clase3_propuesta_de_valor/clase3_parte1.mp4" type="video/mp4">
+          </video>
+
+          <div class="pl-bar">
+            <span class="pl-lbl">Selector de Video:</span>
+            <button class="pl-btn active" id="btnC3P1YT" onclick="switchClase3MainVideo('iframe', 'https://www.youtube.com/embed/znDuCwzIKrs?rel=0', 'Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento (YouTube HD)', this, 'https://www.youtube.com/watch?v=znDuCwzIKrs')">&#9658; 1. Parte 1 (YouTube)</button>
+            <button class="pl-btn" id="btnC3P2YT" onclick="switchClase3MainVideo('iframe', 'https://www.youtube.com/embed/CHXXmFo63fc?rel=0', 'Clase 3 - Parte 2: Mi Propuesta de Valor en Acci&oacute;n (YouTube HD)', this, 'https://www.youtube.com/watch?v=CHXXmFo63fc')">&#9658; 2. Parte 2 (YouTube)</button>
+            <button class="pl-btn" id="btnC3P1Loc" onclick="switchClase3MainVideo('local', '/clase3_propuesta_de_valor/clase3_parte1.mp4', 'Clase 3 - Parte 1 (Reproductor Local MP4 HD)', this, 'https://www.youtube.com/watch?v=znDuCwzIKrs')">&#128190; 3. Parte 1 (Local MP4)</button>
+            <button class="pl-btn" id="btnC3P2Loc" onclick="switchClase3MainVideo('local', '/clase3_propuesta_de_valor/clase3_parte2.mp4', 'Clase 3 - Parte 2 (Reproductor Local MP4 HD)', this, 'https://www.youtube.com/watch?v=CHXXmFo63fc')">&#128190; 4. Parte 2 (Local MP4)</button>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:0.8rem; flex-wrap:wrap; margin-bottom:0.8rem; background:rgba(0,0,0,0.3); padding:0.8rem 1rem; border-radius:10px; border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:0.78rem; color:#94A3B8;">
+            &#128161; <em>Si YouTube muestra error o pantalla negra por restricciones de tu navegador, hac&eacute; clic en <strong>Local MP4</strong> o abrilo directamente en YouTube:</em>
+          </div>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <a id="btnDirectYT3" href="https://www.youtube.com/watch?v=znDuCwzIKrs" target="_blank" class="btn-s" style="font-size:0.76rem; padding:0.45rem 0.95rem; text-decoration:none;">
+              <span>&#8599;&#65039; Ver en YouTube</span>
+            </a>
+            <a id="dlVideo3" href="/clase3_propuesta_de_valor/clase3_parte1.mp4" download="Clase3_Parte1.mp4" class="btn-s" style="font-size:0.76rem; padding:0.45rem 0.95rem; text-decoration:none;">
+              <span>&#11015; Descargar MP4</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="v-desc" id="d3">&#128161; <strong>Reproduciendo:</strong> Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento &bull; Dictado por la <strong>Lic. Romina Lorena Montiel</strong>.</div>
+      </div>
 
       <!-- 2. AUDIOS -->
       <div class="audio-sec">
@@ -1140,7 +1341,10 @@ body {
             <p>Lecci&oacute;n de Vida y Estrategia &middot; Lic. Romina Lorena Montiel</p>
           </div>
         </div>
-        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg"></audio>
+        <audio controls class="real-audio"><source src="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" type="audio/mpeg"></audio>
+        <div style="margin-top:0.5rem; display:flex; justify-content:flex-end;">
+          <a href="/clase3_propuesta_de_valor/MI%20HISTORIA%20CON%20MARKETING%20CLASE%203.mp3" download="Mi_Historia_con_el_Marketing.mp3" class="btn-s">&#11015; Descargar Audio MP3</a>
+        </div>
         
         <div class="audio-hdr" style="margin-top:1.2rem; padding-top:1.2rem; border-top:1px solid var(--border);">
           <div class="audio-ico" style="background:linear-gradient(135deg,#10B981,#047857);">&#127897;</div>
@@ -1149,7 +1353,10 @@ body {
             <p>Mentalidad de Resiliencia &middot; Lic. Romina Lorena Montiel</p>
           </div>
         </div>
-        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase3_propuesta_de_valor/construir%20a%20pesar%20de%20todo.mp3" type="audio/mpeg"></audio>
+        <audio controls class="real-audio"><source src="/clase3_propuesta_de_valor/construir%20a%20pesar%20de%20todo.mp3" type="audio/mpeg"></audio>
+        <div style="margin-top:0.5rem; display:flex; justify-content:flex-end;">
+          <a href="/clase3_propuesta_de_valor/construir%20a%20pesar%20de%20todo.mp3" download="Construir_a_Pesar_de_Todo.mp3" class="btn-s">&#11015; Descargar Audio MP3</a>
+        </div>
       </div>
 
       <!-- 3. MATERIALES -->
@@ -1167,7 +1374,7 @@ body {
             <p class="m-desc">Cuaderno oficial de trabajo para definir y pulir tu oferta de alto impacto.</p>
             <div class="m-btns">
               <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
-              <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+              <a href="/clase3_propuesta_de_valor/Workbook_Clase_3_Propuesta_de_Valor.pdf" download="Workbook_Clase_3_Propuesta_de_Valor.pdf" class="btn-p">&#11015; Descargar PDF</a>
             </div>
           </div>
 
@@ -1176,12 +1383,13 @@ body {
               <div class="m-badge b-pptx">PPTX</div>
               <div class="m-meta">
                 <h5>Presentaci&oacute;n Clase 3</h5>
-                <span>Visualizador Online</span>
+                <span>Visualizador Online + Descarga PDF</span>
               </div>
             </div>
             <p class="m-desc">Diapositivas oficiales: arquitectura de valor, mensaje clave y promesa transformacional.</p>
             <div class="m-btns">
               <a href="/clase3_propuesta_de_valor/Presentacion_Clase_3_Propuesta_de_Valor.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+              <a href="/clase3_propuesta_de_valor/Presentacion_Clase_3_Propuesta_de_Valor.pdf" download="Presentacion_Clase_3_Propuesta_de_Valor.pdf" class="btn-s">&#11015; Descargar PDF</a>
             </div>
           </div>
 
@@ -1190,12 +1398,59 @@ body {
               <div class="m-badge b-pdf">PDF</div>
               <div class="m-meta">
                 <h5>Los Miedos Detr&aacute;s de lo que Compran</h5>
-                <span>Lectura Online Exclusiva</span>
+                <span>Lectura Online + PDF + PPTX</span>
               </div>
             </div>
             <p class="m-desc">Presentaci&oacute;n visual sobre la psicolog&iacute;a profunda de compra y los temores de tu clienta.</p>
             <div class="m-btns">
               <a href="/clase3_propuesta_de_valor/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.html" target="_blank" class="btn-p">&#128065; Ver Online</a>
+              <a href="/clase3_propuesta_de_valor/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pdf" download="Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pdf" class="btn-s">&#11015; Descargar PDF</a>
+              <a href="/clase3_propuesta_de_valor/Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pptx" download="Presentacion_Los_Miedos_Detras_de_lo_que_Nos_Compran_Nuestros_Clientes.pptx" class="btn-s" style="grid-column:1/-1;">&#128202; Descargar PPTX</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-docx" style="background:rgba(212,175,55,0.2); color:#FFD700; border-color:rgba(212,175,55,0.4);">GU&Iacute;A</div>
+              <div class="m-meta">
+                <h5>&iquest;Qu&eacute; est&aacute; comprando mi clienta?</h5>
+                <span>Lectura Online + Markdown</span>
+              </div>
+            </div>
+            <p class="m-desc">Gu&iacute;a de Romina sobre el reverso del beneficio, mapeo de miedos y salida del commodity.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/que_esta_comprando_mi_clienta.html" target="_blank" class="btn-p">&#128065; Ver Online</a>
+              <a href="/clase3_propuesta_de_valor/que-esta-comprando-mi-clienta.md" download="que-esta-comprando-mi-clienta.md" class="btn-s">&#11015; Descargar MD</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf" style="background:rgba(16,185,129,0.2); color:#34D399; border-color:rgba(16,185,129,0.4);">ESQUEMA 1</div>
+              <div class="m-meta">
+                <h5>Esquema Propuesta de Valor 1</h5>
+                <span>Infograf&iacute;a Visual Oficial &bull; PNG</span>
+              </div>
+            </div>
+            <p class="m-desc">L&aacute;mina visual de s&iacute;ntesis para aplicar durante la clase y el dise&ntilde;o de tu oferta.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/fotito 1.PNG" target="_blank" class="btn-p">&#128065; Ver Imagen</a>
+              <a href="/clase3_propuesta_de_valor/fotito 1.PNG" download="Esquema_Propuesta_Valor_1.png" class="btn-s">&#11015; Descargar PNG</a>
+            </div>
+          </div>
+
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf" style="background:rgba(16,185,129,0.2); color:#34D399; border-color:rgba(16,185,129,0.4);">ESQUEMA 2</div>
+              <div class="m-meta">
+                <h5>Esquema Propuesta de Valor 2</h5>
+                <span>Infograf&iacute;a Visual Oficial &bull; PNG</span>
+              </div>
+            </div>
+            <p class="m-desc">Segunda l&aacute;mina complementaria con la arquitectura de comunicaci&oacute;n y posicionamiento.</p>
+            <div class="m-btns">
+              <a href="/clase3_propuesta_de_valor/fotito 2.PNG" target="_blank" class="btn-p">&#128065; Ver Imagen</a>
+              <a href="/clase3_propuesta_de_valor/fotito 2.PNG" download="Esquema_Propuesta_Valor_2.png" class="btn-s">&#11015; Descargar PNG</a>
             </div>
           </div>
         </div>
@@ -1211,53 +1466,60 @@ body {
       </div>
     </div>
 
-    <!-- PANEL 4: CLASE 4 -->
+    <!-- PANEL 4: CLASE 4 - TRASCENDER BLOQUEOS MENTALES VINCULADOS A CREAR REELS Y CONTENIDO -->
     <div class="c-panel" id="p4">
       <div class="active-folder-banner">
         <span class="hero-tag">&#128274; CARPETA 4 &bull; ALUMNAS ACTIVAS VIP</span>
-        <h3>Reconectar con mi Negocio y Volver a M&iacute;</h3>
-        <p>Alinea tu estado interno con tus acciones comerciales. Desarrolla serenidad, enfoque y un ritmo de trabajo sostenible sin quemarte.</p>
+        <span class="hero-tag" style="background:rgba(225,48,108,0.18); color:#FF5A78; border-color:rgba(225,48,108,0.4); margin-left:0.4rem;">📱 PARTE PR&Aacute;CTICA &bull; REELS Y CONTENIDO</span>
+        <h3>Trascender Bloqueos Mentales: Crear Reels y Contenido</h3>
+        <p>Super&aacute; la par&aacute;lisis y la incomodidad frente a la c&aacute;mara. Reprogram&aacute; tu autodi&aacute;logo interno para perder el miedo al juicio ajeno y comunicar tu mensaje con soltura, impacto y autenticidad en formato vertical para Reels y redes sociales.</p>
       </div>
 
-      <!-- 1. VIDEO -->
-      <div class="vid-area" id="vBox4">
-        <video id="v4" controls controlsList="nodownload" oncontextmenu="return false;">
-          <source src="/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4" type="video/mp4">
-        </video>
-        <div class="pl-bar">
-          <span class="pl-lbl">Video Master:</span>
-          <button class="pl-btn active" onclick="svidLocal('v4','/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4','Regresar a M&iacute; y Reconectar con mi Negocio',this,'d4')">&#9658; Regresar a M&iacute; y Reconectar</button>
+      <!-- SELECTOR DE FORMATO DE VISOR (VERTICAL 9:16 POR DEFECTO / PANORÁMICO 16:9) -->
+      <div class="view-mode-bar">
+        <button type="button" class="btn-mode active" id="btnModeVertical" onclick="setReelViewMode('vertical')">
+          <span>📱</span>
+          <span>Visor Vertical Reel (9:16)</span>
+        </button>
+        <button type="button" class="btn-mode" id="btnModeWide" onclick="setReelViewMode('wide')">
+          <span>🖥️</span>
+          <span>Visor Panor&aacute;mico (16:9)</span>
+        </button>
+      </div>
+
+      <!-- 1. VIDEO CON VISOR VERTICAL (SMARTPHONE MOCKUP 9:16) -->
+      <div class="reel-phone-wrapper" id="reelWrapperClase4">
+        <div class="reel-phone-notch"></div>
+        <div class="reel-phone-screen">
+          <iframe id="vReels" src="https://www.youtube.com/embed/EaxzxD8YUxg?rel=0" title="Trascender Bloqueos Mentales Vinculados a Crear Reels y Contenido" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; height:100%; border:none; display:block;"></iframe>
         </div>
-      </div>
-      <div class="v-desc" id="d4">&#128161; <strong>Contenido:</strong> C&oacute;mo salir de la par&aacute;lisis y el agotamiento mental para retomar las riendas de tus decisiones y tu liderazgo.</div>
-
-      <!-- 2. AUDIO -->
-      <div class="audio-sec">
-        <div class="audio-hdr">
-          <div class="audio-ico">&#127897;</div>
-          <div class="audio-t">
-            <h4>Audio: &iquest;Qu&eacute; pas&oacute; en esta clase?</h4>
-            <p>Reflexi&oacute;n y Anclaje &middot; Lic. Romina Lorena Montiel</p>
-          </div>
-        </div>
-        <audio controls controlsList="nodownload" class="real-audio"><source src="/clase4_reconectar_negocio/QUE%20PASO%20EN%20ESTA%20CLASE.mpeg" type="audio/mpeg"></audio>
+        <div class="reel-phone-home-bar"></div>
       </div>
 
-      <!-- 3. MATERIALES -->
+      <div style="margin: 1rem auto 0 auto; display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap;">
+        <a href="https://youtu.be/EaxzxD8YUxg" target="_blank" class="btn-p" style="font-size:0.78rem; padding:0.5rem 1.2rem; text-decoration:none;">
+          <span>&#8599;&#65039; Ver en YouTube Oficial</span>
+        </a>
+      </div>
+
+      <div class="v-desc" id="d4">&#128161; <strong>Pr&aacute;ctica Oficial:</strong> Trascender Bloqueos Mentales vinculados a Crear Reels y Contenido &bull; Dictado por la <strong>Lic. Romina Lorena Montiel</strong>. Presentado en visor vertical para reproducir de forma aut&eacute;ntica el formato de Reels y Stories.</div>
+
+      <!-- 3. MATERIALES DE LA CLASE PRÁCTICA (VIDEO Y ARCHIVO JUNTOS) -->
       <div class="mats">
-        <div class="mats-ttl">&#128196; Materiales de la Clase</div>
+        <div class="mats-ttl">&#128196; Archivo Oficial de la Pr&aacute;ctica (Junto al Video)</div>
         <div class="mats-grid">
-          <div class="m-card">
+          <div class="m-card" style="border: 1.5px solid rgba(212, 175, 55, 0.45); background: linear-gradient(145deg, #151B28 0%, #101520 100%);">
             <div class="m-ico-row">
-              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-badge b-pdf">PDF OFICIAL</div>
               <div class="m-meta">
-                <h5>Gu&iacute;a: Volver a M&iacute; y Reconectar</h5>
-                <span>Lectura Online Exclusiva</span>
+                <h5 style="color:#FFD700;">7 D&iacute;as para Mejorar mi Autodi&aacute;logo Interno</h5>
+                <span>Gu&iacute;a de Ejercicios y Neuroplasticidad &bull; PDF Descargable</span>
               </div>
             </div>
-            <p class="m-desc">Documento de autoacompa&ntilde;amiento emocional y estrat&eacute;gico para reconectar con tu proyecto.</p>
+            <p class="m-desc">Cuaderno estructurado para sanar el di&aacute;logo interior antes de grabar, desarticular el perfeccionismo paralizante y encender la c&aacute;mara con seguridad y convicci&oacute;n.</p>
             <div class="m-btns">
-              <a href="/clase4_reconectar_negocio/GUIA%20PARA%20VOLVER%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO%20(1).pdf" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
+              <a href="/clase4_bloqueos_reels/7_dias_para_mejorar_mi_autodialogo_interno.pdf" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
+              <a href="/clase4_bloqueos_reels/7_dias_para_mejorar_mi_autodialogo_interno.pdf" download="7_dias_para_mejorar_mi_autodialogo_interno.pdf" class="btn-s">&#11015; Descargar PDF Oficial</a>
             </div>
           </div>
         </div>
@@ -1277,6 +1539,75 @@ body {
     <div class="c-panel" id="p5">
       <div class="active-folder-banner">
         <span class="hero-tag">&#128274; CARPETA 5 &bull; ALUMNAS ACTIVAS VIP</span>
+        <h3>Reconectar con mi Negocio y Volver a M&iacute;</h3>
+        <p>Alinea tu estado interno con tus acciones comerciales. Desarrolla serenidad, enfoque y un ritmo de trabajo sostenible sin quemarte.</p>
+      </div>
+
+      <!-- 1. VIDEO -->
+      <div class="vid-area" id="vBox5">
+        <video id="v5" controls oncontextmenu="return false;">
+          <source src="/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4" type="video/mp4">
+        </video>
+        <div class="pl-bar">
+          <span class="pl-lbl">Video Master:</span>
+          <button class="pl-btn active" onclick="svidLocal('v5','/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4','Regresar a M&iacute; y Reconectar con mi Negocio',this,'d5')">&#9658; Regresar a M&iacute; y Reconectar</button>
+        </div>
+        <div style="margin-top:0.6rem; display:flex; justify-content:flex-end;">
+          <a href="/clase4_reconectar_negocio/REGRESAR%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO.mp4" download="Regresar_a_Mi_y_Reconectar_con_mi_Negocio.mp4" class="btn-s">&#11015; Descargar Video Master (MP4)</a>
+        </div>
+      </div>
+      <div class="v-desc" id="d5">&#128161; <strong>Contenido:</strong> C&oacute;mo salir de la par&aacute;lisis y el agotamiento mental para retomar las riendas de tus decisiones y tu liderazgo.</div>
+
+      <!-- 2. AUDIO -->
+      <div class="audio-sec">
+        <div class="audio-hdr">
+          <div class="audio-ico">&#127897;</div>
+          <div class="audio-t">
+            <h4>Audio: &iquest;Qu&eacute; pas&oacute; en esta clase?</h4>
+            <p>Reflexi&oacute;n y Anclaje &middot; Lic. Romina Lorena Montiel</p>
+          </div>
+        </div>
+        <audio controls class="real-audio"><source src="/clase4_reconectar_negocio/QUE%20PASO%20EN%20ESTA%20CLASE.mpeg" type="audio/mpeg"></audio>
+        <div style="margin-top:0.6rem; display:flex; justify-content:flex-end;">
+          <a href="/clase4_reconectar_negocio/QUE%20PASO%20EN%20ESTA%20CLASE.mpeg" download="Que_Paso_En_Esta_Clase.mpeg" class="btn-s">&#11015; Descargar Audio</a>
+        </div>
+      </div>
+
+      <!-- 3. MATERIALES -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Materiales de la Clase</div>
+        <div class="mats-grid">
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Gu&iacute;a Oficial: Volver a M&iacute; y Reconectar</h5>
+                <span>Lectura Online + Descarga PDF</span>
+              </div>
+            </div>
+            <p class="m-desc">Documento de autoacompa&ntilde;amiento emocional y estrat&eacute;gico para reconectar con tu proyecto.</p>
+            <div class="m-btns">
+              <a href="/clase4_reconectar_negocio/GUIA%20PARA%20VOLVER%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO%20(1).pdf" target="_blank" class="btn-p">&#128065; Ver Gu&iacute;a Online</a>
+              <a href="/clase4_reconectar_negocio/GUIA%20PARA%20VOLVER%20A%20MI%20Y%20RECONECTAR%20CON%20MI%20NEGOCIO%20(1).pdf" download="Guia_Volver_a_Mi_y_Reconectar_con_mi_Negocio.pdf" class="btn-s">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTONES DE REGRESO -->
+      <div class="return-to-folders-box">
+        <button type="button" class="btn-return-folders" onclick="scrollToFolders()">
+          <span>&#128193; Regresar a las Carpetas de Estudio</span>
+          <span class="btn-arrow">&uarr;</span>
+        </button>
+        <a href="/campus_modo_lider.html" class="btn-return-campus">&#8592; Volver al Campus Principal</a>
+      </div>
+    </div>
+
+    <!-- PANEL 6: CLASE 6 -->
+    <div class="c-panel" id="p6">
+      <div class="active-folder-banner">
+        <span class="hero-tag">&#128274; CARPETA 6 &bull; ALUMNAS ACTIVAS VIP</span>
         <h3>Cliente Ideal y Posicionamiento de Autoridad</h3>
         <p>Deja de hablarle a la masa. Aprende a definir con precisi&oacute;n a tu clienta perfecta, dise&ntilde;ar guiones de conexi&oacute;n y posicionarte como la soluci&oacute;n evidente en su mente.</p>
       </div>
@@ -1289,14 +1620,14 @@ body {
             <div class="m-ico-row">
               <div class="m-badge b-pdf">PDF</div>
               <div class="m-meta">
-                <h5>Workbook: Cliente Ideal y Posicionamiento</h5>
+                <h5>Workbook Oficial: Cliente Ideal y Posicionamiento</h5>
                 <span>Interactivo + Descargar PDF</span>
               </div>
             </div>
             <p class="m-desc">Estructura el avatar profundo de tu cliente so&ntilde;ado y dise&ntilde;a tus mensajes de conversi&oacute;n.</p>
             <div class="m-btns">
               <a href="/clase5_cliente_ideal/Workbook_Clase_4_Cliente_Ideal_y_Posicionamiento.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
-              <a href="/clase5_cliente_ideal/Workbook_Clase_4_Cliente_Ideal_y_Posicionamiento.pdf" download class="btn-p">&#11015; Descargar PDF</a>
+              <a href="/clase5_cliente_ideal/Workbook_Clase_4_Cliente_Ideal_y_Posicionamiento.pdf" download="Workbook_Cliente_Ideal_y_Posicionamiento.pdf" class="btn-p">&#11015; Descargar PDF</a>
             </div>
           </div>
 
@@ -1305,12 +1636,13 @@ body {
               <div class="m-badge b-pptx">PPTX</div>
               <div class="m-meta">
                 <h5>Presentaci&oacute;n: Cliente Ideal y Posicionamiento</h5>
-                <span>Visualizador Online</span>
+                <span>Visualizador Online + Descarga</span>
               </div>
             </div>
             <p class="m-desc">Diapositivas oficiales dictadas por la Lic. Romina Lorena Montiel.</p>
             <div class="m-btns">
               <a href="/clase5_cliente_ideal/Presentacion_Clase_4_Cliente_Ideal_y_Posicionamiento.html" target="_blank" class="btn-p">&#128640; Ver Presentaci&oacute;n</a>
+              <a href="/clase5_cliente_ideal/Presentacion_Clase_4_Cliente_Ideal_y_Posicionamiento.html" download="Presentacion_Cliente_Ideal_y_Posicionamiento.html" class="btn-s">&#11015; Descargar Diapositivas</a>
             </div>
           </div>
         </div>
@@ -1337,28 +1669,28 @@ body {
     <div class="modal-header">
       <div class="modal-lock-icon">&#128274;</div>
       <h3>&Aacute;rea Exclusiva Alumnas Activas</h3>
-      <p>A partir de la Clase 3, el contenido est&aacute; reservado para alumnas activas del M&eacute;todo Modo L&iacute;der.</p>
+      <p>A partir de la Clase 3, el contenido y descargas est&aacute;n reservados para alumnas del M&eacute;todo Modo L&iacute;der. Ingres&aacute; tu clave de alumna para desbloquear todo el curso.</p>
     </div>
 
     <form class="modal-form" onsubmit="handleAuthSubmit(event)" autocomplete="off">
       <div class="form-group">
         <label for="authId">Identificador / Correo de Alumna</label>
         <div class="form-input-wrap">
-          <input type="text" id="authId" class="form-input" placeholder="Ingres&aacute; tu correo o usuario" required autocomplete="off">
+          <input type="text" id="authId" class="form-input" placeholder="Ingres&aacute; tu usuario o correo (ej: soyalumnamodolider)" autocomplete="off">
         </div>
       </div>
 
       <div class="form-group">
         <label for="authPass">Clave de Acceso</label>
         <div class="form-input-wrap">
-          <input type="password" id="authPass" class="form-input" placeholder="Ingres&aacute; tu clave de acceso" required autocomplete="new-password">
+          <input type="password" id="authPass" class="form-input" placeholder="Ingres&aacute; tu clave (ej: exitosas888)" required autocomplete="new-password">
           <button type="button" class="form-pwd-toggle" onclick="togglePwdVisibility()" id="pwdToggleIcon">&#128065;</button>
         </div>
       </div>
 
       <div id="modalErr" class="modal-err">&#9888; Clave de acceso incorrecta.</div>
 
-      <button type="submit" class="btn-modal-submit">&#128273; Desbloquear Contenido</button>
+      <button type="submit" class="btn-modal-submit">&#128273; Desbloquear Contenido y Descargas</button>
 
       <!-- BOTONES DE RETORNO SI NO TIENE LA CLAVE -->
       <div style="margin-top:0.6rem; display:flex; flex-direction:column; gap:0.6rem;">
@@ -1379,6 +1711,34 @@ var pendingTarget = null;
 
 function isAuth() {
   return localStorage.getItem('alumna_activa_modo_lider') === 'true';
+}
+
+function checkAlumnaCredentials(u, p) {
+  var cleanU = (u || '').trim().toLowerCase().replace(/[\s\-_]+/g, '');
+  var cleanP = (p || '').trim().toLowerCase().replace(/[\s\-_]+/g, '');
+  var combined = cleanU + cleanP;
+
+  var validTokens = [
+    'soyalumnamodolider',
+    'exitosas888',
+    'soyalumnaactivamodolider',
+    'soyalumnamodoliderexitosas888',
+    'exitosas888soyalumnamodolider',
+    'soyalumnaactivamodoliderexitosas888',
+    'exitosas888soyalumnaactivamodolider'
+  ];
+
+  for (var i = 0; i < validTokens.length; i++) {
+    if (cleanP === validTokens[i] || cleanU === validTokens[i] || combined === validTokens[i]) {
+      return true;
+    }
+  }
+
+  if (cleanP.indexOf('soyalumnamodolider') !== -1 || cleanP.indexOf('exitosas888') !== -1 || cleanP.indexOf('soyalumnaactiva') !== -1) return true;
+  if (cleanU.indexOf('soyalumnamodolider') !== -1 || cleanU.indexOf('exitosas888') !== -1 || cleanU.indexOf('soyalumnaactiva') !== -1) return true;
+  if (combined.indexOf('soyalumnamodolider') !== -1 || combined.indexOf('exitosas888') !== -1) return true;
+
+  return false;
 }
 
 function updateAuthUI() {
@@ -1402,9 +1762,11 @@ function updateAuthUI() {
   var f3 = document.getElementById('fIcon3');
   var f4 = document.getElementById('fIcon4');
   var f5 = document.getElementById('fIcon5');
+  var f6 = document.getElementById('fIcon6');
   if (f3) f3.textContent = authed ? '📂' : '🔐';
-  if (f4) f4.textContent = authed ? '📂' : '🔐';
+  if (f4) f4.textContent = authed ? '📱' : '🔐';
   if (f5) f5.textContent = authed ? '📂' : '🔐';
+  if (f6) f6.textContent = authed ? '📂' : '🔐';
 }
 
 function openModal(target) {
@@ -1448,12 +1810,13 @@ function togglePwdVisibility() {
 
 function handleAuthSubmit(e) {
   e.preventDefault();
-  var u = (document.getElementById('authId').value || '').trim().toUpperCase();
-  var p = (document.getElementById('authPass').value || '').trim().toUpperCase();
+  var u = (document.getElementById('authId').value || '').trim();
+  var p = (document.getElementById('authPass').value || '').trim();
   var err = document.getElementById('modalErr');
 
-  if (p === 'EXITOSAS888' || u === 'SOYALUMNAACTIVAMODOLIDER' || p === 'SOYALUMNAACTIVAMODOLIDER') {
+  if (checkAlumnaCredentials(u, p)) {
     localStorage.setItem('alumna_activa_modo_lider', 'true');
+    localStorage.setItem('alumna_activa_user', u || 'soyalumnamodolider');
     updateAuthUI();
     closeModal();
     var t = pendingTarget || 3;
@@ -1462,13 +1825,13 @@ function handleAuthSubmit(e) {
   } else {
     if (err) {
       err.style.display = 'block';
-      err.textContent = '\u26A0 Clave o usuario incorrecto.';
+      err.innerHTML = '&#9888; Clave incorrecta. Record&aacute; ingresar la clave de alumna: <strong>soyalumnamodolider</strong> o <strong>exitosas888</strong>.';
     }
   }
 }
 
 function sw(n) {
-  if ((n === 3 || n === 4 || n === 5) && !isAuth()) {
+  if (n >= 3 && !isAuth()) {
     openModal(n);
     return;
   }
@@ -1487,10 +1850,67 @@ function sw(n) {
   }
 }
 
+function setReelViewMode(mode) {
+  var wrap = document.getElementById('reelWrapperClase4');
+  var btnV = document.getElementById('btnModeVertical');
+  var btnW = document.getElementById('btnModeWide');
+  if (!wrap) return;
+  if (mode === 'wide') {
+    wrap.classList.add('wide-mode');
+    if (btnW) btnW.classList.add('active');
+    if (btnV) btnV.classList.remove('active');
+  } else {
+    wrap.classList.remove('wide-mode');
+    if (btnV) btnV.classList.add('active');
+    if (btnW) btnW.classList.remove('active');
+  }
+}
+
 function scrollToFolders() {
   var el = document.getElementById('carpetas');
   if (el) {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function switchClase3MainVideo(mode, url, desc, btn, directYtUrl) {
+  var ifr = document.getElementById('v3-iframe');
+  var vid = document.getElementById('v3-video');
+  var d = document.getElementById('d3');
+  var btnDirect = document.getElementById('btnDirectYT3');
+  var dlBtn = document.getElementById('dlVideo3');
+
+  if (mode === 'iframe') {
+    if (vid) {
+      vid.pause();
+      vid.style.display = 'none';
+    }
+    if (ifr) {
+      ifr.style.display = 'block';
+      ifr.src = '';
+      setTimeout(function(){ ifr.src = url; }, 50);
+    }
+  } else {
+    if (ifr) {
+      ifr.src = '';
+      ifr.style.display = 'none';
+    }
+    if (vid) {
+      vid.style.display = 'block';
+      vid.src = url;
+      vid.load();
+      vid.play().catch(function(){});
+    }
+    if (dlBtn) dlBtn.href = url;
+  }
+
+  if (d) d.innerHTML = '\uD83D\uDCA1 <strong>Reproduciendo:</strong> ' + desc;
+  if (btnDirect && directYtUrl) btnDirect.href = directYtUrl;
+
+  if (btn) {
+    var bar = btn.closest('.pl-bar');
+    if (bar) bar.querySelectorAll('.pl-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
   }
 }
 
@@ -1523,9 +1943,22 @@ function svidLocal(videoId, url, desc, btn, descId) {
     if (bar) bar.querySelectorAll('.pl-btn').forEach(function(b){ b.classList.remove('active'); });
     btn.classList.add('active');
   }
+  var dlBtn = document.getElementById('dlVideo3');
+  if (dlBtn && videoId === 'v3') {
+    dlBtn.href = url;
+  }
 }
 
 window.addEventListener('DOMContentLoaded', function(){
+  // Auto-login if key is passed via URL query parameter (?clave=... or ?key=...)
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var qPass = params.get('clave') || params.get('key') || params.get('pass');
+    if (qPass && checkAlumnaCredentials('', qPass)) {
+      localStorage.setItem('alumna_activa_modo_lider', 'true');
+    }
+  } catch(e) {}
+
   updateAuthUI();
   var h = window.location.hash;
   if (h) {

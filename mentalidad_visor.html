@@ -1018,20 +1018,49 @@ function togglePwdVisibility() {
   }
 }
 
+function checkAlumnaCredentials(u, p) {
+  var cleanU = (u || '').trim().toLowerCase().replace(/[\s\-_]+/g, '');
+  var cleanP = (p || '').trim().toLowerCase().replace(/[\s\-_]+/g, '');
+  var combined = cleanU + cleanP;
+
+  var validTokens = [
+    'soyalumnamodolider',
+    'exitosas888',
+    'soyalumnaactivamodolider',
+    'soyalumnamodoliderexitosas888',
+    'exitosas888soyalumnamodolider',
+    'soyalumnaactivamodoliderexitosas888',
+    'exitosas888soyalumnaactivamodolider'
+  ];
+
+  for (var i = 0; i < validTokens.length; i++) {
+    if (cleanP === validTokens[i] || cleanU === validTokens[i] || combined === validTokens[i]) {
+      return true;
+    }
+  }
+
+  if (cleanP.indexOf('soyalumnamodolider') !== -1 || cleanP.indexOf('exitosas888') !== -1 || cleanP.indexOf('soyalumnaactiva') !== -1) return true;
+  if (cleanU.indexOf('soyalumnamodolider') !== -1 || cleanU.indexOf('exitosas888') !== -1 || cleanU.indexOf('soyalumnaactiva') !== -1) return true;
+  if (combined.indexOf('soyalumnamodolider') !== -1 || combined.indexOf('exitosas888') !== -1) return true;
+
+  return false;
+}
+
 function handleAuthSubmit(e) {
   e.preventDefault();
-  var u = (document.getElementById('authId').value || '').trim().toUpperCase();
-  var p = (document.getElementById('authPass').value || '').trim().toUpperCase();
+  var u = (document.getElementById('authId').value || '').trim();
+  var p = (document.getElementById('authPass').value || '').trim();
   var err = document.getElementById('modalErr');
 
-  if (p === 'EXITOSAS888' || u === 'SOYALUMNAACTIVAMODOLIDER' || p === 'SOYALUMNAACTIVAMODOLIDER') {
+  if (checkAlumnaCredentials(u, p)) {
     localStorage.setItem('alumna_activa_modo_lider', 'true');
+    localStorage.setItem('alumna_activa_user', u || 'soyalumnamodolider');
     updateAuthUI();
     closeModal();
   } else {
     if (err) {
       err.style.display = 'block';
-      err.textContent = '\u26A0 Clave o usuario incorrecto.';
+      err.innerHTML = '&#9888; Clave incorrecta. Record&aacute; ingresar: <strong>soyalumnamodolider</strong> o <strong>exitosas888</strong>.';
     }
   }
 }
