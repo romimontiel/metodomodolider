@@ -1281,52 +1281,36 @@ body {
         </div>
 
         <div style="margin-top: 1.1rem; display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap;">
-          <a href="https://www.youtube.com/shorts/NSccd7Ou9m8" target="_blank" class="btn-p" style="font-size:0.78rem; padding:0.55rem 1.2rem; text-decoration:none;">
+          <a href="https://www.youtube.com/shorts/NSccd7Ou9m8" target="_blank" class="btn-p" style="font-size:0.85rem; padding:0.6rem 1.4rem; text-decoration:none;">
             <span>↗️ Abrir en YouTube Shorts</span>
-          </a>
-          <a href="/clase3_propuesta_de_valor/video_apertura.mp4" download="Video_Apertura_Clase_3.mp4" class="btn-s" style="font-size:0.78rem; padding:0.55rem 1.2rem; text-decoration:none;">
-            <span>⬇️ Descargar Video MP4</span>
           </a>
         </div>
       </div>
 
-      <!-- 2. CLASE PRINCIPAL: PARTES 1 Y 2 (PANORÁMICO HD) -->
+      <!-- 2. CLASE PRINCIPAL: PARTES 1 Y 2 (PANORÁMICO HD YOUTUBE) -->
       <div class="main-class-box" style="margin-bottom: 2.2rem;">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
           <h4 style="font-size:1.1rem; font-weight:800; color:#FFF; margin:0; display:flex; align-items:center; gap:0.5rem;">
             <span>🎬</span>
             <span>Clase Magistral: Partes 1 y 2</span>
           </h4>
-          <span style="font-size:0.72rem; color:#FFD700; background:rgba(212,175,55,0.12); padding:0.25rem 0.75rem; border-radius:50px; border:1px solid rgba(212,175,55,0.3); font-weight:700;">Formato Panor&aacute;mico HD</span>
+          <span style="font-size:0.72rem; color:#FFD700; background:rgba(212,175,55,0.12); padding:0.25rem 0.75rem; border-radius:50px; border:1px solid rgba(212,175,55,0.3); font-weight:700;">YouTube Oficial HD</span>
         </div>
 
         <div class="vid-area" id="vBox3">
           <iframe id="v3-iframe" src="https://www.youtube.com/embed/znDuCwzIKrs?rel=0" title="Clase 3: Propuesta de Valor y Posicionamiento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; aspect-ratio: 16/9; display: block; border: none; background: #000;"></iframe>
-          <video id="v3-video" controls controlsList="nodownload" oncontextmenu="return false;" preload="metadata" poster="/banner_modo_lider.png" style="width: 100%; aspect-ratio: 16/9; display: none; background: #000;">
-            <source src="/clase3_propuesta_de_valor/clase3_parte1.mp4" type="video/mp4">
-          </video>
 
           <div class="pl-bar">
-            <span class="pl-lbl">Selector de Video:</span>
-            <button class="pl-btn active" id="btnC3P1YT" onclick="switchClase3MainVideo('iframe', 'https://www.youtube.com/embed/znDuCwzIKrs?rel=0', 'Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento (YouTube HD)', this, 'https://www.youtube.com/watch?v=znDuCwzIKrs')">&#9658; 1. Parte 1 (YouTube)</button>
-            <button class="pl-btn" id="btnC3P2YT" onclick="switchClase3MainVideo('iframe', 'https://www.youtube.com/embed/CHXXmFo63fc?rel=0', 'Clase 3 - Parte 2: Mi Propuesta de Valor en Acci&oacute;n (YouTube HD)', this, 'https://www.youtube.com/watch?v=CHXXmFo63fc')">&#9658; 2. Parte 2 (YouTube)</button>
-            <button class="pl-btn" id="btnC3P1Loc" onclick="switchClase3MainVideo('local', '/clase3_propuesta_de_valor/clase3_parte1.mp4', 'Clase 3 - Parte 1 (Reproductor Local MP4 HD)', this, 'https://www.youtube.com/watch?v=znDuCwzIKrs')">&#128190; 3. Parte 1 (Local MP4)</button>
-            <button class="pl-btn" id="btnC3P2Loc" onclick="switchClase3MainVideo('local', '/clase3_propuesta_de_valor/clase3_parte2.mp4', 'Clase 3 - Parte 2 (Reproductor Local MP4 HD)', this, 'https://www.youtube.com/watch?v=CHXXmFo63fc')">&#128190; 4. Parte 2 (Local MP4)</button>
+            <span class="pl-lbl">Selector de Masterclass:</span>
+            <button class="pl-btn active" id="btnC3P1YT" onclick="switchClase3MainVideo('iframe', 'https://www.youtube.com/embed/znDuCwzIKrs?rel=0', 'Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento (YouTube HD)', this, 'https://www.youtube.com/watch?v=znDuCwzIKrs')">&#9658; 1. Parte 1 (YouTube HD)</button>
+            <button class="pl-btn" id="btnC3P2YT" onclick="switchClase3MainVideo('iframe', 'https://www.youtube.com/embed/CHXXmFo63fc?rel=0', 'Clase 3 - Parte 2: Mi Propuesta de Valor en Acci&oacute;n (YouTube HD)', this, 'https://www.youtube.com/watch?v=CHXXmFo63fc')">&#9658; 2. Parte 2 (YouTube HD)</button>
           </div>
         </div>
 
-        <div style="display:flex; justify-content:space-between; align-items:center; gap:0.8rem; flex-wrap:wrap; margin-bottom:0.8rem; background:rgba(0,0,0,0.3); padding:0.8rem 1rem; border-radius:10px; border:1px solid rgba(255,255,255,0.06);">
-          <div style="font-size:0.78rem; color:#94A3B8;">
-            &#128161; <em>Si YouTube muestra error o pantalla negra por restricciones de tu navegador, hac&eacute; clic en <strong>Local MP4</strong> o abrilo directamente en YouTube:</em>
-          </div>
-          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <a id="btnDirectYT3" href="https://www.youtube.com/watch?v=znDuCwzIKrs" target="_blank" class="btn-s" style="font-size:0.76rem; padding:0.45rem 0.95rem; text-decoration:none;">
-              <span>&#8599;&#65039; Ver en YouTube</span>
-            </a>
-            <a id="dlVideo3" href="/clase3_propuesta_de_valor/clase3_parte1.mp4" download="Clase3_Parte1.mp4" class="btn-s" style="font-size:0.76rem; padding:0.45rem 0.95rem; text-decoration:none;">
-              <span>&#11015; Descargar MP4</span>
-            </a>
-          </div>
+        <div style="display:flex; justify-content:flex-end; align-items:center; margin-bottom:0.8rem;">
+          <a id="btnDirectYT3" href="https://www.youtube.com/watch?v=znDuCwzIKrs" target="_blank" class="btn-s" style="font-size:0.78rem; padding:0.45rem 1rem; text-decoration:none;">
+            <span>&#8599;&#65039; Ver en YouTube Oficial</span>
+          </a>
         </div>
 
         <div class="v-desc" id="d3">&#128161; <strong>Reproduciendo:</strong> Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento &bull; Dictado por la <strong>Lic. Romina Lorena Montiel</strong>.</div>
@@ -1470,39 +1454,28 @@ body {
     <div class="c-panel" id="p4">
       <div class="active-folder-banner">
         <span class="hero-tag">&#128274; CARPETA 4 &bull; ALUMNAS ACTIVAS VIP</span>
-        <span class="hero-tag" style="background:rgba(225,48,108,0.18); color:#FF5A78; border-color:rgba(225,48,108,0.4); margin-left:0.4rem;">📱 PARTE PR&Aacute;CTICA &bull; REELS Y CONTENIDO</span>
+        <span class="hero-tag" style="background:rgba(225,48,108,0.18); color:#FF5A78; border-color:rgba(225,48,108,0.4); margin-left:0.4rem;">🎬 MASTERCLASS &bull; TRASCENDER BLOQUEOS</span>
         <h3>Trascender Bloqueos Mentales: Crear Reels y Contenido</h3>
-        <p>Super&aacute; la par&aacute;lisis y la incomodidad frente a la c&aacute;mara. Reprogram&aacute; tu autodi&aacute;logo interno para perder el miedo al juicio ajeno y comunicar tu mensaje con soltura, impacto y autenticidad en formato vertical para Reels y redes sociales.</p>
+        <p>Super&aacute; la par&aacute;lisis y la incomodidad frente a la c&aacute;mara. Reprogram&aacute; tu autodi&aacute;logo interno para perder el miedo al juicio ajeno y comunicar tu mensaje con soltura, impacto y autenticidad.</p>
       </div>
 
-      <!-- SELECTOR DE FORMATO DE VISOR (VERTICAL 9:16 POR DEFECTO / PANORÁMICO 16:9) -->
-      <div class="view-mode-bar">
-        <button type="button" class="btn-mode active" id="btnModeVertical" onclick="setReelViewMode('vertical')">
-          <span>📱</span>
-          <span>Visor Vertical Reel (9:16)</span>
-        </button>
-        <button type="button" class="btn-mode" id="btnModeWide" onclick="setReelViewMode('wide')">
-          <span>🖥️</span>
-          <span>Visor Panor&aacute;mico (16:9)</span>
-        </button>
-      </div>
+      <!-- 1. VIDEO CON VISOR HORIZONTAL PANORÁMICO HD (16:9) -->
+      <div class="vid-area" id="vBox4" style="margin-bottom: 1.2rem;">
+        <iframe id="vReels" src="https://www.youtube.com/embed/EaxzxD8YUxg?rel=0" title="Trascender Bloqueos Mentales Vinculados a Crear Reels y Contenido" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; aspect-ratio:16/9; border:none; display:block; background:#000;"></iframe>
 
-      <!-- 1. VIDEO CON VISOR VERTICAL (SMARTPHONE MOCKUP 9:16) -->
-      <div class="reel-phone-wrapper" id="reelWrapperClase4">
-        <div class="reel-phone-notch"></div>
-        <div class="reel-phone-screen">
-          <iframe id="vReels" src="https://www.youtube.com/embed/EaxzxD8YUxg?rel=0" title="Trascender Bloqueos Mentales Vinculados a Crear Reels y Contenido" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; height:100%; border:none; display:block;"></iframe>
+        <div class="pl-bar">
+          <span class="pl-lbl">Video Masterclass:</span>
+          <button class="pl-btn active" onclick="svidIframe('vReels','https://www.youtube.com/embed/EaxzxD8YUxg?rel=0','Trascender Bloqueos Mentales Vinculados a Crear Reels y Contenido',this,'d4')">&#9658; 1. Grabaci&oacute;n Completa (YouTube HD)</button>
         </div>
-        <div class="reel-phone-home-bar"></div>
       </div>
 
-      <div style="margin: 1rem auto 0 auto; display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap;">
-        <a href="https://youtu.be/EaxzxD8YUxg" target="_blank" class="btn-p" style="font-size:0.78rem; padding:0.5rem 1.2rem; text-decoration:none;">
+      <div style="margin: 0.6rem 0 1.2rem 0; display: flex; justify-content: flex-end; gap: 0.8rem; flex-wrap: wrap;">
+        <a href="https://www.youtube.com/watch?v=EaxzxD8YUxg" target="_blank" class="btn-s" style="font-size:0.78rem; padding:0.45rem 1rem; text-decoration:none;">
           <span>&#8599;&#65039; Ver en YouTube Oficial</span>
         </a>
       </div>
 
-      <div class="v-desc" id="d4">&#128161; <strong>Pr&aacute;ctica Oficial:</strong> Trascender Bloqueos Mentales vinculados a Crear Reels y Contenido &bull; Dictado por la <strong>Lic. Romina Lorena Montiel</strong>. Presentado en visor vertical para reproducir de forma aut&eacute;ntica el formato de Reels y Stories.</div>
+      <div class="v-desc" id="d4">&#128161; <strong>Clase Oficial:</strong> Trascender Bloqueos Mentales vinculados a Crear Reels y Contenido &bull; Dictado por la <strong>Lic. Romina Lorena Montiel</strong>. Formato Panor&aacute;mico HD.</div>
 
       <!-- 3. MATERIALES DE LA CLASE PRÁCTICA (VIDEO Y ARCHIVO JUNTOS) -->
       <div class="mats">

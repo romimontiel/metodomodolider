@@ -1282,50 +1282,32 @@ export default function CampusClient() {
                                     <span>🎬</span>
                                     <span id="title-video-clase3">{clase3Video.title}</span>
                                 </div>
-                                <span className="pillar-badge">{clase3Video.isYouTube ? "Video Oficial HD" : "Video Local MP4"}</span>
+                                <span className="pillar-badge">YouTube Oficial HD</span>
                             </div>
                             <div className="folder-video-screen">
-                                {clase3Video.isYouTube ? (
-                                    <iframe 
-                                        id="iframeElement-clase3" 
-                                        src={clase3Video.src} 
-                                        title={clase3Video.title} 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowFullScreen 
-                                        style={{ display: "block", width: "100%", aspectRatio: "16 / 9", border: "none", background: "#000" }}>
-                                    </iframe>
-                                ) : (
-                                    <video id="videoElement-clase3" ref={clase3VideoRef} controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} preload="metadata" poster="/banner_modo_lider.png" style={{ display: "block", width: "100%", aspectRatio: "16 / 9", background: "#000", borderRadius: "12px" }}>
-                                        <source src={clase3Video.src} type="video/mp4" />
-                                    </video>
-                                )}
+                                <iframe 
+                                    id="iframeElement-clase3" 
+                                    src={clase3Video.src} 
+                                    title={clase3Video.title} 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowFullScreen 
+                                    style={{ display: "block", width: "100%", aspectRatio: "16 / 9", border: "none", background: "#000" }}>
+                                </iframe>
                             </div>
-                            {/* Selector de videos de la Clase 3 */}
+                            {/* Selector de videos de la Clase 3 (Solo YouTube) */}
                             <div className="video-playlist-bar">
-                                <span className="playlist-label">Selector:</span>
+                                <span className="playlist-label">Selector de Masterclass:</span>
                                 <button className={`playlist-btn ${clase3Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase3Video('https://www.youtube-nocookie.com/embed/znDuCwzIKrs?rel=0', '1. Clase 3 - Parte 1: Propuesta de Valor (YouTube HD)', 0, true, 'https://www.youtube.com/watch?v=znDuCwzIKrs')}>
                                     ▶ 1. Parte 1 (YouTube HD)
                                 </button>
                                 <button className={`playlist-btn ${clase3Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase3Video('https://www.youtube-nocookie.com/embed/CHXXmFo63fc?rel=0', '2. Clase 3 - Parte 2: Mi Propuesta de Valor (YouTube HD)', 1, true, 'https://www.youtube.com/watch?v=CHXXmFo63fc')}>
                                     ▶ 2. Parte 2 (YouTube HD)
                                 </button>
-                                <button className={`playlist-btn ${clase3Video.activeIndex === 2 ? "active" : ""}`} onClick={() => handleClase3Video('/clase3_propuesta_de_valor/clase3_parte1.mp4', '1. Clase 3 - Parte 1 (Local MP4 HD)', 2, false, 'https://www.youtube.com/watch?v=znDuCwzIKrs')}>
-                                    💾 3. Parte 1 (Local MP4)
-                                </button>
-                                <button className={`playlist-btn ${clase3Video.activeIndex === 3 ? "active" : ""}`} onClick={() => handleClase3Video('/clase3_propuesta_de_valor/clase3_parte2.mp4', '2. Clase 3 - Parte 2 (Local MP4 HD)', 3, false, 'https://www.youtube.com/watch?v=CHXXmFo63fc')}>
-                                    💾 4. Parte 2 (Local MP4)
-                                </button>
                             </div>
-                            <div style={{ marginTop: "0.6rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem", background: "rgba(0,0,0,0.3)", padding: "0.6rem 0.9rem", borderRadius: "8px" }}>
-                                <span style={{ fontSize: "0.74rem", color: "#94A3B8" }}>¿Error en YouTube? Usá el botón <strong>Local MP4</strong> o abrilo en pestaña nueva:</span>
-                                <div style={{ display: "flex", gap: "0.4rem" }}>
-                                    <a href={clase3Video.directUrl || "https://www.youtube.com/watch?v=znDuCwzIKrs"} target="_blank" rel="noopener noreferrer" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontSize: "0.74rem", padding: "0.35rem 0.8rem", textDecoration: "none", borderRadius: "50px", background: "rgba(255,255,255,0.08)", color: "#FFF", border: "1px solid rgba(255,255,255,0.15)" }}>
-                                        <span>↗️ Ver en YouTube</span>
-                                    </a>
-                                    <a href="/clase3_propuesta_de_valor/clase3_parte1.mp4" download="Clase3_Parte1.mp4" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontSize: "0.74rem", padding: "0.35rem 0.8rem", textDecoration: "none", borderRadius: "50px", background: "linear-gradient(135deg, #FFD700 0%, #D4AF37 100%)", color: "#000" }}>
-                                        <span>⬇️ Descargar MP4</span>
-                                    </a>
-                                </div>
+                            <div style={{ marginTop: "0.6rem", display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "0.5rem" }}>
+                                <a href={clase3Video.directUrl || "https://www.youtube.com/watch?v=znDuCwzIKrs"} target="_blank" rel="noopener noreferrer" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem", fontSize: "0.78rem", padding: "0.45rem 1rem", textDecoration: "none", borderRadius: "50px", background: "rgba(255,255,255,0.08)", color: "#FFF", border: "1px solid rgba(255,255,255,0.18)" }}>
+                                    <span>↗️ Ver en YouTube Oficial</span>
+                                </a>
                             </div>
                             <div className="video-description-box" id="desc-video-clase3">
                                 💡 <strong>Contenido de la Clase:</strong> Cómo definir tu diferencial estratégico, romper las objeciones invisibles y construir una promesa de alto valor irresistible.
