@@ -21,11 +21,11 @@ export default function CampusClient() {
   });
 
   const [clase3Video, setClase3Video] = useState({
-    src: 'https://www.youtube-nocookie.com/embed/znDuCwzIKrs?rel=0&modestbranding=1',
+    src: 'https://www.youtube-nocookie.com/embed/WvFBsxVbpBA?rel=0&modestbranding=1',
     title: '1. Clase 3 - Parte 1: Propuesta de Valor y Posicionamiento',
     activeIndex: 0,
     isYouTube: true,
-    directUrl: 'https://youtu.be/znDuCwzIKrs'
+    directUrl: 'https://youtu.be/WvFBsxVbpBA'
   });
 
   const [procrastinacionVideo, setProcrastinacionVideo] = useState({
@@ -1278,7 +1278,7 @@ export default function CampusClient() {
                             {/* Selector de videos de la Clase 3 (Solo YouTube) */}
                             <div className="video-playlist-bar">
                                 <span className="playlist-label">Selector de Masterclass:</span>
-                                <button className={`playlist-btn ${clase3Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase3Video('https://www.youtube-nocookie.com/embed/znDuCwzIKrs?rel=0', '1. Clase 3 - Parte 1: Propuesta de Valor (YouTube HD)', 0, true, 'https://www.youtube.com/watch?v=znDuCwzIKrs')}>
+                                <button className={`playlist-btn ${clase3Video.activeIndex === 0 ? "active" : ""}`} onClick={() => handleClase3Video('https://www.youtube-nocookie.com/embed/WvFBsxVbpBA?rel=0', '1. Clase 3 - Parte 1: Propuesta de Valor (YouTube HD)', 0, true, 'https://www.youtube.com/watch?v=WvFBsxVbpBA')}>
                                     ▶ 1. Parte 1 (YouTube HD)
                                 </button>
                                 <button className={`playlist-btn ${clase3Video.activeIndex === 1 ? "active" : ""}`} onClick={() => handleClase3Video('https://www.youtube-nocookie.com/embed/CHXXmFo63fc?rel=0', '2. Clase 3 - Parte 2: Mi Propuesta de Valor (YouTube HD)', 1, true, 'https://www.youtube.com/watch?v=CHXXmFo63fc')}>
@@ -1286,7 +1286,7 @@ export default function CampusClient() {
                                 </button>
                             </div>
                             <div style={{ marginTop: "0.6rem", display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "0.5rem" }}>
-                                <a href={clase3Video.directUrl || "https://www.youtube.com/watch?v=znDuCwzIKrs"} target="_blank" rel="noopener noreferrer" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem", fontSize: "0.78rem", padding: "0.45rem 1rem", textDecoration: "none", borderRadius: "50px", background: "rgba(255,255,255,0.08)", color: "#FFF", border: "1px solid rgba(255,255,255,0.18)" }}>
+                                <a href={clase3Video.directUrl || "https://www.youtube.com/watch?v=WvFBsxVbpBA"} target="_blank" rel="noopener noreferrer" className="btn-download-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem", fontSize: "0.78rem", padding: "0.45rem 1rem", textDecoration: "none", borderRadius: "50px", background: "rgba(255,255,255,0.08)", color: "#FFF", border: "1px solid rgba(255,255,255,0.18)" }}>
                                     <span>↗️ Ver en YouTube Oficial</span>
                                 </a>
                             </div>

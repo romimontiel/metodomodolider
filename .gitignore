@@ -80,3 +80,6 @@ generate_planilla*.py
 generate_tenant_docx.py
 Presentacion_*.pdf
 
+
+.vercel
+.env*
