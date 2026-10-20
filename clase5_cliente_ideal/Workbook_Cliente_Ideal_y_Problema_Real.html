@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbook • Cliente Ideal y Problema Real | Método MODO LÍDER ®</title>
+    <meta name="description" content="Cuaderno de Trabajo Oficial: Cliente Ideal y Problema Real. Programa Emprender: de Cero a Impacto y Ventas. Por Lic. Romina Lorena Montiel.">
+    <!-- Google Fonts: Montserrat & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #0E121B;
+            --color-navy: #161A25;
+            --color-bg-page: #F8F9FB;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #B4871E;
+            --color-gold-light: #FFFDF5;
+            --color-coral: #E94560;
+            --color-coral-light: #FFF0F2;
+            --color-emerald: #10B981;
+            --color-emerald-light: #ECFDF5;
+            --color-indigo: #4F46E5;
+            --color-indigo-light: #EEF2FF;
+            --color-text-main: #1A202C;
+            --color-text-muted: #5A6A85;
+            --color-border: #E2E8F0;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-bg-page);
+            color: var(--color-text-main);
+            line-height: 1.6;
+            padding-bottom: 5rem;
+        }
+
+        /* BARRA SUPERIOR DE ACCIÓN (NO IMPRIMIBLE) */
+        .action-bar {
+            max-width: 960px;
+            margin: 1.5rem auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--color-primary);
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            position: sticky;
+            top: 1rem;
+            z-index: 100;
+        }
+
+        .action-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .action-logo {
+            font-size: 1.4rem;
+            color: var(--color-gold);
+        }
+
+        .action-title {
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .action-sub {
+            font-size: 0.74rem;
+            color: #94A3B8;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #FFDF00 0%, #D4AF37 100%);
+            color: #07090E;
+            font-size: 0.82rem;
+            font-weight: 900;
+            padding: 0.65rem 1.4rem;
+            border-radius: 50px;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.65rem 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* CONTENEDOR WORKBOOK */
+        .workbook-container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+        }
+
+        /* ═══ CARÁTULA ESTÁNDAR MODO LÍDER ═══ */
+        .cover-page {
+            background: #343538;
+            color: #FFFFFF;
+            min-height: 980px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 3.5rem 3rem;
+            page-break-after: always;
+        }
+        .cover-top { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; }
+        .cover-author { font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8E0CC; margin-bottom: 0.6rem; }
+        .cover-divider { width: 90px; height: 1.5px; background: #C8A82A; margin: 0 auto 1.5rem auto; }
+        .cover-course-label { font-size: 0.76rem; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: #C8C0B0; margin-bottom: 0.4rem; }
+        .cover-course-name { font-size: 1.05rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #E8E0CC; margin-bottom: 2.2rem; }
+        .cover-h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.4rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase;
+            background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            line-height: 1.05; margin-bottom: 0.5rem;
+        }
+        .cover-subject {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.85rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+            background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            line-height: 1.2; margin-bottom: 1.8rem;
+        }
+        .cover-badge-icon {
+            width: 110px; height: 110px; border-radius: 50%;
+            background: rgba(200, 168, 42, 0.15); border: 2px solid #C8A82A;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; margin: 0.5rem auto 1.4rem auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .cover-logo-img { width: 155px; height: 155px; border-radius: 50%; object-fit: contain; margin: 0.5rem auto 1.4rem auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+        .cover-subtitle { font-family: 'Playfair Display', Georgia, serif; font-size: 1.55rem; color: #F0C040; margin-top: 0.4rem; font-weight: 700; }
+        .cover-desc { font-size: 0.92rem; color: #E8E0CC; margin: 0.8rem auto 1.8rem auto; max-width: 640px; line-height: 1.6; }
+        .cover-meta-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; width: 100%; max-width: 650px;
+            margin: 0.5rem auto 1rem; text-align: left;
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-md); padding: 1.1rem 1.5rem;
+        }
+
+        .meta-field label {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--color-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-field input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            padding: 0.6rem 0.8rem;
+            border-radius: var(--radius-sm);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .meta-field input:focus {
+            border-color: var(--color-gold);
+        }
+
+        /* ═══ DERECHOS DE AUTOR ═══ */
+        .copyright-page {
+            background: #FFFFFF;
+            min-height: 980px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3.5rem 3.5rem;
+            page-break-after: always;
+        }
+        .copyright-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .copyright-circle { width: 125px; height: 125px; border-radius: 50%; border: 14px solid #C8A25D; display: flex; align-items: center; justify-content: center; margin: 1.5rem auto; }
+        .copyright-circle span { font-size: 72px; font-weight: 700; color: #C8A25D; line-height: 1; transform: translateY(-2px); }
+        .copyright-title { font-size: 1.15rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #161A25; text-align: center; margin-bottom: 1.2rem; }
+        .copyright-rights { font-size: 0.96rem; color: #333; text-align: center; margin-bottom: 0.7rem; }
+        .copyright-author { font-size: 0.98rem; color: #161A25; font-weight: 600; text-align: center; margin-bottom: 0.25rem; }
+        .copyright-credentials { font-size: 0.82rem; font-weight: 800; letter-spacing: 1.6px; color: #333; text-align: center; text-transform: uppercase; margin-bottom: 2.5rem; }
+        .copyright-body { max-width: 610px; margin: 0 auto; font-size: 0.94rem; line-height: 1.68; color: #2B2C2E; }
+        .copyright-body p { margin-bottom: 1.3rem; }
+
+        /* SECCIONES DE CONTENIDO */
+        .section-block {
+            padding: 3.5rem 3.5rem;
+            border-bottom: 1.5px solid var(--color-border);
+        }
+
+        .section-block:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-tag {
+            font-size: 0.76rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--color-gold-dark);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-heading {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            line-height: 1.25;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-desc {
+            font-size: 0.96rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.65;
+        }
+
+        /* MANIFIESTO BANNER DENTRO DE SECCIÓN */
+        .quote-banner {
+            background: #FFFDF5;
+            border: 1.5px solid #F59E0B;
+            border-left: 6px solid #D97706;
+            border-radius: var(--radius-sm);
+            padding: 1.4rem 1.8rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #78350F;
+            line-height: 1.6;
+        }
+
+        /* TARJETAS DE EJERCICIO */
+        .exercise-card {
+            background: #F8FAFC;
+            border: 1.5px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            margin-bottom: 1.8rem;
+            transition: all 0.2s ease;
+        }
+
+        .exercise-card.highlight {
+            border-left: 5px solid var(--color-gold);
+            background: #FCFDFE;
+        }
+
+        .exercise-card.emerald {
+            border-left: 5px solid var(--color-emerald);
+        }
+
+        .exercise-card.coral {
+            border-left: 5px solid var(--color-coral);
+        }
+
+        .exercise-card.indigo {
+            border-left: 5px solid var(--color-indigo);
+        }
+
+        .exercise-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .exercise-guide {
+            font-size: 0.88rem;
+            color: #475569;
+            margin-bottom: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .fill-textarea {
+            width: 100%;
+            min-height: 105px;
+            padding: 1rem 1.2rem;
+            border-radius: var(--radius-sm);
+            border: 1.5px solid #CBD5E1;
+            background: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.92rem;
+            color: #1E293B;
+            line-height: 1.6;
+            outline: none;
+            resize: vertical;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .fill-textarea:focus {
+            border-color: var(--color-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+        }
+
+        /* 4 PATAS GRID */
+        .patas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.8rem 0;
+        }
+
+        .pata-card {
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            padding: 1.2rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .pata-card.active {
+            border: 2px solid var(--color-gold);
+            background: #FFFDF5;
+            box-shadow: 0 6px 18px rgba(212,175,55,0.18);
+        }
+
+        .pata-num {
+            font-size: 0.72rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94A3B8;
+            margin-bottom: 0.3rem;
+        }
+
+        .pata-card.active .pata-num {
+            color: var(--color-gold-dark);
+        }
+
+        .pata-name {
+            font-size: 0.84rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            line-height: 1.35;
+        }
+
+        .pata-badge {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 0.2rem 0.5rem;
+            border-radius: 50px;
+            background: var(--color-gold);
+            color: #000;
+            margin-top: 0.5rem;
+        }
+
+        /* 3 LENTES CASE STUDY BOX */
+        .case-box {
+            background: linear-gradient(135deg, #0E121B 0%, #1A202C 100%);
+            border: 2px solid var(--color-gold);
+            border-radius: var(--radius-md);
+            padding: 2.2rem;
+            color: #FFFFFF;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+        }
+
+        .case-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 0.8rem;
+        }
+
+        .case-header h4 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--color-gold);
+            letter-spacing: 0.5px;
+        }
+
+        .case-story {
+            font-size: 0.94rem;
+            color: #E2E8F0;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .case-dimensions {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .case-dim-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--color-gold);
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+        }
+
+        .case-dim-item.highlight-fear {
+            border-left: 4px solid #F59E0B;
+            background: rgba(245, 158, 11, 0.12);
+        }
+
+        .case-dim-title {
+            font-size: 0.86rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-gold);
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .case-dim-item.highlight-fear .case-dim-title {
+            color: #FCD34D;
+        }
+
+        .case-dim-desc {
+            font-size: 0.9rem;
+            color: #F1F5F9;
+            line-height: 1.5;
+        }
+
+        /* TABLA COMPARATIVA RESPONSIVE */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-border);
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+        }
+
+        .comp-table th {
+            background: #0E121B;
+            color: #FFFFFF;
+            padding: 0.9rem 1.1rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .comp-table th:last-child {
+            border-right: none;
+        }
+
+        .comp-table td {
+            padding: 1rem 1.1rem;
+            border-bottom: 1px solid var(--color-border);
+            border-right: 1px solid var(--color-border);
+            vertical-align: top;
+            background: #FFFFFF;
+            line-height: 1.55;
+        }
+
+        .comp-table td:last-child {
+            border-right: none;
+        }
+
+        .comp-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* MATRIZ DE PROBLEMAS CON INPUTS */
+        .matrix-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .matrix-row {
+                grid-template-columns: 1fr;
+            }
+            .patas-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .section-block {
+                padding: 2.2rem 1.5rem;
+            }
+            .cover-page {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+
+        /* 4 CUADRANTES CROQUIS */
+        .croquis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .croquis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .croquis-card {
+            background: #FFFFFF;
+            border: 1.5px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .croquis-card.h1 { border-top: 4px solid #4F46E5; }
+        .croquis-card.h2 { border-top: 4px solid #10B981; }
+        .croquis-card.h3 { border-top: 4px solid #F59E0B; }
+        .croquis-card.h4 { border-top: 4px solid #E94560; }
+
+        .croquis-num {
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748B;
+            margin-bottom: 0.3rem;
+        }
+
+        .croquis-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        /* DECLARACIÓN MAESTRA BANNER */
+        .master-formula-box {
+            background: linear-gradient(135deg, #0E121B 0%, #161A25 100%);
+            border: 2px solid var(--color-gold);
+            border-radius: var(--radius-md);
+            padding: 2.2rem;
+            color: #FFFFFF;
+            margin: 2rem 0;
+        }
+
+        .formula-tag {
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-gold);
+            margin-bottom: 0.6rem;
+        }
+
+        .formula-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #FFFDF5;
+            margin-bottom: 1.4rem;
+        }
+
+        .formula-highlight {
+            color: #FFD700;
+            font-weight: 800;
+        }
+
+        /* CHECKLIST BOX */
+        .checklist-box {
+            background: #F1F5F9;
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            margin: 1.8rem 0;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 0.9rem;
+            font-size: 0.92rem;
+            color: #1E293B;
+            line-height: 1.5;
+        }
+
+        .check-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-item input[type="checkbox"] {
+            margin-top: 0.25rem;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--color-gold-dark);
+            cursor: pointer;
+        }
+
+        /* PUENTE CLASE 6 */
+        .bridge-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(14, 18, 27, 0.95));
+            border: 1.5px solid var(--color-gold);
+            border-radius: var(--radius-md);
+            padding: 2.2rem;
+            margin: 2rem 0;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .bridge-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .bridge-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .bridge-text {
+            font-size: 0.92rem;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        .workbook-footer {
+            background: #0E121B;
+            color: #FFFFFF;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            font-size: 0.82rem;
+        }
+
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--color-gold);
+            margin-bottom: 0.4rem;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body {
+                background: #FFFFFF !important;
+                padding: 0 !important;
+            }
+            .action-bar {
+                display: none !important;
+            }
+            .workbook-container {
+                box-shadow: none !important;
+                border: none !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+            }
+            .section-block {
+                page-break-inside: avoid;
+                padding: 2.5rem 1.5rem !important;
+            }
+            .exercise-card {
+                page-break-inside: avoid;
+            }
+            .fill-textarea {
+                border: 1px solid #94A3B8 !important;
+                min-height: 120px !important;
+            }
+        }
+    .inline-logo{height:1.5em;width:1.5em;border-radius:50%;object-fit:contain;vertical-align:middle;margin-right:.3em}
+.action-logo .inline-logo,.brand-crest .inline-logo{height:34px;width:34px;margin:0}
+</style>
+</head>
+<body>
+
+    <!-- ═══ BARRA DE ACCIÓN SUPERIOR (INTERACTIVA) ═══ -->
+    <div class="action-bar">
+        <div class="action-brand">
+            <span class="action-logo"><img src="logo_modo_lider.png" alt="Logo MODO LÍDER" class="inline-logo"></span>
+            <div>
+                <div class="action-title">MODO LÍDER ® · WORKBOOK OFICIAL</div>
+                <div class="action-sub">Clase 5: Cliente Ideal y Problema Real</div>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn-gold" onclick="saveData()">
+                <span>💾</span> Guardar Respuestas
+            </button>
+            <button type="button" class="btn-secondary" onclick="window.print()">
+                <span>🖨️</span> Imprimir / PDF
+            </button>
+            <button type="button" class="btn-secondary" onclick="clearData()">
+                <span>🔄</span> Limpiar
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══ CONTENEDOR WORKBOOK PRINCIPAL ═══ -->
+    <div class="workbook-container">
+
+        <!-- ═══ 1. CARÁTULA OFICIAL MODO LÍDER ═══ -->
+        <header class="cover-page">
+            <div class="cover-top">
+                <div class="cover-author">LIC. ROMINA LORENA MONTIEL</div>
+                <div class="cover-divider"></div>
+                <div class="cover-course-label">CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS</div>
+                <div class="cover-course-name">MÉTODO MODO LÍDER ®</div>
+
+                <div class="cover-h1">WORKBOOK</div>
+                <div class="cover-subject">CLIENTE IDEAL Y PROBLEMA REAL</div>
+
+                <img src="logo_modo_lider.png" alt="Logo MODO LÍDER" class="cover-logo-img">
+
+                <div class="cover-subtitle">Del Catálogo a la Vida de tu Clienta</div>
+                <p class="cover-desc">
+                    Dejar de pensar únicamente en lo que ofrecemos para empezar a comprender qué necesita, qué temores silenciosos le quitan el sueño y qué busca la persona que conscientemente elegimos servir.
+                </p>
+
+                <div class="cover-meta-grid">
+                    <div class="meta-field">
+                        <label for="student_name">TU NOMBRE Y APELLIDO:</label>
+                        <input type="text" id="student_name" placeholder="Ej: María Laura Gómez" autocomplete="off">
+                    </div>
+                    <div class="meta-field">
+                        <label for="business_name">NOMBRE DE TU EMPRENDIMIENTO:</label>
+                        <input type="text" id="business_name" placeholder="Ej: Estudio Armonía / Pastelería Dulce" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ═══ 2. DERECHOS DE AUTOR ═══ -->
+        <div class="copyright-page">
+            <div class="copyright-content">
+                <div class="copyright-circle">
+                    <span>C</span>
+                </div>
+                <div class="copyright-title">📜 DERECHOS DE AUTOR</div>
+                <div class="copyright-rights">- Todos los derechos reservados -</div>
+                <div class="copyright-author">Escrito por Romina Lorena Montiel</div>
+                <div class="copyright-credentials">NEUROPSICOEDUCADORA · MENTORA · ESCRITORA</div>
+                <div class="copyright-body">
+                    <p>Este material ha sido creado exclusivamente por la <strong>Lic. Romina Lorena Montiel</strong>, Neuropsicoeducadora y Mentora de Mentes y Negocios.</p>
+                    <p>Ninguna parte de este cuaderno de trabajo, ya sea en formato digital o impreso, puede ser reproducida, distribuida, compartida, almacenada en sistemas de recuperación ni transmitida en ninguna forma ni por ningún medio —electrónico, mecánico, fotocopia, grabación u otro— sin el permiso previo y por escrito de la autora.</p>
+                    <p>Este producto está protegido por la Ley 11.723 de Propiedad Intelectual de la República Argentina y por los tratados internacionales sobre derechos de autor.</p>
+                    <p>La adquisición de este material es de uso estrictamente personal. Su distribución no autorizada constituye un delito y una violación a las leyes de propiedad intelectual.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ 3. HOJA DE RUTA: LAS 4 PATAS DEL NEGOCIO & DÓNDE ESTAMOS HOY ═══ -->
+        <section class="section-block">
+            <div class="section-tag">🧭 ENCUADRE ESTRATÉGICO · MÉTODO MODO LÍDER</div>
+            <h2 class="section-heading">Las 4 Patas de un Negocio con Identidad, Impacto y Ventas</h2>
+            <p class="section-desc">
+                El salto de autoempleada a empresaria ocurre cuando entendés que no alcanza con tener un buen producto o formación técnica: necesitás sostener con madurez cada una de estas 4 patas estratégicas.
+            </p>
+
+            <div class="patas-grid">
+                <div class="pata-card">
+                    <div class="pata-num">PATA 1 · CLASE 2</div>
+                    <div class="pata-name">Propósito y Dirección</div>
+                </div>
+                <div class="pata-card">
+                    <div class="pata-num">PATA 2 · CLASE 3</div>
+                    <div class="pata-name">Propuesta de Valor Clara</div>
+                </div>
+                <div class="pata-card active">
+                    <div class="pata-num">PATA 3 · CLASE 5 (HOY)</div>
+                    <div class="pata-name">Entendimiento de tu Mercado Objetivo</div>
+                    <span class="pata-badge">ESTAMOS AQUÍ</span>
+                </div>
+                <div class="pata-card">
+                    <div class="pata-num">PATA 4 · CLASE 6+</div>
+                    <div class="pata-name">Sistema de Comunicación y Venta</div>
+                </div>
+            </div>
+
+            <div class="quote-banner">
+                💡 <strong>El Propósito de este Encuentro:</strong> «Hoy no salimos a vender a ciegas. Vamos a entender a nuestro cliente objetivo para sentar las bases: comunicar con un lenguaje que él entienda, empatizar de verdad y desactivar los miedos silenciosos que frenan su decisión de compra».
+            </div>
+        </section>
+
+        <!-- ═══ SECCIÓN 1: FIRMEZA EN LO QUE ENTREGÁS (LOS 3 LENTES & EL CASO PINTURERÍA) ═══ -->
+        <section class="section-block">
+            <div class="section-tag">PASO 1 · FIRMEZA EN LO QUE ENTREGÁS</div>
+            <h2 class="section-heading">1. Los 3 Lentes de tu Negocio & El Miedo que Nadie Dice</h2>
+            <p class="section-desc">
+                Antes de salir a buscar clientes, necesitás pararte con absoluta firmeza en el valor de lo que hacés. Toda persona que te compra evalúa tu entrega a través de 3 Lentes simultáneos.
+            </p>
+
+            <!-- CASO MAESTRO PINTURERÍA -->
+            <div class="case-box">
+                <div class="case-header">
+                    <span>🎨</span>
+                    <h4>CASO REAL MODO LÍDER: La Pinturería y el Análisis de mi Esposo</h4>
+                </div>
+                <p class="case-story">
+                    «Cuando mi esposo decidió pintar su oficina, no compró solamente baldes de látex. Al analizar su conducta de compra descubrí las tres dimensiones exactas que operan en la mente de cualquier cliente»:
+                </p>
+                <div class="case-dimensions">
+                    <div class="case-dim-item">
+                        <div class="case-dim-title">
+                            <span>Lente 1 · Solvencia Técnica & Calidad (Lo Racional)</span>
+                            <span style="font-size:0.7rem; opacity:0.8;">DIMENSIÓN 1</span>
+                        </div>
+                        <div class="case-dim-desc">
+                            Pinturas de buena cobertura, asesoramiento técnico en el mostrador y entrega a domicilio. Responde a: <em>¿Qué razones concretas tengo para confiar en este negocio?</em>
+                        </div>
+                    </div>
+
+                    <div class="case-dim-item">
+                        <div class="case-dim-title">
+                            <span>Lente 2 · La Transformación Deseada (El Resultado Positivo)</span>
+                            <span style="font-size:0.7rem; opacity:0.8;">DIMENSIÓN 2</span>
+                        </div>
+                        <div class="case-dim-desc">
+                            Una oficina más luminosa, agradable y ordenada que acompañe con mejor energía sus horas de trabajo diario. Responde a: <em>¿Qué resultado concreto busco alcanzar?</em>
+                        </div>
+                    </div>
+
+                    <div class="case-dim-item highlight-fear">
+                        <div class="case-dim-title">
+                            <span>Lente 3 · El Miedo Silencioso que Detona la Compra (El Verdadero Gatillo)</span>
+                            <span style="font-size:0.7rem; background:#D97706; color:#000; padding:2px 6px; border-radius:4px; font-weight:900;">DIMENSIÓN CRÍTICA</span>
+                        </div>
+                        <div class="case-dim-desc">
+                            <strong>El malestar y temor que nadie dice en voz alta pero que realmente detona la decisión:</strong> Sentarse el domingo por la tarde frente a su escritorio, levantar la vista, ver la pared manchada y sentir la incomodidad cotidiana de que su espacio descuidado le robe energía vital, transmita desgano o proyecte estancamiento profesional. <em>¡Ese dolor evitado es el motor que enciende la compra!</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EJERCICIO 1.1 -->
+            <div class="exercise-card highlight">
+                <div class="exercise-title">
+                    <span>📝</span> Ejercicio 1.1: Radiografía de mis 3 Lentes Estratégicos
+                </div>
+                <p class="exercise-guide">Definí los tres niveles de valor de tu propuesta para hablar con certeza y sin necesidad de justificarte:</p>
+
+                <div style="margin-bottom: 1.2rem;">
+                    <label style="font-size:0.82rem; font-weight:800; color:#1E293B; display:block; margin-bottom:0.4rem;">
+                        A. LENTE 1 (SOLVENCIA, CALIDAD Y ÉTICA): ¿Qué entregás con excelencia y qué aspectos de tu servicio jamás descuidás?
+                    </label>
+                    <textarea class="fill-textarea" id="lente_1" placeholder="Ej: Materiales de primera calidad, puntualidad, formación certificada, acompañamiento cercano y atención personalizada sin letra chica..."></textarea>
+                </div>
+
+                <div style="margin-bottom: 1.2rem;">
+                    <label style="font-size:0.82rem; font-weight:800; color:#1E293B; display:block; margin-bottom:0.4rem;">
+                        B. LENTE 2 (TRANSFORMACIÓN Y RESULTADO): ¿Qué resultado concreto, alivio o experiencia positiva obtiene tu clienta después de trabajar con vos?
+                    </label>
+                    <textarea class="fill-textarea" id="lente_2" placeholder="Ej: Pasa de sentirse desorganizada a tener un espacio en paz, ahorra 10 horas semanales y recupera el disfrute de su negocio..."></textarea>
+                </div>
+
+                <div>
+                    <label style="font-size:0.82rem; font-weight:800; color:#92400E; display:block; margin-bottom:0.4rem;">
+                        C. LENTE 3 (EL MIEDO O MALESTAR SILENCIOSO QUE EVITA): ¿Qué preocupación profunda, desgaste, frustración o temor cotidiano le ayudás a reducir o evitar?
+                    </label>
+                    <textarea class="fill-textarea" id="lente_3" style="border-color:#F59E0B; background:#FFFDF7;" placeholder="Ej: El miedo a tirar dinero en soluciones que no le sirven, el temor a equivocarse y ser juzgada, o la frustración silenciosa de sentir que su esfuerzo diario no rinde frutos..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SECCIÓN 2: EL GIRO COPERNICANO (DEL YO AL MERCADO REAL) ═══ -->
+        <section class="section-block">
+            <div class="section-tag">PASO 2 · EL CAMBIO DE PERSPECTIVA</div>
+            <h2 class="section-heading">2. El Giro Copernicano: Del "Yo" a la Realidad de tu Clienta</h2>
+            <p class="section-desc">
+                Dejamos de mirar nuestro negocio únicamente desde adentro (nuestros procesos, títulos y catálogo) y ponemos el reflector en la vida de quien nos necesita.
+            </p>
+
+            <div class="quote-banner">
+                🔄 <strong>Ley Copernicana Modo Líder:</strong> «A tu cliente no le importa cuántas horas tardás en hacer tu producto ni cuántos diplomas tenés. Le importa si podés resolverle una necesidad real y quitarle una molestia que frena su vida. Dejá de vender características y empezá a comunicar resultados».
+            </div>
+
+            <!-- EJERCICIO 2.1: DESPLAZAMIENTO DEL FOCO -->
+            <div class="exercise-card">
+                <div class="exercise-title">
+                    <span>🔄</span> Ejercicio 2.1: El Desplazamiento del Foco (De Característica a Resultado)
+                </div>
+                <p class="exercise-guide">Contrastá cómo hablabas antes (mirándote a vos misma) y cómo comunicás ahora (mirando la transformación de la clienta):</p>
+                <div class="matrix-row">
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#64748B; display:block; margin-bottom:0.3rem;">
+                            ANTES DECÍA (Foco en mi producto/proceso):
+                        </label>
+                        <textarea class="fill-textarea" id="foco_antes" placeholder="Ej: 'Vendo látex lavable satinado de 20 litros y rodillos de pelo corto' / 'Hago asesorías agronómicas' / 'Vendo pastelería artesanal'..."></textarea>
+                    </div>
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#D97706; display:block; margin-bottom:0.3rem;">
+                            AHORA COMUNICO (Foco en la vida de mi clienta):
+                        </label>
+                        <textarea class="fill-textarea" id="foco_ahora" style="border-color:#D4AF37; background:#FFFDF5;" placeholder="Ej: 'Te ayudamos a renovar tu oficina con asesoramiento de color para crear un espacio luminoso y profesional que inspire tu trabajo diario'..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EJERCICIO 2.2: MÁS ALLÁ DE LO DEMOGRÁFICO -->
+            <div class="exercise-card highlight">
+                <div class="exercise-title">
+                    <span>👤</span> Ejercicio 2.2: Más Allá de los Datos Demográficos
+                </div>
+                <p class="exercise-guide">Los datos demográficos solo describen una etiqueta exterior. Lo que genera conexión es comprender su experiencia humana real:</p>
+                <div class="matrix-row">
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#475569; display:block; margin-bottom:0.3rem;">
+                            FICHA DEMOGRÁFICA (Datos que la describen):
+                        </label>
+                        <textarea class="fill-textarea" id="demo_datos" placeholder="Edad aproximada, zona geográfica, ocupación, estado familiar, nivel educativo... (Ej: Mujer de 35 a 50 años, profesional, vive en zona urbana)..."></textarea>
+                    </div>
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#10B981; display:block; margin-bottom:0.3rem;">
+                            FICHA VITAL (Experiencia que me conecta con ella):
+                        </label>
+                        <textarea class="fill-textarea" id="demo_experiencia" style="border-color:#10B981; background:#F0FDF4;" placeholder="¿Cómo es su día a día? ¿Con qué escena cotidiana se enfrenta? (Ej: Llega cansada, ve el desorden acumulado y siente que el tiempo nunca le alcanza para sus proyectos propios)..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EJERCICIO 2.3: MATRIZ DEL PROBLEMA ACTUAL -->
+            <div class="exercise-card emerald">
+                <div class="exercise-title">
+                    <span>🔍</span> Ejercicio 2.3: Matriz del Problema Actual & Su Propio Vocabulario
+                </div>
+                <p class="exercise-guide">Para comunicar con impacto, necesitás saber cómo nombra tu clienta su problema con sus propias palabras, sin tecnicismos:</p>
+
+                <div class="table-responsive">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 45%;">Las 4 Preguntas Maestras</th>
+                                <th style="width: 55%;">«Lo Dice Así» (Con sus Propias Palabras)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>1. ¿Qué vive hoy mi clienta?</strong><br>
+                                    <span style="font-size:0.82rem; color:#64748B;">La situación concreta que experimenta en su rutina actual.</span>
+                                </td>
+                                <td>
+                                    <textarea class="fill-textarea" id="matriz_q1" style="min-height:75px;" placeholder="Ej: 'Siento que trabajo todo el día pero no veo reflejado el dinero', 'Mi espacio de trabajo me drena la energía'..."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>2. ¿Qué intentó hasta ahora?</strong><br>
+                                    <span style="font-size:0.82rem; color:#64748B;">Las soluciones previas que probó por su cuenta.</span>
+                                </td>
+                                <td>
+                                    <textarea class="fill-textarea" id="matriz_q2" style="min-height:75px;" placeholder="Ej: 'Compré organizadores baratos', 'Hice cursos sueltos en internet', 'Probé organizarme con planillas de YouTube'..."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>3. ¿Qué le resulta difícil o frustrante?</strong><br>
+                                    <span style="font-size:0.82rem; color:#64748B;">El obstáculo donde siempre se frena o se traba.</span>
+                                </td>
+                                <td>
+                                    <textarea class="fill-textarea" id="matriz_q3" style="min-height:75px;" placeholder="Ej: 'Me cuesta ser constante', 'No sé qué color elegir y temo equivocarme', 'No tengo tiempo de trasladarme'..."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>4. ¿Qué le gustaría que fuera diferente?</strong><br>
+                                    <span style="font-size:0.82rem; color:#64748B;">El deseo concreto de cambio inmediato.</span>
+                                </td>
+                                <td>
+                                    <textarea class="fill-textarea" id="matriz_q4" style="min-height:75px;" placeholder="Ej: 'Quiero entrar a mi oficina y sentirme orgullosa', 'Quiero tener un método claro que funcione sin complicarme la vida'..."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- EJERCICIO 2.4: ALTERNATIVAS ACTUALES -->
+            <div class="exercise-card">
+                <div class="exercise-title">
+                    <span>⚖️</span> Ejercicio 2.4: Análisis de Alternativas Actuales
+                </div>
+                <p class="exercise-guide">Si tu clienta no te contrata a vos, ¿qué alternativa usa hoy y por qué esa opción no le resuelve el problema de fondo?</p>
+                <div class="matrix-row">
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#475569; display:block; margin-bottom:0.3rem;">
+                            ¿QUÉ USA HOY EN LUGAR DE TU PROPUESTA?
+                        </label>
+                        <textarea class="fill-textarea" id="alt_usa" placeholder="Ej: Resuelve sola con tutoriales gratuitos, compra la opción más barata del supermercado, o sigue postergando el cambio..."></textarea>
+                    </div>
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#E94560; display:block; margin-bottom:0.3rem;">
+                            ¿POR QUÉ NO LE ALCANZA O QUÉ LE SIGUE FALTANDO?
+                        </label>
+                        <textarea class="fill-textarea" id="alt_porque" placeholder="Ej: Pierde demasiado tiempo, comete errores costosos, no tiene acompañamiento personalizado y el problema vuelve a repetirse..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SECCIÓN 3: SEGMENTACIÓN ESTRATÉGICA & LIDERAZGO DE NICHO ═══ -->
+        <section class="section-block">
+            <div class="section-tag">PASO 3 · DECISIÓN COMERCIAL Y AUTOLIDERAZGO</div>
+            <h2 class="section-heading">3. Segmentación Estratégica & Definición de Foco</h2>
+            <p class="section-desc">
+                No necesitás venderle a todo el mundo. Como empresaria, definís a qué estilo de personas elegís servir con calidad, rentabilidad y respeto por tu energía.
+            </p>
+
+            <!-- EJERCICIO 3.1: TABLA COMPARATIVA DE NICHOS -->
+            <div class="exercise-card highlight">
+                <div class="exercise-title">
+                    <span>📊</span> Ejercicio 3.1: Comparativa Estratégica de Nichos (Nicho A vs Nicho B)
+                </div>
+                <p class="exercise-guide">
+                    Como en el ejemplo de la pinturería: un nicho prioriza el precio bajo y hacer todo por su cuenta; el otro valora el asesoramiento, la comodidad y el ahorro de tiempo. Ninguno es malo, pero tu propuesta encaja mejor con uno de ellos:
+                </p>
+
+                <div class="table-responsive">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Criterio Estratégico</th>
+                                <th style="width: 37%;">Nicho Posible A</th>
+                                <th style="width: 38%;">Nicho Posible B</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Perfil y Estilo de Vida</strong></td>
+                                <td><textarea class="fill-textarea" id="nicho_a_perfil" style="min-height:60px;" placeholder="Ej: Personas que buscan resolver al menor costo posible por su cuenta..."></textarea></td>
+                                <td><textarea class="fill-textarea" id="nicho_b_perfil" style="min-height:60px;" placeholder="Ej: Profesionales o familias ocupadas que valoran el tiempo y la orientación..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Qué Prioriza en la Compra</strong></td>
+                                <td><textarea class="fill-textarea" id="nicho_a_prioriza" style="min-height:60px;" placeholder="Ej: El precio más bajo, descuentos, ofertas..."></textarea></td>
+                                <td><textarea class="fill-textarea" id="nicho_b_prioriza" style="min-height:60px;" placeholder="Ej: La comodidad, la tranquilidad de no equivocarse, la calidad..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Capacidad de Inversión</strong></td>
+                                <td><textarea class="fill-textarea" id="nicho_a_capacidad" style="min-height:60px;" placeholder="Ej: Presupuesto muy ajustado o mentalidad de regateo..."></textarea></td>
+                                <td><textarea class="fill-textarea" id="nicho_b_capacidad" style="min-height:60px;" placeholder="Ej: Dispuesta a pagar por una solución confiable y profesional..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Encaje con mi Propuesta</strong></td>
+                                <td><textarea class="fill-textarea" id="nicho_a_encaje" style="min-height:60px;" placeholder="Ej: Exigiría bajar mis precios o trabajar con desgaste..."></textarea></td>
+                                <td><textarea class="fill-textarea" id="nicho_b_encaje" style="min-height:60px;" placeholder="Ej: Encaje óptimo: valora mi asesoramiento y paga con gratitud..."></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- EJERCICIO 3.2: FOCO TEMPORAL -->
+            <div class="exercise-card emerald">
+                <div class="exercise-title">
+                    <span>🎯</span> Ejercicio 3.2: Decisión de Nicho con Foco Temporal (Probar, Medir y Aprender)
+                </div>
+                <p class="exercise-guide">
+                    Elegir un nicho no es cerrarte para siempre. Es concentrar tu energía en un foco único temporal para comprobar si responde comercialmente:
+                </p>
+
+                <div class="matrix-row">
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#1E293B; display:block; margin-bottom:0.3rem;">
+                            1. MI ELECCIÓN DE FOCO PARA LOS PRÓXIMOS (30 / 60 / 90 DÍAS):
+                        </label>
+                        <textarea class="fill-textarea" id="foco_segmento" placeholder="Definí con claridad cuál de los dos nichos vas a priorizar en tu comunicación comercial..."></textarea>
+                    </div>
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#1E293B; display:block; margin-bottom:0.3rem;">
+                            2. ¿QUÉ VOY A MEDIR Y CUÁNDO REVISO RESULTADOS?
+                        </label>
+                        <textarea class="fill-textarea" id="foco_metricas" placeholder="Ej: Mediré número de consultas recibidas, tasa de conversión a ventas y nivel de satisfacción. Fecha de revisión: [dd/mm/aaaa]..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EJERCICIO 3.3: LÍMITES Y NO NEGOCIABLES -->
+            <div class="exercise-card coral">
+                <div class="exercise-title">
+                    <span>🛑</span> Ejercicio 3.3: Condiciones de Trabajo, No Negociables y Alternativas
+                </div>
+                <p class="exercise-guide">
+                    Una empresaria define sus reglas con respeto. No hace falta etiquetar a nadie como «difícil»: se trata de cuidar tu estándar y saber encuadrar:
+                </p>
+
+                <div class="matrix-row">
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#047857; display:block; margin-bottom:0.3rem;">
+                            ✅ CON QUIÉN SÍ ELIJO TRABAJAR (Condiciones Ideales):
+                        </label>
+                        <textarea class="fill-textarea" id="limites_si" style="border-color:#10B981; background:#F0FDF4;" placeholder="Ej: Personas que comprenden la propuesta, respetan los horarios profesionales, asumen su parte del proceso y pagan en término con gratitud..."></textarea>
+                    </div>
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#B91C1C; display:block; margin-bottom:0.3rem;">
+                            ⛔ SITUACIONES QUE NO ACEPTO & ALTERNATIVA QUE OFREZCO:
+                        </label>
+                        <textarea class="fill-textarea" id="limites_no" style="border-color:#E94560; background:#FFF1F2;" placeholder="Ej: No acepto pedidos de urgencia fuera de horario ni cambios permanentes sin acuerdo. Si una persona no encaja, le ofrezco con amabilidad una alternativa o derivación..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SECCIÓN 4: EL MOMENTO TRIGGER & DESARMADOR DE BARRERAS ═══ -->
+        <section class="section-block">
+            <div class="section-tag">PASO 4 · DECISIÓN DE COMPRA Y CONFIANZA</div>
+            <h2 class="section-heading">4. El Momento Trigger & Cómo Desarmar sus Barreras</h2>
+            <p class="section-desc">
+                El problema puede estar presente durante meses, pero hay un momento específico en el que se vuelve prioritario y la persona decide actuar.
+            </p>
+
+            <!-- EJERCICIO 4.1: EL MOMENTO TRIGGER -->
+            <div class="exercise-card highlight">
+                <div class="exercise-title">
+                    <span>⚡</span> Ejercicio 4.1: La Escena Cotidiana del Trigger (El Punto de Quiebre)
+                </div>
+                <p class="exercise-guide">
+                    No tiene que ser una crisis dramática. Puede ser un domingo mirando la pared manchada, una conversación o una fecha límite que hace que diga: «No quiero seguir postergando esto»:
+                </p>
+
+                <div class="matrix-row">
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#1E293B; display:block; margin-bottom:0.3rem;">
+                            LA ESCENA CONCRETA EN CÁMARA LENTA:
+                        </label>
+                        <textarea class="fill-textarea" id="trigger_escena" placeholder="¿Dónde está? ¿Qué día y hora ocurre? ¿Qué acontecimiento o situación visual cotidiana hace que el problema se vuelva urgente?..."></textarea>
+                    </div>
+                    <div>
+                        <label style="font-size:0.8rem; font-weight:800; color:#D97706; display:block; margin-bottom:0.3rem;">
+                            SU FRASE INTERNA EN ESE INSTANTE:
+                        </label>
+                        <textarea class="fill-textarea" id="trigger_frase" style="background:#FFFDF5; border-color:#D4AF37;" placeholder="¿Qué pensamiento exacto cruza por su mente? (Ej: 'No puedo seguir trabajando en este ambiente', 'Esto me está costando demasiada energía, lo resuelvo esta semana')..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LA GRAN LEY DE VENTAS -->
+            <div class="quote-banner">
+                ⚖️ <strong>La Gran Ley de Ventas Modo Líder:</strong> «El Momento Trigger puede activar la necesidad de resolver un problema, pero para que esa necesidad se convierta en una compra también necesitamos construir confianza y despejar las dudas del cliente. No todas las ventas se pierden por precio ni por miedo: necesitamos escuchar y responder con honestidad».
+            </div>
+
+            <!-- EJERCICIO 4.2: DESARMADOR DE LAS 3 BARRERAS -->
+            <div class="exercise-card emerald">
+                <div class="exercise-title">
+                    <span>🛡️</span> Ejercicio 4.2: Cómo Abordar las 3 Barreras del Miedo con Soluciones Concretas
+                </div>
+                <p class="exercise-guide">
+                    No alcanza con decirle al cliente que «no se preocupe». Necesitamos ofrecer información, acompañamiento y condiciones claras para que decida con seguridad:
+                </p>
+
+                <div style="margin-bottom:1.3rem;">
+                    <label style="font-size:0.84rem; font-weight:800; color:#1E293B; display:block; margin-bottom:0.3rem;">
+                        1. MIEDO A EQUIVOCARSE (¿Y si elijo mal o no funciona en mi caso?):
+                    </label>
+                    <textarea class="fill-textarea" id="barrera_1" placeholder="¿Cómo respondo de manera concreta? (Ej: Como la pinturería que ofrece muestras de color para probar con la luz real del ambiente, ofrezco diagnóstico inicial, casos comparables o prueba guiada)..."></textarea>
+                </div>
+
+                <div style="margin-bottom:1.3rem;">
+                    <label style="font-size:0.84rem; font-weight:800; color:#1E293B; display:block; margin-bottom:0.3rem;">
+                        2. PREOCUPACIÓN POR EL DINERO (¿Y si gasto de más o no vale lo que cuesta?):
+                    </label>
+                    <textarea class="fill-textarea" id="barrera_2" placeholder="¿Cómo respondo de manera concreta? (Ej: Como la pinturería que calcula el rendimiento exacto de pintura según la pared, entrego cotización transparente, etapas modulares y explico claramente el retorno de la inversión)..."></textarea>
+                </div>
+
+                <div>
+                    <label style="font-size:0.84rem; font-weight:800; color:#1E293B; display:block; margin-bottom:0.3rem;">
+                        3. FALTA DE TIEMPO O TEMOR A COMPLICARSE (No tengo tiempo de ocuparme de esto):
+                    </label>
+                    <textarea class="fill-textarea" id="barrera_3" placeholder="¿Cómo respondo de manera concreta? (Ej: Como la pinturería que ofrece entrega a domicilio directa, ofrezco proceso ágil, pasos simples y coordinación directa para no quitarle tiempo)..."></textarea>
+                </div>
+            </div>
+
+            <!-- EJERCICIO 4.3: OTRAS BARRERAS -->
+            <div class="exercise-card">
+                <div class="exercise-title">
+                    <span>📋</span> Ejercicio 4.3: Respuestas a Otras Barreras Comerciales
+                </div>
+                <div class="table-responsive">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Barrera Comercial Frecuente</th>
+                                <th style="width: 60%;">Mi Respuesta Concreta y Profesional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>No comprende la diferencia con otras alternativas</strong></td>
+                                <td><textarea class="fill-textarea" id="otra_barrera_dif" style="min-height:65px;" placeholder="Explico con claridad en qué se diferencia mi metodología o estándar de calidad..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aún no confía plenamente en mi propuesta</strong></td>
+                                <td><textarea class="fill-textarea" id="otra_barrera_confianza" style="min-height:65px;" placeholder="Muestro testimonios reales, mi formación, mi ética de trabajo y claridad de pasos..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><strong>No cuenta con el presupuesto en este momento</strong></td>
+                                <td><textarea class="fill-textarea" id="otra_barrera_presupuesto" style="min-height:65px;" placeholder="Ofrezco una opción inicial más compacta, facilidades de pago o encuadre para más adelante..."></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SECCIÓN 5: ACTIVIDAD EN VIVO (10-15 MINUTOS) ═══ -->
+        <section class="section-block" style="background: #FFFDF9; border: 2px solid var(--color-gold); border-radius: var(--radius-md); margin: 2rem 3rem;">
+            <div class="section-tag">⏱️ ACTIVIDAD EN VIVO · CLASE 5 (10 A 15 MINUTOS)</div>
+            <h2 class="section-heading">Mi Cliente Ideal Bajo la Lupa</h2>
+            <p class="section-desc">
+                Ejercicio práctico para realizar en vivo durante la clase con Lic. Romina Lorena Montiel. Cada alumna completa estas 8 preguntas clave sobre su propio negocio:
+            </p>
+
+            <div style="display:grid; grid-template-columns:1fr; gap:1.2rem;">
+                <div>
+                    <label style="font-weight:800; font-size:0.86rem; color:#1E293B;">1. ¿Qué vendo y qué transformación puedo ayudar a conseguir?</label>
+                    <textarea class="fill-textarea" id="lupa_1" style="min-height:60px;" placeholder="Tu respuesta..."></textarea>
+                </div>
+                <div>
+                    <label style="font-weight:800; font-size:0.86rem; color:#1E293B;">2. ¿Quién necesita especialmente mi propuesta?</label>
+                    <textarea class="fill-textarea" id="lupa_2" style="min-height:60px;" placeholder="Tu respuesta..."></textarea>
+                </div>
+                <div>
+                    <label style="font-weight:800; font-size:0.86rem; color:#1E293B;">3. ¿Qué problema concreto está intentando resolver?</label>
+                    <textarea class="fill-textarea" id="lupa_3" style="min-height:60px;" placeholder="Tu respuesta..."></textarea>
+                </div>
+                <div>
+                    <label style="font-weight:800; font-size:0.86rem; color:#1E293B;">4. ¿Qué intentó hasta ahora y por qué no le alcanzó?</label>
+                    <textarea class="fill-textarea" id="lupa_4" style="min-height:60px;" placeholder="Tu respuesta..."></textarea>
+                </div>
+                <div>
+                    <label style="font-weight:800; font-size:0.86rem; color:#1E293B;">5. ¿Qué situación cotidiana puede impulsarlo a buscar una solución (Trigger)?</label>
+                    <textarea class="fill-textarea" id="lupa_5" style="min-height:60px;" placeholder="Tu respuesta..."></textarea>
+                </div>
+                <div>
+                    <label style="font-weight:800; font-size:0.86rem; color:#1E293B;">6. ¿Qué dudas podrían frenar su decisión de compra?</label>
+                    <textarea class="fill-textarea" id="lupa_6" style="min-height:60px;" placeholder="Tu respuesta..."></textarea>
+                </div>
+                <div>
+                    <label style="font-weight:800; font-size:0.86rem; color:#1E293B;">7. ¿Qué resultado espera conseguir?</label>
+                    <textarea class="fill-textarea" id="lupa_7" style="min-height:60px;" placeholder="Tu respuesta..."></textarea>
+                </div>
+                <div>
+                    <label style="font-weight:800; font-size:0.86rem; color:#1E293B;">8. ¿Qué necesito preguntarle para comprobar que mis hipótesis son correctas?</label>
+                    <textarea class="fill-textarea" id="lupa_8" style="min-height:60px;" placeholder="Tu respuesta..."></textarea>
+                </div>
+            </div>
+
+            <div class="quote-banner" style="margin-top: 1.8rem; background:#FFFFFF;">
+                <img src="logo_modo_lider.png" alt="Logo MODO LÍDER" class="inline-logo"><strong>Cierre Docente de Romina:</strong> «Ustedes pueden tener una hipótesis sobre lo que necesita su cliente, pero no deben confundir esa hipótesis con la realidad. La empresaria observa, pregunta, escucha y contrasta. No se enamora de su propia idea sin comprobar si responde a una necesidad real. Cuanto mejor comprendan a sus clientes, mejores decisiones tomarán sobre su comunicación, servicios y precios».
+            </div>
+        </section>
+
+        <!-- ═══ SECCIÓN 6: GUÍA DE INVESTIGACIÓN REAL PARA TUS CLIENTES ═══ -->
+        <section class="section-block">
+            <div class="section-tag">HERRAMIENTA DE CAMPO · INVESTIGACIÓN REAL</div>
+            <h2 class="section-heading">6. Las Preguntas que Harás a tus Propios Clientes</h2>
+            <p class="section-desc">
+                Esta es la parte más importante: convertir la reflexión teórica en una herramienta de investigación real para usar en entrevistas, formularios o conversaciones comerciales.
+            </p>
+
+            <div class="exercise-card highlight">
+                <div class="exercise-title">
+                    <span>🎙️</span> Batería Oficial de Preguntas de Investigación
+                </div>
+                <p class="exercise-guide">
+                    <strong>Recomendación docente:</strong> No hagas todas las preguntas de corrido como un interrogatorio policial. Elegí las más relevantes, escuchá atentamente y profundizá con repreguntas como: <em>«¿Me podés contar un ejemplo?»</em> o <em>«¿Qué querés decir exactamente con eso?»</em>.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 32%;">Objetivo de la Pregunta</th>
+                                <th style="width: 48%;">Preguntas Guía para la Conversación</th>
+                                <th style="width: 20%;">Mis Notas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>1. Comprender la Situación Actual</strong>
+                                </td>
+                                <td>
+                                    • ¿Qué es lo que más te está costando resolver en este momento?<br>
+                                    • ¿Desde cuándo te sucede esto?<br>
+                                    • ¿Cómo influye esta situación en tu día a día?
+                                </td>
+                                <td><textarea class="fill-textarea" id="entrevista_1" style="min-height:60px;" placeholder="Notas..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>2. Conocer lo que ya Intentó</strong>
+                                </td>
+                                <td>
+                                    • ¿Qué hiciste hasta ahora para solucionarlo?<br>
+                                    • ¿Qué te funcionó y qué no?<br>
+                                    • ¿Qué sentís que te sigue faltando?
+                                </td>
+                                <td><textarea class="fill-textarea" id="entrevista_2" style="min-height:60px;" placeholder="Notas..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>3. Identificar el Trigger</strong>
+                                </td>
+                                <td>
+                                    • ¿Qué pasó recientemente para que decidieras buscar una solución?<br>
+                                    • ¿Por qué te interesa resolverlo justamente ahora?<br>
+                                    • ¿Qué cambiaría para vos si pudieras resolverlo de una vez?
+                                </td>
+                                <td><textarea class="fill-textarea" id="entrevista_3" style="min-height:60px;" placeholder="Notas..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>4. Descubrir las Barreras de Compra</strong>
+                                </td>
+                                <td>
+                                    • ¿Qué te genera dudas al momento de evaluar una solución?<br>
+                                    • ¿Qué necesitás saber o comprobar antes de decidir?<br>
+                                    • ¿Qué tendría que ofrecerte una propuesta para sentir que vale la pena invertir?
+                                </td>
+                                <td><textarea class="fill-textarea" id="entrevista_4" style="min-height:60px;" placeholder="Notas..."></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>5. Definir la Transformación Deseada</strong>
+                                </td>
+                                <td>
+                                    • Si encontraras la solución adecuada, ¿qué te gustaría conseguir exactamente?<br>
+                                    • ¿Cómo te darías cuenta de que valió la pena la inversión?<br>
+                                    • ¿Qué sería lo más importante que cambiaría para vos?
+                                </td>
+                                <td><textarea class="fill-textarea" id="entrevista_5" style="min-height:60px;" placeholder="Notas..."></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SECCIÓN 7: CROQUIS PANORÁMICO 360° & DECLARACIÓN MAESTRA ═══ -->
+        <section class="section-block">
+            <div class="section-tag">PASO 5 · INTEGRACIÓN VISUAL & HIPÓTESIS 360°</div>
+            <h2 class="section-heading">7. El Croquis Panorámico 360° & Tu Declaración Maestra</h2>
+            <p class="section-desc">
+                Organizamos todo lo descubierto en un croquis de 4 cuadrantes. <strong>Importante:</strong> Este mapa es una hipótesis de partida que contrastarás con tus conversaciones de campo.
+            </p>
+
+            <div class="croquis-grid">
+                <div class="croquis-card h1">
+                    <div class="croquis-num">CUADRANTE 1 · PERFIL VITAL</div>
+                    <div class="croquis-title">👤 1. ¿Quién es mi cliente ideal?</div>
+                    <p style="font-size:0.8rem; color:#64748B; margin-bottom:0.6rem;">Su estilo de vida, sus prioridades, valores y hábitos relevantes de compra:</p>
+                    <textarea class="fill-textarea" id="croquis_q1" style="flex:1;" placeholder="Ej: Mariana, 42 años, profesional independiente y madre. Valora la puntualidad, el orden y la tranquilidad. Tiene capacidad de inversión pero poco tiempo libre..."></textarea>
+                </div>
+
+                <div class="croquis-card h2">
+                    <div class="croquis-num">CUADRANTE 2 · TRANSFORMACIÓN</div>
+                    <div class="croquis-title">🎯 2. ¿Qué necesita de mí?</div>
+                    <p style="font-size:0.8rem; color:#64748B; margin-bottom:0.6rem;">El problema que busca resolver, el resultado y el valor concreto de mi entrega:</p>
+                    <textarea class="fill-textarea" id="croquis_q2" style="flex:1;" placeholder="Ej: Necesita ordenar su negocio para dejar de trabajar los fines de semana. Pasa de la sobrecarga a liderar con claridad y tranquilidad..."></textarea>
+                </div>
+
+                <div class="croquis-card h3">
+                    <div class="croquis-num">CUADRANTE 3 · GATILLO</div>
+                    <div class="croquis-title">⚡ 3. Su Momento Trigger</div>
+                    <p style="font-size:0.8rem; color:#64748B; margin-bottom:0.6rem;">La situación cotidiana donde el problema se vuelve prioritario y decide buscar ayuda:</p>
+                    <textarea class="fill-textarea" id="croquis_q3" style="flex:1;" placeholder="Ej: Cuando un domingo se sienta a planificar y siente que otra vez el desorden le roba tiempo de calidad familiar..."></textarea>
+                </div>
+
+                <div class="croquis-card h4">
+                    <div class="croquis-num">CUADRANTE 4 · CERTEZA</div>
+                    <div class="croquis-title">🛡️ 4. Sus Dudas y Barreras</div>
+                    <p style="font-size:0.8rem; color:#64748B; margin-bottom:0.6rem;">Qué temores pueden frenarlo y cómo le respondo con información y condiciones claras:</p>
+                    <textarea class="fill-textarea" id="croquis_q4" style="flex:1;" placeholder="Ej: Teme perder tiempo en un método complejo -> Le demuestro pasos guiados de 15 minutos diarios y acompañamiento directo..."></textarea>
+                </div>
+            </div>
+
+            <!-- DECLARACIÓN MAESTRA OFICIAL DEL SPEECH -->
+            <div class="master-formula-box">
+                <div class="formula-tag"><img src="logo_modo_lider.png" alt="Logo MODO LÍDER" class="inline-logo">TU DECLARACIÓN MAESTRA DE SÍNTESIS (FÓRMULA OFICIAL DEL SPEECH)</div>
+                <div class="formula-text">
+                    «Ayudo a <span class="formula-highlight">[mi cliente ideal]</span>, que necesita <span class="formula-highlight">[problema o necesidad concreta]</span>, a lograr <span class="formula-highlight">[resultado o transformación deseada]</span> mediante <span class="formula-highlight">[mi producto, servicio o método]</span>, para que pueda <span class="formula-highlight">[beneficio relevante para su vida o su trabajo]</span>».
+                </div>
+                <p style="font-size:0.85rem; color:#CBD5E1; margin-bottom:1.1rem; line-height:1.5;">
+                    <strong>Ejemplo de la pinturería:</strong> <em>«Ayudamos a profesionales y familias que quieren renovar sus ambientes a elegir pinturas y colores adecuados, con asesoramiento y entrega a domicilio, para que puedan transformar sus espacios de manera más práctica y disfrutar de un entorno que acompañe su vida cotidiana».</em>
+                </p>
+                <div>
+                    <label style="font-size:0.84rem; font-weight:800; color:#FFDF00; display:block; margin-bottom:0.4rem;">
+                        ESCRIBÍ AQUÍ TU DECLARACIÓN MAESTRA DE SÍNTESIS:
+                    </label>
+                    <textarea class="fill-textarea" id="declaracion_maestra" style="background:rgba(255,255,255,0.08); color:#FFFFFF; border-color:#D4AF37; min-height:85px;" placeholder="Ayudo a... que necesita... a lograr... mediante... para que pueda..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SECCIÓN 8: CHECKLIST & PUENTE A LA CLASE 6 ═══ -->
+        <section class="section-block">
+            <div class="section-tag">CIERRE DEL ENCUENTRO 5 · INTEGRACIÓN</div>
+            <h2 class="section-heading">Checklist de la Clase & Puente a la Clase 6</h2>
+
+            <div class="checklist-box">
+                <h4 style="font-size:1rem; font-weight:800; color:#0E121B; margin-bottom:1rem;">✅ Checklist de Dominio de la Clase 5:</h4>
+                <div class="check-item">
+                    <input type="checkbox" id="chk_1">
+                    <label for="chk_1">Identifiqué mis 3 Lentes, reconociendo mi solvencia y el miedo silencioso que detona la compra de mi cliente.</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="chk_2">
+                    <label for="chk_2">Realicé el Giro Copernicano pasando de describir características a comunicar resultados humanos.</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="chk_3">
+                    <label for="chk_3">Completé la Matriz del Problema Actual con las 4 preguntas maestras y el lenguaje real de mi clienta.</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="chk_4">
+                    <label for="chk_4">Elegí un foco de nicho temporal para los próximos 30/60/90 días y definí mis condiciones y límites con respeto.</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="chk_5">
+                    <label for="chk_5">Desarmé las 3 barreras de compra con respuestas concretas (muestras, cálculo claro, acompañamiento).</label>
+                </div>
+                <div class="check-item">
+                    <input type="checkbox" id="chk_6">
+                    <label for="chk_6">Tengo listo mi Croquis 360° y mi Declaración Maestra como hipótesis para validar en conversaciones de campo.</label>
+                </div>
+            </div>
+
+            <!-- PUENTE A LA CLASE 6 -->
+            <div class="bridge-box">
+                <div class="bridge-icon">🚀</div>
+                <div>
+                    <div class="bridge-title">Próximo Encuentro: Clase 6 — La Oferta Irresistible</div>
+                    <p class="bridge-text">
+                        En la próxima clase vamos a transformar toda esta claridad en una <strong>Oferta Irresistible</strong>: cómo empaquetar tus servicios, definir entregables, fijar precios coherentes y diseñar garantías profesionales. Además, entraremos en el <strong>Laboratorio de Comunicación</strong> para convertir estos descubrimientos en Reels, historias y mensajes que atraigan y conviertan con fluidez.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FOOTER INSTITUCIONAL ═══ -->
+        <footer class="workbook-footer">
+            <div class="footer-logo"><img src="logo_modo_lider.png" alt="Logo MODO LÍDER" class="inline-logo">MÉTODO MODO LÍDER ®</div>
+            <div style="font-weight: 700; color: #E2E8F0; margin-bottom: 0.3rem;">Lic. Romina Lorena Montiel · Neuropsicoeducadora & Mentora</div>
+            <div style="color: #94A3B8;">Programa Oficial Emprender: de Cero a Impacto y Ventas · Todos los derechos reservados.</div>
+        </footer>
+
+    </div>
+
+    <!-- ═══ JAVASCRIPT: LOCALSTORAGE, AUTO-EXPAND Y ACCIONES ═══ -->
+    <script>
+        const KEY = 'ml_workbook_clase5_v2_completo';
+
+        function saveData() {
+            const inputs = document.querySelectorAll('input, textarea');
+            const data = {};
+            inputs.forEach(el => {
+                if (el.id) {
+                    if (el.type === 'checkbox') {
+                        data[el.id] = el.checked;
+                    } else {
+                        data[el.id] = el.value;
+                    }
+                }
+            });
+            localStorage.setItem(KEY, JSON.stringify(data));
+            alert('✨ ¡Tus respuestas han sido guardadas con éxito en tu navegador!');
+        }
+
+        function loadData() {
+            const raw = localStorage.getItem(KEY);
+            if (!raw) return;
+            try {
+                const data = JSON.parse(raw);
+                Object.keys(data).forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        if (el.type === 'checkbox') {
+                            el.checked = data[id];
+                        } else {
+                            el.value = data[id];
+                            autoResize(el);
+                        }
+                    }
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function clearData() {
+            if (confirm('¿Estás segura de que deseas limpiar todos los campos? Esta acción borrará las respuestas guardadas en este navegador.')) {
+                localStorage.removeItem(KEY);
+                const inputs = document.querySelectorAll('input, textarea');
+                inputs.forEach(el => {
+                    if (el.type === 'checkbox') {
+                        el.checked = false;
+                    } else {
+                        el.value = '';
+                    }
+                });
+                alert('Campos restablecidos.');
+            }
+        }
+
+        function autoResize(el) {
+            if (el.tagName.toLowerCase() === 'textarea') {
+                el.style.height = 'auto';
+                el.style.height = (el.scrollHeight + 4) + 'px';
+            }
+        }
+
+        // Auto guardado silencioso y auto-resize
+        document.addEventListener('input', function(e) {
+            if (e.target.tagName.toLowerCase() === 'textarea') {
+                autoResize(e.target);
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadData();
+            document.querySelectorAll('textarea').forEach(autoResize);
+        });
+    </script>
+</body>
+</html>

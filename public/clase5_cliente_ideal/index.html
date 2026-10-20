@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Encuentro 05: Cliente Ideal y Problema Real | MODO LÍDER</title>
+    <meta name="description" content="Acceso al Encuentro 05: Cliente Ideal y Problema Real. Método MODO LÍDER - Lic. Romina Lorena Montiel.">
+    <meta name="theme-color" content="#0B0E14">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-body: #07090D;
+            --bg-card: #0E121B;
+            --bg-card-subtle: #141A26;
+            --gold: #D4AF37;
+            --gold-light: #F6E6B4;
+            --gold-dark: #A6821E;
+            --coral: #E94560;
+            --emerald: #10B981;
+            --text-main: #F4F6F9;
+            --text-muted: #8E99A8;
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --radius-xl: 20px;
+            --radius-lg: 14px;
+            --radius-md: 10px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding-bottom: 60px;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.14) 0%, transparent 60%),
+                radial-gradient(circle at 90% 80%, rgba(233, 69, 96, 0.06) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .mobile-container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        .brand-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0 1.25rem;
+            border-bottom: 1px solid var(--border-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-logo-combo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-crest {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1.5px solid var(--gold);
+            background: #141108;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--gold);
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #151A26 0%, #0D1017 100%);
+            border: 1.5px solid var(--gold);
+            border-radius: var(--radius-xl);
+            padding: 2.2rem 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
+
+        .badge-etapa {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.9rem;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.1rem;
+            font-weight: 900;
+            color: #FFF;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1.4rem;
+        }
+
+        .quote-manifesto {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--gold);
+            padding: 1rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-style: italic;
+            color: #FFFDF5;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin: 2rem 0 1rem;
+        }
+
+        .card-resource {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .card-resource:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+            background: var(--bg-card-subtle);
+        }
+
+        .card-resource-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .card-ico {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid var(--border-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .card-info h4 {
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: #FFF;
+            margin-bottom: 0.2rem;
+        }
+
+        .card-info p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .badge-type {
+            font-size: 0.68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--gold-light);
+        }
+    .inline-logo{height:1.5em;width:1.5em;border-radius:50%;object-fit:contain;vertical-align:middle;margin-right:.3em}
+.action-logo .inline-logo,.brand-crest .inline-logo{height:34px;width:34px;margin:0}
+</style>
+</head>
+<body>
+
+    <div class="mobile-container">
+
+        <header class="brand-top">
+            <div class="brand-logo-combo">
+                <div class="brand-crest"><img src="logo_modo_lider.png" alt="Logo MODO LÍDER" class="inline-logo"></div>
+                <div>
+                    <div style="font-size: 0.78rem; font-weight: 800; letter-spacing: 1.5px; color: #FFF;">MODO LÍDER ®</div>
+                    <div style="font-size: 0.68rem; color: var(--gold);">PROGRAMA OFICIAL 90 DÍAS</div>
+                </div>
+            </div>
+            <a href="../00 PROGRAMA/Programa_Oficial_Modo_Lider_90_Dias.html" style="font-size: 0.75rem; color: var(--gold); text-decoration: none; font-weight: 700; border: 1px solid var(--border-gold); padding: 0.35rem 0.8rem; border-radius: 20px;">
+                Ver Programa Completo
+            </a>
+        </header>
+
+        <div class="hero-banner">
+            <span class="badge-etapa">ETAPA 2 · ENCUENTRO 05</span>
+            <h1 class="hero-title">Cliente Ideal y Problema Real</h1>
+            <p class="hero-desc">
+                Aprender a quién le hablas, qué dolor urgente le quita el sueño y qué necesita escuchar antes de tomar la decisión de contratarte o comprar tu producto.
+            </p>
+            <div class="quote-manifesto">
+                «Cuando le hablas a todo el mundo, no le hablas a nadie. La claridad sobre el dolor real de tu clienta es el 80% de una venta fluida y sin desgaste.»
+                <div style="margin-top: 0.4rem; font-size: 0.76rem; font-weight: 800; color: var(--gold); text-transform: uppercase;">
+                    — Lic. Romina Lorena Montiel
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: VIDEO INTRODUCTORIO OFICIAL -->
+        <div class="section-title">🎬 Video Introductorio de la Clase</div>
+        <div style="border-radius: 16px; overflow: hidden; border: 1.5px solid var(--border-gold); background: #000; box-shadow: 0 12px 36px rgba(0,0,0,0.6); margin-bottom: 2rem;">
+            <div style="position: relative; width: 100%; aspect-ratio: 16/9;">
+                <iframe 
+                    src="https://www.youtube-nocookie.com/embed/BlnnHWVzJ6Y?rel=0&modestbranding=1" 
+                    title="Video Introductorio · Clase 5: Cliente Ideal y Problema Real" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+                </iframe>
+            </div>
+            <div style="padding: 1rem 1.4rem; background: rgba(18, 14, 28, 0.95); display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid rgba(212, 175, 55, 0.2);">
+                <div>
+                    <div style="font-size: 0.92rem; font-weight: 800; color: #FFF;">Video Introductorio · Clase 5: Cliente Ideal y Problema Real</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Lic. Romina Lorena Montiel · Método Modo Líder</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <a href="https://www.youtube.com/watch?v=BlnnHWVzJ6Y" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 800; text-decoration: none; padding: 0.3rem 0.7rem; border-radius: 6px; background: rgba(255, 0, 0, 0.15); color: #FF6B6B; border: 1px solid rgba(255, 0, 0, 0.35); display: inline-flex; align-items: center; gap: 0.3rem;">
+                        <span>▶</span> Ver en YouTube ↗
+                    </a>
+                    <span style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 6px; background: rgba(212, 175, 55, 0.2); color: #FFDF00; border: 1px solid var(--border-gold); flex-shrink: 0;">OFICIAL HD</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: MATERIALES OFICIALES -->
+        <div class="section-title">📂 Materiales Oficiales para Descargar</div>
+
+        <!-- TARJETA GOOGLE DRIVE OFICIAL -->
+        <a href="https://drive.google.com/drive/folders/1dbTDTdlRLJPxkucLvuA7EaVIIUjkX1y4?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-resource" style="border-left: 4px solid var(--gold); background: linear-gradient(135deg, rgba(212, 175, 55, 0.14), rgba(26, 18, 42, 0.9)); box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+            <div class="card-resource-left">
+                <div class="card-ico" style="background: rgba(212, 175, 55, 0.25); border-color: var(--gold);">📁</div>
+                <div class="card-info">
+                    <h4 style="color: #FFF; font-size: 1.05rem;">Carpeta Oficial de Materiales en Google Drive</h4>
+                    <p style="color: #E2D9C8;">Descargá el Workbook oficial completo, plantillas de avatar, mapas de empatía y herramientas prácticas del encuentro.</p>
+                </div>
+            </div>
+            <div>
+                <span class="badge-type" style="background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%); color: #000; font-weight: 900; padding: 0.45rem 0.9rem; font-size: 0.76rem; border-radius: 50px; box-shadow: 0 4px 12px rgba(212,175,55,0.4);">
+                    DESCARGAR EN DRIVE ↗
+                </span>
+            </div>
+        </a>
+
+        <!-- ACCESO WORKBOOK INTERACTIVO -->
+        <a href="Workbook_Cliente_Ideal_y_Problema_Real.html" target="_blank" class="card-resource" style="border-left: 4px solid #10B981;">
+            <div class="card-resource-left">
+                <div class="card-ico" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4);">📝</div>
+                <div class="card-info">
+                    <h4>Workbook Interactivo en Pantalla</h4>
+                    <p>Completá tu ficha de clienta ideal, mapa de empatía y matriz de dolores directamente en tu navegador.</p>
+                </div>
+            </div>
+            <div>
+                <span class="badge-type" style="background: rgba(16, 185, 129, 0.2); color: #6EE7B7;">INTERACTIVO</span>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>
