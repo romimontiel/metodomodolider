@@ -3963,10 +3963,10 @@
                             <div class="pillar-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                                 <div class="pillar-title">
                                     <span>🎬</span>
-                                    <span id="title-video-clase5">Video Introductorio: Cliente Ideal y Problema Real</span>
+                                    <span id="title-video-clase5">1. Video Introductorio: Cliente Ideal y Problema Real</span>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                    <a href="https://www.youtube.com/watch?v=BlnnHWVzJ6Y" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 800; text-decoration: none; color: #FF6B6B; background: rgba(255,0,0,0.12); border: 1px solid rgba(255,0,0,0.3); padding: 0.25rem 0.65rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.3rem;">
+                                    <a id="ytLinkCampusC5" href="https://www.youtube.com/watch?v=BlnnHWVzJ6Y" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 800; text-decoration: none; color: #FF6B6B; background: rgba(255,0,0,0.12); border: 1px solid rgba(255,0,0,0.3); padding: 0.25rem 0.65rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.3rem;">
                                         <span>▶</span> YouTube ↗
                                     </a>
                                     <span class="pillar-badge" id="badge-video-clase5">Video Oficial HD</span>
@@ -3983,6 +3983,24 @@
                                     style="display: block; width: 100%; aspect-ratio: 16/9; border: none; border-radius: 12px; background: #000;">
                                 </iframe>
                             </div>
+                            
+                            <!-- Selector de videos Clase 5 Playlist -->
+                            <div class="video-playlist-bar">
+                                <span class="playlist-label">Videos de la Clase:</span>
+                                <button class="playlist-btn active" onclick="switchClase5CampusVideo('https://www.youtube.com/embed/BlnnHWVzJ6Y?rel=0', '1. Video Introductorio: Cliente Ideal y Problema Real', this, 'https://www.youtube.com/watch?v=BlnnHWVzJ6Y', 'Fundamentos clave sobre la conexión con tu cliente ideal y la detección del dolor real.')">
+                                    ▶ 1. Introducción
+                                </button>
+                                <button class="playlist-btn" onclick="switchClase5CampusVideo('https://www.youtube.com/embed/4VrX7mI0ujg?rel=0', '2. Estamos Desaprovechando las Oportunidades', this, 'https://www.youtube.com/watch?v=4VrX7mI0ujg', 'Reconocé el valor de lo que entregás a través de los 3 Lentes: solvencia, transformación y malestar que evitás.')">
+                                    ▶ 2. Oportunidades
+                                </button>
+                                <button class="playlist-btn" onclick="switchClase5CampusVideo('https://www.youtube.com/embed/8oaz0oYkxDQ?rel=0', '3. El Giro Copernicano: Del «Yo» al Mercado Real', this, 'https://www.youtube.com/watch?v=8oaz0oYkxDQ', 'Poné a tu cliente en el centro: dejá de mirar solo tus características y comprendé la vida y necesidades de tu clienta.')">
+                                    ▶ 3. Giro Copernicano
+                                </button>
+                                <button class="playlist-btn" onclick="switchClase5CampusVideo('https://www.youtube.com/embed/5C2A_ad_SMI?rel=0', '4. ¿Qué es el Momento Trigger y la Gran Ley de Ventas?', this, 'https://www.youtube.com/watch?v=5C2A_ad_SMI', 'El momento detonante en el que el problema se vuelve prioritario y urgente, y cómo despejar las barreras de compra.')">
+                                    ▶ 4. Momento Trigger
+                                </button>
+                            </div>
+    
                             <div class="video-description-box" id="desc-video-clase5">
                                 💡 <strong>Contenido de la Clase:</strong> La claridad sobre el dolor real de tu clienta es el 80% de una venta fluida y sin desgaste. «Cuando le hablas a todo el mundo, no le hablas a nadie».
                             </div>
@@ -4697,7 +4715,24 @@
         window.addEventListener('DOMContentLoaded', function() {
             updateAuthBadgesInCampus();
         });
-    </script>
+    
+    function switchClase5CampusVideo(embedUrl, title, btn, ytUrl, desc) {
+        var iframe = document.getElementById('iframeElement-clase5');
+        var titleElem = document.getElementById('title-video-clase5');
+        var ytLink = document.getElementById('ytLinkCampusC5');
+        var descElem = document.getElementById('desc-video-clase5');
+        if (iframe) iframe.src = embedUrl;
+        if (titleElem && title) titleElem.textContent = title;
+        if (ytLink && ytUrl) ytLink.href = ytUrl;
+        if (descElem && desc) descElem.innerHTML = '💡 <strong>Contenido de la Clase:</strong> ' + desc;
+        if (btn) {
+            var bar = btn.closest('.video-playlist-bar');
+            if (bar) bar.querySelectorAll('.playlist-btn').forEach(function(b){ b.classList.remove('active'); });
+            btn.classList.add('active');
+        }
+    }
+    
+</script>
 
     <!-- MODAL DE ACCESO A CURSO COMPLETO -->
     <div class="campus-modal-overlay" id="campusAuthModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(4,6,10,0.88); backdrop-filter:blur(14px); z-index:99999; align-items:center; justify-content:center; padding:1.2rem;" onclick="if(event.target===this)closeCampusAuthModal()">

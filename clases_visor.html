@@ -1517,16 +1517,17 @@ body {
           allowfullscreen
           style="display: block; width: 100%; aspect-ratio: 16/9; border: none; border-radius: 12px; background: #000;">
         </iframe>
-        <div class="pl-bar" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem;">
-          <div>
-            <span class="pl-lbl">🎬 Video Introductorio:</span>
-            <span style="color:#FFF; font-size:0.85rem; font-weight:700;">Cliente Ideal y Problema Real &middot; Lic. Romina Lorena Montiel</span>
-          </div>
-          <a href="https://www.youtube.com/watch?v=BlnnHWVzJ6Y" target="_blank" rel="noopener noreferrer" class="btn-s" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; padding: 0.35rem 0.8rem; border-radius: 50px;">
+        <div class="pl-bar">
+          <span class="pl-lbl">Videos:</span>
+          <button class="pl-btn active" onclick="switchClase5MainVideo('https://www.youtube.com/embed/BlnnHWVzJ6Y?rel=0','1. Video Introductorio &bull; Cliente Ideal y Problema Real',this,'https://www.youtube.com/watch?v=BlnnHWVzJ6Y')">&#9658; 1. Introducción</button>
+          <button class="pl-btn" onclick="switchClase5MainVideo('https://www.youtube.com/embed/4VrX7mI0ujg?rel=0','2. Estamos Desaprovechando las Oportunidades &bull; Los 3 Lentes',this,'https://www.youtube.com/watch?v=4VrX7mI0ujg')">&#9658; 2. Oportunidades</button>
+          <button class="pl-btn" onclick="switchClase5MainVideo('https://www.youtube.com/embed/8oaz0oYkxDQ?rel=0','3. El Giro Copernicano &bull; Del «Yo» al Mercado Real',this,'https://www.youtube.com/watch?v=8oaz0oYkxDQ')">&#9658; 3. Giro Copernicano</button>
+          <button class="pl-btn" onclick="switchClase5MainVideo('https://www.youtube.com/embed/5C2A_ad_SMI?rel=0','4. Momento Trigger &bull; La Gran Ley de Ventas',this,'https://www.youtube.com/watch?v=5C2A_ad_SMI')">&#9658; 4. Momento Trigger</button>
+          <a href="https://www.youtube.com/watch?v=BlnnHWVzJ6Y" id="btnDirectYT5" target="_blank" rel="noopener noreferrer" class="btn-s" style="margin-left:auto; text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; padding: 0.35rem 0.8rem; border-radius: 50px;">
             <span>▶</span> Ver en YouTube ↗
           </a>
         </div>
-      </div>
+      
       <div class="v-desc" id="d5">&#128161; <strong>Introducción a la Clase:</strong> La claridad sobre el dolor real de tu clienta es el 80% de una venta fluida y sin desgaste. «Cuando le hablas a todo el mundo, no le hablas a nadie».</div>
 
       
@@ -1886,6 +1887,24 @@ window.addEventListener('DOMContentLoaded', function(){
     if (m) sw(parseInt(m[1]));
   }
 });
+
+function switchClase5MainVideo(url, desc, btn, directYtUrl) {
+  var ifr = document.getElementById('yt-video-clase5');
+  var d = document.getElementById('d5');
+  var btnDirect = document.getElementById('btnDirectYT5');
+  if (ifr) {
+    ifr.src = '';
+    setTimeout(function(){ ifr.src = url; }, 50);
+  }
+  if (d) d.innerHTML = '&#128161; <strong>Reproduciendo:</strong> ' + desc;
+  if (btnDirect && directYtUrl) btnDirect.href = directYtUrl;
+  if (btn) {
+    var bar = btn.closest('.pl-bar');
+    if (bar) bar.querySelectorAll('.pl-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+}
+
 </script>
 </body>
 </html>

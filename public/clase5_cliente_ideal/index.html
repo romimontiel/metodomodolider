@@ -200,6 +200,83 @@
         }
     .inline-logo{height:1.5em;width:1.5em;border-radius:50%;object-fit:contain;vertical-align:middle;margin-right:.3em}
 .action-logo .inline-logo,.brand-crest .inline-logo{height:34px;width:34px;margin:0}
+
+        /* PLAYLIST VIDEOS CLASE 5 */
+        .video-playlist-bar {
+            background: rgba(14, 18, 27, 0.95);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-md);
+            padding: 0.85rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.85rem;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .playlist-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            letter-spacing: 0.8px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.25rem;
+        }
+
+        .playlist-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #CBD5E1;
+            padding: 0.5rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            white-space: nowrap;
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        .playlist-btn:hover {
+            background: rgba(212, 175, 55, 0.15);
+            color: #FFFFFF;
+            border-color: var(--gold);
+            transform: translateY(-1px);
+        }
+
+        .playlist-btn.active {
+            background: rgba(212, 175, 55, 0.25);
+            color: #FFDF00;
+            border-color: var(--gold);
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .video-description-box {
+            background: rgba(14, 18, 27, 0.85);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: var(--radius-md);
+            padding: 0.85rem 1.1rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-top: 0.75rem;
+        }
+
 </style>
 </head>
 <body>
@@ -233,29 +310,52 @@
             </div>
         </div>
 
-        <!-- SECCIÓN: VIDEO INTRODUCTORIO OFICIAL -->
-        <div class="section-title">🎬 Video Introductorio de la Clase</div>
+        <!-- SECCIÓN: VIDEOS OFICIALES DE LA CLASE (PLAYLIST) -->
+        <div class="section-title">🎬 Videos de la Clase (4 Partes Oficiales)</div>
         <div style="border-radius: 16px; overflow: hidden; border: 1.5px solid var(--border-gold); background: #000; box-shadow: 0 12px 36px rgba(0,0,0,0.6); margin-bottom: 2rem;">
             <div style="position: relative; width: 100%; aspect-ratio: 16/9;">
                 <iframe 
+                    id="iframeElement-clase5"
                     src="https://www.youtube.com/embed/BlnnHWVzJ6Y?rel=0" 
-                    title="Video Introductorio · Clase 5: Cliente Ideal y Problema Real" 
+                    title="1. Video Introductorio · Clase 5: Cliente Ideal y Problema Real" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
                     allowfullscreen
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
                 </iframe>
             </div>
-            <div style="padding: 1rem 1.4rem; background: rgba(18, 14, 28, 0.95); display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid rgba(212, 175, 55, 0.2);">
+            <div style="padding: 1rem 1.4rem; background: rgba(18, 14, 28, 0.95); display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid rgba(212, 175, 55, 0.2); flex-wrap: wrap;">
                 <div>
-                    <div style="font-size: 0.92rem; font-weight: 800; color: #FFF;">Video Introductorio · Clase 5: Cliente Ideal y Problema Real</div>
+                    <div id="title-video-clase5" style="font-size: 0.95rem; font-weight: 800; color: #FFF;">1. Video Introductorio · Cliente Ideal y Problema Real</div>
                     <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Lic. Romina Lorena Montiel · Método Modo Líder</div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 0.6rem;">
-                    <a href="https://www.youtube.com/watch?v=BlnnHWVzJ6Y" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 800; text-decoration: none; padding: 0.3rem 0.7rem; border-radius: 6px; background: rgba(255, 0, 0, 0.15); color: #FF6B6B; border: 1px solid rgba(255, 0, 0, 0.35); display: inline-flex; align-items: center; gap: 0.3rem;">
+                    <a id="yt-link-clase5" href="https://www.youtube.com/watch?v=BlnnHWVzJ6Y" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 800; text-decoration: none; padding: 0.35rem 0.75rem; border-radius: 6px; background: rgba(255, 0, 0, 0.15); color: #FF6B6B; border: 1px solid rgba(255, 0, 0, 0.35); display: inline-flex; align-items: center; gap: 0.3rem;">
                         <span>▶</span> Ver en YouTube ↗
                     </a>
-                    <span style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 6px; background: rgba(212, 175, 55, 0.2); color: #FFDF00; border: 1px solid var(--border-gold); flex-shrink: 0;">OFICIAL HD</span>
+                    <span style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 6px; background: rgba(212, 175, 55, 0.2); color: #FFDF00; border: 1px solid var(--border-gold); flex-shrink: 0;">OFICIAL HD</span>
+                </div>
+            </div>
+
+            <!-- SELECTOR DE PLAYLIST: 4 VIDEOS -->
+            <div style="padding: 0 1rem 1rem; background: rgba(18, 14, 28, 0.95);">
+                <div class="video-playlist-bar">
+                    <span class="playlist-label">🎯 Seleccioná la parte de la clase a reproducir:</span>
+                    <button class="playlist-btn active" onclick="selectClase5Video(0)">
+                        🎬 1. Introducción
+                    </button>
+                    <button class="playlist-btn" onclick="selectClase5Video(1)">
+                        🎬 2. Oportunidades
+                    </button>
+                    <button class="playlist-btn" onclick="selectClase5Video(2)">
+                        🎬 3. Giro Copernicano
+                    </button>
+                    <button class="playlist-btn" onclick="selectClase5Video(3)">
+                        🎬 4. Momento Trigger
+                    </button>
+                </div>
+                <div class="video-description-box" id="desc-video-clase5">
+                    💡 <strong>Parte 1 · Contenido:</strong> Fundamentos clave sobre la conexión con tu cliente ideal y la detección del dolor real.
                 </div>
             </div>
         </div>
@@ -317,5 +417,68 @@
 
     </div>
 
+
+    <script>
+        const videosClase5 = [
+            {
+                id: 'BlnnHWVzJ6Y',
+                num: 1,
+                title: '1. Video Introductorio · Cliente Ideal y Problema Real',
+                desc: 'Fundamentos clave sobre la conexión con tu cliente ideal y la detección del dolor real.'
+            },
+            {
+                id: '4VrX7mI0ujg',
+                num: 2,
+                title: '2. Estamos Desaprovechando las Oportunidades',
+                desc: 'Reconocé el valor de lo que entregás a través de los 3 Lentes: solvencia, transformación y el malestar que ayudás a evitar.'
+            },
+            {
+                id: '8oaz0oYkxDQ',
+                num: 3,
+                title: '3. El Giro Copernicano: Del «Yo» al Mercado Real',
+                desc: 'Poné al cliente en el centro: dejá de hablar únicamente de tus características o técnicas y comprendé la vida cotidiana y necesidades de tu clienta.'
+            },
+            {
+                id: '5C2A_ad_SMI',
+                num: 4,
+                title: '4. ¿Qué es el Momento Trigger y la Decisión de Compra?',
+                desc: 'El momento detonante en el que el problema se vuelve prioritario y urgente, y cómo despejar las barreras de compra.'
+            }
+        ];
+
+        function selectClase5Video(index) {
+            const v = videosClase5[index];
+            if (!v) return;
+
+            const iframe = document.getElementById('iframeElement-clase5');
+            const titleElem = document.getElementById('title-video-clase5');
+            const ytLink = document.getElementById('yt-link-clase5');
+            const descElem = document.getElementById('desc-video-clase5');
+
+            if (iframe) {
+                iframe.src = 'https://www.youtube.com/embed/' + v.id + '?rel=0&autoplay=1';
+                iframe.title = v.title;
+            }
+            if (titleElem) {
+                titleElem.textContent = v.title;
+            }
+            if (ytLink) {
+                ytLink.href = 'https://www.youtube.com/watch?v=' + v.id;
+            }
+            if (descElem) {
+                descElem.innerHTML = '💡 <strong>Parte ' + v.num + ' · Contenido:</strong> ' + v.desc;
+            }
+
+            const buttons = document.querySelectorAll('.video-playlist-bar .playlist-btn');
+            buttons.forEach(function(btn, i) {
+                if (i === index) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
