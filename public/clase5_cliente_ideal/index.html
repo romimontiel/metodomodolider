@@ -316,7 +316,7 @@
             <div style="position: relative; width: 100%; aspect-ratio: 16/9;">
                 <iframe 
                     id="iframeElement-clase5"
-                    src="https://www.youtube.com/embed/BlnnHWVzJ6Y?rel=0" 
+                    src="https://www.youtube-nocookie.com/embed/BlnnHWVzJ6Y?rel=0" 
                     title="1. Video Introductorio · Clase 5: Cliente Ideal y Problema Real" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
@@ -330,9 +330,6 @@
                     <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Lic. Romina Lorena Montiel · Método Modo Líder</div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 0.6rem;">
-                    <a id="yt-link-clase5" href="https://www.youtube.com/watch?v=BlnnHWVzJ6Y" target="_blank" rel="noopener noreferrer" style="font-size: 0.72rem; font-weight: 800; text-decoration: none; padding: 0.35rem 0.75rem; border-radius: 6px; background: rgba(255, 0, 0, 0.15); color: #FF6B6B; border: 1px solid rgba(255, 0, 0, 0.35); display: inline-flex; align-items: center; gap: 0.3rem;">
-                        <span>▶</span> Ver en YouTube ↗
-                    </a>
                     <span style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 6px; background: rgba(212, 175, 55, 0.2); color: #FFDF00; border: 1px solid var(--border-gold); flex-shrink: 0;">OFICIAL HD</span>
                 </div>
             </div>
@@ -452,18 +449,14 @@
 
             const iframe = document.getElementById('iframeElement-clase5');
             const titleElem = document.getElementById('title-video-clase5');
-            const ytLink = document.getElementById('yt-link-clase5');
             const descElem = document.getElementById('desc-video-clase5');
 
             if (iframe) {
-                iframe.src = 'https://www.youtube.com/embed/' + v.id + '?rel=0&autoplay=1';
+                iframe.src = 'https://www.youtube-nocookie.com/embed/' + v.id + '?rel=0&autoplay=1';
                 iframe.title = v.title;
             }
             if (titleElem) {
                 titleElem.textContent = v.title;
-            }
-            if (ytLink) {
-                ytLink.href = 'https://www.youtube.com/watch?v=' + v.id;
             }
             if (descElem) {
                 descElem.innerHTML = '💡 <strong>Parte ' + v.num + ' · Contenido:</strong> ' + v.desc;

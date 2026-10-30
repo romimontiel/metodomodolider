@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbook • Taller Creativo para Vender Más | Método MODO LÍDER ®</title>
+    <meta name="description" content="Cuaderno de Trabajo Oficial de la Clase 6: Taller Creativo para Vender Más. Cómo desarrollar nuevos conceptos producto-mercado para vender más. Lic. Romina Lorena Montiel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #0E121B;
+            --color-navy: #161A25;
+            --color-bg-page: #F8F9FB;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #B4871E;
+            --color-gold-light: #FFF9E6;
+            --color-coral: #E94560;
+            --color-coral-light: #FFF0F2;
+            --color-emerald: #10B981;
+            --color-emerald-light: #ECFDF5;
+            --color-text-main: #1A202C;
+            --color-text-muted: #5A6A85;
+            --color-border: #E2E8F0;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--color-bg-page); color: var(--color-text-main); line-height: 1.6; padding-bottom: 5rem; }
+
+        .action-bar {
+            max-width: 920px; margin: 1.5rem auto; display: flex; justify-content: space-between; align-items: center;
+            background: var(--color-primary); color: #FFFFFF; padding: 1rem 2rem; border-radius: var(--radius-md);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25); border: 1px solid rgba(212, 175, 55, 0.4); position: sticky; top: 1rem; z-index: 100;
+        }
+        .action-brand { display: flex; align-items: center; gap: 0.8rem; }
+        .action-logo { font-size: 1.4rem; color: var(--color-gold); }
+        .action-title { font-size: 0.9rem; font-weight: 800; }
+        .action-sub { font-size: 0.74rem; color: #94A3B8; }
+        .btn-group { display: flex; gap: 0.6rem; }
+        .btn-gold { background: linear-gradient(135deg, #FFDF00 0%, #D4AF37 100%); color: #07090E; font-size: 0.82rem; font-weight: 900; padding: 0.65rem 1.4rem; border-radius: 50px; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+        .btn-secondary { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; font-size: 0.82rem; font-weight: 700; padding: 0.65rem 1.2rem; border-radius: 50px; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.2); }
+
+        .workbook-container { max-width: 920px; margin: 0 auto; background: #FFFFFF; border-radius: var(--radius-lg); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06); border: 1px solid var(--color-border); overflow: hidden; }
+
+        /* ═══ CARÁTULA ESTÁNDAR MODO LÍDER ═══ */
+        .cover-page { background: #343538; color: #FFFFFF; min-height: 980px; display: flex; flex-direction: column; justify-content: space-between; text-align: center; padding: 3.5rem 3rem 0 3rem; }
+        .cover-top { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; }
+        .cover-author { font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8E0CC; margin-bottom: 0.6rem; }
+        .cover-divider { width: 90px; height: 1.5px; background: #C8A82A; margin: 0 auto 1.5rem auto; }
+        .cover-course-label { font-size: 0.76rem; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: #C8C0B0; margin-bottom: 0.4rem; }
+        .cover-course-name { font-size: 1.05rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #E8E0CC; margin-bottom: 2.2rem; }
+        .cover-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3.4rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.05; margin-bottom: 0.5rem; }
+        .cover-subject { font-family: 'Playfair Display', Georgia, serif; font-size: 1.85rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2; margin-bottom: 1.8rem; }
+        .cover-logo-img { width: 155px; height: 155px; border-radius: 50%; object-fit: contain; margin: 0.5rem auto 1.4rem auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+        .cover-subtitle { font-family: 'Playfair Display', Georgia, serif; font-size: 1.45rem; color: #F0C040; margin-top: 0.4rem; font-weight: 700; }
+        .cover-desc { font-size: 0.88rem; color: #E8E0CC; margin: 0.5rem auto 1.5rem auto; max-width: 620px; line-height: 1.55; }
+        .cover-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; width: 100%; max-width: 650px; margin: 0.5rem auto 1rem; text-align: left; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius-md); padding: 1.1rem 1.5rem; }
+        .cover-bottom { background: #242527; padding: 1.3rem 2rem; margin: 0 -3rem; border-top: 1px solid #3E4044; text-align: center; }
+        .cover-quote { font-size: 0.86rem; color: #D1D5DB; font-weight: 500; letter-spacing: 0.5px; font-style: italic; }
+
+        /* ═══ DERECHOS DE AUTOR ═══ */
+        .copyright-page { background: #FFFFFF; min-height: 980px; display: flex; flex-direction: column; justify-content: space-between; padding: 3.5rem 3.5rem 2.5rem 3.5rem; }
+        .copyright-content { flex: 1; }
+        .copyright-circle { width: 125px; height: 125px; border-radius: 50%; border: 14px solid #C8A25D; display: flex; align-items: center; justify-content: center; margin: 1.5rem auto; }
+        .copyright-circle span { font-size: 72px; font-weight: 700; color: #C8A25D; line-height: 1; transform: translateY(-2px); }
+        .copyright-title { font-size: 1.15rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #161A25; text-align: center; margin-bottom: 1.2rem; }
+        .copyright-rights { font-size: 0.96rem; color: #333; text-align: center; margin-bottom: 0.7rem; }
+        .copyright-author { font-size: 0.98rem; color: #161A25; font-weight: 600; text-align: center; margin-bottom: 0.25rem; }
+        .copyright-credentials { font-size: 0.82rem; font-weight: 800; letter-spacing: 1.6px; color: #333; text-align: center; text-transform: uppercase; margin-bottom: 2.5rem; }
+        .copyright-body { max-width: 610px; margin: 0 auto; font-size: 0.94rem; line-height: 1.68; color: #2B2C2E; }
+        .copyright-body p { margin-bottom: 1.3rem; }
+        .copyright-footer { display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem; padding-top: 1rem; }
+        .copyright-footer-logo { width: 36px; height: 36px; border-radius: 50%; object-fit: contain; }
+        .copyright-page-number { font-weight: 800; font-size: 1.15rem; color: #161A25; }
+
+        .meta-field label { display: block; font-size: 0.72rem; font-weight: 800; color: var(--color-gold); text-transform: uppercase; margin-bottom: 0.3rem; }
+        .meta-field input { width: 100%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #FFF; padding: 0.5rem 0.8rem; border-radius: var(--radius-sm); outline: none; }
+
+        .section-block { padding: 3.5rem 3.5rem; border-bottom: 1.5px solid var(--color-border); }
+        .section-tag { font-size: 0.74rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-gold-dark); margin-bottom: 0.4rem; }
+        .section-heading { font-family: 'Playfair Display', Georgia, serif; font-size: 1.85rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.6rem; }
+        .section-desc { font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem; line-height: 1.6; }
+        .quote-banner { background: var(--color-gold-light); border: 1.5px solid var(--color-gold); border-left: 6px solid var(--color-gold); border-radius: var(--radius-sm); padding: 1.4rem 1.8rem; margin-bottom: 2rem; font-size: 0.95rem; font-weight: 600; color: #78350F; }
+        .exercise-card { background: #F8FAFC; border: 1.5px solid var(--color-border); border-radius: var(--radius-md); padding: 1.8rem; margin-bottom: 1.8rem; }
+        .exercise-card.gold { border-left: 5px solid var(--color-gold); }
+        .exercise-card.coral { border-left: 5px solid var(--color-coral); }
+        .exercise-card.emerald { border-left: 5px solid var(--color-emerald); }
+        .exercise-title { font-size: 1.05rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.4rem; }
+        .exercise-guide { font-size: 0.85rem; color: #475569; margin-bottom: 1.1rem; font-style: italic; }
+        .fill-textarea { width: 100%; min-height: 100px; padding: 1rem 1.2rem; border-radius: var(--radius-sm); border: 1.5px solid #CBD5E1; background: #FFFFFF; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #1E293B; line-height: 1.6; outline: none; resize: vertical; }
+        .fill-textarea:focus { border-color: var(--color-gold); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15); }
+        .field-label { display: block; font-size: 0.78rem; font-weight: 800; color: #92400E; margin-bottom: 0.3rem; margin-top: 0.9rem; }
+        .field-label:first-of-type { margin-top: 0; }
+
+        /* Matriz comparativa */
+        .matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 2rem; }
+        .matrix-col { border-radius: var(--radius-md); padding: 1.4rem 1.5rem; font-size: 0.86rem; line-height: 1.6; }
+        .matrix-col h4 { font-size: 0.82rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.7rem; }
+        .matrix-col ul { list-style: none; }
+        .matrix-col li { margin-bottom: 0.5rem; padding-left: 1.1rem; position: relative; }
+        .matrix-col li::before { content: '•'; position: absolute; left: 0; font-weight: 900; }
+        .matrix-old { background: var(--color-coral-light); border: 1.5px solid var(--color-coral); color: #7F1D2D; }
+        .matrix-old li::before, .matrix-old h4 { color: var(--color-coral); }
+        .matrix-new { background: #FEF9EB; border: 1.5px solid var(--color-gold); color: #78350F; }
+        .matrix-new li::before, .matrix-new h4 { color: var(--color-gold-dark); }
+
+        /* Cuadrante de nuevos conceptos */
+        .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.4rem; }
+        .concept-cell { background: #FFFFFF; border: 1.5px dashed #CBD5E1; border-radius: var(--radius-sm); padding: 0.9rem 1rem; }
+        .concept-cell label { display: block; font-size: 0.74rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.6px; color: var(--color-gold-dark); margin-bottom: 0.4rem; }
+        .concept-cell textarea { width: 100%; min-height: 85px; border: none; outline: none; resize: vertical; font-family: 'Montserrat', sans-serif; font-size: 0.86rem; color: #1E293B; background: transparent; line-height: 1.55; }
+
+        .formula-box { background: linear-gradient(135deg, #0E121B 0%, #161A25 100%); border: 2px solid var(--color-gold); border-radius: var(--radius-md); padding: 2.2rem; color: #FFF; margin: 2rem 0; }
+        .formula-title { text-align: center; font-size: 1.1rem; font-weight: 900; color: var(--color-gold); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.2rem; }
+        .formula-text { text-align: center; font-size: 1.02rem; line-height: 1.8; color: #FFF8E1; }
+        .formula-text strong { color: #FFDF00; }
+
+        .key-points { background: #F1F5F9; border: 1.5px solid var(--color-border); border-left: 6px solid var(--color-primary); border-radius: var(--radius-md); padding: 1.4rem 1.6rem; margin-bottom: 1.8rem; }
+        .key-points-title { font-size: 0.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary); margin-bottom: 0.7rem; }
+        .key-points ul { list-style: none; }
+        .key-points li { font-size: 0.88rem; color: #334155; line-height: 1.6; margin-bottom: 0.55rem; padding-left: 1.2rem; position: relative; }
+        .key-points li::before { content: '▸'; position: absolute; left: 0; color: var(--color-gold-dark); font-weight: 900; }
+
+        .workbook-footer { background: #0E121B; color: #FFFFFF; padding: 3rem 3.5rem; text-align: center; border-top: 3px solid var(--color-gold); }
+        .footer-logo { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 800; letter-spacing: 3px; color: var(--color-gold); margin-bottom: 0.6rem; }
+
+        @media (max-width: 680px) {
+            .section-block { padding: 2.2rem 1.4rem; }
+            .matrix, .concept-grid, .cover-meta-grid { grid-template-columns: 1fr; }
+            .cover-h1 { font-size: 2.4rem; }
+            .cover-subject { font-size: 1.3rem; }
+            .action-bar { flex-direction: column; gap: 0.8rem; text-align: center; }
+        }
+
+        @media print {
+            body { background: #FFF; padding: 0; }
+            .action-bar { display: none !important; }
+            .workbook-container { box-shadow: none; border: none; max-width: 100%; border-radius: 0; }
+            .cover-page, .copyright-page { height: 297mm; page-break-after: always; break-after: page; overflow: hidden; }
+            .cover-page { padding: 22mm 20mm 0 20mm !important; background: #343538 !important; }
+            .cover-bottom { margin: 0 -20mm !important; padding: 10mm 15mm !important; }
+            .copyright-page { padding: 22mm 24mm 16mm 24mm !important; }
+            .section-block { padding: 2rem 1rem; }
+            .exercise-card, .matrix, .formula-box, .quote-banner { page-break-inside: avoid; break-inside: avoid; }
+            .page-break { page-break-before: always; break-before: page; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="action-bar">
+        <div class="action-brand">
+            <span class="action-logo">👑</span>
+            <div>
+                <div class="action-title">MÉTODO MODO LÍDER ® • WORKBOOK INTERACTIVO</div>
+                <div class="action-sub">Clase 6 · Taller Creativo para Vender Más</div>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button class="btn-secondary" onclick="saveData()">💾 Guardar Avance</button>
+            <button class="btn-gold" onclick="window.print()">🖨️ Imprimir / Guardar en PDF</button>
+        </div>
+    </div>
+
+    <main class="workbook-container">
+
+        <!-- PÁGINA 1: CARÁTULA ESTÁNDAR -->
+        <header class="cover-page">
+            <div class="cover-top">
+                <p class="cover-author">LIC. ROMINA LORENA MONTIEL</p>
+                <div class="cover-divider"></div>
+                <p class="cover-course-label">CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS</p>
+                <p class="cover-course-name">MÉTODO MODO LÍDER ®</p>
+
+                <h1 class="cover-h1">WORKBOOK</h1>
+                <div class="cover-subject">TALLER CREATIVO<br>PARA VENDER MÁS</div>
+
+                <img src="logo_modo_lider.png" alt="Método MODO LÍDER" class="cover-logo-img">
+
+                <h2 class="cover-subtitle">Clase 6 · Nuevos conceptos para vender más</h2>
+                <p class="cover-desc">
+                    Definir tu mercado objetivo, entender cómo se toman las decisiones de compra, detectar triggers y puentes, y animarte a explorar nuevos conceptos producto-mercado para vender más.
+                </p>
+
+                <div class="cover-meta-grid">
+                    <div class="meta-field">
+                        <label>Tu Nombre y Apellido:</label>
+                        <input type="text" id="student_name" placeholder="Ej: Marcela Benítez">
+                    </div>
+                    <div class="meta-field">
+                        <label>Nombre de tu Negocio:</label>
+                        <input type="text" id="business_name" placeholder="Ej: Aljesec / Modo Líder">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cover-bottom">
+                <p class="cover-quote">“Dejo de esperar que mi negocio me transforme y empiezo a transformarme para liderarlo.”</p>
+            </div>
+        </header>
+
+        <!-- PÁGINA 2: DERECHOS DE AUTOR -->
+        <div class="copyright-page">
+            <div class="copyright-content">
+                <div class="copyright-circle"><span>C</span></div>
+                <h2 class="copyright-title">📜 DERECHOS DE AUTOR</h2>
+                <p class="copyright-rights">- Todos los derechos reservados.</p>
+                <p class="copyright-author">Escrito por Romina Lorena Montiel</p>
+                <p class="copyright-credentials">NEUROPSICOEDUCADORA - MENTORA - ESCRITORA</p>
+                <div class="copyright-body">
+                    <p>Este material ha sido creado por Lic. Romina Lorena Montiel, Neuropsicoeducadora, Mentora de Mentes y Negocios.</p>
+                    <p>Ninguna parte de este producto, ya sea en formato digital o impreso, puede ser reproducida, distribuida, compartida, almacenada en sistemas de recuperación ni transmitida en ninguna forma ni por ningún medio —electrónico, mecánico, fotocopia, grabación u otro— sin el permiso previo y por escrito de la autora.</p>
+                    <p>Este producto está protegido por la Ley 11.723 de Propiedad Intelectual de la República Argentina y por los tratados internacionales sobre derechos de autor.</p>
+                    <p>La compra de este producto es exclusivamente para uso personal. Su distribución no autorizada constituye una violación a las leyes de propiedad intelectual.</p>
+                </div>
+            </div>
+            <div class="copyright-footer">
+                <img src="logo_modo_lider.png" alt="Logo MODO LÍDER" class="copyright-footer-logo">
+                <span class="copyright-page-number">1</span>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 1: MERCADO OBJETIVO -->
+        <section class="section-block">
+            <div class="section-tag">SECCIÓN 1 · VIDEO 1</div>
+            <h2 class="section-heading">1. ¿Qué es definir un mercado objetivo?</h2>
+            <p class="section-desc">
+                Tenemos que buscar siempre nuevas oportunidades de venta y nuevos mercados objetivos. Cada mercado objetivo es un grupo de personas que se comporta de manera parecida, y nuestra tarea es analizar si queremos que ese grupo forme parte de nuestro mercado.
+            </p>
+
+            <div class="key-points">
+                <div class="key-points-title">📌 Lo que vimos en el video</div>
+                <ul>
+                    <li>Un mercado objetivo es un <strong>grupo que se comporta parecido</strong>: sus integrantes gastan, desean y deciden de manera similar.</li>
+                    <li><strong>Quien paga no siempre es quien desea.</strong> En el mercado de madres que hacen todo por sus hijos, el padre actúa de "billetera": a quien hay que analizar es al hijo o a la hija (¿qué quieren? ¿qué esperan? ¿qué les gusta?).</li>
+                    <li>Se apela al bolsillo de una persona, pero se cumple el deseo de otra. Una persona es representativa de <strong>una gran cantidad de personas</strong> con los mismos gustos.</li>
+                    <li>Hay que preguntarse <strong>desde qué edad</strong> las personas tienen acceso tecnológico y toman decisiones propias de compra (un curso, un taller...), y si son o no mi mercado objetivo.</li>
+                </ul>
+            </div>
+
+            <div class="quote-banner">
+                💡 <strong>Idea ancla:</strong> «Cada mercado objetivo es un grupo que se comporta parecido. Mi trabajo es decidir con conciencia si quiero que ese grupo forme parte de mi negocio.»
+            </div>
+
+            <div class="matrix">
+                <div class="matrix-col matrix-old">
+                    <h4>Mirada limitada</h4>
+                    <ul>
+                        <li>Analizo solo a quien paga.</li>
+                        <li>Vendo siempre al mismo grupo de siempre.</li>
+                        <li>Doy por hecho quién decide la compra.</li>
+                    </ul>
+                </div>
+                <div class="matrix-col matrix-new">
+                    <h4>Líder consciente</h4>
+                    <ul>
+                        <li>Analizo a quien paga y a quien desea y decide.</li>
+                        <li>Exploro grupos nuevos que se comportan parecido.</li>
+                        <li>Evalúo si cada grupo tiene sentido para mí.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🎯</span> Ejercicio 1.1: Mi mercado objetivo hoy</div>
+                <div class="exercise-guide">Describí el grupo al que le vendés hoy. ¿En qué se parecen sus integrantes? ¿Cómo se comportan?</div>
+                <textarea class="fill-textarea" id="ex_1_1" placeholder="Ej: Mujeres que trabajan y cuidan a su familia, que gastan en su bienestar y compran por recomendación..."></textarea>
+            </div>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>💳</span> Ejercicio 1.2: ¿Quién paga, quién desea y quién decide?</div>
+                <div class="exercise-guide">En mi mercado, ¿la persona que paga es la misma que desea el producto o servicio?</div>
+                <label class="field-label">Quién paga:</label>
+                <textarea class="fill-textarea" id="ex_1_2_a" style="min-height:70px;"></textarea>
+                <label class="field-label">Quién desea o usa lo que vendo:</label>
+                <textarea class="fill-textarea" id="ex_1_2_b" style="min-height:70px;"></textarea>
+                <label class="field-label">Quién decide la compra (y desde qué edad o momento puede hacerlo):</label>
+                <textarea class="fill-textarea" id="ex_1_2_c" style="min-height:70px;"></textarea>
+            </div>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>🔭</span> Ejercicio 1.3: Un grupo que todavía no miré</div>
+                <div class="exercise-guide">¿Qué grupo cercano a mi negocio podría convertirse en mi mercado objetivo? ¿Qué le gusta, en qué gasta y qué espera?</div>
+                <textarea class="fill-textarea" id="ex_1_3" placeholder="Ej: Los hijos jóvenes de mis clientas: les gusta la fotografía, el cine, la música, y gastan en eso..."></textarea>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: DECISIONES DE COMPRA -->
+        <section class="section-block page-break">
+            <div class="section-tag">SECCIÓN 2 · VIDEO 2</div>
+            <h2 class="section-heading">2. Decisiones de Compra: ¿Cómo las tomamos?</h2>
+            <p class="section-desc">
+                Todas las personas tomamos decisiones a partir de "clics" o <strong>triggers</strong>, y tienen mucho que ver con las emociones. Si entiendo qué siente mi mercado hoy, puedo comunicarme con quienes están viviendo ese momento.
+            </p>
+
+            <div class="key-points">
+                <div class="key-points-title">📌 Lo que vimos en el video</div>
+                <ul>
+                    <li>Las decisiones de compra son <strong>emocionales en un 95%</strong>: compramos por amor propio, cansancio, apuro, necesidad de tiempo o de pertenecer a un grupo.</li>
+                    <li>Hay que salir del rango de edad y mirar <strong>cómo se siente hoy mi mercado</strong>: qué quiere de la vida, qué necesita, qué espera, cuáles son sus mayores problemas, dramas y miedos.</li>
+                    <li>Hay una unión entre <strong>algo que pasa en su vida</strong>, <strong>una emoción que estalla</strong> y <strong>la compra</strong>. Detectar ese patrón permite abrazar a más personas con la comunicación.</li>
+                    <li><strong>Tu cliente no siempre es tu cliente:</strong> lo es en un momento particular. El momento trigger es cuando te va a escuchar.</li>
+                    <li>Para vender hay que <strong>construir conceptos que el otro entienda</strong>: disminuir la complejidad para aumentar la cantidad de personas que te entienden.</li>
+                    <li>Usar <strong>palabras emocionales</strong> genera empatía (por ejemplo, "cansancio": quien se siente cansado se detiene a escuchar).</li>
+                </ul>
+            </div>
+
+            <div class="quote-banner">
+                💡 <strong>Idea ancla:</strong> «Las decisiones de compra se activan con una emoción. Mi comunicación tiene que llegar justo cuando mi clienta está sintiendo eso.»
+            </div>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>💗</span> Ejercicio 2.1: ¿Cómo se siente mi mercado hoy?</div>
+                <div class="exercise-guide">Olvidate de la edad y el sexo. Respondé desde lo que está viviendo hoy tu mercado objetivo.</div>
+                <label class="field-label">¿Cómo se está sintiendo en este momento?</label>
+                <textarea class="fill-textarea" id="ex_2_1_a" style="min-height:70px;"></textarea>
+                <label class="field-label">¿Qué quiere de la vida y qué necesita hoy?</label>
+                <textarea class="fill-textarea" id="ex_2_1_b" style="min-height:70px;"></textarea>
+                <label class="field-label">¿Cuáles son sus mayores problemas, dramas y miedos?</label>
+                <textarea class="fill-textarea" id="ex_2_1_c" style="min-height:70px;"></textarea>
+            </div>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>⚡</span> Ejercicio 2.2: Mi momento trigger y mis palabras emocionales</div>
+                <div class="exercise-guide">¿Cuál es el momento en que mi clienta me va a escuchar? ¿Qué palabras la hacen detenerse?</div>
+                <label class="field-label">Mi momento trigger (qué le pasa en su vida cuando me necesita):</label>
+                <textarea class="fill-textarea" id="ex_2_2_a" style="min-height:70px;"></textarea>
+                <label class="field-label">Palabras emocionales que la harían conectar (cansancio, apuro, falta de tiempo, necesidad de valoración...):</label>
+                <textarea class="fill-textarea" id="ex_2_2_b" style="min-height:70px;"></textarea>
+            </div>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>🧩</span> Ejercicio 2.3: El patrón de compra y mi mensaje simple</div>
+                <div class="exercise-guide">Recordá por qué te compraron las últimas veces y resumí tu propuesta de forma tan clara que se entienda en una línea.</div>
+                <label class="field-label">Situación de su vida → emoción → por qué me compra cuando me compra:</label>
+                <textarea class="fill-textarea" id="ex_2_3_a" style="min-height:80px;" placeholder="Ej: Llega cansada del trabajo → se siente culpable por no cocinar → me compra comida casera que parece hecha por ella..."></textarea>
+                <label class="field-label">Mi propuesta en una línea simple (como el "helado, helado" del heladero):</label>
+                <textarea class="fill-textarea" id="ex_2_3_b" style="min-height:70px;"></textarea>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: PENSAR FUERA DE LA CAJA / DINÁMICA GRUPAL -->
+        <section class="section-block">
+            <div class="section-tag">SECCIÓN 3 · VIDEO 3</div>
+            <h2 class="section-heading">3. Pensar fuera de la caja: Dinámica Grupal</h2>
+            <p class="section-desc">
+                Mirar el negocio de otra persona con empatía nos ayuda a descubrir qué activa una compra, qué la frena y cómo comunicar mejor. Esta dinámica se hace entre compañeras, en parejas o grupos de tres, durante unos 10 minutos.
+            </p>
+
+            <div class="key-points">
+                <div class="key-points-title">📌 Cómo es la dinámica</div>
+                <ul>
+                    <li>Se preguntan entre ustedes <strong>a qué se dedica cada una</strong> y le sacan a la otra un <strong>trigger</strong>: un activador de compra que crean que otras personas comprarían.</li>
+                    <li>Luego juegan a ser clientas: <strong>¿a quién le comprarías hoy, según cómo te sentís, y por qué?</strong></li>
+                    <li>Después se preguntan por las <strong>barreras de compra</strong>: precio, distancia, modalidad online o presencial, falta de tiempo.</li>
+                </ul>
+                <div class="key-points-title" style="margin-top:1rem;">📌 Lo que descubrimos</div>
+                <ul>
+                    <li>Lo más importante no es por qué <em>no</em> querés, sino <strong>por qué sí querés y por qué conmigo</strong>.</li>
+                    <li>Se derriban barreras comunicando los <strong>beneficios</strong>, mostrando quién soy y cómo se vive la experiencia, y apoyándome en <strong>testimonios</strong> de alumnas y clientas.</li>
+                    <li>Vender sin empujar: tocar despacio, comunicar quiénes somos y mostrar cómo se sienten las personas que ya forman parte.</li>
+                    <li>Hay personas que no son mi cliente; entender por qué no lo son también es información valiosa.</li>
+                </ul>
+            </div>
+
+            <div class="quote-banner">
+                💡 <strong>Idea ancla:</strong> «Mi comunicación tiene que responder dos preguntas: ¿por qué querés? y ¿por qué querés conmigo?»
+            </div>
+
+            <div class="matrix">
+                <div class="matrix-col matrix-old">
+                    <h4>Vender empujando</h4>
+                    <ul>
+                        <li>Insisto hasta que diga que sí.</li>
+                        <li>Trato de rebatir cada "no".</li>
+                        <li>Hablo solo de mi producto.</li>
+                    </ul>
+                </div>
+                <div class="matrix-col matrix-new">
+                    <h4>Vender sin empujar</h4>
+                    <ul>
+                        <li>Comunico quién soy y cómo se vive mi propuesta.</li>
+                        <li>Entiendo por qué sí quiere y por qué conmigo.</li>
+                        <li>Me respaldo en testimonios y en quienes ya me eligieron.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🤝</span> Ejercicio 3.1: Los triggers de mi negocio detectados en la dinámica</div>
+                <div class="exercise-guide">Anotá el activador de compra que tus compañeras vieron en tu negocio, y el que vos viste en el de ellas.</div>
+                <label class="field-label">Triggers que vieron en mi negocio:</label>
+                <textarea class="fill-textarea" id="ex_3_1_a" style="min-height:80px;"></textarea>
+                <label class="field-label">Triggers que detecté en el negocio de mi compañera:</label>
+                <textarea class="fill-textarea" id="ex_3_1_b" style="min-height:80px;"></textarea>
+            </div>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>🚧</span> Ejercicio 3.2: Mis barreras de compra</div>
+                <div class="exercise-guide">Pensá en una propuesta que te gustaría comprar (como clienta). ¿Qué te frenaría? ¿Qué te ayudaría a decir que sí?</div>
+                <label class="field-label">Barreras que yo tendría (precio, distancia, modalidad, tiempo...):</label>
+                <textarea class="fill-textarea" id="ex_3_2_a" style="min-height:70px;"></textarea>
+                <label class="field-label">¿Cuáles son las barreras de compra de MIS clientas?</label>
+                <textarea class="fill-textarea" id="ex_3_2_b" style="min-height:70px;"></textarea>
+            </div>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>✨</span> Ejercicio 3.3: Por qué sí quieren y por qué conmigo</div>
+                <div class="exercise-guide">Definí cómo vas a comunicar los motivos para elegirte y cómo vas a respaldarlos.</div>
+                <label class="field-label">¿Por qué sí quieren lo que ofrezco? (beneficios y emociones)</label>
+                <textarea class="fill-textarea" id="ex_3_3_a" style="min-height:70px;"></textarea>
+                <label class="field-label">¿Por qué conmigo? (mi forma de vivir y entregar la experiencia, mi formación, mi lugar, mi marca)</label>
+                <textarea class="fill-textarea" id="ex_3_3_b" style="min-height:70px;"></textarea>
+                <label class="field-label">Testimonios o respaldos que puedo mostrar y cómo voy a pedirlos:</label>
+                <textarea class="fill-textarea" id="ex_3_3_c" style="min-height:70px;"></textarea>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: IDENTIDAD Y MARCA PERSONAL -->
+        <section class="section-block page-break">
+            <div class="section-tag">SECCIÓN 4 · VIDEO 4</div>
+            <h2 class="section-heading">4. Los cambios en nuestra identidad se reflejan en nuestra marca personal</h2>
+            <p class="section-desc">
+                Lo que hacemos y los distintos títulos o saberes que tenemos pueden convertirse en <strong>puentes</strong> hacia distintos mercados objetivos. Y todo lo que cambiamos como personas queda como rastro en nuestra marca.
+            </p>
+
+            <div class="key-points">
+                <div class="key-points-title">📌 Lo que vimos en el video</div>
+                <ul>
+                    <li>Un mismo negocio puede tener <strong>dos o más puentes</strong>: por ejemplo, una persona con formación en estética y en coaching tiende un puente hacia cada mercado.</li>
+                    <li>Se pueden <strong>combinar ambos conocimientos</strong> para crear algo diferencial, una propuesta que solo yo puedo hacer. Quizás hoy están separados y más adelante llegue el "clic" para unirlos.</li>
+                    <li>Las oportunidades del mercado son infinitas porque nos conectamos con las personas a través de la comunicación: quien llega por un servicio puede quedarse por el otro.</li>
+                    <li><strong>Tu cliente es tu cliente en un momento del tiempo:</strong> no siempre está en el estado mental en que te necesita. Tu marca es la que te mantiene presente para esa persona.</li>
+                    <li><strong>Tu marca te precede:</strong> cada reel, presentación o flyer deja un rastro. Si cambiás (por ejemplo, después de un proceso de coaching), eso se refleja y se cuenta de boca en boca.</li>
+                    <li>Somos capaces de <strong>crear, renovar y hasta eliminar marcas</strong> para crear nuevas, integrando valores.</li>
+                </ul>
+            </div>
+
+            <div class="quote-banner">
+                💡 <strong>Idea ancla:</strong> «Mi marca me precede. Lo que soy, lo que aprendo y los valores que integro se comunican en cada rastro que dejo.»
+            </div>
+
+            <div class="matrix">
+                <div class="matrix-col matrix-old">
+                    <h4>Marca congelada</h4>
+                    <ul>
+                        <li>Mis saberes están separados y no los comunico.</li>
+                        <li>Espero que mis clientes me necesiten siempre.</li>
+                        <li>No muestro mis cambios ni mis valores.</li>
+                    </ul>
+                </div>
+                <div class="matrix-col matrix-new">
+                    <h4>Marca en evolución</h4>
+                    <ul>
+                        <li>Tiendo puentes distintos o los combino en algo único.</li>
+                        <li>Estoy presente a través de mi comunicación.</li>
+                        <li>Dejo rastro de quién soy hoy y de lo que valoro.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>🌉</span> Ejercicio 4.1: Mis puentes</div>
+                <div class="exercise-guide">Listá lo que sabés hacer, tus estudios y títulos, y el mercado al que cada uno te conecta.</div>
+                <textarea class="fill-textarea" id="ex_4_1" placeholder="Ej: Puente 1: Estética corporal → mujeres que quieren verse bien con su cuerpo. Puente 2: Coaching → personas que buscan alcanzar un objetivo..."></textarea>
+            </div>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🧪</span> Ejercicio 4.2: ¿Qué pasa si combino mis conocimientos?</div>
+                <div class="exercise-guide">¿Qué propuesta diferencial podría nacer al unir dos de mis puentes, algo que solo yo podría ofrecer?</div>
+                <textarea class="fill-textarea" id="ex_4_2" placeholder="Ej: Un programa que combine mi experiencia en... con mi formación en..., para..."></textarea>
+            </div>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>👣</span> Ejercicio 4.3: El rastro de mi marca</div>
+                <div class="exercise-guide">Reflexioná sobre cómo cambiaste y qué rastro dejan hoy tu comunicación y tu marca.</div>
+                <label class="field-label">¿Qué cambió en mí (forma de ser, valores, formación) desde que empecé?</label>
+                <textarea class="fill-textarea" id="ex_4_3_a" style="min-height:75px;"></textarea>
+                <label class="field-label">¿Qué rastro dejan hoy mis reels, presentaciones, flyers y mensajes?</label>
+                <textarea class="fill-textarea" id="ex_4_3_b" style="min-height:75px;"></textarea>
+                <label class="field-label">¿Qué valor quiero integrar o hacer más visible en mi marca?</label>
+                <textarea class="fill-textarea" id="ex_4_3_c" style="min-height:75px;"></textarea>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: NUEVOS CONCEPTOS PRODUCTO-MERCADO -->
+        <section class="section-block">
+            <div class="section-tag">SECCIÓN 5 · VIDEO 5</div>
+            <h2 class="section-heading">5. La importancia de pensar frecuentemente en nuevos conceptos producto-mercado</h2>
+            <p class="section-desc">
+                Vendemos <strong>conceptos</strong>, y bajo cada concepto el trigger es diferente. Este ejercicio de pensar cómo piensa la gente para comprarme es uno que debe acompañarme toda la vida para crear nuevas oportunidades de venta.
+            </p>
+
+            <div class="key-points">
+                <div class="key-points-title">📌 Lo que vimos en el video</div>
+                <ul>
+                    <li>Preguntarme: <strong>¿quiénes me compran hoy y bajo qué concepto?</strong> Y darle una "vuelta de rosca": ¿qué otros puentes puedo tender con otros conceptos?</li>
+                    <li>Un concepto no cambia quién soy: una diseñadora de interiores puede especializarse en estilo minimalista, en estilo vintage o en ambos. Una cocinera puede pasar del concepto "comida casera para familias" a "viandas individuales para profesionales sin tiempo".</li>
+                    <li>El trigger tiene dos partes: <strong>reconozco un problema</strong> y el <strong>costo de no actuar</strong> (lo que pierdo, lo que no va a suceder si no compro).</li>
+                    <li>El costo de no actuar se comunica <strong>con sutileza, sin dardos</strong>. Gran parte de las decisiones se basa en el riesgo y el miedo, incluso cuando se disfrazan de otra cosa (por ejemplo, de abundancia).</li>
+                    <li>Un negocio que <strong>no se renueva</strong> pierde capacidad de venta: el mundo evoluciona y las formas de comprar también. Hay que evaluar cada cierto tiempo si mi propuesta sigue aportando valor.</li>
+                </ul>
+            </div>
+
+            <div class="quote-banner">
+                💡 <strong>Idea ancla:</strong> «Vender más no siempre es trabajar más: es explorar nuevas maneras de vender un concepto a nuevos mercados con lo que ya tengo.»
+            </div>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🔄</span> Ejercicio 5.1: Quién me compra hoy y bajo qué concepto</div>
+                <div class="exercise-guide">Describí el concepto con el que hoy me compran y ahora dale una vuelta de rosca.</div>
+                <label class="field-label">Hoy me compran (quiénes) bajo el concepto de...</label>
+                <textarea class="fill-textarea" id="ex_5_1_a" style="min-height:75px;"></textarea>
+                <label class="field-label">Otros conceptos y puentes que podría tender con lo que ya tengo:</label>
+                <textarea class="fill-textarea" id="ex_5_1_b" style="min-height:75px;"></textarea>
+            </div>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>⏳</span> Ejercicio 5.2: El costo de no actuar</div>
+                <div class="exercise-guide">Para mi mercado objetivo (actual o nuevo): ¿qué problema reconoce y qué pierde si no compra?</div>
+                <label class="field-label">El problema que reconoce:</label>
+                <textarea class="fill-textarea" id="ex_5_2_a" style="min-height:70px;"></textarea>
+                <label class="field-label">El costo de no actuar (qué pierde, a qué no llega, qué no va a suceder):</label>
+                <textarea class="fill-textarea" id="ex_5_2_b" style="min-height:70px;"></textarea>
+                <label class="field-label">¿Cómo lo comunicaría con sutileza, sin asustar?</label>
+                <textarea class="fill-textarea" id="ex_5_2_c" style="min-height:70px;"></textarea>
+            </div>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>📝</span> Ejercicio 5.3: TAREA — Explorar un mercado objetivo nuevo</div>
+                <div class="exercise-guide">Elegí una oportunidad: un mercado objetivo nuevo al que podrías llegar con lo que ya tenés y que no exploraste hasta ahora.</div>
+                <label class="field-label">1. El nuevo mercado objetivo que elijo explorar es...</label>
+                <textarea class="fill-textarea" id="ex_5_3_a" style="min-height:70px;"></textarea>
+                <label class="field-label">2. ¿Qué necesita resolver ese mercado?</label>
+                <textarea class="fill-textarea" id="ex_5_3_b" style="min-height:70px;"></textarea>
+                <label class="field-label">3. ¿Cómo sería mi propuesta para ayudarle a conseguirlo?</label>
+                <textarea class="fill-textarea" id="ex_5_3_c" style="min-height:70px;"></textarea>
+                <label class="field-label">4. Mi propuesta de valor concreta para este nuevo mercado:</label>
+                <textarea class="fill-textarea" id="ex_5_3_d" style="min-height:70px;"></textarea>
+                <label class="field-label">5. ¿Cómo la comunicaría?</label>
+                <textarea class="fill-textarea" id="ex_5_3_e" style="min-height:70px;"></textarea>
+            </div>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🔋</span> Ejercicio 5.4: Renovar mi oferta</div>
+                <div class="exercise-guide">¿Está mi propuesta al día con cómo compran hoy mis clientas? ¿Cuánta energía quiero y puedo poner en renovarla?</div>
+                <textarea class="fill-textarea" id="ex_5_4" placeholder="¿Qué cambió en mis clientas y en el mercado? ¿Qué parte de mi oferta necesita renovarse? ¿Cada cuánto voy a evaluarla?"></textarea>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: CIERRE -->
+        <section class="section-block">
+            <div class="section-tag">SECCIÓN 6 · CIERRE Y COMPROMISO</div>
+            <h2 class="section-heading">6. Mi Declaración de Nuevo Concepto</h2>
+            <p class="section-desc">Reuní lo trabajado en esta clase en una sola frase clara que puedas usar para comunicar tu nuevo concepto.</p>
+
+            <div class="formula-box">
+                <div class="formula-title">👑 Fórmula del Nuevo Concepto Modo Líder</div>
+                <p class="formula-text">
+                    Ofrezco <strong>[mi producto o servicio]</strong> a <strong>[mi mercado objetivo]</strong> que, cuando <strong>[su momento trigger]</strong>, siente <strong>[su emoción]</strong> y necesita <strong>[su solución]</strong>, desde una marca que refleja <strong>[mi identidad y mis valores]</strong>.
+                </p>
+            </div>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>✍️</span> Ejercicio 6.1: Mi declaración personalizada</div>
+                <div class="exercise-guide">Escribila con tus palabras. Debe ser clara, humana y fácil de decir en voz alta.</div>
+                <textarea class="fill-textarea" id="ex_6_1" style="min-height:110px;" placeholder="Escribí aquí tu declaración lista para usar en tu biografía, tu web o tu presentación..."></textarea>
+            </div>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🤝</span> Ejercicio 6.2: Mi compromiso de acción</div>
+                <div class="exercise-guide">¿Qué te comprometés a hacer esta semana para dar vida a tu nuevo concepto?</div>
+                <textarea class="fill-textarea" id="ex_6_2" placeholder="Esta semana me comprometo a..."></textarea>
+            </div>
+        </section>
+
+        <footer class="workbook-footer">
+            <div class="footer-logo">MÉTODO MODO LÍDER <span>®</span></div>
+            <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.2rem;">Curso Emprender de Cero a Impacto y Ventas</p>
+            <p style="font-size: 0.76rem; color: #64748B;">Lic. Romina Lorena Montiel • Todos los derechos reservados.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function saveData() {
+            const inputs = document.querySelectorAll('input, textarea');
+            const data = {};
+            inputs.forEach(el => { if (el.id) data[el.id] = el.value; });
+            localStorage.setItem('wb_modo_lider_taller_creativo', JSON.stringify(data));
+            alert('¡Avance guardado exitosamente!');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('wb_modo_lider_taller_creativo');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    for (const id in data) {
+                        const el = document.getElementById(id);
+                        if (el) el.value = data[id];
+                    }
+                } catch(e) {}
+            }
+        });
+    </script>
+</body>
+</html>
