@@ -68,14 +68,15 @@ export default function Libro() {
 
   return (
     <section className="libro-section" id="libro">
+      <div id="libro-primero-amate" style={{ position: "relative", top: "-80px" }}></div>
       <div className="container">
         
         {/* Encabezado de la Sección */}
         <div className="libro-header">
           <span className="section-tag" style={{ color: "#ECC369" }}>
-            Autora Publicada • Obra Literaria
+            Autora Publicada • Lic. Romina Lorena Montiel
           </span>
-          <h2 className="libro-title">Libro «Primero Ámate»</h2>
+          <h2 className="libro-title">Libro Primero Ámate</h2>
           <p className="libro-subtitle">
             Una guía práctica respaldada por la neurociencia, la psicología y el coaching para descubrir tu verdadero valor personal, desbloquear tu mente y liderar tu vida desde el amor propio.
           </p>

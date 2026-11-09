@@ -80,7 +80,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="/#libro" style={{ color: "#B47C13", textDecoration: "none", fontSize: "0.95rem", fontWeight: "750", transition: "all 0.2s", display: "inline-block" }}>
-                  📖 Libro «Primero Ámate»
+                  📖 Libro Primero Ámate
                 </a>
               </li>
               <li>

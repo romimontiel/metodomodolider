@@ -553,7 +553,7 @@ export default function HistoriaPage() {
                 fontSize: "1.08rem",
                 borderRadius: "50px"
               }}>
-                <span>📖 Adquirir Mi Libro «Primero Ámate»</span>
+                <span>📖 Libro Primero Ámate</span>
               </Link>
             </div>
           </div>
