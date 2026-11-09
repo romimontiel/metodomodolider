@@ -177,8 +177,8 @@ export default function Libro() {
               </div>
             </div>
 
-            {/* Botón Principal de Compra en Papel */}
-            <div className="libro-primary-actions">
+            {/* Botón Principal de Compra en Papel + Pedido Directo por WhatsApp */}
+            <div className="libro-primary-actions" style={{ marginBottom: "1.2rem" }}>
               <a
                 href="https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE"
                 target="_blank"
@@ -187,6 +187,21 @@ export default function Libro() {
               >
                 <span>📖 Comprar Ejemplar en Papel</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+
+            <div className="libro-whatsapp-bar">
+              <p>
+                ✨ ¿Querés consultar por un <strong>ejemplar impreso dedicado por Romina</strong> o envíos directos?
+              </p>
+              <a
+                href="https://wa.me/543794322272?text=Hola%20Romi!%20Quiero%20adquirir%20tu%20libro%20Primero%20%C3%81mate"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-story"
+              >
+                <span>Pedir por WhatsApp Directo</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
           </div>
