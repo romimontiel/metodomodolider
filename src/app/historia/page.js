@@ -227,7 +227,7 @@ export default function HistoriaPage() {
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
-                En <strong style={{ color: "#0F172A" }}>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong style={{ color: "#0F172A" }}>&quot;Primero Ámate&quot;</strong>, editado por <strong style={{ color: "#0F172A" }}>Tinta Libre Ediciones</strong>, presentándolo en el escenario principal de la <strong style={{ color: "#0F172A" }}>7.° Feria del Libro de Goya (2025)</strong>, firmando ejemplares junto a la <strong style={{ color: "#0F172A" }}>SADE Corrientes en la Feria del Libro de Corrientes Capital (2025)</strong> y con exhibición y venta de ejemplares en la <strong style={{ color: "#0F172A" }}>Feria Internacional del Libro de Buenos Aires (2026)</strong>.
+                En <strong style={{ color: "#0F172A" }}>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong style={{ color: "#0F172A" }}>&quot;Primero Ámate&quot;</strong>, editado por <strong style={{ color: "#0F172A" }}>Tinta Libre Ediciones</strong>, presentándolo en el escenario principal de la <strong style={{ color: "#0F172A" }}>7.° Feria del Libro de Goya (2025)</strong>, firmando ejemplares junto a la <strong style={{ color: "#0F172A" }}>SADE Corrientes en la Feria del Libro de Corrientes Capital (2025)</strong> y con exhibición y venta de ejemplares en el <strong style={{ color: "#0F172A" }}>Stand de Tinta Libre Ediciones en la Feria Internacional del Libro de Buenos Aires (2026)</strong>.
               </p>
 
               {/* Fotos de Presentación del Libro en Goya y Corrientes Capital */}

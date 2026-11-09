@@ -132,7 +132,7 @@ export default function Libro() {
                 <span className="libro-milestone-icon">🏛️</span>
                 <div>
                   <strong>Feria Internacional del Libro de Buenos Aires (2026)</strong>
-                  <p>Obra presente con exhibición y venta de ejemplares.</p>
+                  <p>Obra presente con exhibición y venta de ejemplares en el Stand de Tinta Libre Ediciones.</p>
                 </div>
               </div>
             </div>
