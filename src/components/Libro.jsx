@@ -1,60 +1,60 @@
 export default function Libro() {
   const bookstores = [
     {
-      country: "🇦🇷 Argentina • Oficial",
+      country: "📍 Argentina • Editorial Oficial",
       name: "Tinta Libre Ediciones",
-      format: "Ejemplar Impreso en Papel • Editorial Oficial",
+      format: "Libro Impreso en Papel y E-book Digital (Formato ePub)",
       url: "https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE",
       primary: true,
-      cta: "Comprar Ejemplar en Papel"
+      cta: "Comprar en Papel o E-book"
     },
     {
-      country: "🇦🇷 Argentina",
+      country: "🌎 Internacional • Digital",
+      name: "Bajalibros",
+      format: "E-book Digital (Formato ePub • Lectura inmediata)",
+      url: "https://www.bajalibros.com/AR/Buscar?q=Primero+amate+Romina+Lorena+Montiel",
+      primary: true,
+      cta: "Comprar E-book (ePub)"
+    },
+    {
+      country: "📍 Argentina • Digital",
+      name: "Cúspide Libros",
+      format: "E-book Digital (Formato ePub) • Tienda Online",
+      url: "https://cuspide.com/?s=Primero+amate&post_type=product",
+      primary: false,
+      cta: "Adquirir E-book en Cúspide"
+    },
+    {
+      country: "📍 España & Europa • Digital",
+      name: "La Casa del Libro",
+      format: "E-book Digital (Formato ePub) • España y Europa",
+      url: "https://www.casadellibro.com/?query=Primero%20amate%20Romina%20Lorena%20Montiel",
+      primary: false,
+      cta: "Comprar E-book en España"
+    },
+    {
+      country: "📍 México • Digital",
+      name: "Librerías Gonvill",
+      format: "E-book Digital (Formato ePub) • México",
+      url: "https://www.gonvill.com.mx/busqueda/listaLibros.php?tipoBus=full&palabrasBusqueda=Primero+amate+Romina+Lorena+Montiel",
+      primary: false,
+      cta: "Comprar E-book en Gonvill"
+    },
+    {
+      country: "📍 Uruguay & Panamá • Digital",
+      name: "Bookshop (UY) • El Hombre de la Mancha (PA)",
+      format: "E-book Digital (Formato ePub) • Catálogo Internacional",
+      url: "https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE",
+      primary: false,
+      cta: "Ver E-book Digital (ePub)"
+    },
+    {
+      country: "📍 Argentina • Impreso",
       name: "Mercado Libre Argentina",
-      format: "Ejemplar Impreso • Envío Rápido",
+      format: "Ejemplar Impreso en Papel • Envíos a todo el país",
       url: "https://listado.mercadolibre.com.ar/libro-primero-amate-romina-lorena-montiel",
       primary: false,
       cta: "Ver en Mercado Libre"
-    },
-    {
-      country: "🇦🇷 Argentina",
-      name: "Cúspide Libros",
-      format: "Librerías Físicas y Online",
-      url: "https://cuspide.com/?s=Primero+amate&post_type=product",
-      primary: false,
-      cta: "Buscar en Cúspide"
-    },
-    {
-      country: "🌎 Internacional",
-      name: "Bajalibros",
-      format: "E-book Digital (Lectura inmediata)",
-      url: "https://www.bajalibros.com/AR/Buscar?q=Primero+amate+Romina+Lorena+Montiel",
-      primary: false,
-      cta: "Descargar E-book"
-    },
-    {
-      country: "🇪🇸 España",
-      name: "La Casa del Libro",
-      format: "E-book Digital • España y Europa",
-      url: "https://www.casadellibro.com/?query=Primero%20amate%20Romina%20Lorena%20Montiel",
-      primary: false,
-      cta: "Ver en La Casa del Libro"
-    },
-    {
-      country: "🇲🇽 México",
-      name: "Librerías Gonvill",
-      format: "E-book Digital • México",
-      url: "https://www.gonvill.com.mx/busqueda/listaLibros.php?tipoBus=full&palabrasBusqueda=Primero+amate+Romina+Lorena+Montiel",
-      primary: false,
-      cta: "Ver en Gonvill"
-    },
-    {
-      country: "🇺🇾 Uruguay & 🇵🇦 Panamá",
-      name: "Bookshop (UY) • El Hombre de la Mancha (PA)",
-      format: "Catálogo Internacional de E-books",
-      url: "https://www.tintalibre.com.ar/book/2058/Primero-amate",
-      primary: false,
-      cta: "Ver Catálogo Digital"
     }
   ];
 
@@ -280,14 +280,14 @@ export default function Libro() {
         {/* Vidriera de Librerías y Plataformas Internacionales */}
         <div className="libro-stores-box" id="comprar-libro">
           <div className="libro-stores-header">
-            <span className="libro-stores-tag">DISPONIBILIDAD INTERNACIONAL • FÍSICO Y DIGITAL</span>
-            <h3>¿Dónde adquirir tu ejemplar de «Primero Ámate»?</h3>
+            <span className="libro-stores-tag">DISPONIBILIDAD INTERNACIONAL • E-BOOKS DIGITALES (EPUB) Y PAPEL</span>
+            <h3>¿Dónde adquirir tu E-book Digital (formato ePub) o ejemplar de «Primero Ámate»?</h3>
             <p>
-              Elegí tu plataforma o librería más cercana en Argentina, España y toda Latinoamérica:
+              Acá podés comprar y descargar el <strong>libro digital (E-book en formato ePub</strong> para leer en celular, tablet, computadora o eReader) desde Argentina, España y toda Latinoamérica, o pedir tu ejemplar en papel:
             </p>
           </div>
 
-          <div className="libro-stores-grid">
+          <div className="libro-stores-grid" style={{ marginBottom: 0 }}>
             {bookstores.map((store, idx) => (
               <a
                 key={idx}
@@ -307,22 +307,6 @@ export default function Libro() {
                 </span>
               </a>
             ))}
-          </div>
-
-          {/* Opción de contacto directo para ejemplar dedicado */}
-          <div className="libro-whatsapp-bar">
-            <p>
-              ✨ ¿Querés consultar por un <strong>ejemplar impreso dedicado por Romina</strong> o envíos directos?
-            </p>
-            <a
-              href="https://wa.me/543794322272?text=Hola%20Romi!%20Quiero%20adquirir%20tu%20libro%20Primero%20%C3%81mate"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-story"
-            >
-              <span>Pedir por WhatsApp Directo</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
           </div>
         </div>
 
