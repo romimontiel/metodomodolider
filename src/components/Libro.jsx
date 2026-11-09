@@ -82,6 +82,15 @@ export default function Libro() {
           </p>
         </div>
 
+        {/* Banner Oficial al Inicio de la Presentación */}
+        <div className="libro-hero-banner-wrap">
+          <img
+            src="/banner_primero_amate.jpg"
+            alt="Banner Oficial Libro Primero Ámate - Autora Lic. Romina Lorena Montiel"
+            className="libro-hero-banner-img"
+          />
+        </div>
+
         {/* Grilla Principal: Portada + Sinopsis Oficial */}
         <div className="libro-main-grid">
           
