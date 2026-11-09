@@ -3,18 +3,10 @@ export default function Libro() {
     {
       country: "🇦🇷 Argentina • Oficial",
       name: "Tinta Libre Ediciones",
-      format: "Libro Impreso (Papel) y E-book",
-      url: "https://www.tintalibre.com.ar/book/2058/Primero-amate",
+      format: "Ejemplar Impreso en Papel • Editorial Oficial",
+      url: "https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE",
       primary: true,
-      cta: "Adquirir en Editorial Oficial"
-    },
-    {
-      country: "🇦🇷 Argentina",
-      name: "Librerías Yenny - El Ateneo",
-      format: "Ejemplar Físico • Envíos a todo el país",
-      url: "https://www.yenny-elateneo.com/productos/primero-amate/",
-      primary: true,
-      cta: "Comprar en Yenny - El Ateneo"
+      cta: "Comprar Ejemplar en Papel"
     },
     {
       country: "🇦🇷 Argentina",
@@ -185,25 +177,16 @@ export default function Libro() {
               </div>
             </div>
 
-            {/* Botones Rápidos Principales */}
+            {/* Botón Principal de Compra en Papel */}
             <div className="libro-primary-actions">
               <a
-                href="https://www.tintalibre.com.ar/book/2058/Primero-amate"
+                href="https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold libro-btn-main"
               >
-                <span>📖 Adquirir Libro (Papel / E-book)</span>
+                <span>📖 Comprar Ejemplar en Papel</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-              <a
-                href="https://www.yenny-elateneo.com/productos/primero-amate/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline-gold libro-btn-secondary"
-              >
-                <span>🛒 Comprar en Yenny - El Ateneo</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
           </div>
