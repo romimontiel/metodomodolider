@@ -108,8 +108,15 @@ export default function Libro() {
               <div className="libro-milestone-item">
                 <span className="libro-milestone-icon">🎤</span>
                 <div>
-                  <strong>Feria Provincial del Libro (2025)</strong>
-                  <p>Presentación oficial en escenario en Corrientes Capital y Goya.</p>
+                  <strong>7.° Feria del Libro de Goya (2025)</strong>
+                  <p>Presentación oficial como autora en el Escenario Principal.</p>
+                </div>
+              </div>
+              <div className="libro-milestone-item">
+                <span className="libro-milestone-icon">✍️</span>
+                <div>
+                  <strong>Feria del Libro de Corrientes Capital junto a SADE (2025)</strong>
+                  <p>Presentación y firma de ejemplares junto a la Sociedad Argentina de Escritores (SADE Corrientes).</p>
                 </div>
               </div>
               <div className="libro-milestone-item">
@@ -192,6 +199,55 @@ export default function Libro() {
             </div>
           </div>
 
+        </div>
+
+        {/* Galería de Presentaciones Oficiales en Ferias del Libro */}
+        <div className="libro-events-showcase">
+          <div className="libro-events-header">
+            <span className="libro-stores-tag">RECORRIDO LITERARIO Y CULTURAL • 2025 / 2026</span>
+            <h3>Presentaciones en Escenario y Firma de Ejemplares</h3>
+            <p>
+              «Primero Ámate» recorriendo los escenarios culturales más importantes junto a lectores e instituciones literarias:
+            </p>
+          </div>
+
+          <div className="libro-events-grid">
+            {/* Foto 1: Escenario Principal Feria del Libro Goya */}
+            <div className="libro-event-card">
+              <div className="libro-event-img-wrap">
+                <img
+                  src="/feria_libro_goya_2025.jpg"
+                  alt="Romina Lorena Montiel presentando Primero Ámate en el Escenario Principal de la 7.° Feria del Libro de Goya 2025"
+                  className="libro-event-img"
+                />
+                <span className="libro-event-badge">🎤 Escenario Principal • Goya 2025</span>
+              </div>
+              <div className="libro-event-body">
+                <h4>7.° Feria del Libro de Goya</h4>
+                <p>
+                  Presentación oficial del libro <strong>«Primero Ámate»</strong> en el escenario principal de Goya, compartiendo herramientas de neurociencia, psicología y autoliderazgo emocional.
+                </p>
+              </div>
+            </div>
+
+            {/* Foto 2: Firma de Ejemplares junto a SADE Corrientes */}
+            <div className="libro-event-card">
+              <div className="libro-event-img-wrap">
+                <img
+                  src="/feria_libro_corrientes_sade_2025.jpg"
+                  alt="Romina Lorena Montiel en la firma de ejemplares de Primero Ámate junto a SADE Corrientes en la Feria del Libro de Corrientes Capital"
+                  className="libro-event-img"
+                />
+                <span className="libro-event-badge">✍️ Firma junto a SADE • Corrientes Capital 2025</span>
+              </div>
+              <div className="libro-event-body">
+                <h4>Feria del Libro de Corrientes Capital • SADE Corrientes</h4>
+                <p>
+                  Encuentro con lectores y firma de ejemplares de <strong>«Primero Ámate»</strong> junto a la <strong>Sociedad Argentina de Escritores (SADE Filial Corrientes)</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Vidriera de Librerías y Plataformas Internacionales */}

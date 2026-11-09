@@ -227,8 +227,62 @@ export default function HistoriaPage() {
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
-                En <strong style={{ color: "#0F172A" }}>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong style={{ color: "#0F172A" }}>&quot;Primero Ámate&quot;</strong>, editado por <strong style={{ color: "#0F172A" }}>Tinta Libre Ediciones</strong>, presentándolo en escenario en la <strong style={{ color: "#0F172A" }}>Feria Provincial del Libro de Corrientes y Goya (2025)</strong> y con exhibición y venta de ejemplares en la <strong style={{ color: "#0F172A" }}>Feria Internacional del Libro de Buenos Aires (2026)</strong>.
+                En <strong style={{ color: "#0F172A" }}>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong style={{ color: "#0F172A" }}>&quot;Primero Ámate&quot;</strong>, editado por <strong style={{ color: "#0F172A" }}>Tinta Libre Ediciones</strong>, presentándolo en el escenario principal de la <strong style={{ color: "#0F172A" }}>7.° Feria del Libro de Goya (2025)</strong>, firmando ejemplares junto a la <strong style={{ color: "#0F172A" }}>SADE Corrientes en la Feria del Libro de Corrientes Capital (2025)</strong> y con exhibición y venta de ejemplares en la <strong style={{ color: "#0F172A" }}>Feria Internacional del Libro de Buenos Aires (2026)</strong>.
               </p>
+
+              {/* Fotos de Presentación del Libro en Goya y Corrientes Capital */}
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+                gap: "1.2rem",
+                margin: "1.8rem 0 2rem 0"
+              }}>
+                <div style={{
+                  background: "#FFFFFF",
+                  border: "1.5px solid #E5D9C3",
+                  borderBottom: "3px solid #D4AF37",
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.05)"
+                }}>
+                  <img
+                    src="/feria_libro_goya_2025.jpg"
+                    alt="Presentación en Escenario Principal - 7.° Feria del Libro de Goya 2025"
+                    style={{ width: "100%", height: "220px", objectFit: "cover", display: "block" }}
+                  />
+                  <div style={{ padding: "0.9rem 1.1rem" }}>
+                    <strong style={{ display: "block", fontSize: "0.95rem", color: "#0F172A" }}>
+                      🎤 7.° Feria del Libro de Goya (2025)
+                    </strong>
+                    <span style={{ fontSize: "0.85rem", color: "#64748B" }}>
+                      Presentación en Escenario Principal
+                    </span>
+                  </div>
+                </div>
+
+                <div style={{
+                  background: "#FFFFFF",
+                  border: "1.5px solid #E5D9C3",
+                  borderBottom: "3px solid #D4AF37",
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.05)"
+                }}>
+                  <img
+                    src="/feria_libro_corrientes_sade_2025.jpg"
+                    alt="Firma de libro junto a SADE Corrientes en Feria del Libro de Corrientes Capital 2025"
+                    style={{ width: "100%", height: "220px", objectFit: "cover", display: "block" }}
+                  />
+                  <div style={{ padding: "0.9rem 1.1rem" }}>
+                    <strong style={{ display: "block", fontSize: "0.95rem", color: "#0F172A" }}>
+                      ✍️ Feria del Libro Corrientes Capital (2025)
+                    </strong>
+                    <span style={{ fontSize: "0.85rem", color: "#64748B" }}>
+                      Firma de ejemplares junto a SADE Corrientes
+                    </span>
+                  </div>
+                </div>
+              </div>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
                 En <strong style={{ color: "#0F172A" }}>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong style={{ color: "#8A6405" }}>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida.
