@@ -4,57 +4,57 @@ export default function Libro() {
       country: "📍 Argentina • Editorial Oficial",
       name: "Tinta Libre Ediciones",
       format: "Libro Impreso en Papel y E-book Digital (Formato ePub)",
-      url: "https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE",
+      url: "https://www.tintalibre.com.ar/book/2198/Primero_%C3%A1mate",
       primary: true,
-      cta: "Comprar en Papel o E-book"
-    },
-    {
-      country: "🌎 Internacional • Digital",
-      name: "Bajalibros",
-      format: "E-book Digital (Formato ePub • Lectura inmediata)",
-      url: "https://www.bajalibros.com/AR/Buscar?q=Primero+amate+Romina+Lorena+Montiel",
-      primary: true,
-      cta: "Comprar E-book (ePub)"
+      cta: "Comprar en Tinta Libre"
     },
     {
       country: "📍 Argentina • Digital",
-      name: "Cúspide Libros",
+      name: "Yenny - El Ateneo (Ebooks)",
+      format: "E-book Digital (Formato ePub • Lectura inmediata)",
+      url: "https://ebooks.yenny-elateneo.com/library/publication/primero-amate",
+      primary: true,
+      cta: "Comprar E-book en Yenny"
+    },
+    {
+      country: "📍 Argentina • Digital",
+      name: "SBS Librería Internacional",
       format: "E-book Digital (Formato ePub) • Tienda Online",
-      url: "https://cuspide.com/?s=Primero+amate&post_type=product",
+      url: "https://ebooks.sbs.com.ar/library/publication/primero-amate",
       primary: false,
-      cta: "Adquirir E-book en Cúspide"
-    },
-    {
-      country: "📍 España & Europa • Digital",
-      name: "La Casa del Libro",
-      format: "E-book Digital (Formato ePub) • España y Europa",
-      url: "https://www.casadellibro.com/?query=Primero%20amate%20Romina%20Lorena%20Montiel",
-      primary: false,
-      cta: "Comprar E-book en España"
-    },
-    {
-      country: "📍 México • Digital",
-      name: "Librerías Gonvill",
-      format: "E-book Digital (Formato ePub) • México",
-      url: "https://www.gonvill.com.mx/busqueda/listaLibros.php?tipoBus=full&palabrasBusqueda=Primero+amate+Romina+Lorena+Montiel",
-      primary: false,
-      cta: "Comprar E-book en Gonvill"
-    },
-    {
-      country: "📍 Uruguay & Panamá • Digital",
-      name: "Bookshop (UY) • El Hombre de la Mancha (PA)",
-      format: "E-book Digital (Formato ePub) • Catálogo Internacional",
-      url: "https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE",
-      primary: false,
-      cta: "Ver E-book Digital (ePub)"
+      cta: "Comprar E-book en SBS"
     },
     {
       country: "📍 Argentina • Impreso",
       name: "Mercado Libre Argentina",
       format: "Ejemplar Impreso en Papel • Envíos a todo el país",
-      url: "https://listado.mercadolibre.com.ar/libro-primero-amate-romina-lorena-montiel",
+      url: "https://www.mercadolibre.com.ar/tt-lbr--primero-amate/up/MLAU3551926505",
       primary: false,
-      cta: "Ver en Mercado Libre"
+      cta: "Comprar en Mercado Libre"
+    },
+    {
+      country: "📍 México • Digital",
+      name: "Librerías Gonvill",
+      format: "E-book Digital (Formato ePub) • México",
+      url: "https://ebooks.gonvill.com.mx/library/publication/primero-amate",
+      primary: false,
+      cta: "Comprar E-book en Gonvill"
+    },
+    {
+      country: "📍 Panamá & Latam • Digital",
+      name: "Librería El Hombre de la Mancha",
+      format: "E-book Digital (Formato ePub) • Latinoamérica",
+      url: "https://ebooks.hombredelamancha.com/library/publication/primero-amate",
+      primary: false,
+      cta: "Comprar E-book Digital"
+    },
+    {
+      country: "🌎 Internacional • Digital",
+      name: "Librería Española (Ebooks)",
+      format: "E-book Digital (Formato ePub) • Catálogo Internacional",
+      url: "https://ebooks.libreriaespanola.com/library/publication/primero-amate",
+      primary: false,
+      cta: "Comprar E-book Digital"
     }
   ];
 
