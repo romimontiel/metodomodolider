@@ -1184,6 +1184,57 @@
             margin: 0;
         }
 
+        .libro-ig-highlights-bar {
+            margin-top: 2rem;
+            padding: 1.4rem 1.8rem;
+            background: #FFFFFF;
+            border: 1.5px solid #D4AF37;
+            border-left: 5px solid #D4AF37;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.4rem;
+            flex-wrap: wrap;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12);
+        }
+
+        .libro-ig-highlights-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .libro-ig-icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .libro-ig-highlights-info strong {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.08rem;
+            font-weight: 800;
+            color: #1E150F;
+            margin-bottom: 0.2rem;
+        }
+
+        .libro-ig-highlights-info p {
+            color: #4A3B32;
+            font-size: 0.92rem;
+            margin: 0;
+            line-height: 1.45;
+        }
+
+        .libro-ig-btn {
+            padding: 0.82rem 1.4rem;
+            font-size: 0.9rem;
+            font-weight: 800;
+            gap: 8px;
+        }
+
         /* Vidriera de Librerías (En Fondo Blanco Puro) */
         .libro-stores-box {
             background: #FFFFFF;

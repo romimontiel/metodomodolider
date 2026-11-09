@@ -248,6 +248,26 @@ export default function Libro() {
               </div>
             </div>
           </div>
+
+          {/* Botón Directo a Historias Destacadas de la Feria del Libro en Instagram */}
+          <div className="libro-ig-highlights-bar">
+            <div className="libro-ig-highlights-info">
+              <span className="libro-ig-icon">📲</span>
+              <div>
+                <strong>Reviví las presentaciones en vivo en la Feria del Libro</strong>
+                <p>Mirá todos los videos, entrevistas y firmas de ejemplares en mis Historias Destacadas de Instagram (@rominalorenamontiel).</p>
+              </div>
+            </div>
+            <a
+              href="https://www.instagram.com/stories/highlights/18059316080266921/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold libro-ig-btn"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>Ver Historias Destacadas (Feria del Libro)</span>
+            </a>
+          </div>
         </div>
 
         {/* Vidriera de Librerías y Plataformas Internacionales */}

@@ -284,6 +284,30 @@ export default function HistoriaPage() {
                 </div>
               </div>
 
+              <div style={{ marginBottom: "1.8rem" }}>
+                <a
+                  href="https://www.instagram.com/stories/highlights/18059316080266921/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.6rem",
+                    padding: "0.75rem 1.35rem",
+                    background: "#FFFFFF",
+                    border: "1.5px solid #D4AF37",
+                    borderRadius: "50px",
+                    color: "#0F172A",
+                    textDecoration: "none",
+                    fontSize: "0.92rem",
+                    fontWeight: "800",
+                    boxShadow: "0 4px 14px rgba(212, 175, 55, 0.18)"
+                  }}
+                >
+                  <span>📲 Ver Historias Destacadas de la Feria del Libro (@rominalorenamontiel)</span>
+                </a>
+              </div>
+
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
                 En <strong style={{ color: "#0F172A" }}>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong style={{ color: "#8A6405" }}>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida.
               </p>
