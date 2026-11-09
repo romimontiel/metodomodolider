@@ -102,7 +102,7 @@ export default function Libro() {
                 📖 Tinta Libre Ediciones
               </span>
               <img
-                src="/tapa_libro_primero_amate.png"
+                src="/portada_primero_amate_3d.jpg"
                 alt="Portada del libro Primero Ámate de la Lic. Romina Lorena Montiel"
                 className="libro-cover-img"
               />
