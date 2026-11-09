@@ -49,7 +49,7 @@ export default function Metodo() {
 
           {/* Los 3 Resultados Clave */}
           <div className="problemas-wrapper">
-              <h3 className="problemas-title">Lo que álcanzan quienes trabajan con el método: <span>3 resultados reales y sostenibles</span>:</h3>
+              <h3 className="problemas-title">Lo que alcanzan quienes trabajan con el método: <span>3 resultados reales y sostenibles</span>:</h3>
               
               <div className="problemas-grid">
                   <div className="problema-item">

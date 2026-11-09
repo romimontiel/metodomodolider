@@ -635,10 +635,10 @@
             font-weight: 700;
         }
 
-        /* --- SECCIÓN EL MÉTODO (3 PILARES - ENTORNO CREMA / MARFIL) --- */
+        /* --- SECCIÓN EL MÉTODO (3 PILARES - FONDO BLANCO PURO) --- */
         .metodo-section {
             padding: 7rem 2rem;
-            background: linear-gradient(145deg, #FAF7F2 0%, #F3EBDD 100%);
+            background: #FFFFFF;
             position: relative;
             border-top: 1.5px solid #E5D9C3;
             border-bottom: 1.5px solid #E5D9C3;
@@ -736,7 +736,7 @@
             line-height: 1.7;
         }
 
-        /* --- SECCIÓN 3 PROBLEMAS PARALIZANTES (DENTRO DEL ENTORNO CREMA) --- */
+        /* --- SECCIÓN 3 RESULTADOS CLAVE (FONDO BLANCO PURO) --- */
         .problemas-wrapper {
             background: #FFFFFF;
             padding: 4rem 2.5rem;
@@ -767,9 +767,9 @@
         .problema-item {
             text-align: center;
             padding: 2.2rem 1.8rem;
-            background: #FDFBF7;
+            background: #FFFFFF;
             border-radius: 16px;
-            border: 1px solid #EADDCB;
+            border: 1.5px solid #E5D9C3;
             border-bottom: 3px solid #D4AF37;
             box-shadow: 0 8px 20px rgba(60, 40, 20, 0.04);
             transition: all 0.35s ease;
@@ -798,15 +798,13 @@
             line-height: 1.6;
         }
 
-        /* --- SECCIÓN LIBRO PRIMERO ÁMATE --- */
+        /* --- SECCIÓN LIBRO PRIMERO ÁMATE (FONDO BLANCO PURO) --- */
         .libro-section {
             padding: 7rem 2rem;
-            background: radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
-                        radial-gradient(circle at 85% 75%, rgba(233, 69, 96, 0.07) 0%, transparent 50%),
-                        linear-gradient(180deg, #090A0F 0%, #101420 100%);
-            border-bottom: 1px solid var(--border-gold);
+            background: #FFFFFF;
+            border-bottom: 1.5px solid #E5D9C3;
             position: relative;
-            color: var(--text-main);
+            color: #1E150F;
         }
 
         .libro-header {
@@ -818,16 +816,17 @@
         .libro-title {
             font-family: var(--font-display);
             font-size: 3.1rem;
-            font-weight: 700;
-            color: #FFFFFF;
+            font-weight: 800;
+            color: #1E150F;
             margin-bottom: 1.1rem;
             letter-spacing: -0.3px;
         }
 
         .libro-subtitle {
             font-size: 1.16rem;
-            color: #CBD5E1;
+            color: #3E3027;
             line-height: 1.65;
+            font-weight: 500;
         }
 
         .libro-main-grid {
@@ -846,12 +845,13 @@
 
         .libro-cover-card {
             position: relative;
-            background: rgba(22, 27, 40, 0.78);
-            border: 1.5px solid rgba(212, 175, 55, 0.4);
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
+            border-top: 3.5px solid #D4AF37;
             border-radius: 26px;
             padding: 2.5rem 2rem 2rem 2rem;
             text-align: center;
-            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55), 0 0 35px rgba(212, 175, 55, 0.14);
+            box-shadow: 0 18px 40px rgba(60, 40, 20, 0.08);
             overflow: hidden;
         }
 
@@ -862,8 +862,8 @@
             transform: translate(-50%, -50%);
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, rgba(233, 182, 66, 0.28) 0%, transparent 70%);
-            filter: blur(45px);
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 70%);
+            filter: blur(40px);
             pointer-events: none;
             z-index: 0;
         }
@@ -872,11 +872,11 @@
             position: relative;
             z-index: 2;
             display: inline-block;
-            padding: 0.4rem 1rem;
+            padding: 0.42rem 1.1rem;
             border-radius: 50px;
-            background: rgba(212, 175, 55, 0.16);
-            border: 1px solid rgba(212, 175, 55, 0.55);
-            color: #F6C85F;
+            background: #FFF9E6;
+            border: 1.5px solid #D4AF37;
+            color: #8A6405;
             font-family: var(--font-heading);
             font-size: 0.78rem;
             font-weight: 800;
@@ -894,7 +894,7 @@
             margin: 0 auto 1.4rem auto;
             display: block;
             border-radius: 12px;
-            box-shadow: 0 22px 45px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 175, 55, 0.25);
+            box-shadow: 0 18px 38px rgba(30, 21, 15, 0.22);
             transition: transform 0.35s ease;
         }
 
@@ -912,15 +912,16 @@
 
         .libro-author-caption strong {
             font-family: var(--font-heading);
-            color: #FFFFFF;
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
+            color: #1E150F;
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
         }
 
         .libro-author-caption span {
-            color: #ECC369;
-            font-size: 0.85rem;
-            font-weight: 600;
+            color: #8A6405;
+            font-size: 0.88rem;
+            font-weight: 700;
         }
 
         .libro-milestones {
@@ -933,11 +934,12 @@
             display: flex;
             align-items: flex-start;
             gap: 0.9rem;
-            padding: 1.1rem 1.3rem;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(212, 175, 55, 0.28);
-            border-left: 3.5px solid #E9B642;
+            padding: 1.15rem 1.35rem;
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
+            border-left: 4px solid #D4AF37;
             border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(60, 40, 20, 0.05);
         }
 
         .libro-milestone-icon {
@@ -948,34 +950,36 @@
 
         .libro-milestone-item strong {
             display: block;
-            color: #F8E2A7;
+            color: #1E150F;
             font-family: var(--font-heading);
-            font-size: 0.95rem;
+            font-size: 0.96rem;
+            font-weight: 800;
             margin-bottom: 0.2rem;
         }
 
         .libro-milestone-item p {
-            color: #CBD5E1;
-            font-size: 0.88rem;
+            color: #4A3B32;
+            font-size: 0.9rem;
             line-height: 1.45;
             margin: 0;
         }
 
         .libro-content-col {
-            background: rgba(22, 27, 40, 0.65);
-            border: 1px solid rgba(255, 255, 255, 0.09);
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
+            border-top: 3.5px solid #D4AF37;
             border-radius: 26px;
             padding: 2.6rem 2.4rem;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 18px 40px rgba(60, 40, 20, 0.07);
         }
 
         .libro-synopsis-badge {
             display: inline-block;
             font-family: var(--font-heading);
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             font-weight: 800;
             letter-spacing: 2px;
-            color: #E9B642;
+            color: #8A6405;
             text-transform: uppercase;
             margin-bottom: 0.8rem;
         }
@@ -984,29 +988,30 @@
             font-family: var(--font-display);
             font-size: 1.75rem;
             font-style: italic;
-            color: #FFFFFF;
+            color: #1E150F;
             margin-bottom: 1.4rem;
             line-height: 1.35;
         }
 
         .libro-synopsis-text p {
-            color: #E2E8F0;
-            font-size: 1.04rem;
-            line-height: 1.78;
+            color: #374151;
+            font-size: 1.05rem;
+            line-height: 1.8;
             margin-bottom: 1.25rem;
         }
 
         .libro-synopsis-text strong {
-            color: #F8E2A7;
+            color: #1E150F;
             font-weight: 700;
         }
 
         .libro-pillars-box {
             margin: 1.8rem 0 2rem 0;
-            padding: 1.4rem 1.5rem;
-            background: rgba(212, 175, 55, 0.06);
-            border: 1px solid rgba(212, 175, 55, 0.25);
+            padding: 1.5rem 1.6rem;
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
             border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(60, 40, 20, 0.04);
         }
 
         .libro-pillars-title {
@@ -1014,34 +1019,37 @@
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #ECC369;
+            color: #8A6405;
+            font-weight: 800;
             margin-bottom: 1rem;
         }
 
         .libro-pillars-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
+            gap: 0.8rem;
         }
 
         .libro-pillar-chip {
             display: flex;
             align-items: center;
             gap: 0.65rem;
-            background: rgba(10, 13, 20, 0.75);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            padding: 0.65rem 0.95rem;
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
+            border-bottom: 3px solid #D4AF37;
+            padding: 0.7rem 1rem;
             border-radius: 12px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #FFFFFF;
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: #1E150F;
+            box-shadow: 0 4px 12px rgba(60, 40, 20, 0.04);
         }
 
         .chip-num {
             font-family: var(--font-display);
-            color: #E9B642;
+            color: #8A6405;
             font-weight: 900;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         .libro-primary-actions {
@@ -1051,18 +1059,26 @@
             flex-wrap: wrap;
         }
 
-        .libro-btn-main, .libro-btn-secondary {
-            padding: 0.8rem 1.45rem;
+        .libro-btn-main {
+            padding: 0.85rem 1.5rem;
             font-size: 0.92rem;
         }
 
-        /* Vidriera de Librerías */
+        .libro-btn-secondary {
+            padding: 0.85rem 1.5rem;
+            font-size: 0.92rem;
+            background: #1E150F !important;
+            color: #F6C85F !important;
+            border: 1.5px solid #D4AF37 !important;
+        }
+
+        /* Vidriera de Librerías (En Fondo Blanco Puro) */
         .libro-stores-box {
-            background: linear-gradient(145deg, rgba(24, 29, 44, 0.92) 0%, rgba(14, 18, 27, 0.96) 100%);
-            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
             border-radius: 28px;
-            padding: 3.2rem 2.5rem;
-            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.55), 0 0 35px rgba(212, 175, 55, 0.12);
+            padding: 3.5rem 2.5rem;
+            box-shadow: 0 15px 35px rgba(60, 40, 20, 0.06);
         }
 
         .libro-stores-header {
@@ -1074,29 +1090,31 @@
         .libro-stores-tag {
             display: inline-block;
             font-family: var(--font-heading);
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             font-weight: 800;
             letter-spacing: 2px;
-            color: #E9B642;
+            color: #8A6405;
             margin-bottom: 0.5rem;
         }
 
         .libro-stores-header h3 {
-            font-family: var(--font-display);
-            font-size: 2.15rem;
-            color: #FFFFFF;
+            font-family: var(--font-heading);
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #1E150F;
             margin-bottom: 0.6rem;
         }
 
         .libro-stores-header p {
-            color: #CBD5E1;
-            font-size: 1.02rem;
+            color: #4A3B32;
+            font-size: 1.05rem;
+            font-weight: 500;
         }
 
         .libro-stores-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-            gap: 1.15rem;
+            gap: 1.25rem;
             margin-bottom: 2.2rem;
         }
 
@@ -1104,25 +1122,27 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 1.35rem 1.4rem;
-            background: rgba(255, 255, 255, 0.035);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 1.5rem 1.4rem;
+            background: #FFFFFF;
+            border: 1.5px solid #E5D9C3;
+            border-bottom: 3px solid #D4AF37;
             border-radius: 18px;
             text-decoration: none;
+            box-shadow: 0 8px 20px rgba(60, 40, 20, 0.04);
             transition: all 0.28s ease;
         }
 
         .libro-store-primary {
-            background: rgba(212, 175, 55, 0.1);
-            border: 1.5px solid rgba(212, 175, 55, 0.6);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.14);
+            background: #FFFFFF;
+            border: 2px solid #D4AF37;
+            border-bottom: 4px solid #B8860B;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.14);
         }
 
         .libro-store-card:hover {
             transform: translateY(-5px);
-            border-color: #ECC369;
-            background: rgba(212, 175, 55, 0.15);
-            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+            border-color: #B8860B;
+            box-shadow: 0 14px 28px rgba(60, 40, 20, 0.12);
         }
 
         .store-card-top {
@@ -1134,10 +1154,10 @@
         }
 
         .store-country {
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: #ECC369;
-            letter-spacing: 0.4px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #8A6405;
+            letter-spacing: 0.3px;
         }
 
         .store-badge-destacado {
@@ -1145,31 +1165,31 @@
             color: #090A0F;
             font-size: 0.68rem;
             font-weight: 800;
-            padding: 0.15rem 0.55rem;
+            padding: 0.18rem 0.6rem;
             border-radius: 20px;
             text-transform: uppercase;
         }
 
         .store-name {
             font-family: var(--font-heading);
-            font-size: 1.12rem;
+            font-size: 1.15rem;
             font-weight: 800;
-            color: #FFFFFF;
+            color: #1E150F;
             margin-bottom: 0.35rem;
         }
 
         .store-format {
-            font-size: 0.86rem;
-            color: #CBD5E1;
+            font-size: 0.9rem;
+            color: #4A3B32;
             margin-bottom: 1rem;
             line-height: 1.45;
         }
 
         .store-cta {
             font-family: var(--font-heading);
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 800;
-            color: #F6C85F;
+            color: #8A6405;
             display: inline-flex;
             align-items: center;
             gap: 4px;
@@ -1181,16 +1201,24 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 1rem;
-            padding: 1.25rem 1.6rem;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 1.35rem 1.8rem;
+            background: #FFFFFF;
+            border: 1.5px solid #D4AF37;
             border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(60, 40, 20, 0.05);
         }
 
         .libro-whatsapp-bar p {
-            color: #F1F5F9;
-            font-size: 0.96rem;
+            color: #1E150F;
+            font-size: 0.98rem;
             margin: 0;
+        }
+
+        .libro-whatsapp-bar .btn-story {
+            background: #1E150F;
+            color: #F6C85F;
+            border: 1.5px solid #D4AF37;
+            font-weight: 700;
         }
 
         @media (max-width: 960px) {

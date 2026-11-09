@@ -73,7 +73,7 @@ export default function Libro() {
         
         {/* Encabezado de la Sección */}
         <div className="libro-header">
-          <span className="section-tag" style={{ color: "#ECC369" }}>
+          <span className="section-tag" style={{ color: "#8A6405" }}>
             Autora Publicada • Lic. Romina Lorena Montiel
           </span>
           <h2 className="libro-title">Libro Primero Ámate</h2>
