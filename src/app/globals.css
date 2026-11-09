@@ -798,6 +798,425 @@
             line-height: 1.6;
         }
 
+        /* --- SECCIÓN LIBRO PRIMERO ÁMATE --- */
+        .libro-section {
+            padding: 7rem 2rem;
+            background: radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+                        radial-gradient(circle at 85% 75%, rgba(233, 69, 96, 0.07) 0%, transparent 50%),
+                        linear-gradient(180deg, #090A0F 0%, #101420 100%);
+            border-bottom: 1px solid var(--border-gold);
+            position: relative;
+            color: var(--text-main);
+        }
+
+        .libro-header {
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 4.5rem auto;
+        }
+
+        .libro-title {
+            font-family: var(--font-display);
+            font-size: 3.1rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1.1rem;
+            letter-spacing: -0.3px;
+        }
+
+        .libro-subtitle {
+            font-size: 1.16rem;
+            color: #CBD5E1;
+            line-height: 1.65;
+        }
+
+        .libro-main-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 3.8rem;
+            align-items: start;
+            margin-bottom: 4.5rem;
+        }
+
+        .libro-cover-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .libro-cover-card {
+            position: relative;
+            background: rgba(22, 27, 40, 0.78);
+            border: 1.5px solid rgba(212, 175, 55, 0.4);
+            border-radius: 26px;
+            padding: 2.5rem 2rem 2rem 2rem;
+            text-align: center;
+            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55), 0 0 35px rgba(212, 175, 55, 0.14);
+            overflow: hidden;
+        }
+
+        .libro-cover-glow {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(233, 182, 66, 0.28) 0%, transparent 70%);
+            filter: blur(45px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .libro-editorial-badge {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.16);
+            border: 1px solid rgba(212, 175, 55, 0.55);
+            color: #F6C85F;
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 1.4rem;
+        }
+
+        .libro-cover-img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            margin: 0 auto 1.4rem auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 22px 45px rgba(0, 0, 0, 0.75), 0 0 25px rgba(212, 175, 55, 0.25);
+            transition: transform 0.35s ease;
+        }
+
+        .libro-cover-card:hover .libro-cover-img {
+            transform: translateY(-6px) scale(1.02);
+        }
+
+        .libro-author-caption {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .libro-author-caption strong {
+            font-family: var(--font-heading);
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .libro-author-caption span {
+            color: #ECC369;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .libro-milestones {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .libro-milestone-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            padding: 1.1rem 1.3rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.28);
+            border-left: 3.5px solid #E9B642;
+            border-radius: 14px;
+        }
+
+        .libro-milestone-icon {
+            font-size: 1.35rem;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .libro-milestone-item strong {
+            display: block;
+            color: #F8E2A7;
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .libro-milestone-item p {
+            color: #CBD5E1;
+            font-size: 0.88rem;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .libro-content-col {
+            background: rgba(22, 27, 40, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 26px;
+            padding: 2.6rem 2.4rem;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .libro-synopsis-badge {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #E9B642;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .libro-question-lead {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-style: italic;
+            color: #FFFFFF;
+            margin-bottom: 1.4rem;
+            line-height: 1.35;
+        }
+
+        .libro-synopsis-text p {
+            color: #E2E8F0;
+            font-size: 1.04rem;
+            line-height: 1.78;
+            margin-bottom: 1.25rem;
+        }
+
+        .libro-synopsis-text strong {
+            color: #F8E2A7;
+            font-weight: 700;
+        }
+
+        .libro-pillars-box {
+            margin: 1.8rem 0 2rem 0;
+            padding: 1.4rem 1.5rem;
+            background: rgba(212, 175, 55, 0.06);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 18px;
+        }
+
+        .libro-pillars-title {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ECC369;
+            margin-bottom: 1rem;
+        }
+
+        .libro-pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .libro-pillar-chip {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            background: rgba(10, 13, 20, 0.75);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.65rem 0.95rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .chip-num {
+            font-family: var(--font-display);
+            color: #E9B642;
+            font-weight: 900;
+            font-size: 0.95rem;
+        }
+
+        .libro-primary-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .libro-btn-main, .libro-btn-secondary {
+            padding: 0.8rem 1.45rem;
+            font-size: 0.92rem;
+        }
+
+        /* Vidriera de Librerías */
+        .libro-stores-box {
+            background: linear-gradient(145deg, rgba(24, 29, 44, 0.92) 0%, rgba(14, 18, 27, 0.96) 100%);
+            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            border-radius: 28px;
+            padding: 3.2rem 2.5rem;
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.55), 0 0 35px rgba(212, 175, 55, 0.12);
+        }
+
+        .libro-stores-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .libro-stores-tag {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #E9B642;
+            margin-bottom: 0.5rem;
+        }
+
+        .libro-stores-header h3 {
+            font-family: var(--font-display);
+            font-size: 2.15rem;
+            color: #FFFFFF;
+            margin-bottom: 0.6rem;
+        }
+
+        .libro-stores-header p {
+            color: #CBD5E1;
+            font-size: 1.02rem;
+        }
+
+        .libro-stores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+            gap: 1.15rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .libro-store-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.35rem 1.4rem;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            text-decoration: none;
+            transition: all 0.28s ease;
+        }
+
+        .libro-store-primary {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1.5px solid rgba(212, 175, 55, 0.6);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.14);
+        }
+
+        .libro-store-card:hover {
+            transform: translateY(-5px);
+            border-color: #ECC369;
+            background: rgba(212, 175, 55, 0.15);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        .store-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.55rem;
+        }
+
+        .store-country {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #ECC369;
+            letter-spacing: 0.4px;
+        }
+
+        .store-badge-destacado {
+            background: var(--gold-gradient);
+            color: #090A0F;
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 0.15rem 0.55rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .store-name {
+            font-family: var(--font-heading);
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 0.35rem;
+        }
+
+        .store-format {
+            font-size: 0.86rem;
+            color: #CBD5E1;
+            margin-bottom: 1rem;
+            line-height: 1.45;
+        }
+
+        .store-cta {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: #F6C85F;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .libro-whatsapp-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1.25rem 1.6rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 18px;
+        }
+
+        .libro-whatsapp-bar p {
+            color: #F1F5F9;
+            font-size: 0.96rem;
+            margin: 0;
+        }
+
+        @media (max-width: 960px) {
+            .libro-main-grid {
+                grid-template-columns: 1fr;
+                gap: 2.2rem;
+            }
+            .libro-pillars-grid {
+                grid-template-columns: 1fr;
+            }
+            .libro-title {
+                font-size: 2.3rem;
+            }
+            .libro-stores-box {
+                padding: 2.2rem 1.2rem;
+            }
+            .libro-content-col {
+                padding: 1.8rem 1.3rem;
+            }
+            .libro-whatsapp-bar {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
         /* --- CTA FINAL SECTION --- */
         .cta-final-section {
             padding: 6rem 2rem;

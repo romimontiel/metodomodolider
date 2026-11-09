@@ -227,7 +227,7 @@ export default function HistoriaPage() {
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
-                En <strong style={{ color: "#0F172A" }}>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong style={{ color: "#0F172A" }}>&quot;Primero Ámate&quot;</strong>, editado por <strong style={{ color: "#0F172A" }}>Tinta Libre</strong>, y tuve el gran honor de presentarlo en la <strong style={{ color: "#0F172A" }}>Feria del Libro en los escenarios de Goya y Corrientes</strong>, transmitiendo el valor del autoliderazgo y la autovaloración como cimiento de cualquier proyecto.
+                En <strong style={{ color: "#0F172A" }}>marzo de 2025</strong> alcancé un hito muy especial en mi vocación: publiqué mi libro <strong style={{ color: "#0F172A" }}>&quot;Primero Ámate&quot;</strong>, editado por <strong style={{ color: "#0F172A" }}>Tinta Libre Ediciones</strong>, presentándolo en escenario en la <strong style={{ color: "#0F172A" }}>Feria Provincial del Libro de Corrientes y Goya (2025)</strong> y con exhibición y venta de ejemplares en la <strong style={{ color: "#0F172A" }}>Feria Internacional del Libro de Buenos Aires (2026)</strong>.
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
@@ -538,6 +538,22 @@ export default function HistoriaPage() {
                 borderRadius: "50px"
               }}>
                 <span>🎓 Ver Información del Curso</span>
+              </Link>
+
+              <Link href="/#libro" style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.6rem",
+                padding: "1.1rem 2.4rem",
+                background: "rgba(255, 255, 255, 0.08)",
+                border: "1.5px solid rgba(212, 175, 55, 0.7)",
+                color: "#ECC369",
+                textDecoration: "none",
+                fontWeight: "750",
+                fontSize: "1.08rem",
+                borderRadius: "50px"
+              }}>
+                <span>📖 Adquirir Mi Libro «Primero Ámate»</span>
               </Link>
             </div>
           </div>

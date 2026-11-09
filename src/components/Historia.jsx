@@ -15,9 +15,9 @@ export default function Historia() {
                       &quot;Yo misma viví el momento en que tenía el conocimiento y la experiencia, pero me faltaba la integración entre mi mentalidad, mi marca y la inteligencia estratégica que mi negocio necesitaba para despegar.&quot;
                   </div>
 
-                  <p>Fue entonces cuando decidí unir lo mejor de dos mundos: las bases biológicas de las <strong>Neurociencias</strong> y el <strong>desbloqueo mental</strong> con mi <strong>formación en negocios</strong> y mis <strong>10 años de experiencia</strong> para crear una <strong>Inteligencia Estratégica de Negocios</strong> que impulsa tu marca personal y tu empresa desde adentro hacia afuera.</p>
+                  <p>Fue entonces cuando decidí unir lo mejor de dos mundos: las bases biológicas de las <strong>Neurociencias</strong> (en las que me especializo desde 2009) y el <strong>desbloqueo mental</strong> con mi <strong>formación en Administración y Finanzas</strong> y más de <strong>20 años de trayectoria profesional internacional</strong> —iniciada en España (Madrid y Mallorca)— para crear una <strong>Inteligencia Estratégica de Negocios</strong> que impulsa tu marca personal y tu empresa desde adentro hacia afuera.</p>
                   
-                  <p>Así nació el <strong>Método MODO LÍDER</strong>: un sistema diseñado para potenciar tu marca personal, alinear tu mente con tus metas y aplicar las estrategias correctas para que tu negocio surja, se haga visible, produzca impacto y genere ventas reales.</p>
+                  <p>Así nació el <strong>Método MODO LÍDER</strong> y mi obra literaria <strong>«Primero Ámate»</strong> (Tinta Libre Ediciones): un ecosistema integral diseñado para potenciar tu amor propio y tu marca personal, alinear tu mente con tus metas y aplicar las estrategias correctas para que tu negocio surja, se haga visible, produzca impacto y genere ventas reales.</p>
               </div>
 
               <div className="historia-card-portrait">
@@ -25,7 +25,7 @@ export default function Historia() {
                   <div className="historia-card-caption">
                       <h4>Romina Lorena Montiel</h4>
                       <p style={{ fontSize: "0.95rem", color: "#8A6405", fontWeight: "750", margin: "0.2rem 0" }}>Lic. en Administración • Neuropsicoeducadora</p>
-                      <p style={{ fontSize: "0.9rem", color: "#0F172A", fontWeight: "800", marginBottom: "0.5rem" }}>Mentora de Mentes y de Negocios</p>
+                      <p style={{ fontSize: "0.9rem", color: "#0F172A", fontWeight: "800", marginBottom: "0.5rem" }}>Mentora de Mentes y Negocios • Autora de «Primero Ámate»</p>
                       <Link href="/historia" style={{
                         display: "inline-flex",
                         alignItems: "center",

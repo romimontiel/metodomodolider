@@ -28,8 +28,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Método MODO LÍDER | Romina Lorena Montiel",
-  description: "Una metodología única que integra ciencia del comportamiento, mentalidad y ejecución de alto impacto para resultados reales y sostenibles.",
+  title: "Método MODO LÍDER | Lic. Romina Lorena Montiel • Autora de «Primero Ámate»",
+  description: "Lic. Romina Lorena Montiel: Creadora del Método Modo Líder®, Mentora de Mentes y Negocios, Lic. en Administración y Finanzas, Neuropsicoeducadora y autora del libro «Primero Ámate» (Tinta Libre Ediciones).",
 };
 
 export default function RootLayout({ children }) {
