@@ -65,7 +65,7 @@ export default function HistoriaPage() {
       bloque1: {
         year: "2026",
         title: "Integración Total: Método MODO LÍDER",
-        desc: "Nació el Método MODO LÍDER: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida."
+        desc: "Nació el Método MODO LÍDER: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto."
       },
       bloque2: {
         year: "HOY",
@@ -309,7 +309,7 @@ export default function HistoriaPage() {
               </div>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
-                En <strong style={{ color: "#0F172A" }}>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong style={{ color: "#8A6405" }}>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto de vida.
+                En <strong style={{ color: "#0F172A" }}>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong style={{ color: "#8A6405" }}>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto.
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#8A6405", fontWeight: "750", fontSize: "1.2rem", lineHeight: "1.6" }}>
