@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
         url: "https://rominalorenamontielmodolider.vercel.app/",
         image: "https://rominalorenamontielmodolider.vercel.app/romina.png",
         description:
-          "Licenciada en Administración y Finanzas (UNVM), Neuropsicoeducadora (Asociación Educar, Posgrado en Neurociencias de las Emociones), autora del libro «Primero Ámate» (Tinta Libre Ediciones) y fundadora del Método Modo Líder®. Más de 20 años de trayectoria profesional internacional iniciada en España (Madrid y Mallorca) y consolidada en Argentina.",
+          "Licenciada en Administración y Finanzas (UNVM), Neuropsicoeducadora (Asociación Educar, Posgrado en Neurociencias de las Emociones), autora del libro «Primero Ámate» (Tinta Libre Ediciones) y fundadora del Método Modo Líder®. Más de 20 años de trayectoria profesional internacional iniciada en Valencia y Castellón (España) y consolidada en Argentina.",
         alumniOf: [
           {
             "@type": "CollegeOrUniversity",
