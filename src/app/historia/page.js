@@ -42,8 +42,8 @@ export default function HistoriaPage() {
     {
       year: "2020 - 2022",
       flag: "💻",
-      title: "Pandemia: Mindfulness y Regulación Emocional Online",
-      desc: "En pleno confinamiento y post-pandemia, dicté talleres online sobre Emociones y Mindfulness, brindando contención, foco y calma mental a cientos de personas en momentos de incertidumbre."
+      title: "Talleres de Educación Emocional y Mindfulness",
+      desc: "En pleno confinamiento y post-pandemia, dicté online Talleres de Educación Emocional y Mindfulness, brindando herramientas de regulación emocional, foco y calma mental a cientos de personas."
     },
     {
       year: "2023 - 2025",
@@ -219,7 +219,7 @@ export default function HistoriaPage() {
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
-                En <strong style={{ color: "#0F172A" }}>2017</strong> me gradué con diploma oficial como <strong style={{ color: "#8A6405" }}>NEUROPSICOEDUCADORA</strong> y realicé un posgrado en <strong style={{ color: "#8A6405" }}>NEUROCIENCIAS DE LAS EMOCIONES</strong>. Comencé brindando talleres en colegios secundarios sobre emociones y proyecto de vida, y luego entre <strong style={{ color: "#0F172A" }}>2020 y 2022</strong> talleres online de Mindfulness y contención emocional.
+                En <strong style={{ color: "#0F172A" }}>2017</strong> me gradué con diploma oficial como <strong style={{ color: "#8A6405" }}>NEUROPSICOEDUCADORA</strong> y realicé un posgrado en <strong style={{ color: "#8A6405" }}>NEUROCIENCIAS DE LAS EMOCIONES</strong>. Comencé brindando talleres en colegios secundarios sobre emociones y proyecto de vida, y luego entre <strong style={{ color: "#0F172A" }}>2020 y 2022</strong> dicté online <strong style={{ color: "#0F172A" }}>Talleres de Educación Emocional y Mindfulness</strong>.
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
