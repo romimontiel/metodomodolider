@@ -919,14 +919,14 @@ body {
 
   <!-- HERO BANNER -->
   <section class="hero-banner">
-    <div class="hero-tag">&#127919; FORMACI&Oacute;N CENTRAL &bull; 6 CLASES OFICIALES</div>
+    <div class="hero-tag">&#127919; FORMACI&Oacute;N CENTRAL &bull; 7 CLASES OFICIALES</div>
     <h1>Curso Completo: <span>Emprender de Cero a Impacto y Ventas</span></h1>
     <p class="hero-desc">Desarroll&aacute; tu transformaci&oacute;n como empresaria consciente con la <strong>Lic. Romina Lorena Montiel</strong>. Las Clases 1 y 2 son de libre acceso (Free Pass); a partir de la Clase 3 el material est&aacute; protegido para alumnas activas.</p>
     <div class="hero-chips">
       <span class="hero-chip" style="background:rgba(16,185,129,0.18); color:#34D399; border-color:rgba(16,185,129,0.35); font-weight:800;">&#128275; Clases 1 y 2 Free Pass</span>
-      <span class="hero-chip">&#127916; 12+ Videos</span>
+      <span class="hero-chip">&#127916; 18+ Videos</span>
       <span class="hero-chip">&#128196; Workbooks &amp; Gu&iacute;as Oficiales</span>
-      <span class="hero-chip">&#128081; Clases 3 a 6 VIP</span>
+      <span class="hero-chip">&#128081; Clases 3 a 7 VIP</span>
     </div>
   </section>
 
@@ -998,6 +998,16 @@ body {
         </div>
         <span class="tab-title">CLASE 6</span>
         <span class="tab-desc">Taller Creativo para Vender M&aacute;s</span>
+      </div>
+
+      <!-- FOLDER 7 -->
+      <div class="folder-nav-tab" id="tab-clase7" onclick="sw(7)">
+        <div class="tab-top-row">
+          <span class="tab-icon" id="fIcon7">&#128274;</span>
+          <span class="tab-badge" style="background:rgba(212,175,55,0.15); color:var(--gold-l); border:1px solid var(--border-g); font-weight:800;">VIP</span>
+        </div>
+        <span class="tab-title">CLASE 7</span>
+        <span class="tab-desc">De la Carencia a la Abundancia</span>
       </div>
     </div>
 
@@ -1652,6 +1662,84 @@ body {
         <a href="/campus_modo_lider.html" class="btn-return-campus">&#8592; Volver al Campus Principal</a>
       </div>
     </div>
+
+    <!-- PANEL 7: CLASE 7 - DE LA MENTALIDAD DE CARENCIA A LA MENTALIDAD DE ABUNDANCIA -->
+    <div class="c-panel" id="p7">
+      <div class="active-folder-banner">
+        <span class="hero-tag">&#128274; CLASE 7 &bull; ALUMNAS ACTIVAS VIP</span>
+        <h3>De la Mentalidad de Carencia a la Mentalidad de Abundancia</h3>
+        <p>Entren&aacute; tu mente para salir de la jaula de la carencia, habitar la calma, expandir tu contenedor interno e integrar decisiones de abundancia real en tu negocio.</p>
+      </div>
+
+      <!-- 1. VIDEOS SECUENCIALES DE LA CLASE (1 AL 6 - PROTEGIDOS EN CAMPUS) -->
+      <div class="vid-area" id="vBox7" oncontextmenu="return false;">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px 12px 0 0; overflow: hidden;">
+          <iframe
+            id="yt-video-clase7"
+            src="https://www.youtube-nocookie.com/embed/-pUxZjeRG6c?enablejsapi=1&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;playsinline=1"
+            title="1. Introducci&oacute;n a la Mente Carente"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            style="display: block; width: 100%; height: 100%; border: none; background: #000;">
+          </iframe>
+          <!-- Escudos invisibles para bloquear clic hacia el visor externo de YouTube -->
+          <div title="Reproductor Oficial Campus Modo L&iacute;der" oncontextmenu="return false;" style="position: absolute; top: 0; left: 0; right: 0; height: 64px; z-index: 12; background: transparent; cursor: default;"></div>
+          <div title="Reproductor Oficial Campus Modo L&iacute;der" oncontextmenu="return false;" style="position: absolute; bottom: 0; right: 44px; width: 140px; height: 48px; z-index: 12; background: transparent; cursor: default;"></div>
+          <div title="Reproductor Oficial Campus Modo L&iacute;der" oncontextmenu="return false;" style="position: absolute; bottom: 46px; left: 0; width: 215px; height: 54px; z-index: 12; background: transparent; cursor: default;"></div>
+        </div>
+        <div class="pl-bar" id="plBarClase7">
+          <span class="pl-lbl">Secuencia (1 al 6):</span>
+          <button class="pl-btn active" data-c7-idx="0" onclick="selectClase7Video(0)">&#9658; 1. Mente Carente</button>
+          <button class="pl-btn" data-c7-idx="1" onclick="selectClase7Video(1)">&#9658; 2. Preparar la Mente</button>
+          <button class="pl-btn" data-c7-idx="2" onclick="selectClase7Video(2)">&#9658; 3. Habitar la Calma</button>
+          <button class="pl-btn" data-c7-idx="3" onclick="selectClase7Video(3)">&#9658; 4. Salir de la Jaula</button>
+          <button class="pl-btn" data-c7-idx="4" onclick="selectClase7Video(4)">&#9658; 5. Sostener la Abundancia</button>
+          <button class="pl-btn" data-c7-idx="5" onclick="selectClase7Video(5)">&#9658; 6. Integrar en el Negocio</button>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; padding: 0.65rem 1.2rem; background: #080B12; border-top: 1px solid rgba(255,255,255,0.06);">
+          <button type="button" id="btnPrevClase7" class="pl-btn" onclick="stepClase7Video(-1)" style="opacity: 0.45; pointer-events: none;">&#8592; Video Anterior</button>
+          <span id="seqStatusClase7" style="font-size: 0.75rem; font-weight: 700; color: var(--gold-l);">Parte 1 de 6 &bull; Reproducci&oacute;n Secuencial Continua</span>
+          <button type="button" id="btnNextClase7" class="pl-btn" onclick="stepClase7Video(1)" style="border-color: rgba(212,175,55,0.45); color: var(--gold-l);">Siguiente Video (2/6) &#8594;</button>
+        </div>
+      </div>
+
+      <div class="v-desc" id="d7">&#128161; <strong>Reproduciendo (Parte 1 de 6):</strong> 1. Introducci&oacute;n a la Mente Carente</div>
+
+      <!-- 2. MATERIALES DE LA CLASE -->
+      <div class="mats">
+        <div class="mats-ttl">&#128196; Materiales de la Clase</div>
+        <div class="mats-grid">
+
+          <!-- TARJETA WORKBOOK OFICIAL -->
+          <div class="m-card">
+            <div class="m-ico-row">
+              <div class="m-badge b-pdf">PDF</div>
+              <div class="m-meta">
+                <h5>Workbook: De la Mentalidad de Carencia a la Mentalidad de Abundancia</h5>
+                <span>Interactivo + Descargar PDF</span>
+              </div>
+            </div>
+            <p class="m-desc">Cuaderno oficial de trabajo sobre la Ley del Contenedor, los 4 niveles de conciencia y el Proceso Mente Pr&oacute;spera (7 Movimientos) para integrar la abundancia en tu negocio.</p>
+            <div class="m-btns">
+              <a href="/clase7_mentalidad_abundancia/Workbook_Mentalidad_Carencia_a_Abundancia.html" target="_blank" class="btn-s">&#10024; Interactivo</a>
+              <a href="/clase7_mentalidad_abundancia/Workbook_Mentalidad_Carencia_a_Abundancia.pdf" download="Workbook_Mentalidad_Carencia_a_Abundancia.pdf" class="btn-p">&#11015; Descargar PDF</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BOTONES DE REGRESO -->
+      <div class="return-to-folders-box">
+        <button type="button" class="btn-return-folders" onclick="scrollToFolders()">
+          <span>&#128193; Regresar a las Carpetas de Estudio</span>
+          <span class="btn-arrow">&uarr;</span>
+        </button>
+        <a href="/campus_modo_lider.html" class="btn-return-campus">&#8592; Volver al Campus Principal</a>
+      </div>
+    </div>
   </div>
 
 </main>
@@ -1757,10 +1845,12 @@ function updateAuthUI() {
   var f4 = document.getElementById('fIcon4');
   var f5 = document.getElementById('fIcon5');
   var f6 = document.getElementById('fIcon6');
+  var f7 = document.getElementById('fIcon7');
   if (f3) f3.textContent = authed ? '📂' : '🔐';
   if (f4) f4.textContent = authed ? '📱' : '🔐';
   if (f5) f5.textContent = authed ? '📂' : '🔐';
   if (f6) f6.textContent = authed ? '📂' : '🔐';
+  if (f7) f7.textContent = authed ? '📂' : '🔐';
 }
 
 function openModal(target) {
@@ -1989,6 +2079,117 @@ function switchClase6MainVideo(url, desc, btn) {
     btn.classList.add('active');
   }
 }
+
+// =========================================================================
+// CLASE 7: REPRODUCCIÓN SECUENCIAL (1 AL 6) SIN SALIDA A VISOR DE YOUTUBE
+// =========================================================================
+var CLASE7_VIDEOS = [
+  { id: '-pUxZjeRG6c', title: '1. Introducci\u00f3n a la Mente Carente' },
+  { id: 'McaejB_DMnE', title: '2. Preparar la Mente para habitar la Abundancia' },
+  { id: '74g5ghpFZBk', title: '3. Habitar la calma para tomar decisiones de Abundancia' },
+  { id: 'OvLWmrACzo4', title: '4. Salir de la jaula de la carencia para habitar la abundancia' },
+  { id: 'Fw-quY4BAv4', title: '5. Habitar la Abundancia Requiere de poder Sostenerla' },
+  { id: 'bVvUNEnPxP4', title: '6. Integrar la abundancia en nuestro negocio' }
+];
+var currentClase7Index = 0;
+var ytPlayerClase7 = null;
+
+function selectClase7Video(idx, autoPlay) {
+  if (idx < 0 || idx >= CLASE7_VIDEOS.length) return;
+  currentClase7Index = idx;
+  var item = CLASE7_VIDEOS[idx];
+  var ifr = document.getElementById('yt-video-clase7');
+  var d = document.getElementById('d7');
+  var seqStatus = document.getElementById('seqStatusClase7');
+  var btnPrev = document.getElementById('btnPrevClase7');
+  var btnNext = document.getElementById('btnNextClase7');
+  var bar = document.getElementById('plBarClase7');
+
+  if (ytPlayerClase7 && typeof ytPlayerClase7.loadVideoById === 'function') {
+    if (autoPlay === false) {
+      ytPlayerClase7.cueVideoById(item.id);
+    } else {
+      ytPlayerClase7.loadVideoById(item.id);
+    }
+  } else if (ifr) {
+    var ap = (autoPlay === false) ? '0' : '1';
+    ifr.src = 'https://www.youtube-nocookie.com/embed/' + item.id + '?enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&autoplay=' + ap;
+  }
+
+  if (d) {
+    d.innerHTML = '&#128161; <strong>Reproduciendo (Parte ' + (idx + 1) + ' de ' + CLASE7_VIDEOS.length + '):</strong> ' + item.title;
+  }
+  if (seqStatus) {
+    seqStatus.innerHTML = 'Parte ' + (idx + 1) + ' de ' + CLASE7_VIDEOS.length + ' &bull; Reproducci&oacute;n Secuencial Continua';
+  }
+  if (bar) {
+    bar.querySelectorAll('.pl-btn').forEach(function(b, i) {
+      if (i === idx) b.classList.add('active');
+      else b.classList.remove('active');
+    });
+  }
+  if (btnPrev) {
+    if (idx === 0) {
+      btnPrev.style.opacity = '0.45';
+      btnPrev.style.pointerEvents = 'none';
+      btnPrev.innerHTML = '&#8592; Video Anterior';
+    } else {
+      btnPrev.style.opacity = '1';
+      btnPrev.style.pointerEvents = 'auto';
+      btnPrev.innerHTML = '&#8592; Anterior (' + idx + '/6)';
+    }
+  }
+  if (btnNext) {
+    if (idx >= CLASE7_VIDEOS.length - 1) {
+      btnNext.style.opacity = '0.45';
+      btnNext.style.pointerEvents = 'none';
+      btnNext.innerHTML = 'Fin de la Secuencia (6/6) &#10003;';
+    } else {
+      btnNext.style.opacity = '1';
+      btnNext.style.pointerEvents = 'auto';
+      btnNext.innerHTML = 'Siguiente Video (' + (idx + 2) + '/6) &#8594;';
+    }
+  }
+}
+
+function stepClase7Video(delta) {
+  var nextIdx = currentClase7Index + delta;
+  if (nextIdx >= 0 && nextIdx < CLASE7_VIDEOS.length) {
+    selectClase7Video(nextIdx, true);
+  }
+}
+
+// Cargar API de YouTube para avance automático secuencial (1 -> 2 -> 3 -> 4 -> 5 -> 6)
+(function initClase7YTPlayer() {
+  var tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  if (firstScriptTag && firstScriptTag.parentNode) {
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  } else {
+    document.head.appendChild(tag);
+  }
+})();
+
+window.onYouTubeIframeAPIReady = function() {
+  try {
+    ytPlayerClase7 = new YT.Player('yt-video-clase7', {
+      events: {
+        'onStateChange': function(event) {
+          // YT.PlayerState.ENDED === 0 -> pasa automáticamente al siguiente video sin mostrar sugerencias externas
+          if (event.data === 0) {
+            if (currentClase7Index < CLASE7_VIDEOS.length - 1) {
+              selectClase7Video(currentClase7Index + 1, true);
+            } else {
+              // Al terminar el 6to video, vuelve a dejar listo el 6to en el inicio sin pantalla de sugerencias
+              ytPlayerClase7.cueVideoById(CLASE7_VIDEOS[currentClase7Index].id);
+            }
+          }
+        }
+      }
+    });
+  } catch (e) {}
+};
 
 </script>
 </body>

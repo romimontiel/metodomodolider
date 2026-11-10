@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbook • De la Mente Carente a la Mentalidad de Abundancia · Proceso Mente Próspera | Método MODO LÍDER ®</title>
+    <meta name="description" content="Cuaderno de Trabajo Oficial - Clase 7: De la mente carente a la mentalidad de abundancia, la Ley del Contenedor, los 4 niveles y Proceso Mente Próspera (7 Movimientos). Lic. Romina Lorena Montiel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #0E121B;
+            --color-navy: #161A25;
+            --color-bg-page: #F8F9FB;
+            --color-gold: #D4AF37;
+            --color-gold-dark: #B4871E;
+            --color-gold-light: #FFF9E6;
+            --color-coral: #E94560;
+            --color-coral-light: #FFF0F2;
+            --color-emerald: #10B981;
+            --color-emerald-light: #ECFDF5;
+            --color-text-main: #1A202C;
+            --color-text-muted: #5A6A85;
+            --color-border: #E2E8F0;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--color-bg-page); color: var(--color-text-main); line-height: 1.6; padding-bottom: 5rem; }
+
+        .action-bar {
+            max-width: 920px; margin: 1.5rem auto; display: flex; justify-content: space-between; align-items: center;
+            background: var(--color-primary); color: #FFFFFF; padding: 1rem 2rem; border-radius: var(--radius-md);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25); border: 1px solid rgba(212, 175, 55, 0.4); position: sticky; top: 1rem; z-index: 100;
+        }
+        .action-brand { display: flex; align-items: center; gap: 0.8rem; }
+        .action-logo { font-size: 1.4rem; color: var(--color-gold); }
+        .action-title { font-size: 0.9rem; font-weight: 800; }
+        .action-sub { font-size: 0.74rem; color: #94A3B8; }
+        .btn-group { display: flex; gap: 0.6rem; }
+        .btn-gold { background: linear-gradient(135deg, #FFDF00 0%, #D4AF37 100%); color: #07090E; font-size: 0.82rem; font-weight: 900; padding: 0.65rem 1.4rem; border-radius: 50px; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+        .btn-secondary { background: rgba(255, 255, 255, 0.1); color: #FFFFFF; font-size: 0.82rem; font-weight: 700; padding: 0.65rem 1.2rem; border-radius: 50px; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.2); }
+
+        .workbook-container { max-width: 920px; margin: 0 auto; background: #FFFFFF; border-radius: var(--radius-lg); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06); border: 1px solid var(--color-border); overflow: hidden; }
+
+        /* CARÁTULA */
+        .cover-page { background: #343538; color: #FFFFFF; min-height: 980px; display: flex; flex-direction: column; justify-content: space-between; text-align: center; padding: 3.5rem 3rem 0 3rem; }
+        .cover-top { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; }
+        .cover-author { font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #E8E0CC; margin-bottom: 0.6rem; }
+        .cover-divider { width: 90px; height: 1.5px; background: #C8A82A; margin: 0 auto 1.5rem auto; }
+        .cover-course-label { font-size: 0.76rem; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: #C8C0B0; margin-bottom: 0.4rem; }
+        .cover-course-name { font-size: 1.05rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #E8E0CC; margin-bottom: 2.2rem; }
+        .cover-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3.4rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.05; margin-bottom: 0.5rem; }
+        .cover-subject { font-family: 'Playfair Display', Georgia, serif; font-size: 1.45rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; background: linear-gradient(to bottom, #E8CB6A 0%, #C8A82A 50%, #A07818 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.25; margin-bottom: 1.6rem; }
+        .cover-logo-img { width: 150px; height: 150px; border-radius: 50%; object-fit: contain; margin: 0.4rem auto 1.2rem auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+        .cover-subtitle { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; color: #F0C040; margin-top: 0.4rem; font-weight: 700; }
+        .cover-desc { font-size: 0.88rem; color: #E8E0CC; margin: 0.5rem auto 1.5rem auto; max-width: 630px; line-height: 1.55; }
+        .cover-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; width: 100%; max-width: 650px; margin: 0.5rem auto 1rem; text-align: left; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius-md); padding: 1.1rem 1.5rem; }
+        .cover-bottom { background: #242527; padding: 1.3rem 2rem; margin: 0 -3rem; border-top: 1px solid #3E4044; text-align: center; }
+        .cover-quote { font-size: 0.86rem; color: #D1D5DB; font-weight: 500; letter-spacing: 0.5px; font-style: italic; }
+
+        /* DERECHOS */
+        .copyright-page { background: #FFFFFF; min-height: 980px; display: flex; flex-direction: column; justify-content: space-between; padding: 3.5rem 3.5rem 2.5rem 3.5rem; }
+        .copyright-content { flex: 1; }
+        .copyright-circle { width: 125px; height: 125px; border-radius: 50%; border: 14px solid #C8A25D; display: flex; align-items: center; justify-content: center; margin: 1.5rem auto; }
+        .copyright-circle span { font-size: 72px; font-weight: 700; color: #C8A25D; line-height: 1; transform: translateY(-2px); }
+        .copyright-title { font-size: 1.15rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #161A25; text-align: center; margin-bottom: 1.2rem; }
+        .copyright-rights { font-size: 0.96rem; color: #333; text-align: center; margin-bottom: 0.7rem; }
+        .copyright-author { font-size: 0.98rem; color: #161A25; font-weight: 600; text-align: center; margin-bottom: 0.25rem; }
+        .copyright-credentials { font-size: 0.82rem; font-weight: 800; letter-spacing: 1.6px; color: #333; text-align: center; text-transform: uppercase; margin-bottom: 2.5rem; }
+        .copyright-body { max-width: 610px; margin: 0 auto; font-size: 0.94rem; line-height: 1.68; color: #2B2C2E; }
+        .copyright-body p { margin-bottom: 1.3rem; }
+        .copyright-footer { display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem; padding-top: 1rem; }
+        .copyright-footer-logo { width: 36px; height: 36px; border-radius: 50%; object-fit: contain; }
+        .copyright-page-number { font-weight: 800; font-size: 1.15rem; color: #161A25; }
+
+        .meta-field label { display: block; font-size: 0.72rem; font-weight: 800; color: var(--color-gold); text-transform: uppercase; margin-bottom: 0.3rem; }
+        .meta-field input { width: 100%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #FFF; padding: 0.5rem 0.8rem; border-radius: var(--radius-sm); outline: none; }
+
+        /* SECCIONES */
+        .section-block { padding: 2.8rem 3.5rem; border-bottom: 1.5px solid var(--color-border); }
+        .section-tag { font-size: 0.74rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-gold-dark); margin-bottom: 0.4rem; }
+        .section-heading { font-family: 'Playfair Display', Georgia, serif; font-size: 1.65rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.55rem; line-height: 1.25; }
+        .section-desc { font-size: 0.92rem; color: var(--color-text-muted); margin-bottom: 1.3rem; line-height: 1.6; }
+        .quote-banner { background: var(--color-gold-light); border: 1.5px solid var(--color-gold); border-left: 6px solid var(--color-gold); border-radius: var(--radius-sm); padding: 1.15rem 1.5rem; margin-bottom: 1.4rem; font-size: 0.91rem; font-weight: 600; color: #78350F; }
+        .exercise-card { background: #F8FAFC; border: 1.5px solid var(--color-border); border-radius: var(--radius-md); padding: 1.4rem; margin-bottom: 1.3rem; break-inside: avoid; page-break-inside: avoid; }
+        .exercise-card.gold { border-left: 5px solid var(--color-gold); }
+        .exercise-card.coral { border-left: 5px solid var(--color-coral); }
+        .exercise-card.emerald { border-left: 5px solid var(--color-emerald); }
+        .exercise-title { font-size: 0.98rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.35rem; }
+        .exercise-guide { font-size: 0.83rem; color: #475569; margin-bottom: 0.85rem; font-style: italic; }
+        .fill-textarea { width: 100%; min-height: 76px; padding: 0.75rem 0.95rem; border-radius: var(--radius-sm); border: 1.5px solid #CBD5E1; background: #FFFFFF; font-family: 'Montserrat', sans-serif; font-size: 0.87rem; color: #1E293B; line-height: 1.55; outline: none; resize: vertical; margin-bottom: 0.45rem; }
+        .fill-textarea.short { min-height: 54px; }
+        .fill-textarea:focus { border-color: var(--color-gold); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15); }
+        .field-label { display: block; font-size: 0.81rem; font-weight: 800; color: var(--color-primary); margin: 0.45rem 0 0.25rem; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+        .info-box { padding: 1.1rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.85rem; line-height: 1.55; break-inside: avoid; page-break-inside: avoid; }
+        .info-box.coral { background: var(--color-coral-light); border-left: 4px solid var(--color-coral); color: #881337; }
+        .info-box.emerald { background: var(--color-emerald-light); border-left: 4px solid var(--color-emerald); color: #064E3B; }
+        .info-box h4 { font-size: 0.88rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+        .check-list { list-style: none; margin: 0.4rem 0 0.8rem 0; }
+        .check-list li { display: flex; align-items: flex-start; gap: 0.55rem; font-size: 0.85rem; color: #334155; margin-bottom: 0.42rem; line-height: 1.45; }
+        .check-list input[type="checkbox"] { margin-top: 0.22rem; accent-color: var(--color-coral); width: 15px; height: 15px; flex-shrink: 0; }
+
+        /* TABLAS */
+        .matrix-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin: 0.85rem 0 1.3rem; border: 1px solid var(--color-border); }
+        .matrix-table th { padding: 0.65rem 0.85rem; font-weight: 800; text-align: left; font-size: 0.73rem; text-transform: uppercase; }
+        .matrix-table td { padding: 0.55rem 0.85rem; border-top: 1px solid var(--color-border); vertical-align: top; }
+        .matrix-table tr { break-inside: avoid; page-break-inside: avoid; }
+        .th-coral { background: var(--color-coral-light); color: var(--color-coral); }
+        .th-gold { background: var(--color-gold-light); color: var(--color-gold-dark); }
+        .th-grey { background: #F1F5F9; color: var(--color-text-muted); }
+        .fill-cell { width: 100%; min-height: 46px; padding: 0.45rem 0.6rem; border-radius: 6px; border: 1.5px solid #CBD5E1; background: #FFF; font-family: 'Montserrat', sans-serif; font-size: 0.83rem; resize: vertical; outline: none; }
+
+        .tip-box { background: var(--color-emerald-light); border-left: 4px solid var(--color-emerald); border-radius: 6px; padding: 0.9rem 1.2rem; margin-bottom: 1.2rem; font-size: 0.86rem; color: #065F46; line-height: 1.55; }
+
+        .step-row { display: grid; grid-template-columns: 155px 1fr; gap: 0.9rem; align-items: start; margin-bottom: 0.7rem; break-inside: avoid; page-break-inside: avoid; }
+        .step-label { background: var(--color-primary); color: var(--color-gold); border-radius: 8px; padding: 0.6rem 0.85rem; font-weight: 800; font-size: 0.81rem; }
+        .step-label small { display: block; font-weight: 500; font-size: 0.69rem; color: #CBD5E1; margin-top: 0.15rem; }
+
+        .score-select { width: 100%; padding: 0.42rem 0.6rem; border-radius: 6px; border: 1.5px solid #CBD5E1; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.84rem; color: var(--color-primary); background: #FFF; }
+
+        .workbook-footer { background: #0E121B; color: #FFFFFF; padding: 2.6rem 3.5rem; text-align: center; border-top: 3px solid var(--color-gold); }
+        .footer-logo { font-size: 1.3rem; font-weight: 900; letter-spacing: 3px; color: var(--color-gold); margin-bottom: 0.6rem; }
+
+        @media print {
+            @page { size: A4; margin: 11mm 10mm; }
+            body { background: #FFF; padding: 0; }
+            .action-bar { display: none !important; }
+            .workbook-container { box-shadow: none; border: none; max-width: 100%; border-radius: 0; }
+            .cover-page, .copyright-page { height: 274mm; min-height: 0; page-break-after: always; break-after: page; overflow: hidden; }
+            .cover-page { padding: 18mm 16mm 0 16mm !important; }
+            .cover-bottom { margin: 0 -16mm !important; padding: 8mm 12mm !important; }
+            .copyright-page { padding: 16mm 20mm 12mm 20mm !important; }
+            .section-block { padding: 1rem 0.4rem; }
+            .fill-textarea, .fill-cell { resize: none; overflow: hidden; }
+            .section-tag, .section-heading, .section-desc, .exercise-title, .exercise-guide { break-after: avoid; page-break-after: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="action-bar">
+        <div class="action-brand">
+            <span class="action-logo">👑</span>
+            <div>
+                <div class="action-title">MÉTODO MODO LÍDER ® • WORKBOOK INTERACTIVO</div>
+                <div class="action-sub">Clase 7 · De la Mente Carente a la Mentalidad de Abundancia · Proceso Mente Próspera</div>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button class="btn-secondary" onclick="saveData()">💾 Guardar Avance</button>
+            <button class="btn-gold" onclick="window.print()">🖨️ Imprimir / Guardar en PDF</button>
+        </div>
+    </div>
+
+    <main class="workbook-container">
+
+        <!-- CARÁTULA -->
+        <header class="cover-page">
+            <div class="cover-top">
+                <p class="cover-author">LIC. ROMINA LORENA MONTIEL</p>
+                <div class="cover-divider"></div>
+                <p class="cover-course-label">CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS</p>
+                <p class="cover-course-name">MÉTODO MODO LÍDER ® · CREA. LIDERA. IMPACTA.</p>
+
+                <h1 class="cover-h1">WORKBOOK</h1>
+                <div class="cover-subject">DE LA MENTE CARENTE<br>VS. MENTALIDAD DE ABUNDANCIA<br>· PROCESO MENTE PRÓSPERA ·</div>
+
+                <img src="logo_modo_lider.png" alt="Método MODO LÍDER" class="cover-logo-img">
+
+                <h2 class="cover-subtitle">Clase 7 · Mentalidad, Poder Personal y Creación</h2>
+                <p class="cover-desc">
+                    Qué es la mente carente, qué es la abundancia, la Ley del Contenedor, cómo identificar la carencia en 4 niveles y cómo entrenar los 7 movimientos del Proceso Mente Próspera.
+                </p>
+
+                <div class="cover-meta-grid">
+                    <div class="meta-field">
+                        <label>Tu Nombre y Apellido:</label>
+                        <input type="text" id="student_name" placeholder="Ej: Marcela Benítez">
+                    </div>
+                    <div class="meta-field">
+                        <label>Nombre de tu Negocio:</label>
+                        <input type="text" id="business_name" placeholder="Ej: Aljesec / Modo Líder">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cover-bottom">
+                <p class="cover-quote">“Albergamos la capacidad de cambiar lo que no nos gusta, elegir diferente y construir una nueva historia con lo que sí tengo.”</p>
+            </div>
+        </header>
+
+        <!-- DERECHOS DE AUTOR -->
+        <div class="copyright-page">
+            <div class="copyright-content">
+                <div class="copyright-circle"><span>C</span></div>
+                <h2 class="copyright-title">📜 DERECHOS DE AUTOR</h2>
+                <p class="copyright-rights">- Todos los derechos reservados.</p>
+                <p class="copyright-author">Escrito por Romina Lorena Montiel</p>
+                <p class="copyright-credentials">NEUROPSICOEDUCADORA - MENTORA - ESCRITORA</p>
+                <div class="copyright-body">
+                    <p>Este material ha sido creado por Lic. Romina Lorena Montiel, Neuropsicoeducadora, Mentora de Mentes y Negocios.</p>
+                    <p>Ninguna parte de este producto, ya sea en formato digital o impreso, puede ser reproducida, distribuida, compartida, almacenada en sistemas de recuperación ni transmitida en ninguna forma ni por ningún medio —electrónico, mecánico, fotocopia, grabación u otro— sin el permiso previo y por escrito de la autora.</p>
+                    <p>Este producto está protegido por la Ley 11.723 de Propiedad Intelectual de la República Argentina y por los tratados internacionales sobre derechos de autor.</p>
+                    <p>La compra de este producto es exclusivamente para uso personal. Su distribución no autorizada constituye una violación a las leyes de propiedad intelectual.</p>
+                </div>
+            </div>
+            <div class="copyright-footer">
+                <img src="logo_modo_lider.png" alt="Logo MODO LÍDER" class="copyright-footer-logo">
+                <span class="copyright-page-number">1</span>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 1: QUÉ ES LA MENTE CARENTE, QUÉ ES LA ABUNDANCIA Y LA LEY DEL CONTENEDOR -->
+        <section class="section-block">
+            <div class="section-tag">PARTE 1 · CONCIENCIA, ENERGÍA Y GESTIÓN</div>
+            <h2 class="section-heading">1. ¿Qué es la Mente Carente y qué es la Abundancia?</h2>
+            <p class="section-desc">
+                Como seres humanos nos distingue nuestra inteligencia, nuestra capacidad creativa y nuestra capacidad de aprender cada día para elegir diferente y construir una <strong>nueva historia con lo que sí tengo</strong>.
+            </p>
+
+            <div class="two-col">
+                <div class="info-box coral">
+                    <h4>❌ ¿Qué es la Mente Carente?</h4>
+                    <p style="margin-bottom:0.45rem;">En la mente carente renunciamos a nuestro poder creador, nos rendimos ante nuestros automatismos y dejamos que habiten el ego, el desorden, la complejidad, el trabajo duro desde la inflexibilidad, el agotamiento y el enojo sin sentido.</p>
+                    <p><strong>Su energía es de:</strong> culpa, victimismo, falta de perdón, autoabandono, perfeccionismo, síndrome del impostor, miedo, estrés, comparación, procrastinación y <em>«no puedo más»</em>.</p>
+                </div>
+                <div class="info-box emerald">
+                    <h4>✨ ¿Qué es la Abundancia?</h4>
+                    <p style="margin-bottom:0.45rem;">En la abundancia habitamos la gratitud, el perdón, la empatía, la valentía, el amor propio, los <strong>límites puestos a tiempo</strong>, la palabra desde la verdad, la calma y el crear un día a la vez sin prisa pero sin pausa.</p>
+                    <p><strong>La energía del dinero y la organización:</strong> la abundancia es construir cada día tus prioridades mientras resolvés tus urgencias (mente clara y organización). El dinero es una energía de creación y consecuencia de entregar tu valor al mundo (propósito), abrirte al merecimiento y moverte hacia adelante.</p>
+                </div>
+            </div>
+
+            <div class="quote-banner">
+                <strong>La Ley Universal y «El Contenedor» (Mirada espiritual, psicológica y empresarial):</strong> Todo está disponible, pero necesitamos crear el <strong>contenedor</strong> para albergarlo, sostenerlo y retenerlo. Podés conseguir diez clientes hoy, pero si no tenés organización, tiempo, procesos ni capacidad de gestión, no vas a poder sostenerlos.
+            </div>
+
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th class="th-gold" style="width:42%;">Lo que deseo recibir</th>
+                        <th class="th-gold">El contenedor psicológico y empresarial que necesito construir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Más dinero</strong></td><td>Educación financiera y administración.</td></tr>
+                    <tr><td><strong>Más clientes</strong></td><td>Capacidad comercial y organización.</td></tr>
+                    <tr><td><strong>Más oportunidades</strong></td><td>Claridad para reconocerlas y decidir.</td></tr>
+                    <tr><td><strong>Más responsabilidades</strong></td><td>Capacidad de gestión y liderazgo.</td></tr>
+                    <tr><td><strong>Más reconocimiento</strong></td><td>Seguridad y capacidad de sostener la exposición.</td></tr>
+                    <tr><td><strong>Más libertad</strong></td><td>Límites, planificación y autonomía.</td></tr>
+                </tbody>
+            </table>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🏺</span> Ejercicio de Apertura: El Contenedor que necesito construir hoy</div>
+                <div class="exercise-guide">No alcanza con desear recibir más: necesitamos desarrollar la capacidad de administrar, sostener y hacer crecer lo que recibimos.</div>
+                <label class="field-label">1. ¿Qué es lo que más deseo recibir hoy en mi vida y en mi negocio (más clientes, más dinero, más visibilidad, más libertad)?</label>
+                <textarea class="fill-textarea short" id="cont_q1"></textarea>
+                <label class="field-label">2. ¿Qué parte de mi «contenedor» (organización, administración, procesos, límites, seguridad para exponerme) necesito fortalecer hoy para poder sostener eso sin colapsar?</label>
+                <textarea class="fill-textarea short" id="cont_q2"></textarea>
+            </div>
+
+            <table class="matrix-table" style="margin-top:1.2rem;">
+                <thead>
+                    <tr>
+                        <th class="th-coral" style="width:50%;">Mentalidad de Carencia</th>
+                        <th class="th-gold" style="width:50%;">Mentalidad de Abundancia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Me concentro en lo que me falta.</td><td>Identifico con qué recursos cuento.</td></tr>
+                    <tr><td>Veo los problemas como amenazas.</td><td>Busco alternativas y posibilidades.</td></tr>
+                    <tr><td>Me comparo y siento que no alcanzo.</td><td>Reconozco mi valor y desarrollo mis capacidades.</td></tr>
+                    <tr><td>Tengo miedo de equivocarme y no lo supero.</td><td>Entiendo el error como información para aprender.</td></tr>
+                    <tr><td>Espero que alguien me dé una oportunidad.</td><td>Aprendo a crear oportunidades.</td></tr>
+                    <tr><td>Creo que el éxito de otros me perjudica.</td><td>Puedo aprender de otros y desarrollar mi propio camino.</td></tr>
+                    <tr><td>Evito tomar algunas decisiones por miedo.</td><td>Evalúo riesgos y tomo decisiones conscientes.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECCIÓN 2: EL FACTOR CONDICIONANTE Y LOS 4 NIVELES DE LA MENTE CARENTE -->
+        <section class="section-block">
+            <div class="section-tag">EL FACTOR CONDICIONANTE · «DARME CUENTA»</div>
+            <h2 class="section-heading">2. ¿Cómo sé que estoy dentro de la mentalidad de carencia? Los 4 niveles</h2>
+            <p class="section-desc">
+                Crear un emprendimiento que funciona tiene un factor condicionante: <strong>mi capacidad de «darme cuenta» de que estoy actuando desde mi mente carente y transformarlo</strong>. Marcá con sinceridad cuáles de estas señales de los 4 niveles reconocés hoy en vos:
+            </p>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>1️⃣</span> Nivel 1 · En mis emociones</div>
+                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.5rem;">Miedo, inseguridad, frustración, envidia, ansiedad, sensación de amenaza, comparación, baja autoestima o impotencia.</p>
+                <label class="field-label">¿Cuáles de estas emociones aparecen con más frecuencia en mi semana?</label>
+                <textarea class="fill-textarea short" id="niv_1_emociones"></textarea>
+            </div>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>2️⃣</span> Nivel 2 · Frases que me digo cuando estoy en la mente carente (Pensamientos)</div>
+                <div class="exercise-guide">Tildá las frases que te descubrís diciéndote a vos misma:</div>
+                <ul class="check-list">
+                    <li><input type="checkbox" id="chk_f1"><span>«No tengo clientes porque los demás ya coparon el mercado y hay demasiada competencia.»</span></li>
+                    <li><input type="checkbox" id="chk_f2"><span>«No tengo dinero para invertir como otros.»</span></li>
+                    <li><input type="checkbox" id="chk_f3"><span>«Pienso: “No sé vender y contra eso no se puede”.»</span></li>
+                    <li><input type="checkbox" id="chk_f4"><span>«Soy esa que siempre hace mal las cosas cuando intento abarcar más de lo que puede masticar.»</span></li>
+                    <li><input type="checkbox" id="chk_f5"><span>«Ya lo intenté antes y no creo que pueda, no me sale.»</span></li>
+                    <li><input type="checkbox" id="chk_f6"><span>«Hago todo chiquito, pienso en sobrevivir y no invierto. Prefiero quedarme en esto nomás, que es lo que me sale.»</span></li>
+                    <li><input type="checkbox" id="chk_f7"><span>«Además, no tengo tiempo. Entre mi marido y mis hijos…»</span></li>
+                    <li><input type="checkbox" id="chk_f8"><span>«Pienso en todo lo que puedo perder y lo dejo.»</span></li>
+                </ul>
+                <label class="field-label">Otra frase que me digo cuando tengo miedo o siento carencia:</label>
+                <textarea class="fill-textarea short" id="niv_2_frases"></textarea>
+            </div>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>3️⃣</span> Nivel 3 · En mis comportamientos</div>
+                <div class="exercise-guide">Tildá los comportamientos de carencia que reconocés en tu día a día:</div>
+                <ul class="check-list">
+                    <li><input type="checkbox" id="chk_c1"><span>Postergar, evitar exponerme, no ofrecer o abandonar antes de empezar.</span></li>
+                    <li><input type="checkbox" id="chk_c2"><span>Cobrar menos de lo que corresponde o hacer cosas gratis sin sentido.</span></li>
+                    <li><input type="checkbox" id="chk_c3"><span>Compararme y hacerme chiquita (síndrome del impostor o miedo al éxito).</span></li>
+                    <li><input type="checkbox" id="chk_c4"><span>Querer controlarlo todo y enojarme porque los demás no hacen lo que deben.</span></li>
+                    <li><input type="checkbox" id="chk_c5"><span>No comprar cuando tengo que reponer mercadería/insumos y perder ventas por miedo.</span></li>
+                    <li><input type="checkbox" id="chk_c6"><span>Desorganizarme, enojarme, distraerme por días con otras cosas y después decir que las oportunidades me rehúyen.</span></li>
+                    <li><input type="checkbox" id="chk_c7"><span>No prepararme para mejorar y luego decir que todos avanzan menos yo.</span></li>
+                </ul>
+            </div>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>4️⃣</span> Nivel 4 · En mis decisiones</div>
+                <div class="exercise-guide">Tildá las decisiones condicionadas por la carencia:</div>
+                <ul class="check-list">
+                    <li><input type="checkbox" id="chk_d1"><span>No elijo reaccionar a tiempo, no priorizo y corro todo el día detrás de las urgencias.</span></li>
+                    <li><input type="checkbox" id="chk_d2"><span>Rechazo oportunidades sin siquiera evaluarlas.</span></li>
+                    <li><input type="checkbox" id="chk_d3"><span>Sostengo situaciones que ya no funcionan aunque sé que estoy perdiendo dinero o mi tiempo.</span></li>
+                    <li><input type="checkbox" id="chk_d4"><span>No invierto en formaciones o en ayuda a pesar de que estoy mal y perdida hace ya tiempo.</span></li>
+                    <li><input type="checkbox" id="chk_d5"><span>Elijo desde el «prefiero malo conocido».</span></li>
+                </ul>
+                <label class="field-label">Reflexión sincera: ¿Desde dónde estoy construyendo hoy mi negocio y qué decisión vengo postergando?</label>
+                <textarea class="fill-textarea short" id="niv_4_decisiones"></textarea>
+            </div>
+        </section>
+
+        <!-- MOVIMIENTO 1: OBSERVAR -->
+        <section class="section-block">
+            <div class="section-tag">PARTE 2 · PROCESO MENTE PRÓSPERA · MOVIMIENTO 1 (CONCIENCIA Y PSICOLOGÍA COGNITIVA)</div>
+            <h2 class="section-heading">Movimiento 1 · OBSERVAR: reconocer mi mente carente</h2>
+            <p class="section-desc">
+                No podemos transformar un patrón que no reconocemos. Recordá diferenciar un hecho comercial puntual (<em>«Hoy no tengo clientes»</em>) de una interpretación sobre tu identidad (<em>«No soy suficientemente buena»</em>).
+            </p>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🗺️</span> Ejercicio 1: Mi mapa de carencia</div>
+                <div class="exercise-guide">Respondé con honestidad para identificar tus pensamientos recurrentes:</div>
+
+                <label class="field-label">1. ¿Qué pienso cuando no tengo el dinero que necesito?</label>
+                <textarea class="fill-textarea short" id="m1_q1"></textarea>
+
+                <label class="field-label">2. ¿Qué siento cuando veo que otras personas progresan?</label>
+                <textarea class="fill-textarea short" id="m1_q2"></textarea>
+
+                <label class="field-label">3. ¿Qué hago cuando no consigo clientes?</label>
+                <textarea class="fill-textarea short" id="m1_q3"></textarea>
+
+                <label class="field-label">4. ¿Qué decisiones tomo cuando tengo miedo?</label>
+                <textarea class="fill-textarea short" id="m1_q4"></textarea>
+
+                <label class="field-label">5. ¿En qué situaciones siento que nunca es suficiente?</label>
+                <textarea class="fill-textarea short" id="m1_q5"></textarea>
+
+                <label class="field-label">6. ¿Dónde estoy actuando desde el miedo y no desde mi propósito?</label>
+                <textarea class="fill-textarea short" id="m1_q6"></textarea>
+            </div>
+        </section>
+
+        <!-- MOVIMIENTO 2: REGULAR -->
+        <section class="section-block">
+            <div class="section-tag">PROCESO MENTE PRÓSPERA · MOVIMIENTO 2 (NEUROCIENCIAS Y CUERPO)</div>
+            <h2 class="section-heading">Movimiento 2 · REGULAR: salir del estado de amenaza</h2>
+            <p class="section-desc">
+                Cuando percibimos una amenaza, nuestro organismo entra en estado de alerta y es más difícil sostener la atención, evaluar alternativas y decidir. Por eso no empezamos intentando pensar positivamente: primero trabajamos con el cuerpo.
+            </p>
+
+            <div class="tip-box">
+                <strong>🌿 5 recursos prácticos de regulación:</strong> 1. Respiración con exhalación prolongada, sin forzarla, durante 1–2 minutos · 2. Apoyar los pies en el suelo y reconocer los puntos de contacto del cuerpo · 3. Identificar dónde se manifiesta la tensión · 4. Nombrar la emoción (miedo, frustración, vergüenza, ansiedad) · 5. Darme un tiempo antes de tomar decisiones importantes.
+            </div>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>🌿</span> Ejercicio 2: Mi pausa consciente</div>
+                <div class="exercise-guide">«No necesito resolver mi vida mientras estoy emocionalmente desbordada. Primero me acompaño, después decido.»</div>
+
+                <label class="field-label">¿Qué estoy sintiendo y dónde lo siento en mi cuerpo?</label>
+                <textarea class="fill-textarea short" id="m2_q1"></textarea>
+
+                <label class="field-label">¿Qué situación activó esta emoción?</label>
+                <textarea class="fill-textarea short" id="m2_q2"></textarea>
+
+                <label class="field-label">¿Qué necesito para recuperar tranquilidad?</label>
+                <textarea class="fill-textarea short" id="m2_q3"></textarea>
+
+                <label class="field-label">¿Necesito actuar ahora o puedo darme un momento?</label>
+                <textarea class="fill-textarea short" id="m2_q4"></textarea>
+            </div>
+        </section>
+
+        <!-- MOVIMIENTO 3: COMPRENDER -->
+        <section class="section-block">
+            <div class="section-tag">PROCESO MENTE PRÓSPERA · MOVIMIENTO 3 (PSICOLOGÍA Y AUTOCONOCIMIENTO)</div>
+            <h2 class="section-heading">Movimiento 3 · COMPRENDER: descubrir de dónde viene mi carencia</h2>
+            <p class="section-desc">
+                No todo pensamiento carente tiene el mismo origen. Una creencia puede haber tenido una función protectora en otro momento de nuestra vida, pero no tiene que dirigir nuestras decisiones actuales.
+            </p>
+
+            <table class="matrix-table">
+                <thead><tr><th class="th-coral" style="width:32%;">Los 6 tipos de carencia</th><th class="th-gold">Cómo se manifiesta</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Carencia aprendida</strong></td><td>Crecí escuchando que el dinero nunca alcanza.</td></tr>
+                    <tr><td><strong>Carencia emocional</strong></td><td>Siento que no soy suficiente.</td></tr>
+                    <tr><td><strong>Carencia vincular</strong></td><td>Creo que tengo que resolver todo sola.</td></tr>
+                    <tr><td><strong>Carencia de reconocimiento</strong></td><td>Necesito demostrar permanentemente mi valor.</td></tr>
+                    <tr><td><strong>Carencia de confianza</strong></td><td>No creo que pueda generar nuevas oportunidades.</td></tr>
+                    <tr><td><strong>Carencia de merecimiento</strong></td><td>Siento culpa cuando recibo o cobro.</td></tr>
+                </tbody>
+            </table>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>🌱</span> Ejercicio 3: Mi historia con la suficiencia</div>
+                <label class="field-label">1. ¿Qué escuchaba en mi familia sobre el dinero?</label>
+                <textarea class="fill-textarea short" id="m3_q1"></textarea>
+                <label class="field-label">2. ¿Qué aprendí sobre las personas que tienen éxito?</label>
+                <textarea class="fill-textarea short" id="m3_q2"></textarea>
+                <label class="field-label">3. ¿Qué siento cuando recibo más dinero que otras personas?</label>
+                <textarea class="fill-textarea short" id="m3_q3"></textarea>
+                <label class="field-label">4. ¿Me permito cobrar por lo que sé? ¿Me cuesta recibir ayuda?</label>
+                <textarea class="fill-textarea short" id="m3_q4"></textarea>
+                <label class="field-label">5. ¿Qué experiencias construyeron estas creencias?</label>
+                <textarea class="fill-textarea short" id="m3_q5"></textarea>
+            </div>
+        </section>
+
+        <!-- MOVIMIENTO 4: REENCUADRAR -->
+        <section class="section-block">
+            <div class="section-tag">PROCESO MENTE PRÓSPERA · MOVIMIENTO 4 (NEUROPLASTICIDAD Y PSICOLOGÍA COGNITIVA)</div>
+            <h2 class="section-heading">Movimiento 4 · REENCUADRAR: construir una nueva interpretación</h2>
+            <p class="section-desc">
+                Dejamos de tratar nuestros pensamientos como verdades absolutas haciéndonos tres preguntas: <em>1) ¿Qué estoy pensando? · 2) ¿Qué evidencia tengo de que es absolutamente cierto? · 3) ¿Qué otra interpretación posible hay?</em>
+            </p>
+
+            <table class="matrix-table">
+                <thead><tr><th class="th-coral" style="width:45%;">Pensamiento carente</th><th class="th-gold">Nuevo reencuadre funcional</th></tr></thead>
+                <tbody>
+                    <tr><td>No hay clientes.</td><td>Todavía no estoy llegando a suficientes clientes potenciales.</td></tr>
+                    <tr><td>No puedo cobrar más.</td><td>Necesito comunicar mejor el valor de mi propuesta.</td></tr>
+                    <tr><td>Ya hay muchas personas haciendo lo mismo.</td><td>Necesito descubrir qué me diferencia y para quién soy valiosa.</td></tr>
+                    <tr><td>No tengo recursos.</td><td>¿Qué recursos tengo hoy y cuáles puedo desarrollar?</td></tr>
+                    <tr><td>No estoy preparada.</td><td>Puedo prepararme mientras avanzo.</td></tr>
+                </tbody>
+            </table>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>🔄</span> Ejercicio 4: Mi nuevo diálogo interno</div>
+                <div class="exercise-guide">Elegí tres pensamientos que hoy te limitan y escribí una interpretación alternativa creíble que te permita actuar:</div>
+                <table class="matrix-table" style="margin-bottom:0;">
+                    <thead><tr><th class="th-coral" style="width:45%;">Pensamiento que hoy me limita</th><th class="th-gold">Interpretación alternativa creíble y funcional</th></tr></thead>
+                    <tbody>
+                        <tr><td><textarea class="fill-cell" id="m4_c1"></textarea></td><td><textarea class="fill-cell" id="m4_r1"></textarea></td></tr>
+                        <tr><td><textarea class="fill-cell" id="m4_c2"></textarea></td><td><textarea class="fill-cell" id="m4_r2"></textarea></td></tr>
+                        <tr><td><textarea class="fill-cell" id="m4_c3"></textarea></td><td><textarea class="fill-cell" id="m4_r3"></textarea></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- MOVIMIENTO 5: RECONOCER -->
+        <section class="section-block">
+            <div class="section-tag">PROCESO MENTE PRÓSPERA · MOVIMIENTO 5 (MIRADA HOLÍSTICA Y CONSCIENCIA)</div>
+            <h2 class="section-heading">Movimiento 5 · RECONOCER: entrenar la percepción de suficiencia</h2>
+            <p class="section-desc">
+                Desde una mirada holística integramos cuerpo, emociones, pensamientos, relaciones y entorno para reconocer, agradecer y valorar los recursos que ya existen hoy.
+            </p>
+
+            <div class="exercise-card gold">
+                <div class="exercise-title"><span>💎</span> Ejercicio 5: Mi inventario de recursos</div>
+                <table class="matrix-table" style="margin-bottom:1rem;">
+                    <thead><tr><th class="th-grey" style="width:34%;">Dimensión</th><th class="th-gold">Ejercicio: Mi inventario de recursos</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>1. Conocimientos</strong> (¿Qué sé hacer?)</td><td><textarea class="fill-cell" id="m5_d1"></textarea></td></tr>
+                        <tr><td><strong>2. Experiencia</strong> (¿Qué aprendí a lo largo de mi vida?)</td><td><textarea class="fill-cell" id="m5_d2"></textarea></td></tr>
+                        <tr><td><strong>3. Relaciones</strong> (¿Quiénes pueden conectarme con oportunidades?)</td><td><textarea class="fill-cell" id="m5_d3"></textarea></td></tr>
+                        <tr><td><strong>4. Capacidades</strong> (¿Qué problemas o situaciones sé resolver?)</td><td><textarea class="fill-cell" id="m5_d4"></textarea></td></tr>
+                        <tr><td><strong>5. Recursos materiales</strong> (¿Qué herramientas tengo hoy disponibles?)</td><td><textarea class="fill-cell" id="m5_d5"></textarea></td></tr>
+                        <tr><td><strong>6. Oportunidades</strong> (¿Qué posibilidades todavía no exploré?)</td><td><textarea class="fill-cell" id="m5_d6"></textarea></td></tr>
+                    </tbody>
+                </table>
+
+                <label class="field-label">Pregunta poderosa: Si dejara de mirar solamente lo que me falta, ¿qué podría empezar a construir con lo que ya tengo?</label>
+                <textarea class="fill-textarea short" id="m5_q_poderosa"></textarea>
+            </div>
+        </section>
+
+        <!-- MOVIMIENTO 6: CREAR -->
+        <section class="section-block">
+            <div class="section-tag">PROCESO MENTE PRÓSPERA · MOVIMIENTO 6 (CREATIVIDAD Y MENTALIDAD EMPRESARIAL)</div>
+            <h2 class="section-heading">Movimiento 6 · CREAR: pasar de la escasez a las posibilidades</h2>
+            <p class="section-desc">
+                La mente carente se concentra en lo que no tiene; la mente creadora se pregunta qué puede hacer con lo que tiene, desarrollando tres capacidades: <strong>A. Pensamiento de posibilidades</strong>, <strong>B. Creatividad aplicada</strong> y <strong>C. Mentalidad de aprendizaje</strong>.
+            </p>
+
+            <div class="exercise-card emerald">
+                <div class="exercise-title"><span>🚀</span> Ejercicio 6: De lo que me falta a lo que puedo crear</div>
+                <div class="exercise-guide">Ejemplo: «No tengo dinero para alquilar un consultorio» → «¿Qué otros formatos puedo desarrollar para ofrecer mi servicio?» (encuentros online, programas grupales, talleres). No confundas una limitación con la inexistencia de posibilidades.</div>
+
+                <label class="field-label">La limitación que hoy veo en mi negocio o proyecto es:</label>
+                <textarea class="fill-textarea short" id="m6_q1"></textarea>
+
+                <label class="field-label">Mi pregunta creadora («¿Qué otros formatos, canales o propuestas puedo desarrollar con lo que hoy tengo?»):</label>
+                <textarea class="fill-textarea short" id="m6_q2"></textarea>
+
+                <label class="field-label">Tres alternativas o pruebas a pequeña escala que puedo explorar:</label>
+                <textarea class="fill-textarea short" id="m6_q3"></textarea>
+            </div>
+        </section>
+
+        <!-- MOVIMIENTO 7: ACTUAR -->
+        <section class="section-block">
+            <div class="section-tag">PROCESO MENTE PRÓSPERA · MOVIMIENTO 7 (ACCIÓN Y LIDERAZGO)</div>
+            <h2 class="section-heading">Movimiento 7 · ACTUAR: construir evidencia de mi nueva identidad</h2>
+            <p class="section-desc">
+                Las creencias no cambian solamente por pensar diferente: la nueva mentalidad necesita experiencias que la respalden.
+            </p>
+
+            <div class="exercise-card coral">
+                <div class="exercise-title"><span>⚡</span> Ejercicio 7: Mi acción de suficiencia y registro de evidencia (5 pasos)</div>
+                <div class="exercise-guide">Elegí tu acción de suficiencia (enviar una propuesta comercial, contactar a un potencial cliente, revisar tus precios, publicar una oferta clara, pedir una recomendación, poner un límite donde antes regalabas tu trabajo o investigar un nuevo mercado):</div>
+
+                <label class="field-label">1. ¿Qué temía que sucediera?</label>
+                <textarea class="fill-textarea short" id="m7_q1"></textarea>
+
+                <label class="field-label">2. ¿Qué hice concretamente?</label>
+                <textarea class="fill-textarea short" id="m7_q2"></textarea>
+
+                <label class="field-label">3. ¿Qué sucedió realmente?</label>
+                <textarea class="fill-textarea short" id="m7_q3"></textarea>
+
+                <label class="field-label">4. ¿Qué aprendí de la experiencia?</label>
+                <textarea class="fill-textarea short" id="m7_q4"></textarea>
+
+                <label class="field-label">5. ¿Qué haré diferente la próxima vez?</label>
+                <textarea class="fill-textarea short" id="m7_q5"></textarea>
+            </div>
+        </section>
+
+        <!-- SECCIÓN FINAL: RITUAL DIARIO DE 15 MINUTOS Y EVALUACION -->
+        <section class="section-block">
+            <div class="section-tag">PRÁCTICA DIARIA · 15 MINUTOS DE AUTOLIDERAZGO</div>
+            <h2 class="section-heading">Ritual diario: de la carencia a la creación + Evaluación</h2>
+            <p class="section-desc">
+                <strong>Principio Modo Líder:</strong> Primero te liderás. Después liderás tu negocio.
+            </p>
+
+            <div class="step-row">
+                <div class="step-label">2' Me detengo<small>Cuerpo y respiración</small></div>
+                <div style="font-size:0.87rem; color:#334155; padding-top:0.25rem;">Respiro, apoyo los pies en el suelo y observo mi estado corporal.</div>
+            </div>
+            <div class="step-row">
+                <div class="step-label">3' Me observo<small>Mente y emoción</small></div>
+                <div style="font-size:0.87rem; color:#334155; padding-top:0.25rem;">¿Qué estoy pensando y sintiendo hoy frente a mi vida y mi negocio?</div>
+            </div>
+            <div class="step-row">
+                <div class="step-label">3' Reconozco<small>Suficiencia</small></div>
+                <div style="font-size:0.87rem; color:#334155; padding-top:0.25rem;">¿Qué tengo, qué sé, qué puedo y con quién cuento hoy?</div>
+            </div>
+            <div class="step-row">
+                <div class="step-label">3' Reencuadro<small>Nueva lectura</small></div>
+                <div style="font-size:0.87rem; color:#334155; padding-top:0.25rem;">¿Qué otra manera más funcional tengo de interpretar esta situación?</div>
+            </div>
+            <div class="step-row">
+                <div class="step-label">4' Me comprometo<small>Acción del día</small></div>
+                <div style="font-size:0.87rem; color:#334155; padding-top:0.25rem;">¿Qué acción concreta voy a realizar hoy para construir lo que deseo?</div>
+            </div>
+
+            <div class="exercise-card gold" style="margin-top:1.4rem;">
+                <div class="exercise-title"><span>📊</span> Mi evaluación de mentalidad próspera (1 = casi nunca · 5 = casi siempre)</div>
+                <div class="exercise-guide">Herramienta de autoobservación para comparar tu punto de partida y tu evolución a lo largo del entrenamiento:</div>
+
+                <table class="matrix-table" style="margin-bottom:1rem;">
+                    <thead><tr><th class="th-grey">#</th><th class="th-gold">Afirmación</th><th class="th-grey" style="width:22%;">Puntaje (1 a 5)</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td>Reconozco cuándo estoy pensando desde la carencia.</td><td><select class="score-select" id="ev_1" onchange="calcScore()"><option value="3">3 / 5</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></td></tr>
+                        <tr><td>2</td><td>Puedo regularme antes de tomar decisiones por miedo.</td><td><select class="score-select" id="ev_2" onchange="calcScore()"><option value="3">3 / 5</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></td></tr>
+                        <tr><td>3</td><td>Puedo diferenciar hechos de interpretaciones.</td><td><select class="score-select" id="ev_3" onchange="calcScore()"><option value="3">3 / 5</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></td></tr>
+                        <tr><td>4</td><td>Reconozco mis conocimientos, capacidades y recursos.</td><td><select class="score-select" id="ev_4" onchange="calcScore()"><option value="3">3 / 5</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></td></tr>
+                        <tr><td>5</td><td>Puedo identificar oportunidades que antes no veía.</td><td><select class="score-select" id="ev_5" onchange="calcScore()"><option value="3">3 / 5</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></td></tr>
+                        <tr><td>6</td><td>Me permito recibir, cobrar y poner límites.</td><td><select class="score-select" id="ev_6" onchange="calcScore()"><option value="3">3 / 5</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></td></tr>
+                        <tr><td>7</td><td>Tomo acciones concretas aunque sienta incertidumbre.</td><td><select class="score-select" id="ev_7" onchange="calcScore()"><option value="3">3 / 5</option><option value="1">1 / 5</option><option value="2">2 / 5</option><option value="4">4 / 5</option><option value="5">5 / 5</option></select></td></tr>
+                    </tbody>
+                </table>
+                <div style="text-align:right; font-weight:900; font-size:1.05rem; color:var(--color-primary);">
+                    Mi resultado actual: <span id="score_total" style="color:var(--color-gold-dark);">21</span> / 35
+                </div>
+            </div>
+
+            <div class="quote-banner" style="text-align:center; margin-bottom:0;">
+                <strong>Tu poder personal comienza hoy:</strong> «Tu poder personal comienza cuando dejás de creer que todo lo que pensás es necesariamente verdad. No sos tus miedos, ni tus experiencias pasadas, ni tus errores, ni tus limitaciones actuales. Sos una mujer que puede aprender a observarse, regularse, comprenderse, reconocer sus recursos y tomar decisiones diferentes.»
+            </div>
+        </section>
+
+        <footer class="workbook-footer">
+            <div class="footer-logo">MÉTODO MODO LÍDER <span>®</span></div>
+            <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1.2rem;">Curso Emprender de Cero a Impacto y Ventas • Clase 7 · Proceso Mente Próspera</p>
+            <p style="font-size: 0.76rem; color: #64748B;">Lic. Romina Lorena Montiel • Todos los derechos reservados.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function calcScore() {
+            let sum = 0;
+            for (let i = 1; i <= 7; i++) {
+                const el = document.getElementById('ev_' + i);
+                if (el) sum += parseInt(el.value || '3', 10);
+            }
+            const out = document.getElementById('score_total');
+            if (out) out.innerText = sum;
+        }
+
+        function saveData() {
+            const inputs = document.querySelectorAll('input, textarea, select');
+            const data = {};
+            inputs.forEach(el => {
+                if (!el.id) return;
+                data[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
+            });
+            localStorage.setItem('wb_modo_lider_clase7_mente_prospera_v2', JSON.stringify(data));
+            alert('¡Avance guardado exitosamente!');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('wb_modo_lider_clase7_mente_prospera_v2');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    for (const id in data) {
+                        const el = document.getElementById(id);
+                        if (!el) continue;
+                        if (el.type === 'checkbox') el.checked = !!data[id];
+                        else el.value = data[id];
+                    }
+                } catch(e) {}
+            }
+            calcScore();
+        });
+    </script>
+</body>
+</html>
