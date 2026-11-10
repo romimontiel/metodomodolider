@@ -48,8 +48,8 @@ export default function HistoriaPage() {
     {
       year: "2023 - 2025",
       flag: "🤝",
-      title: "Mentoría 1 a 1 y Consolidación de un Método Propio",
-      desc: "Acompañamiento privado e intensivo en sesiones individuales a personas adultas, niños y adolescentes en procesos complejos con éxito en todos los casos, sentando las bases clínicas y prácticas de mi metodología."
+      title: "Mentoría 1 a 1 y Consolidación de mi Método Propio",
+      desc: "Consolidé mi método propio acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos de ansiedad complejos, con éxito en todos los casos. Durante esos años también comencé a trabajar con éxito con empresarios, emprendedores y profesionales en procesos de acompañamiento vinculados a avanzar en sus negocios o alcanzar logros puntuales en sus carreras profesionales."
     },
     {
       year: "Marzo 2025",
@@ -223,7 +223,7 @@ export default function HistoriaPage() {
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
-                Entre <strong style={{ color: "#0F172A" }}>2023 y 2025</strong> consolidé mi <strong style={{ color: "#0F172A" }}>método propio</strong> acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos complejos, con éxito en todos los casos.
+                Entre <strong style={{ color: "#0F172A" }}>2023 y 2025</strong> consolidé mi <strong style={{ color: "#0F172A" }}>método propio</strong> acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en <strong style={{ color: "#0F172A" }}>procesos de ansiedad complejos</strong>, con éxito en todos los casos. Durante esos años también comencé a trabajar con éxito con <strong style={{ color: "#0F172A" }}>empresarios, emprendedores y profesionales</strong> en procesos de acompañamiento vinculados a avanzar en sus negocios o alcanzar logros puntuales en sus carreras profesionales.
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
