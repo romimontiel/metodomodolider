@@ -9,6 +9,14 @@ export default function Libro() {
       cta: "Comprar en Tinta Libre"
     },
     {
+      country: "📍 España & Europa • Digital",
+      name: "La Casa del Libro (España)",
+      format: "E-book Digital (Formato ePub) • España y Europa",
+      url: "https://www.casadellibro.com/?srsltid=AYCX9vLJtZp56nomPDXU_kpAjfvDxwGGL7UV1319ORwN1_yzRLYgew6D&query=ROMINA%20LORENA%20MONTIEL",
+      primary: true,
+      cta: "Comprar en La Casa del Libro"
+    },
+    {
       country: "📍 Argentina • Digital",
       name: "Yenny - El Ateneo (Ebooks)",
       format: "E-book Digital (Formato ePub • Lectura inmediata)",

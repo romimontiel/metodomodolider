@@ -121,6 +121,7 @@ export default function RootLayout({ children }) {
           "A través de una combinación única de neurociencia, psicología, coaching, narración de historias y técnicas prácticas de autoconocimiento, este libro brinda una guía paso a paso para ayudarte a descubrir tu verdadero valor personal, reconectar contigo mismo y encender la chispa del amor propio que reside en ti.",
         sameAs: [
           "https://www.tintalibre.com.ar/book/2198/Primero_%C3%A1mate",
+          "https://www.casadellibro.com/?srsltid=AYCX9vLJtZp56nomPDXU_kpAjfvDxwGGL7UV1319ORwN1_yzRLYgew6D&query=ROMINA%20LORENA%20MONTIEL",
           "https://ebooks.yenny-elateneo.com/library/publication/primero-amate",
           "https://ebooks.sbs.com.ar/library/publication/primero-amate",
           "https://www.mercadolibre.com.ar/tt-lbr--primero-amate/up/MLAU3551926505",
