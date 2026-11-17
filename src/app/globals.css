@@ -138,16 +138,16 @@
             filter: brightness(1.1);
         }
 
-        /* --- HERO SECTION NATIVA INTEGRADA (FONDO BLANCO EDITORIAL) --- */
+        /* --- HERO SECTION NATIVA INTEGRADA (FONDO CREMA EDITORIAL) --- */
         .hero-section {
             position: relative;
             min-height: auto;
             display: flex;
             align-items: flex-end;
             padding: 3.5rem 2rem 0 2rem;
-            background: #FFFFFF;
+            background: #FAF6F0;
             overflow: hidden;
-            border-bottom: 2px solid #E2E8F0;
+            border-bottom: 2px solid #EAE3D2;
         }
 
         /* Ambient Glow & Decorative Arcs */
@@ -689,10 +689,10 @@
             font-weight: 700;
         }
 
-        /* --- SECCIÓN EL MÉTODO (3 PILARES - FONDO BLANCO PURO) --- */
+        /* --- SECCIÓN EL MÉTODO (3 PILARES - FONDO CREMA EDITORIAL) --- */
         .metodo-section {
             padding: 7rem 2rem;
-            background: #FFFFFF;
+            background: #FAF6F0;
             position: relative;
             border-top: 1.5px solid #E5D9C3;
             border-bottom: 1.5px solid #E5D9C3;
@@ -852,10 +852,10 @@
             line-height: 1.6;
         }
 
-        /* --- SECCIÓN LIBRO PRIMERO ÁMATE (FONDO BLANCO PURO) --- */
+        /* --- SECCIÓN LIBRO PRIMERO ÁMATE (FONDO CREMA EDITORIAL) --- */
         .libro-section {
             padding: 7rem 2rem;
-            background: #FFFFFF;
+            background: #FAF6F0;
             border-bottom: 1.5px solid #E5D9C3;
             position: relative;
             color: #1E150F;

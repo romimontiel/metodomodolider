@@ -15,7 +15,7 @@ export default function LibroPrimeroAmatePage() {
   return (
     <>
       <Navbar />
-      <main style={{ minHeight: "100vh", background: "#FFFFFF", paddingTop: "1.5rem" }}>
+      <main style={{ minHeight: "100vh", background: "#FAF6F0", paddingTop: "1.5rem" }}>
         <Libro />
         <CtaLibroFirmado />
       </main>

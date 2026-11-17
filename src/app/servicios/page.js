@@ -10,7 +10,6 @@ export const metadata = {
 export default function ServiciosPage() {
   const whatsappBase = "https://wa.me/543794322272";
   
-  // Enlaces configurados producto por producto (listos para vincular también con links directos de Mercado Pago y Google Forms)
   const link3Dias = `${whatsappBase}?text=${encodeURIComponent("Hola Romina, quiero inscribirme al entrenamiento 'Tres Días para Transformar tu Negocio' (100 USD). ¿Me pasás el enlace de Mercado Pago?")}`;
   const linkCurso150 = `${whatsappBase}?text=${encodeURIComponent("Hola Romina, quiero inscribirme al Curso 'Emprender de Cero a Impacto y Ventas' — Modalidad Campus 2 meses (150 USD). ¿Me pasás el link de pago?")}`;
   const linkCurso250 = `${whatsappBase}?text=${encodeURIComponent("Hola Romina, quiero inscribirme al Curso 'Emprender de Cero a Impacto y Ventas' — Modalidad VIP 2 meses + 1 Hora de Mentoría 1 a 1 (250 USD). ¿Me pasás el link de pago?")}`;
@@ -26,13 +25,14 @@ export default function ServiciosPage() {
     <>
       <Navbar />
 
-      <main style={{ minHeight: "100vh", paddingBottom: "6rem", background: "radial-gradient(circle at 50% 8%, rgba(212, 175, 55, 0.09) 0%, rgba(9, 10, 15, 1) 65%)" }}>
+      <main style={{ minHeight: "100vh", paddingBottom: "6rem", background: "#FAF6F0", color: "#0F172A" }}>
         
         {/* ================= HEADER HERO ================= */}
         <section style={{
           padding: "4.8rem 1.5rem 3.5rem 1.5rem",
           textAlign: "center",
-          borderBottom: "1px solid rgba(212, 175, 55, 0.2)",
+          borderBottom: "1.5px solid #EAE3D2",
+          background: "#FAF6F0",
           position: "relative"
         }}>
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
@@ -41,15 +41,16 @@ export default function ServiciosPage() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              color: "#ECC369",
+              color: "#8A6405",
               textDecoration: "none",
               fontSize: "0.9rem",
-              fontWeight: "700",
+              fontWeight: "750",
               marginBottom: "1.5rem",
-              background: "rgba(212, 175, 55, 0.1)",
+              background: "#FFFFFF",
               padding: "0.45rem 1.1rem",
               borderRadius: "50px",
-              border: "1px solid rgba(212, 175, 55, 0.35)"
+              border: "1.5px solid #D4AF37",
+              boxShadow: "0 4px 12px rgba(212, 175, 55, 0.12)"
             }}>
               ← Volver al Inicio
             </Link>
@@ -60,7 +61,7 @@ export default function ServiciosPage() {
               fontWeight: "800",
               letterSpacing: "4px",
               textTransform: "uppercase",
-              color: "#D4AF37",
+              color: "#8A6405",
               marginBottom: "0.8rem"
             }}>
               ECOSISTEMA DE FORMACIÓN &amp; MENTORÍA
@@ -69,8 +70,8 @@ export default function ServiciosPage() {
             <h1 style={{
               fontFamily: "var(--font-display)",
               fontSize: "clamp(2.2rem, 5.2vw, 3.5rem)",
-              fontWeight: "800",
-              color: "#FFFFFF",
+              fontWeight: "900",
+              color: "#0F172A",
               marginBottom: "1.2rem",
               lineHeight: 1.15
             }}>
@@ -79,12 +80,12 @@ export default function ServiciosPage() {
 
             <p style={{
               fontSize: "clamp(1.02rem, 2.3vw, 1.2rem)",
-              color: "#E2E8F0",
+              color: "#334155",
               lineHeight: 1.65,
               maxWidth: "780px",
               margin: "0 auto"
             }}>
-              Elegí el nivel de acompañamiento ideal para tu momento actual: desde recursos prácticos y entrenamientos intensivos hasta packs de especialización y mentoría privada de inmersión para <strong style={{ color: "#ECC369" }}>convertir tu talento en un negocio visible, rentable y con impacto</strong>.
+              Elegí el nivel de acompañamiento ideal para tu momento actual: desde recursos prácticos y entrenamientos intensivos hasta packs de especialización y mentoría privada de inmersión para <strong style={{ color: "#8A6405" }}>transformar tu mentalidad y crear una Marca Personal o de Negocios que cree impacto y genere ventas</strong>.
             </p>
           </div>
         </section>
@@ -93,10 +94,10 @@ export default function ServiciosPage() {
         <section style={{ maxWidth: "1220px", margin: "4rem auto 0 auto", padding: "0 1.25rem" }}>
           
           <div style={{ marginBottom: "2rem", textAlign: "left", borderLeft: "4px solid #D4AF37", paddingLeft: "1rem" }}>
-            <span style={{ color: "#ECC369", fontSize: "0.8rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", display: "block" }}>
+            <span style={{ color: "#8A6405", fontSize: "0.8rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", display: "block" }}>
               NIVEL 1 • ACTIVACIÓN Y BASES SÓLIDAS
             </span>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#FFFFFF", fontWeight: "800", margin: "0.2rem 0 0 0" }}>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#0F172A", fontWeight: "800", margin: "0.2rem 0 0 0" }}>
               Entrenamiento Intensivo &amp; Curso de Fundamentos
             </h2>
           </div>
@@ -110,13 +111,14 @@ export default function ServiciosPage() {
             
             {/* TARJETA 1: TRES DÍAS PARA TRANSFORMAR TU NEGOCIO ($100 USD) */}
             <div style={{
-              background: "linear-gradient(165deg, rgba(26, 32, 48, 0.95) 0%, rgba(14, 18, 27, 0.98) 100%)",
-              border: "2px solid rgba(212, 175, 55, 0.45)",
+              background: "#FFFFFF",
+              border: "1.5px solid #E5D9C3",
+              borderTop: "4px solid #D4AF37",
               borderRadius: "24px",
               padding: "clamp(1.8rem, 3.5vw, 2.5rem)",
               display: "flex",
               flexDirection: "column",
-              boxShadow: "0 20px 45px rgba(0,0,0,0.5), 0 0 30px rgba(212, 175, 55, 0.08)"
+              boxShadow: "0 15px 35px rgba(60, 40, 20, 0.07)"
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem", flexWrap: "wrap", gap: "0.5rem" }}>
                 <span style={{
@@ -131,7 +133,7 @@ export default function ServiciosPage() {
                 }}>
                   ENTRENAMIENTO INTENSIVO
                 </span>
-                <span style={{ color: "#ECC369", fontSize: "0.88rem", fontWeight: "750" }}>
+                <span style={{ color: "#8A6405", fontSize: "0.88rem", fontWeight: "800" }}>
                   3 Días Online
                 </span>
               </div>
@@ -139,7 +141,7 @@ export default function ServiciosPage() {
               <h3 style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "1.8rem",
-                color: "#FFFFFF",
+                color: "#0F172A",
                 fontWeight: "800",
                 marginBottom: "0.6rem",
                 lineHeight: "1.25"
@@ -151,51 +153,51 @@ export default function ServiciosPage() {
               <div style={{
                 margin: "0.6rem 0 1.4rem 0",
                 padding: "1rem 1.2rem",
-                background: "rgba(212, 175, 55, 0.08)",
+                background: "#FAF6F0",
                 borderRadius: "14px",
-                border: "1px solid rgba(212, 175, 55, 0.28)",
+                border: "1.5px solid #E5D9C3",
                 display: "flex",
                 alignItems: "baseline",
                 gap: "0.5rem",
                 flexWrap: "wrap"
               }}>
-                <span style={{ fontSize: "2.2rem", fontWeight: "900", color: "#F7E7CE", fontFamily: "var(--font-display)" }}>
+                <span style={{ fontSize: "2.2rem", fontWeight: "900", color: "#0F172A", fontFamily: "var(--font-display)" }}>
                   $100
                 </span>
-                <span style={{ fontSize: "1rem", color: "#ECC369", fontWeight: "700" }}>USD</span>
-                <span style={{ marginLeft: "auto", fontSize: "0.76rem", color: "#94A3B8", textTransform: "uppercase", letterSpacing: "1px", fontWeight: "700" }}>
+                <span style={{ fontSize: "1rem", color: "#8A6405", fontWeight: "800" }}>USD</span>
+                <span style={{ marginLeft: "auto", fontSize: "0.76rem", color: "#64748B", textTransform: "uppercase", letterSpacing: "1px", fontWeight: "800" }}>
                   Inversión Única
                 </span>
               </div>
 
-              <p style={{ color: "#CBD5E1", fontSize: "0.96rem", lineHeight: "1.65", marginBottom: "1.4rem" }}>
+              <p style={{ color: "#334155", fontSize: "0.96rem", lineHeight: "1.65", marginBottom: "1.4rem" }}>
                 El punto de partida ideal para alinear tu mente empresarial, auditar tu modelo actual y destrabar tu crecimiento en tres pasos concretos:
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", marginBottom: "2rem" }}>
-                <div style={{ padding: "0.95rem 1rem", background: "rgba(255, 255, 255, 0.03)", borderRadius: "12px", borderLeft: "3.5px solid #D4AF37" }}>
-                  <div style={{ color: "#ECC369", fontWeight: "800", fontSize: "0.82rem", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "0.2rem" }}>
+                <div style={{ padding: "0.95rem 1rem", background: "#FAF6F0", borderRadius: "12px", borderLeft: "3.5px solid #D4AF37" }}>
+                  <div style={{ color: "#8A6405", fontWeight: "800", fontSize: "0.82rem", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "0.2rem" }}>
                     Día 1 • Clase Teórica
                   </div>
-                  <div style={{ color: "#F1F5F9", fontSize: "0.92rem", lineHeight: "1.5" }}>
+                  <div style={{ color: "#1E293B", fontSize: "0.92rem", lineHeight: "1.5" }}>
                     Bases de mentalidad de autoliderazgo e inteligencia estratégica para estructurar tu negocio.
                   </div>
                 </div>
 
-                <div style={{ padding: "0.95rem 1rem", background: "rgba(255, 255, 255, 0.03)", borderRadius: "12px", borderLeft: "3.5px solid #D4AF37" }}>
-                  <div style={{ color: "#ECC369", fontWeight: "800", fontSize: "0.82rem", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "0.2rem" }}>
+                <div style={{ padding: "0.95rem 1rem", background: "#FAF6F0", borderRadius: "12px", borderLeft: "3.5px solid #D4AF37" }}>
+                  <div style={{ color: "#8A6405", fontWeight: "800", fontSize: "0.82rem", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "0.2rem" }}>
                     Día 2 • Workbook de Transformación
                   </div>
-                  <div style={{ color: "#F1F5F9", fontSize: "0.92rem", lineHeight: "1.5" }}>
+                  <div style={{ color: "#1E293B", fontSize: "0.92rem", lineHeight: "1.5" }}>
                     Completás el cuaderno de trabajo práctico aplicando cada herramienta a la realidad de tu negocio.
                   </div>
                 </div>
 
-                <div style={{ padding: "0.95rem 1rem", background: "rgba(255, 255, 255, 0.03)", borderRadius: "12px", borderLeft: "3.5px solid #D4AF37" }}>
-                  <div style={{ color: "#ECC369", fontWeight: "800", fontSize: "0.82rem", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "0.2rem" }}>
+                <div style={{ padding: "0.95rem 1rem", background: "#FAF6F0", borderRadius: "12px", borderLeft: "3.5px solid #D4AF37" }}>
+                  <div style={{ color: "#8A6405", fontWeight: "800", fontSize: "0.82rem", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "0.2rem" }}>
                     Día 3 • Coaching Grupal Online en Vivo
                   </div>
-                  <div style={{ color: "#F1F5F9", fontSize: "0.92rem", lineHeight: "1.5" }}>
+                  <div style={{ color: "#1E293B", fontSize: "0.92rem", lineHeight: "1.5" }}>
                     Tu momento en vivo para preguntar sobre lo que necesitás cambiar en tu mentalidad o en tu negocio.
                   </div>
                 </div>
@@ -218,7 +220,7 @@ export default function ServiciosPage() {
                     fontWeight: "900",
                     fontSize: "0.98rem",
                     borderRadius: "14px",
-                    boxShadow: "0 8px 20px rgba(212, 175, 55, 0.35)",
+                    boxShadow: "0 8px 20px rgba(212, 175, 55, 0.3)",
                     textAlign: "center"
                   }}
                 >
@@ -229,19 +231,20 @@ export default function ServiciosPage() {
 
             {/* TARJETA 2: CURSO EMPRENDER DE CERO A IMPACTO Y VENTAS ($150 / $250 USD) */}
             <div style={{
-              background: "linear-gradient(165deg, rgba(22, 27, 40, 0.95) 0%, rgba(12, 15, 23, 0.98) 100%)",
-              border: "2px solid rgba(212, 175, 55, 0.45)",
+              background: "#FFFFFF",
+              border: "1.5px solid #E5D9C3",
+              borderTop: "4px solid #D4AF37",
               borderRadius: "24px",
               padding: "clamp(1.8rem, 3.5vw, 2.5rem)",
               display: "flex",
               flexDirection: "column",
-              boxShadow: "0 20px 45px rgba(0,0,0,0.5), 0 0 30px rgba(212, 175, 55, 0.08)"
+              boxShadow: "0 15px 35px rgba(60, 40, 20, 0.07)"
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem", flexWrap: "wrap", gap: "0.5rem" }}>
                 <span style={{
-                  background: "rgba(212, 175, 55, 0.16)",
-                  color: "#ECC369",
-                  border: "1px solid rgba(212, 175, 55, 0.4)",
+                  background: "#FFF9E6",
+                  color: "#8A6405",
+                  border: "1.5px solid #D4AF37",
                   padding: "0.38rem 0.95rem",
                   borderRadius: "50px",
                   fontSize: "0.76rem",
@@ -251,7 +254,7 @@ export default function ServiciosPage() {
                 }}>
                   CAMPUS VIRTUAL • 8 MÓDULOS
                 </span>
-                <span style={{ color: "#ECC369", fontSize: "0.88rem", fontWeight: "750" }}>
+                <span style={{ color: "#8A6405", fontSize: "0.88rem", fontWeight: "800" }}>
                   Acceso por 2 Meses
                 </span>
               </div>
@@ -259,7 +262,7 @@ export default function ServiciosPage() {
               <h3 style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "1.8rem",
-                color: "#FFFFFF",
+                color: "#0F172A",
                 fontWeight: "800",
                 marginBottom: "0.6rem",
                 lineHeight: "1.25"
@@ -267,7 +270,7 @@ export default function ServiciosPage() {
                 Curso: Emprender de Cero a Impacto y Ventas
               </h3>
 
-              <p style={{ color: "#CBD5E1", fontSize: "0.96rem", lineHeight: "1.65", marginBottom: "1.2rem" }}>
+              <p style={{ color: "#334155", fontSize: "0.96rem", lineHeight: "1.65", marginBottom: "1.2rem" }}>
                 Construí un negocio desde las bases que te represente y genere ingresos reales. Incluye <strong>apertura completa al Campus Virtual durante 2 meses (60 días)</strong> con 8 clases grabadas y Workbooks descargables.
               </p>
 
@@ -277,19 +280,19 @@ export default function ServiciosPage() {
                 {/* Opción 1: $150 USD */}
                 <div style={{
                   padding: "1.1rem 1.2rem",
-                  background: "rgba(255, 255, 255, 0.04)",
+                  background: "#FAF6F0",
                   borderRadius: "14px",
-                  border: "1.5px solid rgba(212, 175, 55, 0.3)"
+                  border: "1.5px solid #E5D9C3"
                 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.35rem", flexWrap: "wrap", gap: "0.4rem" }}>
-                    <span style={{ color: "#FFFFFF", fontWeight: "800", fontSize: "1.02rem" }}>
+                    <span style={{ color: "#0F172A", fontWeight: "800", fontSize: "1.02rem" }}>
                       Opción 1: Modalidad Campus (2 Meses)
                     </span>
-                    <span style={{ fontSize: "1.65rem", fontWeight: "900", color: "#F7E7CE", fontFamily: "var(--font-display)" }}>
-                      $150 <small style={{ fontSize: "0.85rem", color: "#ECC369" }}>USD</small>
+                    <span style={{ fontSize: "1.65rem", fontWeight: "900", color: "#0F172A", fontFamily: "var(--font-display)" }}>
+                      $150 <small style={{ fontSize: "0.85rem", color: "#8A6405" }}>USD</small>
                     </span>
                   </div>
-                  <p style={{ color: "#CBD5E1", fontSize: "0.88rem", lineHeight: "1.5", margin: 0 }}>
+                  <p style={{ color: "#475569", fontSize: "0.88rem", lineHeight: "1.5", margin: 0 }}>
                     Acceso durante 60 días a los 8 módulos completos en video, guías de estudio y cuadernos de ejercicios prácticos.
                   </p>
                 </div>
@@ -297,20 +300,20 @@ export default function ServiciosPage() {
                 {/* Opción 2: $250 USD */}
                 <div style={{
                   padding: "1.15rem 1.2rem",
-                  background: "rgba(212, 175, 55, 0.1)",
+                  background: "#FFFDF5",
                   borderRadius: "14px",
                   border: "2px solid #D4AF37",
                   position: "relative"
                 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.35rem", flexWrap: "wrap", gap: "0.4rem" }}>
-                    <span style={{ color: "#ECC369", fontWeight: "900", fontSize: "1.02rem" }}>
+                    <span style={{ color: "#8A6405", fontWeight: "900", fontSize: "1.02rem" }}>
                       ⭐ Opción 2: Curso + 1 Hora de Mentoría 1 a 1
                     </span>
-                    <span style={{ fontSize: "1.65rem", fontWeight: "900", color: "#F7E7CE", fontFamily: "var(--font-display)" }}>
-                      $250 <small style={{ fontSize: "0.85rem", color: "#ECC369" }}>USD</small>
+                    <span style={{ fontSize: "1.65rem", fontWeight: "900", color: "#0F172A", fontFamily: "var(--font-display)" }}>
+                      $250 <small style={{ fontSize: "0.85rem", color: "#8A6405" }}>USD</small>
                     </span>
                   </div>
-                  <p style={{ color: "#F1F5F9", fontSize: "0.88rem", lineHeight: "1.5", margin: 0 }}>
+                  <p style={{ color: "#1E293B", fontSize: "0.88rem", lineHeight: "1.5", margin: 0 }}>
                     Todo el acceso al Campus por 2 meses + <strong>1 sesión privada de 1 hora con Romina</strong> para auditar tu avance (a utilizar dentro de los 2 meses de vigencia del curso).
                   </p>
                 </div>
@@ -335,7 +338,7 @@ export default function ServiciosPage() {
                     fontWeight: "900",
                     fontSize: "0.95rem",
                     borderRadius: "12px",
-                    boxShadow: "0 8px 20px rgba(212, 175, 55, 0.35)",
+                    boxShadow: "0 8px 20px rgba(212, 175, 55, 0.3)",
                     textAlign: "center"
                   }}
                 >
@@ -352,8 +355,8 @@ export default function ServiciosPage() {
                       alignItems: "center",
                       justifyContent: "center",
                       padding: "0.85rem 1rem",
-                      background: "#FFFFFF",
-                      color: "#0E121B",
+                      background: "#0F172A",
+                      color: "#FFFFFF",
                       textDecoration: "none",
                       fontWeight: "800",
                       fontSize: "0.88rem",
@@ -371,9 +374,9 @@ export default function ServiciosPage() {
                       alignItems: "center",
                       justifyContent: "center",
                       padding: "0.85rem 1rem",
-                      background: "rgba(212, 175, 55, 0.14)",
-                      border: "1.5px solid rgba(212, 175, 55, 0.5)",
-                      color: "#ECC369",
+                      background: "#FAF6F0",
+                      border: "1.5px solid #D4AF37",
+                      color: "#8A6405",
                       textDecoration: "none",
                       fontWeight: "800",
                       fontSize: "0.88rem",
@@ -395,10 +398,10 @@ export default function ServiciosPage() {
         <section style={{ maxWidth: "1220px", margin: "4.5rem auto 0 auto", padding: "0 1.25rem" }}>
           
           <div style={{ marginBottom: "2rem", textAlign: "left", borderLeft: "4px solid #D4AF37", paddingLeft: "1rem" }}>
-            <span style={{ color: "#ECC369", fontSize: "0.8rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", display: "block" }}>
+            <span style={{ color: "#8A6405", fontSize: "0.8rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", display: "block" }}>
               NIVEL 2 • PACKS DE ESPECIALIZACIÓN (4 CLASES)
             </span>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#FFFFFF", fontWeight: "800", margin: "0.2rem 0 0 0" }}>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#0F172A", fontWeight: "800", margin: "0.2rem 0 0 0" }}>
               Diferenciación, Oferta Irresistible e Inteligencia Artificial
             </h2>
           </div>
@@ -412,19 +415,20 @@ export default function ServiciosPage() {
 
             {/* TARJETA 3: POTENCIA TU MARCA PERSONAL — TU OFERTA IRRESISTIBLE ($300 USD) */}
             <div style={{
-              background: "linear-gradient(165deg, rgba(22, 27, 40, 0.95) 0%, rgba(12, 15, 23, 0.98) 100%)",
-              border: "2px solid rgba(212, 175, 55, 0.45)",
+              background: "#FFFFFF",
+              border: "1.5px solid #E5D9C3",
+              borderTop: "4px solid #D4AF37",
               borderRadius: "24px",
               padding: "clamp(1.8rem, 3.5vw, 2.5rem)",
               display: "flex",
               flexDirection: "column",
-              boxShadow: "0 20px 45px rgba(0,0,0,0.5), 0 0 30px rgba(212, 175, 55, 0.08)"
+              boxShadow: "0 15px 35px rgba(60, 40, 20, 0.07)"
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem", flexWrap: "wrap", gap: "0.5rem" }}>
                 <span style={{
-                  background: "rgba(212, 175, 55, 0.16)",
-                  color: "#ECC369",
-                  border: "1px solid rgba(212, 175, 55, 0.4)",
+                  background: "#FFF9E6",
+                  color: "#8A6405",
+                  border: "1.5px solid #D4AF37",
                   padding: "0.38rem 0.95rem",
                   borderRadius: "50px",
                   fontSize: "0.76rem",
@@ -434,7 +438,7 @@ export default function ServiciosPage() {
                 }}>
                   PACK ESTRATÉGICO • MARCA Y VENTAS
                 </span>
-                <span style={{ color: "#ECC369", fontSize: "0.88rem", fontWeight: "750" }}>
+                <span style={{ color: "#8A6405", fontSize: "0.88rem", fontWeight: "800" }}>
                   Pack de 4 Clases
                 </span>
               </div>
@@ -442,7 +446,7 @@ export default function ServiciosPage() {
               <h3 style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "1.8rem",
-                color: "#FFFFFF",
+                color: "#0F172A",
                 fontWeight: "800",
                 marginBottom: "0.6rem",
                 lineHeight: "1.25"
@@ -454,50 +458,50 @@ export default function ServiciosPage() {
               <div style={{
                 margin: "0.6rem 0 1.4rem 0",
                 padding: "1rem 1.2rem",
-                background: "rgba(212, 175, 55, 0.08)",
+                background: "#FAF6F0",
                 borderRadius: "14px",
-                border: "1px solid rgba(212, 175, 55, 0.28)",
+                border: "1.5px solid #E5D9C3",
                 display: "flex",
                 alignItems: "baseline",
                 gap: "0.5rem",
                 flexWrap: "wrap"
               }}>
-                <span style={{ fontSize: "2.2rem", fontWeight: "900", color: "#F7E7CE", fontFamily: "var(--font-display)" }}>
+                <span style={{ fontSize: "2.2rem", fontWeight: "900", color: "#0F172A", fontFamily: "var(--font-display)" }}>
                   $300
                 </span>
-                <span style={{ fontSize: "1rem", color: "#ECC369", fontWeight: "700" }}>USD</span>
-                <span style={{ marginLeft: "auto", fontSize: "0.76rem", color: "#94A3B8", textTransform: "uppercase", letterSpacing: "1px", fontWeight: "700" }}>
+                <span style={{ fontSize: "1rem", color: "#8A6405", fontWeight: "800" }}>USD</span>
+                <span style={{ marginLeft: "auto", fontSize: "0.76rem", color: "#64748B", textTransform: "uppercase", letterSpacing: "1px", fontWeight: "800" }}>
                   Pack Completo (4 Clases)
                 </span>
               </div>
 
-              <p style={{ color: "#CBD5E1", fontSize: "0.96rem", lineHeight: "1.65", marginBottom: "1.4rem" }}>
-                Un programa focalizado de <strong>4 clases</strong> para convertir tus conocimientos en una marca personal magnética con una estructura comercial que vende:
+              <p style={{ color: "#334155", fontSize: "0.96rem", lineHeight: "1.65", marginBottom: "1.4rem" }}>
+                Un programa focalizado de <strong>4 clases</strong> para convertir tus conocimientos en una marca personal o de negocios magnética con una estructura comercial que vende:
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem", marginBottom: "2rem" }}>
                 <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#D4AF37", fontSize: "1.1rem", lineHeight: 1 }}>✨</span>
-                  <div style={{ color: "#E2E8F0", fontSize: "0.93rem", lineHeight: "1.5" }}>
-                    <strong style={{ color: "#FFFFFF" }}>Clase 1 • Propuesta de Valor:</strong> Descubrí y comunicá con claridad tu diferencial único en el mercado.
+                  <span style={{ color: "#8A6405", fontSize: "1.1rem", lineHeight: 1 }}>✨</span>
+                  <div style={{ color: "#334155", fontSize: "0.93rem", lineHeight: "1.5" }}>
+                    <strong style={{ color: "#0F172A" }}>Clase 1 • Propuesta de Valor:</strong> Descubrí y comunicá con claridad tu diferencial único en el mercado.
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#D4AF37", fontSize: "1.1rem", lineHeight: 1 }}>📦</span>
-                  <div style={{ color: "#E2E8F0", fontSize: "0.93rem", lineHeight: "1.5" }}>
-                    <strong style={{ color: "#FFFFFF" }}>Clase 2 • Pack de Productos-Servicios Diferencial:</strong> Diseñá tu ecosistema de servicios rentables y escalables.
+                  <span style={{ color: "#8A6405", fontSize: "1.1rem", lineHeight: 1 }}>📦</span>
+                  <div style={{ color: "#334155", fontSize: "0.93rem", lineHeight: "1.5" }}>
+                    <strong style={{ color: "#0F172A" }}>Clase 2 • Pack de Productos-Servicios Diferencial:</strong> Diseñá tu ecosistema de servicios rentables y escalables.
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#D4AF37", fontSize: "1.1rem", lineHeight: 1 }}>🎯</span>
-                  <div style={{ color: "#E2E8F0", fontSize: "0.93rem", lineHeight: "1.5" }}>
-                    <strong style={{ color: "#FFFFFF" }}>Clase 3 • Mercado Objetivo:</strong> Identificá con precisión a tu comprador ideal dispuesto a valorar e invertir en lo que ofrecés.
+                  <span style={{ color: "#8A6405", fontSize: "1.1rem", lineHeight: 1 }}>🎯</span>
+                  <div style={{ color: "#334155", fontSize: "0.93rem", lineHeight: "1.5" }}>
+                    <strong style={{ color: "#0F172A" }}>Clase 3 • Mercado Objetivo:</strong> Identificá con precisión a tu comprador ideal dispuesto a valorar e invertir en lo que ofrecés.
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#D4AF37", fontSize: "1.1rem", lineHeight: 1 }}>💎</span>
-                  <div style={{ color: "#E2E8F0", fontSize: "0.93rem", lineHeight: "1.5" }}>
-                    <strong style={{ color: "#FFFFFF" }}>Clase 4 • Tu Oferta Irresistible:</strong> Construí la promesa, los bonos y la presentación comercial vinculada a tu negocio o profesión.
+                  <span style={{ color: "#8A6405", fontSize: "1.1rem", lineHeight: 1 }}>💎</span>
+                  <div style={{ color: "#334155", fontSize: "0.93rem", lineHeight: "1.5" }}>
+                    <strong style={{ color: "#0F172A" }}>Clase 4 • Tu Oferta Irresistible:</strong> Construí la promesa, los bonos y la presentación comercial vinculada a tu negocio o profesión.
                   </div>
                 </div>
               </div>
@@ -519,7 +523,7 @@ export default function ServiciosPage() {
                     fontWeight: "900",
                     fontSize: "0.98rem",
                     borderRadius: "14px",
-                    boxShadow: "0 8px 20px rgba(212, 175, 55, 0.35)",
+                    boxShadow: "0 8px 20px rgba(212, 175, 55, 0.3)",
                     textAlign: "center"
                   }}
                 >
@@ -530,19 +534,20 @@ export default function ServiciosPage() {
 
             {/* TARJETA 4: POTENCIA TU PRÁCTICA CON INTELIGENCIA ARTIFICIAL ($400 USD) */}
             <div style={{
-              background: "linear-gradient(165deg, rgba(22, 27, 40, 0.95) 0%, rgba(12, 15, 23, 0.98) 100%)",
-              border: "2px solid rgba(212, 175, 55, 0.45)",
+              background: "#FFFFFF",
+              border: "1.5px solid #E5D9C3",
+              borderTop: "4px solid #D4AF37",
               borderRadius: "24px",
               padding: "clamp(1.8rem, 3.5vw, 2.5rem)",
               display: "flex",
               flexDirection: "column",
-              boxShadow: "0 20px 45px rgba(0,0,0,0.5), 0 0 30px rgba(212, 175, 55, 0.08)"
+              boxShadow: "0 15px 35px rgba(60, 40, 20, 0.07)"
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem", flexWrap: "wrap", gap: "0.5rem" }}>
                 <span style={{
-                  background: "rgba(212, 175, 55, 0.16)",
-                  color: "#ECC369",
-                  border: "1px solid rgba(212, 175, 55, 0.4)",
+                  background: "#FFF9E6",
+                  color: "#8A6405",
+                  border: "1.5px solid #D4AF37",
                   padding: "0.38rem 0.95rem",
                   borderRadius: "50px",
                   fontSize: "0.76rem",
@@ -552,7 +557,7 @@ export default function ServiciosPage() {
                 }}>
                   ESPECIALIZACIÓN PARA COACHES &amp; PROFESIONALES
                 </span>
-                <span style={{ color: "#ECC369", fontSize: "0.88rem", fontWeight: "750" }}>
+                <span style={{ color: "#8A6405", fontSize: "0.88rem", fontWeight: "800" }}>
                   Pack de 4 Clases
                 </span>
               </div>
@@ -560,7 +565,7 @@ export default function ServiciosPage() {
               <h3 style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "1.8rem",
-                color: "#FFFFFF",
+                color: "#0F172A",
                 fontWeight: "800",
                 marginBottom: "0.6rem",
                 lineHeight: "1.25"
@@ -572,50 +577,50 @@ export default function ServiciosPage() {
               <div style={{
                 margin: "0.6rem 0 1.4rem 0",
                 padding: "1rem 1.2rem",
-                background: "rgba(212, 175, 55, 0.08)",
+                background: "#FAF6F0",
                 borderRadius: "14px",
-                border: "1px solid rgba(212, 175, 55, 0.28)",
+                border: "1.5px solid #E5D9C3",
                 display: "flex",
                 alignItems: "baseline",
                 gap: "0.5rem",
                 flexWrap: "wrap"
               }}>
-                <span style={{ fontSize: "2.2rem", fontWeight: "900", color: "#F7E7CE", fontFamily: "var(--font-display)" }}>
+                <span style={{ fontSize: "2.2rem", fontWeight: "900", color: "#0F172A", fontFamily: "var(--font-display)" }}>
                   $400
                 </span>
-                <span style={{ fontSize: "1rem", color: "#ECC369", fontWeight: "700" }}>USD</span>
-                <span style={{ marginLeft: "auto", fontSize: "0.76rem", color: "#94A3B8", textTransform: "uppercase", letterSpacing: "1px", fontWeight: "700" }}>
+                <span style={{ fontSize: "1rem", color: "#8A6405", fontWeight: "800" }}>USD</span>
+                <span style={{ marginLeft: "auto", fontSize: "0.76rem", color: "#64748B", textTransform: "uppercase", letterSpacing: "1px", fontWeight: "800" }}>
                   Pack Completo (4 Clases)
                 </span>
               </div>
 
-              <p style={{ color: "#CBD5E1", fontSize: "0.96rem", lineHeight: "1.65", marginBottom: "1.4rem" }}>
+              <p style={{ color: "#334155", fontSize: "0.96rem", lineHeight: "1.65", marginBottom: "1.4rem" }}>
                 Un pack de <strong>4 clases prácticas</strong> para coaches, mentores y profesionales que desean incorporar a la IA como su compañero de viaje estratégico e invaluable:
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem", marginBottom: "2rem" }}>
                 <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#D4AF37", fontSize: "1.1rem", lineHeight: 1 }}>🧠</span>
-                  <div style={{ color: "#E2E8F0", fontSize: "0.93rem", lineHeight: "1.5" }}>
-                    <strong style={{ color: "#FFFFFF" }}>Copiloto en Sesiones 1 a 1:</strong> Prepará diagnósticos previos, hipótesis de trabajo y preguntas de desbloqueo profundo para tus clientes.
+                  <span style={{ color: "#8A6405", fontSize: "1.1rem", lineHeight: 1 }}>🧠</span>
+                  <div style={{ color: "#334155", fontSize: "0.93rem", lineHeight: "1.5" }}>
+                    <strong style={{ color: "#0F172A" }}>Copiloto en Sesiones 1 a 1:</strong> Prepará diagnósticos previos, hipótesis de trabajo y preguntas de desbloqueo profundo para tus clientes.
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#D4AF37", fontSize: "1.1rem", lineHeight: 1 }}>🎪</span>
-                  <div style={{ color: "#E2E8F0", fontSize: "0.93rem", lineHeight: "1.5" }}>
-                    <strong style={{ color: "#FFFFFF" }}>Diseño de Talleres y Programas:</strong> Estructurá dinámicas grupales, workbooks y presentaciones de alto impacto en una fracción del tiempo.
+                  <span style={{ color: "#8A6405", fontSize: "1.1rem", lineHeight: 1 }}>🎪</span>
+                  <div style={{ color: "#334155", fontSize: "0.93rem", lineHeight: "1.5" }}>
+                    <strong style={{ color: "#0F172A" }}>Diseño de Talleres y Programas:</strong> Estructurá dinámicas grupales, workbooks y presentaciones de alto impacto en una fracción del tiempo.
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#D4AF37", fontSize: "1.1rem", lineHeight: 1 }}>⚙️</span>
-                  <div style={{ color: "#E2E8F0", fontSize: "0.93rem", lineHeight: "1.5" }}>
-                    <strong style={{ color: "#FFFFFF" }}>Entrenamiento de Prompts Estratégicos:</strong> Configurá a la IA con tu propio tono, marco teórico y ética profesional sin perder la calidez humana.
+                  <span style={{ color: "#8A6405", fontSize: "1.1rem", lineHeight: 1 }}>⚙️</span>
+                  <div style={{ color: "#334155", fontSize: "0.93rem", lineHeight: "1.5" }}>
+                    <strong style={{ color: "#0F172A" }}>Entrenamiento de Prompts Estratégicos:</strong> Configurá a la IA con tu propio tono, marco teórico y ética profesional sin perder la calidez humana.
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#D4AF37", fontSize: "1.1rem", lineHeight: 1 }}>🚀</span>
-                  <div style={{ color: "#E2E8F0", fontSize: "0.93rem", lineHeight: "1.5" }}>
-                    <strong style={{ color: "#FFFFFF" }}>Escalabilidad Profesional:</strong> Multiplicá tu capacidad de entrega y seguimiento personalizado con orden y eficiencia.
+                  <span style={{ color: "#8A6405", fontSize: "1.1rem", lineHeight: 1 }}>🚀</span>
+                  <div style={{ color: "#334155", fontSize: "0.93rem", lineHeight: "1.5" }}>
+                    <strong style={{ color: "#0F172A" }}>Escalabilidad Profesional:</strong> Multiplicá tu capacidad de entrega y seguimiento personalizado con orden y eficiencia.
                   </div>
                 </div>
               </div>
@@ -637,7 +642,7 @@ export default function ServiciosPage() {
                     fontWeight: "900",
                     fontSize: "0.98rem",
                     borderRadius: "14px",
-                    boxShadow: "0 8px 20px rgba(212, 175, 55, 0.35)",
+                    boxShadow: "0 8px 20px rgba(212, 175, 55, 0.3)",
                     textAlign: "center"
                   }}
                 >
@@ -653,20 +658,20 @@ export default function ServiciosPage() {
         <section style={{ maxWidth: "1220px", margin: "4.5rem auto 0 auto", padding: "0 1.25rem" }}>
           
           <div style={{ marginBottom: "2rem", textAlign: "left", borderLeft: "4px solid #D4AF37", paddingLeft: "1rem" }}>
-            <span style={{ color: "#ECC369", fontSize: "0.8rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", display: "block" }}>
+            <span style={{ color: "#8A6405", fontSize: "0.8rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", display: "block" }}>
               NIVEL 3 • ALTA DIRECCIÓN Y PERSONALIZACIÓN 1 A 1
             </span>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#FFFFFF", fontWeight: "800", margin: "0.2rem 0 0 0" }}>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#0F172A", fontWeight: "800", margin: "0.2rem 0 0 0" }}>
               Mentoría Privada de Inmersión Estratégica
             </h2>
           </div>
 
           <div style={{
-            background: "linear-gradient(165deg, rgba(32, 26, 18, 0.96) 0%, rgba(12, 11, 9, 0.99) 100%)",
+            background: "linear-gradient(165deg, #121622 0%, #090A0F 100%)",
             border: "2.5px solid #D4AF37",
             borderRadius: "28px",
             padding: "clamp(2rem, 4vw, 3.2rem)",
-            boxShadow: "0 25px 60px rgba(0,0,0,0.65), 0 0 45px rgba(212, 175, 55, 0.18)"
+            boxShadow: "0 20px 50px rgba(15, 23, 42, 0.22)"
           }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.2rem", flexWrap: "wrap", gap: "0.8rem" }}>
               <span style={{
@@ -708,9 +713,8 @@ export default function ServiciosPage() {
                   Un encuentro profundo y confidencial de <strong>3 horas de inmersión</strong> diseñado a la medida exacta de tu caso para preguntar y destrabar todo lo que necesitás para <strong>activar tu mentalidad de negocios, cambiar tus estrategias o potenciar tus productos y servicios</strong>.
                 </p>
 
-                {/* Cómo funciona el proceso */}
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: "1rem" }}>
-                  <div style={{ padding: "1.1rem", background: "rgba(255, 255, 255, 0.04)", borderRadius: "14px", border: "1px solid rgba(212, 175, 55, 0.3)" }}>
+                  <div style={{ padding: "1.1rem", background: "rgba(255, 255, 255, 0.05)", borderRadius: "14px", border: "1px solid rgba(212, 175, 55, 0.35)" }}>
                     <div style={{ color: "#ECC369", fontWeight: "800", fontSize: "0.85rem", marginBottom: "0.3rem", textTransform: "uppercase" }}>
                       1. Cuestionario Previo (Google Forms)
                     </div>
@@ -719,7 +723,7 @@ export default function ServiciosPage() {
                     </p>
                   </div>
 
-                  <div style={{ padding: "1.1rem", background: "rgba(255, 255, 255, 0.04)", borderRadius: "14px", border: "1px solid rgba(212, 175, 55, 0.3)" }}>
+                  <div style={{ padding: "1.1rem", background: "rgba(255, 255, 255, 0.05)", borderRadius: "14px", border: "1px solid rgba(212, 175, 55, 0.35)" }}>
                     <div style={{ color: "#ECC369", fontWeight: "800", fontSize: "0.85rem", marginBottom: "0.3rem", textTransform: "uppercase" }}>
                       2. Inmersión de 3 Horas 1 a 1
                     </div>
@@ -732,8 +736,8 @@ export default function ServiciosPage() {
 
               {/* Caja Derecha de Inversión y Postulación */}
               <div style={{
-                background: "rgba(14, 18, 27, 0.9)",
-                border: "1.5px solid rgba(212, 175, 55, 0.5)",
+                background: "rgba(255, 255, 255, 0.04)",
+                border: "1.5px solid rgba(212, 175, 55, 0.55)",
                 borderRadius: "20px",
                 padding: "2rem 1.8rem",
                 textAlign: "center"
@@ -744,7 +748,7 @@ export default function ServiciosPage() {
                 <div style={{ fontSize: "3rem", fontWeight: "900", color: "#F7E7CE", fontFamily: "var(--font-display)", lineHeight: 1.1, marginBottom: "0.4rem" }}>
                   $900 <span style={{ fontSize: "1.2rem", color: "#ECC369" }}>USD</span>
                 </div>
-                <p style={{ color: "#94A3B8", fontSize: "0.88rem", marginBottom: "1.6rem" }}>
+                <p style={{ color: "#CBD5E1", fontSize: "0.88rem", marginBottom: "1.6rem" }}>
                   Incluye Cuestionario Diagnóstico en Google Forms + 3 Horas de Mentoría Privada + Plan de Acción.
                 </p>
 
@@ -783,10 +787,10 @@ export default function ServiciosPage() {
         <section style={{ maxWidth: "1220px", margin: "4.5rem auto 0 auto", padding: "0 1.25rem" }}>
           
           <div style={{ marginBottom: "2rem", textAlign: "left", borderLeft: "4px solid #D4AF37", paddingLeft: "1rem" }}>
-            <span style={{ color: "#ECC369", fontSize: "0.8rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", display: "block" }}>
+            <span style={{ color: "#8A6405", fontSize: "0.8rem", fontWeight: "800", letterSpacing: "2.5px", textTransform: "uppercase", display: "block" }}>
               RECURSOS DESCARGABLES &amp; LIBROS EN PAPEL
             </span>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#FFFFFF", fontWeight: "800", margin: "0.2rem 0 0 0" }}>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", color: "#0F172A", fontWeight: "800", margin: "0.2rem 0 0 0" }}>
               📚 Biblioteca Modo Líder &amp; Obras de la Autora
             </h2>
           </div>
@@ -800,23 +804,25 @@ export default function ServiciosPage() {
 
             {/* ITEM A: RECURSOS DIGITALES < $50 USD */}
             <div style={{
-              background: "rgba(22, 27, 40, 0.9)",
-              border: "1.5px solid rgba(212, 175, 55, 0.38)",
+              background: "#FFFFFF",
+              border: "1.5px solid #E5D9C3",
+              borderTop: "4px solid #D4AF37",
               borderRadius: "22px",
               padding: "2rem 1.8rem",
               display: "flex",
-              flexDirection: "column"
+              flexDirection: "column",
+              boxShadow: "0 12px 30px rgba(60, 40, 20, 0.06)"
             }}>
-              <span style={{ color: "#ECC369", fontSize: "0.78rem", fontWeight: "800", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+              <span style={{ color: "#8A6405", fontSize: "0.78rem", fontWeight: "800", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.5rem" }}>
                 HERRAMIENTAS PRÁCTICAS ON-DEMAND
               </span>
-              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "#FFFFFF", fontWeight: "800", marginBottom: "0.8rem" }}>
+              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "#0F172A", fontWeight: "800", marginBottom: "0.8rem" }}>
                 Recursos de Mentalidad y Negocios
               </h3>
-              <div style={{ fontSize: "1.5rem", fontWeight: "900", color: "#F7E7CE", marginBottom: "1rem", fontFamily: "var(--font-display)" }}>
-                Menos de $50 <small style={{ fontSize: "0.85rem", color: "#ECC369" }}>USD</small>
+              <div style={{ fontSize: "1.5rem", fontWeight: "900", color: "#0F172A", marginBottom: "1rem", fontFamily: "var(--font-display)" }}>
+                Menos de $50 <small style={{ fontSize: "0.85rem", color: "#8A6405" }}>USD</small>
               </div>
-              <p style={{ color: "#CBD5E1", fontSize: "0.94rem", lineHeight: "1.6", marginBottom: "1.6rem", flex: 1 }}>
+              <p style={{ color: "#334155", fontSize: "0.94rem", lineHeight: "1.6", marginBottom: "1.6rem", flex: 1 }}>
                 Descargá Workbooks interactivos, guías de reprogramación mental, plantillas de finanzas y ejercicios tácticos listos para usar en tu negocio hoy mismo con acceso inmediato vía Mercado Pago.
               </p>
               <a 
@@ -828,9 +834,9 @@ export default function ServiciosPage() {
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "0.95rem 1.2rem",
-                  background: "rgba(212, 175, 55, 0.15)",
+                  background: "#FAF6F0",
                   border: "1.5px solid #D4AF37",
-                  color: "#F7E7CE",
+                  color: "#8A6405",
                   textDecoration: "none",
                   fontWeight: "800",
                   fontSize: "0.92rem",
@@ -844,23 +850,25 @@ export default function ServiciosPage() {
 
             {/* ITEM B: LIBRO PRIMERO ÁMATE (EN LIBRERÍAS Y FIRMADO) */}
             <div style={{
-              background: "rgba(22, 27, 40, 0.9)",
-              border: "1.5px solid rgba(212, 175, 55, 0.38)",
+              background: "#FFFFFF",
+              border: "1.5px solid #E5D9C3",
+              borderTop: "4px solid #D4AF37",
               borderRadius: "22px",
               padding: "2rem 1.8rem",
               display: "flex",
-              flexDirection: "column"
+              flexDirection: "column",
+              boxShadow: "0 12px 30px rgba(60, 40, 20, 0.06)"
             }}>
-              <span style={{ color: "#ECC369", fontSize: "0.78rem", fontWeight: "800", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+              <span style={{ color: "#8A6405", fontSize: "0.78rem", fontWeight: "800", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.5rem" }}>
                 BESTSELLER • TINTA LIBRE EDICIONES
               </span>
-              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "#FFFFFF", fontWeight: "800", marginBottom: "0.8rem" }}>
+              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "#0F172A", fontWeight: "800", marginBottom: "0.8rem" }}>
                 Libro «Primero Ámate»
               </h3>
-              <div style={{ fontSize: "1.15rem", fontWeight: "800", color: "#ECC369", marginBottom: "1rem" }}>
+              <div style={{ fontSize: "1.15rem", fontWeight: "800", color: "#8A6405", marginBottom: "1rem" }}>
                 Disponible en Librerías &amp; Edición Firmada
               </div>
-              <p style={{ color: "#CBD5E1", fontSize: "0.94rem", lineHeight: "1.6", marginBottom: "1.6rem", flex: 1 }}>
+              <p style={{ color: "#334155", fontSize: "0.94rem", lineHeight: "1.6", marginBottom: "1.6rem", flex: 1 }}>
                 Un viaje de autodescubrimiento y neuropsicoeducación para encender el amor propio y construir la base emocional desde la cual liderar tu vida y tu negocio. Disponible en librerías y en ejemplares firmados por Romina.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
@@ -891,11 +899,11 @@ export default function ServiciosPage() {
                     alignItems: "center",
                     justifyContent: "center",
                     padding: "0.8rem 1.2rem",
-                    background: "transparent",
-                    border: "1px solid rgba(212, 175, 55, 0.5)",
-                    color: "#ECC369",
+                    background: "#FAF6F0",
+                    border: "1.5px solid #D4AF37",
+                    color: "#8A6405",
                     textDecoration: "none",
-                    fontWeight: "750",
+                    fontWeight: "800",
                     fontSize: "0.88rem",
                     borderRadius: "12px",
                     textAlign: "center"
@@ -908,23 +916,25 @@ export default function ServiciosPage() {
 
             {/* ITEM C: NUEVO LIBRO MÉTODO MODO LÍDER ($30.000 / $31.000 ARS) */}
             <div style={{
-              background: "rgba(22, 27, 40, 0.9)",
-              border: "1.5px solid rgba(212, 175, 55, 0.38)",
+              background: "#FFFFFF",
+              border: "1.5px solid #E5D9C3",
+              borderTop: "4px solid #D4AF37",
               borderRadius: "22px",
               padding: "2rem 1.8rem",
               display: "flex",
-              flexDirection: "column"
+              flexDirection: "column",
+              boxShadow: "0 12px 30px rgba(60, 40, 20, 0.06)"
             }}>
-              <span style={{ color: "#ECC369", fontSize: "0.78rem", fontWeight: "800", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+              <span style={{ color: "#8A6405", fontSize: "0.78rem", fontWeight: "800", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.5rem" }}>
                 PRÓXIMO LANZAMIENTO EDITORIAL • EN PAPEL
               </span>
-              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "#FFFFFF", fontWeight: "800", marginBottom: "0.8rem" }}>
+              <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "1.5rem", color: "#0F172A", fontWeight: "800", marginBottom: "0.8rem" }}>
                 Nuevo Libro: «Método MODO LÍDER®»
               </h3>
-              <div style={{ fontSize: "1.45rem", fontWeight: "900", color: "#F7E7CE", marginBottom: "1rem", fontFamily: "var(--font-display)" }}>
-                ~$30.000 - $31.000 <small style={{ fontSize: "0.85rem", color: "#ECC369" }}>ARS (Edición Física)</small>
+              <div style={{ fontSize: "1.45rem", fontWeight: "900", color: "#0F172A", marginBottom: "1rem", fontFamily: "var(--font-display)" }}>
+                ~$30.000 - $31.000 <small style={{ fontSize: "0.85rem", color: "#8A6405" }}>ARS (Edición Física)</small>
               </div>
-              <p style={{ color: "#CBD5E1", fontSize: "0.94rem", lineHeight: "1.6", marginBottom: "1.6rem", flex: 1 }}>
+              <p style={{ color: "#334155", fontSize: "0.94rem", lineHeight: "1.6", marginBottom: "1.6rem", flex: 1 }}>
                 La obra integral donde vuelco más de 20 años uniendo Neurociencias, Mentalidad Empresarial e Inteligencia de Negocios para que dejes de tener un hobby caro y construyas una empresa rentable.
               </p>
               <a 
@@ -936,9 +946,9 @@ export default function ServiciosPage() {
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "0.95rem 1.2rem",
-                  background: "rgba(212, 175, 55, 0.15)",
+                  background: "#FAF6F0",
                   border: "1.5px solid #D4AF37",
-                  color: "#F7E7CE",
+                  color: "#8A6405",
                   textDecoration: "none",
                   fontWeight: "800",
                   fontSize: "0.92rem",
@@ -957,7 +967,7 @@ export default function ServiciosPage() {
         <section style={{ maxWidth: "880px", margin: "5rem auto 0 auto", padding: "0 1.25rem" }}>
           <div style={{
             background: "#FFFFFF",
-            border: "1.5px solid rgba(212, 175, 55, 0.45)",
+            border: "1.5px solid #E5D9C3",
             borderTop: "6px solid #D4AF37",
             borderRadius: "24px",
             padding: "clamp(2.2rem, 4vw, 3.2rem) clamp(1.2rem, 3vw, 2.5rem)",
@@ -965,7 +975,7 @@ export default function ServiciosPage() {
             flexDirection: "column",
             alignItems: "center",
             textAlign: "center",
-            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 25px rgba(212, 175, 55, 0.15)"
+            boxShadow: "0 20px 45px rgba(60, 40, 20, 0.08)"
           }}>
             
             <div style={{
@@ -976,7 +986,7 @@ export default function ServiciosPage() {
               border: "3.5px solid #D4AF37",
               marginBottom: "1.2rem",
               background: "#F8FAFC",
-              boxShadow: "0 8px 25px rgba(0,0,0,0.15)"
+              boxShadow: "0 8px 25px rgba(0,0,0,0.12)"
             }}>
               <img 
                 src="/romina_historia.png?v=20261117" 
@@ -1106,10 +1116,10 @@ export default function ServiciosPage() {
                     alignItems: "center",
                     gap: "0.6rem",
                     padding: "0.8rem 1.6rem",
-                    background: "#FFFFFF",
-                    border: "2px solid #000000",
+                    background: "#0F172A",
+                    border: "2px solid #0F172A",
                     borderRadius: "12px",
-                    color: "#000000",
+                    color: "#FFFFFF",
                     textDecoration: "none",
                     fontSize: "0.95rem",
                     fontWeight: "900"

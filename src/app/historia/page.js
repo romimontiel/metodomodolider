@@ -12,14 +12,14 @@ export default function HistoriaPage() {
     <>
       <Navbar />
       
-      <main style={{ minHeight: "100vh", background: "#FFFFFF", color: "#1E293B", paddingBottom: "6rem" }}>
+      <main style={{ minHeight: "100vh", background: "#FAF6F0", color: "#1E293B", paddingBottom: "6rem" }}>
         
         {/* Hero Header */}
         <section style={{
           position: "relative",
           padding: "4.5rem 2rem 4rem 2rem",
-          background: "linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)",
-          borderBottom: "1px solid #E2E8F0",
+          background: "#FAF6F0",
+          borderBottom: "1px solid #EAE3D2",
           textAlign: "center"
         }}>
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>
