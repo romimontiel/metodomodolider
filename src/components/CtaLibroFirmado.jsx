@@ -7,9 +7,10 @@ export default function CtaLibroFirmado() {
           {/* Libro Mockup 3D Centrado */}
           <div className="cta-libro-visual-center">
             <img 
-              src="/libro_3d_mockup.png" 
+              src="/libro_primero_amate_transparent.png" 
               alt="Libro Primero Ámate - Edición Especial Firmada" 
               className="cta-libro-img"
+              style={{ maxWidth: "270px", background: "transparent" }}
             />
           </div>
 

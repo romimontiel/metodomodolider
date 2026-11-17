@@ -74,18 +74,17 @@ export default function Libro() {
         
         {/* Encabezado de la Sección con el Libro Arriba */}
         <div className="libro-header">
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.6rem" }}>
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.8rem" }}>
             <img
-              src="/libro_primero_amate_top.png"
+              src="/libro_primero_amate_transparent.png"
               alt="Libro Primero Ámate - Lic. Romina Lorena Montiel"
               style={{
                 width: "100%",
-                maxWidth: "230px",
+                maxWidth: "350px",
                 height: "auto",
-                borderRadius: "14px",
-                boxShadow: "0 18px 40px rgba(30, 21, 15, 0.16)",
-                border: "2px solid #D4AF37",
-                background: "#FFFFFF"
+                background: "transparent",
+                border: "none",
+                filter: "drop-shadow(0 22px 38px rgba(30, 21, 15, 0.22))"
               }}
             />
           </div>
