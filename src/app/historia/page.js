@@ -199,7 +199,7 @@ export default function HistoriaPage() {
                 border: "1px solid #EAE3D2",
                 borderLeftWidth: "4px"
               }}>
-                &quot;No podés liderar un negocio próspero ni sostener tus metas si primero no aprendés a liderar tu propia biología y tus estados mentales.&quot;
+                &quot;No podés liderar un negocio próspero ni sostener tus metas si primero no aprendés a liderar tu propia mente y tus estados emocionales.&quot;
               </div>
 
               <h2 style={{
