@@ -724,6 +724,198 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* SECTION: BIENVENIDA Y MANIFIESTO DE COMUNIDAD INTEGRADO */
+        .welcome-manifesto-section {
+            margin-bottom: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .manifesto-header-box {
+            background: linear-gradient(135deg, #181E2C 0%, #0E121B 100%);
+            border: 1.5px solid #D4AF37;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(30, 21, 15, 0.16);
+            position: relative;
+            overflow: hidden;
+        }
+        .manifesto-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.15);
+            color: #F7E7CE;
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            padding: 0.35rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .manifesto-title {
+            font-size: 2.1rem;
+            font-weight: 900;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.8rem;
+            line-height: 1.25;
+        }
+        .manifesto-subtitle {
+            font-size: 1.05rem;
+            color: #CCD2DC;
+            max-width: 780px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .manifesto-card, .community-letter-card {
+            background: #FFFFFF;
+            border: 1.5px solid rgba(212, 175, 55, 0.45);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: 0 12px 35px rgba(180, 150, 100, 0.12);
+            position: relative;
+        }
+        .manifesto-card p {
+            color: #2D3748;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            margin-bottom: 1.1rem;
+        }
+        .manifesto-highlight-quote, .community-quote-lead {
+            border-left: 4px solid #B88E28;
+            background: #FAF7F0;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 1.4rem 0;
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: #2C2106;
+            font-style: italic;
+        }
+        .community-quote-impact {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #B88E28;
+            margin-bottom: 1.2rem;
+        }
+        .manifesto-signature-block, .community-signature-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 1.6rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(184, 142, 40, 0.3);
+        }
+        .manifesto-sig-avatar, .signature-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2.5px solid #B88E28;
+            background-color: #EDE6D6;
+        }
+        .manifesto-sig-name, .signature-details h4 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #0F141F;
+        }
+        .manifesto-sig-title, .signature-details p {
+            font-size: 0.88rem;
+            color: #555E6F;
+            font-weight: 600;
+        }
+        .signature-author-wrap {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .signature-warm-phrase {
+            font-style: italic;
+            color: #5C450A;
+            font-size: 0.95rem;
+            font-weight: 600;
+            max-width: 480px;
+            line-height: 1.6;
+            border-left: 3px solid #B88E28;
+            padding-left: 1rem;
+        }
+        .community-tag-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #FDF6E3;
+            border: 1px solid #D4AF37;
+            color: #8C660D;
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+        }
+        .btn-members-round {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, #111622 0%, #1A2234 100%);
+            color: #D4AF37;
+            border: 1.5px solid #D4AF37;
+            padding: 0.55rem 1.4rem;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        .whatsapp-community-invite-box {
+            margin-top: 2rem;
+            background: #FAF7F2;
+            border: 1.5px solid rgba(37, 211, 102, 0.45);
+            border-radius: var(--radius-md);
+            padding: 1.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .invite-content-left { flex: 1; min-width: 260px; }
+        .invite-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37, 211, 102, 0.12);
+            color: #16A34A;
+            border: 1px solid rgba(37, 211, 102, 0.35);
+            padding: 0.3rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+        }
+        .invite-title { font-size: 1.22rem; font-weight: 800; color: #0E121B; margin-bottom: 0.4rem; }
+        .invite-desc { font-size: 0.94rem; color: #4A5568; line-height: 1.6; }
+        .invite-action-right { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+        .btn-whatsapp-community {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: #25D366;
+            color: #07090E;
+            padding: 0.85rem 1.7rem;
+            border-radius: 50px;
+            font-size: 0.94rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        .invite-hint { font-size: 0.78rem; color: #718096; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -731,21 +923,133 @@
     <!-- Header Bar -->
     <header class="directory-header">
         <div class="header-inner">
-            <a href="/campus_modo_lider.html" class="btn-back-campus">
-                <span>← Volver al Campus Modo Líder</span>
-            </a>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="/" class="btn-back-campus">
+                    <span>← Volver al Inicio</span>
+                </a>
+                <a href="/campus_modo_lider.html" class="btn-back-campus" style="background: linear-gradient(135deg, #F5D372 0%, #E5B544 50%, #B88214 100%); color: #1E150F;">
+                    <span>🎓 Ir al Curso Desde Cero a Impacto</span>
+                </a>
+            </div>
 
             <div class="header-brand">
                 <div class="header-logo-badge">👑</div>
-                <div class="header-title-text">MÉTODO MODO LÍDER</div>
+                <div class="header-title-text">COMUNIDAD MODO LÍDER</div>
             </div>
         </div>
     </header>
 
     <main class="container">
 
-        <!-- Hero Section -->
-        <section class="directory-hero">
+        <!-- ================================================================= -->
+        <!-- PRIMERA PARTE INTEGRADA: BIENVENIDA AL MÉTODO & COMUNIDAD         -->
+        <!-- ================================================================= -->
+        <section class="welcome-manifesto-section" id="bienvenida-introduccion">
+
+            <!-- 1. HEADER HERO: BIENVENIDA AL MÉTODO MODO LÍDER -->
+            <div class="manifesto-header-box">
+                <span class="manifesto-tag">✨ BIENVENIDA E INTRODUCCIÓN</span>
+                <h2 class="manifesto-title">Bienvenida al Método MODO LÍDER</h2>
+                <p class="manifesto-subtitle">
+                    Mensaje oficial y guía de primeros pasos para transformar tu negocio desde el autoliderazgo consciente.
+                </p>
+            </div>
+
+            <!-- 2. CARD: BIENVENIDA & FIRMA OFICIAL -->
+            <div class="manifesto-card">
+                <p>
+                    ¡Qué emoción darte la bienvenida a este espacio! Si estás aquí es porque tomaste una decisión que pocas personas se animan a tomar: <strong>asumir el liderazgo total de tu vida y de tu emprendimiento.</strong>
+                </p>
+                <p>
+                    No viniste a coleccionar teoría. Viniste a construir un negocio con alma que te dé libertad financiera y paz mental. En este camino vamos a derrumbar mitos: no vamos a romantizar el emprender, pero tampoco vamos a resignar tu bienestar.
+                </p>
+                <div class="manifesto-highlight-quote">
+                    "Liderar tu negocio empieza por aprender a liderarte a ti misma."
+                </div>
+
+                <div class="manifesto-signature-block">
+                    <div class="signature-author-wrap">
+                        <img src="/romina-transparente.png" alt="Lic. Romina Lorena Montiel" class="manifesto-sig-avatar" onerror="this.src='/romina.png'">
+                        <div>
+                            <div class="manifesto-sig-name">Lic. Romina Lorena Montiel</div>
+                            <div class="manifesto-sig-title">Licenciada en Administración • Neuropsicoeducadora • Mentora</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. CARD: BIENVENIDA A LA COMUNIDAD DE EMPRENDEDORAS CONSCIENTES -->
+            <div class="community-letter-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.2rem;">
+                    <span class="community-tag-badge">👑 COMUNIDAD EXCLUSIVA</span>
+                    <a href="#directorio-miembros" class="btn-members-round">
+                        <span>👥 Ver Miembros Activos ↓</span>
+                    </a>
+                </div>
+                <h2 style="font-size: 1.65rem; font-weight: 900; color: #0E121B; margin-bottom: 1.3rem;">
+                    Bienvenida a la Comunidad de Emprendedoras Conscientes
+                </h2>
+
+                <div class="community-quote-lead">
+                    &ldquo;Podemos ser emprendedoras. Pero mientras exploramos nuestros productos o servicios, también podemos entrenarnos en una mentalidad de empresaria.&rdquo;
+                </div>
+
+                <div class="community-quote-impact">
+                    Y eso lo cambia todo.
+                </div>
+
+                <p style="font-size: 1.02rem; color: #2D3748; line-height: 1.8; margin-bottom: 1.2rem;">
+                    No es solo un cambio de vocabulario. Es un cambio profundo en cómo nos posicionamos frente a la vida, frente a nuestro negocio y frente a nosotras mismas. Nos sentimos diferentes — <strong style="color: #0A0D14;">porque empezamos a pensar diferente</strong>.
+                </p>
+
+                <p style="font-size: 1.02rem; color: #2D3748; line-height: 1.8; margin-bottom: 1.2rem;">
+                    Y esa mentalidad, sumada a los nuevos conocimientos que vamos incorporando en el camino, es lo que nos permite tomar mejores decisiones para nuestro emprendimiento. <strong style="color: #0A0D14;">No decisiones perfectas: decisiones conscientes.</strong>
+                </p>
+
+                <div style="background: #FDF9EE; border: 1.5px solid #D4AF37; border-radius: var(--radius-md); padding: 1.4rem 1.8rem; margin: 1.8rem 0;">
+                    <p style="font-size: 1.05rem; font-weight: 700; color: #402E05; margin: 0; line-height: 1.65;">
+                        ⚡ Por eso este no es un contenido para <em>&ldquo;algún día, cuando seas empresaria&rdquo;</em>. Es para hoy, mientras todavía estás construyendo — porque la mentalidad se entrena antes de que el negocio esté &ldquo;listo&rdquo;, no después.
+                    </p>
+                </div>
+
+                <div class="community-signature-block">
+                    <div class="signature-author-wrap">
+                        <img src="/romina-transparente.png" alt="Lic. Romina Lorena Montiel" class="signature-avatar" onerror="this.src='/romina.png'">
+                        <div class="signature-details">
+                            <h4>Lic. Romina Lorena Montiel</h4>
+                            <p>Mentora de Mentes y Negocios • Creadora del Método MODO LÍDER</p>
+                        </div>
+                    </div>
+
+                    <div class="signature-warm-phrase">
+                        &ldquo;Te abrazo y te deseo una hermosa jornada y mucho éxito en este camino que hoy comenzamos a transitar juntas.&rdquo;
+                    </div>
+                </div>
+            
+                <!-- BANNER DE ACCESO E INVITACIÓN A LA COMUNIDAD DE WHATSAPP -->
+                <div class="whatsapp-community-invite-box">
+                    <div class="invite-content-left">
+                        <div class="invite-badge">
+                            <span>💬 GRUPO OFICIAL DE WHATSAPP</span>
+                        </div>
+                        <h3 class="invite-title">Comunidad de Emprendedoras Conscientes</h3>
+                        <p class="invite-desc">
+                            Este es nuestro vínculo directo de acompañamiento y movimiento grupal. <strong>¡Sumate y también invitá a otras emprendedoras</strong> a participar y nutrirse de nuestra comunidad!
+                        </p>
+                    </div>
+                    <div class="invite-action-right">
+                        <a href="https://chat.whatsapp.com/L4UDQmtCHazAV6Q3Skqjpg?s=sh&p=a&ilr=4" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-community">
+                            <span>Unirme al Grupo de WhatsApp</span>
+                        </a>
+                        <span class="invite-hint">✨ Invitá a tus colegas y amigas emprendedoras</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Hero Section Directorio -->
+        <section class="directory-hero" id="directorio-miembros">
             <span class="hero-tag">👑 Comunidad Oficial</span>
             <h1 class="hero-title">Emprendedoras y <span>Miembros Activos</span></h1>
             <p class="hero-desc">

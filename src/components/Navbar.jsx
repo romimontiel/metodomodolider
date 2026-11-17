@@ -21,8 +21,11 @@ export default function Navbar() {
         <Link href="/servicios" className="nav-link-item nav-link-servicios">
           ✨ Productos y Servicios
         </Link>
+        <a href="/miembros_activos.html" className="nav-link-item nav-link-servicios">
+          👥 Ingresar a la Comunidad
+        </a>
         <a href="/campus_modo_lider.html" className="nav-link-item nav-link-campus">
-          🏛️ Campus Alumnas
+          🎓 Curso Desde Cero a Impacto
         </a>
       </div>
     </nav>
