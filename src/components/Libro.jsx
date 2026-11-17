@@ -97,81 +97,38 @@ export default function Libro() {
           </p>
         </div>
 
-        {/* Grilla Principal: Foto + 4 Pilares + Hitos a la Izquierda | Sinopsis Oficial a la Derecha */}
-        <div className="libro-main-grid">
+        {/* Grilla Principal: Foto Completa a la Izquierda | Sinopsis Oficial a la Derecha */}
+        <div className="libro-main-grid" style={{ alignItems: "stretch", marginBottom: "2.2rem" }}>
           
-          {/* Columna Izquierda: Foto de Romina, Los 4 Grandes Temas y Hitos */}
+          {/* Columna Izquierda: Foto Completa de Romina */}
           <div className="libro-cover-col">
-            
-            {/* Foto de Romina al lado de la Sinopsis */}
             <div style={{
               background: "#FFFFFF",
               border: "1.5px solid #E5D9C3",
               borderTop: "3.5px solid #D4AF37",
-              borderRadius: "22px",
-              padding: "0.9rem",
-              boxShadow: "0 12px 30px rgba(60, 40, 20, 0.07)"
+              borderRadius: "24px",
+              padding: "1rem",
+              boxShadow: "0 15px 35px rgba(60, 40, 20, 0.07)",
+              height: "100%",
+              display: "flex",
+              alignItems: "center"
             }}>
               <img
                 src="/romina_autora_libro.jpg"
                 alt="Lic. Romina Lorena Montiel - Autora de Primero Ámate"
                 style={{
                   width: "100%",
-                  maxHeight: "390px",
-                  objectFit: "cover",
-                  objectPosition: "center top",
+                  height: "auto",
+                  objectFit: "contain",
                   borderRadius: "16px",
                   display: "block"
                 }}
               />
             </div>
-
-            {/* Debajo de la foto: Los 4 Grandes Temas */}
-            <div className="libro-pillars-box" style={{ margin: 0 }}>
-              <h4 className="libro-pillars-title">
-                Los 4 Pilares que recorre «Primero Ámate»:
-              </h4>
-              <div className="libro-pillars-grid">
-                <div className="libro-pillar-chip">
-                  <span className="chip-num">01</span>
-                  <span>Abrazar tu Autoestima</span>
-                </div>
-                <div className="libro-pillar-chip">
-                  <span className="chip-num">02</span>
-                  <span>Alcanzar tu Paz Mental</span>
-                </div>
-                <div className="libro-pillar-chip">
-                  <span className="chip-num">03</span>
-                  <span>Equilibrar tus Emociones</span>
-                </div>
-                <div className="libro-pillar-chip">
-                  <span className="chip-num">04</span>
-                  <span>Crear Abundancia</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Luego: Feria del Libro de Corrientes 2025 y la de Buenos Aires */}
-            <div className="libro-milestones">
-              <div className="libro-milestone-item">
-                <span className="libro-milestone-icon">✍️</span>
-                <div>
-                  <strong>Feria del Libro de Corrientes Capital junto a SADE (2025)</strong>
-                  <p>Presentación y firma de ejemplares junto a la Sociedad Argentina de Escritores (SADE Corrientes).</p>
-                </div>
-              </div>
-              <div className="libro-milestone-item">
-                <span className="libro-milestone-icon">🏛️</span>
-                <div>
-                  <strong>Feria Internacional del Libro de Buenos Aires (2026)</strong>
-                  <p>Obra presente con exhibición y venta de ejemplares en el Stand de Tinta Libre Ediciones.</p>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Columna Derecha: Sinopsis Oficial */}
-          <div className="libro-content-col">
+          <div className="libro-content-col" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div className="libro-synopsis-badge">
               SINOPSIS OFICIAL DE LA OBRA
             </div>
@@ -187,12 +144,64 @@ export default function Libro() {
               <p>
                 La obra explora, con sensibilidad y claridad, los obstáculos más comunes que afectan nuestra autoestima: <strong>el perfeccionismo, la rumiación mental, los bloqueos emocionales, la ansiedad, el trauma, las heridas emocionales, la dependencia emocional y el estrés</strong>, entre otros.
               </p>
-              <p>
+              <p style={{ marginBottom: 0 }}>
                 <em>Primero ámate</em> ofrece herramientas respaldadas por la ciencia, como ejercicios de autoconocimiento, formas de autocuidado, técnicas de respiración consciente, prácticas de atención plena y meditación. Herramientas que te ayudarán a comprender y gestionar las situaciones difíciles que puedas estar atravesando.
               </p>
             </div>
           </div>
 
+        </div>
+
+        {/* Debajo de la foto y la descripción: Los 4 Pilares en UNA SOLA FILA */}
+        <div className="libro-pillars-box" style={{ marginBottom: "1.8rem" }}>
+          <h4 className="libro-pillars-title" style={{ textAlign: "center", marginBottom: "1.1rem" }}>
+            Los 4 Pilares que recorre «Primero Ámate»:
+          </h4>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: "1rem"
+          }}>
+            <div className="libro-pillar-chip" style={{ justifyContent: "center" }}>
+              <span className="chip-num">01</span>
+              <span>Abrazar tu Autoestima</span>
+            </div>
+            <div className="libro-pillar-chip" style={{ justifyContent: "center" }}>
+              <span className="chip-num">02</span>
+              <span>Alcanzar tu Paz Mental</span>
+            </div>
+            <div className="libro-pillar-chip" style={{ justifyContent: "center" }}>
+              <span className="chip-num">03</span>
+              <span>Equilibrar tus Emociones</span>
+            </div>
+            <div className="libro-pillar-chip" style={{ justifyContent: "center" }}>
+              <span className="chip-num">04</span>
+              <span>Crear Abundancia</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Debajo en UNA SOLA FILA: Feria del Libro de Corrientes 2025 y Feria de Buenos Aires 2026 */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gap: "1.4rem",
+          marginBottom: "3.5rem"
+        }}>
+          <div className="libro-milestone-item">
+            <span className="libro-milestone-icon">✍️</span>
+            <div>
+              <strong>Feria del Libro de Corrientes Capital junto a SADE (2025)</strong>
+              <p>Presentación y firma de ejemplares junto a la Sociedad Argentina de Escritores (SADE Corrientes).</p>
+            </div>
+          </div>
+          <div className="libro-milestone-item">
+            <span className="libro-milestone-icon">🏛️</span>
+            <div>
+              <strong>Feria Internacional del Libro de Buenos Aires (2026)</strong>
+              <p>Obra presente con exhibición y venta de ejemplares en el Stand de Tinta Libre Ediciones.</p>
+            </div>
+          </div>
         </div>
 
         {/* Vidriera de Librerías y Plataformas Internacionales */}
