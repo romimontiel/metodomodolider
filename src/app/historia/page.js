@@ -8,73 +8,6 @@ export const metadata = {
 };
 
 export default function HistoriaPage() {
-  const hitos = [
-    {
-      year: "2003 - 2009",
-      flag: "🇪🇸",
-      title: "Finanzas y Gestión en España",
-      desc: "Soy correntina, pero viví en España donde me desempeñé como Contable, Controller y Jefe de Finanzas durante 6 años, administrando estructuras de alta exigencia."
-    },
-    {
-      year: "2009",
-      flag: "🧠",
-      title: "El Despertar: El Descubrimiento de las Neurociencias",
-      desc: "En España conocí las Neurociencias y me cambió la vida para siempre: transformó radicalmente mi forma de trabajar y de autoliderarme. Pasé de vivir nerviosa y sobrecargada a vivir con bienestar y a entregarme desde ese equilibrio a donde sea que voy."
-    },
-    {
-      year: "2010 - 2014",
-      flag: "🇦🇷",
-      title: "Consultoría y Coaching Gerencial en Córdoba",
-      desc: "De regreso en Argentina, trabajé en Córdoba como Consultora Empresarial y Coach Gerencial para dueños de PyMEs durante 4 años, diagnosticando cuellos de botella y liderando equipos."
-    },
-    {
-      year: "2017",
-      flag: "🎓",
-      title: "Neuropsicoeducadora y Posgrado en Neurociencias",
-      desc: "Obtuve mi diploma oficial de NEUROPSICOEDUCADORA y completé mi posgrado en NEUROCIENCIAS DE LAS EMOCIONES, validando científicamente las herramientas de reprogramación mental y conductual."
-    },
-    {
-      year: "Pre-Pandemia",
-      flag: "🏫",
-      title: "Impacto en Colegios y Proyectos de Vida",
-      desc: "Recorrí colegios secundarios brindando talleres vivenciales sobre Gestión de Emociones y Construcción de Proyecto de Vida para jóvenes y educadores."
-    },
-    {
-      year: "2020 - 2022",
-      flag: "💻",
-      title: "Talleres de Educación Emocional y Mindfulness",
-      desc: "En pleno confinamiento y post-pandemia, dicté online Talleres de Educación Emocional y Mindfulness, brindando herramientas de regulación emocional, foco y calma mental a cientos de personas."
-    },
-    {
-      year: "2023 - 2025",
-      flag: "🤝",
-      title: "Mentoría 1 a 1 y Consolidación de mi Método Propio",
-      desc: "Consolidé mi método propio acompañando en sesiones privadas 1 a 1 a adultos, niños y adolescentes en procesos de ansiedad complejos, con éxito en todos los casos. Durante esos años también comencé a trabajar con éxito con empresarios, emprendedores y profesionales en procesos de acompañamiento vinculados a avanzar en sus negocios o alcanzar logros puntuales en sus carreras profesionales."
-    },
-    {
-      year: "Marzo 2025",
-      flag: "📖",
-      title: "Publicación de mi Libro \"Primero Ámate\"",
-      desc: "En marzo de 2025 presenté mi libro 'Primero Ámate', editado por Tinta Libre. Tuve el honor de presentarlo en la Feria del Libro en los escenarios de Goya y Corrientes, inspirando a cientos de personas en el autoliderazgo y amor propio."
-    },
-    {
-      year: "2026 — HOY",
-      flag: "👑",
-      title: "Integración Total: Método MODO LÍDER • De la Mentalidad a las Ventas",
-      isFullWidth: true,
-      bloque1: {
-        year: "2026",
-        title: "Integración Total: Método MODO LÍDER",
-        desc: "Nació el Método MODO LÍDER: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto."
-      },
-      bloque2: {
-        year: "HOY",
-        title: "Lo Que Hago Hoy: De la Mentalidad a las Ventas",
-        desc: "Hoy trabajo junto a empresarios y emprendedores creando sus modelos de negocio desde cero o transformando su mentalidad e instalando la Inteligencia de Negocios adecuada para que todo su impacto y propuesta de valor se traduzca en clientes y ventas reales."
-      }
-    }
-  ];
-
   return (
     <>
       <Navbar />
@@ -309,7 +242,7 @@ export default function HistoriaPage() {
               </div>
 
               <p style={{ marginBottom: "1.5rem", color: "#334155" }}>
-                En <strong style={{ color: "#0F172A" }}>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong style={{ color: "#8A6405" }}>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu negocio y/o con tu proyecto.
+                En <strong style={{ color: "#0F172A" }}>2026</strong> integré de manera definitiva toda mi trayectoria en el <strong style={{ color: "#8A6405" }}>Método MODO LÍDER</strong>: un sistema diseñado no para darte más teoría, sino para alinear tu mentalidad con tu marca, tu negocio y/o con tu proyecto profesional.
               </p>
 
               <p style={{ marginBottom: "1.5rem", color: "#8A6405", fontWeight: "750", fontSize: "1.2rem", lineHeight: "1.6" }}>
@@ -328,7 +261,7 @@ export default function HistoriaPage() {
                   🎯 MI TRABAJO Y MISIÓN HOY
                 </span>
                 <p style={{ margin: 0, fontSize: "1.08rem", lineHeight: "1.75", color: "#1E293B" }}>
-                  Hoy trabajo junto a <strong style={{ color: "#0F172A" }}>empresarios y emprendedores</strong> creando sus negocios desde cero o transformando su mentalidad e instalando la <strong style={{ color: "#8A6405" }}>Inteligencia de Negocios adecuada</strong> para que todo el impacto y valor que generan hacia el exterior se traduzca de forma contundente en <strong style={{ color: "#0F172A" }}>clientes, ventas reales y crecimiento sostenible</strong>.
+                  Hoy trabajo junto a <strong style={{ color: "#0F172A" }}>empresarios, emprendedores y profesionales</strong> creando sus negocios desde cero o transformando los que ya tienen desde dos áreas: la transformación necesaria para <strong style={{ color: "#8A6405" }}>habitar una mentalidad adecuada</strong> + el aprendizaje de la <strong style={{ color: "#8A6405" }}>inteligencia de negocios adecuada</strong> para que su marca, negocio o profesión impacte, genere valor y se traduzca en ventas.
                 </p>
               </div>
 
@@ -415,149 +348,8 @@ export default function HistoriaPage() {
 
           </div>
 
-          {/* Línea de Tiempo Visual de Hitos (Timeline) */}
-          <div style={{ marginTop: "3rem", marginBottom: "5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-              <span style={{ color: "#8A6405", fontSize: "0.85rem", fontWeight: "800", letterSpacing: "3px", textTransform: "uppercase", display: "block", marginBottom: "0.5rem" }}>
-                EL CAMINO RECORRIDO
-              </span>
-              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", color: "#0F172A", fontWeight: "900" }}>
-                Los Hitos de Mi Trayectoria
-              </h2>
-            </div>
-
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "1.5rem"
-            }}>
-              {hitos.map((hito, idx) => (
-                <div key={idx} style={{
-                  gridColumn: hito.isFullWidth ? "1 / -1" : "auto",
-                  background: "linear-gradient(145deg, #FDFBF7 0%, #F5EFE3 100%)",
-                  border: "1.5px solid #E5D9C3",
-                  borderTop: "4px solid #D4AF37",
-                  borderRadius: "16px",
-                  padding: hito.isFullWidth ? "2.2rem 2.2rem" : "1.8rem 1.6rem",
-                  boxShadow: "0 10px 25px rgba(180, 150, 100, 0.1), 0 2px 8px rgba(0,0,0,0.04)",
-                  display: "flex",
-                  flexDirection: "column",
-                  transition: "transform 0.2s, box-shadow 0.2s"
-                }}>
-                  {hito.isFullWidth ? (
-                    <div style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                      gap: "2.2rem",
-                      alignItems: "start"
-                    }}>
-                      <div>
-                        <div style={{ marginBottom: "1rem" }}>
-                          <span style={{
-                            background: "#FFF9E6",
-                            color: "#8A6405",
-                            padding: "0.35rem 0.95rem",
-                            borderRadius: "50px",
-                            fontSize: "0.82rem",
-                            fontWeight: "800",
-                            letterSpacing: "0.5px",
-                            border: "1.5px solid #EBD79E",
-                            display: "inline-block",
-                            boxShadow: "0 2px 6px rgba(138, 100, 5, 0.08)"
-                          }}>
-                            {hito.bloque1.year}
-                          </span>
-                        </div>
-                        <h3 style={{
-                          fontSize: "1.22rem",
-                          fontWeight: "800",
-                          color: "#0F172A",
-                          marginBottom: "0.75rem",
-                          lineHeight: "1.35",
-                          fontFamily: "var(--font-heading)"
-                        }}>
-                          {hito.bloque1.title}
-                        </h3>
-                        <p style={{ color: "#334155", fontSize: "0.96rem", lineHeight: "1.7", margin: 0, fontWeight: "500" }}>
-                          {hito.bloque1.desc}
-                        </p>
-                      </div>
-
-                      <div style={{
-                        borderLeft: "2px solid rgba(212, 175, 55, 0.35)",
-                        paddingLeft: "2.2rem"
-                      }}>
-                        <div style={{ marginBottom: "1rem" }}>
-                          <span style={{
-                            background: "#FFF9E6",
-                            color: "#8A6405",
-                            padding: "0.35rem 0.95rem",
-                            borderRadius: "50px",
-                            fontSize: "0.82rem",
-                            fontWeight: "800",
-                            letterSpacing: "0.5px",
-                            border: "1.5px solid #EBD79E",
-                            display: "inline-block",
-                            boxShadow: "0 2px 6px rgba(138, 100, 5, 0.08)"
-                          }}>
-                            {hito.bloque2.year}
-                          </span>
-                        </div>
-                        <h3 style={{
-                          fontSize: "1.22rem",
-                          fontWeight: "800",
-                          color: "#0F172A",
-                          marginBottom: "0.75rem",
-                          lineHeight: "1.35",
-                          fontFamily: "var(--font-heading)"
-                        }}>
-                          {hito.bloque2.title}
-                        </h3>
-                        <p style={{ color: "#334155", fontSize: "0.96rem", lineHeight: "1.7", margin: 0, fontWeight: "500" }}>
-                          {hito.bloque2.desc}
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <>
-                      <div style={{ marginBottom: "1rem" }}>
-                        <span style={{
-                          background: "#FFF9E6",
-                          color: "#8A6405",
-                          padding: "0.35rem 0.95rem",
-                          borderRadius: "50px",
-                          fontSize: "0.82rem",
-                          fontWeight: "800",
-                          letterSpacing: "0.5px",
-                          border: "1.5px solid #EBD79E",
-                          display: "inline-block",
-                          boxShadow: "0 2px 6px rgba(138, 100, 5, 0.08)"
-                        }}>
-                          {hito.year}
-                        </span>
-                      </div>
-                      <h3 style={{
-                        fontSize: "1.18rem",
-                        fontWeight: "800",
-                        color: "#0F172A",
-                        marginBottom: "0.75rem",
-                        lineHeight: "1.35",
-                        fontFamily: "var(--font-heading)"
-                      }}>
-                        {hito.title}
-                      </h3>
-                      <p style={{ color: "#334155", fontSize: "0.95rem", lineHeight: "1.65", flex: 1, fontWeight: "500" }}>
-                        {hito.desc}
-                      </p>
-                    </>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Bloque Destacado de Cierre & CTA */}
-          <div className="historia-cta-box" style={{ background: "#000000" }}>
+          <div className="historia-cta-box" style={{ background: "#000000", marginTop: "4rem" }}>
             <span style={{
               fontSize: "0.85rem",
               fontWeight: "800",
