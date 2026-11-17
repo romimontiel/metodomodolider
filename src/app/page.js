@@ -13,8 +13,8 @@ export default function Home() {
       <Hero />
       <Historia />
       <Metodo />
-      <Libro />
       <CtaFinal />
+      <Libro />
       <Footer />
     </>
   );
