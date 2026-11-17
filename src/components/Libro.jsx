@@ -72,8 +72,23 @@ export default function Libro() {
       <div id="libro-primero-amate" style={{ position: "relative", top: "-80px" }}></div>
       <div className="container">
         
-        {/* Encabezado de la Sección */}
+        {/* Encabezado de la Sección con el Libro Arriba */}
         <div className="libro-header">
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.6rem" }}>
+            <img
+              src="/libro_primero_amate_top.png"
+              alt="Libro Primero Ámate - Lic. Romina Lorena Montiel"
+              style={{
+                width: "100%",
+                maxWidth: "230px",
+                height: "auto",
+                borderRadius: "14px",
+                boxShadow: "0 18px 40px rgba(30, 21, 15, 0.16)",
+                border: "2px solid #D4AF37",
+                background: "#FFFFFF"
+              }}
+            />
+          </div>
           <span className="section-tag" style={{ color: "#8A6405" }}>
             Autora Publicada • Lic. Romina Lorena Montiel
           </span>
@@ -83,44 +98,36 @@ export default function Libro() {
           </p>
         </div>
 
-        {/* Banner Oficial al Inicio de la Presentación con Enlace Directo a Tinta Libre Ediciones */}
-        <div className="libro-hero-banner-wrap">
-          <a
-            href="https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Comprar Primero Ámate en Tinta Libre Ediciones"
-            style={{ display: "block", position: "relative", cursor: "pointer", textDecoration: "none" }}
-          >
-            <img
-              src="/banner_primero_amate.jpg"
-              alt="Banner Oficial Libro Primero Ámate - Autora Lic. Romina Lorena Montiel - Tinta Libre Ediciones"
-              className="libro-hero-banner-img"
-            />
-            {/* Hotspot interactivo sobre el botón superior de Tinta Libre Ediciones */}
-            <span
-              style={{
-                position: "absolute",
-                top: "2.8%",
-                left: "69%",
-                width: "20%",
-                height: "10%",
-                borderRadius: "30px",
-                display: "block",
-                cursor: "pointer"
-              }}
-              aria-label="Comprar en Tinta Libre Ediciones"
-            />
-          </a>
-        </div>
-
-        {/* Grilla Principal: Los 4 Pilares + Sinopsis Oficial */}
+        {/* Grilla Principal: Foto + 4 Pilares + Hitos a la Izquierda | Sinopsis Oficial a la Derecha */}
         <div className="libro-main-grid">
           
-          {/* Columna Izquierda: Los 4 Pilares, Compra y Hitos */}
+          {/* Columna Izquierda: Foto de Romina, Los 4 Grandes Temas y Hitos */}
           <div className="libro-cover-col">
             
-            {/* Los 4 Ejes de Transformación */}
+            {/* Foto de Romina al lado de la Sinopsis */}
+            <div style={{
+              background: "#FFFFFF",
+              border: "1.5px solid #E5D9C3",
+              borderTop: "3.5px solid #D4AF37",
+              borderRadius: "22px",
+              padding: "0.9rem",
+              boxShadow: "0 12px 30px rgba(60, 40, 20, 0.07)"
+            }}>
+              <img
+                src="/romina_autora_libro.jpg"
+                alt="Lic. Romina Lorena Montiel - Autora de Primero Ámate"
+                style={{
+                  width: "100%",
+                  maxHeight: "390px",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  borderRadius: "16px",
+                  display: "block"
+                }}
+              />
+            </div>
+
+            {/* Debajo de la foto: Los 4 Grandes Temas */}
             <div className="libro-pillars-box" style={{ margin: 0 }}>
               <h4 className="libro-pillars-title">
                 Los 4 Pilares que recorre «Primero Ámate»:
@@ -145,44 +152,8 @@ export default function Libro() {
               </div>
             </div>
 
-            {/* Botón Principal de Compra en Papel */}
-            <div className="libro-primary-actions">
-              <a
-                href="https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold libro-btn-main"
-              >
-                <span>📖 Comprar Ejemplar en Papel</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-
-            {/* Barra de Consulta WhatsApp */}
-            <div className="libro-whatsapp-bar">
-              <p>
-                ✨ ¿Querés consultar por un <strong>ejemplar impreso dedicado por Romina</strong> o envíos directos?
-              </p>
-              <a
-                href="https://wa.me/543794322272?text=Hola%20Romi!%20Quiero%20adquirir%20tu%20libro%20Primero%20%C3%81mate"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-story"
-              >
-                <span>Pedir por WhatsApp Directo</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-
-            {/* Hitos Literarios */}
+            {/* Luego: Feria del Libro de Corrientes 2025 y la de Buenos Aires */}
             <div className="libro-milestones">
-              <div className="libro-milestone-item">
-                <span className="libro-milestone-icon">🎤</span>
-                <div>
-                  <strong>7.° Feria del Libro de Goya (2025)</strong>
-                  <p>Presentación oficial como autora en el Escenario Principal.</p>
-                </div>
-              </div>
               <div className="libro-milestone-item">
                 <span className="libro-milestone-icon">✍️</span>
                 <div>
