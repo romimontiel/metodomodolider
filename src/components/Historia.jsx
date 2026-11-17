@@ -9,11 +9,13 @@ export default function Historia() {
           
           <div className="historia-grid">
               <div className="historia-text">
-                  <p>Durante años vi cómo profesionales brillantes y emprendedores con ideas increíbles permanecían en la sombra, no por falta de talento, visión o capacidad, sino por la ausencia de <strong>estrategias correctas que te permitan hacerte visible, generar impacto real, crecer y atraer ventas</strong>.</p>
+                  <p>Durante años observé cómo profesionales brillantes y emprendedores con ideas extraordinarias permanecían en la sombra. No porque les faltara talento, visión o capacidad, sino porque no contaban con las estrategias necesarias para <strong>transformar todo ese potencial en una propuesta de valor clara</strong>. Comprendí que tener talento no garantiza el reconocimiento, que tener buenas ideas no garantiza resultados y que trabajar muchísimo no significa necesariamente avanzar.</p>
                   
                   <div className="historia-quote-box">
                       &quot;Yo misma viví el momento en que tenía el conocimiento y la experiencia, pero me faltaba la integración entre mi mentalidad, mi marca y la inteligencia estratégica que mi negocio necesitaba para despegar.&quot;
                   </div>
+
+                  <p>Para crecer necesitás mucho más que trabajo y constancia: <strong>necesitás aprender a liderarte, comprender a tu mercado, construir una propuesta de valor que conecte y desarrollar estrategias que se comuniquen y te abran la jugada</strong> hacia aquellos que necesitan lo que vos tenés y están dispuestos a pagar por ello.</p>
 
                   <p>Fue entonces cuando decidí unir lo mejor de dos mundos: las bases biológicas de las <strong>Neurociencias</strong> en las que me especializo y me baso desde <strong>2009</strong> para desbloquear las limitaciones de la mente e integrar una mentalidad de autoliderazgo, con mi formación y experiencia en el área de <strong>Administración y Finanzas</strong> que se inicia en <strong>Valencia y Castellón, España</strong>. Mi recorrido profesional cubre ya más de <strong>20 años</strong>, y desde este lugar es que he podido crear el <strong>Método MODO LÍDER</strong>: un espacio para empresarias y profesionales que desean desarrollar sus negocios uniendo mentalidad con la <strong>Inteligencia Estratégica de Negocios</strong>, claves que impulsan tu marca personal y tu empresa desde adentro hacia afuera.</p>
                   
