@@ -31,39 +31,35 @@ export default function Hero() {
 
               <h1 className="hero-main-title">Modo Líder</h1>
 
-              <p className="hero-tagline" style={{ fontSize: "1.08rem", fontWeight: 800, color: "#8A6405", letterSpacing: "0.5px", marginBottom: "0.4rem", textTransform: "uppercase" }}>
-                  Convertí tu talento en un negocio visible, rentable y con impacto.
+              <p className="hero-tagline" style={{ fontSize: "1.05rem", fontWeight: 700, color: "#B4871E", letterSpacing: "0.5px", marginBottom: "1rem", textTransform: "uppercase" }}>
+                  Entrenate para llevar tu negocio o profesión al próximo nivel.
               </p>
-              
-              <div style={{ fontSize: "1.25rem", fontWeight: 800, color: "#0F172A", marginBottom: "1.1rem", fontFamily: "var(--font-heading)" }}>
-                  Activá tu Modo Líder.
-              </div>
 
               <p className="hero-statement">
-                  Desarrollá la mentalidad, el liderazgo y la inteligencia estratégica que necesitás para <span className="highlight">transformar tus conocimientos en una propuesta de valor diferenciadora, atraer clientes y generar ventas</span>.
+                  Con las herramientas, recursos y guía de procesos adecuados todos podemos <span className="highlight">transformar nuestra mentalidad y crear una Marca Personal o de Negocios</span> que cree impacto y generen ventas.
               </p>
 
               {/* Pilares Científicos y Estratégicos */}
-              <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", flexWrap: "wrap", marginBottom: "2rem", fontFamily: "var(--font-heading)", fontSize: "0.92rem", fontWeight: 800, letterSpacing: "1.5px", textTransform: "uppercase" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.85rem", flexWrap: "wrap", marginBottom: "2rem", fontFamily: "var(--font-heading)", fontSize: "0.95rem", fontWeight: 800, letterSpacing: "1.5px", textTransform: "uppercase" }}>
                   <span style={{ color: "#0F172A" }}>NEUROCIENCIAS</span>
                   <span style={{ color: "#B4871E", fontWeight: 700 }}>+</span>
-                  <span style={{ color: "#0F172A" }}>MENTALIDAD EMPRESARIAL</span>
+                  <span style={{ color: "#0F172A" }}>MENTALIDAD</span>
                   <span style={{ color: "#B4871E", fontWeight: 700 }}>+</span>
                   <span style={{ color: "#0F172A" }}>INTELIGENCIA DE NEGOCIOS</span>
               </div>
 
               {/* Botones de Acción Hero */}
               <div className="hero-actions">
-                  <Link href="/servicios" className="btn-gold">
-                      <span>✨ Ver Servicios &amp; Mentoría</span>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </Link>
-                  <a href="#metodo" className="btn-outline-gold">
+                  <a href="#metodo" className="btn-gold">
                       <span>Descubre el Método</span>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </a>
                   <Link href="/libroprimeroamate" className="btn-outline-gold">
                       <span>📖 Libro Primero Amate</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </Link>
+                  <Link href="/curso" className="btn-outline-gold">
+                      <span>Curso</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </Link>
                   <Link href="/historia" className="btn-story">
