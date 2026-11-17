@@ -21,7 +21,7 @@ export default function Historia() {
               </div>
 
               <div className="historia-card-portrait">
-                  <img src="/romina_historia.png" alt="Romina Lorena Montiel" style={{ background: "#FFFFFF", objectFit: "contain" }} />
+                  <img src="/romina_historia.png?v=20261117" alt="Romina Lorena Montiel" style={{ background: "#FFFFFF", objectFit: "contain" }} />
                   <div className="historia-card-caption">
                       <h4>Romina Lorena Montiel</h4>
                       <p style={{ fontSize: "0.95rem", color: "#8A6405", fontWeight: "750", margin: "0.2rem 0" }}>Lic. en Administración • Neuropsicoeducadora</p>

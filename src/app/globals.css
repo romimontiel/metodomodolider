@@ -138,18 +138,16 @@
             filter: brightness(1.1);
         }
 
-        /* --- HERO SECTION NATIVA INTEGRADA --- */
+        /* --- HERO SECTION NATIVA INTEGRADA (FONDO BLANCO EDITORIAL) --- */
         .hero-section {
             position: relative;
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
-            align-items: center;
-            padding: 4rem 2rem 5rem 2rem;
-            background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
-                        radial-gradient(circle at 90% 40%, rgba(233, 69, 96, 0.08) 0%, transparent 50%),
-                        linear-gradient(180deg, #090A0F 0%, #0E121B 100%);
+            align-items: flex-end;
+            padding: 3.5rem 2rem 0 2rem;
+            background: #FFFFFF;
             overflow: hidden;
-            border-bottom: 1px solid var(--border-gold);
+            border-bottom: 2px solid #E2E8F0;
         }
 
         /* Ambient Glow & Decorative Arcs */
@@ -159,7 +157,7 @@
             left: -100px;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(233, 182, 66, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
             filter: blur(60px);
             pointer-events: none;
             z-index: 1;
@@ -172,7 +170,7 @@
             transform: translateY(-50%);
             width: 650px;
             height: 650px;
-            opacity: 0.25;
+            opacity: 0.35;
             pointer-events: none;
             z-index: 1;
         }
@@ -183,7 +181,7 @@
             width: 100%;
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            align-items: center;
+            align-items: flex-end;
             gap: 3.5rem;
             position: relative;
             z-index: 2;
@@ -194,6 +192,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            padding-bottom: 3.5rem;
         }
 
         .hero-pretitle-wrap {
@@ -205,7 +204,7 @@
 
         .hero-line {
             width: 40px;
-            height: 1.5px;
+            height: 2px;
             background: var(--gold-gradient);
         }
 
@@ -215,9 +214,7 @@
             letter-spacing: 6px;
             text-transform: uppercase;
             font-weight: 700;
-            background: var(--gold-text-grad);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #B4871E;
         }
 
         .hero-main-title {
@@ -226,14 +223,13 @@
             font-weight: 700;
             letter-spacing: -0.5px;
             margin-bottom: 1.5rem;
-            color: #FFFFFF;
-            text-shadow: 0 4px 25px rgba(0,0,0,0.5);
+            color: #0F172A;
             line-height: 1.08;
         }
 
         .hero-statement {
             font-size: 1.35rem;
-            color: #E2E8F0;
+            color: #334155;
             line-height: 1.55;
             margin-bottom: 2rem;
             max-width: 620px;
@@ -241,11 +237,55 @@
         }
 
         .hero-statement .highlight {
-            color: #F6C85F;
+            color: #B4871E;
             font-weight: 600;
             text-decoration: underline;
-            text-decoration-color: rgba(246, 200, 95, 0.4);
+            text-decoration-color: rgba(180, 135, 30, 0.35);
             text-underline-offset: 4px;
+        }
+
+        .hero-section .btn-outline-gold {
+            background: #FFFDF5;
+            color: #8A6405;
+            border: 1.5px solid #D4AF37;
+            box-shadow: 0 4px 14px rgba(212, 175, 55, 0.15);
+        }
+        .hero-section .btn-outline-gold:hover {
+            background: #FFF7DF;
+            color: #6B4E04;
+            border-color: #B4871E;
+            transform: translateY(-2px);
+        }
+
+        .hero-section .btn-story {
+            background: #F8FAFC;
+            color: #334155;
+            border: 1.5px solid #CBD5E1;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        }
+        .hero-section .btn-story:hover {
+            background: #F1F5F9;
+            color: #0F172A;
+            border-color: #94A3B8;
+            transform: translateY(-2px);
+        }
+
+        .hero-section .hero-author-card {
+            background: #0E121B;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-left: 3.5px solid #E9B642;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+        }
+
+        .hero-section .portrait-glow {
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.10) 0%, transparent 65%);
+        }
+
+        .hero-section .portrait-img {
+            filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.08));
+            display: block;
+            margin-bottom: 0;
+            vertical-align: bottom;
         }
 
         /* Badges de Beneficios (Pill Bar) */
@@ -462,6 +502,8 @@
             justify-content: center;
             align-items: flex-end;
             height: 100%;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         .portrait-wrap {
@@ -472,6 +514,8 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         .portrait-glow {
@@ -547,9 +591,11 @@
         /* --- SECCIÓN HISTORIA REFINADA --- */
         .historia-section {
             padding: 7rem 2rem;
-            background: #FFFFFF;
+            background: #FAF6F0;
             color: var(--text-dark);
             position: relative;
+            border-top: 1px solid #EAE3D2;
+            border-bottom: 1px solid #EAE3D2;
         }
 
         .container {
@@ -593,7 +639,7 @@
         }
 
         .historia-quote-box {
-            background: #FAF8F2;
+            background: #FFFFFF;
             border-left: 4px solid #D4AF37;
             padding: 1.5rem 1.8rem;
             border-radius: 0 12px 12px 0;
@@ -601,6 +647,10 @@
             font-style: italic;
             color: #4B5563;
             font-size: 1.1rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            border-top: 1px solid #F0EAE1;
+            border-right: 1px solid #F0EAE1;
+            border-bottom: 1px solid #F0EAE1;
         }
 
         .historia-card-portrait {
@@ -852,8 +902,8 @@
 
         .libro-main-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 3.8rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.8rem;
             align-items: start;
             margin-bottom: 4.5rem;
         }
@@ -1027,12 +1077,12 @@
         }
 
         .libro-pillars-box {
-            margin: 1.8rem 0 2rem 0;
-            padding: 1.5rem 1.6rem;
+            margin: 0;
+            padding: 1.6rem 1.8rem;
             background: #FFFFFF;
             border: 1.5px solid #E5D9C3;
-            border-radius: 18px;
-            box-shadow: 0 6px 18px rgba(60, 40, 20, 0.04);
+            border-radius: 22px;
+            box-shadow: 0 6px 20px rgba(60, 40, 20, 0.04);
         }
 
         .libro-pillars-title {
@@ -1393,14 +1443,13 @@
 
         .libro-whatsapp-bar {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            padding: 1.35rem 1.8rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.1rem;
+            padding: 1.4rem 1.6rem;
             background: #FFFFFF;
             border: 1.5px solid #D4AF37;
-            border-radius: 18px;
+            border-radius: 20px;
             box-shadow: 0 6px 18px rgba(60, 40, 20, 0.05);
         }
 

@@ -79,9 +79,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="/#libro" style={{ color: "#B47C13", textDecoration: "none", fontSize: "0.95rem", fontWeight: "750", transition: "all 0.2s", display: "inline-block" }}>
-                  📖 Libro Primero Ámate
-                </a>
+                <Link href="/libroprimeroamate" style={{ color: "#B47C13", textDecoration: "none", fontSize: "0.95rem", fontWeight: "750", transition: "all 0.2s", display: "inline-block" }}>
+                  📖 Libro Primero Amate
+                </Link>
               </li>
               <li>
                 <Link href="/servicios" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>

@@ -4,7 +4,7 @@ export default function Libro() {
       country: "📍 Argentina • Editorial Oficial",
       name: "Tinta Libre Ediciones",
       format: "Libro Impreso en Papel y E-book Digital (Formato ePub)",
-      url: "https://www.tintalibre.com.ar/book/2198/Primero_%C3%A1mate",
+      url: "https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE",
       primary: true,
       cta: "Comprar en Tinta Libre"
     },
@@ -67,7 +67,8 @@ export default function Libro() {
   ];
 
   return (
-    <section className="libro-section" id="libro">
+    <section className="libro-section" id="libroprimeroamate">
+      <div id="libro" style={{ position: "relative", top: "-80px" }}></div>
       <div id="libro-primero-amate" style={{ position: "relative", top: "-80px" }}></div>
       <div className="container">
         
@@ -76,40 +77,101 @@ export default function Libro() {
           <span className="section-tag" style={{ color: "#8A6405" }}>
             Autora Publicada • Lic. Romina Lorena Montiel
           </span>
-          <h2 className="libro-title">Libro Primero Ámate</h2>
+          <h2 className="libro-title">Libro Primero Amate</h2>
           <p className="libro-subtitle">
             Una guía práctica respaldada por la neurociencia, la psicología y el coaching para descubrir tu verdadero valor personal, desbloquear tu mente y liderar tu vida desde el amor propio.
           </p>
         </div>
 
-        {/* Banner Oficial al Inicio de la Presentación */}
+        {/* Banner Oficial al Inicio de la Presentación con Enlace Directo a Tinta Libre Ediciones */}
         <div className="libro-hero-banner-wrap">
-          <img
-            src="/banner_primero_amate.jpg"
-            alt="Banner Oficial Libro Primero Ámate - Autora Lic. Romina Lorena Montiel"
-            className="libro-hero-banner-img"
-          />
+          <a
+            href="https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Comprar Primero Ámate en Tinta Libre Ediciones"
+            style={{ display: "block", position: "relative", cursor: "pointer", textDecoration: "none" }}
+          >
+            <img
+              src="/banner_primero_amate.jpg"
+              alt="Banner Oficial Libro Primero Ámate - Autora Lic. Romina Lorena Montiel - Tinta Libre Ediciones"
+              className="libro-hero-banner-img"
+            />
+            {/* Hotspot interactivo sobre el botón superior de Tinta Libre Ediciones */}
+            <span
+              style={{
+                position: "absolute",
+                top: "2.8%",
+                left: "69%",
+                width: "20%",
+                height: "10%",
+                borderRadius: "30px",
+                display: "block",
+                cursor: "pointer"
+              }}
+              aria-label="Comprar en Tinta Libre Ediciones"
+            />
+          </a>
         </div>
 
-        {/* Grilla Principal: Portada + Sinopsis Oficial */}
+        {/* Grilla Principal: Los 4 Pilares + Sinopsis Oficial */}
         <div className="libro-main-grid">
           
-          {/* Columna Izquierda: Portada del Libro e Hitos */}
+          {/* Columna Izquierda: Los 4 Pilares, Compra y Hitos */}
           <div className="libro-cover-col">
-            <div className="libro-cover-card">
-              <div className="libro-cover-glow"></div>
-              <span className="libro-editorial-badge">
-                📖 Tinta Libre Ediciones
-              </span>
-              <img
-                src="/portada_primero_amate_3d.jpg"
-                alt="Portada del libro Primero Ámate de la Lic. Romina Lorena Montiel"
-                className="libro-cover-img"
-              />
-              <div className="libro-author-caption">
-                <strong>Lic. Romina Lorena Montiel</strong>
-                <span>Edición Impresa (Papel) &amp; Formato Digital (E-book)</span>
+            
+            {/* Los 4 Ejes de Transformación */}
+            <div className="libro-pillars-box" style={{ margin: 0 }}>
+              <h4 className="libro-pillars-title">
+                Los 4 Pilares que recorre «Primero Ámate»:
+              </h4>
+              <div className="libro-pillars-grid">
+                <div className="libro-pillar-chip">
+                  <span className="chip-num">01</span>
+                  <span>Abrazar tu Autoestima</span>
+                </div>
+                <div className="libro-pillar-chip">
+                  <span className="chip-num">02</span>
+                  <span>Alcanzar tu Paz Mental</span>
+                </div>
+                <div className="libro-pillar-chip">
+                  <span className="chip-num">03</span>
+                  <span>Equilibrar tus Emociones</span>
+                </div>
+                <div className="libro-pillar-chip">
+                  <span className="chip-num">04</span>
+                  <span>Crear Abundancia</span>
+                </div>
               </div>
+            </div>
+
+            {/* Botón Principal de Compra en Papel */}
+            <div className="libro-primary-actions">
+              <a
+                href="https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold libro-btn-main"
+              >
+                <span>📖 Comprar Ejemplar en Papel</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+
+            {/* Barra de Consulta WhatsApp */}
+            <div className="libro-whatsapp-bar">
+              <p>
+                ✨ ¿Querés consultar por un <strong>ejemplar impreso dedicado por Romina</strong> o envíos directos?
+              </p>
+              <a
+                href="https://wa.me/543794322272?text=Hola%20Romi!%20Quiero%20adquirir%20tu%20libro%20Primero%20%C3%81mate"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-story"
+              >
+                <span>Pedir por WhatsApp Directo</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
             </div>
 
             {/* Hitos Literarios */}
@@ -138,7 +200,7 @@ export default function Libro() {
             </div>
           </div>
 
-          {/* Columna Derecha: Sinopsis Oficial y Los 4 Ejes */}
+          {/* Columna Derecha: Sinopsis Oficial */}
           <div className="libro-content-col">
             <div className="libro-synopsis-badge">
               SINOPSIS OFICIAL DE LA OBRA
@@ -158,59 +220,6 @@ export default function Libro() {
               <p>
                 <em>Primero ámate</em> ofrece herramientas respaldadas por la ciencia, como ejercicios de autoconocimiento, formas de autocuidado, técnicas de respiración consciente, prácticas de atención plena y meditación. Herramientas que te ayudarán a comprender y gestionar las situaciones difíciles que puedas estar atravesando.
               </p>
-            </div>
-
-            {/* Los 4 Ejes de Transformación */}
-            <div className="libro-pillars-box">
-              <h4 className="libro-pillars-title">
-                Los 4 Pilares que recorre «Primero Ámate»:
-              </h4>
-              <div className="libro-pillars-grid">
-                <div className="libro-pillar-chip">
-                  <span className="chip-num">01</span>
-                  <span>Abrazar tu Autoestima</span>
-                </div>
-                <div className="libro-pillar-chip">
-                  <span className="chip-num">02</span>
-                  <span>Alcanzar tu Paz Mental</span>
-                </div>
-                <div className="libro-pillar-chip">
-                  <span className="chip-num">03</span>
-                  <span>Equilibrar tus Emociones</span>
-                </div>
-                <div className="libro-pillar-chip">
-                  <span className="chip-num">04</span>
-                  <span>Crear Abundancia</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Botón Principal de Compra en Papel + Pedido Directo por WhatsApp */}
-            <div className="libro-primary-actions" style={{ marginBottom: "1.2rem" }}>
-              <a
-                href="https://www.tintalibre.com.ar/books/category/all/search/1/PRIMERO%20AMATE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold libro-btn-main"
-              >
-                <span>📖 Comprar Ejemplar en Papel</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-
-            <div className="libro-whatsapp-bar">
-              <p>
-                ✨ ¿Querés consultar por un <strong>ejemplar impreso dedicado por Romina</strong> o envíos directos?
-              </p>
-              <a
-                href="https://wa.me/543794322272?text=Hola%20Romi!%20Quiero%20adquirir%20tu%20libro%20Primero%20%C3%81mate"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-story"
-              >
-                <span>Pedir por WhatsApp Directo</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
             </div>
           </div>
 

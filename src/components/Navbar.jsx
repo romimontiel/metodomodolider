@@ -15,9 +15,9 @@ export default function Navbar() {
       </Link>
       
       <div className="nav-actions">
-        <a href="/#libro" className="nav-link-item nav-link-servicios">
-          📖 Libro Primero Ámate
-        </a>
+        <Link href="/libroprimeroamate" className="nav-link-item nav-link-servicios">
+          📖 Libro Primero Amate
+        </Link>
         <Link href="/servicios" className="nav-link-item nav-link-servicios">
           ✨ Servicios & Mentoría
         </Link>

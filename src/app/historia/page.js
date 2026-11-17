@@ -355,7 +355,7 @@ export default function HistoriaPage() {
                 border: "1px solid #F1F5F9"
               }}>
                 <img 
-                  src="/romina_historia.png" 
+                  src="/romina_historia.png?v=20261117" 
                   alt="Romina Lorena Montiel" 
                   style={{ width: "100%", height: "auto", display: "block", objectFit: "contain", maxHeight: "480px" }} 
                 />
@@ -618,7 +618,7 @@ export default function HistoriaPage() {
                 <span>🎓 Ver Información del Curso</span>
               </Link>
 
-              <Link href="/#libro" style={{
+              <Link href="/libroprimeroamate" style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.6rem",
@@ -631,7 +631,7 @@ export default function HistoriaPage() {
                 fontSize: "1.08rem",
                 borderRadius: "50px"
               }}>
-                <span>📖 Libro Primero Ámate</span>
+                <span>📖 Libro Primero Amate</span>
               </Link>
             </div>
           </div>
