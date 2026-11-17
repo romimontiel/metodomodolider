@@ -36,7 +36,7 @@ export default function Hero() {
               </p>
 
               <p className="hero-statement">
-                  Con las herramientas, recursos y guía de procesos adecuados todos podemos <span className="highlight">transformar nuestra mentalidad y crear una Marca Personal</span> y de negocios que cree impacto y generen ventas.
+                  Con las herramientas, recursos y guía de procesos adecuados todos podemos <span className="highlight">transformar nuestra mentalidad y crear una Marca Personal de negocios</span> que cree impacto y generen ventas.
               </p>
 
               {/* Pilares Científicos y Estratégicos */}
