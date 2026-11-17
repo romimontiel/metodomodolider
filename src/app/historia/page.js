@@ -390,24 +390,8 @@ export default function HistoriaPage() {
                 borderRadius: "50px",
                 boxShadow: "0 12px 30px rgba(212, 175, 55, 0.4)"
               }}>
-                <span>✨ Ver Servicios &amp; Mentoría</span>
+                <span>✨ Productos y Servicios</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </Link>
-              
-              <Link href="/curso" style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.6rem",
-                padding: "1.1rem 2.4rem",
-                background: "rgba(212, 175, 55, 0.15)",
-                border: "1.5px solid #D4AF37",
-                color: "#F7E7CE",
-                textDecoration: "none",
-                fontWeight: "750",
-                fontSize: "1.08rem",
-                borderRadius: "50px"
-              }}>
-                <span>🎓 Ver Información del Curso</span>
               </Link>
 
               <Link href="/libroprimeroamate" style={{

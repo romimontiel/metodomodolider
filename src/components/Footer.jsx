@@ -85,12 +85,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/servicios" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
-                  Servicios &amp; Mentoría 1 a 1
-                </Link>
-              </li>
-              <li>
-                <Link href="/curso" style={{ color: "#334155", textDecoration: "none", fontSize: "0.95rem", fontWeight: "550", transition: "all 0.2s", display: "inline-block" }}>
-                  Emprender de Cero a Impacto y Ventas
+                  Productos y Servicios
                 </Link>
               </li>
             </ul>

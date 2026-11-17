@@ -19,10 +19,7 @@ export default function Navbar() {
           📖 Libro Primero Amate
         </Link>
         <Link href="/servicios" className="nav-link-item nav-link-servicios">
-          ✨ Servicios & Mentoría
-        </Link>
-        <Link href="/curso" className="nav-link-item nav-link-curso">
-          🎓 Info del Curso
+          ✨ Productos y Servicios
         </Link>
         <a href="/campus_modo_lider.html" className="nav-link-item nav-link-campus">
           🏛️ Campus Alumnas
@@ -31,4 +28,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

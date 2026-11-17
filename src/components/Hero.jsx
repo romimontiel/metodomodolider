@@ -58,8 +58,8 @@ export default function Hero() {
                       <span>📖 Libro Primero Amate</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </Link>
-                  <Link href="/curso" className="btn-outline-gold">
-                      <span>Curso</span>
+                  <Link href="/servicios" className="btn-outline-gold">
+                      <span>✨ Productos y Servicios</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </Link>
                   <Link href="/historia" className="btn-story">
