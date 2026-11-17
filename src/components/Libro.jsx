@@ -225,8 +225,41 @@ export default function Libro() {
 
         </div>
 
+        {/* Vidriera de Librerías y Plataformas Internacionales */}
+        <div className="libro-stores-box" id="comprar-libro" style={{ marginBottom: "3.5rem" }}>
+          <div className="libro-stores-header">
+            <span className="libro-stores-tag">DISPONIBILIDAD INTERNACIONAL • E-BOOKS DIGITALES (EPUB) Y PAPEL</span>
+            <h3>¿Dónde adquirir tu E-book Digital (formato ePub) o ejemplar de «Primero Ámate»?</h3>
+            <p>
+              Acá podés comprar y descargar el <strong>libro digital (E-book en formato ePub</strong> para leer en celular, tablet, computadora o eReader) desde Argentina, España y toda Latinoamérica, o pedir tu ejemplar en papel:
+            </p>
+          </div>
+
+          <div className="libro-stores-grid" style={{ marginBottom: 0 }}>
+            {bookstores.map((store, idx) => (
+              <a
+                key={idx}
+                href={store.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`libro-store-card ${store.primary ? "libro-store-primary" : ""}`}
+              >
+                <div className="store-card-top">
+                  <span className="store-country">{store.country}</span>
+                  {store.primary && <span className="store-badge-destacado">Destacado</span>}
+                </div>
+                <h4 className="store-name">{store.name}</h4>
+                <p className="store-format">{store.format}</p>
+                <span className="store-cta">
+                  {store.cta} →
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Galería de Presentaciones Oficiales en Ferias del Libro */}
-        <div className="libro-events-showcase">
+        <div className="libro-events-showcase" style={{ marginBottom: 0 }}>
           <div className="libro-events-header">
             <span className="libro-stores-tag">RECORRIDO LITERARIO Y CULTURAL • 2025 / 2026</span>
             <h3>Presentaciones en Escenario y Firma de Ejemplares</h3>
@@ -291,39 +324,6 @@ export default function Libro() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               <span>Ver Historias Destacadas (Feria del Libro)</span>
             </a>
-          </div>
-        </div>
-
-        {/* Vidriera de Librerías y Plataformas Internacionales */}
-        <div className="libro-stores-box" id="comprar-libro">
-          <div className="libro-stores-header">
-            <span className="libro-stores-tag">DISPONIBILIDAD INTERNACIONAL • E-BOOKS DIGITALES (EPUB) Y PAPEL</span>
-            <h3>¿Dónde adquirir tu E-book Digital (formato ePub) o ejemplar de «Primero Ámate»?</h3>
-            <p>
-              Acá podés comprar y descargar el <strong>libro digital (E-book en formato ePub</strong> para leer en celular, tablet, computadora o eReader) desde Argentina, España y toda Latinoamérica, o pedir tu ejemplar en papel:
-            </p>
-          </div>
-
-          <div className="libro-stores-grid" style={{ marginBottom: 0 }}>
-            {bookstores.map((store, idx) => (
-              <a
-                key={idx}
-                href={store.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`libro-store-card ${store.primary ? "libro-store-primary" : ""}`}
-              >
-                <div className="store-card-top">
-                  <span className="store-country">{store.country}</span>
-                  {store.primary && <span className="store-badge-destacado">Destacado</span>}
-                </div>
-                <h4 className="store-name">{store.name}</h4>
-                <p className="store-format">{store.format}</p>
-                <span className="store-cta">
-                  {store.cta} →
-                </span>
-              </a>
-            ))}
           </div>
         </div>
 

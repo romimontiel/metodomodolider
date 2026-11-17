@@ -39,9 +39,9 @@ export default function ServiciosPage() {
       linkSecundarioUrl: "/curso"
     },
     marcaPersonal: {
-      categoria: "Mentoría de Mentalidad y Negocios de Inmersión Estratégica",
+      categoria: "Cursos y Entrenamientos Intensivos • Pack de 4 Clases",
       titulo: "Potencia tu Marca Personal: «Tu Oferta Irresistible»",
-      inversion: "$300 USD (Pack de 4 Clases)",
+      inversion: "$300 USD",
       resumen: "Un pack de 4 clases estratégicas para diferenciarte en tu mercado y estructurar una oferta que convierta tu talento en ventas.",
       items: [
         "Clase 1: Definición y comunicación de tu Propuesta de Valor única.",
@@ -53,9 +53,9 @@ export default function ServiciosPage() {
       ctaUrl: `${whatsappBase}?text=${encodeURIComponent("Hola Romina, quiero saber más e inscribirme al Pack de 4 clases 'Potencia tu Marca Personal: Tu Oferta Irresistible' (300 USD).")}`
     },
     practicaIA: {
-      categoria: "Mentoría de Mentalidad y Negocios de Inmersión Estratégica",
+      categoria: "Cursos y Entrenamientos Intensivos • Pack de 4 Clases",
       titulo: "Potencia tu Práctica con Inteligencia Artificial",
-      inversion: "$400 USD (Pack de 4 Clases)",
+      inversion: "$400 USD",
       resumen: "Un pack de 4 clases para coaches y profesionales que buscan integrar a la IA como su compañero de viaje estratégico e invaluable.",
       items: [
         "Copiloto para Sesiones 1 a 1: Preparación de diagnósticos, hipótesis y preguntas poderosas.",
@@ -67,8 +67,8 @@ export default function ServiciosPage() {
       ctaUrl: `${whatsappBase}?text=${encodeURIComponent("Hola Romina, quiero saber más e inscribirme al Pack de 4 clases 'Potencia tu Práctica con Inteligencia Artificial' (400 USD).")}`
     },
     mentoriaPrivada: {
-      categoria: "Mi Mentoría Personalizada",
-      titulo: "Mentoría Privada 1 a 1 con Romina Lorena Montiel",
+      categoria: "Mentoría de Mentalidad y Negocios de Inmersión Estratégica",
+      titulo: "Mi Mentoría Personalizada 1 a 1 con Romina Lorena Montiel",
       inversion: "$900 USD (Encuentro Intensivo de 3 Horas)",
       resumen: "Encuentro privado y confidencial de 3 horas mano a mano con Romina para preguntar y destrabar lo que necesitás en tu mentalidad, tus estrategias o tus productos.",
       items: [
@@ -100,11 +100,11 @@ export default function ServiciosPage() {
     <>
       <Navbar />
 
-      <main style={{ minHeight: "100vh", paddingBottom: "5rem", background: "#FAF6F0", color: "#0F172A" }}>
+      <main style={{ minHeight: "100vh", paddingBottom: "5.5rem", background: "#FAF6F0", color: "#0F172A" }}>
         
-        {/* ================= HEADER MINIMALISTA ================= */}
+        {/* ================= HEADER ================= */}
         <section style={{
-          padding: "3.8rem 1.5rem 2.8rem 1.5rem",
+          padding: "3.5rem 1.5rem 2.5rem 1.5rem",
           textAlign: "center",
           borderBottom: "1px solid #EAE3D2"
         }}>
@@ -117,7 +117,7 @@ export default function ServiciosPage() {
               textDecoration: "none",
               fontSize: "0.88rem",
               fontWeight: "750",
-              marginBottom: "1.2rem",
+              marginBottom: "1.1rem",
               background: "#FFFFFF",
               padding: "0.4rem 1rem",
               borderRadius: "50px",
@@ -133,160 +133,132 @@ export default function ServiciosPage() {
               letterSpacing: "3.5px",
               textTransform: "uppercase",
               color: "#8A6405",
-              marginBottom: "0.6rem"
+              marginBottom: "0.5rem"
             }}>
-              SERVICIOS &amp; MENTORÍA PROFESIONAL
+              SERVICIOS &amp; FORMACIÓN PROFESIONAL
             </span>
 
             <h1 style={{
               fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem, 4.5vw, 3.1rem)",
+              fontSize: "clamp(2rem, 4.5vw, 3rem)",
               fontWeight: "900",
               color: "#0F172A",
-              marginBottom: "0.8rem",
+              marginBottom: "0.6rem",
               lineHeight: 1.15
             }}>
-              Elegí Cómo Transformar tu Negocio
+              Tu Transformación en Acción
             </h1>
-
-            <p style={{
-              fontSize: "1.06rem",
-              color: "#475569",
-              lineHeight: 1.6,
-              maxWidth: "680px",
-              margin: "0 auto"
-            }}>
-              Cuatro niveles diseñados para desarrollar tu mentalidad, crear tu marca personal o de negocios y generar impacto y ventas.
-            </p>
           </div>
         </section>
 
-        {/* ================= GRILLA EN PARALELO ESTILO SOFTWARE (I   I   I   I) ================= */}
-        <section style={{ maxWidth: "1360px", margin: "3rem auto 0 auto", padding: "0 1.25rem" }}>
+        {/* ================= PRIMER BLOQUE: CURSOS Y ENTRENAMIENTOS INTENSIVOS (4 EN PARALELO: I   I   I   I) ================= */}
+        <section style={{ maxWidth: "1340px", margin: "3rem auto 0 auto", padding: "0 1.25rem" }}>
           
-          <div className="servicios-saas-grid">
+          <div style={{ textAlign: "center", marginBottom: "2.2rem" }}>
+            <span style={{ color: "#8A6405", fontSize: "0.78rem", fontWeight: "900", letterSpacing: "2.5px", textTransform: "uppercase", display: "block", marginBottom: "0.35rem" }}>
+              PRIMER BLOQUE
+            </span>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.65rem, 3.2vw, 2.25rem)", color: "#0F172A", fontWeight: "800", margin: 0 }}>
+              Cursos y Entrenamientos Intensivos
+            </h2>
+          </div>
 
-            {/* ================= COLUMNA 1: CURSOS Y ENTRENAMIENTOS INTENSIVOS ================= */}
-            <div className="saas-col">
-              <div className="saas-col-header">
-                <span className="saas-col-step">NIVEL 01</span>
-                <h2 className="saas-col-title">Cursos y Entrenamientos Intensivos</h2>
-              </div>
+          {/* 4 Columnas en Paralelo (I   I   I   I) como planes de software */}
+          <div className="saas-row-4">
 
-              <div className="saas-col-body">
-                {/* Item 1.1 */}
-                <div className="saas-subcard">
-                  <h3 className="saas-item-name">Tres Días para Transformar tu Negocio</h3>
-                  <p className="saas-item-desc">
-                    Entrenamiento intensivo de 3 días (clase teórica, workbook práctico y coaching grupal en vivo) para alinear tu mente y tu negocio.
-                  </p>
-                  <button onClick={() => setModalActivo("tresDias")} className="saas-btn-outline">
-                    Saber más →
-                  </button>
-                </div>
-
-                {/* Item 1.2 */}
-                <div className="saas-subcard">
-                  <h3 className="saas-item-name">Emprender de Cero a Impacto y Ventas</h3>
-                  <p className="saas-item-desc">
-                    Curso práctico en el Campus Virtual (acceso por 2 meses, con opción de sumar 1 hora de mentoría 1 a 1) para construir un negocio rentable.
-                  </p>
-                  <button onClick={() => setModalActivo("cursoEmprender")} className="saas-btn-outline">
-                    Saber más →
-                  </button>
-                </div>
-              </div>
+            {/* Columna 1 */}
+            <div className="saas-card">
+              <span className="saas-badge">Entrenamiento • 3 Días</span>
+              <h3 className="saas-title">Tres Días para Transformar tu Negocio</h3>
+              <p className="saas-desc">
+                Proceso práctico de 3 días (clase teórica, workbook de transformación y coaching grupal en vivo) para destrabar tu mente y ordenar tu negocio.
+              </p>
+              <button onClick={() => setModalActivo("tresDias")} className="saas-btn">
+                Saber más →
+              </button>
             </div>
 
-            {/* ================= COLUMNA 2: MENTORÍA DE MENTALIDAD Y NEGOCIOS DE INMERSIÓN ESTRATÉGICA ================= */}
-            <div className="saas-col">
-              <div className="saas-col-header">
-                <span className="saas-col-step">NIVEL 02</span>
-                <h2 className="saas-col-title">Mentoría de Mentalidad y Negocios de Inmersión Estratégica</h2>
-              </div>
-
-              <div className="saas-col-body">
-                {/* Item 2.1 */}
-                <div className="saas-subcard">
-                  <h3 className="saas-item-name">Potencia tu Marca Personal: «Tu Oferta Irresistible»</h3>
-                  <p className="saas-item-desc">
-                    Pack de 4 clases para trabajar tu propuesta de valor, tu pack de productos-servicios diferencial, tu mercado objetivo y tu oferta irresistible.
-                  </p>
-                  <button onClick={() => setModalActivo("marcaPersonal")} className="saas-btn-outline">
-                    Saber más →
-                  </button>
-                </div>
-
-                {/* Item 2.2 */}
-                <div className="saas-subcard">
-                  <h3 className="saas-item-name">Potencia tu Práctica con Inteligencia Artificial</h3>
-                  <p className="saas-item-desc">
-                    Pack de 4 clases para coaches y profesionales para incorporar a la IA como tu compañero de viaje estratégico en sesiones 1 a 1 y talleres.
-                  </p>
-                  <button onClick={() => setModalActivo("practicaIA")} className="saas-btn-outline">
-                    Saber más →
-                  </button>
-                </div>
-              </div>
+            {/* Columna 2 */}
+            <div className="saas-card">
+              <span className="saas-badge">Curso • Campus 2 Meses</span>
+              <h3 className="saas-title">Emprender de Cero a Impacto y Ventas</h3>
+              <p className="saas-desc">
+                Programa de 8 módulos en el Campus Virtual para construir un negocio rentable desde cero (con opción a sumar 1 hora de mentoría 1 a 1).
+              </p>
+              <button onClick={() => setModalActivo("cursoEmprender")} className="saas-btn">
+                Saber más →
+              </button>
             </div>
 
-            {/* ================= COLUMNA 3: MI MENTORÍA PERSONALIZADA (DESTACADA) ================= */}
-            <div className="saas-col saas-col-featured">
-              <div className="saas-col-header">
-                <span className="saas-col-step" style={{ color: "#ECC369" }}>NIVEL 03 • VIP 1 A 1</span>
-                <h2 className="saas-col-title" style={{ color: "#FFFFFF" }}>Mi Mentoría Personalizada</h2>
-              </div>
-
-              <div className="saas-col-body">
-                <div className="saas-subcard saas-subcard-dark" style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-                  <div>
-                    <h3 className="saas-item-name" style={{ color: "#F7E7CE", fontSize: "1.35rem" }}>
-                      Sesión de Mentoría Privada con Romina Lorena Montiel
-                    </h3>
-                    <p className="saas-item-desc" style={{ color: "#CBD5E1", fontSize: "0.96rem", lineHeight: "1.65" }}>
-                      Encuentro privado de 3 horas (con cuestionario de diagnóstico previo) para preguntar y resolver todo lo que necesitás para activar tu mentalidad de negocios, cambiar tus estrategias o potenciar tus productos.
-                    </p>
-                  </div>
-                  <button onClick={() => setModalActivo("mentoriaPrivada")} className="saas-btn-gold">
-                    Saber más →
-                  </button>
-                </div>
-              </div>
+            {/* Columna 3 */}
+            <div className="saas-card">
+              <span className="saas-badge">Pack de 4 Clases</span>
+              <h3 className="saas-title">Potencia tu Marca Personal: «Tu Oferta Irresistible»</h3>
+              <p className="saas-desc">
+                4 clases para trabajar tu propuesta de valor, tu pack de productos-servicios diferencial, tu mercado objetivo y tu oferta irresistible.
+              </p>
+              <button onClick={() => setModalActivo("marcaPersonal")} className="saas-btn">
+                Saber más →
+              </button>
             </div>
 
-            {/* ================= COLUMNA 4: BIBLIOTECA MODO LÍDER & LIBROS ================= */}
-            <div className="saas-col">
-              <div className="saas-col-header">
-                <span className="saas-col-step">RECURSOS &amp; EDITORIAL</span>
-                <h2 className="saas-col-title">Biblioteca Modo Líder &amp; Libros</h2>
-              </div>
-
-              <div className="saas-col-body">
-                {/* Item 4.1 */}
-                <div className="saas-subcard">
-                  <h3 className="saas-item-name">Recursos de Mentalidad y Negocios</h3>
-                  <p className="saas-item-desc">
-                    Workbooks interactivos, guías prácticas y herramientas descargables de aplicación inmediata por menos de 50 dólares.
-                  </p>
-                  <button onClick={() => setModalActivo("biblioteca")} className="saas-btn-outline">
-                    Saber más →
-                  </button>
-                </div>
-
-                {/* Item 4.2 */}
-                <div className="saas-subcard">
-                  <h3 className="saas-item-name">Libros «Primero Ámate» &amp; «Método Modo Líder»</h3>
-                  <p className="saas-item-desc">
-                    Obras literarias de Romina Lorena Montiel disponibles en librerías, ejemplares firmados y preventa editorial en papel.
-                  </p>
-                  <button onClick={() => setModalActivo("biblioteca")} className="saas-btn-outline">
-                    Saber más →
-                  </button>
-                </div>
-              </div>
+            {/* Columna 4 */}
+            <div className="saas-card">
+              <span className="saas-badge">Pack de 4 Clases • IA</span>
+              <h3 className="saas-title">Potencia tu Práctica con Inteligencia Artificial</h3>
+              <p className="saas-desc">
+                4 clases para coaches y profesionales para incorporar a la IA como tu compañero de viaje estratégico en tus sesiones 1 a 1 y talleres.
+              </p>
+              <button onClick={() => setModalActivo("practicaIA")} className="saas-btn">
+                Saber más →
+              </button>
             </div>
 
           </div>
+        </section>
+
+        {/* ================= SEGUNDO BLOQUE: MENTORÍA DE MENTALIDAD Y NEGOCIOS DE INMERSIÓN ESTRATÉGICA ================= */}
+        <section style={{ maxWidth: "1340px", margin: "4rem auto 0 auto", padding: "0 1.25rem" }}>
+          
+          <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+            <span style={{ color: "#8A6405", fontSize: "0.78rem", fontWeight: "900", letterSpacing: "2.5px", textTransform: "uppercase", display: "block", marginBottom: "0.35rem" }}>
+              SEGUNDO BLOQUE • ACOMPAÑAMIENTO 1 A 1
+            </span>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.65rem, 3.2vw, 2.25rem)", color: "#0F172A", fontWeight: "800", margin: 0 }}>
+              Mentoría de Mentalidad y Negocios de Inmersión Estratégica
+            </h2>
+          </div>
+
+          <div className="saas-row-2">
+            {/* Tarjeta Mentoría Personalizada 1 a 1 */}
+            <div className="saas-card saas-card-dark">
+              <span className="saas-badge-gold">👑 Mi Mentoría Personalizada • 1 a 1</span>
+              <h3 className="saas-title" style={{ color: "#FFFFFF" }}>
+                Sesión de Mentoría Privada con Romina Lorena Montiel
+              </h3>
+              <p className="saas-desc" style={{ color: "#CBD5E1" }}>
+                Encuentro privado de 3 horas (con cuestionario de diagnóstico previo) para preguntar lo que necesitás para activar tu mentalidad de negocios, cambiar tus estrategias o potenciar tus productos.
+              </p>
+              <button onClick={() => setModalActivo("mentoriaPrivada")} className="saas-btn-gold">
+                Saber más →
+              </button>
+            </div>
+
+            {/* Tarjeta Biblioteca Modo Líder & Libros */}
+            <div className="saas-card">
+              <span className="saas-badge">📚 Recursos &amp; Obras Literarias</span>
+              <h3 className="saas-title">
+                Biblioteca Modo Líder &amp; Libros Oficiales
+              </h3>
+              <p className="saas-desc">
+                Recursos descargables de mentalidad y negocios por menos de 50 dólares, libro «Primero Ámate» (en librerías y firmado) y nuevo libro «Método Modo Líder®».
+              </p>
+              <button onClick={() => setModalActivo("biblioteca")} className="saas-btn">
+                Saber más →
+              </button>
+            </div>
+          </div>
+
         </section>
 
       </main>
@@ -451,109 +423,107 @@ export default function ServiciosPage() {
       )}
 
       <style jsx>{`
-        .servicios-saas-grid {
+        .saas-row-4 {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 1.4rem;
+          gap: 1.35rem;
           align-items: stretch;
         }
-        .saas-col {
+        .saas-row-2 {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+          align-items: stretch;
+          max-width: 980px;
+          margin: 0 auto;
+        }
+        .saas-card {
           background: #FFFFFF;
           border: 1.5px solid #E5D9C3;
           border-top: 4px solid #D4AF37;
-          border-radius: 22px;
-          padding: 1.8rem 1.4rem;
-          display: flex;
-          flex-direction: column;
-          box-shadow: 0 12px 30px rgba(60, 40, 20, 0.06);
-        }
-        .saas-col-featured {
-          background: linear-gradient(165deg, #141926 0%, #090A0F 100%);
-          border: 2px solid #D4AF37;
-          box-shadow: 0 20px 45px rgba(15, 23, 42, 0.22);
-        }
-        .saas-col-header {
-          padding-bottom: 1.1rem;
-          margin-bottom: 1.2rem;
-          border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-          min-height: 88px;
-        }
-        .saas-col-step {
-          display: block;
-          font-size: 0.72rem;
-          font-weight: 900;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          color: #8A6405;
-          margin-bottom: 0.4rem;
-        }
-        .saas-col-title {
-          font-family: var(--font-display);
-          font-size: 1.32rem;
-          font-weight: 800;
-          color: #0F172A;
-          line-height: 1.25;
-          margin: 0;
-        }
-        .saas-col-body {
-          display: flex;
-          flex-direction: column;
-          gap: 1.1rem;
-          flex: 1;
-        }
-        .saas-subcard {
-          background: #FAF6F0;
-          border: 1px solid #EAE3D2;
-          border-radius: 16px;
-          padding: 1.25rem 1.15rem;
+          border-radius: 20px;
+          padding: 1.8rem 1.45rem;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          flex: 1;
+          box-shadow: 0 12px 28px rgba(60, 40, 20, 0.06);
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-        .saas-subcard-dark {
-          background: rgba(255, 255, 255, 0.04);
-          border: 1px solid rgba(212, 175, 55, 0.3);
+        .saas-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 18px 36px rgba(60, 40, 20, 0.11);
         }
-        .saas-item-name {
+        .saas-card-dark {
+          background: linear-gradient(165deg, #141926 0%, #090A0F 100%);
+          border: 2px solid #D4AF37;
+          box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+        }
+        .saas-badge {
+          display: inline-block;
+          align-self: flex-start;
+          font-size: 0.72rem;
+          font-weight: 800;
+          letter-spacing: 1.2px;
+          text-transform: uppercase;
+          color: #8A6405;
+          background: #FAF6F0;
+          border: 1px solid #E5D9C3;
+          padding: 0.3rem 0.75rem;
+          border-radius: 50px;
+          margin-bottom: 1rem;
+        }
+        .saas-badge-gold {
+          display: inline-block;
+          align-self: flex-start;
+          font-size: 0.74rem;
+          font-weight: 900;
+          letter-spacing: 1.2px;
+          text-transform: uppercase;
+          color: #0E121B;
+          background: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%);
+          padding: 0.35rem 0.85rem;
+          border-radius: 50px;
+          margin-bottom: 1rem;
+        }
+        .saas-title {
           font-family: var(--font-heading);
-          font-size: 1.12rem;
+          font-size: 1.25rem;
           font-weight: 800;
           color: #0F172A;
-          margin: 0 0 0.55rem 0;
+          margin: 0 0 0.75rem 0;
           line-height: 1.3;
         }
-        .saas-item-desc {
-          font-size: 0.89rem;
+        .saas-desc {
+          font-size: 0.92rem;
           color: #475569;
-          line-height: 1.55;
-          margin: 0 0 1.1rem 0;
+          line-height: 1.6;
+          margin: 0 0 1.5rem 0;
+          flex: 1;
         }
-        .saas-btn-outline {
+        .saas-btn {
           width: 100%;
-          padding: 0.72rem 1rem;
-          background: #FFFFFF;
+          padding: 0.82rem 1rem;
+          background: #FAF6F0;
           border: 1.5px solid #D4AF37;
           color: #8A6405;
-          border-radius: 10px;
+          border-radius: 12px;
           font-weight: 800;
-          font-size: 0.88rem;
+          font-size: 0.9rem;
           cursor: pointer;
           transition: all 0.2s ease;
           text-align: center;
         }
-        .saas-btn-outline:hover {
-          background: #FFF9E6;
-          color: #0F172A;
-          transform: translateY(-1px);
+        .saas-btn:hover {
+          background: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%);
+          color: #0E121B;
         }
         .saas-btn-gold {
           width: 100%;
-          padding: 0.9rem 1rem;
+          padding: 0.88rem 1rem;
           background: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #C38B1E 100%);
           border: none;
           color: #0E121B;
-          border-radius: 10px;
+          border-radius: 12px;
           font-weight: 900;
           font-size: 0.92rem;
           cursor: pointer;
@@ -562,20 +532,17 @@ export default function ServiciosPage() {
           box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
         }
         .saas-btn-gold:hover {
-          transform: translateY(-2px);
-          filter: brightness(1.05);
+          filter: brightness(1.06);
         }
-        @media (max-width: 1180px) {
-          .servicios-saas-grid {
+        @media (max-width: 1120px) {
+          .saas-row-4 {
             grid-template-columns: repeat(2, 1fr);
           }
         }
         @media (max-width: 680px) {
-          .servicios-saas-grid {
+          .saas-row-4,
+          .saas-row-2 {
             grid-template-columns: 1fr;
-          }
-          .saas-col-header {
-            min-height: auto;
           }
         }
       `}</style>
