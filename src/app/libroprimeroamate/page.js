@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Libro from "@/components/Libro";
-import CtaFinal from "@/components/CtaFinal";
+import CtaLibroFirmado from "@/components/CtaLibroFirmado";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -17,8 +17,8 @@ export default function LibroPrimeroAmatePage() {
       <Navbar />
       <main style={{ minHeight: "100vh", background: "#FFFFFF", paddingTop: "1.5rem" }}>
         <Libro />
+        <CtaLibroFirmado />
       </main>
-      <CtaFinal />
       <Footer />
     </>
   );

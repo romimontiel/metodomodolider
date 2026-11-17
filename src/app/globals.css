@@ -1811,4 +1811,136 @@
             }
         }
 
+        /* --- BANNER LIBRO FIRMADO (FONDO NEGRO CON FOTO Y LIBRO) --- */
+        .cta-libro-firmado-section {
+            padding: 5rem 2rem 6rem 2rem;
+            background: linear-gradient(180deg, #0E121B 0%, #090A0F 100%);
+            position: relative;
+            border-top: 1.5px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .cta-libro-firmado-box {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 2.5rem 3rem 0 3rem;
+            background: rgba(22, 27, 40, 0.85);
+            border-radius: 30px;
+            border: 1.5px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 175, 55, 0.12);
+            display: grid;
+            grid-template-columns: 240px 1fr 240px;
+            align-items: center;
+            gap: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-libro-visual-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2.5rem;
+        }
+
+        .cta-libro-img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 20px rgba(212, 175, 55, 0.2));
+            transition: transform 0.3s ease;
+        }
+
+        .cta-libro-img:hover {
+            transform: scale(1.04) rotate(-1deg);
+        }
+
+        .cta-libro-content {
+            text-align: center;
+            padding: 0 0.5rem 2.5rem 0.5rem;
+        }
+
+        .cta-libro-title {
+            font-family: var(--font-display);
+            font-size: 2.25rem;
+            color: #FFFFFF;
+            margin: 0.8rem 0 1rem 0;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .cta-libro-desc {
+            font-size: 1.08rem;
+            color: #CBD5E1;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .cta-libro-desc strong {
+            color: #F7E7CE;
+        }
+
+        .cta-libro-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.95rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 800;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+        }
+
+        .cta-libro-visual-right {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+            margin-bottom: 0;
+            align-self: flex-end;
+        }
+
+        .cta-romina-img {
+            width: 100%;
+            max-width: 225px;
+            height: auto;
+            max-height: 330px;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.7));
+            vertical-align: bottom;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 960px) {
+            .cta-libro-firmado-box {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.5rem 0 1.5rem;
+                gap: 1.8rem;
+                text-align: center;
+            }
+            .cta-libro-visual-left {
+                order: 1;
+                padding-bottom: 0;
+            }
+            .cta-libro-visual-left .cta-libro-img {
+                max-width: 180px;
+                margin: 0 auto;
+            }
+            .cta-libro-content {
+                order: 2;
+                padding-bottom: 1rem;
+            }
+            .cta-libro-title {
+                font-size: 1.85rem;
+            }
+            .cta-libro-visual-right {
+                order: 3;
+            }
+            .cta-romina-img {
+                max-width: 190px;
+                max-height: 250px;
+                margin: 0 auto;
+            }
+        }
+
     
